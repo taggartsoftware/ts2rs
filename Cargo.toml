@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    # "electron",
+    "monaco-editor",
+    # "node",
+]
