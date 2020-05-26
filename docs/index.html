@@ -149,11 +149,17 @@
                     <main>
                         <h1><a class="header" href="#ts2rs" id="ts2rs">ts2rs</a></h1>
 <p>ts2rs is a commercial application that generates <a href="https://github.com/rustwasm/wasm-bindgen">Rust WebAssembly bindings</a> to JavaScript modules from TypeScript declarations. The Rust language is one of the best languages to use for targeting WebAssembly. One of its goals is that it <a href="https://www.rust-lang.org/what/wasm">Plays well with JavaScript</a>. ts2rs helps make seamless interop a reality by generating bindings for you.</p>
-<p>ts2rs is not yet publicly available. If you are interested in a private preview, please email support@ctaggart.com. ts2rs will be available under monthly and yearly subscriptions. I am still figuring out the pricing and I am looking for feedback. ts2rs should help make it posssible to write some web applicatins and Node.js applications in Rust, saving hours or days or development time.</p>
+<p>ts2rs is not yet publicly available. For product announcements, please follow <a href="https://medium.com/@taggartsoftware">https://medium.com/@taggartsoftware</a>. If you are interested in a private preview, please email support@ctaggart.com. ts2rs will be available under monthly and yearly subscriptions. I am still figuring out the pricing and I am looking for feedback. ts2rs should help make it posssible to write some web applicatins and Node.js applications in Rust, saving hours or days or development time.</p>
 <p>ts2rs is written in Rust and uses ts2rs generated bindings to the TypeScript API. More than a thousand lines of bindings were written by hand before I had it bootstrapped. It compiles to Web Assembly and is a packaged as a Node.js application. With access to a private NPM repository, you are able to install it with <code>npm install @taggartsoftware/ts2rs</code>.</p>
 <h3><a class="header" href="#examples" id="examples">Examples</a></h3>
 <p>Example generated bindings will be available <a href="https://github.com/taggartsoftware/ts2rs/">on GitHub</a> for a few open source projects.</p>
 <h3><a class="header" href="#features" id="features">Features</a></h3>
+<ul>
+<li>TypeScript interfaces &amp; classes are mapped as Rust extern types.</li>
+<li>The TypeScript type heirarchy is mapped to series of <a href="https://doc.rust-lang.org/std/convert/trait.AsRef.html">AsRef</a> and <a href="https://doc.rust-lang.org/std/convert/trait.Into.html">Into</a> type conversions that use <a href="https://rustwasm.github.io/wasm-bindgen/api/wasm_bindgen/trait.JsCast.html">JsCast</a> to provide type safety with zero-cost.</li>
+<li>TypeScript doc comments become Rust doc comments.</li>
+<li>TypeScript enums are mapped as constants. The values are wrapped in <a href="https://github.com/rust-unofficial/patterns/blob/master/patterns/newtype.md">newtypes</a>.</li>
+</ul>
 <p>Please create feature requests on GitHub <a href="https://github.com/taggartsoftware/ts2rs/issues">issues</a> or email support@ctaggart.com.</p>
 
                     </main>
