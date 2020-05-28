@@ -1,0 +1,13 @@
+{
+  "name": "monaco-hello-world",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "http-server -a localhost -p 3000"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.20.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}
