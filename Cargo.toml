@@ -3,4 +3,6 @@ members = [
     # "electron",
     "monaco-editor",
     # "node",
+
+    "monaco-hello-world",
 ]

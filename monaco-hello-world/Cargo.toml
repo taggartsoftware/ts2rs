@@ -1,0 +1,13 @@
+[package]
+name = "monaco-hello-world"
+version = "0.1.0"
+authors = ["Cameron Taggart <cameron.taggart@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "*"
+js-sys = "*"
+web-sys = { version = "*", features = [ "console", "HtmlElement", "KeyboardEvent", "MouseEvent", "Worker" ] }
