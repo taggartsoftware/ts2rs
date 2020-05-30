@@ -8,9 +8,9 @@ edition = "2018"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-wasm-bindgen = "*"
-js-sys = "*"
-web-sys = { version = "*", features = [ "HtmlElement", "KeyboardEvent", "MouseEvent", "Worker" ] }
+wasm-bindgen = { git = "https://github.com/rustwasm/wasm-bindgen" }
+js-sys = { git = "https://github.com/rustwasm/wasm-bindgen" }
+web-sys = { git = "https://github.com/rustwasm/wasm-bindgen", features = [ "HtmlElement", "KeyboardEvent", "MouseEvent", "Worker" ] }
 
 [dev-dependencies]
-wasm-bindgen-test = "*"
+wasm-bindgen-test = { git = "https://github.com/rustwasm/wasm-bindgen" }
