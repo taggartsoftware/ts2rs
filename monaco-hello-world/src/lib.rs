@@ -1,9 +1,18 @@
-use wasm_bindgen::{prelude::*, JsValue};
-use web_sys::console::log_1;
+use monaco::editor::IStandaloneEditorConstructionOptions;
+use wasm_bindgen::{prelude::*, JsCast, JsValue};
+use web_sys::{console::log_1, HtmlElement};
 
 #[wasm_bindgen(start)]
 pub fn main_js() -> Result<(), JsValue> {
-    log_1(&JsValue::from_str("Hello World!"));
+    log_1(&JsValue::from_str("main_js"));
+
+    let window = web_sys::window().expect("window");
+    let document = window.document().expect("document");
+    let container: HtmlElement = JsCast::unchecked_into(document.get_element_by_id("container").expect("container"));
+    let options = IStandaloneEditorConstructionOptions::new();
+    options.set_value(Some("function x() {\n  console.log(\"Hello world!\");\n}"));
+    options.set_language(Some("javascript"));
+    monaco::editor::create(&container, Some(&options), None);
     Ok(())
 }
 
@@ -14,8 +23,7 @@ pub mod monaco {
         use web_sys::HtmlElement;
         type HTMLElement = HtmlElement;
 
-        // #[wasm_bindgen(module = "monaco", js_namespace = ["monaco", "editor"])]
-        #[wasm_bindgen(js_namespace = ["nestedNamespace", "InnerClass"])]
+        #[wasm_bindgen(raw_module = "monaco-editor/esm/vs/editor/editor.main.js")]
         extern "C" {
 
             pub type IStandaloneEditorConstructionOptions;
@@ -30,11 +38,11 @@ pub mod monaco {
             #[wasm_bindgen(method, setter, js_name=language)]
             pub fn set_language(this: &IStandaloneEditorConstructionOptions, value: Option<&str>);
 
-            // export function create(domElement: HTMLElement, options?: IStandaloneEditorConstructionOptions, override?: IEditorOverrideServices): IStandaloneCodeEditor;
+            #[wasm_bindgen(js_namespace = editor)]
             pub fn create(
                 dom_elmeent: &HTMLElement,
                 options: Option<&IStandaloneEditorConstructionOptions>,
-                override_: Option<IEditorOverrideServices>,
+                override_: Option<&IEditorOverrideServices>,
             ) -> IStandaloneCodeEditor;
         }
 

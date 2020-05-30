@@ -1,7 +1,7 @@
 [package]
 name = "monaco-hello-world"
 version = "0.1.0"
-authors = ["Cameron Taggart <cameron.taggart@gmail.com>"]
+authors = ["Taggart Software LLC <support@ctaggart.com>"]
 edition = "2018"
 
 [lib]
@@ -10,4 +10,15 @@ crate-type = ["cdylib", "rlib"]
 [dependencies]
 wasm-bindgen = { git = "https://github.com/rustwasm/wasm-bindgen" }
 js-sys = { git = "https://github.com/rustwasm/wasm-bindgen" }
-web-sys = { git = "https://github.com/rustwasm/wasm-bindgen", features = [ "console", "HtmlElement", "KeyboardEvent", "MouseEvent", "Worker" ] }
+
+[dependencies.web-sys]
+git = "https://github.com/rustwasm/wasm-bindgen"
+features = [
+    "console",
+    "Document",
+    "HtmlElement",
+    "KeyboardEvent",
+    "MouseEvent",
+    "Window",
+    "Worker"
+]
