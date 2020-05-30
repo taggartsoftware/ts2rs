@@ -4,5 +4,5 @@ members = [
     # "monaco-editor",
     # "node",
 
-    "monaco-hello-world",
+    "monaco-editor-hello-world",
 ]

@@ -1,5 +1,5 @@
 {
-  "name": "monaco-hello-world",
+  "name": "monaco-editor-hello-world",
   "scripts": {
     "start": "rimraf dist pkg && webpack-dev-server --open -d",
     "build": "rimraf dist pkg && webpack --progress"
