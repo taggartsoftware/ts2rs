@@ -4,6 +4,7 @@ target/
 *.txt
 .cache/
 dist/
+pkg/
 
 # not yet ready
 electron/
