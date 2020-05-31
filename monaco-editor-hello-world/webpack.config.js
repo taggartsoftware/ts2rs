@@ -7,7 +7,7 @@ const dist = path.resolve(__dirname, "dist");
 module.exports = {
   mode: "development",
   entry: {
-    index: "./js/index.js",
+    index: "./index.js",
     "editor.worker": 'monaco-editor/esm/vs/editor/editor.worker.js',
     "json.worker": 'monaco-editor/esm/vs/language/json/json.worker',
     "css.worker": 'monaco-editor/esm/vs/language/css/css.worker',

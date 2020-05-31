@@ -3,6 +3,7 @@ target/
 .DS_Store
 *.txt
 .cache/
+dist/
 
 # not yet ready
 electron/
