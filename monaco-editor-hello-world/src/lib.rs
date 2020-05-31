@@ -14,7 +14,7 @@ pub fn main_js() -> Result<(), JsValue> {
         "typescript" | "javascript" => "./ts.worker.js".to_owned(),
         _ => "./editor.worker.js".to_owned(),
     };
-    monaco_environment.set_get_worker_url(&Closure::wrap(Box::new(get_worker_url)));
+    monaco_environment.set_get_worker_url(Some(&Closure::wrap(Box::new(get_worker_url))));
     let global = js_sys::global();
     js_sys::Object::define_property(&global, &JsValue::from_str("MonacoEnvironment"), monaco_environment.unchecked_ref());
 

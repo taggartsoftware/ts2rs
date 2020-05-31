@@ -7,7 +7,7 @@ extern "C" {
     pub type Environment;
 
     # [ wasm_bindgen ( method , setter , js_name = getWorkerUrl ) ]
-    pub fn set_get_worker_url(this: &Environment, value: &Closure<dyn FnMut(String, String) -> String>);
+    pub fn set_get_worker_url(this: &Environment, value: Option<&Closure<dyn FnMut(String, String) -> String>>);
 }
 
 impl Environment {
