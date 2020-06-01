@@ -5,4 +5,83 @@
 extern "C" {
     #[wasm_bindgen()]
     pub fn assert(value: &JsValue, message: &JsValue) -> bool;
+    pub type AssertionError;
+    #[wasm_bindgen(method, getter)]
+    pub fn name(this: &AssertionError) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_name(this: &AssertionError, value: &str);
+    #[wasm_bindgen(method, getter)]
+    pub fn message(this: &AssertionError) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_message(this: &AssertionError, value: &str);
+    #[wasm_bindgen(method, getter)]
+    pub fn actual(this: &AssertionError) -> JsValue;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_actual(this: &AssertionError, value: &JsValue);
+    #[wasm_bindgen(method, getter)]
+    pub fn expected(this: &AssertionError) -> JsValue;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_expected(this: &AssertionError, value: &JsValue);
+    #[wasm_bindgen(method, getter)]
+    pub fn operator(this: &AssertionError) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_operator(this: &AssertionError, value: &str);
+    # [ wasm_bindgen ( method , getter , js_name = generatedMessage ) ]
+    pub fn generated_message(this: &AssertionError) -> bool;
+    # [ wasm_bindgen ( method , setter , js_name = generatedMessage ) ]
+    pub fn set_generated_message(this: &AssertionError, value: bool);
+    #[wasm_bindgen(method, getter)]
+    pub fn code(this: &AssertionError) -> JsValue;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_code(this: &AssertionError, value: &JsValue);
+    #[wasm_bindgen(constructor)]
+    pub fn new_assertion_error(options: &JsValue) -> AssertionError;
+    #[wasm_bindgen()]
+    pub fn fail(message: &JsValue);
+    # [ wasm_bindgen ( js_name = fail ) ]
+    pub fn fail2(
+        actual: &JsValue,
+        expected: &JsValue,
+        message: &JsValue,
+        operator: Option<&str>,
+        stack_start_fn: Option<&Function>,
+    );
+    #[wasm_bindgen()]
+    pub fn ok(value: &JsValue, message: &JsValue) -> bool;
+    #[wasm_bindgen()]
+    pub fn equal(actual: &JsValue, expected: &JsValue, message: &JsValue);
+    # [ wasm_bindgen ( js_name = notEqual ) ]
+    pub fn not_equal(actual: &JsValue, expected: &JsValue, message: &JsValue);
+    # [ wasm_bindgen ( js_name = deepEqual ) ]
+    pub fn deep_equal(actual: &JsValue, expected: &JsValue, message: &JsValue);
+    # [ wasm_bindgen ( js_name = notDeepEqual ) ]
+    pub fn not_deep_equal(actual: &JsValue, expected: &JsValue, message: &JsValue);
+    # [ wasm_bindgen ( js_name = strictEqual ) ]
+    pub fn strict_equal(actual: &JsValue, expected: &JsValue, message: &JsValue) -> bool;
+    # [ wasm_bindgen ( js_name = notStrictEqual ) ]
+    pub fn not_strict_equal(actual: &JsValue, expected: &JsValue, message: &JsValue);
+    # [ wasm_bindgen ( js_name = deepStrictEqual ) ]
+    pub fn deep_strict_equal(actual: &JsValue, expected: &JsValue, message: &JsValue) -> bool;
+    # [ wasm_bindgen ( js_name = notDeepStrictEqual ) ]
+    pub fn not_deep_strict_equal(actual: &JsValue, expected: &JsValue, message: &JsValue);
+    #[wasm_bindgen()]
+    pub fn throws(block: &JsValue, message: &JsValue);
+    # [ wasm_bindgen ( js_name = throws ) ]
+    pub fn throws2(block: &JsValue, error: &JsValue, message: &JsValue);
+    # [ wasm_bindgen ( js_name = doesNotThrow ) ]
+    pub fn does_not_throw(block: &JsValue, message: &JsValue);
+    # [ wasm_bindgen ( js_name = doesNotThrow ) ]
+    pub fn does_not_throw2(block: &JsValue, error: &JsValue, message: &JsValue);
+    # [ wasm_bindgen ( js_name = ifError ) ]
+    pub fn if_error(value: &JsValue) -> bool;
+    #[wasm_bindgen()]
+    pub fn rejects(block: &JsValue, message: &JsValue) -> Promise;
+    # [ wasm_bindgen ( js_name = rejects ) ]
+    pub fn rejects2(block: &JsValue, error: &JsValue, message: &JsValue) -> Promise;
+    # [ wasm_bindgen ( js_name = doesNotReject ) ]
+    pub fn does_not_reject(block: &JsValue, message: &JsValue) -> Promise;
+    # [ wasm_bindgen ( js_name = doesNotReject ) ]
+    pub fn does_not_reject2(block: &JsValue, error: &JsValue, message: &JsValue) -> Promise;
+    #[wasm_bindgen(js_name = "strict")]
+    pub static STRICT: String;
 }
