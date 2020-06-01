@@ -1,5 +1,5 @@
 [package]
-name = "monaco-editor"
+name = "node"
 version = "0.1.0"
 authors = ["Taggart Software LLC <support@ctaggart.com>"]
 edition = "2018"
@@ -10,7 +10,6 @@ crate-type = ["cdylib", "rlib"]
 [dependencies]
 wasm-bindgen = { git = "https://github.com/rustwasm/wasm-bindgen" }
 js-sys = { git = "https://github.com/rustwasm/wasm-bindgen" }
-web-sys = { git = "https://github.com/rustwasm/wasm-bindgen", features = [ "HtmlElement", "KeyboardEvent", "MouseEvent", "Worker" ] }
 
 # [dev-dependencies]
-# wasm-bindgen-test = { git = "https://github.com/rustwasm/wasm-bindgen" }
+# wasm-bindgen-test = "*"

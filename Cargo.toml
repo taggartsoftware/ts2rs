@@ -2,7 +2,7 @@
 members = [
     # "electron",
     # "monaco-editor",
-    # "node",
+    "node",
 
     "monaco-editor-hello-world",
 ]
