@@ -31,32 +31,12 @@ impl From<Cluster> for EventEmitter {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for Cluster {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Cluster> for internal {
-    fn from(child: Cluster) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<EventEmitter> for Worker {
     fn as_ref(&self) -> &EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
 impl From<Worker> for EventEmitter {
-    fn from(child: Worker) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for Worker {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Worker> for internal {
     fn from(child: Worker) -> Self {
         JsCast::unchecked_into(child)
     }

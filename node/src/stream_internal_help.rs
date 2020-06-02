@@ -121,16 +121,6 @@ impl From<Duplex> for WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for Duplex {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Duplex> for internal {
-    fn from(child: Duplex) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<ReadableOptions> for DuplexOptions {
     fn as_ref(&self) -> &ReadableOptions {
         JsCast::unchecked_ref(self)
@@ -231,16 +221,6 @@ impl From<PassThrough> for WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for PassThrough {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<PassThrough> for internal {
-    fn from(child: PassThrough) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<EventEmitter> for Readable {
     fn as_ref(&self) -> &EventEmitter {
         JsCast::unchecked_ref(self)
@@ -271,32 +251,12 @@ impl From<Readable> for Stream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for Readable {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Readable> for internal {
-    fn from(child: Readable) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<EventEmitter> for Stream {
     fn as_ref(&self) -> &EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
 impl From<Stream> for EventEmitter {
-    fn from(child: Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for Stream {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Stream> for internal {
     fn from(child: Stream) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -371,16 +331,6 @@ impl From<Transform> for WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for Transform {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Transform> for internal {
-    fn from(child: Transform) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<DuplexOptions> for TransformOptions {
     fn as_ref(&self) -> &DuplexOptions {
         JsCast::unchecked_ref(self)
@@ -437,16 +387,6 @@ impl AsRef<WritableStream> for Writable {
     }
 }
 impl From<Writable> for WritableStream {
-    fn from(child: Writable) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for Writable {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Writable> for internal {
     fn from(child: Writable) -> Self {
         JsCast::unchecked_into(child)
     }

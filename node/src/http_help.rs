@@ -116,16 +116,6 @@ impl From<ClientRequest> for WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for ClientRequest {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ClientRequest> for internal {
-    fn from(child: ClientRequest) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<EventEmitter> for IncomingMessage {
     fn as_ref(&self) -> &EventEmitter {
         JsCast::unchecked_ref(self)
@@ -166,16 +156,6 @@ impl From<IncomingMessage> for Stream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for IncomingMessage {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<IncomingMessage> for internal {
-    fn from(child: IncomingMessage) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<EventEmitter> for OutgoingMessage {
     fn as_ref(&self) -> &EventEmitter {
         JsCast::unchecked_ref(self)
@@ -212,16 +192,6 @@ impl AsRef<WritableStream> for OutgoingMessage {
     }
 }
 impl From<OutgoingMessage> for WritableStream {
-    fn from(child: OutgoingMessage) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for OutgoingMessage {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<OutgoingMessage> for internal {
     fn from(child: OutgoingMessage) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -292,16 +262,6 @@ impl AsRef<WritableStream> for ServerResponse {
     }
 }
 impl From<ServerResponse> for WritableStream {
-    fn from(child: ServerResponse) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for ServerResponse {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ServerResponse> for internal {
     fn from(child: ServerResponse) -> Self {
         JsCast::unchecked_into(child)
     }

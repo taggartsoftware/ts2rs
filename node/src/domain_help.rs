@@ -6,32 +6,12 @@ impl Domain {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<Domain> for Domain {
-    fn as_ref(&self) -> &Domain {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Domain> for Domain {
-    fn from(child: Domain) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<EventEmitter> for Domain {
     fn as_ref(&self) -> &EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
 impl From<Domain> for EventEmitter {
-    fn from(child: Domain) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for Domain {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Domain> for internal {
     fn from(child: Domain) -> Self {
         JsCast::unchecked_into(child)
     }

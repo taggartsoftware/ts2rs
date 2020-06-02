@@ -36,13 +36,3 @@ impl From<CustomPromisify> for Function {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<InspectOptions> for InspectOptions {
-    fn as_ref(&self) -> &InspectOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<InspectOptions> for InspectOptions {
-    fn from(child: InspectOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}

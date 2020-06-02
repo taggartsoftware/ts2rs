@@ -6,23 +6,3 @@ impl EventEmitter {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<EventEmitter> for EventEmitter {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<EventEmitter> for EventEmitter {
-    fn from(child: EventEmitter) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for EventEmitter {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<EventEmitter> for internal {
-    fn from(child: EventEmitter) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}

@@ -26,13 +26,3 @@ impl From<Interface> for EventEmitter {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for Interface {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Interface> for internal {
-    fn from(child: Interface) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}

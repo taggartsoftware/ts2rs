@@ -166,16 +166,6 @@ impl From<ClientHttp2Session> for Http2Session {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for ClientHttp2Session {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ClientHttp2Session> for internal {
-    fn from(child: ClientHttp2Session) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Duplex> for ClientHttp2Stream {
     fn as_ref(&self) -> &Duplex {
         JsCast::unchecked_ref(self)
@@ -256,16 +246,6 @@ impl From<ClientHttp2Stream> for WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for ClientHttp2Stream {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ClientHttp2Stream> for internal {
-    fn from(child: ClientHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<SessionOptions> for ClientSessionOptions {
     fn as_ref(&self) -> &SessionOptions {
         JsCast::unchecked_ref(self)
@@ -296,16 +276,6 @@ impl From<Http2SecureServer> for Server {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for Http2SecureServer {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Http2SecureServer> for internal {
-    fn from(child: Http2SecureServer) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<EventEmitter> for Http2Server {
     fn as_ref(&self) -> &EventEmitter {
         JsCast::unchecked_ref(self)
@@ -322,16 +292,6 @@ impl AsRef<Server> for Http2Server {
     }
 }
 impl From<Http2Server> for Server {
-    fn from(child: Http2Server) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for Http2Server {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Http2Server> for internal {
     fn from(child: Http2Server) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -376,16 +336,6 @@ impl From<Http2ServerRequest> for Stream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for Http2ServerRequest {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Http2ServerRequest> for internal {
-    fn from(child: Http2ServerRequest) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<EventEmitter> for Http2ServerResponse {
     fn as_ref(&self) -> &EventEmitter {
         JsCast::unchecked_ref(self)
@@ -406,32 +356,12 @@ impl From<Http2ServerResponse> for Stream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for Http2ServerResponse {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Http2ServerResponse> for internal {
-    fn from(child: Http2ServerResponse) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<EventEmitter> for Http2Session {
     fn as_ref(&self) -> &EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
 impl From<Http2Session> for EventEmitter {
-    fn from(child: Http2Session) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for Http2Session {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Http2Session> for internal {
     fn from(child: Http2Session) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -502,16 +432,6 @@ impl AsRef<WritableStream> for Http2Stream {
     }
 }
 impl From<Http2Stream> for WritableStream {
-    fn from(child: Http2Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for Http2Stream {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Http2Stream> for internal {
     fn from(child: Http2Stream) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -706,16 +626,6 @@ impl From<ServerHttp2Session> for Http2Session {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for ServerHttp2Session {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ServerHttp2Session> for internal {
-    fn from(child: ServerHttp2Session) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Duplex> for ServerHttp2Stream {
     fn as_ref(&self) -> &Duplex {
         JsCast::unchecked_ref(self)
@@ -792,16 +702,6 @@ impl AsRef<WritableStream> for ServerHttp2Stream {
     }
 }
 impl From<ServerHttp2Stream> for WritableStream {
-    fn from(child: ServerHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for ServerHttp2Stream {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ServerHttp2Stream> for internal {
     fn from(child: ServerHttp2Stream) -> Self {
         JsCast::unchecked_into(child)
     }

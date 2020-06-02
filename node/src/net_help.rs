@@ -106,16 +106,6 @@ impl From<Server> for EventEmitter {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for Server {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Server> for internal {
-    fn from(child: Server) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Duplex> for Socket {
     fn as_ref(&self) -> &Duplex {
         JsCast::unchecked_ref(self)
@@ -182,16 +172,6 @@ impl AsRef<WritableStream> for Socket {
     }
 }
 impl From<Socket> for WritableStream {
-    fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for Socket {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Socket> for internal {
     fn from(child: Socket) -> Self {
         JsCast::unchecked_into(child)
     }

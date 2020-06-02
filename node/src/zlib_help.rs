@@ -161,16 +161,6 @@ impl From<BrotliCompress> for Zlib {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for BrotliCompress {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<BrotliCompress> for internal {
-    fn from(child: BrotliCompress) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Duplex> for BrotliDecompress {
     fn as_ref(&self) -> &Duplex {
         JsCast::unchecked_ref(self)
@@ -257,16 +247,6 @@ impl AsRef<Zlib> for BrotliDecompress {
     }
 }
 impl From<BrotliDecompress> for Zlib {
-    fn from(child: BrotliDecompress) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for BrotliDecompress {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<BrotliDecompress> for internal {
     fn from(child: BrotliDecompress) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -381,16 +361,6 @@ impl From<Deflate> for ZlibReset {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for Deflate {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Deflate> for internal {
-    fn from(child: Deflate) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Duplex> for DeflateRaw {
     fn as_ref(&self) -> &Duplex {
         JsCast::unchecked_ref(self)
@@ -501,16 +471,6 @@ impl From<DeflateRaw> for ZlibReset {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for DeflateRaw {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DeflateRaw> for internal {
-    fn from(child: DeflateRaw) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Duplex> for Gunzip {
     fn as_ref(&self) -> &Duplex {
         JsCast::unchecked_ref(self)
@@ -601,16 +561,6 @@ impl From<Gunzip> for Zlib {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for Gunzip {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Gunzip> for internal {
-    fn from(child: Gunzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Duplex> for Gzip {
     fn as_ref(&self) -> &Duplex {
         JsCast::unchecked_ref(self)
@@ -697,16 +647,6 @@ impl AsRef<Zlib> for Gzip {
     }
 }
 impl From<Gzip> for Zlib {
-    fn from(child: Gzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for Gzip {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Gzip> for internal {
     fn from(child: Gzip) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -811,16 +751,6 @@ impl From<Inflate> for ZlibReset {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for Inflate {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Inflate> for internal {
-    fn from(child: Inflate) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Duplex> for InflateRaw {
     fn as_ref(&self) -> &Duplex {
         JsCast::unchecked_ref(self)
@@ -921,16 +851,6 @@ impl From<InflateRaw> for ZlibReset {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for InflateRaw {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<InflateRaw> for internal {
-    fn from(child: InflateRaw) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Duplex> for Unzip {
     fn as_ref(&self) -> &Duplex {
         JsCast::unchecked_ref(self)
@@ -1017,16 +937,6 @@ impl AsRef<Zlib> for Unzip {
     }
 }
 impl From<Unzip> for Zlib {
-    fn from(child: Unzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for Unzip {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Unzip> for internal {
     fn from(child: Unzip) -> Self {
         JsCast::unchecked_into(child)
     }

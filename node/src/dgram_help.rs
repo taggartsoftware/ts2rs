@@ -31,13 +31,3 @@ impl From<Socket> for EventEmitter {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for Socket {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Socket> for internal {
-    fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}

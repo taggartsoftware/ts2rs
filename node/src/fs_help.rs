@@ -96,16 +96,6 @@ impl From<FSWatcher> for EventEmitter {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<internal> for FSWatcher {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<FSWatcher> for internal {
-    fn from(child: FSWatcher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<EventEmitter> for ReadStream {
     fn as_ref(&self) -> &EventEmitter {
         JsCast::unchecked_ref(self)
@@ -142,16 +132,6 @@ impl AsRef<Stream> for ReadStream {
     }
 }
 impl From<ReadStream> for Stream {
-    fn from(child: ReadStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for ReadStream {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ReadStream> for internal {
     fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -212,16 +192,6 @@ impl AsRef<WritableStream> for WriteStream {
     }
 }
 impl From<WriteStream> for WritableStream {
-    fn from(child: WriteStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for WriteStream {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<WriteStream> for internal {
     fn from(child: WriteStream) -> Self {
         JsCast::unchecked_into(child)
     }

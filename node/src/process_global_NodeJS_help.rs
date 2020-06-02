@@ -31,16 +31,6 @@ impl From<ReadStream> for EventEmitter {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ReadStream> for ReadStream {
-    fn as_ref(&self) -> &ReadStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ReadStream> for ReadStream {
-    fn from(child: ReadStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Readable> for ReadStream {
     fn as_ref(&self) -> &Readable {
         JsCast::unchecked_ref(self)
@@ -97,16 +87,6 @@ impl AsRef<WritableStream> for ReadStream {
     }
 }
 impl From<ReadStream> for WritableStream {
-    fn from(child: ReadStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for ReadStream {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ReadStream> for internal {
     fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -187,26 +167,6 @@ impl AsRef<WritableStream> for WriteStream {
     }
 }
 impl From<WriteStream> for WritableStream {
-    fn from(child: WriteStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WriteStream> for WriteStream {
-    fn as_ref(&self) -> &WriteStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<WriteStream> for WriteStream {
-    fn from(child: WriteStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<internal> for WriteStream {
-    fn as_ref(&self) -> &internal {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<WriteStream> for internal {
     fn from(child: WriteStream) -> Self {
         JsCast::unchecked_into(child)
     }
