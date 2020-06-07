@@ -5,5 +5,5 @@
 extern "C" {
     #[doc = "Asynchronous open(2) - open and possibly create a file."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike, flags: &JsValue, mode: &JsValue) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike, flags: &JsValue, mode: &JsValue) -> Promise;
 }

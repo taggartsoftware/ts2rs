@@ -5,5 +5,5 @@
 extern "C" {
     #[doc = "Asynchronous rename(2) - Change the name or location of a file or directory."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(old_path: &PathLike, new_path: &PathLike) -> Promise;
+    pub fn promisify(old_path: &crate::fs::PathLike, new_path: &crate::fs::PathLike) -> Promise;
 }

@@ -9,7 +9,11 @@ extern "C" {
     pub fn once2(emitter: &DOMEventTarget, event: &str) -> Promise;
     pub type EventEmitter;
     # [ wasm_bindgen ( method , js_name = listenerCount ) ]
-    pub fn listener_count(this: &EventEmitter, emitter: &EventEmitter, event: &JsValue) -> f64;
+    pub fn listener_count(
+        this: &EventEmitter,
+        emitter: &crate::internal::EventEmitter,
+        event: &JsValue,
+    ) -> f64;
     # [ wasm_bindgen ( method , setter , js_name = listenerCount ) ]
     pub fn set_listener_count(this: &EventEmitter, value: &Function);
     # [ wasm_bindgen ( method , getter , js_name = defaultMaxListeners ) ]

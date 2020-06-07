@@ -5,6 +5,10 @@
 extern "C" {
     #[doc = "Asynchronous symlink(2) - Create a new symbolic link to an existing file."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(target: &PathLike, path: &PathLike, type_: &JsValue) -> Promise;
+    pub fn promisify(
+        target: &crate::fs::PathLike,
+        path: &crate::fs::PathLike,
+        type_: &JsValue,
+    ) -> Promise;
     pub type Type;
 }

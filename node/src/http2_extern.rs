@@ -89,9 +89,9 @@ extern "C" {
     # [ wasm_bindgen ( method , js_name = statCheck ) ]
     pub fn stat_check(
         this: &ServerStreamFileResponseOptions,
-        stats: &Stats,
+        stats: &crate::fs::Stats,
         headers: &OutgoingHttpHeaders,
-        stat_options: &StatOptions,
+        stat_options: &crate::http2::StatOptions,
     ) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = statCheck ) ]
     pub fn set_stat_check(this: &ServerStreamFileResponseOptions, value: Option<&Function>);
@@ -109,7 +109,10 @@ extern "C" {
     pub fn set_length(this: &ServerStreamFileResponseOptions, value: Option<f64>);
     pub type ServerStreamFileResponseOptionsWithError;
     # [ wasm_bindgen ( method , js_name = onError ) ]
-    pub fn on_error(this: &ServerStreamFileResponseOptionsWithError, err: &ErrnoException);
+    pub fn on_error(
+        this: &ServerStreamFileResponseOptionsWithError,
+        err: &crate::node_js::ErrnoException,
+    );
     # [ wasm_bindgen ( method , setter , js_name = onError ) ]
     pub fn set_on_error(this: &ServerStreamFileResponseOptionsWithError, value: Option<&Function>);
     pub type Http2Stream;
@@ -138,15 +141,15 @@ extern "C" {
     # [ wasm_bindgen ( method , getter , js_name = sentTrailers ) ]
     pub fn sent_trailers(this: &Http2Stream) -> Option<OutgoingHttpHeaders>;
     #[wasm_bindgen(method, getter)]
-    pub fn session(this: &Http2Stream) -> Http2Session;
+    pub fn session(this: &Http2Stream) -> crate::http2::Http2Session;
     #[wasm_bindgen(method, getter)]
-    pub fn state(this: &Http2Stream) -> StreamState;
+    pub fn state(this: &Http2Stream) -> crate::http2::StreamState;
     #[wasm_bindgen(method)]
     pub fn close(this: &Http2Stream, code: Option<f64>, callback: &JsValue);
     #[wasm_bindgen(method, setter)]
     pub fn set_close(this: &Http2Stream, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn priority(this: &Http2Stream, options: &StreamPriorityOptions);
+    pub fn priority(this: &Http2Stream, options: &crate::http2::StreamPriorityOptions);
     #[wasm_bindgen(method, setter)]
     pub fn set_priority(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = setTimeout ) ]
@@ -2245,11 +2248,11 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit8(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit9(this: &Http2Stream, event: &JsValue, src: &Readable) -> bool;
+    pub fn emit9(this: &Http2Stream, event: &JsValue, src: &crate::internal::Readable) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit9(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit10(this: &Http2Stream, event: &JsValue, src: &Readable) -> bool;
+    pub fn emit10(this: &Http2Stream, event: &JsValue, src: &crate::internal::Readable) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit10(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -2264,7 +2267,7 @@ extern "C" {
     pub fn emit13(
         this: &Http2Stream,
         event: &JsValue,
-        trailers: &IncomingHttpHeaders,
+        trailers: &crate::http2::IncomingHttpHeaders,
         flags: f64,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
@@ -6052,7 +6055,7 @@ extern "C" {
     pub fn emit3(
         this: &ClientHttp2Stream,
         event: &JsValue,
-        headers: &IncomingHttpHeaders,
+        headers: &crate::http2::IncomingHttpHeaders,
         flags: f64,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
@@ -6219,7 +6222,7 @@ extern "C" {
     pub fn push_stream2(
         this: &ServerHttp2Stream,
         headers: &OutgoingHttpHeaders,
-        options: Option<&StreamPriorityOptions>,
+        options: Option<&crate::http2::StreamPriorityOptions>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = pushStream ) ]
@@ -6228,7 +6231,7 @@ extern "C" {
     pub fn respond(
         this: &ServerHttp2Stream,
         headers: Option<&OutgoingHttpHeaders>,
-        options: Option<&ServerStreamResponseOptions>,
+        options: Option<&crate::http2::ServerStreamResponseOptions>,
     );
     #[wasm_bindgen(method, setter)]
     pub fn set_respond(this: &ServerHttp2Stream, value: &Function);
@@ -6237,7 +6240,7 @@ extern "C" {
         this: &ServerHttp2Stream,
         fd: &JsValue,
         headers: Option<&OutgoingHttpHeaders>,
-        options: Option<&ServerStreamFileResponseOptions>,
+        options: Option<&crate::http2::ServerStreamFileResponseOptions>,
     );
     # [ wasm_bindgen ( method , setter , js_name = respondWithFD ) ]
     pub fn set_respond_with_fd(this: &ServerHttp2Stream, value: &Function);
@@ -6246,7 +6249,7 @@ extern "C" {
         this: &ServerHttp2Stream,
         path: &str,
         headers: Option<&OutgoingHttpHeaders>,
-        options: Option<&ServerStreamFileResponseOptionsWithError>,
+        options: Option<&crate::http2::ServerStreamFileResponseOptionsWithError>,
     );
     # [ wasm_bindgen ( method , setter , js_name = respondWithFile ) ]
     pub fn set_respond_with_file(this: &ServerHttp2Stream, value: &Function);
@@ -6349,17 +6352,17 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn encrypted(this: &Http2Session) -> Option<bool>;
     # [ wasm_bindgen ( method , getter , js_name = localSettings ) ]
-    pub fn local_settings(this: &Http2Session) -> Settings;
+    pub fn local_settings(this: &Http2Session) -> crate::http2::Settings;
     # [ wasm_bindgen ( method , getter , js_name = originSet ) ]
     pub fn origin_set(this: &Http2Session) -> Option<Array>;
     # [ wasm_bindgen ( method , getter , js_name = pendingSettingsAck ) ]
     pub fn pending_settings_ack(this: &Http2Session) -> bool;
     # [ wasm_bindgen ( method , getter , js_name = remoteSettings ) ]
-    pub fn remote_settings(this: &Http2Session) -> Settings;
+    pub fn remote_settings(this: &Http2Session) -> crate::http2::Settings;
     #[wasm_bindgen(method, getter)]
     pub fn socket(this: &Http2Session) -> JsValue;
     #[wasm_bindgen(method, getter)]
-    pub fn state(this: &Http2Session) -> SessionState;
+    pub fn state(this: &Http2Session) -> crate::http2::SessionState;
     # [ wasm_bindgen ( method , getter , js_name = type ) ]
     pub fn type_(this: &Http2Session) -> f64;
     #[wasm_bindgen(method)]
@@ -6375,7 +6378,7 @@ extern "C" {
         this: &Http2Session,
         code: Option<f64>,
         last_stream_id: Option<f64>,
-        opaque_data: Option<&ArrayBufferView>,
+        opaque_data: Option<&crate::node_js::ArrayBufferView>,
     );
     #[wasm_bindgen(method, setter)]
     pub fn set_goaway(this: &Http2Session, value: &Function);
@@ -6384,7 +6387,11 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_ping(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = ping ) ]
-    pub fn ping2(this: &Http2Session, payload: &ArrayBufferView, callback: &JsValue) -> bool;
+    pub fn ping2(
+        this: &Http2Session,
+        payload: &crate::node_js::ArrayBufferView,
+        callback: &JsValue,
+    ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = ping ) ]
     pub fn set_ping2(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = ref ) ]
@@ -6396,7 +6403,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = setTimeout ) ]
     pub fn set_set_timeout(this: &Http2Session, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn settings(this: &Http2Session, settings: &Settings);
+    pub fn settings(this: &Http2Session, settings: &crate::http2::Settings);
     #[wasm_bindgen(method, setter)]
     pub fn set_settings(this: &Http2Session, value: &Function);
     #[wasm_bindgen(method)]
@@ -6468,7 +6475,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit4(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Http2Session, event: &JsValue, settings: &Settings) -> bool;
+    pub fn emit5(this: &Http2Session, event: &JsValue, settings: &crate::http2::Settings) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit5(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -6476,7 +6483,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit6(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &Http2Session, event: &JsValue, settings: &Settings) -> bool;
+    pub fn emit7(this: &Http2Session, event: &JsValue, settings: &crate::http2::Settings) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit7(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -6708,8 +6715,8 @@ extern "C" {
     pub fn request(
         this: &ClientHttp2Session,
         headers: Option<&OutgoingHttpHeaders>,
-        options: Option<&ClientSessionRequestOptions>,
-    ) -> ClientHttp2Stream;
+        options: Option<&crate::http2::ClientSessionRequestOptions>,
+    ) -> crate::http2::ClientHttp2Stream;
     #[wasm_bindgen(method, setter)]
     pub fn set_request(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
@@ -6770,7 +6777,7 @@ extern "C" {
     pub fn emit3(
         this: &ClientHttp2Session,
         event: &JsValue,
-        session: &ClientHttp2Session,
+        session: &crate::http2::ClientHttp2Session,
         socket: &JsValue,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
@@ -6779,7 +6786,7 @@ extern "C" {
     pub fn emit4(
         this: &ClientHttp2Session,
         event: &JsValue,
-        stream: &ClientHttp2Stream,
+        stream: &crate::http2::ClientHttp2Stream,
         headers: &JsValue,
         flags: f64,
     ) -> bool;
@@ -6990,7 +6997,7 @@ extern "C" {
     pub fn emit(
         this: &ServerHttp2Session,
         event: &JsValue,
-        session: &ServerHttp2Session,
+        session: &crate::http2::ServerHttp2Session,
         socket: &JsValue,
     ) -> bool;
     #[wasm_bindgen(method, setter)]
@@ -6999,8 +7006,8 @@ extern "C" {
     pub fn emit2(
         this: &ServerHttp2Session,
         event: &JsValue,
-        stream: &ServerHttp2Stream,
-        headers: &IncomingHttpHeaders,
+        stream: &crate::http2::ServerHttp2Stream,
+        headers: &crate::http2::IncomingHttpHeaders,
         flags: f64,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
@@ -7132,9 +7139,9 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = peerMaxConcurrentStreams ) ]
     pub fn set_peer_max_concurrent_streams(this: &SessionOptions, value: Option<f64>);
     #[wasm_bindgen(method, getter)]
-    pub fn settings(this: &SessionOptions) -> Option<Settings>;
+    pub fn settings(this: &SessionOptions) -> Option<crate::http2::Settings>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_settings(this: &SessionOptions, value: Option<&Settings>);
+    pub fn set_settings(this: &SessionOptions, value: Option<&crate::http2::Settings>);
     # [ wasm_bindgen ( method , js_name = selectPadding ) ]
     pub fn select_padding(this: &SessionOptions, frame_len: f64, max_frame_len: f64) -> f64;
     # [ wasm_bindgen ( method , setter , js_name = selectPadding ) ]
@@ -7142,9 +7149,9 @@ extern "C" {
     # [ wasm_bindgen ( method , js_name = createConnection ) ]
     pub fn create_connection(
         this: &SessionOptions,
-        authority: &URL,
-        option: &SessionOptions,
-    ) -> Duplex;
+        authority: &crate::url::URL,
+        option: &crate::http2::SessionOptions,
+    ) -> crate::internal::Duplex;
     # [ wasm_bindgen ( method , setter , js_name = createConnection ) ]
     pub fn set_create_connection(this: &SessionOptions, value: Option<&Function>);
     pub type ClientSessionOptions;
@@ -7547,8 +7554,8 @@ extern "C" {
     pub fn emit(
         this: &Http2Server,
         event: &JsValue,
-        request: &Http2ServerRequest,
-        response: &Http2ServerResponse,
+        request: &crate::http2::Http2ServerRequest,
+        response: &crate::http2::Http2ServerResponse,
     ) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Http2Server, value: &Function);
@@ -7556,13 +7563,17 @@ extern "C" {
     pub fn emit2(
         this: &Http2Server,
         event: &JsValue,
-        request: &Http2ServerRequest,
-        response: &Http2ServerResponse,
+        request: &crate::http2::Http2ServerRequest,
+        response: &crate::http2::Http2ServerResponse,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit2(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &Http2Server, event: &JsValue, session: &ServerHttp2Session) -> bool;
+    pub fn emit3(
+        this: &Http2Server,
+        event: &JsValue,
+        session: &crate::http2::ServerHttp2Session,
+    ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit3(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -7573,8 +7584,8 @@ extern "C" {
     pub fn emit5(
         this: &Http2Server,
         event: &JsValue,
-        stream: &ServerHttp2Stream,
-        headers: &IncomingHttpHeaders,
+        stream: &crate::http2::ServerHttp2Stream,
+        headers: &crate::http2::IncomingHttpHeaders,
         flags: f64,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
@@ -8385,8 +8396,8 @@ extern "C" {
     pub fn emit(
         this: &Http2SecureServer,
         event: &JsValue,
-        request: &Http2ServerRequest,
-        response: &Http2ServerResponse,
+        request: &crate::http2::Http2ServerRequest,
+        response: &crate::http2::Http2ServerResponse,
     ) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Http2SecureServer, value: &Function);
@@ -8394,13 +8405,17 @@ extern "C" {
     pub fn emit2(
         this: &Http2SecureServer,
         event: &JsValue,
-        request: &Http2ServerRequest,
-        response: &Http2ServerResponse,
+        request: &crate::http2::Http2ServerRequest,
+        response: &crate::http2::Http2ServerResponse,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit2(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &Http2SecureServer, event: &JsValue, session: &ServerHttp2Session) -> bool;
+    pub fn emit3(
+        this: &Http2SecureServer,
+        event: &JsValue,
+        session: &crate::http2::ServerHttp2Session,
+    ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit3(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -8411,8 +8426,8 @@ extern "C" {
     pub fn emit5(
         this: &Http2SecureServer,
         event: &JsValue,
-        stream: &ServerHttp2Stream,
-        headers: &IncomingHttpHeaders,
+        stream: &crate::http2::ServerHttp2Stream,
+        headers: &crate::http2::IncomingHttpHeaders,
         flags: f64,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
@@ -8422,7 +8437,8 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit6(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &Http2SecureServer, event: &JsValue, socket: &TLSSocket) -> bool;
+    pub fn emit7(this: &Http2SecureServer, event: &JsValue, socket: &crate::tls::TLSSocket)
+    -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit7(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -8661,9 +8677,9 @@ extern "C" {
     pub type Http2ServerRequest;
     #[wasm_bindgen(constructor)]
     pub fn new_http2_server_request(
-        stream: &ServerHttp2Stream,
-        headers: &IncomingHttpHeaders,
-        options: &ReadableOptions,
+        stream: &crate::http2::ServerHttp2Stream,
+        headers: &crate::http2::IncomingHttpHeaders,
+        options: &crate::internal::ReadableOptions,
         raw_headers: &Array,
     ) -> Http2ServerRequest;
     #[wasm_bindgen(method, getter)]
@@ -8671,7 +8687,7 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn authority(this: &Http2ServerRequest) -> String;
     #[wasm_bindgen(method, getter)]
-    pub fn headers(this: &Http2ServerRequest) -> IncomingHttpHeaders;
+    pub fn headers(this: &Http2ServerRequest) -> crate::http2::IncomingHttpHeaders;
     # [ wasm_bindgen ( method , getter , js_name = httpVersion ) ]
     pub fn http_version(this: &Http2ServerRequest) -> String;
     #[wasm_bindgen(method, getter)]
@@ -8685,9 +8701,9 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn socket(this: &Http2ServerRequest) -> JsValue;
     #[wasm_bindgen(method, getter)]
-    pub fn stream(this: &Http2ServerRequest) -> ServerHttp2Stream;
+    pub fn stream(this: &Http2ServerRequest) -> crate::http2::ServerHttp2Stream;
     #[wasm_bindgen(method, getter)]
-    pub fn trailers(this: &Http2ServerRequest) -> IncomingHttpHeaders;
+    pub fn trailers(this: &Http2ServerRequest) -> crate::http2::IncomingHttpHeaders;
     #[wasm_bindgen(method, getter)]
     pub fn url(this: &Http2ServerRequest) -> String;
     # [ wasm_bindgen ( method , js_name = setTimeout ) ]
@@ -9432,7 +9448,9 @@ extern "C" {
     pub fn set_prepend_once_listener7(this: &Http2ServerRequest, value: &Function);
     pub type Http2ServerResponse;
     #[wasm_bindgen(constructor)]
-    pub fn new_http2_server_response(stream: &ServerHttp2Stream) -> Http2ServerResponse;
+    pub fn new_http2_server_response(
+        stream: &crate::http2::ServerHttp2Stream,
+    ) -> Http2ServerResponse;
     #[wasm_bindgen(method, getter)]
     pub fn connection(this: &Http2ServerResponse) -> JsValue;
     #[wasm_bindgen(method, getter)]
@@ -9442,7 +9460,7 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn socket(this: &Http2ServerResponse) -> JsValue;
     #[wasm_bindgen(method, getter)]
-    pub fn stream(this: &Http2ServerResponse) -> ServerHttp2Stream;
+    pub fn stream(this: &Http2ServerResponse) -> crate::http2::ServerHttp2Stream;
     # [ wasm_bindgen ( method , getter , js_name = sendDate ) ]
     pub fn send_date(this: &Http2ServerResponse) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = sendDate ) ]
@@ -9614,11 +9632,19 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit4(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Http2ServerResponse, event: &JsValue, src: &Readable) -> bool;
+    pub fn emit5(
+        this: &Http2ServerResponse,
+        event: &JsValue,
+        src: &crate::internal::Readable,
+    ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit5(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Http2ServerResponse, event: &JsValue, src: &Readable) -> bool;
+    pub fn emit6(
+        this: &Http2ServerResponse,
+        event: &JsValue,
+        src: &crate::internal::Readable,
+    ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit6(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -9850,28 +9876,31 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener7(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( js_name = getDefaultSettings ) ]
-    pub fn get_default_settings() -> Settings;
+    pub fn get_default_settings() -> crate::http2::Settings;
     # [ wasm_bindgen ( js_name = getPackedSettings ) ]
-    pub fn get_packed_settings(settings: &Settings) -> Buffer;
+    pub fn get_packed_settings(settings: &crate::http2::Settings) -> Buffer;
     # [ wasm_bindgen ( js_name = getUnpackedSettings ) ]
-    pub fn get_unpacked_settings(buf: &Uint8Array) -> Settings;
+    pub fn get_unpacked_settings(buf: &Uint8Array) -> crate::http2::Settings;
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server(on_request_handler: &JsValue) -> Http2Server;
+    pub fn create_server(on_request_handler: &JsValue) -> crate::http2::Http2Server;
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server2(options: &ServerOptions, on_request_handler: &JsValue) -> Http2Server;
+    pub fn create_server2(
+        options: &crate::http2::ServerOptions,
+        on_request_handler: &JsValue,
+    ) -> crate::http2::Http2Server;
     # [ wasm_bindgen ( js_name = createSecureServer ) ]
-    pub fn create_secure_server(on_request_handler: &JsValue) -> Http2SecureServer;
+    pub fn create_secure_server(on_request_handler: &JsValue) -> crate::http2::Http2SecureServer;
     # [ wasm_bindgen ( js_name = createSecureServer ) ]
     pub fn create_secure_server2(
-        options: &SecureServerOptions,
+        options: &crate::http2::SecureServerOptions,
         on_request_handler: &JsValue,
-    ) -> Http2SecureServer;
+    ) -> crate::http2::Http2SecureServer;
     #[wasm_bindgen()]
-    pub fn connect(authority: &JsValue, listener: &JsValue) -> ClientHttp2Session;
+    pub fn connect(authority: &JsValue, listener: &JsValue) -> crate::http2::ClientHttp2Session;
     # [ wasm_bindgen ( js_name = connect ) ]
     pub fn connect2(
         authority: &JsValue,
         options: &JsValue,
         listener: &JsValue,
-    ) -> ClientHttp2Session;
+    ) -> crate::http2::ClientHttp2Session;
 }

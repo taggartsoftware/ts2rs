@@ -90,79 +90,153 @@ extern "C" {
     pub type InflateRaw;
     pub type Unzip;
     # [ wasm_bindgen ( js_name = createBrotliCompress ) ]
-    pub fn create_brotli_compress(options: Option<&BrotliOptions>) -> BrotliCompress;
+    pub fn create_brotli_compress(
+        options: Option<&crate::zlib::BrotliOptions>,
+    ) -> crate::zlib::BrotliCompress;
     # [ wasm_bindgen ( js_name = createBrotliDecompress ) ]
-    pub fn create_brotli_decompress(options: Option<&BrotliOptions>) -> BrotliDecompress;
+    pub fn create_brotli_decompress(
+        options: Option<&crate::zlib::BrotliOptions>,
+    ) -> crate::zlib::BrotliDecompress;
     # [ wasm_bindgen ( js_name = createGzip ) ]
-    pub fn create_gzip(options: Option<&ZlibOptions>) -> Gzip;
+    pub fn create_gzip(options: Option<&crate::zlib::ZlibOptions>) -> crate::zlib::Gzip;
     # [ wasm_bindgen ( js_name = createGunzip ) ]
-    pub fn create_gunzip(options: Option<&ZlibOptions>) -> Gunzip;
+    pub fn create_gunzip(options: Option<&crate::zlib::ZlibOptions>) -> crate::zlib::Gunzip;
     # [ wasm_bindgen ( js_name = createDeflate ) ]
-    pub fn create_deflate(options: Option<&ZlibOptions>) -> Deflate;
+    pub fn create_deflate(options: Option<&crate::zlib::ZlibOptions>) -> crate::zlib::Deflate;
     # [ wasm_bindgen ( js_name = createInflate ) ]
-    pub fn create_inflate(options: Option<&ZlibOptions>) -> Inflate;
+    pub fn create_inflate(options: Option<&crate::zlib::ZlibOptions>) -> crate::zlib::Inflate;
     # [ wasm_bindgen ( js_name = createDeflateRaw ) ]
-    pub fn create_deflate_raw(options: Option<&ZlibOptions>) -> DeflateRaw;
+    pub fn create_deflate_raw(
+        options: Option<&crate::zlib::ZlibOptions>,
+    ) -> crate::zlib::DeflateRaw;
     # [ wasm_bindgen ( js_name = createInflateRaw ) ]
-    pub fn create_inflate_raw(options: Option<&ZlibOptions>) -> InflateRaw;
+    pub fn create_inflate_raw(
+        options: Option<&crate::zlib::ZlibOptions>,
+    ) -> crate::zlib::InflateRaw;
     # [ wasm_bindgen ( js_name = createUnzip ) ]
-    pub fn create_unzip(options: Option<&ZlibOptions>) -> Unzip;
+    pub fn create_unzip(options: Option<&crate::zlib::ZlibOptions>) -> crate::zlib::Unzip;
     pub type InputType;
     pub type CompressCallback;
     # [ wasm_bindgen ( js_name = brotliCompress ) ]
-    pub fn brotli_compress(buf: &InputType, options: &BrotliOptions, callback: &CompressCallback);
+    pub fn brotli_compress(
+        buf: &crate::zlib::InputType,
+        options: &crate::zlib::BrotliOptions,
+        callback: &crate::zlib::CompressCallback,
+    );
     # [ wasm_bindgen ( js_name = brotliCompress ) ]
-    pub fn brotli_compress2(buf: &InputType, callback: &CompressCallback);
+    pub fn brotli_compress2(buf: &crate::zlib::InputType, callback: &crate::zlib::CompressCallback);
     # [ wasm_bindgen ( js_name = brotliCompressSync ) ]
-    pub fn brotli_compress_sync(buf: &InputType, options: Option<&BrotliOptions>) -> Buffer;
+    pub fn brotli_compress_sync(
+        buf: &crate::zlib::InputType,
+        options: Option<&crate::zlib::BrotliOptions>,
+    ) -> Buffer;
     # [ wasm_bindgen ( js_name = brotliDecompress ) ]
-    pub fn brotli_decompress(buf: &InputType, options: &BrotliOptions, callback: &CompressCallback);
+    pub fn brotli_decompress(
+        buf: &crate::zlib::InputType,
+        options: &crate::zlib::BrotliOptions,
+        callback: &crate::zlib::CompressCallback,
+    );
     # [ wasm_bindgen ( js_name = brotliDecompress ) ]
-    pub fn brotli_decompress2(buf: &InputType, callback: &CompressCallback);
+    pub fn brotli_decompress2(
+        buf: &crate::zlib::InputType,
+        callback: &crate::zlib::CompressCallback,
+    );
     # [ wasm_bindgen ( js_name = brotliDecompressSync ) ]
-    pub fn brotli_decompress_sync(buf: &InputType, options: Option<&BrotliOptions>) -> Buffer;
+    pub fn brotli_decompress_sync(
+        buf: &crate::zlib::InputType,
+        options: Option<&crate::zlib::BrotliOptions>,
+    ) -> Buffer;
     #[wasm_bindgen()]
-    pub fn deflate(buf: &InputType, callback: &CompressCallback);
+    pub fn deflate(buf: &crate::zlib::InputType, callback: &crate::zlib::CompressCallback);
     # [ wasm_bindgen ( js_name = deflate ) ]
-    pub fn deflate2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn deflate2(
+        buf: &crate::zlib::InputType,
+        options: &crate::zlib::ZlibOptions,
+        callback: &crate::zlib::CompressCallback,
+    );
     # [ wasm_bindgen ( js_name = deflateSync ) ]
-    pub fn deflate_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
+    pub fn deflate_sync(
+        buf: &crate::zlib::InputType,
+        options: Option<&crate::zlib::ZlibOptions>,
+    ) -> Buffer;
     # [ wasm_bindgen ( js_name = deflateRaw ) ]
-    pub fn deflate_raw(buf: &InputType, callback: &CompressCallback);
+    pub fn deflate_raw(buf: &crate::zlib::InputType, callback: &crate::zlib::CompressCallback);
     # [ wasm_bindgen ( js_name = deflateRaw ) ]
-    pub fn deflate_raw2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn deflate_raw2(
+        buf: &crate::zlib::InputType,
+        options: &crate::zlib::ZlibOptions,
+        callback: &crate::zlib::CompressCallback,
+    );
     # [ wasm_bindgen ( js_name = deflateRawSync ) ]
-    pub fn deflate_raw_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
+    pub fn deflate_raw_sync(
+        buf: &crate::zlib::InputType,
+        options: Option<&crate::zlib::ZlibOptions>,
+    ) -> Buffer;
     #[wasm_bindgen()]
-    pub fn gzip(buf: &InputType, callback: &CompressCallback);
+    pub fn gzip(buf: &crate::zlib::InputType, callback: &crate::zlib::CompressCallback);
     # [ wasm_bindgen ( js_name = gzip ) ]
-    pub fn gzip2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn gzip2(
+        buf: &crate::zlib::InputType,
+        options: &crate::zlib::ZlibOptions,
+        callback: &crate::zlib::CompressCallback,
+    );
     # [ wasm_bindgen ( js_name = gzipSync ) ]
-    pub fn gzip_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
+    pub fn gzip_sync(
+        buf: &crate::zlib::InputType,
+        options: Option<&crate::zlib::ZlibOptions>,
+    ) -> Buffer;
     #[wasm_bindgen()]
-    pub fn gunzip(buf: &InputType, callback: &CompressCallback);
+    pub fn gunzip(buf: &crate::zlib::InputType, callback: &crate::zlib::CompressCallback);
     # [ wasm_bindgen ( js_name = gunzip ) ]
-    pub fn gunzip2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn gunzip2(
+        buf: &crate::zlib::InputType,
+        options: &crate::zlib::ZlibOptions,
+        callback: &crate::zlib::CompressCallback,
+    );
     # [ wasm_bindgen ( js_name = gunzipSync ) ]
-    pub fn gunzip_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
+    pub fn gunzip_sync(
+        buf: &crate::zlib::InputType,
+        options: Option<&crate::zlib::ZlibOptions>,
+    ) -> Buffer;
     #[wasm_bindgen()]
-    pub fn inflate(buf: &InputType, callback: &CompressCallback);
+    pub fn inflate(buf: &crate::zlib::InputType, callback: &crate::zlib::CompressCallback);
     # [ wasm_bindgen ( js_name = inflate ) ]
-    pub fn inflate2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn inflate2(
+        buf: &crate::zlib::InputType,
+        options: &crate::zlib::ZlibOptions,
+        callback: &crate::zlib::CompressCallback,
+    );
     # [ wasm_bindgen ( js_name = inflateSync ) ]
-    pub fn inflate_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
+    pub fn inflate_sync(
+        buf: &crate::zlib::InputType,
+        options: Option<&crate::zlib::ZlibOptions>,
+    ) -> Buffer;
     # [ wasm_bindgen ( js_name = inflateRaw ) ]
-    pub fn inflate_raw(buf: &InputType, callback: &CompressCallback);
+    pub fn inflate_raw(buf: &crate::zlib::InputType, callback: &crate::zlib::CompressCallback);
     # [ wasm_bindgen ( js_name = inflateRaw ) ]
-    pub fn inflate_raw2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn inflate_raw2(
+        buf: &crate::zlib::InputType,
+        options: &crate::zlib::ZlibOptions,
+        callback: &crate::zlib::CompressCallback,
+    );
     # [ wasm_bindgen ( js_name = inflateRawSync ) ]
-    pub fn inflate_raw_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
+    pub fn inflate_raw_sync(
+        buf: &crate::zlib::InputType,
+        options: Option<&crate::zlib::ZlibOptions>,
+    ) -> Buffer;
     #[wasm_bindgen()]
-    pub fn unzip(buf: &InputType, callback: &CompressCallback);
+    pub fn unzip(buf: &crate::zlib::InputType, callback: &crate::zlib::CompressCallback);
     # [ wasm_bindgen ( js_name = unzip ) ]
-    pub fn unzip2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn unzip2(
+        buf: &crate::zlib::InputType,
+        options: &crate::zlib::ZlibOptions,
+        callback: &crate::zlib::CompressCallback,
+    );
     # [ wasm_bindgen ( js_name = unzipSync ) ]
-    pub fn unzip_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
+    pub fn unzip_sync(
+        buf: &crate::zlib::InputType,
+        options: Option<&crate::zlib::ZlibOptions>,
+    ) -> Buffer;
     pub static Z_NO_FLUSH: String;
     pub static Z_PARTIAL_FLUSH: String;
     pub static Z_SYNC_FLUSH: String;

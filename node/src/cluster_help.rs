@@ -21,23 +21,23 @@ impl Worker {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<EventEmitter> for Cluster {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::EventEmitter> for crate::cluster::Cluster {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Cluster> for EventEmitter {
-    fn from(child: Cluster) -> Self {
+impl From<crate::cluster::Cluster> for crate::node_js::EventEmitter {
+    fn from(child: crate::cluster::Cluster) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for Worker {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::EventEmitter> for crate::cluster::Worker {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Worker> for EventEmitter {
-    fn from(child: Worker) -> Self {
+impl From<crate::cluster::Worker> for crate::node_js::EventEmitter {
+    fn from(child: crate::cluster::Worker) -> Self {
         JsCast::unchecked_into(child)
     }
 }

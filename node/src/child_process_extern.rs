@@ -56,7 +56,7 @@ extern "C" {
         this: &ChildProcess,
         message: &JsValue,
         send_handle: &JsValue,
-        options: Option<&MessageOptions>,
+        options: Option<&crate::child_process::MessageOptions>,
         callback: &JsValue,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = send ) ]
@@ -138,7 +138,12 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &ChildProcess, event: &JsValue, code: f64, signal: &Signals) -> bool;
+    pub fn emit2(
+        this: &ChildProcess,
+        event: &JsValue,
+        code: f64,
+        signal: &crate::node_js::Signals,
+    ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit2(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -352,9 +357,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_cwd(this: &ProcessEnvOptions, value: Option<&str>);
     #[wasm_bindgen(method, getter)]
-    pub fn env(this: &ProcessEnvOptions) -> Option<ProcessEnv>;
+    pub fn env(this: &ProcessEnvOptions) -> Option<crate::node_js::ProcessEnv>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_env(this: &ProcessEnvOptions, value: Option<&ProcessEnv>);
+    pub fn set_env(this: &ProcessEnvOptions, value: Option<&crate::node_js::ProcessEnv>);
     pub type CommonOptions;
     # [ wasm_bindgen ( method , getter , js_name = windowsHide ) ]
     pub fn windows_hide(this: &CommonOptions) -> Option<bool>;
@@ -370,9 +375,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_argv0(this: &SpawnOptions, value: Option<&str>);
     #[wasm_bindgen(method, getter)]
-    pub fn stdio(this: &SpawnOptions) -> Option<StdioOptions>;
+    pub fn stdio(this: &SpawnOptions) -> Option<crate::child_process::StdioOptions>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_stdio(this: &SpawnOptions, value: Option<&StdioOptions>);
+    pub fn set_stdio(this: &SpawnOptions, value: Option<&crate::child_process::StdioOptions>);
     #[wasm_bindgen(method, getter)]
     pub fn detached(this: &SpawnOptions) -> Option<bool>;
     #[wasm_bindgen(method, setter)]
@@ -400,82 +405,113 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn spawn(
         command: &str,
-        options: Option<&SpawnOptionsWithoutStdio>,
-    ) -> ChildProcessWithoutNullStreams;
+        options: Option<&crate::child_process::SpawnOptionsWithoutStdio>,
+    ) -> crate::child_process::ChildProcessWithoutNullStreams;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn2(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn2(
+        command: &str,
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn3(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn3(
+        command: &str,
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn4(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn4(
+        command: &str,
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn5(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn5(
+        command: &str,
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn6(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn6(
+        command: &str,
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn7(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn7(
+        command: &str,
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn8(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn8(
+        command: &str,
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn9(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn9(
+        command: &str,
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn10(command: &str, options: &SpawnOptions) -> ChildProcess;
+    pub fn spawn10(
+        command: &str,
+        options: &crate::child_process::SpawnOptions,
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = spawn ) ]
     pub fn spawn11(
         command: &str,
         args: Option<&ReadonlyArray>,
-        options: Option<&SpawnOptionsWithoutStdio>,
-    ) -> ChildProcessWithoutNullStreams;
+        options: Option<&crate::child_process::SpawnOptionsWithoutStdio>,
+    ) -> crate::child_process::ChildProcessWithoutNullStreams;
     # [ wasm_bindgen ( js_name = spawn ) ]
     pub fn spawn12(
         command: &str,
         args: &ReadonlyArray,
-        options: &SpawnOptionsWithStdioTuple,
-    ) -> ChildProcessByStdio;
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
     pub fn spawn13(
         command: &str,
         args: &ReadonlyArray,
-        options: &SpawnOptionsWithStdioTuple,
-    ) -> ChildProcessByStdio;
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
     pub fn spawn14(
         command: &str,
         args: &ReadonlyArray,
-        options: &SpawnOptionsWithStdioTuple,
-    ) -> ChildProcessByStdio;
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
     pub fn spawn15(
         command: &str,
         args: &ReadonlyArray,
-        options: &SpawnOptionsWithStdioTuple,
-    ) -> ChildProcessByStdio;
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
     pub fn spawn16(
         command: &str,
         args: &ReadonlyArray,
-        options: &SpawnOptionsWithStdioTuple,
-    ) -> ChildProcessByStdio;
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
     pub fn spawn17(
         command: &str,
         args: &ReadonlyArray,
-        options: &SpawnOptionsWithStdioTuple,
-    ) -> ChildProcessByStdio;
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
     pub fn spawn18(
         command: &str,
         args: &ReadonlyArray,
-        options: &SpawnOptionsWithStdioTuple,
-    ) -> ChildProcessByStdio;
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
     pub fn spawn19(
         command: &str,
         args: &ReadonlyArray,
-        options: &SpawnOptionsWithStdioTuple,
-    ) -> ChildProcessByStdio;
+        options: &crate::child_process::SpawnOptionsWithStdioTuple,
+    ) -> crate::child_process::ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn20(command: &str, args: &ReadonlyArray, options: &SpawnOptions) -> ChildProcess;
+    pub fn spawn20(
+        command: &str,
+        args: &ReadonlyArray,
+        options: &crate::child_process::SpawnOptions,
+    ) -> crate::child_process::ChildProcess;
     pub type ExecOptions;
     #[wasm_bindgen(method, getter)]
     pub fn shell(this: &ExecOptions) -> Option<String>;
@@ -513,26 +549,46 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_code(this: &ExecException, value: Option<f64>);
     #[wasm_bindgen(method, getter)]
-    pub fn signal(this: &ExecException) -> Option<Signals>;
+    pub fn signal(this: &ExecException) -> Option<crate::node_js::Signals>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_signal(this: &ExecException, value: Option<&Signals>);
+    pub fn set_signal(this: &ExecException, value: Option<&crate::node_js::Signals>);
     #[wasm_bindgen()]
-    pub fn exec(command: &str, callback: &JsValue) -> ChildProcess;
+    pub fn exec(command: &str, callback: &JsValue) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = exec ) ]
-    pub fn exec2(command: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
+    pub fn exec2(
+        command: &str,
+        options: &JsValue,
+        callback: &JsValue,
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = exec ) ]
-    pub fn exec3(command: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
+    pub fn exec3(
+        command: &str,
+        options: &JsValue,
+        callback: &JsValue,
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = exec ) ]
-    pub fn exec4(command: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
+    pub fn exec4(
+        command: &str,
+        options: &JsValue,
+        callback: &JsValue,
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = exec ) ]
-    pub fn exec5(command: &str, options: &ExecOptions, callback: &JsValue) -> ChildProcess;
+    pub fn exec5(
+        command: &str,
+        options: &crate::child_process::ExecOptions,
+        callback: &JsValue,
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = exec ) ]
-    pub fn exec6(command: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
+    pub fn exec6(
+        command: &str,
+        options: &JsValue,
+        callback: &JsValue,
+    ) -> crate::child_process::ChildProcess;
     pub type PromiseWithChild;
     #[wasm_bindgen(method, getter)]
-    pub fn child(this: &PromiseWithChild) -> ChildProcess;
+    pub fn child(this: &PromiseWithChild) -> crate::child_process::ChildProcess;
     #[wasm_bindgen(method, setter)]
-    pub fn set_child(this: &PromiseWithChild, value: &ChildProcess);
+    pub fn set_child(this: &PromiseWithChild, value: &crate::child_process::ChildProcess);
     pub type ExecFileOptions;
     # [ wasm_bindgen ( method , getter , js_name = maxBuffer ) ]
     pub fn max_buffer(this: &ExecFileOptions) -> Option<f64>;
@@ -566,74 +622,90 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_encoding(this: &ExecFileOptionsWithOtherEncoding, value: &str);
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file(file: &str) -> ChildProcess;
+    pub fn exec_file(file: &str) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file2(file: &str, options: &JsValue) -> ChildProcess;
+    pub fn exec_file2(file: &str, options: &JsValue) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file3(file: &str, args: &JsValue) -> ChildProcess;
+    pub fn exec_file3(file: &str, args: &JsValue) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file4(file: &str, args: &JsValue, options: &JsValue) -> ChildProcess;
+    pub fn exec_file4(
+        file: &str,
+        args: &JsValue,
+        options: &JsValue,
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file5(file: &str, callback: &JsValue) -> ChildProcess;
+    pub fn exec_file5(file: &str, callback: &JsValue) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file6(file: &str, args: &JsValue, callback: &JsValue) -> ChildProcess;
+    pub fn exec_file6(
+        file: &str,
+        args: &JsValue,
+        callback: &JsValue,
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
     pub fn exec_file7(
         file: &str,
-        options: &ExecFileOptionsWithBufferEncoding,
+        options: &crate::child_process::ExecFileOptionsWithBufferEncoding,
         callback: &JsValue,
-    ) -> ChildProcess;
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
     pub fn exec_file8(
         file: &str,
         args: &JsValue,
-        options: &ExecFileOptionsWithBufferEncoding,
+        options: &crate::child_process::ExecFileOptionsWithBufferEncoding,
         callback: &JsValue,
-    ) -> ChildProcess;
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
     pub fn exec_file9(
         file: &str,
-        options: &ExecFileOptionsWithStringEncoding,
+        options: &crate::child_process::ExecFileOptionsWithStringEncoding,
         callback: &JsValue,
-    ) -> ChildProcess;
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
     pub fn exec_file10(
         file: &str,
         args: &JsValue,
-        options: &ExecFileOptionsWithStringEncoding,
+        options: &crate::child_process::ExecFileOptionsWithStringEncoding,
         callback: &JsValue,
-    ) -> ChildProcess;
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
     pub fn exec_file11(
         file: &str,
-        options: &ExecFileOptionsWithOtherEncoding,
+        options: &crate::child_process::ExecFileOptionsWithOtherEncoding,
         callback: &JsValue,
-    ) -> ChildProcess;
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
     pub fn exec_file12(
         file: &str,
         args: &JsValue,
-        options: &ExecFileOptionsWithOtherEncoding,
+        options: &crate::child_process::ExecFileOptionsWithOtherEncoding,
         callback: &JsValue,
-    ) -> ChildProcess;
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file13(file: &str, options: &ExecFileOptions, callback: &JsValue) -> ChildProcess;
+    pub fn exec_file13(
+        file: &str,
+        options: &crate::child_process::ExecFileOptions,
+        callback: &JsValue,
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
     pub fn exec_file14(
         file: &str,
         args: &JsValue,
-        options: &ExecFileOptions,
+        options: &crate::child_process::ExecFileOptions,
         callback: &JsValue,
-    ) -> ChildProcess;
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file15(file: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
+    pub fn exec_file15(
+        file: &str,
+        options: &JsValue,
+        callback: &JsValue,
+    ) -> crate::child_process::ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
     pub fn exec_file16(
         file: &str,
         args: &JsValue,
         options: &JsValue,
         callback: &JsValue,
-    ) -> ChildProcess;
+    ) -> crate::child_process::ChildProcess;
     pub type ForkOptions;
     # [ wasm_bindgen ( method , getter , js_name = execPath ) ]
     pub fn exec_path(this: &ForkOptions) -> Option<String>;
@@ -648,9 +720,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_silent(this: &ForkOptions, value: Option<bool>);
     #[wasm_bindgen(method, getter)]
-    pub fn stdio(this: &ForkOptions) -> Option<StdioOptions>;
+    pub fn stdio(this: &ForkOptions) -> Option<crate::child_process::StdioOptions>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_stdio(this: &ForkOptions, value: Option<&StdioOptions>);
+    pub fn set_stdio(this: &ForkOptions, value: Option<&crate::child_process::StdioOptions>);
     #[wasm_bindgen(method, getter)]
     pub fn detached(this: &ForkOptions) -> Option<bool>;
     #[wasm_bindgen(method, setter)]
@@ -663,8 +735,8 @@ extern "C" {
     pub fn fork(
         module_path: &str,
         args: Option<&ReadonlyArray>,
-        options: Option<&ForkOptions>,
-    ) -> ChildProcess;
+        options: Option<&crate::child_process::ForkOptions>,
+    ) -> crate::child_process::ChildProcess;
     pub type SpawnSyncOptions;
     #[wasm_bindgen(method, getter)]
     pub fn argv0(this: &SpawnSyncOptions) -> Option<String>;
@@ -675,9 +747,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_input(this: &SpawnSyncOptions, value: &JsValue);
     #[wasm_bindgen(method, getter)]
-    pub fn stdio(this: &SpawnSyncOptions) -> Option<StdioOptions>;
+    pub fn stdio(this: &SpawnSyncOptions) -> Option<crate::child_process::StdioOptions>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_stdio(this: &SpawnSyncOptions, value: Option<&StdioOptions>);
+    pub fn set_stdio(this: &SpawnSyncOptions, value: Option<&crate::child_process::StdioOptions>);
     # [ wasm_bindgen ( method , getter , js_name = killSignal ) ]
     pub fn kill_signal(this: &SpawnSyncOptions) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = killSignal ) ]
@@ -738,46 +810,49 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_error(this: &SpawnSyncReturns, value: Option<&Error>);
     # [ wasm_bindgen ( js_name = spawnSync ) ]
-    pub fn spawn_sync(command: &str) -> SpawnSyncReturns;
+    pub fn spawn_sync(command: &str) -> crate::child_process::SpawnSyncReturns;
     # [ wasm_bindgen ( js_name = spawnSync ) ]
     pub fn spawn_sync2(
         command: &str,
-        options: Option<&SpawnSyncOptionsWithStringEncoding>,
-    ) -> SpawnSyncReturns;
+        options: Option<&crate::child_process::SpawnSyncOptionsWithStringEncoding>,
+    ) -> crate::child_process::SpawnSyncReturns;
     # [ wasm_bindgen ( js_name = spawnSync ) ]
     pub fn spawn_sync3(
         command: &str,
-        options: Option<&SpawnSyncOptionsWithBufferEncoding>,
-    ) -> SpawnSyncReturns;
+        options: Option<&crate::child_process::SpawnSyncOptionsWithBufferEncoding>,
+    ) -> crate::child_process::SpawnSyncReturns;
     # [ wasm_bindgen ( js_name = spawnSync ) ]
-    pub fn spawn_sync4(command: &str, options: Option<&SpawnSyncOptions>) -> SpawnSyncReturns;
+    pub fn spawn_sync4(
+        command: &str,
+        options: Option<&crate::child_process::SpawnSyncOptions>,
+    ) -> crate::child_process::SpawnSyncReturns;
     # [ wasm_bindgen ( js_name = spawnSync ) ]
     pub fn spawn_sync5(
         command: &str,
         args: Option<&ReadonlyArray>,
-        options: Option<&SpawnSyncOptionsWithStringEncoding>,
-    ) -> SpawnSyncReturns;
+        options: Option<&crate::child_process::SpawnSyncOptionsWithStringEncoding>,
+    ) -> crate::child_process::SpawnSyncReturns;
     # [ wasm_bindgen ( js_name = spawnSync ) ]
     pub fn spawn_sync6(
         command: &str,
         args: Option<&ReadonlyArray>,
-        options: Option<&SpawnSyncOptionsWithBufferEncoding>,
-    ) -> SpawnSyncReturns;
+        options: Option<&crate::child_process::SpawnSyncOptionsWithBufferEncoding>,
+    ) -> crate::child_process::SpawnSyncReturns;
     # [ wasm_bindgen ( js_name = spawnSync ) ]
     pub fn spawn_sync7(
         command: &str,
         args: Option<&ReadonlyArray>,
-        options: Option<&SpawnSyncOptions>,
-    ) -> SpawnSyncReturns;
+        options: Option<&crate::child_process::SpawnSyncOptions>,
+    ) -> crate::child_process::SpawnSyncReturns;
     pub type ExecSyncOptions;
     #[wasm_bindgen(method, getter)]
     pub fn input(this: &ExecSyncOptions) -> JsValue;
     #[wasm_bindgen(method, setter)]
     pub fn set_input(this: &ExecSyncOptions, value: &JsValue);
     #[wasm_bindgen(method, getter)]
-    pub fn stdio(this: &ExecSyncOptions) -> Option<StdioOptions>;
+    pub fn stdio(this: &ExecSyncOptions) -> Option<crate::child_process::StdioOptions>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_stdio(this: &ExecSyncOptions, value: Option<&StdioOptions>);
+    pub fn set_stdio(this: &ExecSyncOptions, value: Option<&crate::child_process::StdioOptions>);
     #[wasm_bindgen(method, getter)]
     pub fn shell(this: &ExecSyncOptions) -> Option<String>;
     #[wasm_bindgen(method, setter)]
@@ -807,22 +882,32 @@ extern "C" {
     # [ wasm_bindgen ( js_name = execSync ) ]
     pub fn exec_sync(command: &str) -> Buffer;
     # [ wasm_bindgen ( js_name = execSync ) ]
-    pub fn exec_sync2(command: &str, options: Option<&ExecSyncOptionsWithStringEncoding>)
-    -> String;
+    pub fn exec_sync2(
+        command: &str,
+        options: Option<&crate::child_process::ExecSyncOptionsWithStringEncoding>,
+    ) -> String;
     # [ wasm_bindgen ( js_name = execSync ) ]
-    pub fn exec_sync3(command: &str, options: Option<&ExecSyncOptionsWithBufferEncoding>)
-    -> Buffer;
+    pub fn exec_sync3(
+        command: &str,
+        options: Option<&crate::child_process::ExecSyncOptionsWithBufferEncoding>,
+    ) -> Buffer;
     # [ wasm_bindgen ( js_name = execSync ) ]
-    pub fn exec_sync4(command: &str, options: Option<&ExecSyncOptions>) -> Buffer;
+    pub fn exec_sync4(
+        command: &str,
+        options: Option<&crate::child_process::ExecSyncOptions>,
+    ) -> Buffer;
     pub type ExecFileSyncOptions;
     #[wasm_bindgen(method, getter)]
     pub fn input(this: &ExecFileSyncOptions) -> JsValue;
     #[wasm_bindgen(method, setter)]
     pub fn set_input(this: &ExecFileSyncOptions, value: &JsValue);
     #[wasm_bindgen(method, getter)]
-    pub fn stdio(this: &ExecFileSyncOptions) -> Option<StdioOptions>;
+    pub fn stdio(this: &ExecFileSyncOptions) -> Option<crate::child_process::StdioOptions>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_stdio(this: &ExecFileSyncOptions, value: Option<&StdioOptions>);
+    pub fn set_stdio(
+        this: &ExecFileSyncOptions,
+        value: Option<&crate::child_process::StdioOptions>,
+    );
     # [ wasm_bindgen ( method , getter , js_name = killSignal ) ]
     pub fn kill_signal(this: &ExecFileSyncOptions) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = killSignal ) ]
@@ -854,31 +939,34 @@ extern "C" {
     # [ wasm_bindgen ( js_name = execFileSync ) ]
     pub fn exec_file_sync2(
         command: &str,
-        options: Option<&ExecFileSyncOptionsWithStringEncoding>,
+        options: Option<&crate::child_process::ExecFileSyncOptionsWithStringEncoding>,
     ) -> String;
     # [ wasm_bindgen ( js_name = execFileSync ) ]
     pub fn exec_file_sync3(
         command: &str,
-        options: Option<&ExecFileSyncOptionsWithBufferEncoding>,
+        options: Option<&crate::child_process::ExecFileSyncOptionsWithBufferEncoding>,
     ) -> Buffer;
     # [ wasm_bindgen ( js_name = execFileSync ) ]
-    pub fn exec_file_sync4(command: &str, options: Option<&ExecFileSyncOptions>) -> Buffer;
+    pub fn exec_file_sync4(
+        command: &str,
+        options: Option<&crate::child_process::ExecFileSyncOptions>,
+    ) -> Buffer;
     # [ wasm_bindgen ( js_name = execFileSync ) ]
     pub fn exec_file_sync5(
         command: &str,
         args: Option<&ReadonlyArray>,
-        options: Option<&ExecFileSyncOptionsWithStringEncoding>,
+        options: Option<&crate::child_process::ExecFileSyncOptionsWithStringEncoding>,
     ) -> String;
     # [ wasm_bindgen ( js_name = execFileSync ) ]
     pub fn exec_file_sync6(
         command: &str,
         args: Option<&ReadonlyArray>,
-        options: Option<&ExecFileSyncOptionsWithBufferEncoding>,
+        options: Option<&crate::child_process::ExecFileSyncOptionsWithBufferEncoding>,
     ) -> Buffer;
     # [ wasm_bindgen ( js_name = execFileSync ) ]
     pub fn exec_file_sync7(
         command: &str,
         args: Option<&ReadonlyArray>,
-        options: Option<&ExecFileSyncOptions>,
+        options: Option<&crate::child_process::ExecFileSyncOptions>,
     ) -> Buffer;
 }

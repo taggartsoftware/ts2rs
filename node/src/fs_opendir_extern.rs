@@ -4,5 +4,5 @@
 #[wasm_bindgen(module = "opendir")]
 extern "C" {
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &str, options: Option<&OpenDirOptions>) -> Promise;
+    pub fn promisify(path: &str, options: Option<&crate::fs::OpenDirOptions>) -> Promise;
 }

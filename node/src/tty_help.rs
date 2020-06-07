@@ -11,163 +11,83 @@ impl WriteStream {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<Duplex> for ReadStream {
-    fn as_ref(&self) -> &Duplex {
+impl AsRef<crate::node_js::EventEmitter> for crate::tty::ReadStream {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ReadStream> for Duplex {
-    fn from(child: ReadStream) -> Self {
+impl From<crate::tty::ReadStream> for crate::node_js::EventEmitter {
+    fn from(child: crate::tty::ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for ReadStream {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::ReadableStream> for crate::tty::ReadStream {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ReadStream> for EventEmitter {
-    fn from(child: ReadStream) -> Self {
+impl From<crate::tty::ReadStream> for crate::node_js::ReadableStream {
+    fn from(child: crate::tty::ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for ReadStream {
-    fn as_ref(&self) -> &Readable {
+impl AsRef<crate::node_js::WritableStream> for crate::tty::ReadStream {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ReadStream> for Readable {
-    fn from(child: ReadStream) -> Self {
+impl From<crate::tty::ReadStream> for crate::node_js::WritableStream {
+    fn from(child: crate::tty::ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ReadableStream> for ReadStream {
-    fn as_ref(&self) -> &ReadableStream {
+impl AsRef<crate::net::Socket> for crate::tty::ReadStream {
+    fn as_ref(&self) -> &crate::net::Socket {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ReadStream> for ReadableStream {
-    fn from(child: ReadStream) -> Self {
+impl From<crate::tty::ReadStream> for crate::net::Socket {
+    fn from(child: crate::tty::ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Socket> for ReadStream {
-    fn as_ref(&self) -> &Socket {
+impl AsRef<crate::node_js::EventEmitter> for crate::tty::WriteStream {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ReadStream> for Socket {
-    fn from(child: ReadStream) -> Self {
+impl From<crate::tty::WriteStream> for crate::node_js::EventEmitter {
+    fn from(child: crate::tty::WriteStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for ReadStream {
-    fn as_ref(&self) -> &Stream {
+impl AsRef<crate::node_js::ReadableStream> for crate::tty::WriteStream {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ReadStream> for Stream {
-    fn from(child: ReadStream) -> Self {
+impl From<crate::tty::WriteStream> for crate::node_js::ReadableStream {
+    fn from(child: crate::tty::WriteStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Writable> for ReadStream {
-    fn as_ref(&self) -> &Writable {
+impl AsRef<crate::node_js::WritableStream> for crate::tty::WriteStream {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ReadStream> for Writable {
-    fn from(child: ReadStream) -> Self {
+impl From<crate::tty::WriteStream> for crate::node_js::WritableStream {
+    fn from(child: crate::tty::WriteStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<WritableStream> for ReadStream {
-    fn as_ref(&self) -> &WritableStream {
+impl AsRef<crate::net::Socket> for crate::tty::WriteStream {
+    fn as_ref(&self) -> &crate::net::Socket {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ReadStream> for WritableStream {
-    fn from(child: ReadStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for WriteStream {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<WriteStream> for Duplex {
-    fn from(child: WriteStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for WriteStream {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<WriteStream> for EventEmitter {
-    fn from(child: WriteStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Readable> for WriteStream {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<WriteStream> for Readable {
-    fn from(child: WriteStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ReadableStream> for WriteStream {
-    fn as_ref(&self) -> &ReadableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<WriteStream> for ReadableStream {
-    fn from(child: WriteStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Socket> for WriteStream {
-    fn as_ref(&self) -> &Socket {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<WriteStream> for Socket {
-    fn from(child: WriteStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for WriteStream {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<WriteStream> for Stream {
-    fn from(child: WriteStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for WriteStream {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<WriteStream> for Writable {
-    fn from(child: WriteStream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableStream> for WriteStream {
-    fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<WriteStream> for WritableStream {
-    fn from(child: WriteStream) -> Self {
+impl From<crate::tty::WriteStream> for crate::net::Socket {
+    fn from(child: crate::tty::WriteStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }

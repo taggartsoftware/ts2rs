@@ -6,13 +6,13 @@ impl AssertionError {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<Error> for AssertionError {
+impl AsRef<Error> for crate::assert::AssertionError {
     fn as_ref(&self) -> &Error {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<AssertionError> for Error {
-    fn from(child: AssertionError) -> Self {
+impl From<crate::assert::AssertionError> for Error {
+    fn from(child: crate::assert::AssertionError) -> Self {
         JsCast::unchecked_into(child)
     }
 }

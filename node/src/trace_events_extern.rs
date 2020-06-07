@@ -44,7 +44,9 @@ extern "C" {
     pub fn set_categories(this: &CreateTracingOptions, value: &Array);
     #[doc = "Creates and returns a Tracing object for the given set of categories."]
     # [ wasm_bindgen ( js_name = createTracing ) ]
-    pub fn create_tracing(options: &CreateTracingOptions) -> Tracing;
+    pub fn create_tracing(
+        options: &crate::trace_events::CreateTracingOptions,
+    ) -> crate::trace_events::Tracing;
     #[doc = "Returns a comma-separated list of all currently-enabled trace event"]
     #[doc = "categories. The current set of enabled trace event categories is"]
     #[doc = "determined by the union of all currently-enabled `Tracing` objects and"]

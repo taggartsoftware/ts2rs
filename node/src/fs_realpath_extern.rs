@@ -11,7 +11,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -20,7 +20,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_2(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn promisify_2(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -29,13 +29,13 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_3(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn promisify_3(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[wasm_bindgen()]
-    pub fn native(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn native(path: &crate::fs::PathLike, options: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( js_name = native ) ]
-    pub fn native2(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn native2(path: &crate::fs::PathLike, options: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( js_name = native ) ]
-    pub fn native3(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn native3(path: &crate::fs::PathLike, options: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( js_name = native ) ]
-    pub fn native4(path: &PathLike, callback: &JsValue);
+    pub fn native4(path: &crate::fs::PathLike, callback: &JsValue);
 }

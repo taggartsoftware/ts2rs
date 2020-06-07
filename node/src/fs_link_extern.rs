@@ -5,5 +5,8 @@
 extern "C" {
     #[doc = "Asynchronous link(2) - Create a new link (also known as a hard link) to an existing file."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(existing_path: &PathLike, new_path: &PathLike) -> Promise;
+    pub fn promisify(
+        existing_path: &crate::fs::PathLike,
+        new_path: &crate::fs::PathLike,
+    ) -> Promise;
 }

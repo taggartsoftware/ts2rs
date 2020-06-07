@@ -4,9 +4,9 @@
 #[wasm_bindgen(module = "lookup")]
 extern "C" {
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(hostname: &str, options: &LookupAllOptions) -> Promise;
+    pub fn promisify(hostname: &str, options: &crate::dns::LookupAllOptions) -> Promise;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
     pub fn promisify_2(hostname: &str, options: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_3(hostname: &str, options: &LookupOptions) -> Promise;
+    pub fn promisify_3(hostname: &str, options: &crate::dns::LookupOptions) -> Promise;
 }

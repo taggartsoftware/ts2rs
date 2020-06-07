@@ -176,923 +176,363 @@ impl VerifyKeyWithOptions {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<Duplex> for Cipher {
-    fn as_ref(&self) -> &Duplex {
+impl AsRef<crate::node_js::EventEmitter> for crate::crypto::Cipher {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Cipher> for Duplex {
-    fn from(child: Cipher) -> Self {
+impl From<crate::crypto::Cipher> for crate::node_js::EventEmitter {
+    fn from(child: crate::crypto::Cipher) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for Cipher {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::ReadableStream> for crate::crypto::Cipher {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Cipher> for EventEmitter {
-    fn from(child: Cipher) -> Self {
+impl From<crate::crypto::Cipher> for crate::node_js::ReadableStream {
+    fn from(child: crate::crypto::Cipher) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for Cipher {
-    fn as_ref(&self) -> &Readable {
+impl AsRef<crate::node_js::WritableStream> for crate::crypto::Cipher {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Cipher> for Readable {
-    fn from(child: Cipher) -> Self {
+impl From<crate::crypto::Cipher> for crate::node_js::WritableStream {
+    fn from(child: crate::crypto::Cipher) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ReadableStream> for Cipher {
-    fn as_ref(&self) -> &ReadableStream {
+impl AsRef<crate::node_js::EventEmitter> for crate::crypto::CipherCCM {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Cipher> for ReadableStream {
-    fn from(child: Cipher) -> Self {
+impl From<crate::crypto::CipherCCM> for crate::node_js::EventEmitter {
+    fn from(child: crate::crypto::CipherCCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for Cipher {
-    fn as_ref(&self) -> &Stream {
+impl AsRef<crate::node_js::ReadableStream> for crate::crypto::CipherCCM {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Cipher> for Stream {
-    fn from(child: Cipher) -> Self {
+impl From<crate::crypto::CipherCCM> for crate::node_js::ReadableStream {
+    fn from(child: crate::crypto::CipherCCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Transform> for Cipher {
-    fn as_ref(&self) -> &Transform {
+impl AsRef<crate::node_js::WritableStream> for crate::crypto::CipherCCM {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Cipher> for Transform {
-    fn from(child: Cipher) -> Self {
+impl From<crate::crypto::CipherCCM> for crate::node_js::WritableStream {
+    fn from(child: crate::crypto::CipherCCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Writable> for Cipher {
-    fn as_ref(&self) -> &Writable {
+impl AsRef<crate::crypto::Cipher> for crate::crypto::CipherCCM {
+    fn as_ref(&self) -> &crate::crypto::Cipher {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Cipher> for Writable {
-    fn from(child: Cipher) -> Self {
+impl From<crate::crypto::CipherCCM> for crate::crypto::Cipher {
+    fn from(child: crate::crypto::CipherCCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<WritableStream> for Cipher {
-    fn as_ref(&self) -> &WritableStream {
+impl AsRef<crate::node_js::EventEmitter> for crate::crypto::CipherGCM {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Cipher> for WritableStream {
-    fn from(child: Cipher) -> Self {
+impl From<crate::crypto::CipherGCM> for crate::node_js::EventEmitter {
+    fn from(child: crate::crypto::CipherGCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Cipher> for CipherCCM {
-    fn as_ref(&self) -> &Cipher {
+impl AsRef<crate::node_js::ReadableStream> for crate::crypto::CipherGCM {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherCCM> for Cipher {
-    fn from(child: CipherCCM) -> Self {
+impl From<crate::crypto::CipherGCM> for crate::node_js::ReadableStream {
+    fn from(child: crate::crypto::CipherGCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Duplex> for CipherCCM {
-    fn as_ref(&self) -> &Duplex {
+impl AsRef<crate::node_js::WritableStream> for crate::crypto::CipherGCM {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherCCM> for Duplex {
-    fn from(child: CipherCCM) -> Self {
+impl From<crate::crypto::CipherGCM> for crate::node_js::WritableStream {
+    fn from(child: crate::crypto::CipherGCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for CipherCCM {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::crypto::Cipher> for crate::crypto::CipherGCM {
+    fn as_ref(&self) -> &crate::crypto::Cipher {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherCCM> for EventEmitter {
-    fn from(child: CipherCCM) -> Self {
+impl From<crate::crypto::CipherGCM> for crate::crypto::Cipher {
+    fn from(child: crate::crypto::CipherGCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for CipherCCM {
-    fn as_ref(&self) -> &Readable {
+impl AsRef<crate::node_js::EventEmitter> for crate::crypto::Decipher {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherCCM> for Readable {
-    fn from(child: CipherCCM) -> Self {
+impl From<crate::crypto::Decipher> for crate::node_js::EventEmitter {
+    fn from(child: crate::crypto::Decipher) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ReadableStream> for CipherCCM {
-    fn as_ref(&self) -> &ReadableStream {
+impl AsRef<crate::node_js::ReadableStream> for crate::crypto::Decipher {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherCCM> for ReadableStream {
-    fn from(child: CipherCCM) -> Self {
+impl From<crate::crypto::Decipher> for crate::node_js::ReadableStream {
+    fn from(child: crate::crypto::Decipher) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for CipherCCM {
-    fn as_ref(&self) -> &Stream {
+impl AsRef<crate::node_js::WritableStream> for crate::crypto::Decipher {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherCCM> for Stream {
-    fn from(child: CipherCCM) -> Self {
+impl From<crate::crypto::Decipher> for crate::node_js::WritableStream {
+    fn from(child: crate::crypto::Decipher) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Transform> for CipherCCM {
-    fn as_ref(&self) -> &Transform {
+impl AsRef<crate::node_js::EventEmitter> for crate::crypto::DecipherCCM {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherCCM> for Transform {
-    fn from(child: CipherCCM) -> Self {
+impl From<crate::crypto::DecipherCCM> for crate::node_js::EventEmitter {
+    fn from(child: crate::crypto::DecipherCCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Writable> for CipherCCM {
-    fn as_ref(&self) -> &Writable {
+impl AsRef<crate::node_js::ReadableStream> for crate::crypto::DecipherCCM {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherCCM> for Writable {
-    fn from(child: CipherCCM) -> Self {
+impl From<crate::crypto::DecipherCCM> for crate::node_js::ReadableStream {
+    fn from(child: crate::crypto::DecipherCCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<WritableStream> for CipherCCM {
-    fn as_ref(&self) -> &WritableStream {
+impl AsRef<crate::node_js::WritableStream> for crate::crypto::DecipherCCM {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherCCM> for WritableStream {
-    fn from(child: CipherCCM) -> Self {
+impl From<crate::crypto::DecipherCCM> for crate::node_js::WritableStream {
+    fn from(child: crate::crypto::DecipherCCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<DuplexOptions> for CipherCCMOptions {
-    fn as_ref(&self) -> &DuplexOptions {
+impl AsRef<crate::crypto::Decipher> for crate::crypto::DecipherCCM {
+    fn as_ref(&self) -> &crate::crypto::Decipher {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherCCMOptions> for DuplexOptions {
-    fn from(child: CipherCCMOptions) -> Self {
+impl From<crate::crypto::DecipherCCM> for crate::crypto::Decipher {
+    fn from(child: crate::crypto::DecipherCCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ReadableOptions> for CipherCCMOptions {
-    fn as_ref(&self) -> &ReadableOptions {
+impl AsRef<crate::node_js::EventEmitter> for crate::crypto::DecipherGCM {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherCCMOptions> for ReadableOptions {
-    fn from(child: CipherCCMOptions) -> Self {
+impl From<crate::crypto::DecipherGCM> for crate::node_js::EventEmitter {
+    fn from(child: crate::crypto::DecipherGCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<TransformOptions> for CipherCCMOptions {
-    fn as_ref(&self) -> &TransformOptions {
+impl AsRef<crate::node_js::ReadableStream> for crate::crypto::DecipherGCM {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherCCMOptions> for TransformOptions {
-    fn from(child: CipherCCMOptions) -> Self {
+impl From<crate::crypto::DecipherGCM> for crate::node_js::ReadableStream {
+    fn from(child: crate::crypto::DecipherGCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<WritableOptions> for CipherCCMOptions {
-    fn as_ref(&self) -> &WritableOptions {
+impl AsRef<crate::node_js::WritableStream> for crate::crypto::DecipherGCM {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherCCMOptions> for WritableOptions {
-    fn from(child: CipherCCMOptions) -> Self {
+impl From<crate::crypto::DecipherGCM> for crate::node_js::WritableStream {
+    fn from(child: crate::crypto::DecipherGCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Cipher> for CipherGCM {
-    fn as_ref(&self) -> &Cipher {
+impl AsRef<crate::crypto::Decipher> for crate::crypto::DecipherGCM {
+    fn as_ref(&self) -> &crate::crypto::Decipher {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCM> for Cipher {
-    fn from(child: CipherGCM) -> Self {
+impl From<crate::crypto::DecipherGCM> for crate::crypto::Decipher {
+    fn from(child: crate::crypto::DecipherGCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Duplex> for CipherGCM {
-    fn as_ref(&self) -> &Duplex {
+impl AsRef<crate::node_js::EventEmitter> for crate::crypto::Hash {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCM> for Duplex {
-    fn from(child: CipherGCM) -> Self {
+impl From<crate::crypto::Hash> for crate::node_js::EventEmitter {
+    fn from(child: crate::crypto::Hash) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for CipherGCM {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::ReadableStream> for crate::crypto::Hash {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCM> for EventEmitter {
-    fn from(child: CipherGCM) -> Self {
+impl From<crate::crypto::Hash> for crate::node_js::ReadableStream {
+    fn from(child: crate::crypto::Hash) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for CipherGCM {
-    fn as_ref(&self) -> &Readable {
+impl AsRef<crate::node_js::WritableStream> for crate::crypto::Hash {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCM> for Readable {
-    fn from(child: CipherGCM) -> Self {
+impl From<crate::crypto::Hash> for crate::node_js::WritableStream {
+    fn from(child: crate::crypto::Hash) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ReadableStream> for CipherGCM {
-    fn as_ref(&self) -> &ReadableStream {
+impl AsRef<crate::node_js::EventEmitter> for crate::crypto::Hmac {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCM> for ReadableStream {
-    fn from(child: CipherGCM) -> Self {
+impl From<crate::crypto::Hmac> for crate::node_js::EventEmitter {
+    fn from(child: crate::crypto::Hmac) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for CipherGCM {
-    fn as_ref(&self) -> &Stream {
+impl AsRef<crate::node_js::ReadableStream> for crate::crypto::Hmac {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCM> for Stream {
-    fn from(child: CipherGCM) -> Self {
+impl From<crate::crypto::Hmac> for crate::node_js::ReadableStream {
+    fn from(child: crate::crypto::Hmac) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Transform> for CipherGCM {
-    fn as_ref(&self) -> &Transform {
+impl AsRef<crate::node_js::WritableStream> for crate::crypto::Hmac {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCM> for Transform {
-    fn from(child: CipherGCM) -> Self {
+impl From<crate::crypto::Hmac> for crate::node_js::WritableStream {
+    fn from(child: crate::crypto::Hmac) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Writable> for CipherGCM {
-    fn as_ref(&self) -> &Writable {
+impl AsRef<crate::crypto::PrivateKeyInput> for crate::crypto::SignPrivateKeyInput {
+    fn as_ref(&self) -> &crate::crypto::PrivateKeyInput {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCM> for Writable {
-    fn from(child: CipherGCM) -> Self {
+impl From<crate::crypto::SignPrivateKeyInput> for crate::crypto::PrivateKeyInput {
+    fn from(child: crate::crypto::SignPrivateKeyInput) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<WritableStream> for CipherGCM {
-    fn as_ref(&self) -> &WritableStream {
+impl AsRef<crate::crypto::SigningOptions> for crate::crypto::SignPrivateKeyInput {
+    fn as_ref(&self) -> &crate::crypto::SigningOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCM> for WritableStream {
-    fn from(child: CipherGCM) -> Self {
+impl From<crate::crypto::SignPrivateKeyInput> for crate::crypto::SigningOptions {
+    fn from(child: crate::crypto::SignPrivateKeyInput) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<DuplexOptions> for CipherGCMOptions {
-    fn as_ref(&self) -> &DuplexOptions {
+impl AsRef<crate::node_js::EventEmitter> for crate::crypto::Signer {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCMOptions> for DuplexOptions {
-    fn from(child: CipherGCMOptions) -> Self {
+impl From<crate::crypto::Signer> for crate::node_js::EventEmitter {
+    fn from(child: crate::crypto::Signer) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ReadableOptions> for CipherGCMOptions {
-    fn as_ref(&self) -> &ReadableOptions {
+impl AsRef<crate::node_js::WritableStream> for crate::crypto::Signer {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCMOptions> for ReadableOptions {
-    fn from(child: CipherGCMOptions) -> Self {
+impl From<crate::crypto::Signer> for crate::node_js::WritableStream {
+    fn from(child: crate::crypto::Signer) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<TransformOptions> for CipherGCMOptions {
-    fn as_ref(&self) -> &TransformOptions {
+impl AsRef<crate::node_js::EventEmitter> for crate::crypto::Verify {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCMOptions> for TransformOptions {
-    fn from(child: CipherGCMOptions) -> Self {
+impl From<crate::crypto::Verify> for crate::node_js::EventEmitter {
+    fn from(child: crate::crypto::Verify) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<WritableOptions> for CipherGCMOptions {
-    fn as_ref(&self) -> &WritableOptions {
+impl AsRef<crate::node_js::WritableStream> for crate::crypto::Verify {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCMOptions> for WritableOptions {
-    fn from(child: CipherGCMOptions) -> Self {
+impl From<crate::crypto::Verify> for crate::node_js::WritableStream {
+    fn from(child: crate::crypto::Verify) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Duplex> for Decipher {
-    fn as_ref(&self) -> &Duplex {
+impl AsRef<crate::crypto::KeyObject> for crate::crypto::VerifyKeyWithOptions {
+    fn as_ref(&self) -> &crate::crypto::KeyObject {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Decipher> for Duplex {
-    fn from(child: Decipher) -> Self {
+impl From<crate::crypto::VerifyKeyWithOptions> for crate::crypto::KeyObject {
+    fn from(child: crate::crypto::VerifyKeyWithOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for Decipher {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::crypto::SigningOptions> for crate::crypto::VerifyKeyWithOptions {
+    fn as_ref(&self) -> &crate::crypto::SigningOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Decipher> for EventEmitter {
-    fn from(child: Decipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Readable> for Decipher {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Decipher> for Readable {
-    fn from(child: Decipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ReadableStream> for Decipher {
-    fn as_ref(&self) -> &ReadableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Decipher> for ReadableStream {
-    fn from(child: Decipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Decipher {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Decipher> for Stream {
-    fn from(child: Decipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Transform> for Decipher {
-    fn as_ref(&self) -> &Transform {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Decipher> for Transform {
-    fn from(child: Decipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Decipher {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Decipher> for Writable {
-    fn from(child: Decipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableStream> for Decipher {
-    fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Decipher> for WritableStream {
-    fn from(child: Decipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Decipher> for DecipherCCM {
-    fn as_ref(&self) -> &Decipher {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for Decipher {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for DecipherCCM {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for Duplex {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for DecipherCCM {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for EventEmitter {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Readable> for DecipherCCM {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for Readable {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ReadableStream> for DecipherCCM {
-    fn as_ref(&self) -> &ReadableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for ReadableStream {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for DecipherCCM {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for Stream {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Transform> for DecipherCCM {
-    fn as_ref(&self) -> &Transform {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for Transform {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for DecipherCCM {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for Writable {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableStream> for DecipherCCM {
-    fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for WritableStream {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Decipher> for DecipherGCM {
-    fn as_ref(&self) -> &Decipher {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherGCM> for Decipher {
-    fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for DecipherGCM {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherGCM> for Duplex {
-    fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for DecipherGCM {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherGCM> for EventEmitter {
-    fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Readable> for DecipherGCM {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherGCM> for Readable {
-    fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ReadableStream> for DecipherGCM {
-    fn as_ref(&self) -> &ReadableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherGCM> for ReadableStream {
-    fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for DecipherGCM {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherGCM> for Stream {
-    fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Transform> for DecipherGCM {
-    fn as_ref(&self) -> &Transform {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherGCM> for Transform {
-    fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for DecipherGCM {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherGCM> for Writable {
-    fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableStream> for DecipherGCM {
-    fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherGCM> for WritableStream {
-    fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for Hash {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hash> for Duplex {
-    fn from(child: Hash) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Hash {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hash> for EventEmitter {
-    fn from(child: Hash) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Readable> for Hash {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hash> for Readable {
-    fn from(child: Hash) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ReadableStream> for Hash {
-    fn as_ref(&self) -> &ReadableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hash> for ReadableStream {
-    fn from(child: Hash) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Hash {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hash> for Stream {
-    fn from(child: Hash) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Transform> for Hash {
-    fn as_ref(&self) -> &Transform {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hash> for Transform {
-    fn from(child: Hash) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Hash {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hash> for Writable {
-    fn from(child: Hash) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableStream> for Hash {
-    fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hash> for WritableStream {
-    fn from(child: Hash) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<DuplexOptions> for HashOptions {
-    fn as_ref(&self) -> &DuplexOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<HashOptions> for DuplexOptions {
-    fn from(child: HashOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ReadableOptions> for HashOptions {
-    fn as_ref(&self) -> &ReadableOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<HashOptions> for ReadableOptions {
-    fn from(child: HashOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<TransformOptions> for HashOptions {
-    fn as_ref(&self) -> &TransformOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<HashOptions> for TransformOptions {
-    fn from(child: HashOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableOptions> for HashOptions {
-    fn as_ref(&self) -> &WritableOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<HashOptions> for WritableOptions {
-    fn from(child: HashOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for Hmac {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hmac> for Duplex {
-    fn from(child: Hmac) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Hmac {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hmac> for EventEmitter {
-    fn from(child: Hmac) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Readable> for Hmac {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hmac> for Readable {
-    fn from(child: Hmac) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ReadableStream> for Hmac {
-    fn as_ref(&self) -> &ReadableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hmac> for ReadableStream {
-    fn from(child: Hmac) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Hmac {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hmac> for Stream {
-    fn from(child: Hmac) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Transform> for Hmac {
-    fn as_ref(&self) -> &Transform {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hmac> for Transform {
-    fn from(child: Hmac) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Hmac {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hmac> for Writable {
-    fn from(child: Hmac) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableStream> for Hmac {
-    fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hmac> for WritableStream {
-    fn from(child: Hmac) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<PrivateKeyInput> for SignPrivateKeyInput {
-    fn as_ref(&self) -> &PrivateKeyInput {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<SignPrivateKeyInput> for PrivateKeyInput {
-    fn from(child: SignPrivateKeyInput) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<SigningOptions> for SignPrivateKeyInput {
-    fn as_ref(&self) -> &SigningOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<SignPrivateKeyInput> for SigningOptions {
-    fn from(child: SignPrivateKeyInput) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Signer {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Signer> for EventEmitter {
-    fn from(child: Signer) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Signer {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Signer> for Stream {
-    fn from(child: Signer) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Signer {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Signer> for Writable {
-    fn from(child: Signer) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableStream> for Signer {
-    fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Signer> for WritableStream {
-    fn from(child: Signer) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Verify {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Verify> for EventEmitter {
-    fn from(child: Verify) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Verify {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Verify> for Stream {
-    fn from(child: Verify) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Verify {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Verify> for Writable {
-    fn from(child: Verify) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableStream> for Verify {
-    fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Verify> for WritableStream {
-    fn from(child: Verify) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<KeyObject> for VerifyKeyWithOptions {
-    fn as_ref(&self) -> &KeyObject {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<VerifyKeyWithOptions> for KeyObject {
-    fn from(child: VerifyKeyWithOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<SigningOptions> for VerifyKeyWithOptions {
-    fn as_ref(&self) -> &SigningOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<VerifyKeyWithOptions> for SigningOptions {
-    fn from(child: VerifyKeyWithOptions) -> Self {
+impl From<crate::crypto::VerifyKeyWithOptions> for crate::crypto::SigningOptions {
+    fn from(child: crate::crypto::VerifyKeyWithOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }

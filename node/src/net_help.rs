@@ -56,163 +56,123 @@ impl TcpSocketConnectOpts {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<ConnectOpts> for IpcNetConnectOpts {
-    fn as_ref(&self) -> &ConnectOpts {
+impl AsRef<crate::net::ConnectOpts> for crate::net::IpcNetConnectOpts {
+    fn as_ref(&self) -> &crate::net::ConnectOpts {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<IpcNetConnectOpts> for ConnectOpts {
-    fn from(child: IpcNetConnectOpts) -> Self {
+impl From<crate::net::IpcNetConnectOpts> for crate::net::ConnectOpts {
+    fn from(child: crate::net::IpcNetConnectOpts) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<IpcSocketConnectOpts> for IpcNetConnectOpts {
-    fn as_ref(&self) -> &IpcSocketConnectOpts {
+impl AsRef<crate::net::IpcSocketConnectOpts> for crate::net::IpcNetConnectOpts {
+    fn as_ref(&self) -> &crate::net::IpcSocketConnectOpts {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<IpcNetConnectOpts> for IpcSocketConnectOpts {
-    fn from(child: IpcNetConnectOpts) -> Self {
+impl From<crate::net::IpcNetConnectOpts> for crate::net::IpcSocketConnectOpts {
+    fn from(child: crate::net::IpcNetConnectOpts) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<SocketConstructorOpts> for IpcNetConnectOpts {
-    fn as_ref(&self) -> &SocketConstructorOpts {
+impl AsRef<crate::net::SocketConstructorOpts> for crate::net::IpcNetConnectOpts {
+    fn as_ref(&self) -> &crate::net::SocketConstructorOpts {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<IpcNetConnectOpts> for SocketConstructorOpts {
-    fn from(child: IpcNetConnectOpts) -> Self {
+impl From<crate::net::IpcNetConnectOpts> for crate::net::SocketConstructorOpts {
+    fn from(child: crate::net::IpcNetConnectOpts) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ConnectOpts> for IpcSocketConnectOpts {
-    fn as_ref(&self) -> &ConnectOpts {
+impl AsRef<crate::net::ConnectOpts> for crate::net::IpcSocketConnectOpts {
+    fn as_ref(&self) -> &crate::net::ConnectOpts {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<IpcSocketConnectOpts> for ConnectOpts {
-    fn from(child: IpcSocketConnectOpts) -> Self {
+impl From<crate::net::IpcSocketConnectOpts> for crate::net::ConnectOpts {
+    fn from(child: crate::net::IpcSocketConnectOpts) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for Server {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::EventEmitter> for crate::net::Server {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Server> for EventEmitter {
-    fn from(child: Server) -> Self {
+impl From<crate::net::Server> for crate::node_js::EventEmitter {
+    fn from(child: crate::net::Server) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Duplex> for Socket {
-    fn as_ref(&self) -> &Duplex {
+impl AsRef<crate::node_js::EventEmitter> for crate::net::Socket {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Socket> for Duplex {
-    fn from(child: Socket) -> Self {
+impl From<crate::net::Socket> for crate::node_js::EventEmitter {
+    fn from(child: crate::net::Socket) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for Socket {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::ReadableStream> for crate::net::Socket {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Socket> for EventEmitter {
-    fn from(child: Socket) -> Self {
+impl From<crate::net::Socket> for crate::node_js::ReadableStream {
+    fn from(child: crate::net::Socket) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for Socket {
-    fn as_ref(&self) -> &Readable {
+impl AsRef<crate::node_js::WritableStream> for crate::net::Socket {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Socket> for Readable {
-    fn from(child: Socket) -> Self {
+impl From<crate::net::Socket> for crate::node_js::WritableStream {
+    fn from(child: crate::net::Socket) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ReadableStream> for Socket {
-    fn as_ref(&self) -> &ReadableStream {
+impl AsRef<crate::net::ConnectOpts> for crate::net::TcpNetConnectOpts {
+    fn as_ref(&self) -> &crate::net::ConnectOpts {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Socket> for ReadableStream {
-    fn from(child: Socket) -> Self {
+impl From<crate::net::TcpNetConnectOpts> for crate::net::ConnectOpts {
+    fn from(child: crate::net::TcpNetConnectOpts) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for Socket {
-    fn as_ref(&self) -> &Stream {
+impl AsRef<crate::net::SocketConstructorOpts> for crate::net::TcpNetConnectOpts {
+    fn as_ref(&self) -> &crate::net::SocketConstructorOpts {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Socket> for Stream {
-    fn from(child: Socket) -> Self {
+impl From<crate::net::TcpNetConnectOpts> for crate::net::SocketConstructorOpts {
+    fn from(child: crate::net::TcpNetConnectOpts) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Writable> for Socket {
-    fn as_ref(&self) -> &Writable {
+impl AsRef<crate::net::TcpSocketConnectOpts> for crate::net::TcpNetConnectOpts {
+    fn as_ref(&self) -> &crate::net::TcpSocketConnectOpts {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Socket> for Writable {
-    fn from(child: Socket) -> Self {
+impl From<crate::net::TcpNetConnectOpts> for crate::net::TcpSocketConnectOpts {
+    fn from(child: crate::net::TcpNetConnectOpts) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<WritableStream> for Socket {
-    fn as_ref(&self) -> &WritableStream {
+impl AsRef<crate::net::ConnectOpts> for crate::net::TcpSocketConnectOpts {
+    fn as_ref(&self) -> &crate::net::ConnectOpts {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Socket> for WritableStream {
-    fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ConnectOpts> for TcpNetConnectOpts {
-    fn as_ref(&self) -> &ConnectOpts {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TcpNetConnectOpts> for ConnectOpts {
-    fn from(child: TcpNetConnectOpts) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<SocketConstructorOpts> for TcpNetConnectOpts {
-    fn as_ref(&self) -> &SocketConstructorOpts {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TcpNetConnectOpts> for SocketConstructorOpts {
-    fn from(child: TcpNetConnectOpts) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<TcpSocketConnectOpts> for TcpNetConnectOpts {
-    fn as_ref(&self) -> &TcpSocketConnectOpts {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TcpNetConnectOpts> for TcpSocketConnectOpts {
-    fn from(child: TcpNetConnectOpts) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ConnectOpts> for TcpSocketConnectOpts {
-    fn as_ref(&self) -> &ConnectOpts {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TcpSocketConnectOpts> for ConnectOpts {
-    fn from(child: TcpSocketConnectOpts) -> Self {
+impl From<crate::net::TcpSocketConnectOpts> for crate::net::ConnectOpts {
+    fn from(child: crate::net::TcpSocketConnectOpts) -> Self {
         JsCast::unchecked_into(child)
     }
 }

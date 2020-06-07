@@ -4,5 +4,5 @@
 #[wasm_bindgen(module = "exists")]
 extern "C" {
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike) -> Promise;
 }

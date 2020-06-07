@@ -16,8 +16,8 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn transcode(
         source: &Uint8Array,
-        from_enc: &TranscodeEncoding,
-        to_enc: &TranscodeEncoding,
+        from_enc: &crate::buffer::TranscodeEncoding,
+        to_enc: &crate::buffer::TranscodeEncoding,
     ) -> Buffer;
     #[wasm_bindgen(js_name = "SlowBuffer")]
     pub static SLOW_BUFFER: String;

@@ -58,13 +58,16 @@ extern "C" {
     pub fn set_sorted(this: &InspectOptions, value: &JsValue);
     pub type ConsoleConstructorOptions;
     #[wasm_bindgen(method, getter)]
-    pub fn stdout(this: &ConsoleConstructorOptions) -> WritableStream;
+    pub fn stdout(this: &ConsoleConstructorOptions) -> crate::node_js::WritableStream;
     #[wasm_bindgen(method, setter)]
-    pub fn set_stdout(this: &ConsoleConstructorOptions, value: &WritableStream);
+    pub fn set_stdout(this: &ConsoleConstructorOptions, value: &crate::node_js::WritableStream);
     #[wasm_bindgen(method, getter)]
-    pub fn stderr(this: &ConsoleConstructorOptions) -> Option<WritableStream>;
+    pub fn stderr(this: &ConsoleConstructorOptions) -> Option<crate::node_js::WritableStream>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_stderr(this: &ConsoleConstructorOptions, value: Option<&WritableStream>);
+    pub fn set_stderr(
+        this: &ConsoleConstructorOptions,
+        value: Option<&crate::node_js::WritableStream>,
+    );
     # [ wasm_bindgen ( method , getter , js_name = ignoreErrors ) ]
     pub fn ignore_errors(this: &ConsoleConstructorOptions) -> Option<bool>;
     # [ wasm_bindgen ( method , setter , js_name = ignoreErrors ) ]
@@ -74,9 +77,14 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = colorMode ) ]
     pub fn set_color_mode(this: &ConsoleConstructorOptions, value: &JsValue);
     # [ wasm_bindgen ( method , getter , js_name = inspectOptions ) ]
-    pub fn inspect_options(this: &ConsoleConstructorOptions) -> Option<InspectOptions>;
+    pub fn inspect_options(
+        this: &ConsoleConstructorOptions,
+    ) -> Option<crate::node_js::InspectOptions>;
     # [ wasm_bindgen ( method , setter , js_name = inspectOptions ) ]
-    pub fn set_inspect_options(this: &ConsoleConstructorOptions, value: Option<&InspectOptions>);
+    pub fn set_inspect_options(
+        this: &ConsoleConstructorOptions,
+        value: Option<&crate::node_js::InspectOptions>,
+    );
     pub type ConsoleConstructor;
     #[wasm_bindgen(method, getter)]
     pub fn prototype(this: &ConsoleConstructor) -> Console;
@@ -279,7 +287,10 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_pipe(this: &ReadableStream, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn unpipe(this: &ReadableStream, destination: Option<&WritableStream>) -> ReadableStream;
+    pub fn unpipe(
+        this: &ReadableStream,
+        destination: Option<&crate::node_js::WritableStream>,
+    ) -> ReadableStream;
     #[wasm_bindgen(method, setter)]
     pub fn set_unpipe(this: &ReadableStream, value: &Function);
     #[wasm_bindgen(method)]
@@ -287,7 +298,10 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_unshift(this: &ReadableStream, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn wrap(this: &ReadableStream, old_stream: &ReadableStream) -> ReadableStream;
+    pub fn wrap(
+        this: &ReadableStream,
+        old_stream: &crate::node_js::ReadableStream,
+    ) -> ReadableStream;
     #[wasm_bindgen(method, setter)]
     pub fn set_wrap(this: &ReadableStream, value: &Function);
     #[wasm_bindgen(method)]
@@ -501,9 +515,9 @@ extern "C" {
     pub fn set_report_on_uncaught_exception(this: &ProcessReport, value: bool);
     #[doc = "The signal used to trigger the creation of a diagnostic report."]
     #[wasm_bindgen(method, getter)]
-    pub fn signal(this: &ProcessReport) -> Signals;
+    pub fn signal(this: &ProcessReport) -> crate::node_js::Signals;
     #[wasm_bindgen(method, setter)]
-    pub fn set_signal(this: &ProcessReport, value: &Signals);
+    pub fn set_signal(this: &ProcessReport, value: &crate::node_js::Signals);
     #[doc = "Writes a diagnostic report to a file. If filename is not provided, the default filename"]
     #[doc = "includes the date, time, PID, and a sequence number."]
     #[doc = "The report's JavaScript stack trace is taken from err, if present."]
@@ -597,20 +611,20 @@ extern "C" {
     pub type Process;
     #[doc = "Can also be a tty.WriteStream, not typed due to limitation.s"]
     #[wasm_bindgen(method, getter)]
-    pub fn stdout(this: &Process) -> WriteStream;
+    pub fn stdout(this: &Process) -> crate::global::node_js::WriteStream;
     #[wasm_bindgen(method, setter)]
-    pub fn set_stdout(this: &Process, value: &WriteStream);
+    pub fn set_stdout(this: &Process, value: &crate::global::node_js::WriteStream);
     #[doc = "Can also be a tty.WriteStream, not typed due to limitation.s"]
     #[wasm_bindgen(method, getter)]
-    pub fn stderr(this: &Process) -> WriteStream;
+    pub fn stderr(this: &Process) -> crate::global::node_js::WriteStream;
     #[wasm_bindgen(method, setter)]
-    pub fn set_stderr(this: &Process, value: &WriteStream);
+    pub fn set_stderr(this: &Process, value: &crate::global::node_js::WriteStream);
     #[wasm_bindgen(method, getter)]
-    pub fn stdin(this: &Process) -> ReadStream;
+    pub fn stdin(this: &Process) -> crate::global::node_js::ReadStream;
     #[wasm_bindgen(method, setter)]
-    pub fn set_stdin(this: &Process, value: &ReadStream);
+    pub fn set_stdin(this: &Process, value: &crate::global::node_js::ReadStream);
     # [ wasm_bindgen ( method , js_name = openStdin ) ]
-    pub fn open_stdin(this: &Process) -> Socket;
+    pub fn open_stdin(this: &Process) -> crate::node_js::Socket;
     # [ wasm_bindgen ( method , setter , js_name = openStdin ) ]
     pub fn set_open_stdin(this: &Process, value: &Function);
     #[wasm_bindgen(method, getter)]
@@ -655,9 +669,9 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emitWarning ) ]
     pub fn set_emit_warning(this: &Process, value: &Function);
     #[wasm_bindgen(method, getter)]
-    pub fn env(this: &Process) -> ProcessEnv;
+    pub fn env(this: &Process) -> crate::node_js::ProcessEnv;
     #[wasm_bindgen(method, setter)]
-    pub fn set_env(this: &Process, value: &ProcessEnv);
+    pub fn set_env(this: &Process, value: &crate::node_js::ProcessEnv);
     #[wasm_bindgen(method)]
     pub fn exit(this: &Process, code: Option<f64>);
     #[wasm_bindgen(method, setter)]
@@ -719,9 +733,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_version(this: &Process, value: &str);
     #[wasm_bindgen(method, getter)]
-    pub fn versions(this: &Process) -> ProcessVersions;
+    pub fn versions(this: &Process) -> crate::node_js::ProcessVersions;
     #[wasm_bindgen(method, setter)]
-    pub fn set_versions(this: &Process, value: &ProcessVersions);
+    pub fn set_versions(this: &Process, value: &crate::node_js::ProcessVersions);
     #[wasm_bindgen(method, getter)]
     pub fn config(this: &Process) -> JsValue;
     #[wasm_bindgen(method, setter)]
@@ -747,19 +761,22 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_arch(this: &Process, value: &str);
     #[wasm_bindgen(method, getter)]
-    pub fn platform(this: &Process) -> Platform;
+    pub fn platform(this: &Process) -> crate::node_js::Platform;
     #[wasm_bindgen(method, setter)]
-    pub fn set_platform(this: &Process, value: &Platform);
+    pub fn set_platform(this: &Process, value: &crate::node_js::Platform);
     # [ wasm_bindgen ( method , getter , js_name = mainModule ) ]
     pub fn main_module(this: &Process) -> Option<NodeModule>;
     # [ wasm_bindgen ( method , setter , js_name = mainModule ) ]
     pub fn set_main_module(this: &Process, value: Option<&NodeModule>);
     # [ wasm_bindgen ( method , js_name = memoryUsage ) ]
-    pub fn memory_usage(this: &Process) -> MemoryUsage;
+    pub fn memory_usage(this: &Process) -> crate::node_js::MemoryUsage;
     # [ wasm_bindgen ( method , setter , js_name = memoryUsage ) ]
     pub fn set_memory_usage(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = cpuUsage ) ]
-    pub fn cpu_usage(this: &Process, previous_value: Option<&CpuUsage>) -> CpuUsage;
+    pub fn cpu_usage(
+        this: &Process,
+        previous_value: Option<&crate::node_js::CpuUsage>,
+    ) -> crate::node_js::CpuUsage;
     # [ wasm_bindgen ( method , setter , js_name = cpuUsage ) ]
     pub fn set_cpu_usage(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = nextTick ) ]
@@ -767,9 +784,9 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = nextTick ) ]
     pub fn set_next_tick(this: &Process, value: &Function);
     #[wasm_bindgen(method, getter)]
-    pub fn release(this: &Process) -> ProcessRelease;
+    pub fn release(this: &Process) -> crate::node_js::ProcessRelease;
     #[wasm_bindgen(method, setter)]
-    pub fn set_release(this: &Process, value: &ProcessRelease);
+    pub fn set_release(this: &Process, value: &crate::node_js::ProcessRelease);
     #[wasm_bindgen(method, getter)]
     pub fn features(this: &Process) -> JsValue;
     #[wasm_bindgen(method, setter)]
@@ -784,13 +801,13 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_uptime(this: &Process, value: &Function);
     #[wasm_bindgen(method, getter)]
-    pub fn hrtime(this: &Process) -> HRTime;
+    pub fn hrtime(this: &Process) -> crate::node_js::HRTime;
     #[wasm_bindgen(method, setter)]
-    pub fn set_hrtime(this: &Process, value: &HRTime);
+    pub fn set_hrtime(this: &Process, value: &crate::node_js::HRTime);
     #[wasm_bindgen(method, getter)]
-    pub fn domain(this: &Process) -> Domain;
+    pub fn domain(this: &Process) -> crate::node_js::Domain;
     #[wasm_bindgen(method, setter)]
-    pub fn set_domain(this: &Process, value: &Domain);
+    pub fn set_domain(this: &Process, value: &crate::node_js::Domain);
     #[wasm_bindgen(method)]
     pub fn send(
         this: &Process,
@@ -818,11 +835,11 @@ extern "C" {
     pub fn set_allowed_node_environment_flags(this: &Process, value: &ReadonlySet);
     #[doc = "Only available with `--experimental-report`"]
     #[wasm_bindgen(method, getter)]
-    pub fn report(this: &Process) -> Option<ProcessReport>;
+    pub fn report(this: &Process) -> Option<crate::node_js::ProcessReport>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_report(this: &Process, value: Option<&ProcessReport>);
+    pub fn set_report(this: &Process, value: Option<&crate::node_js::ProcessReport>);
     # [ wasm_bindgen ( method , js_name = resourceUsage ) ]
-    pub fn resource_usage(this: &Process) -> ResourceUsage;
+    pub fn resource_usage(this: &Process) -> crate::node_js::ResourceUsage;
     # [ wasm_bindgen ( method , setter , js_name = resourceUsage ) ]
     pub fn set_resource_usage(this: &Process, value: &Function);
     #[doc = "EventEmitter"]
@@ -838,7 +855,11 @@ extern "C" {
     #[doc = "  10. <All OS Signals>"]
     #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener(this: &Process, event: &JsValue, listener: &BeforeExitListener) -> Process;
+    pub fn add_listener(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::BeforeExitListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Process, value: &Function);
     #[doc = "EventEmitter"]
@@ -854,8 +875,11 @@ extern "C" {
     #[doc = "  10. <All OS Signals>"]
     #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &Process, event: &JsValue, listener: &DisconnectListener)
-    -> Process;
+    pub fn add_listener2(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::DisconnectListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener2(this: &Process, value: &Function);
     #[doc = "EventEmitter"]
@@ -871,7 +895,11 @@ extern "C" {
     #[doc = "  10. <All OS Signals>"]
     #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &Process, event: &JsValue, listener: &ExitListener) -> Process;
+    pub fn add_listener3(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::ExitListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener3(this: &Process, value: &Function);
     #[doc = "EventEmitter"]
@@ -890,7 +918,7 @@ extern "C" {
     pub fn add_listener4(
         this: &Process,
         event: &JsValue,
-        listener: &RejectionHandledListener,
+        listener: &crate::node_js::RejectionHandledListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener4(this: &Process, value: &Function);
@@ -910,7 +938,7 @@ extern "C" {
     pub fn add_listener5(
         this: &Process,
         event: &JsValue,
-        listener: &UncaughtExceptionListener,
+        listener: &crate::node_js::UncaughtExceptionListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener5(this: &Process, value: &Function);
@@ -930,7 +958,7 @@ extern "C" {
     pub fn add_listener6(
         this: &Process,
         event: &JsValue,
-        listener: &UnhandledRejectionListener,
+        listener: &crate::node_js::UnhandledRejectionListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener6(this: &Process, value: &Function);
@@ -947,7 +975,11 @@ extern "C" {
     #[doc = "  10. <All OS Signals>"]
     #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener7(this: &Process, event: &JsValue, listener: &WarningListener) -> Process;
+    pub fn add_listener7(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::WarningListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener7(this: &Process, value: &Function);
     #[doc = "EventEmitter"]
@@ -963,7 +995,11 @@ extern "C" {
     #[doc = "  10. <All OS Signals>"]
     #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener8(this: &Process, event: &JsValue, listener: &MessageListener) -> Process;
+    pub fn add_listener8(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::MessageListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener8(this: &Process, value: &Function);
     #[doc = "EventEmitter"]
@@ -979,7 +1015,11 @@ extern "C" {
     #[doc = "  10. <All OS Signals>"]
     #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener9(this: &Process, event: &Signals, listener: &SignalsListener) -> Process;
+    pub fn add_listener9(
+        this: &Process,
+        event: &crate::node_js::Signals,
+        listener: &crate::node_js::SignalsListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener9(this: &Process, value: &Function);
     #[doc = "EventEmitter"]
@@ -998,7 +1038,7 @@ extern "C" {
     pub fn add_listener10(
         this: &Process,
         event: &JsValue,
-        listener: &NewListenerListener,
+        listener: &crate::node_js::NewListenerListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener10(this: &Process, value: &Function);
@@ -1018,7 +1058,7 @@ extern "C" {
     pub fn add_listener11(
         this: &Process,
         event: &JsValue,
-        listener: &RemoveListenerListener,
+        listener: &crate::node_js::RemoveListenerListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener11(this: &Process, value: &Function);
@@ -1038,7 +1078,7 @@ extern "C" {
     pub fn add_listener12(
         this: &Process,
         event: &JsValue,
-        listener: &MultipleResolveListener,
+        listener: &crate::node_js::MultipleResolveListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener12(this: &Process, value: &Function);
@@ -1080,7 +1120,11 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit8(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit9(this: &Process, event: &Signals, signal: &Signals) -> bool;
+    pub fn emit9(
+        this: &Process,
+        event: &crate::node_js::Signals,
+        signal: &crate::node_js::Signals,
+    ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit9(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -1098,111 +1142,207 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit11(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit12(this: &Process, event: &JsValue, listener: &MultipleResolveListener) -> Process;
+    pub fn emit12(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::MultipleResolveListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit12(this: &Process, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn on(this: &Process, event: &JsValue, listener: &BeforeExitListener) -> Process;
+    pub fn on(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::BeforeExitListener,
+    ) -> Process;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &Process, event: &JsValue, listener: &DisconnectListener) -> Process;
+    pub fn on2(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::DisconnectListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
     pub fn set_on2(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &Process, event: &JsValue, listener: &ExitListener) -> Process;
+    pub fn on3(this: &Process, event: &JsValue, listener: &crate::node_js::ExitListener)
+    -> Process;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
     pub fn set_on3(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &Process, event: &JsValue, listener: &RejectionHandledListener) -> Process;
+    pub fn on4(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::RejectionHandledListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
     pub fn set_on4(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &Process, event: &JsValue, listener: &UncaughtExceptionListener) -> Process;
+    pub fn on5(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::UncaughtExceptionListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
     pub fn set_on5(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(this: &Process, event: &JsValue, listener: &UnhandledRejectionListener) -> Process;
+    pub fn on6(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::UnhandledRejectionListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
     pub fn set_on6(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on7(this: &Process, event: &JsValue, listener: &WarningListener) -> Process;
+    pub fn on7(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::WarningListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
     pub fn set_on7(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on8(this: &Process, event: &JsValue, listener: &MessageListener) -> Process;
+    pub fn on8(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::MessageListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
     pub fn set_on8(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on9(this: &Process, event: &Signals, listener: &SignalsListener) -> Process;
+    pub fn on9(
+        this: &Process,
+        event: &crate::node_js::Signals,
+        listener: &crate::node_js::SignalsListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
     pub fn set_on9(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on10(this: &Process, event: &JsValue, listener: &NewListenerListener) -> Process;
+    pub fn on10(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::NewListenerListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
     pub fn set_on10(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on11(this: &Process, event: &JsValue, listener: &RemoveListenerListener) -> Process;
+    pub fn on11(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::RemoveListenerListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
     pub fn set_on11(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on12(this: &Process, event: &JsValue, listener: &MultipleResolveListener) -> Process;
+    pub fn on12(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::MultipleResolveListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
     pub fn set_on12(this: &Process, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn once(this: &Process, event: &JsValue, listener: &BeforeExitListener) -> Process;
+    pub fn once(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::BeforeExitListener,
+    ) -> Process;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &Process, event: &JsValue, listener: &DisconnectListener) -> Process;
+    pub fn once2(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::DisconnectListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
     pub fn set_once2(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &Process, event: &JsValue, listener: &ExitListener) -> Process;
+    pub fn once3(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::ExitListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
     pub fn set_once3(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &Process, event: &JsValue, listener: &RejectionHandledListener) -> Process;
+    pub fn once4(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::RejectionHandledListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
     pub fn set_once4(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &Process, event: &JsValue, listener: &UncaughtExceptionListener) -> Process;
+    pub fn once5(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::UncaughtExceptionListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
     pub fn set_once5(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(this: &Process, event: &JsValue, listener: &UnhandledRejectionListener)
-    -> Process;
+    pub fn once6(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::UnhandledRejectionListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
     pub fn set_once6(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once7(this: &Process, event: &JsValue, listener: &WarningListener) -> Process;
+    pub fn once7(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::WarningListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
     pub fn set_once7(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once8(this: &Process, event: &JsValue, listener: &MessageListener) -> Process;
+    pub fn once8(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::MessageListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
     pub fn set_once8(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once9(this: &Process, event: &Signals, listener: &SignalsListener) -> Process;
+    pub fn once9(
+        this: &Process,
+        event: &crate::node_js::Signals,
+        listener: &crate::node_js::SignalsListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
     pub fn set_once9(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once10(this: &Process, event: &JsValue, listener: &NewListenerListener) -> Process;
+    pub fn once10(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::NewListenerListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
     pub fn set_once10(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once11(this: &Process, event: &JsValue, listener: &RemoveListenerListener) -> Process;
+    pub fn once11(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::RemoveListenerListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
     pub fn set_once11(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once12(this: &Process, event: &JsValue, listener: &MultipleResolveListener) -> Process;
+    pub fn once12(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::MultipleResolveListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
     pub fn set_once12(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(
         this: &Process,
         event: &JsValue,
-        listener: &BeforeExitListener,
+        listener: &crate::node_js::BeforeExitListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &Process, value: &Function);
@@ -1210,19 +1350,23 @@ extern "C" {
     pub fn prepend_listener2(
         this: &Process,
         event: &JsValue,
-        listener: &DisconnectListener,
+        listener: &crate::node_js::DisconnectListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener2(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(this: &Process, event: &JsValue, listener: &ExitListener) -> Process;
+    pub fn prepend_listener3(
+        this: &Process,
+        event: &JsValue,
+        listener: &crate::node_js::ExitListener,
+    ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener3(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener4(
         this: &Process,
         event: &JsValue,
-        listener: &RejectionHandledListener,
+        listener: &crate::node_js::RejectionHandledListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener4(this: &Process, value: &Function);
@@ -1230,7 +1374,7 @@ extern "C" {
     pub fn prepend_listener5(
         this: &Process,
         event: &JsValue,
-        listener: &UncaughtExceptionListener,
+        listener: &crate::node_js::UncaughtExceptionListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener5(this: &Process, value: &Function);
@@ -1238,7 +1382,7 @@ extern "C" {
     pub fn prepend_listener6(
         this: &Process,
         event: &JsValue,
-        listener: &UnhandledRejectionListener,
+        listener: &crate::node_js::UnhandledRejectionListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener6(this: &Process, value: &Function);
@@ -1246,7 +1390,7 @@ extern "C" {
     pub fn prepend_listener7(
         this: &Process,
         event: &JsValue,
-        listener: &WarningListener,
+        listener: &crate::node_js::WarningListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener7(this: &Process, value: &Function);
@@ -1254,15 +1398,15 @@ extern "C" {
     pub fn prepend_listener8(
         this: &Process,
         event: &JsValue,
-        listener: &MessageListener,
+        listener: &crate::node_js::MessageListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener8(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener9(
         this: &Process,
-        event: &Signals,
-        listener: &SignalsListener,
+        event: &crate::node_js::Signals,
+        listener: &crate::node_js::SignalsListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener9(this: &Process, value: &Function);
@@ -1270,7 +1414,7 @@ extern "C" {
     pub fn prepend_listener10(
         this: &Process,
         event: &JsValue,
-        listener: &NewListenerListener,
+        listener: &crate::node_js::NewListenerListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener10(this: &Process, value: &Function);
@@ -1278,7 +1422,7 @@ extern "C" {
     pub fn prepend_listener11(
         this: &Process,
         event: &JsValue,
-        listener: &RemoveListenerListener,
+        listener: &crate::node_js::RemoveListenerListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener11(this: &Process, value: &Function);
@@ -1286,7 +1430,7 @@ extern "C" {
     pub fn prepend_listener12(
         this: &Process,
         event: &JsValue,
-        listener: &MultipleResolveListener,
+        listener: &crate::node_js::MultipleResolveListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener12(this: &Process, value: &Function);
@@ -1294,7 +1438,7 @@ extern "C" {
     pub fn prepend_once_listener(
         this: &Process,
         event: &JsValue,
-        listener: &BeforeExitListener,
+        listener: &crate::node_js::BeforeExitListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &Process, value: &Function);
@@ -1302,7 +1446,7 @@ extern "C" {
     pub fn prepend_once_listener2(
         this: &Process,
         event: &JsValue,
-        listener: &DisconnectListener,
+        listener: &crate::node_js::DisconnectListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener2(this: &Process, value: &Function);
@@ -1310,7 +1454,7 @@ extern "C" {
     pub fn prepend_once_listener3(
         this: &Process,
         event: &JsValue,
-        listener: &ExitListener,
+        listener: &crate::node_js::ExitListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener3(this: &Process, value: &Function);
@@ -1318,7 +1462,7 @@ extern "C" {
     pub fn prepend_once_listener4(
         this: &Process,
         event: &JsValue,
-        listener: &RejectionHandledListener,
+        listener: &crate::node_js::RejectionHandledListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener4(this: &Process, value: &Function);
@@ -1326,7 +1470,7 @@ extern "C" {
     pub fn prepend_once_listener5(
         this: &Process,
         event: &JsValue,
-        listener: &UncaughtExceptionListener,
+        listener: &crate::node_js::UncaughtExceptionListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener5(this: &Process, value: &Function);
@@ -1334,7 +1478,7 @@ extern "C" {
     pub fn prepend_once_listener6(
         this: &Process,
         event: &JsValue,
-        listener: &UnhandledRejectionListener,
+        listener: &crate::node_js::UnhandledRejectionListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener6(this: &Process, value: &Function);
@@ -1342,7 +1486,7 @@ extern "C" {
     pub fn prepend_once_listener7(
         this: &Process,
         event: &JsValue,
-        listener: &WarningListener,
+        listener: &crate::node_js::WarningListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener7(this: &Process, value: &Function);
@@ -1350,15 +1494,15 @@ extern "C" {
     pub fn prepend_once_listener8(
         this: &Process,
         event: &JsValue,
-        listener: &MessageListener,
+        listener: &crate::node_js::MessageListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener8(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener9(
         this: &Process,
-        event: &Signals,
-        listener: &SignalsListener,
+        event: &crate::node_js::Signals,
+        listener: &crate::node_js::SignalsListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener9(this: &Process, value: &Function);
@@ -1366,7 +1510,7 @@ extern "C" {
     pub fn prepend_once_listener10(
         this: &Process,
         event: &JsValue,
-        listener: &NewListenerListener,
+        listener: &crate::node_js::NewListenerListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener10(this: &Process, value: &Function);
@@ -1374,7 +1518,7 @@ extern "C" {
     pub fn prepend_once_listener11(
         this: &Process,
         event: &JsValue,
-        listener: &RemoveListenerListener,
+        listener: &crate::node_js::RemoveListenerListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener11(this: &Process, value: &Function);
@@ -1382,7 +1526,7 @@ extern "C" {
     pub fn prepend_once_listener12(
         this: &Process,
         event: &JsValue,
-        listener: &MultipleResolveListener,
+        listener: &crate::node_js::MultipleResolveListener,
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener12(this: &Process, value: &Function);
@@ -1419,7 +1563,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = listeners ) ]
     pub fn set_listeners8(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = listeners ) ]
-    pub fn listeners9(this: &Process, event: &Signals) -> Array;
+    pub fn listeners9(this: &Process, event: &crate::node_js::Signals) -> Array;
     # [ wasm_bindgen ( method , setter , js_name = listeners ) ]
     pub fn set_listeners9(this: &Process, value: &Function);
     # [ wasm_bindgen ( method , js_name = listeners ) ]
@@ -1480,9 +1624,9 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = Function ) ]
     pub fn set_function(this: &Global, value: &JsValue);
     # [ wasm_bindgen ( method , getter , js_name = GLOBAL ) ]
-    pub fn global(this: &Global) -> Global;
+    pub fn global(this: &Global) -> crate::node_js::Global;
     # [ wasm_bindgen ( method , setter , js_name = GLOBAL ) ]
-    pub fn set_global(this: &Global, value: &Global);
+    pub fn set_global(this: &Global, value: &crate::node_js::Global);
     # [ wasm_bindgen ( method , getter , js_name = Infinity ) ]
     pub fn infinity(this: &Global) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = Infinity ) ]
@@ -1632,9 +1776,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_eval(this: &Global, value: &JsValue);
     # [ wasm_bindgen ( method , getter , js_name = global ) ]
-    pub fn global2(this: &Global) -> Global;
+    pub fn global2(this: &Global) -> crate::node_js::Global;
     # [ wasm_bindgen ( method , setter , js_name = global ) ]
-    pub fn set_global2(this: &Global, value: &Global);
+    pub fn set_global2(this: &Global, value: &crate::node_js::Global);
     # [ wasm_bindgen ( method , getter , js_name = isFinite ) ]
     pub fn is_finite(this: &Global) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = isFinite ) ]
@@ -1652,13 +1796,13 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = parseInt ) ]
     pub fn set_parse_int(this: &Global, value: &JsValue);
     #[wasm_bindgen(method, getter)]
-    pub fn process(this: &Global) -> Process;
+    pub fn process(this: &Global) -> crate::node_js::Process;
     #[wasm_bindgen(method, setter)]
-    pub fn set_process(this: &Global, value: &Process);
+    pub fn set_process(this: &Global, value: &crate::node_js::Process);
     #[wasm_bindgen(method, getter)]
-    pub fn root(this: &Global) -> Global;
+    pub fn root(this: &Global) -> crate::node_js::Global;
     #[wasm_bindgen(method, setter)]
-    pub fn set_root(this: &Global, value: &Global);
+    pub fn set_root(this: &Global, value: &crate::node_js::Global);
     # [ wasm_bindgen ( method , getter , js_name = setImmediate ) ]
     pub fn set_immediate(this: &Global) -> Function;
     # [ wasm_bindgen ( method , setter , js_name = setImmediate ) ]
@@ -1800,7 +1944,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_paths(this: &Module, value: &Array);
     #[wasm_bindgen(constructor)]
-    pub fn new_module(id: &str, parent: Option<&Module>) -> Module;
+    pub fn new_module(id: &str, parent: Option<&crate::node_js::Module>) -> Module;
     #[wasm_bindgen(method, getter)]
     pub fn kind(this: &TypedArray) -> i32;
     pub type TypedArray;

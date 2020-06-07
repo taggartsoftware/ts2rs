@@ -33,9 +33,14 @@ extern "C" {
     pub fn set_value(this: &RemoteObject, value: &JsValue);
     #[doc = "Primitive value which can not be JSON-stringified does not have <code>value</code>, but gets this property."]
     # [ wasm_bindgen ( method , getter , js_name = unserializableValue ) ]
-    pub fn unserializable_value(this: &RemoteObject) -> Option<UnserializableValue>;
+    pub fn unserializable_value(
+        this: &RemoteObject,
+    ) -> Option<crate::inspector::runtime::UnserializableValue>;
     # [ wasm_bindgen ( method , setter , js_name = unserializableValue ) ]
-    pub fn set_unserializable_value(this: &RemoteObject, value: Option<&UnserializableValue>);
+    pub fn set_unserializable_value(
+        this: &RemoteObject,
+        value: Option<&crate::inspector::runtime::UnserializableValue>,
+    );
     #[doc = "String representation of the object."]
     #[wasm_bindgen(method, getter)]
     pub fn description(this: &RemoteObject) -> Option<String>;
@@ -43,18 +48,27 @@ extern "C" {
     pub fn set_description(this: &RemoteObject, value: Option<&str>);
     #[doc = "Unique object identifier (for non-primitive values)."]
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
-    pub fn object_id(this: &RemoteObject) -> Option<RemoteObjectId>;
+    pub fn object_id(this: &RemoteObject) -> Option<crate::inspector::runtime::RemoteObjectId>;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
-    pub fn set_object_id(this: &RemoteObject, value: Option<&RemoteObjectId>);
+    pub fn set_object_id(
+        this: &RemoteObject,
+        value: Option<&crate::inspector::runtime::RemoteObjectId>,
+    );
     #[doc = "Preview containing abbreviated property values. Specified for <code>object</code> type values only."]
     #[wasm_bindgen(method, getter)]
-    pub fn preview(this: &RemoteObject) -> Option<ObjectPreview>;
+    pub fn preview(this: &RemoteObject) -> Option<crate::inspector::runtime::ObjectPreview>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_preview(this: &RemoteObject, value: Option<&ObjectPreview>);
+    pub fn set_preview(
+        this: &RemoteObject,
+        value: Option<&crate::inspector::runtime::ObjectPreview>,
+    );
     # [ wasm_bindgen ( method , getter , js_name = customPreview ) ]
-    pub fn custom_preview(this: &RemoteObject) -> Option<CustomPreview>;
+    pub fn custom_preview(this: &RemoteObject) -> Option<crate::inspector::runtime::CustomPreview>;
     # [ wasm_bindgen ( method , setter , js_name = customPreview ) ]
-    pub fn set_custom_preview(this: &RemoteObject, value: Option<&CustomPreview>);
+    pub fn set_custom_preview(
+        this: &RemoteObject,
+        value: Option<&crate::inspector::runtime::CustomPreview>,
+    );
     pub type CustomPreview;
     #[wasm_bindgen(method, getter)]
     pub fn header(this: &CustomPreview) -> String;
@@ -65,17 +79,30 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = hasBody ) ]
     pub fn set_has_body(this: &CustomPreview, value: bool);
     # [ wasm_bindgen ( method , getter , js_name = formatterObjectId ) ]
-    pub fn formatter_object_id(this: &CustomPreview) -> RemoteObjectId;
+    pub fn formatter_object_id(this: &CustomPreview) -> crate::inspector::runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = formatterObjectId ) ]
-    pub fn set_formatter_object_id(this: &CustomPreview, value: &RemoteObjectId);
+    pub fn set_formatter_object_id(
+        this: &CustomPreview,
+        value: &crate::inspector::runtime::RemoteObjectId,
+    );
     # [ wasm_bindgen ( method , getter , js_name = bindRemoteObjectFunctionId ) ]
-    pub fn bind_remote_object_function_id(this: &CustomPreview) -> RemoteObjectId;
+    pub fn bind_remote_object_function_id(
+        this: &CustomPreview,
+    ) -> crate::inspector::runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = bindRemoteObjectFunctionId ) ]
-    pub fn set_bind_remote_object_function_id(this: &CustomPreview, value: &RemoteObjectId);
+    pub fn set_bind_remote_object_function_id(
+        this: &CustomPreview,
+        value: &crate::inspector::runtime::RemoteObjectId,
+    );
     # [ wasm_bindgen ( method , getter , js_name = configObjectId ) ]
-    pub fn config_object_id(this: &CustomPreview) -> Option<RemoteObjectId>;
+    pub fn config_object_id(
+        this: &CustomPreview,
+    ) -> Option<crate::inspector::runtime::RemoteObjectId>;
     # [ wasm_bindgen ( method , setter , js_name = configObjectId ) ]
-    pub fn set_config_object_id(this: &CustomPreview, value: Option<&RemoteObjectId>);
+    pub fn set_config_object_id(
+        this: &CustomPreview,
+        value: Option<&crate::inspector::runtime::RemoteObjectId>,
+    );
     #[doc = "Object containing abbreviated remote object value."]
     pub type ObjectPreview;
     #[doc = "Object type."]
@@ -126,9 +153,14 @@ extern "C" {
     pub fn set_value(this: &PropertyPreview, value: Option<&str>);
     #[doc = "Nested value preview."]
     # [ wasm_bindgen ( method , getter , js_name = valuePreview ) ]
-    pub fn value_preview(this: &PropertyPreview) -> Option<ObjectPreview>;
+    pub fn value_preview(
+        this: &PropertyPreview,
+    ) -> Option<crate::inspector::runtime::ObjectPreview>;
     # [ wasm_bindgen ( method , setter , js_name = valuePreview ) ]
-    pub fn set_value_preview(this: &PropertyPreview, value: Option<&ObjectPreview>);
+    pub fn set_value_preview(
+        this: &PropertyPreview,
+        value: Option<&crate::inspector::runtime::ObjectPreview>,
+    );
     #[doc = "Object subtype hint. Specified for <code>object</code> type values only."]
     #[wasm_bindgen(method, getter)]
     pub fn subtype(this: &PropertyPreview) -> Option<String>;
@@ -137,14 +169,14 @@ extern "C" {
     pub type EntryPreview;
     #[doc = "Preview of the key. Specified for map-like collection entries."]
     #[wasm_bindgen(method, getter)]
-    pub fn key(this: &EntryPreview) -> Option<ObjectPreview>;
+    pub fn key(this: &EntryPreview) -> Option<crate::inspector::runtime::ObjectPreview>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_key(this: &EntryPreview, value: Option<&ObjectPreview>);
+    pub fn set_key(this: &EntryPreview, value: Option<&crate::inspector::runtime::ObjectPreview>);
     #[doc = "Preview of the value."]
     #[wasm_bindgen(method, getter)]
-    pub fn value(this: &EntryPreview) -> ObjectPreview;
+    pub fn value(this: &EntryPreview) -> crate::inspector::runtime::ObjectPreview;
     #[wasm_bindgen(method, setter)]
-    pub fn set_value(this: &EntryPreview, value: &ObjectPreview);
+    pub fn set_value(this: &EntryPreview, value: &crate::inspector::runtime::ObjectPreview);
     #[doc = "Object property descriptor."]
     pub type PropertyDescriptor;
     #[doc = "Property name or symbol description."]
@@ -154,9 +186,12 @@ extern "C" {
     pub fn set_name(this: &PropertyDescriptor, value: &str);
     #[doc = "The value associated with the property."]
     #[wasm_bindgen(method, getter)]
-    pub fn value(this: &PropertyDescriptor) -> Option<RemoteObject>;
+    pub fn value(this: &PropertyDescriptor) -> Option<crate::inspector::runtime::RemoteObject>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_value(this: &PropertyDescriptor, value: Option<&RemoteObject>);
+    pub fn set_value(
+        this: &PropertyDescriptor,
+        value: Option<&crate::inspector::runtime::RemoteObject>,
+    );
     #[doc = "True if the value associated with the property may be changed (data descriptors only)."]
     #[wasm_bindgen(method, getter)]
     pub fn writable(this: &PropertyDescriptor) -> Option<bool>;
@@ -164,14 +199,20 @@ extern "C" {
     pub fn set_writable(this: &PropertyDescriptor, value: Option<bool>);
     #[doc = "A function which serves as a getter for the property, or <code>undefined</code> if there is no getter (accessor descriptors only)."]
     #[wasm_bindgen(method, getter)]
-    pub fn get(this: &PropertyDescriptor) -> Option<RemoteObject>;
+    pub fn get(this: &PropertyDescriptor) -> Option<crate::inspector::runtime::RemoteObject>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_get(this: &PropertyDescriptor, value: Option<&RemoteObject>);
+    pub fn set_get(
+        this: &PropertyDescriptor,
+        value: Option<&crate::inspector::runtime::RemoteObject>,
+    );
     #[doc = "A function which serves as a setter for the property, or <code>undefined</code> if there is no setter (accessor descriptors only)."]
     #[wasm_bindgen(method, getter)]
-    pub fn set(this: &PropertyDescriptor) -> Option<RemoteObject>;
+    pub fn set(this: &PropertyDescriptor) -> Option<crate::inspector::runtime::RemoteObject>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_set(this: &PropertyDescriptor, value: Option<&RemoteObject>);
+    pub fn set_set(
+        this: &PropertyDescriptor,
+        value: Option<&crate::inspector::runtime::RemoteObject>,
+    );
     #[doc = "True if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object."]
     #[wasm_bindgen(method, getter)]
     pub fn configurable(this: &PropertyDescriptor) -> bool;
@@ -194,9 +235,12 @@ extern "C" {
     pub fn set_is_own(this: &PropertyDescriptor, value: Option<bool>);
     #[doc = "Property symbol object, if the property is of the <code>symbol</code> type."]
     #[wasm_bindgen(method, getter)]
-    pub fn symbol(this: &PropertyDescriptor) -> Option<RemoteObject>;
+    pub fn symbol(this: &PropertyDescriptor) -> Option<crate::inspector::runtime::RemoteObject>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_symbol(this: &PropertyDescriptor, value: Option<&RemoteObject>);
+    pub fn set_symbol(
+        this: &PropertyDescriptor,
+        value: Option<&crate::inspector::runtime::RemoteObject>,
+    );
     #[doc = "Object internal property descriptor. This property isn't normally visible in JavaScript code."]
     pub type InternalPropertyDescriptor;
     #[doc = "Conventional property name."]
@@ -206,9 +250,14 @@ extern "C" {
     pub fn set_name(this: &InternalPropertyDescriptor, value: &str);
     #[doc = "The value associated with the property."]
     #[wasm_bindgen(method, getter)]
-    pub fn value(this: &InternalPropertyDescriptor) -> Option<RemoteObject>;
+    pub fn value(
+        this: &InternalPropertyDescriptor,
+    ) -> Option<crate::inspector::runtime::RemoteObject>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_value(this: &InternalPropertyDescriptor, value: Option<&RemoteObject>);
+    pub fn set_value(
+        this: &InternalPropertyDescriptor,
+        value: Option<&crate::inspector::runtime::RemoteObject>,
+    );
     #[doc = "Represents function call argument. Either remote object id <code>objectId</code>, primitive <code>value</code>, unserializable primitive value or neither of (for undefined) them should be specified."]
     pub type CallArgument;
     #[doc = "Primitive value or serializable javascript object."]
@@ -218,23 +267,34 @@ extern "C" {
     pub fn set_value(this: &CallArgument, value: &JsValue);
     #[doc = "Primitive value which can not be JSON-stringified."]
     # [ wasm_bindgen ( method , getter , js_name = unserializableValue ) ]
-    pub fn unserializable_value(this: &CallArgument) -> Option<UnserializableValue>;
+    pub fn unserializable_value(
+        this: &CallArgument,
+    ) -> Option<crate::inspector::runtime::UnserializableValue>;
     # [ wasm_bindgen ( method , setter , js_name = unserializableValue ) ]
-    pub fn set_unserializable_value(this: &CallArgument, value: Option<&UnserializableValue>);
+    pub fn set_unserializable_value(
+        this: &CallArgument,
+        value: Option<&crate::inspector::runtime::UnserializableValue>,
+    );
     #[doc = "Remote object handle."]
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
-    pub fn object_id(this: &CallArgument) -> Option<RemoteObjectId>;
+    pub fn object_id(this: &CallArgument) -> Option<crate::inspector::runtime::RemoteObjectId>;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
-    pub fn set_object_id(this: &CallArgument, value: Option<&RemoteObjectId>);
+    pub fn set_object_id(
+        this: &CallArgument,
+        value: Option<&crate::inspector::runtime::RemoteObjectId>,
+    );
     #[doc = "Id of an execution context."]
     pub type ExecutionContextId;
     #[doc = "Description of an isolated world."]
     pub type ExecutionContextDescription;
     #[doc = "Unique id of the execution context. It can be used to specify in which execution context script evaluation should be performed."]
     #[wasm_bindgen(method, getter)]
-    pub fn id(this: &ExecutionContextDescription) -> ExecutionContextId;
+    pub fn id(this: &ExecutionContextDescription) -> crate::inspector::runtime::ExecutionContextId;
     #[wasm_bindgen(method, setter)]
-    pub fn set_id(this: &ExecutionContextDescription, value: &ExecutionContextId);
+    pub fn set_id(
+        this: &ExecutionContextDescription,
+        value: &crate::inspector::runtime::ExecutionContextId,
+    );
     #[doc = "Execution context origin."]
     #[wasm_bindgen(method, getter)]
     pub fn origin(this: &ExecutionContextDescription) -> String;
@@ -274,9 +334,12 @@ extern "C" {
     pub fn set_column_number(this: &ExceptionDetails, value: f64);
     #[doc = "Script ID of the exception location."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &ExceptionDetails) -> Option<ScriptId>;
+    pub fn script_id(this: &ExceptionDetails) -> Option<crate::inspector::runtime::ScriptId>;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(this: &ExceptionDetails, value: Option<&ScriptId>);
+    pub fn set_script_id(
+        this: &ExceptionDetails,
+        value: Option<&crate::inspector::runtime::ScriptId>,
+    );
     #[doc = "URL of the exception location, to be used when the script was not reported."]
     #[wasm_bindgen(method, getter)]
     pub fn url(this: &ExceptionDetails) -> Option<String>;
@@ -284,19 +347,30 @@ extern "C" {
     pub fn set_url(this: &ExceptionDetails, value: Option<&str>);
     #[doc = "JavaScript stack trace if available."]
     # [ wasm_bindgen ( method , getter , js_name = stackTrace ) ]
-    pub fn stack_trace(this: &ExceptionDetails) -> Option<StackTrace>;
+    pub fn stack_trace(this: &ExceptionDetails) -> Option<crate::inspector::runtime::StackTrace>;
     # [ wasm_bindgen ( method , setter , js_name = stackTrace ) ]
-    pub fn set_stack_trace(this: &ExceptionDetails, value: Option<&StackTrace>);
+    pub fn set_stack_trace(
+        this: &ExceptionDetails,
+        value: Option<&crate::inspector::runtime::StackTrace>,
+    );
     #[doc = "Exception object if available."]
     #[wasm_bindgen(method, getter)]
-    pub fn exception(this: &ExceptionDetails) -> Option<RemoteObject>;
+    pub fn exception(this: &ExceptionDetails) -> Option<crate::inspector::runtime::RemoteObject>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_exception(this: &ExceptionDetails, value: Option<&RemoteObject>);
+    pub fn set_exception(
+        this: &ExceptionDetails,
+        value: Option<&crate::inspector::runtime::RemoteObject>,
+    );
     #[doc = "Identifier of the context where exception happened."]
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
-    pub fn execution_context_id(this: &ExceptionDetails) -> Option<ExecutionContextId>;
+    pub fn execution_context_id(
+        this: &ExceptionDetails,
+    ) -> Option<crate::inspector::runtime::ExecutionContextId>;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
-    pub fn set_execution_context_id(this: &ExceptionDetails, value: Option<&ExecutionContextId>);
+    pub fn set_execution_context_id(
+        this: &ExceptionDetails,
+        value: Option<&crate::inspector::runtime::ExecutionContextId>,
+    );
     #[doc = "Number of milliseconds since epoch."]
     pub type Timestamp;
     #[doc = "Stack entry for runtime errors and assertions."]
@@ -308,9 +382,9 @@ extern "C" {
     pub fn set_function_name(this: &CallFrame, value: &str);
     #[doc = "JavaScript script id."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &CallFrame) -> ScriptId;
+    pub fn script_id(this: &CallFrame) -> crate::inspector::runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(this: &CallFrame, value: &ScriptId);
+    pub fn set_script_id(this: &CallFrame, value: &crate::inspector::runtime::ScriptId);
     #[doc = "JavaScript script name or url."]
     #[wasm_bindgen(method, getter)]
     pub fn url(this: &CallFrame) -> String;
@@ -340,14 +414,17 @@ extern "C" {
     pub fn set_call_frames(this: &StackTrace, value: &Array);
     #[doc = "Asynchronous JavaScript stack trace that preceded this stack, if available."]
     #[wasm_bindgen(method, getter)]
-    pub fn parent(this: &StackTrace) -> Option<StackTrace>;
+    pub fn parent(this: &StackTrace) -> Option<crate::inspector::runtime::StackTrace>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_parent(this: &StackTrace, value: Option<&StackTrace>);
+    pub fn set_parent(this: &StackTrace, value: Option<&crate::inspector::runtime::StackTrace>);
     #[doc = "Asynchronous JavaScript stack trace that preceded this stack, if available."]
     # [ wasm_bindgen ( method , getter , js_name = parentId ) ]
-    pub fn parent_id(this: &StackTrace) -> Option<StackTraceId>;
+    pub fn parent_id(this: &StackTrace) -> Option<crate::inspector::runtime::StackTraceId>;
     # [ wasm_bindgen ( method , setter , js_name = parentId ) ]
-    pub fn set_parent_id(this: &StackTrace, value: Option<&StackTraceId>);
+    pub fn set_parent_id(
+        this: &StackTrace,
+        value: Option<&crate::inspector::runtime::StackTraceId>,
+    );
     #[doc = "Unique identifier of current debugger."]
     pub type UniqueDebuggerId;
     #[doc = "If <code>debuggerId</code> is set stack trace comes from another debugger and can be resolved there. This allows to track cross-debugger calls. See <code>Runtime.StackTrace</code> and <code>Debugger.paused</code> for usages."]
@@ -357,9 +434,12 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_id(this: &StackTraceId, value: &str);
     # [ wasm_bindgen ( method , getter , js_name = debuggerId ) ]
-    pub fn debugger_id(this: &StackTraceId) -> Option<UniqueDebuggerId>;
+    pub fn debugger_id(this: &StackTraceId) -> Option<crate::inspector::runtime::UniqueDebuggerId>;
     # [ wasm_bindgen ( method , setter , js_name = debuggerId ) ]
-    pub fn set_debugger_id(this: &StackTraceId, value: Option<&UniqueDebuggerId>);
+    pub fn set_debugger_id(
+        this: &StackTraceId,
+        value: Option<&crate::inspector::runtime::UniqueDebuggerId>,
+    );
     pub type EvaluateParameterType;
     #[doc = "Expression to evaluate."]
     #[wasm_bindgen(method, getter)]
@@ -383,9 +463,14 @@ extern "C" {
     pub fn set_silent(this: &EvaluateParameterType, value: Option<bool>);
     #[doc = "Specifies in which execution context to perform evaluation. If the parameter is omitted the evaluation will be performed in the context of the inspected page."]
     # [ wasm_bindgen ( method , getter , js_name = contextId ) ]
-    pub fn context_id(this: &EvaluateParameterType) -> Option<ExecutionContextId>;
+    pub fn context_id(
+        this: &EvaluateParameterType,
+    ) -> Option<crate::inspector::runtime::ExecutionContextId>;
     # [ wasm_bindgen ( method , setter , js_name = contextId ) ]
-    pub fn set_context_id(this: &EvaluateParameterType, value: Option<&ExecutionContextId>);
+    pub fn set_context_id(
+        this: &EvaluateParameterType,
+        value: Option<&crate::inspector::runtime::ExecutionContextId>,
+    );
     #[doc = "Whether the result is expected to be a JSON object that should be sent by value."]
     # [ wasm_bindgen ( method , getter , js_name = returnByValue ) ]
     pub fn return_by_value(this: &EvaluateParameterType) -> Option<bool>;
@@ -409,9 +494,14 @@ extern "C" {
     pub type AwaitPromiseParameterType;
     #[doc = "Identifier of the promise."]
     # [ wasm_bindgen ( method , getter , js_name = promiseObjectId ) ]
-    pub fn promise_object_id(this: &AwaitPromiseParameterType) -> RemoteObjectId;
+    pub fn promise_object_id(
+        this: &AwaitPromiseParameterType,
+    ) -> crate::inspector::runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = promiseObjectId ) ]
-    pub fn set_promise_object_id(this: &AwaitPromiseParameterType, value: &RemoteObjectId);
+    pub fn set_promise_object_id(
+        this: &AwaitPromiseParameterType,
+        value: &crate::inspector::runtime::RemoteObjectId,
+    );
     #[doc = "Whether the result is expected to be a JSON object that should be sent by value."]
     # [ wasm_bindgen ( method , getter , js_name = returnByValue ) ]
     pub fn return_by_value(this: &AwaitPromiseParameterType) -> Option<bool>;
@@ -430,9 +520,14 @@ extern "C" {
     pub fn set_function_declaration(this: &CallFunctionOnParameterType, value: &str);
     #[doc = "Identifier of the object to call function on. Either objectId or executionContextId should be specified."]
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
-    pub fn object_id(this: &CallFunctionOnParameterType) -> Option<RemoteObjectId>;
+    pub fn object_id(
+        this: &CallFunctionOnParameterType,
+    ) -> Option<crate::inspector::runtime::RemoteObjectId>;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
-    pub fn set_object_id(this: &CallFunctionOnParameterType, value: Option<&RemoteObjectId>);
+    pub fn set_object_id(
+        this: &CallFunctionOnParameterType,
+        value: Option<&crate::inspector::runtime::RemoteObjectId>,
+    );
     #[doc = "Call arguments. All call arguments must belong to the same JavaScript world as the target object."]
     #[wasm_bindgen(method, getter)]
     pub fn arguments(this: &CallFunctionOnParameterType) -> Option<Array>;
@@ -465,11 +560,13 @@ extern "C" {
     pub fn set_await_promise(this: &CallFunctionOnParameterType, value: Option<bool>);
     #[doc = "Specifies execution context which global object will be used to call function on. Either executionContextId or objectId should be specified."]
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
-    pub fn execution_context_id(this: &CallFunctionOnParameterType) -> Option<ExecutionContextId>;
+    pub fn execution_context_id(
+        this: &CallFunctionOnParameterType,
+    ) -> Option<crate::inspector::runtime::ExecutionContextId>;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &CallFunctionOnParameterType,
-        value: Option<&ExecutionContextId>,
+        value: Option<&crate::inspector::runtime::ExecutionContextId>,
     );
     #[doc = "Symbolic group name that can be used to release multiple objects. If objectGroup is not specified and objectId is, objectGroup will be inherited from object."]
     # [ wasm_bindgen ( method , getter , js_name = objectGroup ) ]
@@ -479,9 +576,14 @@ extern "C" {
     pub type GetPropertiesParameterType;
     #[doc = "Identifier of the object to return properties for."]
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
-    pub fn object_id(this: &GetPropertiesParameterType) -> RemoteObjectId;
+    pub fn object_id(
+        this: &GetPropertiesParameterType,
+    ) -> crate::inspector::runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
-    pub fn set_object_id(this: &GetPropertiesParameterType, value: &RemoteObjectId);
+    pub fn set_object_id(
+        this: &GetPropertiesParameterType,
+        value: &crate::inspector::runtime::RemoteObjectId,
+    );
     #[doc = "If true, returns properties belonging only to the element itself, not to its prototype chain."]
     # [ wasm_bindgen ( method , getter , js_name = ownProperties ) ]
     pub fn own_properties(this: &GetPropertiesParameterType) -> Option<bool>;
@@ -500,9 +602,14 @@ extern "C" {
     pub type ReleaseObjectParameterType;
     #[doc = "Identifier of the object to release."]
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
-    pub fn object_id(this: &ReleaseObjectParameterType) -> RemoteObjectId;
+    pub fn object_id(
+        this: &ReleaseObjectParameterType,
+    ) -> crate::inspector::runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
-    pub fn set_object_id(this: &ReleaseObjectParameterType, value: &RemoteObjectId);
+    pub fn set_object_id(
+        this: &ReleaseObjectParameterType,
+        value: &crate::inspector::runtime::RemoteObjectId,
+    );
     pub type ReleaseObjectGroupParameterType;
     #[doc = "Symbolic object group name."]
     # [ wasm_bindgen ( method , getter , js_name = objectGroup ) ]
@@ -532,25 +639,32 @@ extern "C" {
     pub fn set_persist_script(this: &CompileScriptParameterType, value: bool);
     #[doc = "Specifies in which execution context to perform script run. If the parameter is omitted the evaluation will be performed in the context of the inspected page."]
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
-    pub fn execution_context_id(this: &CompileScriptParameterType) -> Option<ExecutionContextId>;
+    pub fn execution_context_id(
+        this: &CompileScriptParameterType,
+    ) -> Option<crate::inspector::runtime::ExecutionContextId>;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &CompileScriptParameterType,
-        value: Option<&ExecutionContextId>,
+        value: Option<&crate::inspector::runtime::ExecutionContextId>,
     );
     pub type RunScriptParameterType;
     #[doc = "Id of the script to run."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &RunScriptParameterType) -> ScriptId;
+    pub fn script_id(this: &RunScriptParameterType) -> crate::inspector::runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(this: &RunScriptParameterType, value: &ScriptId);
+    pub fn set_script_id(
+        this: &RunScriptParameterType,
+        value: &crate::inspector::runtime::ScriptId,
+    );
     #[doc = "Specifies in which execution context to perform script run. If the parameter is omitted the evaluation will be performed in the context of the inspected page."]
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
-    pub fn execution_context_id(this: &RunScriptParameterType) -> Option<ExecutionContextId>;
+    pub fn execution_context_id(
+        this: &RunScriptParameterType,
+    ) -> Option<crate::inspector::runtime::ExecutionContextId>;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &RunScriptParameterType,
-        value: Option<&ExecutionContextId>,
+        value: Option<&crate::inspector::runtime::ExecutionContextId>,
     );
     #[doc = "Symbolic group name that can be used to release multiple objects."]
     # [ wasm_bindgen ( method , getter , js_name = objectGroup ) ]
@@ -585,53 +699,79 @@ extern "C" {
     pub type QueryObjectsParameterType;
     #[doc = "Identifier of the prototype to return objects for."]
     # [ wasm_bindgen ( method , getter , js_name = prototypeObjectId ) ]
-    pub fn prototype_object_id(this: &QueryObjectsParameterType) -> RemoteObjectId;
+    pub fn prototype_object_id(
+        this: &QueryObjectsParameterType,
+    ) -> crate::inspector::runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = prototypeObjectId ) ]
-    pub fn set_prototype_object_id(this: &QueryObjectsParameterType, value: &RemoteObjectId);
+    pub fn set_prototype_object_id(
+        this: &QueryObjectsParameterType,
+        value: &crate::inspector::runtime::RemoteObjectId,
+    );
     pub type GlobalLexicalScopeNamesParameterType;
     #[doc = "Specifies in which execution context to lookup global scope variables."]
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
     pub fn execution_context_id(
         this: &GlobalLexicalScopeNamesParameterType,
-    ) -> Option<ExecutionContextId>;
+    ) -> Option<crate::inspector::runtime::ExecutionContextId>;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &GlobalLexicalScopeNamesParameterType,
-        value: Option<&ExecutionContextId>,
+        value: Option<&crate::inspector::runtime::ExecutionContextId>,
     );
     pub type EvaluateReturnType;
     #[doc = "Evaluation result."]
     #[wasm_bindgen(method, getter)]
-    pub fn result(this: &EvaluateReturnType) -> RemoteObject;
+    pub fn result(this: &EvaluateReturnType) -> crate::inspector::runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_result(this: &EvaluateReturnType, value: &RemoteObject);
+    pub fn set_result(this: &EvaluateReturnType, value: &crate::inspector::runtime::RemoteObject);
     #[doc = "Exception details."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(this: &EvaluateReturnType) -> Option<ExceptionDetails>;
+    pub fn exception_details(
+        this: &EvaluateReturnType,
+    ) -> Option<crate::inspector::runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
-    pub fn set_exception_details(this: &EvaluateReturnType, value: Option<&ExceptionDetails>);
+    pub fn set_exception_details(
+        this: &EvaluateReturnType,
+        value: Option<&crate::inspector::runtime::ExceptionDetails>,
+    );
     pub type AwaitPromiseReturnType;
     #[doc = "Promise result. Will contain rejected value if promise was rejected."]
     #[wasm_bindgen(method, getter)]
-    pub fn result(this: &AwaitPromiseReturnType) -> RemoteObject;
+    pub fn result(this: &AwaitPromiseReturnType) -> crate::inspector::runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_result(this: &AwaitPromiseReturnType, value: &RemoteObject);
+    pub fn set_result(
+        this: &AwaitPromiseReturnType,
+        value: &crate::inspector::runtime::RemoteObject,
+    );
     #[doc = "Exception details if stack strace is available."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(this: &AwaitPromiseReturnType) -> Option<ExceptionDetails>;
+    pub fn exception_details(
+        this: &AwaitPromiseReturnType,
+    ) -> Option<crate::inspector::runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
-    pub fn set_exception_details(this: &AwaitPromiseReturnType, value: Option<&ExceptionDetails>);
+    pub fn set_exception_details(
+        this: &AwaitPromiseReturnType,
+        value: Option<&crate::inspector::runtime::ExceptionDetails>,
+    );
     pub type CallFunctionOnReturnType;
     #[doc = "Call result."]
     #[wasm_bindgen(method, getter)]
-    pub fn result(this: &CallFunctionOnReturnType) -> RemoteObject;
+    pub fn result(this: &CallFunctionOnReturnType) -> crate::inspector::runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_result(this: &CallFunctionOnReturnType, value: &RemoteObject);
+    pub fn set_result(
+        this: &CallFunctionOnReturnType,
+        value: &crate::inspector::runtime::RemoteObject,
+    );
     #[doc = "Exception details."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(this: &CallFunctionOnReturnType) -> Option<ExceptionDetails>;
+    pub fn exception_details(
+        this: &CallFunctionOnReturnType,
+    ) -> Option<crate::inspector::runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
-    pub fn set_exception_details(this: &CallFunctionOnReturnType, value: Option<&ExceptionDetails>);
+    pub fn set_exception_details(
+        this: &CallFunctionOnReturnType,
+        value: Option<&crate::inspector::runtime::ExceptionDetails>,
+    );
     pub type GetPropertiesReturnType;
     #[doc = "Object properties."]
     #[wasm_bindgen(method, getter)]
@@ -645,37 +785,59 @@ extern "C" {
     pub fn set_internal_properties(this: &GetPropertiesReturnType, value: Option<&Array>);
     #[doc = "Exception details."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(this: &GetPropertiesReturnType) -> Option<ExceptionDetails>;
+    pub fn exception_details(
+        this: &GetPropertiesReturnType,
+    ) -> Option<crate::inspector::runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
-    pub fn set_exception_details(this: &GetPropertiesReturnType, value: Option<&ExceptionDetails>);
+    pub fn set_exception_details(
+        this: &GetPropertiesReturnType,
+        value: Option<&crate::inspector::runtime::ExceptionDetails>,
+    );
     pub type CompileScriptReturnType;
     #[doc = "Id of the script."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &CompileScriptReturnType) -> Option<ScriptId>;
+    pub fn script_id(this: &CompileScriptReturnType)
+    -> Option<crate::inspector::runtime::ScriptId>;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(this: &CompileScriptReturnType, value: Option<&ScriptId>);
+    pub fn set_script_id(
+        this: &CompileScriptReturnType,
+        value: Option<&crate::inspector::runtime::ScriptId>,
+    );
     #[doc = "Exception details."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(this: &CompileScriptReturnType) -> Option<ExceptionDetails>;
+    pub fn exception_details(
+        this: &CompileScriptReturnType,
+    ) -> Option<crate::inspector::runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
-    pub fn set_exception_details(this: &CompileScriptReturnType, value: Option<&ExceptionDetails>);
+    pub fn set_exception_details(
+        this: &CompileScriptReturnType,
+        value: Option<&crate::inspector::runtime::ExceptionDetails>,
+    );
     pub type RunScriptReturnType;
     #[doc = "Run result."]
     #[wasm_bindgen(method, getter)]
-    pub fn result(this: &RunScriptReturnType) -> RemoteObject;
+    pub fn result(this: &RunScriptReturnType) -> crate::inspector::runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_result(this: &RunScriptReturnType, value: &RemoteObject);
+    pub fn set_result(this: &RunScriptReturnType, value: &crate::inspector::runtime::RemoteObject);
     #[doc = "Exception details."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(this: &RunScriptReturnType) -> Option<ExceptionDetails>;
+    pub fn exception_details(
+        this: &RunScriptReturnType,
+    ) -> Option<crate::inspector::runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
-    pub fn set_exception_details(this: &RunScriptReturnType, value: Option<&ExceptionDetails>);
+    pub fn set_exception_details(
+        this: &RunScriptReturnType,
+        value: Option<&crate::inspector::runtime::ExceptionDetails>,
+    );
     pub type QueryObjectsReturnType;
     #[doc = "Array with objects."]
     #[wasm_bindgen(method, getter)]
-    pub fn objects(this: &QueryObjectsReturnType) -> RemoteObject;
+    pub fn objects(this: &QueryObjectsReturnType) -> crate::inspector::runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_objects(this: &QueryObjectsReturnType, value: &RemoteObject);
+    pub fn set_objects(
+        this: &QueryObjectsReturnType,
+        value: &crate::inspector::runtime::RemoteObject,
+    );
     pub type GlobalLexicalScopeNamesReturnType;
     #[wasm_bindgen(method, getter)]
     pub fn names(this: &GlobalLexicalScopeNamesReturnType) -> Array;
@@ -684,33 +846,43 @@ extern "C" {
     pub type ExecutionContextCreatedEventDataType;
     #[doc = "A newly created execution context."]
     #[wasm_bindgen(method, getter)]
-    pub fn context(this: &ExecutionContextCreatedEventDataType) -> ExecutionContextDescription;
+    pub fn context(
+        this: &ExecutionContextCreatedEventDataType,
+    ) -> crate::inspector::runtime::ExecutionContextDescription;
     #[wasm_bindgen(method, setter)]
     pub fn set_context(
         this: &ExecutionContextCreatedEventDataType,
-        value: &ExecutionContextDescription,
+        value: &crate::inspector::runtime::ExecutionContextDescription,
     );
     pub type ExecutionContextDestroyedEventDataType;
     #[doc = "Id of the destroyed context"]
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
     pub fn execution_context_id(
         this: &ExecutionContextDestroyedEventDataType,
-    ) -> ExecutionContextId;
+    ) -> crate::inspector::runtime::ExecutionContextId;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &ExecutionContextDestroyedEventDataType,
-        value: &ExecutionContextId,
+        value: &crate::inspector::runtime::ExecutionContextId,
     );
     pub type ExceptionThrownEventDataType;
     #[doc = "Timestamp of the exception."]
     #[wasm_bindgen(method, getter)]
-    pub fn timestamp(this: &ExceptionThrownEventDataType) -> Timestamp;
+    pub fn timestamp(this: &ExceptionThrownEventDataType) -> crate::inspector::runtime::Timestamp;
     #[wasm_bindgen(method, setter)]
-    pub fn set_timestamp(this: &ExceptionThrownEventDataType, value: &Timestamp);
+    pub fn set_timestamp(
+        this: &ExceptionThrownEventDataType,
+        value: &crate::inspector::runtime::Timestamp,
+    );
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(this: &ExceptionThrownEventDataType) -> ExceptionDetails;
+    pub fn exception_details(
+        this: &ExceptionThrownEventDataType,
+    ) -> crate::inspector::runtime::ExceptionDetails;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
-    pub fn set_exception_details(this: &ExceptionThrownEventDataType, value: &ExceptionDetails);
+    pub fn set_exception_details(
+        this: &ExceptionThrownEventDataType,
+        value: &crate::inspector::runtime::ExceptionDetails,
+    );
     pub type ExceptionRevokedEventDataType;
     #[doc = "Reason describing why exception was revoked."]
     #[wasm_bindgen(method, getter)]
@@ -735,22 +907,32 @@ extern "C" {
     pub fn set_args(this: &ConsoleAPICalledEventDataType, value: &Array);
     #[doc = "Identifier of the context where the call was made."]
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
-    pub fn execution_context_id(this: &ConsoleAPICalledEventDataType) -> ExecutionContextId;
+    pub fn execution_context_id(
+        this: &ConsoleAPICalledEventDataType,
+    ) -> crate::inspector::runtime::ExecutionContextId;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &ConsoleAPICalledEventDataType,
-        value: &ExecutionContextId,
+        value: &crate::inspector::runtime::ExecutionContextId,
     );
     #[doc = "Call timestamp."]
     #[wasm_bindgen(method, getter)]
-    pub fn timestamp(this: &ConsoleAPICalledEventDataType) -> Timestamp;
+    pub fn timestamp(this: &ConsoleAPICalledEventDataType) -> crate::inspector::runtime::Timestamp;
     #[wasm_bindgen(method, setter)]
-    pub fn set_timestamp(this: &ConsoleAPICalledEventDataType, value: &Timestamp);
+    pub fn set_timestamp(
+        this: &ConsoleAPICalledEventDataType,
+        value: &crate::inspector::runtime::Timestamp,
+    );
     #[doc = "Stack trace captured when the call was made."]
     # [ wasm_bindgen ( method , getter , js_name = stackTrace ) ]
-    pub fn stack_trace(this: &ConsoleAPICalledEventDataType) -> Option<StackTrace>;
+    pub fn stack_trace(
+        this: &ConsoleAPICalledEventDataType,
+    ) -> Option<crate::inspector::runtime::StackTrace>;
     # [ wasm_bindgen ( method , setter , js_name = stackTrace ) ]
-    pub fn set_stack_trace(this: &ConsoleAPICalledEventDataType, value: Option<&StackTrace>);
+    pub fn set_stack_trace(
+        this: &ConsoleAPICalledEventDataType,
+        value: Option<&crate::inspector::runtime::StackTrace>,
+    );
     #[doc = "Console context descriptor for calls on non-default console context (not console.*): 'anonymous#unique-logger-id' for call on unnamed context, 'name#unique-logger-id' for call on named context."]
     #[wasm_bindgen(method, getter)]
     pub fn context(this: &ConsoleAPICalledEventDataType) -> Option<String>;
@@ -758,9 +940,12 @@ extern "C" {
     pub fn set_context(this: &ConsoleAPICalledEventDataType, value: Option<&str>);
     pub type InspectRequestedEventDataType;
     #[wasm_bindgen(method, getter)]
-    pub fn object(this: &InspectRequestedEventDataType) -> RemoteObject;
+    pub fn object(this: &InspectRequestedEventDataType) -> crate::inspector::runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_object(this: &InspectRequestedEventDataType, value: &RemoteObject);
+    pub fn set_object(
+        this: &InspectRequestedEventDataType,
+        value: &crate::inspector::runtime::RemoteObject,
+    );
     #[wasm_bindgen(method, getter)]
     pub fn hints(this: &InspectRequestedEventDataType) -> JsValue;
     #[wasm_bindgen(method, setter)]

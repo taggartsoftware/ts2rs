@@ -263,9 +263,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_path(this: &ClientRequestArgs, value: &JsValue);
     #[wasm_bindgen(method, getter)]
-    pub fn headers(this: &ClientRequestArgs) -> Option<OutgoingHttpHeaders>;
+    pub fn headers(this: &ClientRequestArgs) -> Option<crate::http::OutgoingHttpHeaders>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_headers(this: &ClientRequestArgs, value: Option<&OutgoingHttpHeaders>);
+    pub fn set_headers(this: &ClientRequestArgs, value: Option<&crate::http::OutgoingHttpHeaders>);
     #[wasm_bindgen(method, getter)]
     pub fn auth(this: &ClientRequestArgs) -> JsValue;
     #[wasm_bindgen(method, setter)]
@@ -275,9 +275,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_agent(this: &ClientRequestArgs, value: &JsValue);
     # [ wasm_bindgen ( method , getter , js_name = _defaultAgent ) ]
-    pub fn default_agent(this: &ClientRequestArgs) -> Option<Agent>;
+    pub fn default_agent(this: &ClientRequestArgs) -> Option<crate::http::Agent>;
     # [ wasm_bindgen ( method , setter , js_name = _defaultAgent ) ]
-    pub fn set_default_agent(this: &ClientRequestArgs, value: Option<&Agent>);
+    pub fn set_default_agent(this: &ClientRequestArgs, value: Option<&crate::http::Agent>);
     #[wasm_bindgen(method, getter)]
     pub fn timeout(this: &ClientRequestArgs) -> Option<f64>;
     #[wasm_bindgen(method, setter)]
@@ -302,11 +302,11 @@ extern "C" {
     pub type RequestListener;
     pub type Server;
     #[wasm_bindgen(constructor)]
-    pub fn new_server(request_listener: Option<&RequestListener>) -> Server;
+    pub fn new_server(request_listener: Option<&crate::http::RequestListener>) -> Server;
     #[wasm_bindgen(constructor)]
     pub fn new_server2(
-        options: &ServerOptions,
-        request_listener: Option<&RequestListener>,
+        options: &crate::http::ServerOptions,
+        request_listener: Option<&crate::http::RequestListener>,
     ) -> Server;
     # [ wasm_bindgen ( method , js_name = setTimeout ) ]
     pub fn set_timeout(this: &Server, msecs: Option<f64>, callback: &JsValue) -> Server;
@@ -382,7 +382,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getHeader ) ]
     pub fn set_get_header(this: &OutgoingMessage, value: &Function);
     # [ wasm_bindgen ( method , js_name = getHeaders ) ]
-    pub fn get_headers(this: &OutgoingMessage) -> OutgoingHttpHeaders;
+    pub fn get_headers(this: &OutgoingMessage) -> crate::http::OutgoingHttpHeaders;
     # [ wasm_bindgen ( method , setter , js_name = getHeaders ) ]
     pub fn set_get_headers(this: &OutgoingMessage, value: &Function);
     # [ wasm_bindgen ( method , js_name = getHeaderNames ) ]
@@ -419,7 +419,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = writableFinished ) ]
     pub fn set_writable_finished(this: &ServerResponse, value: bool);
     #[wasm_bindgen(constructor)]
-    pub fn new_server_response(req: &IncomingMessage) -> ServerResponse;
+    pub fn new_server_response(req: &crate::http::IncomingMessage) -> ServerResponse;
     # [ wasm_bindgen ( method , js_name = assignSocket ) ]
     pub fn assign_socket(this: &ServerResponse, socket: &Socket);
     # [ wasm_bindgen ( method , setter , js_name = assignSocket ) ]
@@ -437,7 +437,7 @@ extern "C" {
         this: &ServerResponse,
         status_code: f64,
         reason_phrase: Option<&str>,
-        headers: Option<&OutgoingHttpHeaders>,
+        headers: Option<&crate::http::OutgoingHttpHeaders>,
     ) -> ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = writeHead ) ]
     pub fn set_write_head(this: &ServerResponse, value: &Function);
@@ -445,7 +445,7 @@ extern "C" {
     pub fn write_head2(
         this: &ServerResponse,
         status_code: f64,
-        headers: Option<&OutgoingHttpHeaders>,
+        headers: Option<&crate::http::OutgoingHttpHeaders>,
     ) -> ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = writeHead ) ]
     pub fn set_write_head2(this: &ServerResponse, value: &Function);
@@ -475,9 +475,9 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = httpVersionMinor ) ]
     pub fn set_http_version_minor(this: &InformationEvent, value: f64);
     #[wasm_bindgen(method, getter)]
-    pub fn headers(this: &InformationEvent) -> IncomingHttpHeaders;
+    pub fn headers(this: &InformationEvent) -> crate::http::IncomingHttpHeaders;
     #[wasm_bindgen(method, setter)]
-    pub fn set_headers(this: &InformationEvent, value: &IncomingHttpHeaders);
+    pub fn set_headers(this: &InformationEvent, value: &crate::http::IncomingHttpHeaders);
     # [ wasm_bindgen ( method , getter , js_name = rawHeaders ) ]
     pub fn raw_headers(this: &InformationEvent) -> Array;
     # [ wasm_bindgen ( method , setter , js_name = rawHeaders ) ]
@@ -3248,9 +3248,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_connection(this: &IncomingMessage, value: &Socket);
     #[wasm_bindgen(method, getter)]
-    pub fn headers(this: &IncomingMessage) -> IncomingHttpHeaders;
+    pub fn headers(this: &IncomingMessage) -> crate::http::IncomingHttpHeaders;
     #[wasm_bindgen(method, setter)]
-    pub fn set_headers(this: &IncomingMessage, value: &IncomingHttpHeaders);
+    pub fn set_headers(this: &IncomingMessage, value: &crate::http::IncomingHttpHeaders);
     # [ wasm_bindgen ( method , getter , js_name = rawHeaders ) ]
     pub fn raw_headers(this: &IncomingMessage) -> Array;
     # [ wasm_bindgen ( method , setter , js_name = rawHeaders ) ]
@@ -3336,7 +3336,7 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn requests(this: &Agent) -> JsValue;
     #[wasm_bindgen(constructor)]
-    pub fn new_agent(opts: Option<&AgentOptions>) -> Agent;
+    pub fn new_agent(opts: Option<&crate::http::AgentOptions>) -> Agent;
     #[doc = "Destroy any sockets that are currently in use by the agent."]
     #[doc = "It is usually not necessary to do this. However, if you are using an agent with KeepAlive enabled,"]
     #[doc = "then it is best to explicitly shut down the agent when you know that it will no longer be used. Otherwise,"]
@@ -3348,21 +3348,31 @@ extern "C" {
     pub static METHODS: String;
     pub static STATUS_CODES: String;
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server(request_listener: Option<&RequestListener>) -> Server;
+    pub fn create_server(
+        request_listener: Option<&crate::http::RequestListener>,
+    ) -> crate::http::Server;
     # [ wasm_bindgen ( js_name = createServer ) ]
     pub fn create_server2(
-        options: &ServerOptions,
-        request_listener: Option<&RequestListener>,
-    ) -> Server;
+        options: &crate::http::ServerOptions,
+        request_listener: Option<&crate::http::RequestListener>,
+    ) -> crate::http::Server;
     pub type RequestOptions;
     #[wasm_bindgen()]
-    pub fn request(options: &JsValue, callback: &JsValue) -> ClientRequest;
+    pub fn request(options: &JsValue, callback: &JsValue) -> crate::http::ClientRequest;
     # [ wasm_bindgen ( js_name = request ) ]
-    pub fn request2(url: &JsValue, options: &RequestOptions, callback: &JsValue) -> ClientRequest;
+    pub fn request2(
+        url: &JsValue,
+        options: &crate::http::RequestOptions,
+        callback: &JsValue,
+    ) -> crate::http::ClientRequest;
     #[wasm_bindgen()]
-    pub fn get(options: &JsValue, callback: &JsValue) -> ClientRequest;
+    pub fn get(options: &JsValue, callback: &JsValue) -> crate::http::ClientRequest;
     # [ wasm_bindgen ( js_name = get ) ]
-    pub fn get2(url: &JsValue, options: &RequestOptions, callback: &JsValue) -> ClientRequest;
+    pub fn get2(
+        url: &JsValue,
+        options: &crate::http::RequestOptions,
+        callback: &JsValue,
+    ) -> crate::http::ClientRequest;
     #[wasm_bindgen(js_name = "globalAgent")]
     pub static GLOBAL_AGENT: String;
     #[wasm_bindgen(js_name = "maxHeaderSize")]

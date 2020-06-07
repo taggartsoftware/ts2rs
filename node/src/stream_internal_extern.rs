@@ -18,11 +18,16 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = objectMode ) ]
     pub fn set_object_mode(this: &ReadableOptions, value: Option<bool>);
     #[wasm_bindgen(method)]
-    pub fn read(this: &ReadableOptions, this: &Readable, size: f64);
+    pub fn read(this: &ReadableOptions, this: &crate::internal::Readable, size: f64);
     #[wasm_bindgen(method, setter)]
     pub fn set_read(this: &ReadableOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn destroy(this: &ReadableOptions, this: &Readable, error: &JsValue, callback: &JsValue);
+    pub fn destroy(
+        this: &ReadableOptions,
+        this: &crate::internal::Readable,
+        error: &JsValue,
+        callback: &JsValue,
+    );
     #[wasm_bindgen(method, setter)]
     pub fn set_destroy(this: &ReadableOptions, value: Option<&Function>);
     # [ wasm_bindgen ( method , getter , js_name = autoDestroy ) ]
@@ -32,8 +37,11 @@ extern "C" {
     pub type Readable;
     #[doc = "A utility method for creating Readable Streams out of iterators."]
     #[wasm_bindgen(method)]
-    pub fn from(this: &Readable, iterable: &JsValue, options: Option<&ReadableOptions>)
-    -> Readable;
+    pub fn from(
+        this: &Readable,
+        iterable: &JsValue,
+        options: Option<&crate::internal::ReadableOptions>,
+    ) -> crate::internal::Readable;
     #[wasm_bindgen(method, setter)]
     pub fn set_from(this: &Readable, value: &Function);
     #[wasm_bindgen(method, getter)]
@@ -51,7 +59,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_destroyed(this: &Readable, value: bool);
     #[wasm_bindgen(constructor)]
-    pub fn new_readable(opts: Option<&ReadableOptions>) -> Readable;
+    pub fn new_readable(opts: Option<&crate::internal::ReadableOptions>) -> Readable;
     # [ wasm_bindgen ( method , js_name = _read ) ]
     pub fn read(this: &Readable, size: f64);
     # [ wasm_bindgen ( method , setter , js_name = _read ) ]
@@ -77,7 +85,10 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = isPaused ) ]
     pub fn set_is_paused(this: &Readable, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn unpipe(this: &Readable, destination: Option<&WritableStream>) -> Readable;
+    pub fn unpipe(
+        this: &Readable,
+        destination: Option<&crate::node_js::WritableStream>,
+    ) -> Readable;
     #[wasm_bindgen(method, setter)]
     pub fn set_unpipe(this: &Readable, value: &Function);
     #[wasm_bindgen(method)]
@@ -85,7 +96,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_unshift(this: &Readable, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn wrap(this: &Readable, old_stream: &ReadableStream) -> Readable;
+    pub fn wrap(this: &Readable, old_stream: &crate::node_js::ReadableStream) -> Readable;
     #[wasm_bindgen(method, setter)]
     pub fn set_wrap(this: &Readable, value: &Function);
     #[wasm_bindgen(method)]
@@ -343,7 +354,7 @@ extern "C" {
     #[wasm_bindgen(method)]
     pub fn write(
         this: &WritableOptions,
-        this: &Writable,
+        this: &crate::internal::Writable,
         chunk: &JsValue,
         encoding: &str,
         callback: &JsValue,
@@ -351,15 +362,25 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_write(this: &WritableOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn writev(this: &WritableOptions, this: &Writable, chunks: &Array, callback: &JsValue);
+    pub fn writev(
+        this: &WritableOptions,
+        this: &crate::internal::Writable,
+        chunks: &Array,
+        callback: &JsValue,
+    );
     #[wasm_bindgen(method, setter)]
     pub fn set_writev(this: &WritableOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn destroy(this: &WritableOptions, this: &Writable, error: &JsValue, callback: &JsValue);
+    pub fn destroy(
+        this: &WritableOptions,
+        this: &crate::internal::Writable,
+        error: &JsValue,
+        callback: &JsValue,
+    );
     #[wasm_bindgen(method, setter)]
     pub fn set_destroy(this: &WritableOptions, value: Option<&Function>);
     # [ wasm_bindgen ( method , js_name = final ) ]
-    pub fn final_(this: &WritableOptions, this: &Writable, callback: &JsValue);
+    pub fn final_(this: &WritableOptions, this: &crate::internal::Writable, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = final ) ]
     pub fn set_final_(this: &WritableOptions, value: Option<&Function>);
     # [ wasm_bindgen ( method , getter , js_name = autoDestroy ) ]
@@ -384,7 +405,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_destroyed(this: &Writable, value: bool);
     #[wasm_bindgen(constructor)]
-    pub fn new_writable(opts: Option<&WritableOptions>) -> Writable;
+    pub fn new_writable(opts: Option<&crate::internal::WritableOptions>) -> Writable;
     # [ wasm_bindgen ( method , js_name = _write ) ]
     pub fn write(this: &Writable, chunk: &JsValue, encoding: &str, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = _write ) ]
@@ -538,11 +559,11 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit4(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Writable, event: &JsValue, src: &Readable) -> bool;
+    pub fn emit5(this: &Writable, event: &JsValue, src: &crate::internal::Readable) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit5(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Writable, event: &JsValue, src: &Readable) -> bool;
+    pub fn emit6(this: &Writable, event: &JsValue, src: &crate::internal::Readable) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit6(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -717,13 +738,13 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = writableHighWaterMark ) ]
     pub fn set_writable_high_water_mark(this: &DuplexOptions, value: Option<f64>);
     #[wasm_bindgen(method)]
-    pub fn read(this: &DuplexOptions, this: &Duplex, size: f64);
+    pub fn read(this: &DuplexOptions, this: &crate::internal::Duplex, size: f64);
     #[wasm_bindgen(method, setter)]
     pub fn set_read(this: &DuplexOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
     pub fn write(
         this: &DuplexOptions,
-        this: &Duplex,
+        this: &crate::internal::Duplex,
         chunk: &JsValue,
         encoding: &str,
         callback: &JsValue,
@@ -731,15 +752,25 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_write(this: &DuplexOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn writev(this: &DuplexOptions, this: &Duplex, chunks: &Array, callback: &JsValue);
+    pub fn writev(
+        this: &DuplexOptions,
+        this: &crate::internal::Duplex,
+        chunks: &Array,
+        callback: &JsValue,
+    );
     #[wasm_bindgen(method, setter)]
     pub fn set_writev(this: &DuplexOptions, value: Option<&Function>);
     # [ wasm_bindgen ( method , js_name = final ) ]
-    pub fn final_(this: &DuplexOptions, this: &Duplex, callback: &JsValue);
+    pub fn final_(this: &DuplexOptions, this: &crate::internal::Duplex, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = final ) ]
     pub fn set_final_(this: &DuplexOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn destroy(this: &DuplexOptions, this: &Duplex, error: &JsValue, callback: &JsValue);
+    pub fn destroy(
+        this: &DuplexOptions,
+        this: &crate::internal::Duplex,
+        error: &JsValue,
+        callback: &JsValue,
+    );
     #[wasm_bindgen(method, setter)]
     pub fn set_destroy(this: &DuplexOptions, value: Option<&Function>);
     pub type Duplex;
@@ -756,7 +787,7 @@ extern "C" {
     # [ wasm_bindgen ( method , getter , js_name = writableObjectMode ) ]
     pub fn writable_object_mode(this: &Duplex) -> bool;
     #[wasm_bindgen(constructor)]
-    pub fn new_duplex(opts: Option<&DuplexOptions>) -> Duplex;
+    pub fn new_duplex(opts: Option<&crate::internal::DuplexOptions>) -> Duplex;
     # [ wasm_bindgen ( method , js_name = _write ) ]
     pub fn write(this: &Duplex, chunk: &JsValue, encoding: &str, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = _write ) ]
@@ -808,13 +839,13 @@ extern "C" {
     pub type TransformCallback;
     pub type TransformOptions;
     #[wasm_bindgen(method)]
-    pub fn read(this: &TransformOptions, this: &Transform, size: f64);
+    pub fn read(this: &TransformOptions, this: &crate::internal::Transform, size: f64);
     #[wasm_bindgen(method, setter)]
     pub fn set_read(this: &TransformOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
     pub fn write(
         this: &TransformOptions,
-        this: &Transform,
+        this: &crate::internal::Transform,
         chunk: &JsValue,
         encoding: &str,
         callback: &JsValue,
@@ -822,45 +853,59 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_write(this: &TransformOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn writev(this: &TransformOptions, this: &Transform, chunks: &Array, callback: &JsValue);
+    pub fn writev(
+        this: &TransformOptions,
+        this: &crate::internal::Transform,
+        chunks: &Array,
+        callback: &JsValue,
+    );
     #[wasm_bindgen(method, setter)]
     pub fn set_writev(this: &TransformOptions, value: Option<&Function>);
     # [ wasm_bindgen ( method , js_name = final ) ]
-    pub fn final_(this: &TransformOptions, this: &Transform, callback: &JsValue);
+    pub fn final_(this: &TransformOptions, this: &crate::internal::Transform, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = final ) ]
     pub fn set_final_(this: &TransformOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn destroy(this: &TransformOptions, this: &Transform, error: &JsValue, callback: &JsValue);
+    pub fn destroy(
+        this: &TransformOptions,
+        this: &crate::internal::Transform,
+        error: &JsValue,
+        callback: &JsValue,
+    );
     #[wasm_bindgen(method, setter)]
     pub fn set_destroy(this: &TransformOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
     pub fn transform(
         this: &TransformOptions,
-        this: &Transform,
+        this: &crate::internal::Transform,
         chunk: &JsValue,
         encoding: &str,
-        callback: &TransformCallback,
+        callback: &crate::internal::TransformCallback,
     );
     #[wasm_bindgen(method, setter)]
     pub fn set_transform(this: &TransformOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn flush(this: &TransformOptions, this: &Transform, callback: &TransformCallback);
+    pub fn flush(
+        this: &TransformOptions,
+        this: &crate::internal::Transform,
+        callback: &crate::internal::TransformCallback,
+    );
     #[wasm_bindgen(method, setter)]
     pub fn set_flush(this: &TransformOptions, value: Option<&Function>);
     pub type Transform;
     #[wasm_bindgen(constructor)]
-    pub fn new_transform(opts: Option<&TransformOptions>) -> Transform;
+    pub fn new_transform(opts: Option<&crate::internal::TransformOptions>) -> Transform;
     # [ wasm_bindgen ( method , js_name = _transform ) ]
     pub fn transform(
         this: &Transform,
         chunk: &JsValue,
         encoding: &str,
-        callback: &TransformCallback,
+        callback: &crate::internal::TransformCallback,
     );
     # [ wasm_bindgen ( method , setter , js_name = _transform ) ]
     pub fn set_transform(this: &Transform, value: &Function);
     # [ wasm_bindgen ( method , js_name = _flush ) ]
-    pub fn flush(this: &Transform, callback: &TransformCallback);
+    pub fn flush(this: &Transform, callback: &crate::internal::TransformCallback);
     # [ wasm_bindgen ( method , setter , js_name = _flush ) ]
     pub fn set_flush(this: &Transform, value: &Function);
     pub type PassThrough;
@@ -878,43 +923,51 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_writable(this: &FinishedOptions, value: Option<bool>);
     #[wasm_bindgen()]
-    pub fn finished(stream: &JsValue, options: &FinishedOptions, callback: &JsValue) -> Function;
+    pub fn finished(
+        stream: &JsValue,
+        options: &crate::internal::FinishedOptions,
+        callback: &JsValue,
+    ) -> Function;
     # [ wasm_bindgen ( js_name = finished ) ]
     pub fn finished2(stream: &JsValue, callback: &JsValue) -> Function;
     #[wasm_bindgen()]
-    pub fn pipeline(stream1: &ReadableStream, stream2: &JsValue, callback: &JsValue) -> JsValue;
+    pub fn pipeline(
+        stream1: &crate::node_js::ReadableStream,
+        stream2: &JsValue,
+        callback: &JsValue,
+    ) -> JsValue;
     # [ wasm_bindgen ( js_name = pipeline ) ]
     pub fn pipeline2(
-        stream1: &ReadableStream,
-        stream2: &ReadWriteStream,
+        stream1: &crate::node_js::ReadableStream,
+        stream2: &crate::node_js::ReadWriteStream,
         stream3: &JsValue,
         callback: &JsValue,
     ) -> JsValue;
     # [ wasm_bindgen ( js_name = pipeline ) ]
     pub fn pipeline3(
-        stream1: &ReadableStream,
-        stream2: &ReadWriteStream,
-        stream3: &ReadWriteStream,
+        stream1: &crate::node_js::ReadableStream,
+        stream2: &crate::node_js::ReadWriteStream,
+        stream3: &crate::node_js::ReadWriteStream,
         stream4: &JsValue,
         callback: &JsValue,
     ) -> JsValue;
     # [ wasm_bindgen ( js_name = pipeline ) ]
     pub fn pipeline4(
-        stream1: &ReadableStream,
-        stream2: &ReadWriteStream,
-        stream3: &ReadWriteStream,
-        stream4: &ReadWriteStream,
+        stream1: &crate::node_js::ReadableStream,
+        stream2: &crate::node_js::ReadWriteStream,
+        stream3: &crate::node_js::ReadWriteStream,
+        stream4: &crate::node_js::ReadWriteStream,
         stream5: &JsValue,
         callback: &JsValue,
     ) -> JsValue;
     # [ wasm_bindgen ( js_name = pipeline ) ]
-    pub fn pipeline5(streams: &Array, callback: &JsValue) -> WritableStream;
+    pub fn pipeline5(streams: &Array, callback: &JsValue) -> crate::node_js::WritableStream;
     # [ wasm_bindgen ( js_name = pipeline ) ]
     pub fn pipeline6(
-        stream1: &ReadableStream,
+        stream1: &crate::node_js::ReadableStream,
         stream2: &JsValue,
         streams: &Array,
-    ) -> WritableStream;
+    ) -> crate::node_js::WritableStream;
     pub type Pipe;
     #[wasm_bindgen(method)]
     pub fn close(this: &Pipe);

@@ -21,33 +21,33 @@ impl ReplOptions {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<Interface> for REPLServer {
+impl AsRef<Interface> for crate::repl::REPLServer {
     fn as_ref(&self) -> &Interface {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<REPLServer> for Interface {
-    fn from(child: REPLServer) -> Self {
+impl From<crate::repl::REPLServer> for Interface {
+    fn from(child: crate::repl::REPLServer) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Error> for Recoverable {
+impl AsRef<Error> for crate::repl::Recoverable {
     fn as_ref(&self) -> &Error {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Recoverable> for Error {
-    fn from(child: Recoverable) -> Self {
+impl From<crate::repl::Recoverable> for Error {
+    fn from(child: crate::repl::Recoverable) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<SyntaxError> for Recoverable {
+impl AsRef<SyntaxError> for crate::repl::Recoverable {
     fn as_ref(&self) -> &SyntaxError {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Recoverable> for SyntaxError {
-    fn from(child: Recoverable) -> Self {
+impl From<crate::repl::Recoverable> for SyntaxError {
+    fn from(child: crate::repl::Recoverable) -> Self {
         JsCast::unchecked_into(child)
     }
 }

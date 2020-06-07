@@ -51,9 +51,9 @@ extern "C" {
     #[doc = "Note: this will cause the streaming functionality to not provide any data, however events like 'error', 'end', and 'close' will"]
     #[doc = "still be emitted as normal and methods like pause() and resume() will also behave as expected."]
     #[wasm_bindgen(method, getter)]
-    pub fn onread(this: &ConnectOpts) -> Option<OnReadOpts>;
+    pub fn onread(this: &ConnectOpts) -> Option<crate::net::OnReadOpts>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_onread(this: &ConnectOpts, value: Option<&OnReadOpts>);
+    pub fn set_onread(this: &ConnectOpts, value: Option<&crate::net::OnReadOpts>);
     pub type TcpSocketConnectOpts;
     #[wasm_bindgen(method, getter)]
     pub fn port(this: &TcpSocketConnectOpts) -> f64;
@@ -80,9 +80,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_family(this: &TcpSocketConnectOpts, value: Option<f64>);
     #[wasm_bindgen(method, getter)]
-    pub fn lookup(this: &TcpSocketConnectOpts) -> Option<LookupFunction>;
+    pub fn lookup(this: &TcpSocketConnectOpts) -> Option<crate::net::LookupFunction>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_lookup(this: &TcpSocketConnectOpts, value: Option<&LookupFunction>);
+    pub fn set_lookup(this: &TcpSocketConnectOpts, value: Option<&crate::net::LookupFunction>);
     pub type IpcSocketConnectOpts;
     #[wasm_bindgen(method, getter)]
     pub fn path(this: &IpcSocketConnectOpts) -> String;
@@ -93,7 +93,7 @@ extern "C" {
     pub type SocketConnectOpts;
     pub type Socket;
     #[wasm_bindgen(constructor)]
-    pub fn new_socket(options: Option<&SocketConstructorOpts>) -> Socket;
+    pub fn new_socket(options: Option<&crate::net::SocketConstructorOpts>) -> Socket;
     #[wasm_bindgen(method)]
     pub fn write(this: &Socket, buffer: &JsValue, cb: &JsValue) -> bool;
     #[wasm_bindgen(method, setter)]
@@ -105,7 +105,7 @@ extern "C" {
     #[wasm_bindgen(method)]
     pub fn connect(
         this: &Socket,
-        options: &SocketConnectOpts,
+        options: &crate::net::SocketConnectOpts,
         connection_listener: &JsValue,
     ) -> Socket;
     #[wasm_bindgen(method, setter)]
@@ -582,7 +582,11 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = listen ) ]
     pub fn set_listen6(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = listen ) ]
-    pub fn listen7(this: &Server, options: &ListenOptions, listening_listener: &JsValue) -> Server;
+    pub fn listen7(
+        this: &Server,
+        options: &crate::net::ListenOptions,
+        listening_listener: &JsValue,
+    ) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = listen ) ]
     pub fn set_listen7(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = listen ) ]
@@ -684,7 +688,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit2(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &Server, event: &JsValue, socket: &Socket) -> bool;
+    pub fn emit3(this: &Server, event: &JsValue, socket: &crate::net::Socket) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit3(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -789,25 +793,35 @@ extern "C" {
     pub fn kind(this: &NetConnectOpts) -> i32;
     pub type NetConnectOpts;
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server(connection_listener: &JsValue) -> Server;
+    pub fn create_server(connection_listener: &JsValue) -> crate::net::Server;
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server2(options: &JsValue, connection_listener: &JsValue) -> Server;
+    pub fn create_server2(options: &JsValue, connection_listener: &JsValue) -> crate::net::Server;
     #[wasm_bindgen()]
-    pub fn connect(options: &NetConnectOpts, connection_listener: &JsValue) -> Socket;
+    pub fn connect(
+        options: &crate::net::NetConnectOpts,
+        connection_listener: &JsValue,
+    ) -> crate::net::Socket;
     # [ wasm_bindgen ( js_name = connect ) ]
-    pub fn connect2(port: f64, host: Option<&str>, connection_listener: &JsValue) -> Socket;
+    pub fn connect2(
+        port: f64,
+        host: Option<&str>,
+        connection_listener: &JsValue,
+    ) -> crate::net::Socket;
     # [ wasm_bindgen ( js_name = connect ) ]
-    pub fn connect3(path: &str, connection_listener: &JsValue) -> Socket;
+    pub fn connect3(path: &str, connection_listener: &JsValue) -> crate::net::Socket;
     # [ wasm_bindgen ( js_name = createConnection ) ]
-    pub fn create_connection(options: &NetConnectOpts, connection_listener: &JsValue) -> Socket;
+    pub fn create_connection(
+        options: &crate::net::NetConnectOpts,
+        connection_listener: &JsValue,
+    ) -> crate::net::Socket;
     # [ wasm_bindgen ( js_name = createConnection ) ]
     pub fn create_connection2(
         port: f64,
         host: Option<&str>,
         connection_listener: &JsValue,
-    ) -> Socket;
+    ) -> crate::net::Socket;
     # [ wasm_bindgen ( js_name = createConnection ) ]
-    pub fn create_connection3(path: &str, connection_listener: &JsValue) -> Socket;
+    pub fn create_connection3(path: &str, connection_listener: &JsValue) -> crate::net::Socket;
     # [ wasm_bindgen ( js_name = isIP ) ]
     pub fn is_ip(input: &str) -> f64;
     # [ wasm_bindgen ( js_name = isIPv4 ) ]

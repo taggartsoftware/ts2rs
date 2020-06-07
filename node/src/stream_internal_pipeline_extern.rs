@@ -4,30 +4,37 @@
 #[wasm_bindgen(module = "pipeline")]
 extern "C" {
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(stream1: &ReadableStream, stream2: &WritableStream) -> Promise;
+    pub fn promisify(
+        stream1: &crate::node_js::ReadableStream,
+        stream2: &crate::node_js::WritableStream,
+    ) -> Promise;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
     pub fn promisify_2(
-        stream1: &ReadableStream,
-        stream2: &ReadWriteStream,
-        stream3: &WritableStream,
+        stream1: &crate::node_js::ReadableStream,
+        stream2: &crate::node_js::ReadWriteStream,
+        stream3: &crate::node_js::WritableStream,
     ) -> Promise;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
     pub fn promisify_3(
-        stream1: &ReadableStream,
-        stream2: &ReadWriteStream,
-        stream3: &ReadWriteStream,
-        stream4: &WritableStream,
+        stream1: &crate::node_js::ReadableStream,
+        stream2: &crate::node_js::ReadWriteStream,
+        stream3: &crate::node_js::ReadWriteStream,
+        stream4: &crate::node_js::WritableStream,
     ) -> Promise;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
     pub fn promisify_4(
-        stream1: &ReadableStream,
-        stream2: &ReadWriteStream,
-        stream3: &ReadWriteStream,
-        stream4: &ReadWriteStream,
-        stream5: &WritableStream,
+        stream1: &crate::node_js::ReadableStream,
+        stream2: &crate::node_js::ReadWriteStream,
+        stream3: &crate::node_js::ReadWriteStream,
+        stream4: &crate::node_js::ReadWriteStream,
+        stream5: &crate::node_js::WritableStream,
     ) -> Promise;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
     pub fn promisify_5(streams: &Array) -> Promise;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_6(stream1: &ReadableStream, stream2: &JsValue, streams: &Array) -> Promise;
+    pub fn promisify_6(
+        stream1: &crate::node_js::ReadableStream,
+        stream2: &JsValue,
+        streams: &Array,
+    ) -> Promise;
 }

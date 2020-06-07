@@ -5,5 +5,5 @@
 extern "C" {
     #[doc = "Asynchronous truncate(2) - Truncate a file to a specified length."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike, len: &JsValue) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike, len: &JsValue) -> Promise;
 }

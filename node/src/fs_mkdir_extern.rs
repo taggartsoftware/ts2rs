@@ -5,5 +5,5 @@
 extern "C" {
     #[doc = "Asynchronous mkdir(2) - create a directory."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
 }

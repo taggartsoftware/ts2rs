@@ -5,5 +5,5 @@
 extern "C" {
     #[doc = "Asynchronously change file timestamps of the file referenced by the supplied path."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike, atime: &JsValue, mtime: &JsValue) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike, atime: &JsValue, mtime: &JsValue) -> Promise;
 }

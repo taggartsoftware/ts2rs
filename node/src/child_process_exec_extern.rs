@@ -4,13 +4,16 @@
 #[wasm_bindgen(module = "exec")]
 extern "C" {
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(command: &str) -> PromiseWithChild;
+    pub fn promisify(command: &str) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_2(command: &str, options: &JsValue) -> PromiseWithChild;
+    pub fn promisify_2(command: &str, options: &JsValue) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_3(command: &str, options: &JsValue) -> PromiseWithChild;
+    pub fn promisify_3(command: &str, options: &JsValue) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_4(command: &str, options: &ExecOptions) -> PromiseWithChild;
+    pub fn promisify_4(
+        command: &str,
+        options: &crate::child_process::ExecOptions,
+    ) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_5(command: &str, options: &JsValue) -> PromiseWithChild;
+    pub fn promisify_5(command: &str, options: &JsValue) -> crate::child_process::PromiseWithChild;
 }

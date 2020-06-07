@@ -5,11 +5,11 @@
 extern "C" {
     #[doc = "Asynchronous stat(2) - Get file status."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike) -> Promise;
     #[doc = "Asynchronous stat(2) - Get file status."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_2(path: &PathLike, options: &BigIntOptions) -> Promise;
+    pub fn promisify_2(path: &crate::fs::PathLike, options: &crate::fs::BigIntOptions) -> Promise;
     #[doc = "Asynchronous stat(2) - Get file status."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_3(path: &PathLike, options: &StatOptions) -> Promise;
+    pub fn promisify_3(path: &crate::fs::PathLike, options: &crate::fs::StatOptions) -> Promise;
 }

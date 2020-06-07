@@ -9,5 +9,9 @@ extern "C" {
     #[doc = "If an error occurs after the destination file has been opened for writing, Node.js will attempt"]
     #[doc = "to remove the destination."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(src: &PathLike, dst: &PathLike, flags: Option<f64>) -> Promise;
+    pub fn promisify(
+        src: &crate::fs::PathLike,
+        dst: &crate::fs::PathLike,
+        flags: Option<f64>,
+    ) -> Promise;
 }

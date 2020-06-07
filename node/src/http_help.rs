@@ -66,203 +66,123 @@ impl ServerResponse {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<EventEmitter> for ClientRequest {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::EventEmitter> for crate::http::ClientRequest {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ClientRequest> for EventEmitter {
-    fn from(child: ClientRequest) -> Self {
+impl From<crate::http::ClientRequest> for crate::node_js::EventEmitter {
+    fn from(child: crate::http::ClientRequest) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<OutgoingMessage> for ClientRequest {
-    fn as_ref(&self) -> &OutgoingMessage {
+impl AsRef<crate::node_js::WritableStream> for crate::http::ClientRequest {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ClientRequest> for OutgoingMessage {
-    fn from(child: ClientRequest) -> Self {
+impl From<crate::http::ClientRequest> for crate::node_js::WritableStream {
+    fn from(child: crate::http::ClientRequest) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for ClientRequest {
-    fn as_ref(&self) -> &Stream {
+impl AsRef<crate::http::OutgoingMessage> for crate::http::ClientRequest {
+    fn as_ref(&self) -> &crate::http::OutgoingMessage {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ClientRequest> for Stream {
-    fn from(child: ClientRequest) -> Self {
+impl From<crate::http::ClientRequest> for crate::http::OutgoingMessage {
+    fn from(child: crate::http::ClientRequest) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Writable> for ClientRequest {
-    fn as_ref(&self) -> &Writable {
+impl AsRef<crate::node_js::EventEmitter> for crate::http::IncomingMessage {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ClientRequest> for Writable {
-    fn from(child: ClientRequest) -> Self {
+impl From<crate::http::IncomingMessage> for crate::node_js::EventEmitter {
+    fn from(child: crate::http::IncomingMessage) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<WritableStream> for ClientRequest {
-    fn as_ref(&self) -> &WritableStream {
+impl AsRef<crate::node_js::ReadableStream> for crate::http::IncomingMessage {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ClientRequest> for WritableStream {
-    fn from(child: ClientRequest) -> Self {
+impl From<crate::http::IncomingMessage> for crate::node_js::ReadableStream {
+    fn from(child: crate::http::IncomingMessage) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for IncomingMessage {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::EventEmitter> for crate::http::OutgoingMessage {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<IncomingMessage> for EventEmitter {
-    fn from(child: IncomingMessage) -> Self {
+impl From<crate::http::OutgoingMessage> for crate::node_js::EventEmitter {
+    fn from(child: crate::http::OutgoingMessage) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for IncomingMessage {
-    fn as_ref(&self) -> &Readable {
+impl AsRef<crate::node_js::WritableStream> for crate::http::OutgoingMessage {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<IncomingMessage> for Readable {
-    fn from(child: IncomingMessage) -> Self {
+impl From<crate::http::OutgoingMessage> for crate::node_js::WritableStream {
+    fn from(child: crate::http::OutgoingMessage) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ReadableStream> for IncomingMessage {
-    fn as_ref(&self) -> &ReadableStream {
+impl AsRef<crate::http::ClientRequestArgs> for crate::http::RequestOptions {
+    fn as_ref(&self) -> &crate::http::ClientRequestArgs {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<IncomingMessage> for ReadableStream {
-    fn from(child: IncomingMessage) -> Self {
+impl From<crate::http::RequestOptions> for crate::http::ClientRequestArgs {
+    fn from(child: crate::http::RequestOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for IncomingMessage {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<IncomingMessage> for Stream {
-    fn from(child: IncomingMessage) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for OutgoingMessage {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<OutgoingMessage> for EventEmitter {
-    fn from(child: OutgoingMessage) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for OutgoingMessage {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<OutgoingMessage> for Stream {
-    fn from(child: OutgoingMessage) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for OutgoingMessage {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<OutgoingMessage> for Writable {
-    fn from(child: OutgoingMessage) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableStream> for OutgoingMessage {
-    fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<OutgoingMessage> for WritableStream {
-    fn from(child: OutgoingMessage) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ClientRequestArgs> for RequestOptions {
-    fn as_ref(&self) -> &ClientRequestArgs {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<RequestOptions> for ClientRequestArgs {
-    fn from(child: RequestOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<NetServer> for Server {
+impl AsRef<NetServer> for crate::http::Server {
     fn as_ref(&self) -> &NetServer {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Server> for NetServer {
-    fn from(child: Server) -> Self {
+impl From<crate::http::Server> for NetServer {
+    fn from(child: crate::http::Server) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for ServerResponse {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::EventEmitter> for crate::http::ServerResponse {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ServerResponse> for EventEmitter {
-    fn from(child: ServerResponse) -> Self {
+impl From<crate::http::ServerResponse> for crate::node_js::EventEmitter {
+    fn from(child: crate::http::ServerResponse) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<OutgoingMessage> for ServerResponse {
-    fn as_ref(&self) -> &OutgoingMessage {
+impl AsRef<crate::node_js::WritableStream> for crate::http::ServerResponse {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ServerResponse> for OutgoingMessage {
-    fn from(child: ServerResponse) -> Self {
+impl From<crate::http::ServerResponse> for crate::node_js::WritableStream {
+    fn from(child: crate::http::ServerResponse) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for ServerResponse {
-    fn as_ref(&self) -> &Stream {
+impl AsRef<crate::http::OutgoingMessage> for crate::http::ServerResponse {
+    fn as_ref(&self) -> &crate::http::OutgoingMessage {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ServerResponse> for Stream {
-    fn from(child: ServerResponse) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for ServerResponse {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ServerResponse> for Writable {
-    fn from(child: ServerResponse) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableStream> for ServerResponse {
-    fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ServerResponse> for WritableStream {
-    fn from(child: ServerResponse) -> Self {
+impl From<crate::http::ServerResponse> for crate::http::OutgoingMessage {
+    fn from(child: crate::http::ServerResponse) -> Self {
         JsCast::unchecked_into(child)
     }
 }

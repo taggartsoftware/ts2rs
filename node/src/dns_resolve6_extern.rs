@@ -6,7 +6,7 @@ extern "C" {
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
     pub fn promisify(hostname: &str) -> Promise;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_2(hostname: &str, options: &ResolveWithTtlOptions) -> Promise;
+    pub fn promisify_2(hostname: &str, options: &crate::dns::ResolveWithTtlOptions) -> Promise;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_3(hostname: &str, options: Option<&ResolveOptions>) -> Promise;
+    pub fn promisify_3(hostname: &str, options: Option<&crate::dns::ResolveOptions>) -> Promise;
 }

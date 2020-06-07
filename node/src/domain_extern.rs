@@ -37,5 +37,5 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_exit(this: &Domain, value: &Function);
     #[wasm_bindgen()]
-    pub fn create() -> Domain;
+    pub fn create() -> crate::domain::Domain;
 }

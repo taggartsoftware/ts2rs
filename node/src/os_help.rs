@@ -26,23 +26,23 @@ impl UserInfo {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<NetworkInterfaceBase> for NetworkInterfaceInfoIPv4 {
-    fn as_ref(&self) -> &NetworkInterfaceBase {
+impl AsRef<crate::os::NetworkInterfaceBase> for crate::os::NetworkInterfaceInfoIPv4 {
+    fn as_ref(&self) -> &crate::os::NetworkInterfaceBase {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<NetworkInterfaceInfoIPv4> for NetworkInterfaceBase {
-    fn from(child: NetworkInterfaceInfoIPv4) -> Self {
+impl From<crate::os::NetworkInterfaceInfoIPv4> for crate::os::NetworkInterfaceBase {
+    fn from(child: crate::os::NetworkInterfaceInfoIPv4) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<NetworkInterfaceBase> for NetworkInterfaceInfoIPv6 {
-    fn as_ref(&self) -> &NetworkInterfaceBase {
+impl AsRef<crate::os::NetworkInterfaceBase> for crate::os::NetworkInterfaceInfoIPv6 {
+    fn as_ref(&self) -> &crate::os::NetworkInterfaceBase {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<NetworkInterfaceInfoIPv6> for NetworkInterfaceBase {
-    fn from(child: NetworkInterfaceInfoIPv6) -> Self {
+impl From<crate::os::NetworkInterfaceInfoIPv6> for crate::os::NetworkInterfaceBase {
+    fn from(child: crate::os::NetworkInterfaceInfoIPv6) -> Self {
         JsCast::unchecked_into(child)
     }
 }

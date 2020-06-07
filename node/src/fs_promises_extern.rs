@@ -156,20 +156,24 @@ extern "C" {
     pub fn set_close(this: &FileHandle, value: &Function);
     #[doc = "Asynchronously tests a user's permissions for the file specified by path."]
     #[wasm_bindgen()]
-    pub fn access(path: &PathLike, mode: Option<f64>) -> Promise;
+    pub fn access(path: &crate::fs::PathLike, mode: Option<f64>) -> Promise;
     #[doc = "Asynchronously copies `src` to `dest`. By default, `dest` is overwritten if it already exists."]
     #[doc = "Node.js makes no guarantees about the atomicity of the copy operation."]
     #[doc = "If an error occurs after the destination file has been opened for writing, Node.js will attempt"]
     #[doc = "to remove the destination."]
     # [ wasm_bindgen ( js_name = copyFile ) ]
-    pub fn copy_file(src: &PathLike, dest: &PathLike, flags: Option<f64>) -> Promise;
+    pub fn copy_file(
+        src: &crate::fs::PathLike,
+        dest: &crate::fs::PathLike,
+        flags: Option<f64>,
+    ) -> Promise;
     #[doc = "Asynchronous open(2) - open and possibly create a file."]
     #[wasm_bindgen()]
-    pub fn open(path: &PathLike, flags: &JsValue, mode: &JsValue) -> Promise;
+    pub fn open(path: &crate::fs::PathLike, flags: &JsValue, mode: &JsValue) -> Promise;
     #[doc = "Asynchronously reads data from the file referenced by the supplied `FileHandle`."]
     #[wasm_bindgen()]
     pub fn read(
-        handle: &FileHandle,
+        handle: &crate::fs::promises::FileHandle,
         buffer: &JsValue,
         offset: &JsValue,
         length: &JsValue,
@@ -185,7 +189,7 @@ extern "C" {
     #[doc = "to be resolved (or rejected). For this scenario, `fs.createWriteStream` is strongly recommended."]
     #[wasm_bindgen()]
     pub fn write(
-        handle: &FileHandle,
+        handle: &crate::fs::promises::FileHandle,
         buffer: &JsValue,
         offset: &JsValue,
         length: &JsValue,
@@ -201,32 +205,35 @@ extern "C" {
     #[doc = "to be resolved (or rejected). For this scenario, `fs.createWriteStream` is strongly recommended."]
     # [ wasm_bindgen ( js_name = write ) ]
     pub fn write2(
-        handle: &FileHandle,
+        handle: &crate::fs::promises::FileHandle,
         string: &JsValue,
         position: &JsValue,
         encoding: &JsValue,
     ) -> Promise;
     #[doc = "Asynchronous rename(2) - Change the name or location of a file or directory."]
     #[wasm_bindgen()]
-    pub fn rename(old_path: &PathLike, new_path: &PathLike) -> Promise;
+    pub fn rename(old_path: &crate::fs::PathLike, new_path: &crate::fs::PathLike) -> Promise;
     #[doc = "Asynchronous truncate(2) - Truncate a file to a specified length."]
     #[wasm_bindgen()]
-    pub fn truncate(path: &PathLike, len: Option<f64>) -> Promise;
+    pub fn truncate(path: &crate::fs::PathLike, len: Option<f64>) -> Promise;
     #[doc = "Asynchronous ftruncate(2) - Truncate a file to a specified length."]
     #[wasm_bindgen()]
-    pub fn ftruncate(handle: &FileHandle, len: Option<f64>) -> Promise;
+    pub fn ftruncate(handle: &crate::fs::promises::FileHandle, len: Option<f64>) -> Promise;
     #[doc = "Asynchronous rmdir(2) - delete a directory."]
     #[wasm_bindgen()]
-    pub fn rmdir(path: &PathLike, options: Option<&RmDirAsyncOptions>) -> Promise;
+    pub fn rmdir(
+        path: &crate::fs::PathLike,
+        options: Option<&crate::fs::RmDirAsyncOptions>,
+    ) -> Promise;
     #[doc = "Asynchronous fdatasync(2) - synchronize a file's in-core state with storage device."]
     #[wasm_bindgen()]
-    pub fn fdatasync(handle: &FileHandle) -> Promise;
+    pub fn fdatasync(handle: &crate::fs::promises::FileHandle) -> Promise;
     #[doc = "Asynchronous fsync(2) - synchronize a file's in-core state with the underlying storage device."]
     #[wasm_bindgen()]
-    pub fn fsync(handle: &FileHandle) -> Promise;
+    pub fn fsync(handle: &crate::fs::promises::FileHandle) -> Promise;
     #[doc = "Asynchronous mkdir(2) - create a directory."]
     #[wasm_bindgen()]
-    pub fn mkdir(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn mkdir(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -238,7 +245,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[wasm_bindgen()]
-    pub fn readdir(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn readdir(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -250,7 +257,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdir ) ]
-    pub fn readdir2(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn readdir2(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -262,7 +269,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdir ) ]
-    pub fn readdir3(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn readdir3(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -274,7 +281,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdir ) ]
-    pub fn readdir4(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn readdir4(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -283,7 +290,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     #[wasm_bindgen()]
-    pub fn readlink(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn readlink(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -292,7 +299,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     # [ wasm_bindgen ( js_name = readlink ) ]
-    pub fn readlink2(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn readlink2(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -301,49 +308,57 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     # [ wasm_bindgen ( js_name = readlink ) ]
-    pub fn readlink3(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn readlink3(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous symlink(2) - Create a new symbolic link to an existing file."]
     #[wasm_bindgen()]
-    pub fn symlink(target: &PathLike, path: &PathLike, type_: &JsValue) -> Promise;
+    pub fn symlink(
+        target: &crate::fs::PathLike,
+        path: &crate::fs::PathLike,
+        type_: &JsValue,
+    ) -> Promise;
     #[doc = "Asynchronous fstat(2) - Get file status."]
     #[wasm_bindgen()]
-    pub fn fstat(handle: &FileHandle) -> Promise;
+    pub fn fstat(handle: &crate::fs::promises::FileHandle) -> Promise;
     #[doc = "Asynchronous lstat(2) - Get file status. Does not dereference symbolic links."]
     #[wasm_bindgen()]
-    pub fn lstat(path: &PathLike) -> Promise;
+    pub fn lstat(path: &crate::fs::PathLike) -> Promise;
     #[doc = "Asynchronous stat(2) - Get file status."]
     #[wasm_bindgen()]
-    pub fn stat(path: &PathLike) -> Promise;
+    pub fn stat(path: &crate::fs::PathLike) -> Promise;
     #[doc = "Asynchronous link(2) - Create a new link (also known as a hard link) to an existing file."]
     #[wasm_bindgen()]
-    pub fn link(existing_path: &PathLike, new_path: &PathLike) -> Promise;
+    pub fn link(existing_path: &crate::fs::PathLike, new_path: &crate::fs::PathLike) -> Promise;
     #[doc = "Asynchronous unlink(2) - delete a name and possibly the file it refers to."]
     #[wasm_bindgen()]
-    pub fn unlink(path: &PathLike) -> Promise;
+    pub fn unlink(path: &crate::fs::PathLike) -> Promise;
     #[doc = "Asynchronous fchmod(2) - Change permissions of a file."]
     #[wasm_bindgen()]
-    pub fn fchmod(handle: &FileHandle, mode: &JsValue) -> Promise;
+    pub fn fchmod(handle: &crate::fs::promises::FileHandle, mode: &JsValue) -> Promise;
     #[doc = "Asynchronous chmod(2) - Change permissions of a file."]
     #[wasm_bindgen()]
-    pub fn chmod(path: &PathLike, mode: &JsValue) -> Promise;
+    pub fn chmod(path: &crate::fs::PathLike, mode: &JsValue) -> Promise;
     #[doc = "Asynchronous lchmod(2) - Change permissions of a file. Does not dereference symbolic links."]
     #[wasm_bindgen()]
-    pub fn lchmod(path: &PathLike, mode: &JsValue) -> Promise;
+    pub fn lchmod(path: &crate::fs::PathLike, mode: &JsValue) -> Promise;
     #[doc = "Asynchronous lchown(2) - Change ownership of a file. Does not dereference symbolic links."]
     #[wasm_bindgen()]
-    pub fn lchown(path: &PathLike, uid: f64, gid: f64) -> Promise;
+    pub fn lchown(path: &crate::fs::PathLike, uid: f64, gid: f64) -> Promise;
     #[doc = "Asynchronous fchown(2) - Change ownership of a file."]
     #[wasm_bindgen()]
-    pub fn fchown(handle: &FileHandle, uid: f64, gid: f64) -> Promise;
+    pub fn fchown(handle: &crate::fs::promises::FileHandle, uid: f64, gid: f64) -> Promise;
     #[doc = "Asynchronous chown(2) - Change ownership of a file."]
     #[wasm_bindgen()]
-    pub fn chown(path: &PathLike, uid: f64, gid: f64) -> Promise;
+    pub fn chown(path: &crate::fs::PathLike, uid: f64, gid: f64) -> Promise;
     #[doc = "Asynchronously change file timestamps of the file referenced by the supplied path."]
     #[wasm_bindgen()]
-    pub fn utimes(path: &PathLike, atime: &JsValue, mtime: &JsValue) -> Promise;
+    pub fn utimes(path: &crate::fs::PathLike, atime: &JsValue, mtime: &JsValue) -> Promise;
     #[doc = "Asynchronously change file timestamps of the file referenced by the supplied `FileHandle`."]
     #[wasm_bindgen()]
-    pub fn futimes(handle: &FileHandle, atime: &JsValue, mtime: &JsValue) -> Promise;
+    pub fn futimes(
+        handle: &crate::fs::promises::FileHandle,
+        atime: &JsValue,
+        mtime: &JsValue,
+    ) -> Promise;
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -352,7 +367,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[wasm_bindgen()]
-    pub fn realpath(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn realpath(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -361,7 +376,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = realpath ) ]
-    pub fn realpath2(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn realpath2(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -370,7 +385,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = realpath ) ]
-    pub fn realpath3(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn realpath3(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronously creates a unique temporary directory."]
     #[doc = "Generates six random characters to be appended behind a required `prefix` to create a unique temporary directory."]
     #[doc = ""]
@@ -442,5 +457,5 @@ extern "C" {
     # [ wasm_bindgen ( js_name = readFile ) ]
     pub fn read_file3(path: &JsValue, options: &JsValue) -> Promise;
     #[wasm_bindgen()]
-    pub fn opendir(path: &str, options: Option<&OpenDirOptions>) -> Promise;
+    pub fn opendir(path: &str, options: Option<&crate::fs::OpenDirOptions>) -> Promise;
 }

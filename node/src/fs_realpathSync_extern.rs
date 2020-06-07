@@ -4,9 +4,9 @@
 #[wasm_bindgen(module = "realpathSync")]
 extern "C" {
     #[wasm_bindgen()]
-    pub fn native(path: &PathLike, options: &JsValue) -> String;
+    pub fn native(path: &crate::fs::PathLike, options: &JsValue) -> String;
     # [ wasm_bindgen ( js_name = native ) ]
-    pub fn native2(path: &PathLike, options: &JsValue) -> Buffer;
+    pub fn native2(path: &crate::fs::PathLike, options: &JsValue) -> Buffer;
     # [ wasm_bindgen ( js_name = native ) ]
-    pub fn native3(path: &PathLike, options: &JsValue) -> JsValue;
+    pub fn native3(path: &crate::fs::PathLike, options: &JsValue) -> JsValue;
 }

@@ -4,41 +4,59 @@
 #[wasm_bindgen(module = "execFile")]
 extern "C" {
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(file: &str) -> PromiseWithChild;
+    pub fn promisify(file: &str) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_2(file: &str, args: &JsValue) -> PromiseWithChild;
+    pub fn promisify_2(file: &str, args: &JsValue) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_3(file: &str, options: &ExecFileOptionsWithBufferEncoding)
-    -> PromiseWithChild;
+    pub fn promisify_3(
+        file: &str,
+        options: &crate::child_process::ExecFileOptionsWithBufferEncoding,
+    ) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
     pub fn promisify_4(
         file: &str,
         args: &JsValue,
-        options: &ExecFileOptionsWithBufferEncoding,
-    ) -> PromiseWithChild;
+        options: &crate::child_process::ExecFileOptionsWithBufferEncoding,
+    ) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_5(file: &str, options: &ExecFileOptionsWithStringEncoding)
-    -> PromiseWithChild;
+    pub fn promisify_5(
+        file: &str,
+        options: &crate::child_process::ExecFileOptionsWithStringEncoding,
+    ) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
     pub fn promisify_6(
         file: &str,
         args: &JsValue,
-        options: &ExecFileOptionsWithStringEncoding,
-    ) -> PromiseWithChild;
+        options: &crate::child_process::ExecFileOptionsWithStringEncoding,
+    ) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_7(file: &str, options: &ExecFileOptionsWithOtherEncoding) -> PromiseWithChild;
+    pub fn promisify_7(
+        file: &str,
+        options: &crate::child_process::ExecFileOptionsWithOtherEncoding,
+    ) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
     pub fn promisify_8(
         file: &str,
         args: &JsValue,
-        options: &ExecFileOptionsWithOtherEncoding,
-    ) -> PromiseWithChild;
+        options: &crate::child_process::ExecFileOptionsWithOtherEncoding,
+    ) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_9(file: &str, options: &ExecFileOptions) -> PromiseWithChild;
+    pub fn promisify_9(
+        file: &str,
+        options: &crate::child_process::ExecFileOptions,
+    ) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_10(file: &str, args: &JsValue, options: &ExecFileOptions) -> PromiseWithChild;
+    pub fn promisify_10(
+        file: &str,
+        args: &JsValue,
+        options: &crate::child_process::ExecFileOptions,
+    ) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_11(file: &str, options: &JsValue) -> PromiseWithChild;
+    pub fn promisify_11(file: &str, options: &JsValue) -> crate::child_process::PromiseWithChild;
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_12(file: &str, args: &JsValue, options: &JsValue) -> PromiseWithChild;
+    pub fn promisify_12(
+        file: &str,
+        args: &JsValue,
+        options: &JsValue,
+    ) -> crate::child_process::PromiseWithChild;
 }

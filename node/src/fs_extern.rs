@@ -159,7 +159,7 @@ extern "C" {
     #[doc = "Asynchronously close the directory's underlying resource handle."]
     #[doc = "Subsequent reads will result in errors."]
     # [ wasm_bindgen ( method , js_name = close ) ]
-    pub fn close2(this: &Dir, cb: &NoParamCallback);
+    pub fn close2(this: &Dir, cb: &crate::fs::NoParamCallback);
     # [ wasm_bindgen ( method , setter , js_name = close ) ]
     pub fn set_close2(this: &Dir, value: &Function);
     #[doc = "Synchronously close the directory's underlying resource handle."]
@@ -186,7 +186,7 @@ extern "C" {
     #[doc = "If there are no more directory entries to read, null will be returned."]
     #[doc = "Directory entries returned by this function are in no particular order as provided by the operating system's underlying directory mechanisms."]
     # [ wasm_bindgen ( method , js_name = readSync ) ]
-    pub fn read_sync(this: &Dir) -> Dirent;
+    pub fn read_sync(this: &Dir) -> crate::fs::Dirent;
     # [ wasm_bindgen ( method , setter , js_name = readSync ) ]
     pub fn set_read_sync(this: &Dir, value: &Function);
     pub type FSWatcher;
@@ -492,115 +492,150 @@ extern "C" {
     pub fn set_prepend_once_listener3(this: &WriteStream, value: &Function);
     #[doc = "Asynchronous rename(2) - Change the name or location of a file or directory."]
     #[wasm_bindgen()]
-    pub fn rename(old_path: &PathLike, new_path: &PathLike, callback: &NoParamCallback);
+    pub fn rename(
+        old_path: &crate::fs::PathLike,
+        new_path: &crate::fs::PathLike,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Synchronous rename(2) - Change the name or location of a file or directory."]
     # [ wasm_bindgen ( js_name = renameSync ) ]
-    pub fn rename_sync(old_path: &PathLike, new_path: &PathLike);
+    pub fn rename_sync(old_path: &crate::fs::PathLike, new_path: &crate::fs::PathLike);
     #[doc = "Asynchronous truncate(2) - Truncate a file to a specified length."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Asynchronous truncate(2) - Truncate a file to a specified length."]
     #[wasm_bindgen()]
-    pub fn truncate(path: &PathLike, len: &JsValue, callback: &NoParamCallback);
+    pub fn truncate(
+        path: &crate::fs::PathLike,
+        len: &JsValue,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Asynchronous truncate(2) - Truncate a file to a specified length."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Asynchronous truncate(2) - Truncate a file to a specified length."]
     # [ wasm_bindgen ( js_name = truncate ) ]
-    pub fn truncate2(path: &PathLike, callback: &NoParamCallback);
+    pub fn truncate2(path: &crate::fs::PathLike, callback: &crate::fs::NoParamCallback);
     #[doc = "Synchronous truncate(2) - Truncate a file to a specified length."]
     # [ wasm_bindgen ( js_name = truncateSync ) ]
-    pub fn truncate_sync(path: &PathLike, len: &JsValue);
+    pub fn truncate_sync(path: &crate::fs::PathLike, len: &JsValue);
     #[doc = "Asynchronous ftruncate(2) - Truncate a file to a specified length."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Asynchronous ftruncate(2) - Truncate a file to a specified length."]
     #[wasm_bindgen()]
-    pub fn ftruncate(fd: f64, len: &JsValue, callback: &NoParamCallback);
+    pub fn ftruncate(fd: f64, len: &JsValue, callback: &crate::fs::NoParamCallback);
     #[doc = "Asynchronous ftruncate(2) - Truncate a file to a specified length."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Asynchronous ftruncate(2) - Truncate a file to a specified length."]
     # [ wasm_bindgen ( js_name = ftruncate ) ]
-    pub fn ftruncate2(fd: f64, callback: &NoParamCallback);
+    pub fn ftruncate2(fd: f64, callback: &crate::fs::NoParamCallback);
     #[doc = "Synchronous ftruncate(2) - Truncate a file to a specified length."]
     # [ wasm_bindgen ( js_name = ftruncateSync ) ]
     pub fn ftruncate_sync(fd: f64, len: &JsValue);
     #[doc = "Asynchronous chown(2) - Change ownership of a file."]
     #[wasm_bindgen()]
-    pub fn chown(path: &PathLike, uid: f64, gid: f64, callback: &NoParamCallback);
+    pub fn chown(
+        path: &crate::fs::PathLike,
+        uid: f64,
+        gid: f64,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Synchronous chown(2) - Change ownership of a file."]
     # [ wasm_bindgen ( js_name = chownSync ) ]
-    pub fn chown_sync(path: &PathLike, uid: f64, gid: f64);
+    pub fn chown_sync(path: &crate::fs::PathLike, uid: f64, gid: f64);
     #[doc = "Asynchronous fchown(2) - Change ownership of a file."]
     #[wasm_bindgen()]
-    pub fn fchown(fd: f64, uid: f64, gid: f64, callback: &NoParamCallback);
+    pub fn fchown(fd: f64, uid: f64, gid: f64, callback: &crate::fs::NoParamCallback);
     #[doc = "Synchronous fchown(2) - Change ownership of a file."]
     # [ wasm_bindgen ( js_name = fchownSync ) ]
     pub fn fchown_sync(fd: f64, uid: f64, gid: f64);
     #[doc = "Asynchronous lchown(2) - Change ownership of a file. Does not dereference symbolic links."]
     #[wasm_bindgen()]
-    pub fn lchown(path: &PathLike, uid: f64, gid: f64, callback: &NoParamCallback);
+    pub fn lchown(
+        path: &crate::fs::PathLike,
+        uid: f64,
+        gid: f64,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Synchronous lchown(2) - Change ownership of a file. Does not dereference symbolic links."]
     # [ wasm_bindgen ( js_name = lchownSync ) ]
-    pub fn lchown_sync(path: &PathLike, uid: f64, gid: f64);
+    pub fn lchown_sync(path: &crate::fs::PathLike, uid: f64, gid: f64);
     #[doc = "Asynchronous chmod(2) - Change permissions of a file."]
     #[wasm_bindgen()]
-    pub fn chmod(path: &PathLike, mode: &JsValue, callback: &NoParamCallback);
+    pub fn chmod(path: &crate::fs::PathLike, mode: &JsValue, callback: &crate::fs::NoParamCallback);
     #[doc = "Synchronous chmod(2) - Change permissions of a file."]
     # [ wasm_bindgen ( js_name = chmodSync ) ]
-    pub fn chmod_sync(path: &PathLike, mode: &JsValue);
+    pub fn chmod_sync(path: &crate::fs::PathLike, mode: &JsValue);
     #[doc = "Asynchronous fchmod(2) - Change permissions of a file."]
     #[wasm_bindgen()]
-    pub fn fchmod(fd: f64, mode: &JsValue, callback: &NoParamCallback);
+    pub fn fchmod(fd: f64, mode: &JsValue, callback: &crate::fs::NoParamCallback);
     #[doc = "Synchronous fchmod(2) - Change permissions of a file."]
     # [ wasm_bindgen ( js_name = fchmodSync ) ]
     pub fn fchmod_sync(fd: f64, mode: &JsValue);
     #[doc = "Asynchronous lchmod(2) - Change permissions of a file. Does not dereference symbolic links."]
     #[wasm_bindgen()]
-    pub fn lchmod(path: &PathLike, mode: &JsValue, callback: &NoParamCallback);
+    pub fn lchmod(
+        path: &crate::fs::PathLike,
+        mode: &JsValue,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Synchronous lchmod(2) - Change permissions of a file. Does not dereference symbolic links."]
     # [ wasm_bindgen ( js_name = lchmodSync ) ]
-    pub fn lchmod_sync(path: &PathLike, mode: &JsValue);
+    pub fn lchmod_sync(path: &crate::fs::PathLike, mode: &JsValue);
     #[doc = "Asynchronous stat(2) - Get file status."]
     #[wasm_bindgen()]
-    pub fn stat(path: &PathLike, callback: &JsValue);
+    pub fn stat(path: &crate::fs::PathLike, callback: &JsValue);
     #[doc = "Synchronous stat(2) - Get file status."]
     # [ wasm_bindgen ( js_name = statSync ) ]
-    pub fn stat_sync(path: &PathLike) -> Stats;
+    pub fn stat_sync(path: &crate::fs::PathLike) -> crate::fs::Stats;
     #[doc = "Asynchronous fstat(2) - Get file status."]
     #[wasm_bindgen()]
     pub fn fstat(fd: f64, callback: &JsValue);
     #[doc = "Synchronous fstat(2) - Get file status."]
     # [ wasm_bindgen ( js_name = fstatSync ) ]
-    pub fn fstat_sync(fd: f64) -> Stats;
+    pub fn fstat_sync(fd: f64) -> crate::fs::Stats;
     #[doc = "Asynchronous lstat(2) - Get file status. Does not dereference symbolic links."]
     #[wasm_bindgen()]
-    pub fn lstat(path: &PathLike, callback: &JsValue);
+    pub fn lstat(path: &crate::fs::PathLike, callback: &JsValue);
     #[doc = "Synchronous lstat(2) - Get file status. Does not dereference symbolic links."]
     # [ wasm_bindgen ( js_name = lstatSync ) ]
-    pub fn lstat_sync(path: &PathLike) -> Stats;
+    pub fn lstat_sync(path: &crate::fs::PathLike) -> crate::fs::Stats;
     #[doc = "Asynchronous link(2) - Create a new link (also known as a hard link) to an existing file."]
     #[wasm_bindgen()]
-    pub fn link(existing_path: &PathLike, new_path: &PathLike, callback: &NoParamCallback);
+    pub fn link(
+        existing_path: &crate::fs::PathLike,
+        new_path: &crate::fs::PathLike,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Synchronous link(2) - Create a new link (also known as a hard link) to an existing file."]
     # [ wasm_bindgen ( js_name = linkSync ) ]
-    pub fn link_sync(existing_path: &PathLike, new_path: &PathLike);
+    pub fn link_sync(existing_path: &crate::fs::PathLike, new_path: &crate::fs::PathLike);
     #[doc = "Asynchronous symlink(2) - Create a new symbolic link to an existing file."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Asynchronous symlink(2) - Create a new symbolic link to an existing file."]
     #[wasm_bindgen()]
-    pub fn symlink(target: &PathLike, path: &PathLike, type_: &JsValue, callback: &NoParamCallback);
+    pub fn symlink(
+        target: &crate::fs::PathLike,
+        path: &crate::fs::PathLike,
+        type_: &JsValue,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Asynchronous symlink(2) - Create a new symbolic link to an existing file."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Asynchronous symlink(2) - Create a new symbolic link to an existing file."]
     # [ wasm_bindgen ( js_name = symlink ) ]
-    pub fn symlink2(target: &PathLike, path: &PathLike, callback: &NoParamCallback);
+    pub fn symlink2(
+        target: &crate::fs::PathLike,
+        path: &crate::fs::PathLike,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Synchronous symlink(2) - Create a new symbolic link to an existing file."]
     # [ wasm_bindgen ( js_name = symlinkSync ) ]
-    pub fn symlink_sync(target: &PathLike, path: &PathLike, type_: &JsValue);
+    pub fn symlink_sync(target: &crate::fs::PathLike, path: &crate::fs::PathLike, type_: &JsValue);
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -612,7 +647,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     #[wasm_bindgen()]
-    pub fn readlink(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn readlink(path: &crate::fs::PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -624,7 +659,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     # [ wasm_bindgen ( js_name = readlink ) ]
-    pub fn readlink2(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn readlink2(path: &crate::fs::PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -636,7 +671,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     # [ wasm_bindgen ( js_name = readlink ) ]
-    pub fn readlink3(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn readlink3(path: &crate::fs::PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -648,7 +683,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     # [ wasm_bindgen ( js_name = readlink ) ]
-    pub fn readlink4(path: &PathLike, callback: &JsValue);
+    pub fn readlink4(path: &crate::fs::PathLike, callback: &JsValue);
     #[doc = "Synchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -657,7 +692,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous readlink(2) - read value of a symbolic link."]
     # [ wasm_bindgen ( js_name = readlinkSync ) ]
-    pub fn readlink_sync(path: &PathLike, options: &JsValue) -> String;
+    pub fn readlink_sync(path: &crate::fs::PathLike, options: &JsValue) -> String;
     #[doc = "Synchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -666,7 +701,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous readlink(2) - read value of a symbolic link."]
     # [ wasm_bindgen ( js_name = readlinkSync ) ]
-    pub fn readlink_sync2(path: &PathLike, options: &JsValue) -> Buffer;
+    pub fn readlink_sync2(path: &crate::fs::PathLike, options: &JsValue) -> Buffer;
     #[doc = "Synchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -675,7 +710,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous readlink(2) - read value of a symbolic link."]
     # [ wasm_bindgen ( js_name = readlinkSync ) ]
-    pub fn readlink_sync3(path: &PathLike, options: &JsValue) -> JsValue;
+    pub fn readlink_sync3(path: &crate::fs::PathLike, options: &JsValue) -> JsValue;
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -687,7 +722,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[wasm_bindgen()]
-    pub fn realpath(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn realpath(path: &crate::fs::PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -699,7 +734,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = realpath ) ]
-    pub fn realpath2(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn realpath2(path: &crate::fs::PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -711,7 +746,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = realpath ) ]
-    pub fn realpath3(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn realpath3(path: &crate::fs::PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -723,7 +758,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = realpath ) ]
-    pub fn realpath4(path: &PathLike, callback: &JsValue);
+    pub fn realpath4(path: &crate::fs::PathLike, callback: &JsValue);
     #[doc = "Synchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -732,7 +767,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = realpathSync ) ]
-    pub fn realpath_sync(path: &PathLike, options: &JsValue) -> String;
+    pub fn realpath_sync(path: &crate::fs::PathLike, options: &JsValue) -> String;
     #[doc = "Synchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -741,7 +776,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = realpathSync ) ]
-    pub fn realpath_sync2(path: &PathLike, options: &JsValue) -> Buffer;
+    pub fn realpath_sync2(path: &crate::fs::PathLike, options: &JsValue) -> Buffer;
     #[doc = "Synchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -750,13 +785,13 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = realpathSync ) ]
-    pub fn realpath_sync3(path: &PathLike, options: &JsValue) -> JsValue;
+    pub fn realpath_sync3(path: &crate::fs::PathLike, options: &JsValue) -> JsValue;
     #[doc = "Asynchronous unlink(2) - delete a name and possibly the file it refers to."]
     #[wasm_bindgen()]
-    pub fn unlink(path: &PathLike, callback: &NoParamCallback);
+    pub fn unlink(path: &crate::fs::PathLike, callback: &crate::fs::NoParamCallback);
     #[doc = "Synchronous unlink(2) - delete a name and possibly the file it refers to."]
     # [ wasm_bindgen ( js_name = unlinkSync ) ]
-    pub fn unlink_sync(path: &PathLike);
+    pub fn unlink_sync(path: &crate::fs::PathLike);
     pub type RmDirOptions;
     #[doc = "If `true`, perform a recursive directory removal. In"]
     #[doc = "recursive mode, errors are not reported if `path` does not exist, and"]
@@ -784,13 +819,17 @@ extern "C" {
     pub fn set_max_busy_tries(this: &RmDirAsyncOptions, value: Option<f64>);
     #[doc = "Asynchronous rmdir(2) - delete a directory."]
     #[wasm_bindgen()]
-    pub fn rmdir(path: &PathLike, callback: &NoParamCallback);
+    pub fn rmdir(path: &crate::fs::PathLike, callback: &crate::fs::NoParamCallback);
     #[doc = "Asynchronous rmdir(2) - delete a directory."]
     # [ wasm_bindgen ( js_name = rmdir ) ]
-    pub fn rmdir2(path: &PathLike, options: &RmDirAsyncOptions, callback: &NoParamCallback);
+    pub fn rmdir2(
+        path: &crate::fs::PathLike,
+        options: &crate::fs::RmDirAsyncOptions,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Synchronous rmdir(2) - delete a directory."]
     # [ wasm_bindgen ( js_name = rmdirSync ) ]
-    pub fn rmdir_sync(path: &PathLike, options: Option<&RmDirOptions>);
+    pub fn rmdir_sync(path: &crate::fs::PathLike, options: Option<&crate::fs::RmDirOptions>);
     pub type MakeDirectoryOptions;
     #[doc = "Indicates whether parent folders should be created."]
     #[wasm_bindgen(method, getter)]
@@ -807,16 +846,20 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous mkdir(2) - create a directory with a mode of `0o777`."]
     #[wasm_bindgen()]
-    pub fn mkdir(path: &PathLike, options: &JsValue, callback: &NoParamCallback);
+    pub fn mkdir(
+        path: &crate::fs::PathLike,
+        options: &JsValue,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Asynchronous mkdir(2) - create a directory."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Asynchronous mkdir(2) - create a directory with a mode of `0o777`."]
     # [ wasm_bindgen ( js_name = mkdir ) ]
-    pub fn mkdir2(path: &PathLike, callback: &NoParamCallback);
+    pub fn mkdir2(path: &crate::fs::PathLike, callback: &crate::fs::NoParamCallback);
     #[doc = "Synchronous mkdir(2) - create a directory."]
     # [ wasm_bindgen ( js_name = mkdirSync ) ]
-    pub fn mkdir_sync(path: &PathLike, options: &JsValue);
+    pub fn mkdir_sync(path: &crate::fs::PathLike, options: &JsValue);
     #[doc = "Asynchronously creates a unique temporary directory."]
     #[doc = "Generates six random characters to be appended behind a required prefix to create a unique temporary directory."]
     #[doc = ""]
@@ -931,7 +974,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[wasm_bindgen()]
-    pub fn readdir(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn readdir(path: &crate::fs::PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -946,7 +989,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdir ) ]
-    pub fn readdir2(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn readdir2(path: &crate::fs::PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -961,7 +1004,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdir ) ]
-    pub fn readdir3(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn readdir3(path: &crate::fs::PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -976,7 +1019,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdir ) ]
-    pub fn readdir4(path: &PathLike, callback: &JsValue);
+    pub fn readdir4(path: &crate::fs::PathLike, callback: &JsValue);
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -991,7 +1034,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdir ) ]
-    pub fn readdir5(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn readdir5(path: &crate::fs::PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Synchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -1003,7 +1046,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdirSync ) ]
-    pub fn readdir_sync(path: &PathLike, options: &JsValue) -> Array;
+    pub fn readdir_sync(path: &crate::fs::PathLike, options: &JsValue) -> Array;
     #[doc = "Synchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -1015,7 +1058,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdirSync ) ]
-    pub fn readdir_sync2(path: &PathLike, options: &JsValue) -> Array;
+    pub fn readdir_sync2(path: &crate::fs::PathLike, options: &JsValue) -> Array;
     #[doc = "Synchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -1027,7 +1070,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdirSync ) ]
-    pub fn readdir_sync3(path: &PathLike, options: &JsValue) -> JsValue;
+    pub fn readdir_sync3(path: &crate::fs::PathLike, options: &JsValue) -> JsValue;
     #[doc = "Synchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -1039,10 +1082,10 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdirSync ) ]
-    pub fn readdir_sync4(path: &PathLike, options: &JsValue) -> Array;
+    pub fn readdir_sync4(path: &crate::fs::PathLike, options: &JsValue) -> Array;
     #[doc = "Asynchronous close(2) - close a file descriptor."]
     #[wasm_bindgen()]
-    pub fn close(fd: f64, callback: &NoParamCallback);
+    pub fn close(fd: f64, callback: &crate::fs::NoParamCallback);
     #[doc = "Synchronous close(2) - close a file descriptor."]
     # [ wasm_bindgen ( js_name = closeSync ) ]
     pub fn close_sync(fd: f64);
@@ -1051,31 +1094,41 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous open(2) - open and possibly create a file. If the file is created, its mode will be `0o666`."]
     #[wasm_bindgen()]
-    pub fn open(path: &PathLike, flags: &JsValue, mode: &JsValue, callback: &JsValue);
+    pub fn open(path: &crate::fs::PathLike, flags: &JsValue, mode: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous open(2) - open and possibly create a file."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Asynchronous open(2) - open and possibly create a file. If the file is created, its mode will be `0o666`."]
     # [ wasm_bindgen ( js_name = open ) ]
-    pub fn open2(path: &PathLike, flags: &JsValue, callback: &JsValue);
+    pub fn open2(path: &crate::fs::PathLike, flags: &JsValue, callback: &JsValue);
     #[doc = "Synchronous open(2) - open and possibly create a file, returning a file descriptor.."]
     # [ wasm_bindgen ( js_name = openSync ) ]
-    pub fn open_sync(path: &PathLike, flags: &JsValue, mode: &JsValue) -> f64;
+    pub fn open_sync(path: &crate::fs::PathLike, flags: &JsValue, mode: &JsValue) -> f64;
     #[doc = "Asynchronously change file timestamps of the file referenced by the supplied path."]
     #[wasm_bindgen()]
-    pub fn utimes(path: &PathLike, atime: &JsValue, mtime: &JsValue, callback: &NoParamCallback);
+    pub fn utimes(
+        path: &crate::fs::PathLike,
+        atime: &JsValue,
+        mtime: &JsValue,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Synchronously change file timestamps of the file referenced by the supplied path."]
     # [ wasm_bindgen ( js_name = utimesSync ) ]
-    pub fn utimes_sync(path: &PathLike, atime: &JsValue, mtime: &JsValue);
+    pub fn utimes_sync(path: &crate::fs::PathLike, atime: &JsValue, mtime: &JsValue);
     #[doc = "Asynchronously change file timestamps of the file referenced by the supplied file descriptor."]
     #[wasm_bindgen()]
-    pub fn futimes(fd: f64, atime: &JsValue, mtime: &JsValue, callback: &NoParamCallback);
+    pub fn futimes(
+        fd: f64,
+        atime: &JsValue,
+        mtime: &JsValue,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Synchronously change file timestamps of the file referenced by the supplied file descriptor."]
     # [ wasm_bindgen ( js_name = futimesSync ) ]
     pub fn futimes_sync(fd: f64, atime: &JsValue, mtime: &JsValue);
     #[doc = "Asynchronous fsync(2) - synchronize a file's in-core state with the underlying storage device."]
     #[wasm_bindgen()]
-    pub fn fsync(fd: f64, callback: &NoParamCallback);
+    pub fn fsync(fd: f64, callback: &crate::fs::NoParamCallback);
     #[doc = "Synchronous fsync(2) - synchronize a file's in-core state with the underlying storage device."]
     # [ wasm_bindgen ( js_name = fsyncSync ) ]
     pub fn fsync_sync(fd: f64);
@@ -1252,7 +1305,7 @@ extern "C" {
     # [ wasm_bindgen ( js_name = writeSync ) ]
     pub fn write_sync(
         fd: f64,
-        buffer: &ArrayBufferView,
+        buffer: &crate::node_js::ArrayBufferView,
         offset: &JsValue,
         length: &JsValue,
         position: &JsValue,
@@ -1277,7 +1330,7 @@ extern "C" {
     # [ wasm_bindgen ( js_name = readSync ) ]
     pub fn read_sync(
         fd: f64,
-        buffer: &ArrayBufferView,
+        buffer: &crate::node_js::ArrayBufferView,
         offset: f64,
         length: f64,
         position: &JsValue,
@@ -1366,18 +1419,22 @@ extern "C" {
     pub fn write_file(
         path: &JsValue,
         data: &JsValue,
-        options: &WriteFileOptions,
-        callback: &NoParamCallback,
+        options: &crate::fs::WriteFileOptions,
+        callback: &crate::fs::NoParamCallback,
     );
     #[doc = "Asynchronously writes data to a file, replacing the file if it already exists."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Asynchronously writes data to a file, replacing the file if it already exists."]
     # [ wasm_bindgen ( js_name = writeFile ) ]
-    pub fn write_file2(path: &JsValue, data: &JsValue, callback: &NoParamCallback);
+    pub fn write_file2(path: &JsValue, data: &JsValue, callback: &crate::fs::NoParamCallback);
     #[doc = "Synchronously writes data to a file, replacing the file if it already exists."]
     # [ wasm_bindgen ( js_name = writeFileSync ) ]
-    pub fn write_file_sync(path: &JsValue, data: &JsValue, options: Option<&WriteFileOptions>);
+    pub fn write_file_sync(
+        path: &JsValue,
+        data: &JsValue,
+        options: Option<&crate::fs::WriteFileOptions>,
+    );
     #[doc = "Asynchronously append data to a file, creating the file if it does not exist."]
     #[doc = ""]
     #[doc = ""]
@@ -1386,33 +1443,37 @@ extern "C" {
     pub fn append_file(
         file: &JsValue,
         data: &JsValue,
-        options: &WriteFileOptions,
-        callback: &NoParamCallback,
+        options: &crate::fs::WriteFileOptions,
+        callback: &crate::fs::NoParamCallback,
     );
     #[doc = "Asynchronously append data to a file, creating the file if it does not exist."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Asynchronously append data to a file, creating the file if it does not exist."]
     # [ wasm_bindgen ( js_name = appendFile ) ]
-    pub fn append_file2(file: &JsValue, data: &JsValue, callback: &NoParamCallback);
+    pub fn append_file2(file: &JsValue, data: &JsValue, callback: &crate::fs::NoParamCallback);
     #[doc = "Synchronously append data to a file, creating the file if it does not exist."]
     # [ wasm_bindgen ( js_name = appendFileSync ) ]
-    pub fn append_file_sync(file: &JsValue, data: &JsValue, options: Option<&WriteFileOptions>);
+    pub fn append_file_sync(
+        file: &JsValue,
+        data: &JsValue,
+        options: Option<&crate::fs::WriteFileOptions>,
+    );
     #[doc = "Watch for changes on `filename`. The callback `listener` will be called each time the file is accessed."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Watch for changes on `filename`. The callback `listener` will be called each time the file is accessed."]
     # [ wasm_bindgen ( js_name = watchFile ) ]
-    pub fn watch_file(filename: &PathLike, options: &JsValue, listener: &JsValue);
+    pub fn watch_file(filename: &crate::fs::PathLike, options: &JsValue, listener: &JsValue);
     #[doc = "Watch for changes on `filename`. The callback `listener` will be called each time the file is accessed."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Watch for changes on `filename`. The callback `listener` will be called each time the file is accessed."]
     # [ wasm_bindgen ( js_name = watchFile ) ]
-    pub fn watch_file2(filename: &PathLike, listener: &JsValue);
+    pub fn watch_file2(filename: &crate::fs::PathLike, listener: &JsValue);
     #[doc = "Stop watching for changes on `filename`."]
     # [ wasm_bindgen ( js_name = unwatchFile ) ]
-    pub fn unwatch_file(filename: &PathLike, listener: &JsValue);
+    pub fn unwatch_file(filename: &crate::fs::PathLike, listener: &JsValue);
     #[doc = "Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`."]
     #[doc = ""]
     #[doc = ""]
@@ -1424,7 +1485,11 @@ extern "C" {
     #[doc = ""]
     #[doc = "Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`."]
     #[wasm_bindgen()]
-    pub fn watch(filename: &PathLike, options: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn watch(
+        filename: &crate::fs::PathLike,
+        options: &JsValue,
+        listener: &JsValue,
+    ) -> crate::fs::FSWatcher;
     #[doc = "Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`."]
     #[doc = ""]
     #[doc = ""]
@@ -1436,7 +1501,11 @@ extern "C" {
     #[doc = ""]
     #[doc = "Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`."]
     # [ wasm_bindgen ( js_name = watch ) ]
-    pub fn watch2(filename: &PathLike, options: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn watch2(
+        filename: &crate::fs::PathLike,
+        options: &JsValue,
+        listener: &JsValue,
+    ) -> crate::fs::FSWatcher;
     #[doc = "Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`."]
     #[doc = ""]
     #[doc = ""]
@@ -1448,7 +1517,11 @@ extern "C" {
     #[doc = ""]
     #[doc = "Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`."]
     # [ wasm_bindgen ( js_name = watch ) ]
-    pub fn watch3(filename: &PathLike, options: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn watch3(
+        filename: &crate::fs::PathLike,
+        options: &JsValue,
+        listener: &JsValue,
+    ) -> crate::fs::FSWatcher;
     #[doc = "Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`."]
     #[doc = ""]
     #[doc = ""]
@@ -1460,37 +1533,47 @@ extern "C" {
     #[doc = ""]
     #[doc = "Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`."]
     # [ wasm_bindgen ( js_name = watch ) ]
-    pub fn watch4(filename: &PathLike, listener: &JsValue) -> FSWatcher;
+    pub fn watch4(filename: &crate::fs::PathLike, listener: &JsValue) -> crate::fs::FSWatcher;
     #[doc = "Asynchronously tests whether or not the given path exists by checking with the file system."]
     #[wasm_bindgen()]
-    pub fn exists(path: &PathLike, callback: &JsValue);
+    pub fn exists(path: &crate::fs::PathLike, callback: &JsValue);
     #[doc = "Synchronously tests whether or not the given path exists by checking with the file system."]
     # [ wasm_bindgen ( js_name = existsSync ) ]
-    pub fn exists_sync(path: &PathLike) -> bool;
+    pub fn exists_sync(path: &crate::fs::PathLike) -> bool;
     #[doc = "Asynchronously tests a user's permissions for the file specified by path."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Asynchronously tests a user's permissions for the file specified by path."]
     #[wasm_bindgen()]
-    pub fn access(path: &PathLike, mode: Option<f64>, callback: &NoParamCallback);
+    pub fn access(
+        path: &crate::fs::PathLike,
+        mode: Option<f64>,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Asynchronously tests a user's permissions for the file specified by path."]
     #[doc = ""]
     #[doc = ""]
     #[doc = "Asynchronously tests a user's permissions for the file specified by path."]
     # [ wasm_bindgen ( js_name = access ) ]
-    pub fn access2(path: &PathLike, callback: &NoParamCallback);
+    pub fn access2(path: &crate::fs::PathLike, callback: &crate::fs::NoParamCallback);
     #[doc = "Synchronously tests a user's permissions for the file specified by path."]
     # [ wasm_bindgen ( js_name = accessSync ) ]
-    pub fn access_sync(path: &PathLike, mode: Option<f64>);
+    pub fn access_sync(path: &crate::fs::PathLike, mode: Option<f64>);
     #[doc = "Returns a new `ReadStream` object."]
     # [ wasm_bindgen ( js_name = createReadStream ) ]
-    pub fn create_read_stream(path: &PathLike, options: &JsValue) -> ReadStream;
+    pub fn create_read_stream(
+        path: &crate::fs::PathLike,
+        options: &JsValue,
+    ) -> crate::fs::ReadStream;
     #[doc = "Returns a new `WriteStream` object."]
     # [ wasm_bindgen ( js_name = createWriteStream ) ]
-    pub fn create_write_stream(path: &PathLike, options: &JsValue) -> WriteStream;
+    pub fn create_write_stream(
+        path: &crate::fs::PathLike,
+        options: &JsValue,
+    ) -> crate::fs::WriteStream;
     #[doc = "Asynchronous fdatasync(2) - synchronize a file's in-core state with storage device."]
     #[wasm_bindgen()]
-    pub fn fdatasync(fd: f64, callback: &NoParamCallback);
+    pub fn fdatasync(fd: f64, callback: &crate::fs::NoParamCallback);
     #[doc = "Synchronous fdatasync(2) - synchronize a file's in-core state with storage device."]
     # [ wasm_bindgen ( js_name = fdatasyncSync ) ]
     pub fn fdatasync_sync(fd: f64);
@@ -1507,7 +1590,11 @@ extern "C" {
     #[doc = "If an error occurs after the destination file has been opened for writing, Node.js will attempt"]
     #[doc = "to remove the destination."]
     # [ wasm_bindgen ( js_name = copyFile ) ]
-    pub fn copy_file(src: &PathLike, dest: &PathLike, callback: &NoParamCallback);
+    pub fn copy_file(
+        src: &crate::fs::PathLike,
+        dest: &crate::fs::PathLike,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Asynchronously copies src to dest. By default, dest is overwritten if it already exists."]
     #[doc = "No arguments other than a possible exception are given to the callback function."]
     #[doc = "Node.js makes no guarantees about the atomicity of the copy operation."]
@@ -1521,13 +1608,22 @@ extern "C" {
     #[doc = "If an error occurs after the destination file has been opened for writing, Node.js will attempt"]
     #[doc = "to remove the destination."]
     # [ wasm_bindgen ( js_name = copyFile ) ]
-    pub fn copy_file2(src: &PathLike, dest: &PathLike, flags: f64, callback: &NoParamCallback);
+    pub fn copy_file2(
+        src: &crate::fs::PathLike,
+        dest: &crate::fs::PathLike,
+        flags: f64,
+        callback: &crate::fs::NoParamCallback,
+    );
     #[doc = "Synchronously copies src to dest. By default, dest is overwritten if it already exists."]
     #[doc = "Node.js makes no guarantees about the atomicity of the copy operation."]
     #[doc = "If an error occurs after the destination file has been opened for writing, Node.js will attempt"]
     #[doc = "to remove the destination."]
     # [ wasm_bindgen ( js_name = copyFileSync ) ]
-    pub fn copy_file_sync(src: &PathLike, dest: &PathLike, flags: Option<f64>);
+    pub fn copy_file_sync(
+        src: &crate::fs::PathLike,
+        dest: &crate::fs::PathLike,
+        flags: Option<f64>,
+    );
     #[doc = "Write an array of ArrayBufferViews to the file specified by fd using writev()."]
     #[doc = "position is the offset from the beginning of the file where this data should be written."]
     #[doc = "It is unsafe to use fs.writev() multiple times on the same file without waiting for the callback. For this scenario, use fs.createWriteStream()."]
@@ -1560,11 +1656,11 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_encoding(this: &OpenDirOptions, value: Option<&BufferEncoding>);
     # [ wasm_bindgen ( js_name = opendirSync ) ]
-    pub fn opendir_sync(path: &str, options: Option<&OpenDirOptions>) -> Dir;
+    pub fn opendir_sync(path: &str, options: Option<&crate::fs::OpenDirOptions>) -> crate::fs::Dir;
     #[wasm_bindgen()]
     pub fn opendir(path: &str, cb: &JsValue);
     # [ wasm_bindgen ( js_name = opendir ) ]
-    pub fn opendir2(path: &str, options: &OpenDirOptions, cb: &JsValue);
+    pub fn opendir2(path: &str, options: &crate::fs::OpenDirOptions, cb: &JsValue);
     pub type BigIntStats;
     # [ wasm_bindgen ( method , getter , js_name = atimeNs ) ]
     pub fn atime_ns(this: &BigIntStats) -> JsValue;
@@ -1594,14 +1690,21 @@ extern "C" {
     pub fn set_bigint(this: &StatOptions, value: bool);
     #[doc = "Asynchronous stat(2) - Get file status."]
     # [ wasm_bindgen ( js_name = stat ) ]
-    pub fn stat2(path: &PathLike, options: &BigIntOptions, callback: &JsValue);
+    pub fn stat2(
+        path: &crate::fs::PathLike,
+        options: &crate::fs::BigIntOptions,
+        callback: &JsValue,
+    );
     #[doc = "Asynchronous stat(2) - Get file status."]
     # [ wasm_bindgen ( js_name = stat ) ]
-    pub fn stat3(path: &PathLike, options: &StatOptions, callback: &JsValue);
+    pub fn stat3(path: &crate::fs::PathLike, options: &crate::fs::StatOptions, callback: &JsValue);
     #[doc = "Synchronous stat(2) - Get file status."]
     # [ wasm_bindgen ( js_name = statSync ) ]
-    pub fn stat_sync2(path: &PathLike, options: &BigIntOptions) -> BigIntStats;
+    pub fn stat_sync2(
+        path: &crate::fs::PathLike,
+        options: &crate::fs::BigIntOptions,
+    ) -> crate::fs::BigIntStats;
     #[doc = "Synchronous stat(2) - Get file status."]
     # [ wasm_bindgen ( js_name = statSync ) ]
-    pub fn stat_sync3(path: &PathLike, options: &StatOptions) -> JsValue;
+    pub fn stat_sync3(path: &crate::fs::PathLike, options: &crate::fs::StatOptions) -> JsValue;
 }

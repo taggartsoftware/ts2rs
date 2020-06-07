@@ -16,12 +16,12 @@ impl internal {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<EventEmitter> for internal {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::EventEmitter> for internal {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<internal> for EventEmitter {
+impl From<internal> for crate::node_js::EventEmitter {
     fn from(child: internal) -> Self {
         JsCast::unchecked_into(child)
     }

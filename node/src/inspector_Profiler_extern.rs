@@ -12,9 +12,9 @@ extern "C" {
     pub fn set_id(this: &ProfileNode, value: f64);
     #[doc = "Function location."]
     # [ wasm_bindgen ( method , getter , js_name = callFrame ) ]
-    pub fn call_frame(this: &ProfileNode) -> CallFrame;
+    pub fn call_frame(this: &ProfileNode) -> crate::inspector::runtime::CallFrame;
     # [ wasm_bindgen ( method , setter , js_name = callFrame ) ]
-    pub fn set_call_frame(this: &ProfileNode, value: &CallFrame);
+    pub fn set_call_frame(this: &ProfileNode, value: &crate::inspector::runtime::CallFrame);
     #[doc = "Number of samples where this node was on top of the call stack."]
     # [ wasm_bindgen ( method , getter , js_name = hitCount ) ]
     pub fn hit_count(this: &ProfileNode) -> Option<f64>;
@@ -112,9 +112,9 @@ extern "C" {
     pub type ScriptCoverage;
     #[doc = "JavaScript script id."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &ScriptCoverage) -> ScriptId;
+    pub fn script_id(this: &ScriptCoverage) -> crate::inspector::runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(this: &ScriptCoverage, value: &ScriptId);
+    pub fn set_script_id(this: &ScriptCoverage, value: &crate::inspector::runtime::ScriptId);
     #[doc = "JavaScript script name or url."]
     #[wasm_bindgen(method, getter)]
     pub fn url(this: &ScriptCoverage) -> String;
@@ -148,9 +148,9 @@ extern "C" {
     pub type ScriptTypeProfile;
     #[doc = "JavaScript script id."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &ScriptTypeProfile) -> ScriptId;
+    pub fn script_id(this: &ScriptTypeProfile) -> crate::inspector::runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(this: &ScriptTypeProfile, value: &ScriptId);
+    pub fn set_script_id(this: &ScriptTypeProfile, value: &crate::inspector::runtime::ScriptId);
     #[doc = "JavaScript script name or url."]
     #[wasm_bindgen(method, getter)]
     pub fn url(this: &ScriptTypeProfile) -> String;
@@ -181,9 +181,9 @@ extern "C" {
     pub type StopReturnType;
     #[doc = "Recorded profile."]
     #[wasm_bindgen(method, getter)]
-    pub fn profile(this: &StopReturnType) -> Profile;
+    pub fn profile(this: &StopReturnType) -> crate::inspector::profiler::Profile;
     #[wasm_bindgen(method, setter)]
-    pub fn set_profile(this: &StopReturnType, value: &Profile);
+    pub fn set_profile(this: &StopReturnType, value: &crate::inspector::profiler::Profile);
     pub type TakePreciseCoverageReturnType;
     #[doc = "Coverage data for the current isolate."]
     #[wasm_bindgen(method, getter)]
@@ -209,9 +209,14 @@ extern "C" {
     pub fn set_id(this: &ConsoleProfileStartedEventDataType, value: &str);
     #[doc = "Location of console.profile()."]
     #[wasm_bindgen(method, getter)]
-    pub fn location(this: &ConsoleProfileStartedEventDataType) -> Location;
+    pub fn location(
+        this: &ConsoleProfileStartedEventDataType,
+    ) -> crate::inspector::debugger::Location;
     #[wasm_bindgen(method, setter)]
-    pub fn set_location(this: &ConsoleProfileStartedEventDataType, value: &Location);
+    pub fn set_location(
+        this: &ConsoleProfileStartedEventDataType,
+        value: &crate::inspector::debugger::Location,
+    );
     #[doc = "Profile title passed as an argument to console.profile()."]
     #[wasm_bindgen(method, getter)]
     pub fn title(this: &ConsoleProfileStartedEventDataType) -> Option<String>;
@@ -224,13 +229,23 @@ extern "C" {
     pub fn set_id(this: &ConsoleProfileFinishedEventDataType, value: &str);
     #[doc = "Location of console.profileEnd()."]
     #[wasm_bindgen(method, getter)]
-    pub fn location(this: &ConsoleProfileFinishedEventDataType) -> Location;
+    pub fn location(
+        this: &ConsoleProfileFinishedEventDataType,
+    ) -> crate::inspector::debugger::Location;
     #[wasm_bindgen(method, setter)]
-    pub fn set_location(this: &ConsoleProfileFinishedEventDataType, value: &Location);
+    pub fn set_location(
+        this: &ConsoleProfileFinishedEventDataType,
+        value: &crate::inspector::debugger::Location,
+    );
     #[wasm_bindgen(method, getter)]
-    pub fn profile(this: &ConsoleProfileFinishedEventDataType) -> Profile;
+    pub fn profile(
+        this: &ConsoleProfileFinishedEventDataType,
+    ) -> crate::inspector::profiler::Profile;
     #[wasm_bindgen(method, setter)]
-    pub fn set_profile(this: &ConsoleProfileFinishedEventDataType, value: &Profile);
+    pub fn set_profile(
+        this: &ConsoleProfileFinishedEventDataType,
+        value: &crate::inspector::profiler::Profile,
+    );
     #[doc = "Profile title passed as an argument to console.profile()."]
     #[wasm_bindgen(method, getter)]
     pub fn title(this: &ConsoleProfileFinishedEventDataType) -> Option<String>;

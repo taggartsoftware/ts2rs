@@ -16,13 +16,13 @@ impl ReadLineOptions {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<EventEmitter> for Interface {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::EventEmitter> for crate::readline::Interface {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Interface> for EventEmitter {
-    fn from(child: Interface) -> Self {
+impl From<crate::readline::Interface> for crate::node_js::EventEmitter {
+    fn from(child: crate::readline::Interface) -> Self {
         JsCast::unchecked_into(child)
     }
 }

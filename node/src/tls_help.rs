@@ -81,163 +81,133 @@ impl TlsOptions {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<CommonConnectionOptions> for ConnectionOptions {
-    fn as_ref(&self) -> &CommonConnectionOptions {
+impl AsRef<crate::tls::CommonConnectionOptions> for crate::tls::ConnectionOptions {
+    fn as_ref(&self) -> &crate::tls::CommonConnectionOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ConnectionOptions> for CommonConnectionOptions {
-    fn from(child: ConnectionOptions) -> Self {
+impl From<crate::tls::ConnectionOptions> for crate::tls::CommonConnectionOptions {
+    fn from(child: crate::tls::ConnectionOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<SecureContextOptions> for ConnectionOptions {
-    fn as_ref(&self) -> &SecureContextOptions {
+impl AsRef<crate::tls::SecureContextOptions> for crate::tls::ConnectionOptions {
+    fn as_ref(&self) -> &crate::tls::SecureContextOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ConnectionOptions> for SecureContextOptions {
-    fn from(child: ConnectionOptions) -> Self {
+impl From<crate::tls::ConnectionOptions> for crate::tls::SecureContextOptions {
+    fn from(child: crate::tls::ConnectionOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<PeerCertificate> for DetailedPeerCertificate {
-    fn as_ref(&self) -> &PeerCertificate {
+impl AsRef<crate::tls::PeerCertificate> for crate::tls::DetailedPeerCertificate {
+    fn as_ref(&self) -> &crate::tls::PeerCertificate {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<DetailedPeerCertificate> for PeerCertificate {
-    fn from(child: DetailedPeerCertificate) -> Self {
+impl From<crate::tls::DetailedPeerCertificate> for crate::tls::PeerCertificate {
+    fn from(child: crate::tls::DetailedPeerCertificate) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for Server {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::EventEmitter> for crate::tls::Server {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Server> for EventEmitter {
-    fn from(child: Server) -> Self {
+impl From<crate::tls::Server> for crate::node_js::EventEmitter {
+    fn from(child: crate::tls::Server) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Duplex> for TLSSocket {
-    fn as_ref(&self) -> &Duplex {
+impl AsRef<crate::net::Server> for crate::tls::Server {
+    fn as_ref(&self) -> &crate::net::Server {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<TLSSocket> for Duplex {
-    fn from(child: TLSSocket) -> Self {
+impl From<crate::tls::Server> for crate::net::Server {
+    fn from(child: crate::tls::Server) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for TLSSocket {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::EventEmitter> for crate::tls::TLSSocket {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<TLSSocket> for EventEmitter {
-    fn from(child: TLSSocket) -> Self {
+impl From<crate::tls::TLSSocket> for crate::node_js::EventEmitter {
+    fn from(child: crate::tls::TLSSocket) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for TLSSocket {
-    fn as_ref(&self) -> &Readable {
+impl AsRef<crate::node_js::ReadableStream> for crate::tls::TLSSocket {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<TLSSocket> for Readable {
-    fn from(child: TLSSocket) -> Self {
+impl From<crate::tls::TLSSocket> for crate::node_js::ReadableStream {
+    fn from(child: crate::tls::TLSSocket) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ReadableStream> for TLSSocket {
-    fn as_ref(&self) -> &ReadableStream {
+impl AsRef<crate::node_js::WritableStream> for crate::tls::TLSSocket {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<TLSSocket> for ReadableStream {
-    fn from(child: TLSSocket) -> Self {
+impl From<crate::tls::TLSSocket> for crate::node_js::WritableStream {
+    fn from(child: crate::tls::TLSSocket) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Socket> for TLSSocket {
-    fn as_ref(&self) -> &Socket {
+impl AsRef<crate::net::Socket> for crate::tls::TLSSocket {
+    fn as_ref(&self) -> &crate::net::Socket {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<TLSSocket> for Socket {
-    fn from(child: TLSSocket) -> Self {
+impl From<crate::tls::TLSSocket> for crate::net::Socket {
+    fn from(child: crate::tls::TLSSocket) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for TLSSocket {
-    fn as_ref(&self) -> &Stream {
+impl AsRef<crate::tls::CommonConnectionOptions> for crate::tls::TLSSocketOptions {
+    fn as_ref(&self) -> &crate::tls::CommonConnectionOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<TLSSocket> for Stream {
-    fn from(child: TLSSocket) -> Self {
+impl From<crate::tls::TLSSocketOptions> for crate::tls::CommonConnectionOptions {
+    fn from(child: crate::tls::TLSSocketOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Writable> for TLSSocket {
-    fn as_ref(&self) -> &Writable {
+impl AsRef<crate::tls::SecureContextOptions> for crate::tls::TLSSocketOptions {
+    fn as_ref(&self) -> &crate::tls::SecureContextOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<TLSSocket> for Writable {
-    fn from(child: TLSSocket) -> Self {
+impl From<crate::tls::TLSSocketOptions> for crate::tls::SecureContextOptions {
+    fn from(child: crate::tls::TLSSocketOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<WritableStream> for TLSSocket {
-    fn as_ref(&self) -> &WritableStream {
+impl AsRef<crate::tls::CommonConnectionOptions> for crate::tls::TlsOptions {
+    fn as_ref(&self) -> &crate::tls::CommonConnectionOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<TLSSocket> for WritableStream {
-    fn from(child: TLSSocket) -> Self {
+impl From<crate::tls::TlsOptions> for crate::tls::CommonConnectionOptions {
+    fn from(child: crate::tls::TlsOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<CommonConnectionOptions> for TLSSocketOptions {
-    fn as_ref(&self) -> &CommonConnectionOptions {
+impl AsRef<crate::tls::SecureContextOptions> for crate::tls::TlsOptions {
+    fn as_ref(&self) -> &crate::tls::SecureContextOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<TLSSocketOptions> for CommonConnectionOptions {
-    fn from(child: TLSSocketOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<SecureContextOptions> for TLSSocketOptions {
-    fn as_ref(&self) -> &SecureContextOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TLSSocketOptions> for SecureContextOptions {
-    fn from(child: TLSSocketOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<CommonConnectionOptions> for TlsOptions {
-    fn as_ref(&self) -> &CommonConnectionOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TlsOptions> for CommonConnectionOptions {
-    fn from(child: TlsOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<SecureContextOptions> for TlsOptions {
-    fn as_ref(&self) -> &SecureContextOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TlsOptions> for SecureContextOptions {
-    fn from(child: TlsOptions) -> Self {
+impl From<crate::tls::TlsOptions> for crate::tls::SecureContextOptions {
+    fn from(child: crate::tls::TlsOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }

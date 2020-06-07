@@ -14,7 +14,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -26,7 +26,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_2(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn promisify_2(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -38,7 +38,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_3(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn promisify_3(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -50,5 +50,5 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify_4(path: &PathLike, options: &JsValue) -> Promise;
+    pub fn promisify_4(path: &crate::fs::PathLike, options: &JsValue) -> Promise;
 }

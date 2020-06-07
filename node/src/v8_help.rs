@@ -36,23 +36,23 @@ impl Serializer {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<Deserializer> for DefaultDeserializer {
-    fn as_ref(&self) -> &Deserializer {
+impl AsRef<crate::v8::Deserializer> for crate::v8::DefaultDeserializer {
+    fn as_ref(&self) -> &crate::v8::Deserializer {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<DefaultDeserializer> for Deserializer {
-    fn from(child: DefaultDeserializer) -> Self {
+impl From<crate::v8::DefaultDeserializer> for crate::v8::Deserializer {
+    fn from(child: crate::v8::DefaultDeserializer) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Serializer> for DefaultSerializer {
-    fn as_ref(&self) -> &Serializer {
+impl AsRef<crate::v8::Serializer> for crate::v8::DefaultSerializer {
+    fn as_ref(&self) -> &crate::v8::Serializer {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<DefaultSerializer> for Serializer {
-    fn from(child: DefaultSerializer) -> Self {
+impl From<crate::v8::DefaultSerializer> for crate::v8::Serializer {
+    fn from(child: crate::v8::DefaultSerializer) -> Self {
         JsCast::unchecked_into(child)
     }
 }

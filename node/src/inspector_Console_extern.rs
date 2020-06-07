@@ -38,7 +38,10 @@ extern "C" {
     pub type MessageAddedEventDataType;
     #[doc = "Console message that has been added."]
     #[wasm_bindgen(method, getter)]
-    pub fn message(this: &MessageAddedEventDataType) -> ConsoleMessage;
+    pub fn message(this: &MessageAddedEventDataType) -> crate::inspector::console::ConsoleMessage;
     #[wasm_bindgen(method, setter)]
-    pub fn set_message(this: &MessageAddedEventDataType, value: &ConsoleMessage);
+    pub fn set_message(
+        this: &MessageAddedEventDataType,
+        value: &crate::inspector::console::ConsoleMessage,
+    );
 }

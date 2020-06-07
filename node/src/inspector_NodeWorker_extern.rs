@@ -8,9 +8,9 @@ extern "C" {
     pub type SessionID;
     pub type WorkerInfo;
     # [ wasm_bindgen ( method , getter , js_name = workerId ) ]
-    pub fn worker_id(this: &WorkerInfo) -> WorkerID;
+    pub fn worker_id(this: &WorkerInfo) -> crate::inspector::node_worker::WorkerID;
     # [ wasm_bindgen ( method , setter , js_name = workerId ) ]
-    pub fn set_worker_id(this: &WorkerInfo, value: &WorkerID);
+    pub fn set_worker_id(this: &WorkerInfo, value: &crate::inspector::node_worker::WorkerID);
     # [ wasm_bindgen ( method , getter , js_name = type ) ]
     pub fn type_(this: &WorkerInfo) -> String;
     # [ wasm_bindgen ( method , setter , js_name = type ) ]
@@ -30,9 +30,14 @@ extern "C" {
     pub fn set_message(this: &SendMessageToWorkerParameterType, value: &str);
     #[doc = "Identifier of the session."]
     # [ wasm_bindgen ( method , getter , js_name = sessionId ) ]
-    pub fn session_id(this: &SendMessageToWorkerParameterType) -> SessionID;
+    pub fn session_id(
+        this: &SendMessageToWorkerParameterType,
+    ) -> crate::inspector::node_worker::SessionID;
     # [ wasm_bindgen ( method , setter , js_name = sessionId ) ]
-    pub fn set_session_id(this: &SendMessageToWorkerParameterType, value: &SessionID);
+    pub fn set_session_id(
+        this: &SendMessageToWorkerParameterType,
+        value: &crate::inspector::node_worker::SessionID,
+    );
     pub type EnableParameterType;
     #[doc = "Whether to new workers should be paused until the frontend sends `Runtime.runIfWaitingForDebugger`"]
     #[doc = "message to run them."]
@@ -42,19 +47,32 @@ extern "C" {
     pub fn set_wait_for_debugger_on_start(this: &EnableParameterType, value: bool);
     pub type DetachParameterType;
     # [ wasm_bindgen ( method , getter , js_name = sessionId ) ]
-    pub fn session_id(this: &DetachParameterType) -> SessionID;
+    pub fn session_id(this: &DetachParameterType) -> crate::inspector::node_worker::SessionID;
     # [ wasm_bindgen ( method , setter , js_name = sessionId ) ]
-    pub fn set_session_id(this: &DetachParameterType, value: &SessionID);
+    pub fn set_session_id(
+        this: &DetachParameterType,
+        value: &crate::inspector::node_worker::SessionID,
+    );
     pub type AttachedToWorkerEventDataType;
     #[doc = "Identifier assigned to the session used to send/receive messages."]
     # [ wasm_bindgen ( method , getter , js_name = sessionId ) ]
-    pub fn session_id(this: &AttachedToWorkerEventDataType) -> SessionID;
+    pub fn session_id(
+        this: &AttachedToWorkerEventDataType,
+    ) -> crate::inspector::node_worker::SessionID;
     # [ wasm_bindgen ( method , setter , js_name = sessionId ) ]
-    pub fn set_session_id(this: &AttachedToWorkerEventDataType, value: &SessionID);
+    pub fn set_session_id(
+        this: &AttachedToWorkerEventDataType,
+        value: &crate::inspector::node_worker::SessionID,
+    );
     # [ wasm_bindgen ( method , getter , js_name = workerInfo ) ]
-    pub fn worker_info(this: &AttachedToWorkerEventDataType) -> WorkerInfo;
+    pub fn worker_info(
+        this: &AttachedToWorkerEventDataType,
+    ) -> crate::inspector::node_worker::WorkerInfo;
     # [ wasm_bindgen ( method , setter , js_name = workerInfo ) ]
-    pub fn set_worker_info(this: &AttachedToWorkerEventDataType, value: &WorkerInfo);
+    pub fn set_worker_info(
+        this: &AttachedToWorkerEventDataType,
+        value: &crate::inspector::node_worker::WorkerInfo,
+    );
     # [ wasm_bindgen ( method , getter , js_name = waitingForDebugger ) ]
     pub fn waiting_for_debugger(this: &AttachedToWorkerEventDataType) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = waitingForDebugger ) ]
@@ -62,15 +80,25 @@ extern "C" {
     pub type DetachedFromWorkerEventDataType;
     #[doc = "Detached session identifier."]
     # [ wasm_bindgen ( method , getter , js_name = sessionId ) ]
-    pub fn session_id(this: &DetachedFromWorkerEventDataType) -> SessionID;
+    pub fn session_id(
+        this: &DetachedFromWorkerEventDataType,
+    ) -> crate::inspector::node_worker::SessionID;
     # [ wasm_bindgen ( method , setter , js_name = sessionId ) ]
-    pub fn set_session_id(this: &DetachedFromWorkerEventDataType, value: &SessionID);
+    pub fn set_session_id(
+        this: &DetachedFromWorkerEventDataType,
+        value: &crate::inspector::node_worker::SessionID,
+    );
     pub type ReceivedMessageFromWorkerEventDataType;
     #[doc = "Identifier of a session which sends a message."]
     # [ wasm_bindgen ( method , getter , js_name = sessionId ) ]
-    pub fn session_id(this: &ReceivedMessageFromWorkerEventDataType) -> SessionID;
+    pub fn session_id(
+        this: &ReceivedMessageFromWorkerEventDataType,
+    ) -> crate::inspector::node_worker::SessionID;
     # [ wasm_bindgen ( method , setter , js_name = sessionId ) ]
-    pub fn set_session_id(this: &ReceivedMessageFromWorkerEventDataType, value: &SessionID);
+    pub fn set_session_id(
+        this: &ReceivedMessageFromWorkerEventDataType,
+        value: &crate::inspector::node_worker::SessionID,
+    );
     #[wasm_bindgen(method, getter)]
     pub fn message(this: &ReceivedMessageFromWorkerEventDataType) -> String;
     #[wasm_bindgen(method, setter)]

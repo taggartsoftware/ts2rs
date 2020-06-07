@@ -5,6 +5,9 @@
 extern "C" {
     #[doc = "Asynchronously append data to a file, creating the file if it does not exist."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(file: &JsValue, data: &JsValue, options: Option<&WriteFileOptions>)
-    -> Promise;
+    pub fn promisify(
+        file: &JsValue,
+        data: &JsValue,
+        options: Option<&crate::fs::WriteFileOptions>,
+    ) -> Promise;
 }

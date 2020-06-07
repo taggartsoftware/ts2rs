@@ -12,5 +12,5 @@ wasm-bindgen = { git = "https://github.com/rustwasm/wasm-bindgen" }
 js-sys = { git = "https://github.com/rustwasm/wasm-bindgen" }
 web-sys = { git = "https://github.com/rustwasm/wasm-bindgen", features = [ "HtmlElement", "KeyboardEvent", "MouseEvent", "Worker" ] }
 
-# [dev-dependencies]
-# wasm-bindgen-test = { git = "https://github.com/rustwasm/wasm-bindgen" }
+[dev-dependencies]
+wasm-bindgen-test = { git = "https://github.com/rustwasm/wasm-bindgen" }

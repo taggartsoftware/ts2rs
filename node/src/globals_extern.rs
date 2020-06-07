@@ -6,9 +6,9 @@ extern "C" {
     #[doc = "Provides access to the browser's debugging console (e.g.\u{a0}the Web Console in Firefox). The specifics of how it works varies\u{a0}from browser to browser, but there is a de facto set of features that are typically provided."]
     pub type Console;
     # [ wasm_bindgen ( method , getter , js_name = Console ) ]
-    pub fn console(this: &Console) -> ConsoleConstructor;
+    pub fn console(this: &Console) -> crate::node_js::ConsoleConstructor;
     # [ wasm_bindgen ( method , setter , js_name = Console ) ]
-    pub fn set_console(this: &Console, value: &ConsoleConstructor);
+    pub fn set_console(this: &Console, value: &crate::node_js::ConsoleConstructor);
     #[doc = "A simple assertion test that verifies whether `value` is truthy."]
     #[doc = "If it is not, an `AssertionError` is thrown."]
     #[doc = "If provided, the error `message` is formatted using `util.format()` and used as the error message."]
@@ -40,7 +40,7 @@ extern "C" {
     #[doc = "Uses {@link util.inspect()} on `obj` and prints the resulting string to `stdout`."]
     #[doc = "This function bypasses any custom `inspect()` function defined on `obj`."]
     #[wasm_bindgen(method)]
-    pub fn dir(this: &Console, obj: &JsValue, options: Option<&InspectOptions>);
+    pub fn dir(this: &Console, obj: &JsValue, options: Option<&crate::node_js::InspectOptions>);
     #[wasm_bindgen(method, setter)]
     pub fn set_dir(this: &Console, value: &Function);
     #[doc = "This method calls {@link console.log()} passing it the arguments received. Please note that this method does not produce any XML formatting"]
@@ -203,17 +203,17 @@ extern "C" {
     #[wasm_bindgen(js_name = "__dirname")]
     pub static DIRNAME: String;
     # [ wasm_bindgen ( js_name = setTimeout ) ]
-    pub fn set_timeout(callback: &JsValue, ms: f64, args: &Array) -> Timeout;
+    pub fn set_timeout(callback: &JsValue, ms: f64, args: &Array) -> crate::node_js::Timeout;
     # [ wasm_bindgen ( js_name = clearTimeout ) ]
-    pub fn clear_timeout(timeout_id: &Timeout);
+    pub fn clear_timeout(timeout_id: &crate::node_js::Timeout);
     # [ wasm_bindgen ( js_name = setInterval ) ]
-    pub fn set_interval(callback: &JsValue, ms: f64, args: &Array) -> Timeout;
+    pub fn set_interval(callback: &JsValue, ms: f64, args: &Array) -> crate::node_js::Timeout;
     # [ wasm_bindgen ( js_name = clearInterval ) ]
-    pub fn clear_interval(interval_id: &Timeout);
+    pub fn clear_interval(interval_id: &crate::node_js::Timeout);
     # [ wasm_bindgen ( js_name = setImmediate ) ]
-    pub fn set_immediate(callback: &JsValue, args: &Array) -> Immediate;
+    pub fn set_immediate(callback: &JsValue, args: &Array) -> crate::node_js::Immediate;
     # [ wasm_bindgen ( js_name = clearImmediate ) ]
-    pub fn clear_immediate(immediate_id: &Immediate);
+    pub fn clear_immediate(immediate_id: &crate::node_js::Immediate);
     # [ wasm_bindgen ( js_name = queueMicrotask ) ]
     pub fn queue_microtask(callback: &JsValue);
     pub type NodeRequireFunction;

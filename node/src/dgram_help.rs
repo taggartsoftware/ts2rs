@@ -21,13 +21,13 @@ impl SocketOptions {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<EventEmitter> for Socket {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::EventEmitter> for crate::dgram::Socket {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Socket> for EventEmitter {
-    fn from(child: Socket) -> Self {
+impl From<crate::dgram::Socket> for crate::node_js::EventEmitter {
+    fn from(child: crate::dgram::Socket) -> Self {
         JsCast::unchecked_into(child)
     }
 }

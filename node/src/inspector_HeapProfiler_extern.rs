@@ -9,9 +9,12 @@ extern "C" {
     pub type SamplingHeapProfileNode;
     #[doc = "Function location."]
     # [ wasm_bindgen ( method , getter , js_name = callFrame ) ]
-    pub fn call_frame(this: &SamplingHeapProfileNode) -> CallFrame;
+    pub fn call_frame(this: &SamplingHeapProfileNode) -> crate::inspector::runtime::CallFrame;
     # [ wasm_bindgen ( method , setter , js_name = callFrame ) ]
-    pub fn set_call_frame(this: &SamplingHeapProfileNode, value: &CallFrame);
+    pub fn set_call_frame(
+        this: &SamplingHeapProfileNode,
+        value: &crate::inspector::runtime::CallFrame,
+    );
     #[doc = "Allocations size in bytes for the node excluding children."]
     # [ wasm_bindgen ( method , getter , js_name = selfSize ) ]
     pub fn self_size(this: &SamplingHeapProfileNode) -> f64;
@@ -25,9 +28,14 @@ extern "C" {
     #[doc = "Profile."]
     pub type SamplingHeapProfile;
     #[wasm_bindgen(method, getter)]
-    pub fn head(this: &SamplingHeapProfile) -> SamplingHeapProfileNode;
+    pub fn head(
+        this: &SamplingHeapProfile,
+    ) -> crate::inspector::heap_profiler::SamplingHeapProfileNode;
     #[wasm_bindgen(method, setter)]
-    pub fn set_head(this: &SamplingHeapProfile, value: &SamplingHeapProfileNode);
+    pub fn set_head(
+        this: &SamplingHeapProfile,
+        value: &crate::inspector::heap_profiler::SamplingHeapProfileNode,
+    );
     pub type StartTrackingHeapObjectsParameterType;
     # [ wasm_bindgen ( method , getter , js_name = trackAllocations ) ]
     pub fn track_allocations(this: &StartTrackingHeapObjectsParameterType) -> Option<bool>;
@@ -47,9 +55,14 @@ extern "C" {
     pub fn set_report_progress(this: &TakeHeapSnapshotParameterType, value: Option<bool>);
     pub type GetObjectByHeapObjectIdParameterType;
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
-    pub fn object_id(this: &GetObjectByHeapObjectIdParameterType) -> HeapSnapshotObjectId;
+    pub fn object_id(
+        this: &GetObjectByHeapObjectIdParameterType,
+    ) -> crate::inspector::heap_profiler::HeapSnapshotObjectId;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
-    pub fn set_object_id(this: &GetObjectByHeapObjectIdParameterType, value: &HeapSnapshotObjectId);
+    pub fn set_object_id(
+        this: &GetObjectByHeapObjectIdParameterType,
+        value: &crate::inspector::heap_profiler::HeapSnapshotObjectId,
+    );
     #[doc = "Symbolic group name that can be used to release multiple objects."]
     # [ wasm_bindgen ( method , getter , js_name = objectGroup ) ]
     pub fn object_group(this: &GetObjectByHeapObjectIdParameterType) -> Option<String>;
@@ -58,18 +71,25 @@ extern "C" {
     pub type AddInspectedHeapObjectParameterType;
     #[doc = "Heap snapshot object id to be accessible by means of $x command line API."]
     # [ wasm_bindgen ( method , getter , js_name = heapObjectId ) ]
-    pub fn heap_object_id(this: &AddInspectedHeapObjectParameterType) -> HeapSnapshotObjectId;
+    pub fn heap_object_id(
+        this: &AddInspectedHeapObjectParameterType,
+    ) -> crate::inspector::heap_profiler::HeapSnapshotObjectId;
     # [ wasm_bindgen ( method , setter , js_name = heapObjectId ) ]
     pub fn set_heap_object_id(
         this: &AddInspectedHeapObjectParameterType,
-        value: &HeapSnapshotObjectId,
+        value: &crate::inspector::heap_profiler::HeapSnapshotObjectId,
     );
     pub type GetHeapObjectIdParameterType;
     #[doc = "Identifier of the object to get heap object id for."]
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
-    pub fn object_id(this: &GetHeapObjectIdParameterType) -> RemoteObjectId;
+    pub fn object_id(
+        this: &GetHeapObjectIdParameterType,
+    ) -> crate::inspector::runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
-    pub fn set_object_id(this: &GetHeapObjectIdParameterType, value: &RemoteObjectId);
+    pub fn set_object_id(
+        this: &GetHeapObjectIdParameterType,
+        value: &crate::inspector::runtime::RemoteObjectId,
+    );
     pub type StartSamplingParameterType;
     #[doc = "Average sample interval in bytes. Poisson distribution is used for the intervals. The default value is 32768 bytes."]
     # [ wasm_bindgen ( method , getter , js_name = samplingInterval ) ]
@@ -79,30 +99,47 @@ extern "C" {
     pub type GetObjectByHeapObjectIdReturnType;
     #[doc = "Evaluation result."]
     #[wasm_bindgen(method, getter)]
-    pub fn result(this: &GetObjectByHeapObjectIdReturnType) -> RemoteObject;
+    pub fn result(
+        this: &GetObjectByHeapObjectIdReturnType,
+    ) -> crate::inspector::runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_result(this: &GetObjectByHeapObjectIdReturnType, value: &RemoteObject);
+    pub fn set_result(
+        this: &GetObjectByHeapObjectIdReturnType,
+        value: &crate::inspector::runtime::RemoteObject,
+    );
     pub type GetHeapObjectIdReturnType;
     #[doc = "Id of the heap snapshot object corresponding to the passed remote object id."]
     # [ wasm_bindgen ( method , getter , js_name = heapSnapshotObjectId ) ]
-    pub fn heap_snapshot_object_id(this: &GetHeapObjectIdReturnType) -> HeapSnapshotObjectId;
+    pub fn heap_snapshot_object_id(
+        this: &GetHeapObjectIdReturnType,
+    ) -> crate::inspector::heap_profiler::HeapSnapshotObjectId;
     # [ wasm_bindgen ( method , setter , js_name = heapSnapshotObjectId ) ]
     pub fn set_heap_snapshot_object_id(
         this: &GetHeapObjectIdReturnType,
-        value: &HeapSnapshotObjectId,
+        value: &crate::inspector::heap_profiler::HeapSnapshotObjectId,
     );
     pub type StopSamplingReturnType;
     #[doc = "Recorded sampling heap profile."]
     #[wasm_bindgen(method, getter)]
-    pub fn profile(this: &StopSamplingReturnType) -> SamplingHeapProfile;
+    pub fn profile(
+        this: &StopSamplingReturnType,
+    ) -> crate::inspector::heap_profiler::SamplingHeapProfile;
     #[wasm_bindgen(method, setter)]
-    pub fn set_profile(this: &StopSamplingReturnType, value: &SamplingHeapProfile);
+    pub fn set_profile(
+        this: &StopSamplingReturnType,
+        value: &crate::inspector::heap_profiler::SamplingHeapProfile,
+    );
     pub type GetSamplingProfileReturnType;
     #[doc = "Return the sampling profile being collected."]
     #[wasm_bindgen(method, getter)]
-    pub fn profile(this: &GetSamplingProfileReturnType) -> SamplingHeapProfile;
+    pub fn profile(
+        this: &GetSamplingProfileReturnType,
+    ) -> crate::inspector::heap_profiler::SamplingHeapProfile;
     #[wasm_bindgen(method, setter)]
-    pub fn set_profile(this: &GetSamplingProfileReturnType, value: &SamplingHeapProfile);
+    pub fn set_profile(
+        this: &GetSamplingProfileReturnType,
+        value: &crate::inspector::heap_profiler::SamplingHeapProfile,
+    );
     pub type AddHeapSnapshotChunkEventDataType;
     #[wasm_bindgen(method, getter)]
     pub fn chunk(this: &AddHeapSnapshotChunkEventDataType) -> String;

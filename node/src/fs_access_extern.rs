@@ -5,5 +5,5 @@
 extern "C" {
     #[doc = "Asynchronously tests a user's permissions for the file specified by path."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike, mode: Option<f64>) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike, mode: Option<f64>) -> Promise;
 }

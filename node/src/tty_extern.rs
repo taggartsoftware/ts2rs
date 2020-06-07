@@ -7,7 +7,10 @@ extern "C" {
     pub fn isatty(fd: f64) -> bool;
     pub type ReadStream;
     #[wasm_bindgen(constructor)]
-    pub fn new_read_stream(fd: f64, options: Option<&SocketConstructorOpts>) -> ReadStream;
+    pub fn new_read_stream(
+        fd: f64,
+        options: Option<&crate::net::SocketConstructorOpts>,
+    ) -> ReadStream;
     # [ wasm_bindgen ( method , getter , js_name = isRaw ) ]
     pub fn is_raw(this: &ReadStream) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = isRaw ) ]
@@ -129,7 +132,7 @@ extern "C" {
     pub fn set_prepend_once_listener2(this: &WriteStream, value: &Function);
     #[doc = "Clears the current line of this WriteStream in a direction identified by `dir`."]
     # [ wasm_bindgen ( method , js_name = clearLine ) ]
-    pub fn clear_line(this: &WriteStream, dir: &Direction, callback: &JsValue) -> bool;
+    pub fn clear_line(this: &WriteStream, dir: &crate::tty::Direction, callback: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = clearLine ) ]
     pub fn set_clear_line(this: &WriteStream, value: &Function);
     #[doc = "Clears this `WriteStream` from the current cursor down."]

@@ -59,9 +59,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_peak_malloced_memory(this: &HeapInfo, value: f64);
     #[wasm_bindgen(method, getter)]
-    pub fn does_zap_garbage(this: &HeapInfo) -> DoesZapCodeSpaceFlag;
+    pub fn does_zap_garbage(this: &HeapInfo) -> crate::v8::DoesZapCodeSpaceFlag;
     #[wasm_bindgen(method, setter)]
-    pub fn set_does_zap_garbage(this: &HeapInfo, value: &DoesZapCodeSpaceFlag);
+    pub fn set_does_zap_garbage(this: &HeapInfo, value: &crate::v8::DoesZapCodeSpaceFlag);
     #[wasm_bindgen(method, getter)]
     pub fn number_of_native_contexts(this: &HeapInfo) -> f64;
     #[wasm_bindgen(method, setter)]
@@ -88,7 +88,7 @@ extern "C" {
     # [ wasm_bindgen ( js_name = cachedDataVersionTag ) ]
     pub fn cached_data_version_tag() -> f64;
     # [ wasm_bindgen ( js_name = getHeapStatistics ) ]
-    pub fn get_heap_statistics() -> HeapInfo;
+    pub fn get_heap_statistics() -> crate::v8::HeapInfo;
     # [ wasm_bindgen ( js_name = getHeapSpaceStatistics ) ]
     pub fn get_heap_space_statistics() -> Array;
     # [ wasm_bindgen ( js_name = setFlagsFromString ) ]
@@ -104,7 +104,7 @@ extern "C" {
     # [ wasm_bindgen ( js_name = writeHeapSnapshot ) ]
     pub fn write_heap_snapshot(file_name: Option<&str>) -> String;
     # [ wasm_bindgen ( js_name = getHeapCodeStatistics ) ]
-    pub fn get_heap_code_statistics() -> HeapCodeStatistics;
+    pub fn get_heap_code_statistics() -> crate::v8::HeapCodeStatistics;
     pub type Serializer;
     #[doc = "Writes out a header, which includes the serialization format version."]
     # [ wasm_bindgen ( method , js_name = writeHeader ) ]
@@ -148,7 +148,7 @@ extern "C" {
     #[doc = "Write raw bytes into the serializer’s internal buffer."]
     #[doc = "The deserializer will require a way to compute the length of the buffer."]
     # [ wasm_bindgen ( method , js_name = writeRawBytes ) ]
-    pub fn write_raw_bytes(this: &Serializer, buffer: &TypedArray);
+    pub fn write_raw_bytes(this: &Serializer, buffer: &crate::node_js::TypedArray);
     # [ wasm_bindgen ( method , setter , js_name = writeRawBytes ) ]
     pub fn set_write_raw_bytes(this: &Serializer, value: &Function);
     #[doc = "A subclass of `Serializer` that serializes `TypedArray` (in particular `Buffer`) and `DataView` objects as host objects,"]
@@ -156,7 +156,7 @@ extern "C" {
     pub type DefaultSerializer;
     pub type Deserializer;
     #[wasm_bindgen(constructor)]
-    pub fn new_deserializer(data: &TypedArray) -> Deserializer;
+    pub fn new_deserializer(data: &crate::node_js::TypedArray) -> Deserializer;
     #[doc = "Reads and validates a header (including the format version)."]
     #[doc = "May, for example, reject an invalid or unsupported wire format."]
     #[doc = "In that case, an Error is thrown."]
@@ -212,5 +212,5 @@ extern "C" {
     pub fn serialize(value: &JsValue) -> Buffer;
     #[doc = "Uses a `DefaultDeserializer` with default options to read a JS value from a buffer."]
     #[wasm_bindgen()]
-    pub fn deserialize(data: &TypedArray) -> JsValue;
+    pub fn deserialize(data: &crate::node_js::TypedArray) -> JsValue;
 }

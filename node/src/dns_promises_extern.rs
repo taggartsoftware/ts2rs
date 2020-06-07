@@ -8,11 +8,11 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn lookup(hostname: &str, family: f64) -> Promise;
     # [ wasm_bindgen ( js_name = lookup ) ]
-    pub fn lookup2(hostname: &str, options: &LookupOneOptions) -> Promise;
+    pub fn lookup2(hostname: &str, options: &crate::dns::LookupOneOptions) -> Promise;
     # [ wasm_bindgen ( js_name = lookup ) ]
-    pub fn lookup3(hostname: &str, options: &LookupAllOptions) -> Promise;
+    pub fn lookup3(hostname: &str, options: &crate::dns::LookupAllOptions) -> Promise;
     # [ wasm_bindgen ( js_name = lookup ) ]
-    pub fn lookup4(hostname: &str, options: &LookupOptions) -> Promise;
+    pub fn lookup4(hostname: &str, options: &crate::dns::LookupOptions) -> Promise;
     # [ wasm_bindgen ( js_name = lookup ) ]
     pub fn lookup5(hostname: &str) -> Promise;
     # [ wasm_bindgen ( js_name = lookupService ) ]
@@ -46,15 +46,15 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn resolve4(hostname: &str) -> Promise;
     # [ wasm_bindgen ( js_name = resolve4 ) ]
-    pub fn resolve42(hostname: &str, options: &ResolveWithTtlOptions) -> Promise;
+    pub fn resolve42(hostname: &str, options: &crate::dns::ResolveWithTtlOptions) -> Promise;
     # [ wasm_bindgen ( js_name = resolve4 ) ]
-    pub fn resolve43(hostname: &str, options: &ResolveOptions) -> Promise;
+    pub fn resolve43(hostname: &str, options: &crate::dns::ResolveOptions) -> Promise;
     #[wasm_bindgen()]
     pub fn resolve6(hostname: &str) -> Promise;
     # [ wasm_bindgen ( js_name = resolve6 ) ]
-    pub fn resolve62(hostname: &str, options: &ResolveWithTtlOptions) -> Promise;
+    pub fn resolve62(hostname: &str, options: &crate::dns::ResolveWithTtlOptions) -> Promise;
     # [ wasm_bindgen ( js_name = resolve6 ) ]
-    pub fn resolve63(hostname: &str, options: &ResolveOptions) -> Promise;
+    pub fn resolve63(hostname: &str, options: &crate::dns::ResolveOptions) -> Promise;
     # [ wasm_bindgen ( js_name = resolveAny ) ]
     pub fn resolve_any(hostname: &str) -> Promise;
     # [ wasm_bindgen ( js_name = resolveCname ) ]

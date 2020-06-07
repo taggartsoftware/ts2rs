@@ -5,5 +5,5 @@
 extern "C" {
     #[doc = "Asynchronous chmod(2) - Change permissions of a file."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike, mode: &JsValue) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike, mode: &JsValue) -> Promise;
 }

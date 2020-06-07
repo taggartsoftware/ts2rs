@@ -5,5 +5,5 @@
 extern "C" {
     #[doc = "Asynchronous chown(2) - Change ownership of a file."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike, uid: f64, gid: f64) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike, uid: f64, gid: f64) -> Promise;
 }

@@ -5,5 +5,5 @@
 extern "C" {
     #[doc = "Asynchronous lstat(2) - Get file status. Does not dereference symbolic links."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike) -> Promise;
 }

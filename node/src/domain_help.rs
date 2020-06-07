@@ -6,13 +6,23 @@ impl Domain {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<EventEmitter> for Domain {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::Domain> for crate::domain::Domain {
+    fn as_ref(&self) -> &crate::node_js::Domain {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Domain> for EventEmitter {
-    fn from(child: Domain) -> Self {
+impl From<crate::domain::Domain> for crate::node_js::Domain {
+    fn from(child: crate::domain::Domain) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<crate::node_js::EventEmitter> for crate::domain::Domain {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<crate::domain::Domain> for crate::node_js::EventEmitter {
+    fn from(child: crate::domain::Domain) -> Self {
         JsCast::unchecked_into(child)
     }
 }

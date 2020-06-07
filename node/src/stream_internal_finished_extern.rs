@@ -4,5 +4,8 @@
 #[wasm_bindgen(module = "finished")]
 extern "C" {
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(stream: &JsValue, options: Option<&FinishedOptions>) -> Promise;
+    pub fn promisify(
+        stream: &JsValue,
+        options: Option<&crate::internal::FinishedOptions>,
+    ) -> Promise;
 }

@@ -26,13 +26,23 @@ impl TextEncoder {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<Function> for CustomPromisify {
+impl AsRef<Function> for crate::util::CustomPromisify {
     fn as_ref(&self) -> &Function {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CustomPromisify> for Function {
-    fn from(child: CustomPromisify) -> Self {
+impl From<crate::util::CustomPromisify> for Function {
+    fn from(child: crate::util::CustomPromisify) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<crate::node_js::InspectOptions> for crate::util::InspectOptions {
+    fn as_ref(&self) -> &crate::node_js::InspectOptions {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<crate::util::InspectOptions> for crate::node_js::InspectOptions {
+    fn from(child: crate::util::InspectOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }

@@ -61,333 +61,143 @@ impl WritableOptions {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<EventEmitter> for Duplex {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::EventEmitter> for crate::internal::Duplex {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Duplex> for EventEmitter {
-    fn from(child: Duplex) -> Self {
+impl From<crate::internal::Duplex> for crate::node_js::EventEmitter {
+    fn from(child: crate::internal::Duplex) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for Duplex {
-    fn as_ref(&self) -> &Readable {
+impl AsRef<crate::node_js::ReadableStream> for crate::internal::Duplex {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Duplex> for Readable {
-    fn from(child: Duplex) -> Self {
+impl From<crate::internal::Duplex> for crate::node_js::ReadableStream {
+    fn from(child: crate::internal::Duplex) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ReadableStream> for Duplex {
-    fn as_ref(&self) -> &ReadableStream {
+impl AsRef<crate::node_js::WritableStream> for crate::internal::Duplex {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Duplex> for ReadableStream {
-    fn from(child: Duplex) -> Self {
+impl From<crate::internal::Duplex> for crate::node_js::WritableStream {
+    fn from(child: crate::internal::Duplex) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for Duplex {
-    fn as_ref(&self) -> &Stream {
+impl AsRef<crate::node_js::EventEmitter> for crate::internal::PassThrough {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Duplex> for Stream {
-    fn from(child: Duplex) -> Self {
+impl From<crate::internal::PassThrough> for crate::node_js::EventEmitter {
+    fn from(child: crate::internal::PassThrough) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Writable> for Duplex {
-    fn as_ref(&self) -> &Writable {
+impl AsRef<crate::node_js::ReadableStream> for crate::internal::PassThrough {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Duplex> for Writable {
-    fn from(child: Duplex) -> Self {
+impl From<crate::internal::PassThrough> for crate::node_js::ReadableStream {
+    fn from(child: crate::internal::PassThrough) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<WritableStream> for Duplex {
-    fn as_ref(&self) -> &WritableStream {
+impl AsRef<crate::node_js::WritableStream> for crate::internal::PassThrough {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<Duplex> for WritableStream {
-    fn from(child: Duplex) -> Self {
+impl From<crate::internal::PassThrough> for crate::node_js::WritableStream {
+    fn from(child: crate::internal::PassThrough) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ReadableOptions> for DuplexOptions {
-    fn as_ref(&self) -> &ReadableOptions {
+impl AsRef<crate::node_js::EventEmitter> for crate::internal::Readable {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<DuplexOptions> for ReadableOptions {
-    fn from(child: DuplexOptions) -> Self {
+impl From<crate::internal::Readable> for crate::node_js::EventEmitter {
+    fn from(child: crate::internal::Readable) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<WritableOptions> for DuplexOptions {
-    fn as_ref(&self) -> &WritableOptions {
+impl AsRef<crate::node_js::ReadableStream> for crate::internal::Readable {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<DuplexOptions> for WritableOptions {
-    fn from(child: DuplexOptions) -> Self {
+impl From<crate::internal::Readable> for crate::node_js::ReadableStream {
+    fn from(child: crate::internal::Readable) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Duplex> for PassThrough {
-    fn as_ref(&self) -> &Duplex {
+impl AsRef<crate::node_js::EventEmitter> for crate::internal::Stream {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<PassThrough> for Duplex {
-    fn from(child: PassThrough) -> Self {
+impl From<crate::internal::Stream> for crate::node_js::EventEmitter {
+    fn from(child: crate::internal::Stream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for PassThrough {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::node_js::EventEmitter> for crate::internal::Transform {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<PassThrough> for EventEmitter {
-    fn from(child: PassThrough) -> Self {
+impl From<crate::internal::Transform> for crate::node_js::EventEmitter {
+    fn from(child: crate::internal::Transform) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for PassThrough {
-    fn as_ref(&self) -> &Readable {
+impl AsRef<crate::node_js::ReadableStream> for crate::internal::Transform {
+    fn as_ref(&self) -> &crate::node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<PassThrough> for Readable {
-    fn from(child: PassThrough) -> Self {
+impl From<crate::internal::Transform> for crate::node_js::ReadableStream {
+    fn from(child: crate::internal::Transform) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ReadableStream> for PassThrough {
-    fn as_ref(&self) -> &ReadableStream {
+impl AsRef<crate::node_js::WritableStream> for crate::internal::Transform {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<PassThrough> for ReadableStream {
-    fn from(child: PassThrough) -> Self {
+impl From<crate::internal::Transform> for crate::node_js::WritableStream {
+    fn from(child: crate::internal::Transform) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for PassThrough {
-    fn as_ref(&self) -> &Stream {
+impl AsRef<crate::node_js::EventEmitter> for crate::internal::Writable {
+    fn as_ref(&self) -> &crate::node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<PassThrough> for Stream {
-    fn from(child: PassThrough) -> Self {
+impl From<crate::internal::Writable> for crate::node_js::EventEmitter {
+    fn from(child: crate::internal::Writable) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Transform> for PassThrough {
-    fn as_ref(&self) -> &Transform {
+impl AsRef<crate::node_js::WritableStream> for crate::internal::Writable {
+    fn as_ref(&self) -> &crate::node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<PassThrough> for Transform {
-    fn from(child: PassThrough) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for PassThrough {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<PassThrough> for Writable {
-    fn from(child: PassThrough) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableStream> for PassThrough {
-    fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<PassThrough> for WritableStream {
-    fn from(child: PassThrough) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Readable {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Readable> for EventEmitter {
-    fn from(child: Readable) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ReadableStream> for Readable {
-    fn as_ref(&self) -> &ReadableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Readable> for ReadableStream {
-    fn from(child: Readable) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Readable {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Readable> for Stream {
-    fn from(child: Readable) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Stream {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Stream> for EventEmitter {
-    fn from(child: Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for Transform {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Transform> for Duplex {
-    fn from(child: Transform) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Transform {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Transform> for EventEmitter {
-    fn from(child: Transform) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Readable> for Transform {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Transform> for Readable {
-    fn from(child: Transform) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ReadableStream> for Transform {
-    fn as_ref(&self) -> &ReadableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Transform> for ReadableStream {
-    fn from(child: Transform) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Transform {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Transform> for Stream {
-    fn from(child: Transform) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Transform {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Transform> for Writable {
-    fn from(child: Transform) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableStream> for Transform {
-    fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Transform> for WritableStream {
-    fn from(child: Transform) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<DuplexOptions> for TransformOptions {
-    fn as_ref(&self) -> &DuplexOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TransformOptions> for DuplexOptions {
-    fn from(child: TransformOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ReadableOptions> for TransformOptions {
-    fn as_ref(&self) -> &ReadableOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TransformOptions> for ReadableOptions {
-    fn from(child: TransformOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableOptions> for TransformOptions {
-    fn as_ref(&self) -> &WritableOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TransformOptions> for WritableOptions {
-    fn from(child: TransformOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Writable {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Writable> for EventEmitter {
-    fn from(child: Writable) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Writable {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Writable> for Stream {
-    fn from(child: Writable) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableStream> for Writable {
-    fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Writable> for WritableStream {
-    fn from(child: Writable) -> Self {
+impl From<crate::internal::Writable> for crate::node_js::WritableStream {
+    fn from(child: crate::internal::Writable) -> Self {
         JsCast::unchecked_into(child)
     }
 }

@@ -16,9 +16,12 @@ extern "C" {
     pub fn set_included_categories(this: &TraceConfig, value: &Array);
     pub type StartParameterType;
     # [ wasm_bindgen ( method , getter , js_name = traceConfig ) ]
-    pub fn trace_config(this: &StartParameterType) -> TraceConfig;
+    pub fn trace_config(this: &StartParameterType) -> crate::inspector::node_tracing::TraceConfig;
     # [ wasm_bindgen ( method , setter , js_name = traceConfig ) ]
-    pub fn set_trace_config(this: &StartParameterType, value: &TraceConfig);
+    pub fn set_trace_config(
+        this: &StartParameterType,
+        value: &crate::inspector::node_tracing::TraceConfig,
+    );
     pub type GetCategoriesReturnType;
     #[doc = "A list of supported tracing categories."]
     #[wasm_bindgen(method, getter)]

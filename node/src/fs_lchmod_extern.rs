@@ -5,5 +5,5 @@
 extern "C" {
     #[doc = "Asynchronous lchmod(2) - Change permissions of a file. Does not dereference symbolic links."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike, mode: &JsValue) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike, mode: &JsValue) -> Promise;
 }

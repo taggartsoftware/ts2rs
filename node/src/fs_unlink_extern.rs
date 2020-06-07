@@ -5,5 +5,5 @@
 extern "C" {
     #[doc = "Asynchronous unlink(2) - delete a name and possibly the file it refers to."]
     # [ wasm_bindgen ( js_name = __promisify__ ) ]
-    pub fn promisify(path: &PathLike) -> Promise;
+    pub fn promisify(path: &crate::fs::PathLike) -> Promise;
 }
