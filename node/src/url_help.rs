@@ -36,33 +36,33 @@ impl UrlWithStringQuery {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<Iterable> for crate::url::URLSearchParams {
+impl AsRef<Iterable> for URLSearchParams {
     fn as_ref(&self) -> &Iterable {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::url::URLSearchParams> for Iterable {
-    fn from(child: crate::url::URLSearchParams) -> Self {
+impl From<URLSearchParams> for Iterable {
+    fn from(child: URLSearchParams) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::url::Url> for crate::url::UrlWithParsedQuery {
-    fn as_ref(&self) -> &crate::url::Url {
+impl AsRef<Url> for UrlWithParsedQuery {
+    fn as_ref(&self) -> &Url {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::url::UrlWithParsedQuery> for crate::url::Url {
-    fn from(child: crate::url::UrlWithParsedQuery) -> Self {
+impl From<UrlWithParsedQuery> for Url {
+    fn from(child: UrlWithParsedQuery) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::url::Url> for crate::url::UrlWithStringQuery {
-    fn as_ref(&self) -> &crate::url::Url {
+impl AsRef<Url> for UrlWithStringQuery {
+    fn as_ref(&self) -> &Url {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::url::UrlWithStringQuery> for crate::url::Url {
-    fn from(child: crate::url::UrlWithStringQuery) -> Self {
+impl From<UrlWithStringQuery> for Url {
+    fn from(child: UrlWithStringQuery) -> Self {
         JsCast::unchecked_into(child)
     }
 }

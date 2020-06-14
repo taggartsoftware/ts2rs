@@ -36,23 +36,23 @@ impl PerformanceObserverEntryList {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<crate::perf_hooks::PerformanceEntry> for crate::perf_hooks::PerformanceNodeTiming {
-    fn as_ref(&self) -> &crate::perf_hooks::PerformanceEntry {
+impl AsRef<PerformanceEntry> for PerformanceNodeTiming {
+    fn as_ref(&self) -> &PerformanceEntry {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::perf_hooks::PerformanceNodeTiming> for crate::perf_hooks::PerformanceEntry {
-    fn from(child: crate::perf_hooks::PerformanceNodeTiming) -> Self {
+impl From<PerformanceNodeTiming> for PerformanceEntry {
+    fn from(child: PerformanceNodeTiming) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<AsyncResource> for crate::perf_hooks::PerformanceObserver {
-    fn as_ref(&self) -> &AsyncResource {
+impl AsRef<crate::async_hooks::AsyncResource> for PerformanceObserver {
+    fn as_ref(&self) -> &crate::async_hooks::AsyncResource {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::perf_hooks::PerformanceObserver> for AsyncResource {
-    fn from(child: crate::perf_hooks::PerformanceObserver) -> Self {
+impl From<PerformanceObserver> for crate::async_hooks::AsyncResource {
+    fn from(child: PerformanceObserver) -> Self {
         JsCast::unchecked_into(child)
     }
 }

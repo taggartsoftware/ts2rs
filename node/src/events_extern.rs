@@ -19,4 +19,89 @@ extern "C" {
     ) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = addEventListener ) ]
     pub fn set_add_event_listener(this: &DOMEventTarget, value: &Function);
+    #[wasm_bindgen()]
+    pub fn once(emitter: &NodeEventTarget, event: &JsValue) -> Promise;
+    # [ wasm_bindgen ( js_name = once ) ]
+    pub fn once2(emitter: &DOMEventTarget, event: &str) -> Promise;
+    pub type EventEmitter;
+    # [ wasm_bindgen ( method , js_name = listenerCount ) ]
+    pub fn listener_count(this: &EventEmitter, emitter: &EventEmitter, event: &JsValue) -> f64;
+    # [ wasm_bindgen ( method , setter , js_name = listenerCount ) ]
+    pub fn set_listener_count(this: &EventEmitter, value: &Function);
+    # [ wasm_bindgen ( method , getter , js_name = defaultMaxListeners ) ]
+    pub fn default_max_listeners(this: &EventEmitter) -> f64;
+    # [ wasm_bindgen ( method , setter , js_name = defaultMaxListeners ) ]
+    pub fn set_default_max_listeners(this: &EventEmitter, value: f64);
+    # [ wasm_bindgen ( method , js_name = addListener ) ]
+    pub fn add_listener(this: &EventEmitter, event: &JsValue, listener: &JsValue) -> EventEmitter;
+    # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
+    pub fn set_add_listener(this: &EventEmitter, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn on(this: &EventEmitter, event: &JsValue, listener: &JsValue) -> EventEmitter;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_on(this: &EventEmitter, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn once(this: &EventEmitter, event: &JsValue, listener: &JsValue) -> EventEmitter;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_once(this: &EventEmitter, value: &Function);
+    # [ wasm_bindgen ( method , js_name = prependListener ) ]
+    pub fn prepend_listener(
+        this: &EventEmitter,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> EventEmitter;
+    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
+    pub fn set_prepend_listener(this: &EventEmitter, value: &Function);
+    # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
+    pub fn prepend_once_listener(
+        this: &EventEmitter,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> EventEmitter;
+    # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
+    pub fn set_prepend_once_listener(this: &EventEmitter, value: &Function);
+    # [ wasm_bindgen ( method , js_name = removeListener ) ]
+    pub fn remove_listener(
+        this: &EventEmitter,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> EventEmitter;
+    # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
+    pub fn set_remove_listener(this: &EventEmitter, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn off(this: &EventEmitter, event: &JsValue, listener: &JsValue) -> EventEmitter;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_off(this: &EventEmitter, value: &Function);
+    # [ wasm_bindgen ( method , js_name = removeAllListeners ) ]
+    pub fn remove_all_listeners(this: &EventEmitter, event: &JsValue) -> EventEmitter;
+    # [ wasm_bindgen ( method , setter , js_name = removeAllListeners ) ]
+    pub fn set_remove_all_listeners(this: &EventEmitter, value: &Function);
+    # [ wasm_bindgen ( method , js_name = setMaxListeners ) ]
+    pub fn set_max_listeners(this: &EventEmitter, n: f64) -> EventEmitter;
+    # [ wasm_bindgen ( method , setter , js_name = setMaxListeners ) ]
+    pub fn set_set_max_listeners(this: &EventEmitter, value: &Function);
+    # [ wasm_bindgen ( method , js_name = getMaxListeners ) ]
+    pub fn get_max_listeners(this: &EventEmitter) -> f64;
+    # [ wasm_bindgen ( method , setter , js_name = getMaxListeners ) ]
+    pub fn set_get_max_listeners(this: &EventEmitter, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn listeners(this: &EventEmitter, event: &JsValue) -> Array;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_listeners(this: &EventEmitter, value: &Function);
+    # [ wasm_bindgen ( method , js_name = rawListeners ) ]
+    pub fn raw_listeners(this: &EventEmitter, event: &JsValue) -> Array;
+    # [ wasm_bindgen ( method , setter , js_name = rawListeners ) ]
+    pub fn set_raw_listeners(this: &EventEmitter, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn emit(this: &EventEmitter, event: &JsValue, args: &Array) -> bool;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_emit(this: &EventEmitter, value: &Function);
+    # [ wasm_bindgen ( method , js_name = eventNames ) ]
+    pub fn event_names(this: &EventEmitter) -> Array;
+    # [ wasm_bindgen ( method , setter , js_name = eventNames ) ]
+    pub fn set_event_names(this: &EventEmitter, value: &Function);
+    # [ wasm_bindgen ( method , js_name = listenerCount ) ]
+    pub fn listener_count2(this: &EventEmitter, type_: &JsValue) -> f64;
+    # [ wasm_bindgen ( method , setter , js_name = listenerCount ) ]
+    pub fn set_listener_count2(this: &EventEmitter, value: &Function);
 }

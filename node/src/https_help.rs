@@ -16,83 +16,83 @@ impl Server {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<crate::http::Agent> for crate::https::Agent {
+impl AsRef<crate::http::Agent> for Agent {
     fn as_ref(&self) -> &crate::http::Agent {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::https::Agent> for crate::http::Agent {
-    fn from(child: crate::https::Agent) -> Self {
+impl From<Agent> for crate::http::Agent {
+    fn from(child: Agent) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::http::AgentOptions> for crate::https::AgentOptions {
+impl AsRef<CommonConnectionOptions> for AgentOptions {
+    fn as_ref(&self) -> &CommonConnectionOptions {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<AgentOptions> for CommonConnectionOptions {
+    fn from(child: AgentOptions) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<SecureContextOptions> for AgentOptions {
+    fn as_ref(&self) -> &SecureContextOptions {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<AgentOptions> for SecureContextOptions {
+    fn from(child: AgentOptions) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<crate::http::AgentOptions> for AgentOptions {
     fn as_ref(&self) -> &crate::http::AgentOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::https::AgentOptions> for crate::http::AgentOptions {
-    fn from(child: crate::https::AgentOptions) -> Self {
+impl From<AgentOptions> for crate::http::AgentOptions {
+    fn from(child: AgentOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::tls::CommonConnectionOptions> for crate::https::AgentOptions {
-    fn as_ref(&self) -> &crate::tls::CommonConnectionOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<crate::https::AgentOptions> for crate::tls::CommonConnectionOptions {
-    fn from(child: crate::https::AgentOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<crate::tls::ConnectionOptions> for crate::https::AgentOptions {
+impl AsRef<crate::tls::ConnectionOptions> for AgentOptions {
     fn as_ref(&self) -> &crate::tls::ConnectionOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::https::AgentOptions> for crate::tls::ConnectionOptions {
-    fn from(child: crate::https::AgentOptions) -> Self {
+impl From<AgentOptions> for crate::tls::ConnectionOptions {
+    fn from(child: AgentOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::tls::SecureContextOptions> for crate::https::AgentOptions {
-    fn as_ref(&self) -> &crate::tls::SecureContextOptions {
+impl AsRef<node_js::EventEmitter> for Server {
+    fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::https::AgentOptions> for crate::tls::SecureContextOptions {
-    fn from(child: crate::https::AgentOptions) -> Self {
+impl From<Server> for node_js::EventEmitter {
+    fn from(child: Server) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::node_js::EventEmitter> for crate::https::Server {
-    fn as_ref(&self) -> &crate::node_js::EventEmitter {
+impl AsRef<net::Server> for Server {
+    fn as_ref(&self) -> &net::Server {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::https::Server> for crate::node_js::EventEmitter {
-    fn from(child: crate::https::Server) -> Self {
+impl From<Server> for net::Server {
+    fn from(child: Server) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::net::Server> for crate::https::Server {
-    fn as_ref(&self) -> &crate::net::Server {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<crate::https::Server> for crate::net::Server {
-    fn from(child: crate::https::Server) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<crate::tls::Server> for crate::https::Server {
+impl AsRef<crate::tls::Server> for Server {
     fn as_ref(&self) -> &crate::tls::Server {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::https::Server> for crate::tls::Server {
-    fn from(child: crate::https::Server) -> Self {
+impl From<Server> for crate::tls::Server {
+    fn from(child: Server) -> Self {
         JsCast::unchecked_into(child)
     }
 }

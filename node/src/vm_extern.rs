@@ -75,9 +75,9 @@ extern "C" {
     pub fn set_produce_cached_data(this: &CompileFunctionOptions, value: Option<bool>);
     #[doc = "The sandbox/context in which the said function should be compiled in."]
     # [ wasm_bindgen ( method , getter , js_name = parsingContext ) ]
-    pub fn parsing_context(this: &CompileFunctionOptions) -> Option<crate::vm::Context>;
+    pub fn parsing_context(this: &CompileFunctionOptions) -> Option<Context>;
     # [ wasm_bindgen ( method , setter , js_name = parsingContext ) ]
-    pub fn set_parsing_context(this: &CompileFunctionOptions, value: Option<&crate::vm::Context>);
+    pub fn set_parsing_context(this: &CompileFunctionOptions, value: Option<&Context>);
     #[doc = "An array containing a collection of context extensions (objects wrapping the current scope) to be applied while compiling"]
     # [ wasm_bindgen ( method , getter , js_name = contextExtensions ) ]
     pub fn context_extensions(this: &CompileFunctionOptions) -> Option<Array>;
@@ -103,28 +103,25 @@ extern "C" {
     pub fn set_code_generation(this: &CreateContextOptions, value: &JsValue);
     pub type Script;
     #[wasm_bindgen(constructor)]
-    pub fn new_script(code: &str, options: Option<&crate::vm::ScriptOptions>) -> Script;
+    pub fn new_script(code: &str, options: Option<&ScriptOptions>) -> Script;
     # [ wasm_bindgen ( method , js_name = runInContext ) ]
     pub fn run_in_context(
         this: &Script,
-        contextified_sandbox: &crate::vm::Context,
-        options: Option<&crate::vm::RunningScriptOptions>,
+        contextified_sandbox: &Context,
+        options: Option<&RunningScriptOptions>,
     ) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = runInContext ) ]
     pub fn set_run_in_context(this: &Script, value: &Function);
     # [ wasm_bindgen ( method , js_name = runInNewContext ) ]
     pub fn run_in_new_context(
         this: &Script,
-        sandbox: Option<&crate::vm::Context>,
-        options: Option<&crate::vm::RunningScriptOptions>,
+        sandbox: Option<&Context>,
+        options: Option<&RunningScriptOptions>,
     ) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = runInNewContext ) ]
     pub fn set_run_in_new_context(this: &Script, value: &Function);
     # [ wasm_bindgen ( method , js_name = runInThisContext ) ]
-    pub fn run_in_this_context(
-        this: &Script,
-        options: Option<&crate::vm::RunningScriptOptions>,
-    ) -> JsValue;
+    pub fn run_in_this_context(this: &Script, options: Option<&RunningScriptOptions>) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = runInThisContext ) ]
     pub fn set_run_in_this_context(this: &Script, value: &Function);
     # [ wasm_bindgen ( method , js_name = createCachedData ) ]
@@ -133,29 +130,22 @@ extern "C" {
     pub fn set_create_cached_data(this: &Script, value: &Function);
     # [ wasm_bindgen ( js_name = createContext ) ]
     pub fn create_context(
-        sandbox: Option<&crate::vm::Context>,
-        options: Option<&crate::vm::CreateContextOptions>,
-    ) -> crate::vm::Context;
+        sandbox: Option<&Context>,
+        options: Option<&CreateContextOptions>,
+    ) -> Context;
     # [ wasm_bindgen ( js_name = isContext ) ]
-    pub fn is_context(sandbox: &crate::vm::Context) -> bool;
+    pub fn is_context(sandbox: &Context) -> bool;
     # [ wasm_bindgen ( js_name = runInContext ) ]
-    pub fn run_in_context(
-        code: &str,
-        contextified_sandbox: &crate::vm::Context,
-        options: &JsValue,
-    ) -> JsValue;
+    pub fn run_in_context(code: &str, contextified_sandbox: &Context, options: &JsValue)
+    -> JsValue;
     # [ wasm_bindgen ( js_name = runInNewContext ) ]
-    pub fn run_in_new_context(
-        code: &str,
-        sandbox: Option<&crate::vm::Context>,
-        options: &JsValue,
-    ) -> JsValue;
+    pub fn run_in_new_context(code: &str, sandbox: Option<&Context>, options: &JsValue) -> JsValue;
     # [ wasm_bindgen ( js_name = runInThisContext ) ]
     pub fn run_in_this_context(code: &str, options: &JsValue) -> JsValue;
     # [ wasm_bindgen ( js_name = compileFunction ) ]
     pub fn compile_function(
         code: &str,
         params: Option<&Array>,
-        options: Option<&crate::vm::CompileFunctionOptions>,
+        options: Option<&CompileFunctionOptions>,
     ) -> Function;
 }

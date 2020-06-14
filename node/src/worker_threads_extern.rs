@@ -14,9 +14,9 @@ extern "C" {
     pub static WORKER_DATA: String;
     pub type MessageChannel;
     #[wasm_bindgen(method, getter)]
-    pub fn port1(this: &MessageChannel) -> crate::worker_threads::MessagePort;
+    pub fn port1(this: &MessageChannel) -> MessagePort;
     #[wasm_bindgen(method, getter)]
-    pub fn port2(this: &MessageChannel) -> crate::worker_threads::MessagePort;
+    pub fn port2(this: &MessageChannel) -> MessagePort;
     pub type MessagePort;
     #[wasm_bindgen(method)]
     pub fn close(this: &MessagePort);
@@ -190,16 +190,13 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn stdin(this: &Worker) -> JsValue;
     #[wasm_bindgen(method, getter)]
-    pub fn stdout(this: &Worker) -> Readable;
+    pub fn stdout(this: &Worker) -> crate::stream::Readable;
     #[wasm_bindgen(method, getter)]
-    pub fn stderr(this: &Worker) -> Readable;
+    pub fn stderr(this: &Worker) -> crate::stream::Readable;
     # [ wasm_bindgen ( method , getter , js_name = threadId ) ]
     pub fn thread_id(this: &Worker) -> f64;
     #[wasm_bindgen(constructor)]
-    pub fn new_worker(
-        filename: &str,
-        options: Option<&crate::worker_threads::WorkerOptions>,
-    ) -> Worker;
+    pub fn new_worker(filename: &str, options: Option<&WorkerOptions>) -> Worker;
     # [ wasm_bindgen ( method , js_name = postMessage ) ]
     pub fn post_message(this: &Worker, value: &JsValue, transfer_list: Option<&Array>);
     # [ wasm_bindgen ( method , setter , js_name = postMessage ) ]
@@ -392,13 +389,13 @@ extern "C" {
     #[doc = "events using it."]
     # [ wasm_bindgen ( js_name = moveMessagePortToContext ) ]
     pub fn move_message_port_to_context(
-        port: &crate::worker_threads::MessagePort,
-        context: &Context,
-    ) -> crate::worker_threads::MessagePort;
+        port: &MessagePort,
+        context: &crate::vm::Context,
+    ) -> MessagePort;
     #[doc = "Receive a single message from a given `MessagePort`. If no message is available,"]
     #[doc = "`undefined` is returned, otherwise an object with a single `message` property"]
     #[doc = "that contains the message payload, corresponding to the oldest message in the"]
     #[doc = "`MessagePort`’s queue."]
     # [ wasm_bindgen ( js_name = receiveMessageOnPort ) ]
-    pub fn receive_message_on_port(port: &crate::worker_threads::MessagePort) -> JsValue;
+    pub fn receive_message_on_port(port: &MessagePort) -> JsValue;
 }

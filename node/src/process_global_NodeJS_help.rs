@@ -11,103 +11,183 @@ impl WriteStream {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<crate::node_js::EventEmitter> for crate::global::node_js::ReadStream {
-    fn as_ref(&self) -> &crate::node_js::EventEmitter {
+impl AsRef<EventEmitter> for ReadStream {
+    fn as_ref(&self) -> &EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::global::node_js::ReadStream> for crate::node_js::EventEmitter {
-    fn from(child: crate::global::node_js::ReadStream) -> Self {
+impl From<ReadStream> for EventEmitter {
+    fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::node_js::ReadableStream> for crate::global::node_js::ReadStream {
-    fn as_ref(&self) -> &crate::node_js::ReadableStream {
+impl AsRef<node_js::EventEmitter> for ReadStream {
+    fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::global::node_js::ReadStream> for crate::node_js::ReadableStream {
-    fn from(child: crate::global::node_js::ReadStream) -> Self {
+impl From<ReadStream> for node_js::EventEmitter {
+    fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::node_js::WritableStream> for crate::global::node_js::ReadStream {
-    fn as_ref(&self) -> &crate::node_js::WritableStream {
+impl AsRef<node_js::ReadableStream> for ReadStream {
+    fn as_ref(&self) -> &node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::global::node_js::ReadStream> for crate::node_js::WritableStream {
-    fn from(child: crate::global::node_js::ReadStream) -> Self {
+impl From<ReadStream> for node_js::ReadableStream {
+    fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::net::Socket> for crate::global::node_js::ReadStream {
-    fn as_ref(&self) -> &crate::net::Socket {
+impl AsRef<node_js::WritableStream> for ReadStream {
+    fn as_ref(&self) -> &node_js::WritableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::global::node_js::ReadStream> for crate::net::Socket {
-    fn from(child: crate::global::node_js::ReadStream) -> Self {
+impl From<ReadStream> for node_js::WritableStream {
+    fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::tty::ReadStream> for crate::global::node_js::ReadStream {
-    fn as_ref(&self) -> &crate::tty::ReadStream {
+impl AsRef<Readable> for ReadStream {
+    fn as_ref(&self) -> &Readable {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::global::node_js::ReadStream> for crate::tty::ReadStream {
-    fn from(child: crate::global::node_js::ReadStream) -> Self {
+impl From<ReadStream> for Readable {
+    fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::node_js::EventEmitter> for crate::global::node_js::WriteStream {
-    fn as_ref(&self) -> &crate::node_js::EventEmitter {
+impl AsRef<Stream> for ReadStream {
+    fn as_ref(&self) -> &Stream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::global::node_js::WriteStream> for crate::node_js::EventEmitter {
-    fn from(child: crate::global::node_js::WriteStream) -> Self {
+impl From<ReadStream> for Stream {
+    fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::node_js::ReadableStream> for crate::global::node_js::WriteStream {
-    fn as_ref(&self) -> &crate::node_js::ReadableStream {
+impl AsRef<Writable> for ReadStream {
+    fn as_ref(&self) -> &Writable {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::global::node_js::WriteStream> for crate::node_js::ReadableStream {
-    fn from(child: crate::global::node_js::WriteStream) -> Self {
+impl From<ReadStream> for Writable {
+    fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::node_js::WritableStream> for crate::global::node_js::WriteStream {
-    fn as_ref(&self) -> &crate::node_js::WritableStream {
+impl AsRef<net::Socket> for ReadStream {
+    fn as_ref(&self) -> &net::Socket {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::global::node_js::WriteStream> for crate::node_js::WritableStream {
-    fn from(child: crate::global::node_js::WriteStream) -> Self {
+impl From<ReadStream> for net::Socket {
+    fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::net::Socket> for crate::global::node_js::WriteStream {
-    fn as_ref(&self) -> &crate::net::Socket {
+impl AsRef<tty::ReadStream> for ReadStream {
+    fn as_ref(&self) -> &tty::ReadStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::global::node_js::WriteStream> for crate::net::Socket {
-    fn from(child: crate::global::node_js::WriteStream) -> Self {
+impl From<ReadStream> for tty::ReadStream {
+    fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::tty::WriteStream> for crate::global::node_js::WriteStream {
-    fn as_ref(&self) -> &crate::tty::WriteStream {
+impl AsRef<EventEmitter> for WriteStream {
+    fn as_ref(&self) -> &EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::global::node_js::WriteStream> for crate::tty::WriteStream {
-    fn from(child: crate::global::node_js::WriteStream) -> Self {
+impl From<WriteStream> for EventEmitter {
+    fn from(child: WriteStream) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<node_js::EventEmitter> for WriteStream {
+    fn as_ref(&self) -> &node_js::EventEmitter {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<WriteStream> for node_js::EventEmitter {
+    fn from(child: WriteStream) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<node_js::ReadableStream> for WriteStream {
+    fn as_ref(&self) -> &node_js::ReadableStream {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<WriteStream> for node_js::ReadableStream {
+    fn from(child: WriteStream) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<node_js::WritableStream> for WriteStream {
+    fn as_ref(&self) -> &node_js::WritableStream {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<WriteStream> for node_js::WritableStream {
+    fn from(child: WriteStream) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<Readable> for WriteStream {
+    fn as_ref(&self) -> &Readable {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<WriteStream> for Readable {
+    fn from(child: WriteStream) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<Stream> for WriteStream {
+    fn as_ref(&self) -> &Stream {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<WriteStream> for Stream {
+    fn from(child: WriteStream) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<Writable> for WriteStream {
+    fn as_ref(&self) -> &Writable {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<WriteStream> for Writable {
+    fn from(child: WriteStream) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<net::Socket> for WriteStream {
+    fn as_ref(&self) -> &net::Socket {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<WriteStream> for net::Socket {
+    fn from(child: WriteStream) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<tty::WriteStream> for WriteStream {
+    fn as_ref(&self) -> &tty::WriteStream {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<WriteStream> for tty::WriteStream {
+    fn from(child: WriteStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }

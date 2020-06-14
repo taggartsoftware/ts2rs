@@ -56,9 +56,7 @@ extern "C" {
     pub fn set_disable(this: &AsyncHook, value: &Function);
     #[doc = "Registers functions to be called for different lifetime events of each async operation."]
     # [ wasm_bindgen ( js_name = createHook ) ]
-    pub fn create_hook(
-        options: &crate::async_hooks::HookCallbacks,
-    ) -> crate::async_hooks::AsyncHook;
+    pub fn create_hook(options: &HookCallbacks) -> AsyncHook;
     pub type AsyncResourceOptions;
     #[doc = "The ID of the execution context that created this async event."]
     #[doc = "Default: `executionAsyncId()`"]

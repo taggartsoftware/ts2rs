@@ -103,36 +103,36 @@ extern "C" {
     pub fn set_query(this: &Url, value: &JsValue);
     pub type UrlWithParsedQuery;
     #[wasm_bindgen(method, getter)]
-    pub fn query(this: &UrlWithParsedQuery) -> ParsedUrlQuery;
+    pub fn query(this: &UrlWithParsedQuery) -> crate::querystring::ParsedUrlQuery;
     #[wasm_bindgen(method, setter)]
-    pub fn set_query(this: &UrlWithParsedQuery, value: &ParsedUrlQuery);
+    pub fn set_query(this: &UrlWithParsedQuery, value: &crate::querystring::ParsedUrlQuery);
     pub type UrlWithStringQuery;
     #[wasm_bindgen(method, getter)]
     pub fn query(this: &UrlWithStringQuery) -> JsValue;
     #[wasm_bindgen(method, setter)]
     pub fn set_query(this: &UrlWithStringQuery, value: &JsValue);
     #[wasm_bindgen()]
-    pub fn parse(url_str: &str) -> crate::url::UrlWithStringQuery;
+    pub fn parse(url_str: &str) -> UrlWithStringQuery;
     # [ wasm_bindgen ( js_name = parse ) ]
     pub fn parse2(
         url_str: &str,
         parse_query_string: &JsValue,
         slashes_denote_host: Option<bool>,
-    ) -> crate::url::UrlWithStringQuery;
+    ) -> UrlWithStringQuery;
     # [ wasm_bindgen ( js_name = parse ) ]
     pub fn parse3(
         url_str: &str,
         parse_query_string: &JsValue,
         slashes_denote_host: Option<bool>,
-    ) -> crate::url::UrlWithParsedQuery;
+    ) -> UrlWithParsedQuery;
     # [ wasm_bindgen ( js_name = parse ) ]
     pub fn parse4(
         url_str: &str,
         parse_query_string: bool,
         slashes_denote_host: Option<bool>,
-    ) -> crate::url::Url;
+    ) -> Url;
     #[wasm_bindgen()]
-    pub fn format(url: &crate::url::URL, options: Option<&crate::url::URLFormatOptions>) -> String;
+    pub fn format(url: &URL, options: Option<&URLFormatOptions>) -> String;
     # [ wasm_bindgen ( js_name = format ) ]
     pub fn format2(url_object: &JsValue) -> String;
     #[wasm_bindgen()]
@@ -148,7 +148,7 @@ extern "C" {
     #[doc = "This function ensures that path is resolved absolutely, and that the URL"]
     #[doc = "control characters are correctly encoded when converting into a File URL."]
     # [ wasm_bindgen ( js_name = pathToFileURL ) ]
-    pub fn path_to_file_url(url: &str) -> crate::url::URL;
+    pub fn path_to_file_url(url: &str) -> URL;
     pub type URLFormatOptions;
     #[wasm_bindgen(method, getter)]
     pub fn auth(this: &URLFormatOptions) -> Option<bool>;
@@ -208,7 +208,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_search(this: &URL, value: &str);
     # [ wasm_bindgen ( method , getter , js_name = searchParams ) ]
-    pub fn search_params(this: &URL) -> crate::url::URLSearchParams;
+    pub fn search_params(this: &URL) -> URLSearchParams;
     #[wasm_bindgen(method, getter)]
     pub fn username(this: &URL) -> String;
     #[wasm_bindgen(method, setter)]

@@ -21,18 +21,18 @@ extern "C" {
     pub type ParsedUrlQueryInput;
     #[wasm_bindgen()]
     pub fn stringify(
-        obj: Option<&crate::querystring::ParsedUrlQueryInput>,
+        obj: Option<&ParsedUrlQueryInput>,
         sep: Option<&str>,
         eq: Option<&str>,
-        options: Option<&crate::querystring::StringifyOptions>,
+        options: Option<&StringifyOptions>,
     ) -> String;
     #[wasm_bindgen()]
     pub fn parse(
         str: &str,
         sep: Option<&str>,
         eq: Option<&str>,
-        options: Option<&crate::querystring::ParseOptions>,
-    ) -> crate::querystring::ParsedUrlQuery;
+        options: Option<&ParseOptions>,
+    ) -> ParsedUrlQuery;
     #[wasm_bindgen(js_name = "encode")]
     #[doc = "The querystring.encode() function is an alias for querystring.stringify()."]
     pub static ENCODE: String;

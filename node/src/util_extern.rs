@@ -8,7 +8,7 @@ extern "C" {
     pub fn format(format: &JsValue, param: &Array) -> String;
     # [ wasm_bindgen ( js_name = formatWithOptions ) ]
     pub fn format_with_options(
-        inspect_options: &crate::util::InspectOptions,
+        inspect_options: &InspectOptions,
         format: &str,
         param: &Array,
     ) -> String;
@@ -22,7 +22,7 @@ extern "C" {
         color: Option<bool>,
     ) -> String;
     # [ wasm_bindgen ( js_name = inspect ) ]
-    pub fn inspect2(object: &JsValue, options: &crate::util::InspectOptions) -> String;
+    pub fn inspect2(object: &JsValue, options: &InspectOptions) -> String;
     # [ wasm_bindgen ( js_name = isArray ) ]
     pub fn is_array(object: &JsValue) -> bool;
     # [ wasm_bindgen ( js_name = isRegExp ) ]
@@ -95,7 +95,7 @@ extern "C" {
     # [ wasm_bindgen ( js_name = callbackify ) ]
     pub fn callbackify14(fn_: &JsValue) -> Function;
     #[wasm_bindgen()]
-    pub fn promisify(fn_: &crate::util::CustomPromisify) -> JsValue;
+    pub fn promisify(fn_: &CustomPromisify) -> JsValue;
     # [ wasm_bindgen ( js_name = promisify ) ]
     pub fn promisify2(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = promisify ) ]
@@ -154,11 +154,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_encode(this: &TextEncoder, value: &Function);
     # [ wasm_bindgen ( method , js_name = encodeInto ) ]
-    pub fn encode_into(
-        this: &TextEncoder,
-        input: &str,
-        output: &Uint8Array,
-    ) -> crate::util::EncodeIntoResult;
+    pub fn encode_into(this: &TextEncoder, input: &str, output: &Uint8Array) -> EncodeIntoResult;
     # [ wasm_bindgen ( method , setter , js_name = encodeInto ) ]
     pub fn set_encode_into(this: &TextEncoder, value: &Function);
 }

@@ -38,13 +38,13 @@ extern "C" {
     pub fn set_cn(this: &Certificate, value: &str);
     pub type PeerCertificate;
     #[wasm_bindgen(method, getter)]
-    pub fn subject(this: &PeerCertificate) -> crate::tls::Certificate;
+    pub fn subject(this: &PeerCertificate) -> Certificate;
     #[wasm_bindgen(method, setter)]
-    pub fn set_subject(this: &PeerCertificate, value: &crate::tls::Certificate);
+    pub fn set_subject(this: &PeerCertificate, value: &Certificate);
     #[wasm_bindgen(method, getter)]
-    pub fn issuer(this: &PeerCertificate) -> crate::tls::Certificate;
+    pub fn issuer(this: &PeerCertificate) -> Certificate;
     #[wasm_bindgen(method, setter)]
-    pub fn set_issuer(this: &PeerCertificate, value: &crate::tls::Certificate);
+    pub fn set_issuer(this: &PeerCertificate, value: &Certificate);
     #[wasm_bindgen(method, getter)]
     pub fn subjectaltname(this: &PeerCertificate) -> String;
     #[wasm_bindgen(method, setter)]
@@ -91,14 +91,9 @@ extern "C" {
     pub fn set_raw(this: &PeerCertificate, value: &Buffer);
     pub type DetailedPeerCertificate;
     # [ wasm_bindgen ( method , getter , js_name = issuerCertificate ) ]
-    pub fn issuer_certificate(
-        this: &DetailedPeerCertificate,
-    ) -> crate::tls::DetailedPeerCertificate;
+    pub fn issuer_certificate(this: &DetailedPeerCertificate) -> DetailedPeerCertificate;
     # [ wasm_bindgen ( method , setter , js_name = issuerCertificate ) ]
-    pub fn set_issuer_certificate(
-        this: &DetailedPeerCertificate,
-        value: &crate::tls::DetailedPeerCertificate,
-    );
+    pub fn set_issuer_certificate(this: &DetailedPeerCertificate, value: &DetailedPeerCertificate);
     pub type CipherNameAndProtocol;
     #[doc = "The cipher name."]
     #[wasm_bindgen(method, getter)]
@@ -176,7 +171,7 @@ extern "C" {
     #[wasm_bindgen(constructor)]
     pub fn new_tls_socket(
         socket: &crate::net::Socket,
-        options: Option<&crate::tls::TLSSocketOptions>,
+        options: Option<&TLSSocketOptions>,
     ) -> TLSSocket;
     #[doc = "A boolean that is true if the peer certificate was signed by one of the specified CAs, otherwise false."]
     #[wasm_bindgen(method, getter)]
@@ -216,7 +211,7 @@ extern "C" {
     pub fn set_get_certificate(this: &TLSSocket, value: &Function);
     #[doc = "Returns an object representing the cipher name and the SSL/TLS protocol version of the current connection."]
     # [ wasm_bindgen ( method , js_name = getCipher ) ]
-    pub fn get_cipher(this: &TLSSocket) -> crate::tls::CipherNameAndProtocol;
+    pub fn get_cipher(this: &TLSSocket) -> CipherNameAndProtocol;
     # [ wasm_bindgen ( method , setter , js_name = getCipher ) ]
     pub fn set_get_cipher(this: &TLSSocket, value: &Function);
     #[doc = "Returns an object representing the type, name, and size of parameter"]
@@ -253,10 +248,7 @@ extern "C" {
     #[doc = "if false only the top certificate without issuer property."]
     #[doc = "If the peer does not provide a certificate, it returns null or an empty object."]
     # [ wasm_bindgen ( method , js_name = getPeerCertificate ) ]
-    pub fn get_peer_certificate(
-        this: &TLSSocket,
-        detailed: &JsValue,
-    ) -> crate::tls::DetailedPeerCertificate;
+    pub fn get_peer_certificate(this: &TLSSocket, detailed: &JsValue) -> DetailedPeerCertificate;
     # [ wasm_bindgen ( method , setter , js_name = getPeerCertificate ) ]
     pub fn set_get_peer_certificate(this: &TLSSocket, value: &Function);
     #[doc = "Returns an object representing the peer's certificate."]
@@ -265,10 +257,7 @@ extern "C" {
     #[doc = "if false only the top certificate without issuer property."]
     #[doc = "If the peer does not provide a certificate, it returns null or an empty object."]
     # [ wasm_bindgen ( method , js_name = getPeerCertificate ) ]
-    pub fn get_peer_certificate2(
-        this: &TLSSocket,
-        detailed: &JsValue,
-    ) -> crate::tls::PeerCertificate;
+    pub fn get_peer_certificate2(this: &TLSSocket, detailed: &JsValue) -> PeerCertificate;
     # [ wasm_bindgen ( method , setter , js_name = getPeerCertificate ) ]
     pub fn set_get_peer_certificate2(this: &TLSSocket, value: &Function);
     #[doc = "Returns an object representing the peer's certificate."]
@@ -766,12 +755,9 @@ extern "C" {
     pub type CommonConnectionOptions;
     #[doc = "An optional TLS context object from tls.createSecureContext()"]
     # [ wasm_bindgen ( method , getter , js_name = secureContext ) ]
-    pub fn secure_context(this: &CommonConnectionOptions) -> Option<crate::tls::SecureContext>;
+    pub fn secure_context(this: &CommonConnectionOptions) -> Option<SecureContext>;
     # [ wasm_bindgen ( method , setter , js_name = secureContext ) ]
-    pub fn set_secure_context(
-        this: &CommonConnectionOptions,
-        value: Option<&crate::tls::SecureContext>,
-    );
+    pub fn set_secure_context(this: &CommonConnectionOptions, value: Option<&SecureContext>);
     #[doc = "When enabled, TLS packet trace information is written to `stderr`. This can be"]
     #[doc = "used to debug TLS connection problems."]
     # [ wasm_bindgen ( method , getter , js_name = enableTrace ) ]
@@ -876,11 +862,7 @@ extern "C" {
     #[doc = "used if the client request's SNI name matches the supplied hostname"]
     #[doc = "(or wildcard)."]
     # [ wasm_bindgen ( method , js_name = addContext ) ]
-    pub fn add_context(
-        this: &Server,
-        host_name: &str,
-        credentials: &crate::tls::SecureContextOptions,
-    );
+    pub fn add_context(this: &Server, host_name: &str, credentials: &SecureContextOptions);
     # [ wasm_bindgen ( method , setter , js_name = addContext ) ]
     pub fn set_add_context(this: &Server, value: &Function);
     #[doc = "Returns the session ticket keys."]
@@ -892,7 +874,7 @@ extern "C" {
     #[doc = "secure context of an existing server. Existing connections to the"]
     #[doc = "server are not interrupted."]
     # [ wasm_bindgen ( method , js_name = setSecureContext ) ]
-    pub fn set_secure_context(this: &Server, details: &crate::tls::SecureContextOptions);
+    pub fn set_secure_context(this: &Server, details: &SecureContextOptions);
     # [ wasm_bindgen ( method , setter , js_name = setSecureContext ) ]
     pub fn set_set_secure_context(this: &Server, value: &Function);
     #[doc = "The server.setSecureContext() method replaces the secure context of"]
@@ -984,12 +966,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(
-        this: &Server,
-        event: &JsValue,
-        err: &Error,
-        tls_socket: &crate::tls::TLSSocket,
-    ) -> bool;
+    pub fn emit2(this: &Server, event: &JsValue, err: &Error, tls_socket: &TLSSocket) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit2(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -1017,16 +994,11 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit5(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Server, event: &JsValue, tls_socket: &crate::tls::TLSSocket) -> bool;
+    pub fn emit6(this: &Server, event: &JsValue, tls_socket: &TLSSocket) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit6(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(
-        this: &Server,
-        event: &JsValue,
-        line: &Buffer,
-        tls_socket: &crate::tls::TLSSocket,
-    ) -> bool;
+    pub fn emit7(this: &Server, event: &JsValue, line: &Buffer, tls_socket: &TLSSocket) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit7(this: &Server, value: &Function);
     #[wasm_bindgen(method)]
@@ -1143,13 +1115,13 @@ extern "C" {
     pub fn set_prepend_once_listener7(this: &Server, value: &Function);
     pub type SecurePair;
     #[wasm_bindgen(method, getter)]
-    pub fn encrypted(this: &SecurePair) -> crate::tls::TLSSocket;
+    pub fn encrypted(this: &SecurePair) -> TLSSocket;
     #[wasm_bindgen(method, setter)]
-    pub fn set_encrypted(this: &SecurePair, value: &crate::tls::TLSSocket);
+    pub fn set_encrypted(this: &SecurePair, value: &TLSSocket);
     #[wasm_bindgen(method, getter)]
-    pub fn cleartext(this: &SecurePair) -> crate::tls::TLSSocket;
+    pub fn cleartext(this: &SecurePair) -> TLSSocket;
     #[wasm_bindgen(method, setter)]
-    pub fn set_cleartext(this: &SecurePair, value: &crate::tls::TLSSocket);
+    pub fn set_cleartext(this: &SecurePair, value: &TLSSocket);
     pub type SecureVersion;
     pub type SecureContextOptions;
     #[doc = "Optionally override the trusted CA certificates. Default is to trust"]
@@ -1258,9 +1230,9 @@ extern "C" {
     #[doc = "`--tls-max-v1.2` sets the default to `'TLSv1.2'`. Using `--tls-max-v1.3` sets the default to"]
     #[doc = "`'TLSv1.3'`. If multiple of the options are provided, the highest maximum is used."]
     # [ wasm_bindgen ( method , getter , js_name = maxVersion ) ]
-    pub fn max_version(this: &SecureContextOptions) -> Option<crate::tls::SecureVersion>;
+    pub fn max_version(this: &SecureContextOptions) -> Option<SecureVersion>;
     # [ wasm_bindgen ( method , setter , js_name = maxVersion ) ]
-    pub fn set_max_version(this: &SecureContextOptions, value: Option<&crate::tls::SecureVersion>);
+    pub fn set_max_version(this: &SecureContextOptions, value: Option<&SecureVersion>);
     #[doc = "Optionally set the minimum TLS version to allow. One"]
     #[doc = "of `'TLSv1.3'`, `'TLSv1.2'`, `'TLSv1.1'`, or `'TLSv1'`. Cannot be specified along with the"]
     #[doc = "`secureProtocol` option, use one or the other.  It is not recommended to use"]
@@ -1270,9 +1242,9 @@ extern "C" {
     #[doc = "`'TLSv1.1'`. Using `--tls-min-v1.3` sets the default to"]
     #[doc = "'TLSv1.3'. If multiple of the options are provided, the lowest minimum is used."]
     # [ wasm_bindgen ( method , getter , js_name = minVersion ) ]
-    pub fn min_version(this: &SecureContextOptions) -> Option<crate::tls::SecureVersion>;
+    pub fn min_version(this: &SecureContextOptions) -> Option<SecureVersion>;
     # [ wasm_bindgen ( method , setter , js_name = minVersion ) ]
-    pub fn set_min_version(this: &SecureContextOptions, value: Option<&crate::tls::SecureVersion>);
+    pub fn set_min_version(this: &SecureContextOptions, value: Option<&SecureVersion>);
     #[doc = "Shared passphrase used for a single private key and/or a PFX."]
     #[wasm_bindgen(method, getter)]
     pub fn passphrase(this: &SecureContextOptions) -> Option<String>;
@@ -1322,43 +1294,35 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_context(this: &SecureContext, value: &JsValue);
     # [ wasm_bindgen ( js_name = checkServerIdentity ) ]
-    pub fn check_server_identity(host: &str, cert: &crate::tls::PeerCertificate) -> Option<Error>;
+    pub fn check_server_identity(host: &str, cert: &PeerCertificate) -> Option<Error>;
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server(secure_connection_listener: &JsValue) -> crate::tls::Server;
+    pub fn create_server(secure_connection_listener: &JsValue) -> Server;
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server2(
-        options: &crate::tls::TlsOptions,
-        secure_connection_listener: &JsValue,
-    ) -> crate::tls::Server;
+    pub fn create_server2(options: &TlsOptions, secure_connection_listener: &JsValue) -> Server;
     #[wasm_bindgen()]
-    pub fn connect(
-        options: &crate::tls::ConnectionOptions,
-        secure_connect_listener: &JsValue,
-    ) -> crate::tls::TLSSocket;
+    pub fn connect(options: &ConnectionOptions, secure_connect_listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( js_name = connect ) ]
     pub fn connect2(
         port: f64,
         host: Option<&str>,
-        options: Option<&crate::tls::ConnectionOptions>,
+        options: Option<&ConnectionOptions>,
         secure_connect_listener: &JsValue,
-    ) -> crate::tls::TLSSocket;
+    ) -> TLSSocket;
     # [ wasm_bindgen ( js_name = connect ) ]
     pub fn connect3(
         port: f64,
-        options: Option<&crate::tls::ConnectionOptions>,
+        options: Option<&ConnectionOptions>,
         secure_connect_listener: &JsValue,
-    ) -> crate::tls::TLSSocket;
+    ) -> TLSSocket;
     # [ wasm_bindgen ( js_name = createSecurePair ) ]
     pub fn create_secure_pair(
-        credentials: Option<&crate::tls::SecureContext>,
+        credentials: Option<&SecureContext>,
         is_server: Option<bool>,
         request_cert: Option<bool>,
         reject_unauthorized: Option<bool>,
-    ) -> crate::tls::SecurePair;
+    ) -> SecurePair;
     # [ wasm_bindgen ( js_name = createSecureContext ) ]
-    pub fn create_secure_context(
-        details: &crate::tls::SecureContextOptions,
-    ) -> crate::tls::SecureContext;
+    pub fn create_secure_context(details: &SecureContextOptions) -> SecureContext;
     # [ wasm_bindgen ( js_name = getCiphers ) ]
     pub fn get_ciphers() -> Array;
     #[doc = "The default curve name to use for ECDH key agreement in a tls server."]

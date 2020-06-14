@@ -96,15 +96,15 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn homedir() -> String;
     # [ wasm_bindgen ( js_name = userInfo ) ]
-    pub fn user_info(options: &JsValue) -> crate::os::UserInfo;
+    pub fn user_info(options: &JsValue) -> UserInfo;
     # [ wasm_bindgen ( js_name = userInfo ) ]
-    pub fn user_info2(options: &JsValue) -> crate::os::UserInfo;
+    pub fn user_info2(options: &JsValue) -> UserInfo;
     #[wasm_bindgen(js_name = "constants")]
     pub static CONSTANTS: String;
     #[wasm_bindgen()]
     pub fn arch() -> String;
     #[wasm_bindgen()]
-    pub fn platform() -> crate::node_js::Platform;
+    pub fn platform() -> node_js::Platform;
     #[wasm_bindgen()]
     pub fn tmpdir() -> String;
     pub static EOL: String;

@@ -40,9 +40,9 @@ extern "C" {
     pub type SocketType;
     pub type SocketOptions;
     # [ wasm_bindgen ( method , getter , js_name = type ) ]
-    pub fn type_(this: &SocketOptions) -> crate::dgram::SocketType;
+    pub fn type_(this: &SocketOptions) -> SocketType;
     # [ wasm_bindgen ( method , setter , js_name = type ) ]
-    pub fn set_type_(this: &SocketOptions, value: &crate::dgram::SocketType);
+    pub fn set_type_(this: &SocketOptions, value: &SocketType);
     # [ wasm_bindgen ( method , getter , js_name = reuseAddr ) ]
     pub fn reuse_addr(this: &SocketOptions) -> Option<bool>;
     # [ wasm_bindgen ( method , setter , js_name = reuseAddr ) ]
@@ -64,15 +64,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_lookup(this: &SocketOptions, value: Option<&Function>);
     # [ wasm_bindgen ( js_name = createSocket ) ]
-    pub fn create_socket(
-        type_: &crate::dgram::SocketType,
-        callback: &JsValue,
-    ) -> crate::dgram::Socket;
+    pub fn create_socket(type_: &SocketType, callback: &JsValue) -> Socket;
     # [ wasm_bindgen ( js_name = createSocket ) ]
-    pub fn create_socket2(
-        options: &crate::dgram::SocketOptions,
-        callback: &JsValue,
-    ) -> crate::dgram::Socket;
+    pub fn create_socket2(options: &SocketOptions, callback: &JsValue) -> Socket;
     pub type Socket;
     # [ wasm_bindgen ( method , js_name = addMembership ) ]
     pub fn add_membership(
@@ -83,7 +77,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addMembership ) ]
     pub fn set_add_membership(this: &Socket, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn address(this: &Socket) -> AddressInfo;
+    pub fn address(this: &Socket) -> crate::net::AddressInfo;
     #[wasm_bindgen(method, setter)]
     pub fn set_address(this: &Socket, value: &Function);
     #[wasm_bindgen(method)]
@@ -99,7 +93,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = bind ) ]
     pub fn set_bind3(this: &Socket, value: &Function);
     # [ wasm_bindgen ( method , js_name = bind ) ]
-    pub fn bind4(this: &Socket, options: &crate::dgram::BindOptions, callback: &JsValue);
+    pub fn bind4(this: &Socket, options: &BindOptions, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = bind ) ]
     pub fn set_bind4(this: &Socket, value: &Function);
     #[wasm_bindgen(method)]
@@ -139,7 +133,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = ref ) ]
     pub fn set_ref_(this: &Socket, value: &Function);
     # [ wasm_bindgen ( method , js_name = remoteAddress ) ]
-    pub fn remote_address(this: &Socket) -> AddressInfo;
+    pub fn remote_address(this: &Socket) -> crate::net::AddressInfo;
     # [ wasm_bindgen ( method , setter , js_name = remoteAddress ) ]
     pub fn set_remote_address(this: &Socket, value: &Function);
     #[wasm_bindgen(method)]
@@ -300,12 +294,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit5(this: &Socket, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(
-        this: &Socket,
-        event: &JsValue,
-        msg: &Buffer,
-        rinfo: &crate::dgram::RemoteInfo,
-    ) -> bool;
+    pub fn emit6(this: &Socket, event: &JsValue, msg: &Buffer, rinfo: &RemoteInfo) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit6(this: &Socket, value: &Function);
     #[wasm_bindgen(method)]

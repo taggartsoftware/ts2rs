@@ -111,93 +111,93 @@ impl SrvRecord {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<crate::dns::RecordWithTtl> for crate::dns::AnyARecord {
-    fn as_ref(&self) -> &crate::dns::RecordWithTtl {
+impl AsRef<RecordWithTtl> for AnyARecord {
+    fn as_ref(&self) -> &RecordWithTtl {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::dns::AnyARecord> for crate::dns::RecordWithTtl {
-    fn from(child: crate::dns::AnyARecord) -> Self {
+impl From<AnyARecord> for RecordWithTtl {
+    fn from(child: AnyARecord) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::dns::RecordWithTtl> for crate::dns::AnyAaaaRecord {
-    fn as_ref(&self) -> &crate::dns::RecordWithTtl {
+impl AsRef<RecordWithTtl> for AnyAaaaRecord {
+    fn as_ref(&self) -> &RecordWithTtl {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::dns::AnyAaaaRecord> for crate::dns::RecordWithTtl {
-    fn from(child: crate::dns::AnyAaaaRecord) -> Self {
+impl From<AnyAaaaRecord> for RecordWithTtl {
+    fn from(child: AnyAaaaRecord) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::dns::MxRecord> for crate::dns::AnyMxRecord {
-    fn as_ref(&self) -> &crate::dns::MxRecord {
+impl AsRef<MxRecord> for AnyMxRecord {
+    fn as_ref(&self) -> &MxRecord {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::dns::AnyMxRecord> for crate::dns::MxRecord {
-    fn from(child: crate::dns::AnyMxRecord) -> Self {
+impl From<AnyMxRecord> for MxRecord {
+    fn from(child: AnyMxRecord) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::dns::NaptrRecord> for crate::dns::AnyNaptrRecord {
-    fn as_ref(&self) -> &crate::dns::NaptrRecord {
+impl AsRef<NaptrRecord> for AnyNaptrRecord {
+    fn as_ref(&self) -> &NaptrRecord {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::dns::AnyNaptrRecord> for crate::dns::NaptrRecord {
-    fn from(child: crate::dns::AnyNaptrRecord) -> Self {
+impl From<AnyNaptrRecord> for NaptrRecord {
+    fn from(child: AnyNaptrRecord) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::dns::SoaRecord> for crate::dns::AnySoaRecord {
-    fn as_ref(&self) -> &crate::dns::SoaRecord {
+impl AsRef<SoaRecord> for AnySoaRecord {
+    fn as_ref(&self) -> &SoaRecord {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::dns::AnySoaRecord> for crate::dns::SoaRecord {
-    fn from(child: crate::dns::AnySoaRecord) -> Self {
+impl From<AnySoaRecord> for SoaRecord {
+    fn from(child: AnySoaRecord) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::dns::SrvRecord> for crate::dns::AnySrvRecord {
-    fn as_ref(&self) -> &crate::dns::SrvRecord {
+impl AsRef<SrvRecord> for AnySrvRecord {
+    fn as_ref(&self) -> &SrvRecord {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::dns::AnySrvRecord> for crate::dns::SrvRecord {
-    fn from(child: crate::dns::AnySrvRecord) -> Self {
+impl From<AnySrvRecord> for SrvRecord {
+    fn from(child: AnySrvRecord) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::dns::LookupOptions> for crate::dns::LookupAllOptions {
-    fn as_ref(&self) -> &crate::dns::LookupOptions {
+impl AsRef<LookupOptions> for LookupAllOptions {
+    fn as_ref(&self) -> &LookupOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::dns::LookupAllOptions> for crate::dns::LookupOptions {
-    fn from(child: crate::dns::LookupAllOptions) -> Self {
+impl From<LookupAllOptions> for LookupOptions {
+    fn from(child: LookupAllOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::dns::LookupOptions> for crate::dns::LookupOneOptions {
-    fn as_ref(&self) -> &crate::dns::LookupOptions {
+impl AsRef<LookupOptions> for LookupOneOptions {
+    fn as_ref(&self) -> &LookupOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::dns::LookupOneOptions> for crate::dns::LookupOptions {
-    fn from(child: crate::dns::LookupOneOptions) -> Self {
+impl From<LookupOneOptions> for LookupOptions {
+    fn from(child: LookupOneOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::dns::ResolveOptions> for crate::dns::ResolveWithTtlOptions {
-    fn as_ref(&self) -> &crate::dns::ResolveOptions {
+impl AsRef<ResolveOptions> for ResolveWithTtlOptions {
+    fn as_ref(&self) -> &ResolveOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::dns::ResolveWithTtlOptions> for crate::dns::ResolveOptions {
-    fn from(child: crate::dns::ResolveWithTtlOptions) -> Self {
+impl From<ResolveWithTtlOptions> for ResolveOptions {
+    fn from(child: ResolveWithTtlOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }

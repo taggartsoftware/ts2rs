@@ -13,15 +13,15 @@ extern "C" {
     #[doc = "The `Readable` stream from which REPL input will be read."]
     #[doc = "Default: `process.stdin`"]
     #[wasm_bindgen(method, getter)]
-    pub fn input(this: &ReplOptions) -> Option<crate::node_js::ReadableStream>;
+    pub fn input(this: &ReplOptions) -> Option<node_js::ReadableStream>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_input(this: &ReplOptions, value: Option<&crate::node_js::ReadableStream>);
+    pub fn set_input(this: &ReplOptions, value: Option<&node_js::ReadableStream>);
     #[doc = "The `Writable` stream to which REPL output will be written."]
     #[doc = "Default: `process.stdout`"]
     #[wasm_bindgen(method, getter)]
-    pub fn output(this: &ReplOptions) -> Option<crate::node_js::WritableStream>;
+    pub fn output(this: &ReplOptions) -> Option<node_js::WritableStream>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_output(this: &ReplOptions, value: Option<&crate::node_js::WritableStream>);
+    pub fn set_output(this: &ReplOptions, value: Option<&node_js::WritableStream>);
     #[doc = "If `true`, specifies that the output should be treated as a TTY terminal, and have"]
     #[doc = "ANSI/VT100 escape codes written to it."]
     #[doc = "Default: checking the value of the `isTTY` property on the output stream upon"]
@@ -35,9 +35,9 @@ extern "C" {
     #[doc = "error with `repl.Recoverable` to indicate the input was incomplete and prompt for"]
     #[doc = "additional lines."]
     #[wasm_bindgen(method, getter)]
-    pub fn eval(this: &ReplOptions) -> Option<crate::repl::REPLEval>;
+    pub fn eval(this: &ReplOptions) -> Option<REPLEval>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_eval(this: &ReplOptions, value: Option<&crate::repl::REPLEval>);
+    pub fn set_eval(this: &ReplOptions, value: Option<&REPLEval>);
     #[doc = "If `true`, specifies that the default `writer` function should include ANSI color"]
     #[doc = "styling to REPL output. If a custom `writer` function is provided then this has no"]
     #[doc = "effect."]
@@ -64,9 +64,9 @@ extern "C" {
     #[doc = "The function to invoke to format the output of each command before writing to `output`."]
     #[doc = "Default: a wrapper for `util.inspect`."]
     #[wasm_bindgen(method, getter)]
-    pub fn writer(this: &ReplOptions) -> Option<crate::repl::REPLWriter>;
+    pub fn writer(this: &ReplOptions) -> Option<REPLWriter>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_writer(this: &ReplOptions, value: Option<&crate::repl::REPLWriter>);
+    pub fn set_writer(this: &ReplOptions, value: Option<&REPLWriter>);
     #[doc = "An optional function used for custom Tab auto completion."]
     #[wasm_bindgen(method, getter)]
     pub fn completer(this: &ReplOptions) -> JsValue;
@@ -104,9 +104,9 @@ extern "C" {
     pub fn set_help(this: &REPLCommand, value: Option<&str>);
     #[doc = "The function to execute, optionally accepting a single string argument."]
     #[wasm_bindgen(method, getter)]
-    pub fn action(this: &REPLCommand) -> crate::repl::REPLCommandAction;
+    pub fn action(this: &REPLCommand) -> REPLCommandAction;
     #[wasm_bindgen(method, setter)]
-    pub fn set_action(this: &REPLCommand, value: &crate::repl::REPLCommandAction);
+    pub fn set_action(this: &REPLCommand, value: &REPLCommandAction);
     #[doc = "Provides a customizable Read-Eval-Print-Loop (REPL)."]
     #[doc = ""]
     #[doc = "Instances of `repl.REPLServer` will accept individual lines of user input, evaluate those"]
@@ -123,13 +123,13 @@ extern "C" {
     #[doc = "The `vm.Context` provided to the `eval` function to be used for JavaScript"]
     #[doc = "evaluation."]
     #[wasm_bindgen(method, getter)]
-    pub fn context(this: &REPLServer) -> Context;
+    pub fn context(this: &REPLServer) -> crate::vm::Context;
     #[doc = "The `Readable` stream from which REPL input will be read."]
     # [ wasm_bindgen ( method , getter , js_name = inputStream ) ]
-    pub fn input_stream(this: &REPLServer) -> crate::node_js::ReadableStream;
+    pub fn input_stream(this: &REPLServer) -> node_js::ReadableStream;
     #[doc = "The `Writable` stream to which REPL output will be written."]
     # [ wasm_bindgen ( method , getter , js_name = outputStream ) ]
-    pub fn output_stream(this: &REPLServer) -> crate::node_js::WritableStream;
+    pub fn output_stream(this: &REPLServer) -> node_js::WritableStream;
     #[doc = "The commands registered via `replServer.defineCommand()`."]
     #[wasm_bindgen(method, getter)]
     pub fn commands(this: &REPLServer) -> JsValue;
@@ -152,7 +152,7 @@ extern "C" {
     #[doc = "given line of input. If not specified in the REPL options, this is an async wrapper"]
     #[doc = "for the JavaScript `eval()` function."]
     #[wasm_bindgen(method, getter)]
-    pub fn eval(this: &REPLServer) -> crate::repl::REPLEval;
+    pub fn eval(this: &REPLServer) -> REPLEval;
     #[doc = "Specified in the REPL options, this is a value indicating whether the default"]
     #[doc = "`writer` function should include ANSI color styling to REPL output."]
     # [ wasm_bindgen ( method , getter , js_name = useColors ) ]
@@ -170,7 +170,7 @@ extern "C" {
     #[doc = "each command before writing to `outputStream`. If not specified in the REPL options,"]
     #[doc = "this will be a wrapper for `util.inspect`."]
     #[wasm_bindgen(method, getter)]
-    pub fn writer(this: &REPLServer) -> crate::repl::REPLWriter;
+    pub fn writer(this: &REPLServer) -> REPLWriter;
     #[doc = "Specified in the REPL options, this is the function to use for custom Tab auto-completion."]
     #[wasm_bindgen(method, getter)]
     pub fn completer(this: &REPLServer) -> JsValue;
@@ -395,7 +395,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit9(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit10(this: &REPLServer, event: &JsValue, context: &Context) -> bool;
+    pub fn emit10(this: &REPLServer, event: &JsValue, context: &crate::vm::Context) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit10(this: &REPLServer, value: &Function);
     #[wasm_bindgen(method)]
@@ -602,7 +602,7 @@ extern "C" {
     pub static REPL_MODE_STRICT: String;
     #[doc = "Creates and starts a `repl.REPLServer` instance."]
     #[wasm_bindgen()]
-    pub fn start(options: &JsValue) -> crate::repl::REPLServer;
+    pub fn start(options: &JsValue) -> REPLServer;
     #[doc = "Indicates a recoverable error that a `REPLServer` can use to support multi-line input."]
     pub type Recoverable;
     #[wasm_bindgen(method, getter)]

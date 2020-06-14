@@ -5,15 +5,15 @@
 extern "C" {
     pub type Certificate;
     # [ wasm_bindgen ( method , js_name = exportChallenge ) ]
-    pub fn export_challenge(this: &Certificate, spkac: &crate::crypto::BinaryLike) -> Buffer;
+    pub fn export_challenge(this: &Certificate, spkac: &BinaryLike) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = exportChallenge ) ]
     pub fn set_export_challenge(this: &Certificate, value: &Function);
     # [ wasm_bindgen ( method , js_name = exportPublicKey ) ]
-    pub fn export_public_key(this: &Certificate, spkac: &crate::crypto::BinaryLike) -> Buffer;
+    pub fn export_public_key(this: &Certificate, spkac: &BinaryLike) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = exportPublicKey ) ]
     pub fn set_export_public_key(this: &Certificate, value: &Function);
     # [ wasm_bindgen ( method , js_name = verifySpkac ) ]
-    pub fn verify_spkac(this: &Certificate, spkac: &crate::node_js::ArrayBufferView) -> bool;
+    pub fn verify_spkac(this: &Certificate, spkac: &node_js::ArrayBufferView) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = verifySpkac ) ]
     pub fn set_verify_spkac(this: &Certificate, value: &Function);
     #[wasm_bindgen(js_name = "Certificate")]
@@ -28,16 +28,13 @@ extern "C" {
     #[wasm_bindgen(js_name = "fips")]
     pub static FIPS: String;
     # [ wasm_bindgen ( js_name = createHash ) ]
-    pub fn create_hash(
-        algorithm: &str,
-        options: Option<&crate::crypto::HashOptions>,
-    ) -> crate::crypto::Hash;
+    pub fn create_hash(algorithm: &str, options: Option<&HashOptions>) -> Hash;
     # [ wasm_bindgen ( js_name = createHmac ) ]
     pub fn create_hmac(
         algorithm: &str,
-        key: &crate::crypto::BinaryLike,
-        options: Option<&crate::internal::TransformOptions>,
-    ) -> crate::crypto::Hmac;
+        key: &BinaryLike,
+        options: Option<&internal::TransformOptions>,
+    ) -> Hmac;
     pub type Utf8AsciiLatin1Encoding;
     pub type HexBase64Latin1Encoding;
     pub type Utf8AsciiBinaryEncoding;
@@ -47,15 +44,11 @@ extern "C" {
     #[wasm_bindgen(constructor)]
     pub fn new_hash() -> Hash;
     #[wasm_bindgen(method)]
-    pub fn update(this: &Hash, data: &crate::crypto::BinaryLike) -> crate::crypto::Hash;
+    pub fn update(this: &Hash, data: &BinaryLike) -> Hash;
     #[wasm_bindgen(method, setter)]
     pub fn set_update(this: &Hash, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update2(
-        this: &Hash,
-        data: &str,
-        input_encoding: &crate::crypto::Utf8AsciiLatin1Encoding,
-    ) -> crate::crypto::Hash;
+    pub fn update2(this: &Hash, data: &str, input_encoding: &Utf8AsciiLatin1Encoding) -> Hash;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
     pub fn set_update2(this: &Hash, value: &Function);
     #[wasm_bindgen(method)]
@@ -63,22 +56,18 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_digest(this: &Hash, value: &Function);
     # [ wasm_bindgen ( method , js_name = digest ) ]
-    pub fn digest2(this: &Hash, encoding: &crate::crypto::HexBase64Latin1Encoding) -> String;
+    pub fn digest2(this: &Hash, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = digest ) ]
     pub fn set_digest2(this: &Hash, value: &Function);
     pub type Hmac;
     #[wasm_bindgen(constructor)]
     pub fn new_hmac() -> Hmac;
     #[wasm_bindgen(method)]
-    pub fn update(this: &Hmac, data: &crate::crypto::BinaryLike) -> crate::crypto::Hmac;
+    pub fn update(this: &Hmac, data: &BinaryLike) -> Hmac;
     #[wasm_bindgen(method, setter)]
     pub fn set_update(this: &Hmac, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update2(
-        this: &Hmac,
-        data: &str,
-        input_encoding: &crate::crypto::Utf8AsciiLatin1Encoding,
-    ) -> crate::crypto::Hmac;
+    pub fn update2(this: &Hmac, data: &str, input_encoding: &Utf8AsciiLatin1Encoding) -> Hmac;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
     pub fn set_update2(this: &Hmac, value: &Function);
     #[wasm_bindgen(method)]
@@ -86,7 +75,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_digest(this: &Hmac, value: &Function);
     # [ wasm_bindgen ( method , js_name = digest ) ]
-    pub fn digest2(this: &Hmac, encoding: &crate::crypto::HexBase64Latin1Encoding) -> String;
+    pub fn digest2(this: &Hmac, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = digest ) ]
     pub fn set_digest2(this: &Hmac, value: &Function);
     pub type KeyObjectType;
@@ -111,9 +100,9 @@ extern "C" {
     #[wasm_bindgen(constructor)]
     pub fn new_key_object() -> KeyObject;
     # [ wasm_bindgen ( method , getter , js_name = asymmetricKeyType ) ]
-    pub fn asymmetric_key_type(this: &KeyObject) -> Option<crate::crypto::KeyType>;
+    pub fn asymmetric_key_type(this: &KeyObject) -> Option<KeyType>;
     # [ wasm_bindgen ( method , setter , js_name = asymmetricKeyType ) ]
-    pub fn set_asymmetric_key_type(this: &KeyObject, value: Option<&crate::crypto::KeyType>);
+    pub fn set_asymmetric_key_type(this: &KeyObject, value: Option<&KeyType>);
     #[doc = "For asymmetric keys, this property represents the size of the embedded key in"]
     #[doc = "bytes. This property is `undefined` for symmetric keys."]
     # [ wasm_bindgen ( method , getter , js_name = asymmetricKeySize ) ]
@@ -121,11 +110,11 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = asymmetricKeySize ) ]
     pub fn set_asymmetric_key_size(this: &KeyObject, value: Option<f64>);
     #[wasm_bindgen(method)]
-    pub fn export(this: &KeyObject, options: &crate::crypto::KeyExportOptions) -> JsValue;
+    pub fn export(this: &KeyObject, options: &KeyExportOptions) -> JsValue;
     #[wasm_bindgen(method, setter)]
     pub fn set_export(this: &KeyObject, value: &Function);
     # [ wasm_bindgen ( method , js_name = export ) ]
-    pub fn export2(this: &KeyObject, options: Option<&crate::crypto::KeyExportOptions>) -> Buffer;
+    pub fn export2(this: &KeyObject, options: Option<&KeyExportOptions>) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = export ) ]
     pub fn set_export2(this: &KeyObject, value: &Function);
     # [ wasm_bindgen ( method , getter , js_name = symmetricKeySize ) ]
@@ -133,9 +122,9 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = symmetricKeySize ) ]
     pub fn set_symmetric_key_size(this: &KeyObject, value: Option<f64>);
     # [ wasm_bindgen ( method , getter , js_name = type ) ]
-    pub fn type_(this: &KeyObject) -> crate::crypto::KeyObjectType;
+    pub fn type_(this: &KeyObject) -> KeyObjectType;
     # [ wasm_bindgen ( method , setter , js_name = type ) ]
-    pub fn set_type_(this: &KeyObject, value: &crate::crypto::KeyObjectType);
+    pub fn set_type_(this: &KeyObject, value: &KeyObjectType);
     pub type CipherCCMTypes;
     pub type CipherGCMTypes;
     pub type BinaryLike;
@@ -152,64 +141,60 @@ extern "C" {
     pub fn set_auth_tag_length(this: &CipherGCMOptions, value: Option<f64>);
     # [ wasm_bindgen ( js_name = createCipher ) ]
     pub fn create_cipher(
-        algorithm: &crate::crypto::CipherCCMTypes,
-        password: &crate::crypto::BinaryLike,
-        options: &crate::crypto::CipherCCMOptions,
-    ) -> crate::crypto::CipherCCM;
+        algorithm: &CipherCCMTypes,
+        password: &BinaryLike,
+        options: &CipherCCMOptions,
+    ) -> CipherCCM;
     # [ wasm_bindgen ( js_name = createCipher ) ]
     pub fn create_cipher2(
-        algorithm: &crate::crypto::CipherGCMTypes,
-        password: &crate::crypto::BinaryLike,
-        options: Option<&crate::crypto::CipherGCMOptions>,
-    ) -> crate::crypto::CipherGCM;
+        algorithm: &CipherGCMTypes,
+        password: &BinaryLike,
+        options: Option<&CipherGCMOptions>,
+    ) -> CipherGCM;
     # [ wasm_bindgen ( js_name = createCipher ) ]
     pub fn create_cipher3(
         algorithm: &str,
-        password: &crate::crypto::BinaryLike,
-        options: Option<&crate::internal::TransformOptions>,
-    ) -> crate::crypto::Cipher;
+        password: &BinaryLike,
+        options: Option<&internal::TransformOptions>,
+    ) -> Cipher;
     # [ wasm_bindgen ( js_name = createCipheriv ) ]
     pub fn create_cipheriv(
-        algorithm: &crate::crypto::CipherCCMTypes,
-        key: &crate::crypto::CipherKey,
+        algorithm: &CipherCCMTypes,
+        key: &CipherKey,
         iv: &JsValue,
-        options: &crate::crypto::CipherCCMOptions,
-    ) -> crate::crypto::CipherCCM;
+        options: &CipherCCMOptions,
+    ) -> CipherCCM;
     # [ wasm_bindgen ( js_name = createCipheriv ) ]
     pub fn create_cipheriv2(
-        algorithm: &crate::crypto::CipherGCMTypes,
-        key: &crate::crypto::CipherKey,
+        algorithm: &CipherGCMTypes,
+        key: &CipherKey,
         iv: &JsValue,
-        options: Option<&crate::crypto::CipherGCMOptions>,
-    ) -> crate::crypto::CipherGCM;
+        options: Option<&CipherGCMOptions>,
+    ) -> CipherGCM;
     # [ wasm_bindgen ( js_name = createCipheriv ) ]
     pub fn create_cipheriv3(
         algorithm: &str,
-        key: &crate::crypto::CipherKey,
+        key: &CipherKey,
         iv: &JsValue,
-        options: Option<&crate::internal::TransformOptions>,
-    ) -> crate::crypto::Cipher;
+        options: Option<&internal::TransformOptions>,
+    ) -> Cipher;
     pub type Cipher;
     #[wasm_bindgen(constructor)]
     pub fn new_cipher() -> Cipher;
     #[wasm_bindgen(method)]
-    pub fn update(this: &Cipher, data: &crate::crypto::BinaryLike) -> Buffer;
+    pub fn update(this: &Cipher, data: &BinaryLike) -> Buffer;
     #[wasm_bindgen(method, setter)]
     pub fn set_update(this: &Cipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update2(
-        this: &Cipher,
-        data: &str,
-        input_encoding: &crate::crypto::Utf8AsciiBinaryEncoding,
-    ) -> Buffer;
+    pub fn update2(this: &Cipher, data: &str, input_encoding: &Utf8AsciiBinaryEncoding) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
     pub fn set_update2(this: &Cipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
     pub fn update3(
         this: &Cipher,
-        data: &crate::node_js::ArrayBufferView,
+        data: &node_js::ArrayBufferView,
         input_encoding: &JsValue,
-        output_encoding: &crate::crypto::HexBase64BinaryEncoding,
+        output_encoding: &HexBase64BinaryEncoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
     pub fn set_update3(this: &Cipher, value: &Function);
@@ -217,8 +202,8 @@ extern "C" {
     pub fn update4(
         this: &Cipher,
         data: &str,
-        input_encoding: Option<&crate::crypto::Utf8AsciiBinaryEncoding>,
-        output_encoding: &crate::crypto::HexBase64BinaryEncoding,
+        input_encoding: Option<&Utf8AsciiBinaryEncoding>,
+        output_encoding: &HexBase64BinaryEncoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
     pub fn set_update4(this: &Cipher, value: &Function);
@@ -254,64 +239,61 @@ extern "C" {
     pub fn set_get_auth_tag(this: &CipherGCM, value: &Function);
     # [ wasm_bindgen ( js_name = createDecipher ) ]
     pub fn create_decipher(
-        algorithm: &crate::crypto::CipherCCMTypes,
-        password: &crate::crypto::BinaryLike,
-        options: &crate::crypto::CipherCCMOptions,
-    ) -> crate::crypto::DecipherCCM;
+        algorithm: &CipherCCMTypes,
+        password: &BinaryLike,
+        options: &CipherCCMOptions,
+    ) -> DecipherCCM;
     # [ wasm_bindgen ( js_name = createDecipher ) ]
     pub fn create_decipher2(
-        algorithm: &crate::crypto::CipherGCMTypes,
-        password: &crate::crypto::BinaryLike,
-        options: Option<&crate::crypto::CipherGCMOptions>,
-    ) -> crate::crypto::DecipherGCM;
+        algorithm: &CipherGCMTypes,
+        password: &BinaryLike,
+        options: Option<&CipherGCMOptions>,
+    ) -> DecipherGCM;
     # [ wasm_bindgen ( js_name = createDecipher ) ]
     pub fn create_decipher3(
         algorithm: &str,
-        password: &crate::crypto::BinaryLike,
-        options: Option<&crate::internal::TransformOptions>,
-    ) -> crate::crypto::Decipher;
+        password: &BinaryLike,
+        options: Option<&internal::TransformOptions>,
+    ) -> Decipher;
     # [ wasm_bindgen ( js_name = createDecipheriv ) ]
     pub fn create_decipheriv(
-        algorithm: &crate::crypto::CipherCCMTypes,
-        key: &crate::crypto::BinaryLike,
+        algorithm: &CipherCCMTypes,
+        key: &BinaryLike,
         iv: &JsValue,
-        options: &crate::crypto::CipherCCMOptions,
-    ) -> crate::crypto::DecipherCCM;
+        options: &CipherCCMOptions,
+    ) -> DecipherCCM;
     # [ wasm_bindgen ( js_name = createDecipheriv ) ]
     pub fn create_decipheriv2(
-        algorithm: &crate::crypto::CipherGCMTypes,
-        key: &crate::crypto::BinaryLike,
+        algorithm: &CipherGCMTypes,
+        key: &BinaryLike,
         iv: &JsValue,
-        options: Option<&crate::crypto::CipherGCMOptions>,
-    ) -> crate::crypto::DecipherGCM;
+        options: Option<&CipherGCMOptions>,
+    ) -> DecipherGCM;
     # [ wasm_bindgen ( js_name = createDecipheriv ) ]
     pub fn create_decipheriv3(
         algorithm: &str,
-        key: &crate::crypto::BinaryLike,
+        key: &BinaryLike,
         iv: &JsValue,
-        options: Option<&crate::internal::TransformOptions>,
-    ) -> crate::crypto::Decipher;
+        options: Option<&internal::TransformOptions>,
+    ) -> Decipher;
     pub type Decipher;
     #[wasm_bindgen(constructor)]
     pub fn new_decipher() -> Decipher;
     #[wasm_bindgen(method)]
-    pub fn update(this: &Decipher, data: &crate::node_js::ArrayBufferView) -> Buffer;
+    pub fn update(this: &Decipher, data: &node_js::ArrayBufferView) -> Buffer;
     #[wasm_bindgen(method, setter)]
     pub fn set_update(this: &Decipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update2(
-        this: &Decipher,
-        data: &str,
-        input_encoding: &crate::crypto::HexBase64BinaryEncoding,
-    ) -> Buffer;
+    pub fn update2(this: &Decipher, data: &str, input_encoding: &HexBase64BinaryEncoding)
+    -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
     pub fn set_update2(this: &Decipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
     pub fn update3(
         this: &Decipher,
-        data: &crate::node_js::ArrayBufferView,
-        input_encoding: Option<&crate::crypto::HexBase64BinaryEncoding>,
-        output_encoding: &crate::crypto::Utf8AsciiBinaryEncoding,
+        data: &node_js::ArrayBufferView,
+        input_encoding: Option<&HexBase64BinaryEncoding>,
+        output_encoding: &Utf8AsciiBinaryEncoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
     pub fn set_update3(this: &Decipher, value: &Function);
@@ -319,8 +301,8 @@ extern "C" {
     pub fn update4(
         this: &Decipher,
         data: &str,
-        input_encoding: Option<&crate::crypto::HexBase64BinaryEncoding>,
-        output_encoding: &crate::crypto::Utf8AsciiBinaryEncoding,
+        input_encoding: Option<&HexBase64BinaryEncoding>,
+        output_encoding: &Utf8AsciiBinaryEncoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
     pub fn set_update4(this: &Decipher, value: &Function);
@@ -338,32 +320,26 @@ extern "C" {
     pub fn set_set_auto_padding(this: &Decipher, value: &Function);
     pub type DecipherCCM;
     # [ wasm_bindgen ( method , js_name = setAuthTag ) ]
-    pub fn set_auth_tag(
-        this: &DecipherCCM,
-        buffer: &crate::node_js::ArrayBufferView,
-    ) -> DecipherCCM;
+    pub fn set_auth_tag(this: &DecipherCCM, buffer: &node_js::ArrayBufferView) -> DecipherCCM;
     # [ wasm_bindgen ( method , setter , js_name = setAuthTag ) ]
     pub fn set_set_auth_tag(this: &DecipherCCM, value: &Function);
     # [ wasm_bindgen ( method , js_name = setAAD ) ]
     pub fn set_aad(
         this: &DecipherCCM,
-        buffer: &crate::node_js::ArrayBufferView,
+        buffer: &node_js::ArrayBufferView,
         options: &JsValue,
     ) -> DecipherCCM;
     # [ wasm_bindgen ( method , setter , js_name = setAAD ) ]
     pub fn set_set_aad(this: &DecipherCCM, value: &Function);
     pub type DecipherGCM;
     # [ wasm_bindgen ( method , js_name = setAuthTag ) ]
-    pub fn set_auth_tag(
-        this: &DecipherGCM,
-        buffer: &crate::node_js::ArrayBufferView,
-    ) -> DecipherGCM;
+    pub fn set_auth_tag(this: &DecipherGCM, buffer: &node_js::ArrayBufferView) -> DecipherGCM;
     # [ wasm_bindgen ( method , setter , js_name = setAuthTag ) ]
     pub fn set_set_auth_tag(this: &DecipherGCM, value: &Function);
     # [ wasm_bindgen ( method , js_name = setAAD ) ]
     pub fn set_aad(
         this: &DecipherGCM,
-        buffer: &crate::node_js::ArrayBufferView,
+        buffer: &node_js::ArrayBufferView,
         options: &JsValue,
     ) -> DecipherGCM;
     # [ wasm_bindgen ( method , setter , js_name = setAAD ) ]
@@ -374,9 +350,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_key(this: &PrivateKeyInput, value: &JsValue);
     #[wasm_bindgen(method, getter)]
-    pub fn format(this: &PrivateKeyInput) -> Option<crate::crypto::KeyFormat>;
+    pub fn format(this: &PrivateKeyInput) -> Option<KeyFormat>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_format(this: &PrivateKeyInput, value: Option<&crate::crypto::KeyFormat>);
+    pub fn set_format(this: &PrivateKeyInput, value: Option<&KeyFormat>);
     # [ wasm_bindgen ( method , getter , js_name = type ) ]
     pub fn type_(this: &PrivateKeyInput) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = type ) ]
@@ -391,24 +367,21 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_key(this: &PublicKeyInput, value: &JsValue);
     #[wasm_bindgen(method, getter)]
-    pub fn format(this: &PublicKeyInput) -> Option<crate::crypto::KeyFormat>;
+    pub fn format(this: &PublicKeyInput) -> Option<KeyFormat>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_format(this: &PublicKeyInput, value: Option<&crate::crypto::KeyFormat>);
+    pub fn set_format(this: &PublicKeyInput, value: Option<&KeyFormat>);
     # [ wasm_bindgen ( method , getter , js_name = type ) ]
     pub fn type_(this: &PublicKeyInput) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = type ) ]
     pub fn set_type_(this: &PublicKeyInput, value: &JsValue);
     # [ wasm_bindgen ( js_name = createPrivateKey ) ]
-    pub fn create_private_key(key: &JsValue) -> crate::crypto::KeyObject;
+    pub fn create_private_key(key: &JsValue) -> KeyObject;
     # [ wasm_bindgen ( js_name = createPublicKey ) ]
-    pub fn create_public_key(key: &JsValue) -> crate::crypto::KeyObject;
+    pub fn create_public_key(key: &JsValue) -> KeyObject;
     # [ wasm_bindgen ( js_name = createSecretKey ) ]
-    pub fn create_secret_key(key: &Buffer) -> crate::crypto::KeyObject;
+    pub fn create_secret_key(key: &Buffer) -> KeyObject;
     # [ wasm_bindgen ( js_name = createSign ) ]
-    pub fn create_sign(
-        algorithm: &str,
-        options: Option<&crate::internal::WritableOptions>,
-    ) -> crate::crypto::Signer;
+    pub fn create_sign(algorithm: &str, options: Option<&internal::WritableOptions>) -> Signer;
     pub type SigningOptions;
     #[wasm_bindgen(method, getter)]
     pub fn padding(this: &SigningOptions) -> Option<f64>;
@@ -424,15 +397,11 @@ extern "C" {
     #[wasm_bindgen(constructor)]
     pub fn new_signer() -> Signer;
     #[wasm_bindgen(method)]
-    pub fn update(this: &Signer, data: &crate::crypto::BinaryLike) -> crate::crypto::Signer;
+    pub fn update(this: &Signer, data: &BinaryLike) -> Signer;
     #[wasm_bindgen(method, setter)]
     pub fn set_update(this: &Signer, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update2(
-        this: &Signer,
-        data: &str,
-        input_encoding: &crate::crypto::Utf8AsciiLatin1Encoding,
-    ) -> crate::crypto::Signer;
+    pub fn update2(this: &Signer, data: &str, input_encoding: &Utf8AsciiLatin1Encoding) -> Signer;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
     pub fn set_update2(this: &Signer, value: &Function);
     #[wasm_bindgen(method)]
@@ -443,36 +412,25 @@ extern "C" {
     pub fn sign2(
         this: &Signer,
         private_key: &JsValue,
-        output_format: &crate::crypto::HexBase64Latin1Encoding,
+        output_format: &HexBase64Latin1Encoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = sign ) ]
     pub fn set_sign2(this: &Signer, value: &Function);
     # [ wasm_bindgen ( js_name = createVerify ) ]
-    pub fn create_verify(
-        algorithm: &str,
-        options: Option<&crate::internal::WritableOptions>,
-    ) -> crate::crypto::Verify;
+    pub fn create_verify(algorithm: &str, options: Option<&internal::WritableOptions>) -> Verify;
     pub type Verify;
     #[wasm_bindgen(constructor)]
     pub fn new_verify() -> Verify;
     #[wasm_bindgen(method)]
-    pub fn update(this: &Verify, data: &crate::crypto::BinaryLike) -> crate::crypto::Verify;
+    pub fn update(this: &Verify, data: &BinaryLike) -> Verify;
     #[wasm_bindgen(method, setter)]
     pub fn set_update(this: &Verify, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update2(
-        this: &Verify,
-        data: &str,
-        input_encoding: &crate::crypto::Utf8AsciiLatin1Encoding,
-    ) -> crate::crypto::Verify;
+    pub fn update2(this: &Verify, data: &str, input_encoding: &Utf8AsciiLatin1Encoding) -> Verify;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
     pub fn set_update2(this: &Verify, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn verify(
-        this: &Verify,
-        object: &JsValue,
-        signature: &crate::node_js::ArrayBufferView,
-    ) -> bool;
+    pub fn verify(this: &Verify, object: &JsValue, signature: &node_js::ArrayBufferView) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_verify(this: &Verify, value: &Function);
     # [ wasm_bindgen ( method , js_name = verify ) ]
@@ -480,37 +438,32 @@ extern "C" {
         this: &Verify,
         object: &JsValue,
         signature: &str,
-        signature_format: Option<&crate::crypto::HexBase64Latin1Encoding>,
+        signature_format: Option<&HexBase64Latin1Encoding>,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = verify ) ]
     pub fn set_verify2(this: &Verify, value: &Function);
     # [ wasm_bindgen ( js_name = createDiffieHellman ) ]
-    pub fn create_diffie_hellman(
-        prime_length: f64,
-        generator: &JsValue,
-    ) -> crate::crypto::DiffieHellman;
+    pub fn create_diffie_hellman(prime_length: f64, generator: &JsValue) -> DiffieHellman;
     # [ wasm_bindgen ( js_name = createDiffieHellman ) ]
-    pub fn create_diffie_hellman2(
-        prime: &crate::node_js::ArrayBufferView,
-    ) -> crate::crypto::DiffieHellman;
+    pub fn create_diffie_hellman2(prime: &node_js::ArrayBufferView) -> DiffieHellman;
     # [ wasm_bindgen ( js_name = createDiffieHellman ) ]
     pub fn create_diffie_hellman3(
         prime: &str,
-        prime_encoding: &crate::crypto::HexBase64Latin1Encoding,
-    ) -> crate::crypto::DiffieHellman;
+        prime_encoding: &HexBase64Latin1Encoding,
+    ) -> DiffieHellman;
     # [ wasm_bindgen ( js_name = createDiffieHellman ) ]
     pub fn create_diffie_hellman4(
         prime: &str,
-        prime_encoding: &crate::crypto::HexBase64Latin1Encoding,
+        prime_encoding: &HexBase64Latin1Encoding,
         generator: &JsValue,
-    ) -> crate::crypto::DiffieHellman;
+    ) -> DiffieHellman;
     # [ wasm_bindgen ( js_name = createDiffieHellman ) ]
     pub fn create_diffie_hellman5(
         prime: &str,
-        prime_encoding: &crate::crypto::HexBase64Latin1Encoding,
+        prime_encoding: &HexBase64Latin1Encoding,
         generator: &str,
-        generator_encoding: &crate::crypto::HexBase64Latin1Encoding,
-    ) -> crate::crypto::DiffieHellman;
+        generator_encoding: &HexBase64Latin1Encoding,
+    ) -> DiffieHellman;
     pub type DiffieHellman;
     #[wasm_bindgen(constructor)]
     pub fn new_diffie_hellman() -> DiffieHellman;
@@ -519,16 +472,13 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = generateKeys ) ]
     pub fn set_generate_keys(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = generateKeys ) ]
-    pub fn generate_keys2(
-        this: &DiffieHellman,
-        encoding: &crate::crypto::HexBase64Latin1Encoding,
-    ) -> String;
+    pub fn generate_keys2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = generateKeys ) ]
     pub fn set_generate_keys2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = computeSecret ) ]
     pub fn compute_secret(
         this: &DiffieHellman,
-        other_public_key: &crate::node_js::ArrayBufferView,
+        other_public_key: &node_js::ArrayBufferView,
     ) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
     pub fn set_compute_secret(this: &DiffieHellman, value: &Function);
@@ -536,15 +486,15 @@ extern "C" {
     pub fn compute_secret2(
         this: &DiffieHellman,
         other_public_key: &str,
-        input_encoding: &crate::crypto::HexBase64Latin1Encoding,
+        input_encoding: &HexBase64Latin1Encoding,
     ) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
     pub fn set_compute_secret2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = computeSecret ) ]
     pub fn compute_secret3(
         this: &DiffieHellman,
-        other_public_key: &crate::node_js::ArrayBufferView,
-        output_encoding: &crate::crypto::HexBase64Latin1Encoding,
+        other_public_key: &node_js::ArrayBufferView,
+        output_encoding: &HexBase64Latin1Encoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
     pub fn set_compute_secret3(this: &DiffieHellman, value: &Function);
@@ -552,8 +502,8 @@ extern "C" {
     pub fn compute_secret4(
         this: &DiffieHellman,
         other_public_key: &str,
-        input_encoding: &crate::crypto::HexBase64Latin1Encoding,
-        output_encoding: &crate::crypto::HexBase64Latin1Encoding,
+        input_encoding: &HexBase64Latin1Encoding,
+        output_encoding: &HexBase64Latin1Encoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
     pub fn set_compute_secret4(this: &DiffieHellman, value: &Function);
@@ -562,10 +512,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getPrime ) ]
     pub fn set_get_prime(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPrime ) ]
-    pub fn get_prime2(
-        this: &DiffieHellman,
-        encoding: &crate::crypto::HexBase64Latin1Encoding,
-    ) -> String;
+    pub fn get_prime2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getPrime ) ]
     pub fn set_get_prime2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getGenerator ) ]
@@ -573,10 +520,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getGenerator ) ]
     pub fn set_get_generator(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getGenerator ) ]
-    pub fn get_generator2(
-        this: &DiffieHellman,
-        encoding: &crate::crypto::HexBase64Latin1Encoding,
-    ) -> String;
+    pub fn get_generator2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getGenerator ) ]
     pub fn set_get_generator2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPublicKey ) ]
@@ -584,10 +528,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getPublicKey ) ]
     pub fn set_get_public_key(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPublicKey ) ]
-    pub fn get_public_key2(
-        this: &DiffieHellman,
-        encoding: &crate::crypto::HexBase64Latin1Encoding,
-    ) -> String;
+    pub fn get_public_key2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getPublicKey ) ]
     pub fn set_get_public_key2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPrivateKey ) ]
@@ -595,14 +536,11 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getPrivateKey ) ]
     pub fn set_get_private_key(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPrivateKey ) ]
-    pub fn get_private_key2(
-        this: &DiffieHellman,
-        encoding: &crate::crypto::HexBase64Latin1Encoding,
-    ) -> String;
+    pub fn get_private_key2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getPrivateKey ) ]
     pub fn set_get_private_key2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = setPublicKey ) ]
-    pub fn set_public_key(this: &DiffieHellman, public_key: &crate::node_js::ArrayBufferView);
+    pub fn set_public_key(this: &DiffieHellman, public_key: &node_js::ArrayBufferView);
     # [ wasm_bindgen ( method , setter , js_name = setPublicKey ) ]
     pub fn set_set_public_key(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = setPublicKey ) ]
@@ -610,7 +548,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = setPublicKey ) ]
     pub fn set_set_public_key2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = setPrivateKey ) ]
-    pub fn set_private_key(this: &DiffieHellman, private_key: &crate::node_js::ArrayBufferView);
+    pub fn set_private_key(this: &DiffieHellman, private_key: &node_js::ArrayBufferView);
     # [ wasm_bindgen ( method , setter , js_name = setPrivateKey ) ]
     pub fn set_set_private_key(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = setPrivateKey ) ]
@@ -622,11 +560,11 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = verifyError ) ]
     pub fn set_verify_error(this: &DiffieHellman, value: f64);
     # [ wasm_bindgen ( js_name = getDiffieHellman ) ]
-    pub fn get_diffie_hellman(group_name: &str) -> crate::crypto::DiffieHellman;
+    pub fn get_diffie_hellman(group_name: &str) -> DiffieHellman;
     #[wasm_bindgen()]
     pub fn pbkdf2(
-        password: &crate::crypto::BinaryLike,
-        salt: &crate::crypto::BinaryLike,
+        password: &BinaryLike,
+        salt: &BinaryLike,
         iterations: f64,
         keylen: f64,
         digest: &str,
@@ -634,8 +572,8 @@ extern "C" {
     );
     # [ wasm_bindgen ( js_name = pbkdf2Sync ) ]
     pub fn pbkdf2_sync(
-        password: &crate::crypto::BinaryLike,
-        salt: &crate::crypto::BinaryLike,
+        password: &BinaryLike,
+        salt: &BinaryLike,
         iterations: f64,
         keylen: f64,
         digest: &str,
@@ -674,41 +612,36 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_maxmem(this: &ScryptOptions, value: Option<f64>);
     #[wasm_bindgen()]
-    pub fn scrypt(
-        password: &crate::crypto::BinaryLike,
-        salt: &crate::crypto::BinaryLike,
-        keylen: f64,
-        callback: &JsValue,
-    );
+    pub fn scrypt(password: &BinaryLike, salt: &BinaryLike, keylen: f64, callback: &JsValue);
     # [ wasm_bindgen ( js_name = scrypt ) ]
     pub fn scrypt2(
-        password: &crate::crypto::BinaryLike,
-        salt: &crate::crypto::BinaryLike,
+        password: &BinaryLike,
+        salt: &BinaryLike,
         keylen: f64,
-        options: &crate::crypto::ScryptOptions,
+        options: &ScryptOptions,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( js_name = scryptSync ) ]
     pub fn scrypt_sync(
-        password: &crate::crypto::BinaryLike,
-        salt: &crate::crypto::BinaryLike,
+        password: &BinaryLike,
+        salt: &BinaryLike,
         keylen: f64,
-        options: Option<&crate::crypto::ScryptOptions>,
+        options: Option<&ScryptOptions>,
     ) -> Buffer;
     pub type RsaPublicKey;
     #[wasm_bindgen(method, getter)]
-    pub fn key(this: &RsaPublicKey) -> crate::crypto::KeyLike;
+    pub fn key(this: &RsaPublicKey) -> KeyLike;
     #[wasm_bindgen(method, setter)]
-    pub fn set_key(this: &RsaPublicKey, value: &crate::crypto::KeyLike);
+    pub fn set_key(this: &RsaPublicKey, value: &KeyLike);
     #[wasm_bindgen(method, getter)]
     pub fn padding(this: &RsaPublicKey) -> Option<f64>;
     #[wasm_bindgen(method, setter)]
     pub fn set_padding(this: &RsaPublicKey, value: Option<f64>);
     pub type RsaPrivateKey;
     #[wasm_bindgen(method, getter)]
-    pub fn key(this: &RsaPrivateKey) -> crate::crypto::KeyLike;
+    pub fn key(this: &RsaPrivateKey) -> KeyLike;
     #[wasm_bindgen(method, setter)]
-    pub fn set_key(this: &RsaPrivateKey, value: &crate::crypto::KeyLike);
+    pub fn set_key(this: &RsaPrivateKey, value: &KeyLike);
     #[wasm_bindgen(method, getter)]
     pub fn passphrase(this: &RsaPrivateKey) -> Option<String>;
     #[wasm_bindgen(method, setter)]
@@ -718,27 +651,21 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = oaepHash ) ]
     pub fn set_oaep_hash(this: &RsaPrivateKey, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = oaepLabel ) ]
-    pub fn oaep_label(this: &RsaPrivateKey) -> Option<crate::node_js::TypedArray>;
+    pub fn oaep_label(this: &RsaPrivateKey) -> Option<node_js::TypedArray>;
     # [ wasm_bindgen ( method , setter , js_name = oaepLabel ) ]
-    pub fn set_oaep_label(this: &RsaPrivateKey, value: Option<&crate::node_js::TypedArray>);
+    pub fn set_oaep_label(this: &RsaPrivateKey, value: Option<&node_js::TypedArray>);
     #[wasm_bindgen(method, getter)]
     pub fn padding(this: &RsaPrivateKey) -> Option<f64>;
     #[wasm_bindgen(method, setter)]
     pub fn set_padding(this: &RsaPrivateKey, value: Option<f64>);
     # [ wasm_bindgen ( js_name = publicEncrypt ) ]
-    pub fn public_encrypt(key: &JsValue, buffer: &crate::node_js::ArrayBufferView) -> Buffer;
+    pub fn public_encrypt(key: &JsValue, buffer: &node_js::ArrayBufferView) -> Buffer;
     # [ wasm_bindgen ( js_name = publicDecrypt ) ]
-    pub fn public_decrypt(key: &JsValue, buffer: &crate::node_js::ArrayBufferView) -> Buffer;
+    pub fn public_decrypt(key: &JsValue, buffer: &node_js::ArrayBufferView) -> Buffer;
     # [ wasm_bindgen ( js_name = privateDecrypt ) ]
-    pub fn private_decrypt(
-        private_key: &JsValue,
-        buffer: &crate::node_js::ArrayBufferView,
-    ) -> Buffer;
+    pub fn private_decrypt(private_key: &JsValue, buffer: &node_js::ArrayBufferView) -> Buffer;
     # [ wasm_bindgen ( js_name = privateEncrypt ) ]
-    pub fn private_encrypt(
-        private_key: &JsValue,
-        buffer: &crate::node_js::ArrayBufferView,
-    ) -> Buffer;
+    pub fn private_encrypt(private_key: &JsValue, buffer: &node_js::ArrayBufferView) -> Buffer;
     # [ wasm_bindgen ( js_name = getCiphers ) ]
     pub fn get_ciphers() -> Array;
     # [ wasm_bindgen ( js_name = getCurves ) ]
@@ -751,9 +678,9 @@ extern "C" {
     # [ wasm_bindgen ( method , js_name = convertKey ) ]
     pub fn convert_key(
         this: &ECDH,
-        key: &crate::crypto::BinaryLike,
+        key: &BinaryLike,
         curve: &str,
-        input_encoding: Option<&crate::crypto::HexBase64Latin1Encoding>,
+        input_encoding: Option<&HexBase64Latin1Encoding>,
         output_encoding: &JsValue,
         format: &JsValue,
     ) -> JsValue;
@@ -766,31 +693,28 @@ extern "C" {
     # [ wasm_bindgen ( method , js_name = generateKeys ) ]
     pub fn generate_keys2(
         this: &ECDH,
-        encoding: &crate::crypto::HexBase64Latin1Encoding,
-        format: Option<&crate::crypto::ECDHKeyFormat>,
+        encoding: &HexBase64Latin1Encoding,
+        format: Option<&ECDHKeyFormat>,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = generateKeys ) ]
     pub fn set_generate_keys2(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = computeSecret ) ]
-    pub fn compute_secret(
-        this: &ECDH,
-        other_public_key: &crate::node_js::ArrayBufferView,
-    ) -> Buffer;
+    pub fn compute_secret(this: &ECDH, other_public_key: &node_js::ArrayBufferView) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
     pub fn set_compute_secret(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = computeSecret ) ]
     pub fn compute_secret2(
         this: &ECDH,
         other_public_key: &str,
-        input_encoding: &crate::crypto::HexBase64Latin1Encoding,
+        input_encoding: &HexBase64Latin1Encoding,
     ) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
     pub fn set_compute_secret2(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = computeSecret ) ]
     pub fn compute_secret3(
         this: &ECDH,
-        other_public_key: &crate::node_js::ArrayBufferView,
-        output_encoding: &crate::crypto::HexBase64Latin1Encoding,
+        other_public_key: &node_js::ArrayBufferView,
+        output_encoding: &HexBase64Latin1Encoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
     pub fn set_compute_secret3(this: &ECDH, value: &Function);
@@ -798,8 +722,8 @@ extern "C" {
     pub fn compute_secret4(
         this: &ECDH,
         other_public_key: &str,
-        input_encoding: &crate::crypto::HexBase64Latin1Encoding,
-        output_encoding: &crate::crypto::HexBase64Latin1Encoding,
+        input_encoding: &HexBase64Latin1Encoding,
+        output_encoding: &HexBase64Latin1Encoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
     pub fn set_compute_secret4(this: &ECDH, value: &Function);
@@ -808,10 +732,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getPrivateKey ) ]
     pub fn set_get_private_key(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPrivateKey ) ]
-    pub fn get_private_key2(
-        this: &ECDH,
-        encoding: &crate::crypto::HexBase64Latin1Encoding,
-    ) -> String;
+    pub fn get_private_key2(this: &ECDH, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getPrivateKey ) ]
     pub fn set_get_private_key2(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPublicKey ) ]
@@ -821,30 +742,23 @@ extern "C" {
     # [ wasm_bindgen ( method , js_name = getPublicKey ) ]
     pub fn get_public_key2(
         this: &ECDH,
-        encoding: &crate::crypto::HexBase64Latin1Encoding,
-        format: Option<&crate::crypto::ECDHKeyFormat>,
+        encoding: &HexBase64Latin1Encoding,
+        format: Option<&ECDHKeyFormat>,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getPublicKey ) ]
     pub fn set_get_public_key2(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = setPrivateKey ) ]
-    pub fn set_private_key(this: &ECDH, private_key: &crate::node_js::ArrayBufferView);
+    pub fn set_private_key(this: &ECDH, private_key: &node_js::ArrayBufferView);
     # [ wasm_bindgen ( method , setter , js_name = setPrivateKey ) ]
     pub fn set_set_private_key(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = setPrivateKey ) ]
-    pub fn set_private_key2(
-        this: &ECDH,
-        private_key: &str,
-        encoding: &crate::crypto::HexBase64Latin1Encoding,
-    );
+    pub fn set_private_key2(this: &ECDH, private_key: &str, encoding: &HexBase64Latin1Encoding);
     # [ wasm_bindgen ( method , setter , js_name = setPrivateKey ) ]
     pub fn set_set_private_key2(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( js_name = createECDH ) ]
-    pub fn create_ecdh(curve_name: &str) -> crate::crypto::ECDH;
+    pub fn create_ecdh(curve_name: &str) -> ECDH;
     # [ wasm_bindgen ( js_name = timingSafeEqual ) ]
-    pub fn timing_safe_equal(
-        a: &crate::node_js::ArrayBufferView,
-        b: &crate::node_js::ArrayBufferView,
-    ) -> bool;
+    pub fn timing_safe_equal(a: &node_js::ArrayBufferView, b: &node_js::ArrayBufferView) -> bool;
     pub static DEFAULT_ENCODING: String;
     pub type KeyType;
     pub type KeyFormat;
@@ -863,13 +777,13 @@ extern "C" {
     pub fn set_passphrase(this: &BasePrivateKeyEncodingOptions, value: Option<&str>);
     pub type KeyPairKeyObjectResult;
     # [ wasm_bindgen ( method , getter , js_name = publicKey ) ]
-    pub fn public_key(this: &KeyPairKeyObjectResult) -> crate::crypto::KeyObject;
+    pub fn public_key(this: &KeyPairKeyObjectResult) -> KeyObject;
     # [ wasm_bindgen ( method , setter , js_name = publicKey ) ]
-    pub fn set_public_key(this: &KeyPairKeyObjectResult, value: &crate::crypto::KeyObject);
+    pub fn set_public_key(this: &KeyPairKeyObjectResult, value: &KeyObject);
     # [ wasm_bindgen ( method , getter , js_name = privateKey ) ]
-    pub fn private_key(this: &KeyPairKeyObjectResult) -> crate::crypto::KeyObject;
+    pub fn private_key(this: &KeyPairKeyObjectResult) -> KeyObject;
     # [ wasm_bindgen ( method , setter , js_name = privateKey ) ]
-    pub fn set_private_key(this: &KeyPairKeyObjectResult, value: &crate::crypto::KeyObject);
+    pub fn set_private_key(this: &KeyPairKeyObjectResult, value: &KeyObject);
     pub type ECKeyPairKeyObjectOptions;
     #[doc = "Name of the curve to use."]
     # [ wasm_bindgen ( method , getter , js_name = namedCurve ) ]
@@ -960,166 +874,118 @@ extern "C" {
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync(
         type_: &JsValue,
-        options: &crate::crypto::RSAKeyPairOptions,
-    ) -> crate::crypto::KeyPairSyncResult;
+        options: &RSAKeyPairOptions,
+    ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync2(
         type_: &JsValue,
-        options: &crate::crypto::RSAKeyPairOptions,
-    ) -> crate::crypto::KeyPairSyncResult;
+        options: &RSAKeyPairOptions,
+    ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync3(
         type_: &JsValue,
-        options: &crate::crypto::RSAKeyPairOptions,
-    ) -> crate::crypto::KeyPairSyncResult;
+        options: &RSAKeyPairOptions,
+    ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync4(
         type_: &JsValue,
-        options: &crate::crypto::RSAKeyPairOptions,
-    ) -> crate::crypto::KeyPairSyncResult;
+        options: &RSAKeyPairOptions,
+    ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync5(
         type_: &JsValue,
-        options: &crate::crypto::RSAKeyPairKeyObjectOptions,
-    ) -> crate::crypto::KeyPairKeyObjectResult;
+        options: &RSAKeyPairKeyObjectOptions,
+    ) -> KeyPairKeyObjectResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync6(
         type_: &JsValue,
-        options: &crate::crypto::DSAKeyPairOptions,
-    ) -> crate::crypto::KeyPairSyncResult;
+        options: &DSAKeyPairOptions,
+    ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync7(
         type_: &JsValue,
-        options: &crate::crypto::DSAKeyPairOptions,
-    ) -> crate::crypto::KeyPairSyncResult;
+        options: &DSAKeyPairOptions,
+    ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync8(
         type_: &JsValue,
-        options: &crate::crypto::DSAKeyPairOptions,
-    ) -> crate::crypto::KeyPairSyncResult;
+        options: &DSAKeyPairOptions,
+    ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync9(
         type_: &JsValue,
-        options: &crate::crypto::DSAKeyPairOptions,
-    ) -> crate::crypto::KeyPairSyncResult;
+        options: &DSAKeyPairOptions,
+    ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync10(
         type_: &JsValue,
-        options: &crate::crypto::DSAKeyPairKeyObjectOptions,
-    ) -> crate::crypto::KeyPairKeyObjectResult;
+        options: &DSAKeyPairKeyObjectOptions,
+    ) -> KeyPairKeyObjectResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync11(
         type_: &JsValue,
-        options: &crate::crypto::ECKeyPairOptions,
-    ) -> crate::crypto::KeyPairSyncResult;
+        options: &ECKeyPairOptions,
+    ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync12(
         type_: &JsValue,
-        options: &crate::crypto::ECKeyPairOptions,
-    ) -> crate::crypto::KeyPairSyncResult;
+        options: &ECKeyPairOptions,
+    ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync13(
         type_: &JsValue,
-        options: &crate::crypto::ECKeyPairOptions,
-    ) -> crate::crypto::KeyPairSyncResult;
+        options: &ECKeyPairOptions,
+    ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync14(
         type_: &JsValue,
-        options: &crate::crypto::ECKeyPairOptions,
-    ) -> crate::crypto::KeyPairSyncResult;
+        options: &ECKeyPairOptions,
+    ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
     pub fn generate_key_pair_sync15(
         type_: &JsValue,
-        options: &crate::crypto::ECKeyPairKeyObjectOptions,
-    ) -> crate::crypto::KeyPairKeyObjectResult;
+        options: &ECKeyPairKeyObjectOptions,
+    ) -> KeyPairKeyObjectResult;
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair(
-        type_: &JsValue,
-        options: &crate::crypto::RSAKeyPairOptions,
-        callback: &JsValue,
-    );
+    pub fn generate_key_pair(type_: &JsValue, options: &RSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair2(
-        type_: &JsValue,
-        options: &crate::crypto::RSAKeyPairOptions,
-        callback: &JsValue,
-    );
+    pub fn generate_key_pair2(type_: &JsValue, options: &RSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair3(
-        type_: &JsValue,
-        options: &crate::crypto::RSAKeyPairOptions,
-        callback: &JsValue,
-    );
+    pub fn generate_key_pair3(type_: &JsValue, options: &RSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair4(
-        type_: &JsValue,
-        options: &crate::crypto::RSAKeyPairOptions,
-        callback: &JsValue,
-    );
+    pub fn generate_key_pair4(type_: &JsValue, options: &RSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
     pub fn generate_key_pair5(
         type_: &JsValue,
-        options: &crate::crypto::RSAKeyPairKeyObjectOptions,
+        options: &RSAKeyPairKeyObjectOptions,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair6(
-        type_: &JsValue,
-        options: &crate::crypto::DSAKeyPairOptions,
-        callback: &JsValue,
-    );
+    pub fn generate_key_pair6(type_: &JsValue, options: &DSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair7(
-        type_: &JsValue,
-        options: &crate::crypto::DSAKeyPairOptions,
-        callback: &JsValue,
-    );
+    pub fn generate_key_pair7(type_: &JsValue, options: &DSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair8(
-        type_: &JsValue,
-        options: &crate::crypto::DSAKeyPairOptions,
-        callback: &JsValue,
-    );
+    pub fn generate_key_pair8(type_: &JsValue, options: &DSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair9(
-        type_: &JsValue,
-        options: &crate::crypto::DSAKeyPairOptions,
-        callback: &JsValue,
-    );
+    pub fn generate_key_pair9(type_: &JsValue, options: &DSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
     pub fn generate_key_pair10(
         type_: &JsValue,
-        options: &crate::crypto::DSAKeyPairKeyObjectOptions,
+        options: &DSAKeyPairKeyObjectOptions,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair11(
-        type_: &JsValue,
-        options: &crate::crypto::ECKeyPairOptions,
-        callback: &JsValue,
-    );
+    pub fn generate_key_pair11(type_: &JsValue, options: &ECKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair12(
-        type_: &JsValue,
-        options: &crate::crypto::ECKeyPairOptions,
-        callback: &JsValue,
-    );
+    pub fn generate_key_pair12(type_: &JsValue, options: &ECKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair13(
-        type_: &JsValue,
-        options: &crate::crypto::ECKeyPairOptions,
-        callback: &JsValue,
-    );
+    pub fn generate_key_pair13(type_: &JsValue, options: &ECKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair14(
-        type_: &JsValue,
-        options: &crate::crypto::ECKeyPairOptions,
-        callback: &JsValue,
-    );
+    pub fn generate_key_pair14(type_: &JsValue, options: &ECKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
     pub fn generate_key_pair15(
         type_: &JsValue,
-        options: &crate::crypto::ECKeyPairKeyObjectOptions,
+        options: &ECKeyPairKeyObjectOptions,
         callback: &JsValue,
     );
     #[doc = "Calculates and returns the signature for `data` using the given private key and"]
@@ -1129,11 +995,7 @@ extern "C" {
     #[doc = "If `key` is not a [`KeyObject`][], this function behaves as if `key` had been"]
     #[doc = "passed to [`crypto.createPrivateKey()`][]."]
     #[wasm_bindgen()]
-    pub fn sign(
-        algorithm: &JsValue,
-        data: &crate::node_js::ArrayBufferView,
-        key: &JsValue,
-    ) -> Buffer;
+    pub fn sign(algorithm: &JsValue, data: &node_js::ArrayBufferView, key: &JsValue) -> Buffer;
     pub type VerifyKeyWithOptions;
     #[doc = "Calculates and returns the signature for `data` using the given private key and"]
     #[doc = "algorithm. If `algorithm` is `null` or `undefined`, then the algorithm is"]
@@ -1144,8 +1006,8 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn verify(
         algorithm: &JsValue,
-        data: &crate::node_js::ArrayBufferView,
+        data: &node_js::ArrayBufferView,
         key: &JsValue,
-        signature: &crate::node_js::ArrayBufferView,
+        signature: &node_js::ArrayBufferView,
     ) -> Buffer;
 }

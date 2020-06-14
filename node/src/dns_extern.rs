@@ -44,11 +44,11 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn lookup(hostname: &str, family: f64, callback: &JsValue);
     # [ wasm_bindgen ( js_name = lookup ) ]
-    pub fn lookup2(hostname: &str, options: &crate::dns::LookupOneOptions, callback: &JsValue);
+    pub fn lookup2(hostname: &str, options: &LookupOneOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = lookup ) ]
-    pub fn lookup3(hostname: &str, options: &crate::dns::LookupAllOptions, callback: &JsValue);
+    pub fn lookup3(hostname: &str, options: &LookupAllOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = lookup ) ]
-    pub fn lookup4(hostname: &str, options: &crate::dns::LookupOptions, callback: &JsValue);
+    pub fn lookup4(hostname: &str, options: &LookupOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = lookup ) ]
     pub fn lookup5(hostname: &str, callback: &JsValue);
     # [ wasm_bindgen ( js_name = lookupService ) ]
@@ -253,23 +253,15 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn resolve4(hostname: &str, callback: &JsValue);
     # [ wasm_bindgen ( js_name = resolve4 ) ]
-    pub fn resolve42(
-        hostname: &str,
-        options: &crate::dns::ResolveWithTtlOptions,
-        callback: &JsValue,
-    );
+    pub fn resolve42(hostname: &str, options: &ResolveWithTtlOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = resolve4 ) ]
-    pub fn resolve43(hostname: &str, options: &crate::dns::ResolveOptions, callback: &JsValue);
+    pub fn resolve43(hostname: &str, options: &ResolveOptions, callback: &JsValue);
     #[wasm_bindgen()]
     pub fn resolve6(hostname: &str, callback: &JsValue);
     # [ wasm_bindgen ( js_name = resolve6 ) ]
-    pub fn resolve62(
-        hostname: &str,
-        options: &crate::dns::ResolveWithTtlOptions,
-        callback: &JsValue,
-    );
+    pub fn resolve62(hostname: &str, options: &ResolveWithTtlOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = resolve6 ) ]
-    pub fn resolve63(hostname: &str, options: &crate::dns::ResolveOptions, callback: &JsValue);
+    pub fn resolve63(hostname: &str, options: &ResolveOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = resolveCname ) ]
     pub fn resolve_cname(hostname: &str, callback: &JsValue);
     # [ wasm_bindgen ( js_name = resolveMx ) ]

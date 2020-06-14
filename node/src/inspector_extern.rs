@@ -794,7 +794,7 @@ extern "C" {
     pub fn post4(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::runtime::EvaluateParameterType>,
+        params: Option<&runtime::EvaluateParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -1181,7 +1181,7 @@ extern "C" {
     pub fn post6(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::runtime::AwaitPromiseParameterType>,
+        params: Option<&runtime::AwaitPromiseParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -1568,7 +1568,7 @@ extern "C" {
     pub fn post8(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::runtime::CallFunctionOnParameterType>,
+        params: Option<&runtime::CallFunctionOnParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -1955,7 +1955,7 @@ extern "C" {
     pub fn post10(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::runtime::GetPropertiesParameterType>,
+        params: Option<&runtime::GetPropertiesParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -2342,7 +2342,7 @@ extern "C" {
     pub fn post12(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::runtime::ReleaseObjectParameterType>,
+        params: Option<&runtime::ReleaseObjectParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -2729,7 +2729,7 @@ extern "C" {
     pub fn post14(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::runtime::ReleaseObjectGroupParameterType>,
+        params: Option<&runtime::ReleaseObjectGroupParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -3880,7 +3880,7 @@ extern "C" {
     pub fn post20(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::runtime::SetCustomObjectFormatterEnabledParameterType>,
+        params: Option<&runtime::SetCustomObjectFormatterEnabledParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -4267,7 +4267,7 @@ extern "C" {
     pub fn post22(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::runtime::CompileScriptParameterType>,
+        params: Option<&runtime::CompileScriptParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -4654,7 +4654,7 @@ extern "C" {
     pub fn post24(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::runtime::RunScriptParameterType>,
+        params: Option<&runtime::RunScriptParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -5041,7 +5041,7 @@ extern "C" {
     pub fn post26(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::runtime::QueryObjectsParameterType>,
+        params: Option<&runtime::QueryObjectsParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -5428,7 +5428,7 @@ extern "C" {
     pub fn post28(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::runtime::GlobalLexicalScopeNamesParameterType>,
+        params: Option<&runtime::GlobalLexicalScopeNamesParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -6197,7 +6197,7 @@ extern "C" {
     pub fn post32(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::SetBreakpointsActiveParameterType>,
+        params: Option<&debugger::SetBreakpointsActiveParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -6584,7 +6584,7 @@ extern "C" {
     pub fn post34(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::SetSkipAllPausesParameterType>,
+        params: Option<&debugger::SetSkipAllPausesParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -6971,7 +6971,7 @@ extern "C" {
     pub fn post36(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::SetBreakpointByUrlParameterType>,
+        params: Option<&debugger::SetBreakpointByUrlParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -7358,7 +7358,7 @@ extern "C" {
     pub fn post38(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::SetBreakpointParameterType>,
+        params: Option<&debugger::SetBreakpointParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -7745,7 +7745,7 @@ extern "C" {
     pub fn post40(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::RemoveBreakpointParameterType>,
+        params: Option<&debugger::RemoveBreakpointParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -8132,7 +8132,7 @@ extern "C" {
     pub fn post42(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::GetPossibleBreakpointsParameterType>,
+        params: Option<&debugger::GetPossibleBreakpointsParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -8519,7 +8519,7 @@ extern "C" {
     pub fn post44(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::ContinueToLocationParameterType>,
+        params: Option<&debugger::ContinueToLocationParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -8906,7 +8906,7 @@ extern "C" {
     pub fn post46(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::PauseOnAsyncCallParameterType>,
+        params: Option<&debugger::PauseOnAsyncCallParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -9484,7 +9484,7 @@ extern "C" {
     pub fn post49(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::StepIntoParameterType>,
+        params: Option<&debugger::StepIntoParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -10635,7 +10635,7 @@ extern "C" {
     pub fn post55(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::GetStackTraceParameterType>,
+        params: Option<&debugger::GetStackTraceParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -11022,7 +11022,7 @@ extern "C" {
     pub fn post57(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::SearchInContentParameterType>,
+        params: Option<&debugger::SearchInContentParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -11409,7 +11409,7 @@ extern "C" {
     pub fn post59(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::SetScriptSourceParameterType>,
+        params: Option<&debugger::SetScriptSourceParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -11796,7 +11796,7 @@ extern "C" {
     pub fn post61(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::RestartFrameParameterType>,
+        params: Option<&debugger::RestartFrameParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -12183,7 +12183,7 @@ extern "C" {
     pub fn post63(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::GetScriptSourceParameterType>,
+        params: Option<&debugger::GetScriptSourceParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -12570,7 +12570,7 @@ extern "C" {
     pub fn post65(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::SetPauseOnExceptionsParameterType>,
+        params: Option<&debugger::SetPauseOnExceptionsParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -12957,7 +12957,7 @@ extern "C" {
     pub fn post67(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::EvaluateOnCallFrameParameterType>,
+        params: Option<&debugger::EvaluateOnCallFrameParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -13344,7 +13344,7 @@ extern "C" {
     pub fn post69(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::SetVariableValueParameterType>,
+        params: Option<&debugger::SetVariableValueParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -13731,7 +13731,7 @@ extern "C" {
     pub fn post71(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::SetReturnValueParameterType>,
+        params: Option<&debugger::SetReturnValueParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -14118,7 +14118,7 @@ extern "C" {
     pub fn post73(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::SetAsyncCallStackDepthParameterType>,
+        params: Option<&debugger::SetAsyncCallStackDepthParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -14505,7 +14505,7 @@ extern "C" {
     pub fn post75(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::SetBlackboxPatternsParameterType>,
+        params: Option<&debugger::SetBlackboxPatternsParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -14892,7 +14892,7 @@ extern "C" {
     pub fn post77(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::debugger::SetBlackboxedRangesParameterType>,
+        params: Option<&debugger::SetBlackboxedRangesParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -16234,7 +16234,7 @@ extern "C" {
     pub fn post84(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::profiler::SetSamplingIntervalParameterType>,
+        params: Option<&profiler::SetSamplingIntervalParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -17003,7 +17003,7 @@ extern "C" {
     pub fn post88(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::profiler::StartPreciseCoverageParameterType>,
+        params: Option<&profiler::StartPreciseCoverageParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -18918,7 +18918,7 @@ extern "C" {
     pub fn post98(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::heap_profiler::StartTrackingHeapObjectsParameterType>,
+        params: Option<&heap_profiler::StartTrackingHeapObjectsParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -19305,7 +19305,7 @@ extern "C" {
     pub fn post100(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::heap_profiler::StopTrackingHeapObjectsParameterType>,
+        params: Option<&heap_profiler::StopTrackingHeapObjectsParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -19692,7 +19692,7 @@ extern "C" {
     pub fn post102(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::heap_profiler::TakeHeapSnapshotParameterType>,
+        params: Option<&heap_profiler::TakeHeapSnapshotParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -20270,7 +20270,7 @@ extern "C" {
     pub fn post105(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::heap_profiler::GetObjectByHeapObjectIdParameterType>,
+        params: Option<&heap_profiler::GetObjectByHeapObjectIdParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -20657,7 +20657,7 @@ extern "C" {
     pub fn post107(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::heap_profiler::AddInspectedHeapObjectParameterType>,
+        params: Option<&heap_profiler::AddInspectedHeapObjectParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -21044,7 +21044,7 @@ extern "C" {
     pub fn post109(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::heap_profiler::GetHeapObjectIdParameterType>,
+        params: Option<&heap_profiler::GetHeapObjectIdParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -21431,7 +21431,7 @@ extern "C" {
     pub fn post111(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::heap_profiler::StartSamplingParameterType>,
+        params: Option<&heap_profiler::StartSamplingParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -22391,7 +22391,7 @@ extern "C" {
     pub fn post116(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::node_tracing::StartParameterType>,
+        params: Option<&node_tracing::StartParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -22969,7 +22969,7 @@ extern "C" {
     pub fn post119(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::node_worker::SendMessageToWorkerParameterType>,
+        params: Option<&node_worker::SendMessageToWorkerParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -23356,7 +23356,7 @@ extern "C" {
     pub fn post121(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::node_worker::EnableParameterType>,
+        params: Option<&node_worker::EnableParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -23934,7 +23934,7 @@ extern "C" {
     pub fn post124(
         this: &Session,
         method: &JsValue,
-        params: Option<&crate::inspector::node_worker::DetachParameterType>,
+        params: Option<&node_worker::DetachParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -24321,9 +24321,7 @@ extern "C" {
     pub fn post126(
         this: &Session,
         method: &JsValue,
-        params: Option<
-            &crate::inspector::node_runtime::NotifyWhenWaitingForDisconnectParameterType,
-        >,
+        params: Option<&node_runtime::NotifyWhenWaitingForDisconnectParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
@@ -26652,27 +26650,15 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit2(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit2(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit3(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit3(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit4(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit4(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -26680,67 +26666,35 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit5(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit6(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit6(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit7(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit7(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit8(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit8(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit8(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit9(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit9(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit9(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit10(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit10(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit10(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit11(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit11(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit11(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit12(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit12(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit12(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit13(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit13(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit13(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -26748,35 +26702,19 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit14(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit15(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit15(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit15(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit16(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit16(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit16(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit17(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit17(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit17(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit18(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit18(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit18(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -26784,35 +26722,19 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit19(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit20(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit20(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit20(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit21(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit21(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit21(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit22(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit22(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit22(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit23(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit23(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit23(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -26820,27 +26742,15 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit24(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit25(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit25(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit25(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit26(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit26(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit26(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit27(
-        this: &Session,
-        event: &JsValue,
-        message: &crate::inspector::InspectorNotification,
-    ) -> bool;
+    pub fn emit27(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit27(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]

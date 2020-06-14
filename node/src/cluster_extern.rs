@@ -55,9 +55,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_id(this: &Worker, value: f64);
     #[wasm_bindgen(method, getter)]
-    pub fn process(this: &Worker) -> crate::child_process::ChildProcess;
+    pub fn process(this: &Worker) -> child_process::ChildProcess;
     #[wasm_bindgen(method, setter)]
-    pub fn set_process(this: &Worker, value: &crate::child_process::ChildProcess);
+    pub fn set_process(this: &Worker, value: &child_process::ChildProcess);
     #[wasm_bindgen(method)]
     pub fn send(
         this: &Worker,
@@ -185,7 +185,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit4(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Worker, event: &JsValue, address: &crate::cluster::Address) -> bool;
+    pub fn emit5(this: &Worker, event: &JsValue, address: &Address) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit5(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
@@ -310,15 +310,15 @@ extern "C" {
     pub fn set_prepend_once_listener7(this: &Worker, value: &Function);
     pub type Cluster;
     # [ wasm_bindgen ( method , getter , js_name = Worker ) ]
-    pub fn worker(this: &Cluster) -> crate::cluster::Worker;
+    pub fn worker(this: &Cluster) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = Worker ) ]
-    pub fn set_worker(this: &Cluster, value: &crate::cluster::Worker);
+    pub fn set_worker(this: &Cluster, value: &Worker);
     #[wasm_bindgen(method)]
     pub fn disconnect(this: &Cluster, callback: &JsValue);
     #[wasm_bindgen(method, setter)]
     pub fn set_disconnect(this: &Cluster, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn fork(this: &Cluster, env: &JsValue) -> crate::cluster::Worker;
+    pub fn fork(this: &Cluster, env: &JsValue) -> Worker;
     #[wasm_bindgen(method, setter)]
     pub fn set_fork(this: &Cluster, value: &Function);
     # [ wasm_bindgen ( method , getter , js_name = isMaster ) ]
@@ -330,17 +330,17 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = isWorker ) ]
     pub fn set_is_worker(this: &Cluster, value: bool);
     #[wasm_bindgen(method, getter)]
-    pub fn settings(this: &Cluster) -> crate::cluster::ClusterSettings;
+    pub fn settings(this: &Cluster) -> ClusterSettings;
     #[wasm_bindgen(method, setter)]
-    pub fn set_settings(this: &Cluster, value: &crate::cluster::ClusterSettings);
+    pub fn set_settings(this: &Cluster, value: &ClusterSettings);
     # [ wasm_bindgen ( method , js_name = setupMaster ) ]
-    pub fn setup_master(this: &Cluster, settings: Option<&crate::cluster::ClusterSettings>);
+    pub fn setup_master(this: &Cluster, settings: Option<&ClusterSettings>);
     # [ wasm_bindgen ( method , setter , js_name = setupMaster ) ]
     pub fn set_setup_master(this: &Cluster, value: &Function);
     # [ wasm_bindgen ( method , getter , js_name = worker ) ]
-    pub fn worker2(this: &Cluster) -> Option<crate::cluster::Worker>;
+    pub fn worker2(this: &Cluster) -> Option<Worker>;
     # [ wasm_bindgen ( method , setter , js_name = worker ) ]
-    pub fn set_worker2(this: &Cluster, value: Option<&crate::cluster::Worker>);
+    pub fn set_worker2(this: &Cluster, value: Option<&Worker>);
     #[wasm_bindgen(method, getter)]
     pub fn workers(this: &Cluster) -> JsValue;
     #[wasm_bindgen(method, setter)]
@@ -446,52 +446,38 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Cluster, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &Cluster, event: &JsValue, worker: &crate::cluster::Worker) -> bool;
+    pub fn emit2(this: &Cluster, event: &JsValue, worker: &Worker) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit2(this: &Cluster, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(
-        this: &Cluster,
-        event: &JsValue,
-        worker: &crate::cluster::Worker,
-        code: f64,
-        signal: &str,
-    ) -> bool;
+    pub fn emit3(this: &Cluster, event: &JsValue, worker: &Worker, code: f64, signal: &str)
+    -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit3(this: &Cluster, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &Cluster, event: &JsValue, worker: &crate::cluster::Worker) -> bool;
+    pub fn emit4(this: &Cluster, event: &JsValue, worker: &Worker) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit4(this: &Cluster, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(
-        this: &Cluster,
-        event: &JsValue,
-        worker: &crate::cluster::Worker,
-        address: &crate::cluster::Address,
-    ) -> bool;
+    pub fn emit5(this: &Cluster, event: &JsValue, worker: &Worker, address: &Address) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit5(this: &Cluster, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
     pub fn emit6(
         this: &Cluster,
         event: &JsValue,
-        worker: &crate::cluster::Worker,
+        worker: &Worker,
         message: &JsValue,
         handle: &JsValue,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit6(this: &Cluster, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &Cluster, event: &JsValue, worker: &crate::cluster::Worker) -> bool;
+    pub fn emit7(this: &Cluster, event: &JsValue, worker: &Worker) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit7(this: &Cluster, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit8(
-        this: &Cluster,
-        event: &JsValue,
-        settings: &crate::cluster::ClusterSettings,
-    ) -> bool;
+    pub fn emit8(this: &Cluster, event: &JsValue, settings: &ClusterSettings) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
     pub fn set_emit8(this: &Cluster, value: &Function);
     #[wasm_bindgen(method)]
@@ -625,7 +611,7 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn disconnect(callback: &JsValue);
     #[wasm_bindgen()]
-    pub fn fork(env: &JsValue) -> crate::cluster::Worker;
+    pub fn fork(env: &JsValue) -> Worker;
     #[wasm_bindgen(js_name = "isMaster")]
     pub static IS_MASTER: String;
     #[wasm_bindgen(js_name = "isWorker")]
@@ -633,7 +619,7 @@ extern "C" {
     #[wasm_bindgen(js_name = "settings")]
     pub static SETTINGS: String;
     # [ wasm_bindgen ( js_name = setupMaster ) ]
-    pub fn setup_master(settings: Option<&crate::cluster::ClusterSettings>);
+    pub fn setup_master(settings: Option<&ClusterSettings>);
     #[wasm_bindgen(js_name = "worker")]
     pub static WORKER: String;
     #[wasm_bindgen(js_name = "workers")]
@@ -647,7 +633,7 @@ extern "C" {
     #[doc = "   6. online"]
     #[doc = "   7. setup"]
     # [ wasm_bindgen ( js_name = addListener ) ]
-    pub fn add_listener(event: &str, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn add_listener(event: &str, listener: &JsValue) -> Cluster;
     #[doc = "events.EventEmitter"]
     #[doc = "   1. disconnect"]
     #[doc = "   2. exit"]
@@ -657,7 +643,7 @@ extern "C" {
     #[doc = "   6. online"]
     #[doc = "   7. setup"]
     # [ wasm_bindgen ( js_name = addListener ) ]
-    pub fn add_listener2(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn add_listener2(event: &JsValue, listener: &JsValue) -> Cluster;
     #[doc = "events.EventEmitter"]
     #[doc = "   1. disconnect"]
     #[doc = "   2. exit"]
@@ -667,7 +653,7 @@ extern "C" {
     #[doc = "   6. online"]
     #[doc = "   7. setup"]
     # [ wasm_bindgen ( js_name = addListener ) ]
-    pub fn add_listener3(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn add_listener3(event: &JsValue, listener: &JsValue) -> Cluster;
     #[doc = "events.EventEmitter"]
     #[doc = "   1. disconnect"]
     #[doc = "   2. exit"]
@@ -677,7 +663,7 @@ extern "C" {
     #[doc = "   6. online"]
     #[doc = "   7. setup"]
     # [ wasm_bindgen ( js_name = addListener ) ]
-    pub fn add_listener4(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn add_listener4(event: &JsValue, listener: &JsValue) -> Cluster;
     #[doc = "events.EventEmitter"]
     #[doc = "   1. disconnect"]
     #[doc = "   2. exit"]
@@ -687,7 +673,7 @@ extern "C" {
     #[doc = "   6. online"]
     #[doc = "   7. setup"]
     # [ wasm_bindgen ( js_name = addListener ) ]
-    pub fn add_listener5(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn add_listener5(event: &JsValue, listener: &JsValue) -> Cluster;
     #[doc = "events.EventEmitter"]
     #[doc = "   1. disconnect"]
     #[doc = "   2. exit"]
@@ -697,7 +683,7 @@ extern "C" {
     #[doc = "   6. online"]
     #[doc = "   7. setup"]
     # [ wasm_bindgen ( js_name = addListener ) ]
-    pub fn add_listener6(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn add_listener6(event: &JsValue, listener: &JsValue) -> Cluster;
     #[doc = "events.EventEmitter"]
     #[doc = "   1. disconnect"]
     #[doc = "   2. exit"]
@@ -707,7 +693,7 @@ extern "C" {
     #[doc = "   6. online"]
     #[doc = "   7. setup"]
     # [ wasm_bindgen ( js_name = addListener ) ]
-    pub fn add_listener7(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn add_listener7(event: &JsValue, listener: &JsValue) -> Cluster;
     #[doc = "events.EventEmitter"]
     #[doc = "   1. disconnect"]
     #[doc = "   2. exit"]
@@ -717,71 +703,61 @@ extern "C" {
     #[doc = "   6. online"]
     #[doc = "   7. setup"]
     # [ wasm_bindgen ( js_name = addListener ) ]
-    pub fn add_listener8(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn add_listener8(event: &JsValue, listener: &JsValue) -> Cluster;
     #[wasm_bindgen()]
     pub fn emit(event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( js_name = emit ) ]
-    pub fn emit2(event: &JsValue, worker: &crate::cluster::Worker) -> bool;
+    pub fn emit2(event: &JsValue, worker: &Worker) -> bool;
     # [ wasm_bindgen ( js_name = emit ) ]
-    pub fn emit3(event: &JsValue, worker: &crate::cluster::Worker, code: f64, signal: &str)
-    -> bool;
+    pub fn emit3(event: &JsValue, worker: &Worker, code: f64, signal: &str) -> bool;
     # [ wasm_bindgen ( js_name = emit ) ]
-    pub fn emit4(event: &JsValue, worker: &crate::cluster::Worker) -> bool;
+    pub fn emit4(event: &JsValue, worker: &Worker) -> bool;
     # [ wasm_bindgen ( js_name = emit ) ]
-    pub fn emit5(
-        event: &JsValue,
-        worker: &crate::cluster::Worker,
-        address: &crate::cluster::Address,
-    ) -> bool;
+    pub fn emit5(event: &JsValue, worker: &Worker, address: &Address) -> bool;
     # [ wasm_bindgen ( js_name = emit ) ]
-    pub fn emit6(
-        event: &JsValue,
-        worker: &crate::cluster::Worker,
-        message: &JsValue,
-        handle: &JsValue,
-    ) -> bool;
+    pub fn emit6(event: &JsValue, worker: &Worker, message: &JsValue, handle: &JsValue) -> bool;
     # [ wasm_bindgen ( js_name = emit ) ]
-    pub fn emit7(event: &JsValue, worker: &crate::cluster::Worker) -> bool;
+    pub fn emit7(event: &JsValue, worker: &Worker) -> bool;
     # [ wasm_bindgen ( js_name = emit ) ]
-    pub fn emit8(event: &JsValue, settings: &crate::cluster::ClusterSettings) -> bool;
+    pub fn emit8(event: &JsValue, settings: &ClusterSettings) -> bool;
     #[wasm_bindgen()]
-    pub fn on(event: &str, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn on(event: &str, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = on ) ]
-    pub fn on2(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn on2(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = on ) ]
-    pub fn on3(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn on3(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = on ) ]
-    pub fn on4(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn on4(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = on ) ]
-    pub fn on5(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn on5(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = on ) ]
-    pub fn on6(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn on6(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = on ) ]
-    pub fn on7(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn on7(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = on ) ]
-    pub fn on8(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn on8(event: &JsValue, listener: &JsValue) -> Cluster;
     #[wasm_bindgen()]
-    pub fn once(event: &str, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn once(event: &str, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = once ) ]
-    pub fn once2(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn once2(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = once ) ]
-    pub fn once3(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn once3(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = once ) ]
-    pub fn once4(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn once4(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = once ) ]
-    pub fn once5(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn once5(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = once ) ]
-    pub fn once6(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn once6(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = once ) ]
-    pub fn once7(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn once7(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = once ) ]
-    pub fn once8(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn once8(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = removeListener ) ]
-    pub fn remove_listener(event: &str, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn remove_listener(event: &str, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = removeAllListeners ) ]
-    pub fn remove_all_listeners(event: Option<&str>) -> crate::cluster::Cluster;
+    pub fn remove_all_listeners(event: Option<&str>) -> Cluster;
     # [ wasm_bindgen ( js_name = setMaxListeners ) ]
-    pub fn set_max_listeners(n: f64) -> crate::cluster::Cluster;
+    pub fn set_max_listeners(n: f64) -> Cluster;
     # [ wasm_bindgen ( js_name = getMaxListeners ) ]
     pub fn get_max_listeners() -> f64;
     #[wasm_bindgen()]
@@ -789,37 +765,37 @@ extern "C" {
     # [ wasm_bindgen ( js_name = listenerCount ) ]
     pub fn listener_count(type_: &str) -> f64;
     # [ wasm_bindgen ( js_name = prependListener ) ]
-    pub fn prepend_listener(event: &str, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_listener(event: &str, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependListener ) ]
-    pub fn prepend_listener2(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_listener2(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependListener ) ]
-    pub fn prepend_listener3(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_listener3(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependListener ) ]
-    pub fn prepend_listener4(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_listener4(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependListener ) ]
-    pub fn prepend_listener5(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_listener5(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependListener ) ]
-    pub fn prepend_listener6(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_listener6(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependListener ) ]
-    pub fn prepend_listener7(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_listener7(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependListener ) ]
-    pub fn prepend_listener8(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_listener8(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener(event: &str, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_once_listener(event: &str, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_once_listener2(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_once_listener3(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_once_listener4(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_once_listener5(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_once_listener6(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener7(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_once_listener7(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener8(event: &JsValue, listener: &JsValue) -> crate::cluster::Cluster;
+    pub fn prepend_once_listener8(event: &JsValue, listener: &JsValue) -> Cluster;
     # [ wasm_bindgen ( js_name = eventNames ) ]
     pub fn event_names() -> Array;
 }

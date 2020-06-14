@@ -36,33 +36,33 @@ impl ScriptOptions {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<crate::vm::BaseOptions> for crate::vm::CompileFunctionOptions {
-    fn as_ref(&self) -> &crate::vm::BaseOptions {
+impl AsRef<BaseOptions> for CompileFunctionOptions {
+    fn as_ref(&self) -> &BaseOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::vm::CompileFunctionOptions> for crate::vm::BaseOptions {
-    fn from(child: crate::vm::CompileFunctionOptions) -> Self {
+impl From<CompileFunctionOptions> for BaseOptions {
+    fn from(child: CompileFunctionOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::vm::BaseOptions> for crate::vm::RunningScriptOptions {
-    fn as_ref(&self) -> &crate::vm::BaseOptions {
+impl AsRef<BaseOptions> for RunningScriptOptions {
+    fn as_ref(&self) -> &BaseOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::vm::RunningScriptOptions> for crate::vm::BaseOptions {
-    fn from(child: crate::vm::RunningScriptOptions) -> Self {
+impl From<RunningScriptOptions> for BaseOptions {
+    fn from(child: RunningScriptOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::vm::BaseOptions> for crate::vm::ScriptOptions {
-    fn as_ref(&self) -> &crate::vm::BaseOptions {
+impl AsRef<BaseOptions> for ScriptOptions {
+    fn as_ref(&self) -> &BaseOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::vm::ScriptOptions> for crate::vm::BaseOptions {
-    fn from(child: crate::vm::ScriptOptions) -> Self {
+impl From<ScriptOptions> for BaseOptions {
+    fn from(child: ScriptOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }

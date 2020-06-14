@@ -100,8 +100,8 @@ extern "C" {
     pub static DELIMITER: String;
     #[doc = "Returns an object from a path string - the opposite of format()."]
     #[wasm_bindgen()]
-    pub fn parse(path_string: &str) -> crate::path::ParsedPath;
+    pub fn parse(path_string: &str) -> ParsedPath;
     #[doc = "Returns a path string from an object - the opposite of parse()."]
     #[wasm_bindgen()]
-    pub fn format(path_object: &crate::path::FormatInputPathObject) -> String;
+    pub fn format(path_object: &FormatInputPathObject) -> String;
 }

@@ -11,13 +11,13 @@ impl Session {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<EventEmitter> for crate::inspector::Session {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::events::EventEmitter> for Session {
+    fn as_ref(&self) -> &crate::events::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::inspector::Session> for EventEmitter {
-    fn from(child: crate::inspector::Session) -> Self {
+impl From<Session> for crate::events::EventEmitter {
+    fn from(child: Session) -> Self {
         JsCast::unchecked_into(child)
     }
 }

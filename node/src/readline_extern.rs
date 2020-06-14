@@ -35,13 +35,13 @@ extern "C" {
     pub fn cursor(this: &Interface) -> f64;
     #[wasm_bindgen(constructor)]
     pub fn new_interface(
-        input: &crate::node_js::ReadableStream,
-        output: Option<&crate::node_js::WritableStream>,
+        input: &node_js::ReadableStream,
+        output: Option<&node_js::WritableStream>,
         completer: &JsValue,
         terminal: Option<bool>,
     ) -> Interface;
     #[wasm_bindgen(constructor)]
-    pub fn new_interface2(options: &crate::readline::ReadLineOptions) -> Interface;
+    pub fn new_interface2(options: &ReadLineOptions) -> Interface;
     # [ wasm_bindgen ( method , js_name = setPrompt ) ]
     pub fn set_prompt(this: &Interface, prompt: &str);
     # [ wasm_bindgen ( method , setter , js_name = setPrompt ) ]
@@ -67,7 +67,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_close(this: &Interface, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn write(this: &Interface, data: &JsValue, key: Option<&crate::readline::Key>);
+    pub fn write(this: &Interface, data: &JsValue, key: Option<&Key>);
     #[wasm_bindgen(method, setter)]
     pub fn set_write(this: &Interface, value: &Function);
     #[doc = "events.EventEmitter"]
@@ -364,13 +364,13 @@ extern "C" {
     pub type CompleterResult;
     pub type ReadLineOptions;
     #[wasm_bindgen(method, getter)]
-    pub fn input(this: &ReadLineOptions) -> crate::node_js::ReadableStream;
+    pub fn input(this: &ReadLineOptions) -> node_js::ReadableStream;
     #[wasm_bindgen(method, setter)]
-    pub fn set_input(this: &ReadLineOptions, value: &crate::node_js::ReadableStream);
+    pub fn set_input(this: &ReadLineOptions, value: &node_js::ReadableStream);
     #[wasm_bindgen(method, getter)]
-    pub fn output(this: &ReadLineOptions) -> Option<crate::node_js::WritableStream>;
+    pub fn output(this: &ReadLineOptions) -> Option<node_js::WritableStream>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_output(this: &ReadLineOptions, value: Option<&crate::node_js::WritableStream>);
+    pub fn set_output(this: &ReadLineOptions, value: Option<&node_js::WritableStream>);
     #[wasm_bindgen(method, getter)]
     pub fn completer(this: &ReadLineOptions) -> JsValue;
     #[wasm_bindgen(method, setter)]
@@ -401,35 +401,33 @@ extern "C" {
     pub fn set_escape_code_timeout(this: &ReadLineOptions, value: Option<f64>);
     # [ wasm_bindgen ( js_name = createInterface ) ]
     pub fn create_interface(
-        input: &crate::node_js::ReadableStream,
-        output: Option<&crate::node_js::WritableStream>,
+        input: &node_js::ReadableStream,
+        output: Option<&node_js::WritableStream>,
         completer: &JsValue,
         terminal: Option<bool>,
-    ) -> crate::readline::Interface;
+    ) -> Interface;
     # [ wasm_bindgen ( js_name = createInterface ) ]
-    pub fn create_interface2(
-        options: &crate::readline::ReadLineOptions,
-    ) -> crate::readline::Interface;
+    pub fn create_interface2(options: &ReadLineOptions) -> Interface;
     # [ wasm_bindgen ( js_name = emitKeypressEvents ) ]
     pub fn emit_keypress_events(
-        stream: &crate::node_js::ReadableStream,
-        readline_interface: Option<&crate::readline::Interface>,
+        stream: &node_js::ReadableStream,
+        readline_interface: Option<&Interface>,
     );
     pub type Direction;
     #[doc = "Clears the current line of this WriteStream in a direction identified by `dir`."]
     # [ wasm_bindgen ( js_name = clearLine ) ]
     pub fn clear_line(
-        stream: &crate::node_js::WritableStream,
-        dir: &crate::readline::Direction,
+        stream: &node_js::WritableStream,
+        dir: &Direction,
         callback: &JsValue,
     ) -> bool;
     #[doc = "Clears this `WriteStream` from the current cursor down."]
     # [ wasm_bindgen ( js_name = clearScreenDown ) ]
-    pub fn clear_screen_down(stream: &crate::node_js::WritableStream, callback: &JsValue) -> bool;
+    pub fn clear_screen_down(stream: &node_js::WritableStream, callback: &JsValue) -> bool;
     #[doc = "Moves this WriteStream's cursor to the specified position."]
     # [ wasm_bindgen ( js_name = cursorTo ) ]
     pub fn cursor_to(
-        stream: &crate::node_js::WritableStream,
+        stream: &node_js::WritableStream,
         x: f64,
         y: Option<f64>,
         callback: &JsValue,
@@ -437,7 +435,7 @@ extern "C" {
     #[doc = "Moves this WriteStream's cursor relative to its current position."]
     # [ wasm_bindgen ( js_name = moveCursor ) ]
     pub fn move_cursor(
-        stream: &crate::node_js::WritableStream,
+        stream: &node_js::WritableStream,
         dx: f64,
         dy: f64,
         callback: &JsValue,

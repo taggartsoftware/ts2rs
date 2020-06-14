@@ -19,17 +19,17 @@ extern "C" {
     pub fn set_max_cached_sessions(this: &AgentOptions, value: Option<f64>);
     pub type Agent;
     #[wasm_bindgen(constructor)]
-    pub fn new_agent(options: Option<&crate::https::AgentOptions>) -> Agent;
+    pub fn new_agent(options: Option<&AgentOptions>) -> Agent;
     #[wasm_bindgen(method, getter)]
-    pub fn options(this: &Agent) -> crate::https::AgentOptions;
+    pub fn options(this: &Agent) -> AgentOptions;
     #[wasm_bindgen(method, setter)]
-    pub fn set_options(this: &Agent, value: &crate::https::AgentOptions);
+    pub fn set_options(this: &Agent, value: &AgentOptions);
     pub type Server;
     #[wasm_bindgen(constructor)]
     pub fn new_server(request_listener: Option<&crate::http::RequestListener>) -> Server;
     #[wasm_bindgen(constructor)]
     pub fn new_server2(
-        options: &crate::https::ServerOptions,
+        options: &ServerOptions,
         request_listener: Option<&crate::http::RequestListener>,
     ) -> Server;
     # [ wasm_bindgen ( method , js_name = setTimeout ) ]
@@ -59,20 +59,18 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = keepAliveTimeout ) ]
     pub fn set_keep_alive_timeout(this: &Server, value: f64);
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server(
-        request_listener: Option<&crate::http::RequestListener>,
-    ) -> crate::https::Server;
+    pub fn create_server(request_listener: Option<&crate::http::RequestListener>) -> Server;
     # [ wasm_bindgen ( js_name = createServer ) ]
     pub fn create_server2(
-        options: &crate::https::ServerOptions,
+        options: &ServerOptions,
         request_listener: Option<&crate::http::RequestListener>,
-    ) -> crate::https::Server;
+    ) -> Server;
     #[wasm_bindgen()]
     pub fn request(options: &JsValue, callback: &JsValue) -> crate::http::ClientRequest;
     # [ wasm_bindgen ( js_name = request ) ]
     pub fn request2(
         url: &JsValue,
-        options: &crate::https::RequestOptions,
+        options: &RequestOptions,
         callback: &JsValue,
     ) -> crate::http::ClientRequest;
     #[wasm_bindgen()]
@@ -80,7 +78,7 @@ extern "C" {
     # [ wasm_bindgen ( js_name = get ) ]
     pub fn get2(
         url: &JsValue,
-        options: &crate::https::RequestOptions,
+        options: &RequestOptions,
         callback: &JsValue,
     ) -> crate::http::ClientRequest;
     #[wasm_bindgen(js_name = "globalAgent")]

@@ -21,23 +21,23 @@ impl WorkerOptions {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<EventEmitter> for crate::worker_threads::MessagePort {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::events::EventEmitter> for MessagePort {
+    fn as_ref(&self) -> &crate::events::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::worker_threads::MessagePort> for EventEmitter {
-    fn from(child: crate::worker_threads::MessagePort) -> Self {
+impl From<MessagePort> for crate::events::EventEmitter {
+    fn from(child: MessagePort) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for crate::worker_threads::Worker {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<crate::events::EventEmitter> for Worker {
+    fn as_ref(&self) -> &crate::events::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::worker_threads::Worker> for EventEmitter {
-    fn from(child: crate::worker_threads::Worker) -> Self {
+impl From<Worker> for crate::events::EventEmitter {
+    fn from(child: Worker) -> Self {
         JsCast::unchecked_into(child)
     }
 }

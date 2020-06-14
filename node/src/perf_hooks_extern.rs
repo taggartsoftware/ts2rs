@@ -123,7 +123,7 @@ extern "C" {
     pub fn set_measure(this: &Performance, value: &Function);
     #[doc = "An instance of the PerformanceNodeTiming class that provides performance metrics for specific Node.js operational milestones."]
     # [ wasm_bindgen ( method , getter , js_name = nodeTiming ) ]
-    pub fn node_timing(this: &Performance) -> crate::perf_hooks::PerformanceNodeTiming;
+    pub fn node_timing(this: &Performance) -> PerformanceNodeTiming;
     #[wasm_bindgen(method)]
     pub fn now(this: &Performance) -> f64;
     #[wasm_bindgen(method, setter)]
@@ -157,9 +157,7 @@ extern "C" {
     pub type PerformanceObserverCallback;
     pub type PerformanceObserver;
     #[wasm_bindgen(constructor)]
-    pub fn new_performance_observer(
-        callback: &crate::perf_hooks::PerformanceObserverCallback,
-    ) -> PerformanceObserver;
+    pub fn new_performance_observer(callback: &PerformanceObserverCallback) -> PerformanceObserver;
     #[doc = "Disconnects the PerformanceObserver instance from all notifications."]
     #[wasm_bindgen(method)]
     pub fn disconnect(this: &PerformanceObserver);
@@ -222,6 +220,6 @@ extern "C" {
     pub fn stddev(this: &EventLoopDelayMonitor) -> f64;
     # [ wasm_bindgen ( js_name = monitorEventLoopDelay ) ]
     pub fn monitor_event_loop_delay(
-        options: Option<&crate::perf_hooks::EventLoopMonitorOptions>,
-    ) -> crate::perf_hooks::EventLoopDelayMonitor;
+        options: Option<&EventLoopMonitorOptions>,
+    ) -> EventLoopDelayMonitor;
 }

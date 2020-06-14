@@ -76,83 +76,123 @@ impl WriteVResult {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<crate::fs::StatsBase> for crate::fs::BigIntStats {
-    fn as_ref(&self) -> &crate::fs::StatsBase {
+impl AsRef<StatsBase> for BigIntStats {
+    fn as_ref(&self) -> &StatsBase {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::fs::BigIntStats> for crate::fs::StatsBase {
-    fn from(child: crate::fs::BigIntStats) -> Self {
+impl From<BigIntStats> for StatsBase {
+    fn from(child: BigIntStats) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::node_js::EventEmitter> for crate::fs::FSWatcher {
-    fn as_ref(&self) -> &crate::node_js::EventEmitter {
+impl AsRef<node_js::EventEmitter> for FSWatcher {
+    fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::fs::FSWatcher> for crate::node_js::EventEmitter {
-    fn from(child: crate::fs::FSWatcher) -> Self {
+impl From<FSWatcher> for node_js::EventEmitter {
+    fn from(child: FSWatcher) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::node_js::EventEmitter> for crate::fs::ReadStream {
-    fn as_ref(&self) -> &crate::node_js::EventEmitter {
+impl AsRef<EventEmitter> for ReadStream {
+    fn as_ref(&self) -> &EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::fs::ReadStream> for crate::node_js::EventEmitter {
-    fn from(child: crate::fs::ReadStream) -> Self {
+impl From<ReadStream> for EventEmitter {
+    fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::node_js::ReadableStream> for crate::fs::ReadStream {
-    fn as_ref(&self) -> &crate::node_js::ReadableStream {
+impl AsRef<node_js::EventEmitter> for ReadStream {
+    fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::fs::ReadStream> for crate::node_js::ReadableStream {
-    fn from(child: crate::fs::ReadStream) -> Self {
+impl From<ReadStream> for node_js::EventEmitter {
+    fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::fs::RmDirOptions> for crate::fs::RmDirAsyncOptions {
-    fn as_ref(&self) -> &crate::fs::RmDirOptions {
+impl AsRef<node_js::ReadableStream> for ReadStream {
+    fn as_ref(&self) -> &node_js::ReadableStream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::fs::RmDirAsyncOptions> for crate::fs::RmDirOptions {
-    fn from(child: crate::fs::RmDirAsyncOptions) -> Self {
+impl From<ReadStream> for node_js::ReadableStream {
+    fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::fs::StatsBase> for crate::fs::Stats {
-    fn as_ref(&self) -> &crate::fs::StatsBase {
+impl AsRef<Stream> for ReadStream {
+    fn as_ref(&self) -> &Stream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::fs::Stats> for crate::fs::StatsBase {
-    fn from(child: crate::fs::Stats) -> Self {
+impl From<ReadStream> for Stream {
+    fn from(child: ReadStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::node_js::EventEmitter> for crate::fs::WriteStream {
-    fn as_ref(&self) -> &crate::node_js::EventEmitter {
+impl AsRef<RmDirOptions> for RmDirAsyncOptions {
+    fn as_ref(&self) -> &RmDirOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::fs::WriteStream> for crate::node_js::EventEmitter {
-    fn from(child: crate::fs::WriteStream) -> Self {
+impl From<RmDirAsyncOptions> for RmDirOptions {
+    fn from(child: RmDirAsyncOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<crate::node_js::WritableStream> for crate::fs::WriteStream {
-    fn as_ref(&self) -> &crate::node_js::WritableStream {
+impl AsRef<StatsBase> for Stats {
+    fn as_ref(&self) -> &StatsBase {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<crate::fs::WriteStream> for crate::node_js::WritableStream {
-    fn from(child: crate::fs::WriteStream) -> Self {
+impl From<Stats> for StatsBase {
+    fn from(child: Stats) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<EventEmitter> for WriteStream {
+    fn as_ref(&self) -> &EventEmitter {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<WriteStream> for EventEmitter {
+    fn from(child: WriteStream) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<node_js::EventEmitter> for WriteStream {
+    fn as_ref(&self) -> &node_js::EventEmitter {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<WriteStream> for node_js::EventEmitter {
+    fn from(child: WriteStream) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<node_js::WritableStream> for WriteStream {
+    fn as_ref(&self) -> &node_js::WritableStream {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<WriteStream> for node_js::WritableStream {
+    fn from(child: WriteStream) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<Stream> for WriteStream {
+    fn as_ref(&self) -> &Stream {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<WriteStream> for Stream {
+    fn from(child: WriteStream) -> Self {
         JsCast::unchecked_into(child)
     }
 }

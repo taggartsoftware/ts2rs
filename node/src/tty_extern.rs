@@ -132,7 +132,7 @@ extern "C" {
     pub fn set_prepend_once_listener2(this: &WriteStream, value: &Function);
     #[doc = "Clears the current line of this WriteStream in a direction identified by `dir`."]
     # [ wasm_bindgen ( method , js_name = clearLine ) ]
-    pub fn clear_line(this: &WriteStream, dir: &crate::tty::Direction, callback: &JsValue) -> bool;
+    pub fn clear_line(this: &WriteStream, dir: &Direction, callback: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = clearLine ) ]
     pub fn set_clear_line(this: &WriteStream, value: &Function);
     #[doc = "Clears this `WriteStream` from the current cursor down."]
