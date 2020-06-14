@@ -1,5 +1,35 @@
-// mod console;
-// mod fs;
+use wasm_bindgen::{prelude::*, JsCast};
+
+// making js_sys type aliases here make it easier to use in the submodules with:
+// use crate::*;
+type Array = js_sys::Array;
+type Function = js_sys::Function;
+type IterableIterator = js_sys::Iterator; // TODO Is this correct?
+type Object = js_sys::Object;
+type Promise = js_sys::Promise;
+type ReadonlySet = js_sys::Set; // Readonly types help TypeScript apps
+type Uint8Array = js_sys::Uint8Array;
+#[wasm_bindgen]
+extern "C" {
+    pub type AsyncIterableIterator; // TODO How about AsyncIterator?
+    pub type MapConstructor;
+    pub type SetConstructor;
+    pub type WeakMapConstructor;
+    pub type WeakSetConstructor;
+}
+
+// globals
+// https://nodejs.org/api/globals.html
+include!("globals_extern.rs");
+include!("globals_help.rs");
+pub mod node_js {
+    use crate::*;
+    use wasm_bindgen::{prelude::*, JsCast};
+    include!("globals_NodeJS_extern.rs");
+    include!("globals_NodeJS_help.rs");
+}
+include!("process_global_NodeJS_extern.rs");
+// include!("process_global_NodeJS_help.rs");
 
 // mod http {
 //     use js_sys::{Array, Date, Function, Object, Promise};
@@ -9,74 +39,37 @@
 //     include!("http_help.rs");
 // }
 
-pub mod events {
-    use js_sys::{Array, Function, Object, Uint8Array};
-    use wasm_bindgen::{prelude::*, JsCast};
-    include!("events_extern.rs");
-    // include!("events_help.rs");
-}
+// pub mod events {
+//     use js_sys::{Array, Function, Object, Uint8Array};
+//     use wasm_bindgen::{prelude::*, JsCast};
+//     include!("events_extern.rs");
+//     // include!("events_help.rs");
+// }
 
-pub mod net {
-    use js_sys::{Array, Function, Object, Uint8Array};
-    use wasm_bindgen::{prelude::*, JsCast};
-    type Buffer = crate::globals::Buffer;
-    type Error = crate::globals::Error;
-    include!("net_extern.rs");
-    // include!("net_help.rs");
-}
+// pub mod net {
+//     use js_sys::{Array, Function, Object, Uint8Array};
+//     use wasm_bindgen::{prelude::*, JsCast};
+//     type Buffer = crate::globals::Buffer;
+//     type Error = crate::globals::Error;
+//     include!("net_extern.rs");
+//     // include!("net_help.rs");
+// }
 
-pub mod globals {
-    use js_sys::{Array, Function, Iterator, Object, Uint8Array};
-    use wasm_bindgen::{prelude::*};
-    use self::nodejs::*;
-    type IterableIterator = Iterator; // ?
-
-    // globals.d.ts has Buffer
-    // https://nodejs.org/api/globals.html
-    // TODO why is globals_extern.rs empty ?
-    // #[wasm_bindgen(module = "globals")]
-    // extern "C" {
-    //     pub type Buffer;
-    //     pub type Error;
-    // }
-    include!("globals_extern.rs");
-    // include!("globals_help.rs");
-
-    pub mod nodejs {
-        use js_sys::{Array, Function, Iterator, Object, Uint8Array, Promise, AsyncIterator, Set};
-        use wasm_bindgen::{prelude::*, JsCast};
-        use super::{NodeRequire, Error, NodeRequireFunction, NodeModule, BufferEncoding};
-        use crate::process::global::nodejs::{ReadStream, WriteStream};
-        type ReadonlySet = Set;
-        #[wasm_bindgen(module = "NodeJS")]
-        extern "C" {
-            pub type Console; // web_sys::console
-            pub type MapConstructor;
-            pub type SetConstructor;
-            pub type WeakMapConstructor;
-            pub type WeakSetConstructor;
-            pub type AsyncIterableIterator; // AsyncIterator ?
-        }
-        include!("globals_NodeJS_extern.rs");
-        // include!("globals_NodeJS_help.rs");
-    }
-}
-
-pub mod process {
-    pub mod global {
-        pub mod nodejs {
-            use js_sys::{Object};
-            use wasm_bindgen::{prelude::*, JsCast};
-            use crate::globals::nodejs::{EventEmitter, ReadableStream, WritableStream};
-            #[wasm_bindgen(module = "NodeJS")]
-            extern "C" {
-                pub type Duplex; // TODO crate::stream::Duplex
-                pub type Socket; // TODO
-                pub type Readable; // TODO stream
-                pub type Streamm; // TODO stream
-            }
-            include!("process_global_NodeJS_extern.rs");
-            // include!("process_global_NodeJS_help.rs");
-        }
-    }
-}
+// pub mod process {
+//     pub mod global {
+//         pub mod nodejs {
+//             use js_sys::{Object};
+//             use wasm_bindgen::{prelude::*, JsCast};
+//             use crate::globals::nodejs::{EventEmitter, ReadableStream, WritableStream};
+//             #[wasm_bindgen(module = "NodeJS")]
+//             extern "C" {
+//                 pub type Duplex; // TODO crate::stream::Duplex
+//                 pub type Socket; // TODO
+//                 pub type Readable; // TODO stream
+//                 pub type Streamm; // TODO stream
+//             }
+//             include!("process_global_NodeJS_extern.rs");
+//             // include!("process_global_NodeJS_help.rs");
+//         }
+//     }
+// }
