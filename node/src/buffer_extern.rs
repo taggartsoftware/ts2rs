@@ -3,15 +3,15 @@
 
 #[wasm_bindgen(module = "buffer")]
 extern "C" {
-    pub static INSPECT_MAX_BYTES: String;
+    pub static INSPECT_MAX_BYTES: f64;
     #[wasm_bindgen(js_name = "kMaxLength")]
-    pub static K_MAX_LENGTH: String;
+    pub static K_MAX_LENGTH: f64;
     #[wasm_bindgen(js_name = "kStringMaxLength")]
-    pub static K_STRING_MAX_LENGTH: String;
+    pub static K_STRING_MAX_LENGTH: f64;
     #[wasm_bindgen(js_name = "constants")]
-    pub static CONSTANTS: String;
+    pub static CONSTANTS: JsValue;
     #[wasm_bindgen(js_name = "BuffType")]
-    pub static BUFF_TYPE: String;
+    pub static BUFF_TYPE: JsValue;
     pub type TranscodeEncoding;
     #[wasm_bindgen()]
     pub fn transcode(
@@ -20,5 +20,5 @@ extern "C" {
         to_enc: &TranscodeEncoding,
     ) -> Buffer;
     #[wasm_bindgen(js_name = "SlowBuffer")]
-    pub static SLOW_BUFFER: String;
+    pub static SLOW_BUFFER: JsValue;
 }

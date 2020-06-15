@@ -3,8 +3,8 @@
 
 #[wasm_bindgen(module = "perf_hooks")]
 extern "C" {
-    pub static NODE_PERFORMANCE_GC_MAJOR: String;
-    pub static NODE_PERFORMANCE_GC_MINOR: String;
-    pub static NODE_PERFORMANCE_GC_INCREMENTAL: String;
-    pub static NODE_PERFORMANCE_GC_WEAKCB: String;
+    pub static NODE_PERFORMANCE_GC_MAJOR: f64;
+    pub static NODE_PERFORMANCE_GC_MINOR: f64;
+    pub static NODE_PERFORMANCE_GC_INCREMENTAL: f64;
+    pub static NODE_PERFORMANCE_GC_WEAKCB: f64;
 }

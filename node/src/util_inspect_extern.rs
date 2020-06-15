@@ -4,14 +4,14 @@
 #[wasm_bindgen(module = "util")]
 extern "C" {
     #[wasm_bindgen(js_name = "colors")]
-    pub static COLORS: String;
+    pub static COLORS: JsValue;
     #[wasm_bindgen(js_name = "styles")]
-    pub static STYLES: String;
+    pub static STYLES: JsValue;
     #[wasm_bindgen(js_name = "defaultOptions")]
-    pub static DEFAULT_OPTIONS: String;
+    pub static DEFAULT_OPTIONS: util::InspectOptions;
     #[wasm_bindgen(js_name = "replDefaults")]
     #[doc = "Allows changing inspect settings from the repl."]
-    pub static REPL_DEFAULTS: String;
+    pub static REPL_DEFAULTS: util::InspectOptions;
     #[wasm_bindgen(js_name = "custom")]
-    pub static CUSTOM: String;
+    pub static CUSTOM: JsValue;
 }

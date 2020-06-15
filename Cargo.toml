@@ -5,6 +5,7 @@ members = [
     "node",
 
     "monaco-editor-hello-world",
+    "node-console-hello-world",
 ]
 
 [patch.crates-io]

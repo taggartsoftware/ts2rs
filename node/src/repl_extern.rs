@@ -94,7 +94,7 @@ extern "C" {
     #[wasm_bindgen(js_name = "writer")]
     #[doc = "This is the default \"writer\" value, if none is passed in the REPL options,"]
     #[doc = "and it can be overridden by custom print functions."]
-    pub static WRITER: String;
+    pub static WRITER: JsValue;
     pub type REPLCommandAction;
     pub type REPLCommand;
     #[doc = "Help text to be displayed when `.help` is entered."]
@@ -596,10 +596,10 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener10(this: &REPLServer, value: &Function);
     #[doc = "A flag passed in the REPL options. Evaluates expressions in sloppy mode."]
-    pub static REPL_MODE_SLOPPY: String;
+    pub static REPL_MODE_SLOPPY: JsValue;
     #[doc = "A flag passed in the REPL options. Evaluates expressions in strict mode."]
     #[doc = "This is equivalent to prefacing every repl statement with `'use strict'`."]
-    pub static REPL_MODE_STRICT: String;
+    pub static REPL_MODE_STRICT: JsValue;
     #[doc = "Creates and starts a `repl.REPLServer` instance."]
     #[wasm_bindgen()]
     pub fn start(options: &JsValue) -> REPLServer;

@@ -4,5 +4,5 @@
 #[wasm_bindgen(module = "util")]
 extern "C" {
     #[wasm_bindgen(js_name = "custom")]
-    pub static CUSTOM: String;
+    pub static CUSTOM: JsValue;
 }

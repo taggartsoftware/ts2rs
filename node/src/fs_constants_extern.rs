@@ -4,100 +4,100 @@
 #[wasm_bindgen(module = "fs")]
 extern "C" {
     #[doc = "Constant for fs.access(). File is visible to the calling process."]
-    pub static F_OK: String;
+    pub static F_OK: f64;
     #[doc = "Constant for fs.access(). File can be read by the calling process."]
-    pub static R_OK: String;
+    pub static R_OK: f64;
     #[doc = "Constant for fs.access(). File can be written by the calling process."]
-    pub static W_OK: String;
+    pub static W_OK: f64;
     #[doc = "Constant for fs.access(). File can be executed by the calling process."]
-    pub static X_OK: String;
+    pub static X_OK: f64;
     #[doc = "Constant for fs.copyFile. Flag indicating the destination file should not be overwritten if it already exists."]
-    pub static COPYFILE_EXCL: String;
+    pub static COPYFILE_EXCL: f64;
     #[doc = "Constant for fs.copyFile. copy operation will attempt to create a copy-on-write reflink."]
     #[doc = "If the underlying platform does not support copy-on-write, then a fallback copy mechanism is used."]
-    pub static COPYFILE_FICLONE: String;
+    pub static COPYFILE_FICLONE: f64;
     #[doc = "Constant for fs.copyFile. Copy operation will attempt to create a copy-on-write reflink."]
     #[doc = "If the underlying platform does not support copy-on-write, then the operation will fail with an error."]
-    pub static COPYFILE_FICLONE_FORCE: String;
+    pub static COPYFILE_FICLONE_FORCE: f64;
     #[doc = "Constant for fs.open(). Flag indicating to open a file for read-only access."]
-    pub static O_RDONLY: String;
+    pub static O_RDONLY: f64;
     #[doc = "Constant for fs.open(). Flag indicating to open a file for write-only access."]
-    pub static O_WRONLY: String;
+    pub static O_WRONLY: f64;
     #[doc = "Constant for fs.open(). Flag indicating to open a file for read-write access."]
-    pub static O_RDWR: String;
+    pub static O_RDWR: f64;
     #[doc = "Constant for fs.open(). Flag indicating to create the file if it does not already exist."]
-    pub static O_CREAT: String;
+    pub static O_CREAT: f64;
     #[doc = "Constant for fs.open(). Flag indicating that opening a file should fail if the O_CREAT flag is set and the file already exists."]
-    pub static O_EXCL: String;
+    pub static O_EXCL: f64;
     #[doc = "Constant for fs.open(). Flag indicating that if path identifies a terminal device,"]
     #[doc = "opening the path shall not cause that terminal to become the controlling terminal for the process"]
     #[doc = "(if the process does not already have one)."]
-    pub static O_NOCTTY: String;
+    pub static O_NOCTTY: f64;
     #[doc = "Constant for fs.open(). Flag indicating that if the file exists and is a regular file, and the file is opened successfully for write access, its length shall be truncated to zero."]
-    pub static O_TRUNC: String;
+    pub static O_TRUNC: f64;
     #[doc = "Constant for fs.open(). Flag indicating that data will be appended to the end of the file."]
-    pub static O_APPEND: String;
+    pub static O_APPEND: f64;
     #[doc = "Constant for fs.open(). Flag indicating that the open should fail if the path is not a directory."]
-    pub static O_DIRECTORY: String;
+    pub static O_DIRECTORY: f64;
     #[doc = "constant for fs.open()."]
     #[doc = "Flag indicating reading accesses to the file system will no longer result in"]
     #[doc = "an update to the atime information associated with the file."]
     #[doc = "This flag is available on Linux operating systems only."]
-    pub static O_NOATIME: String;
+    pub static O_NOATIME: f64;
     #[doc = "Constant for fs.open(). Flag indicating that the open should fail if the path is a symbolic link."]
-    pub static O_NOFOLLOW: String;
+    pub static O_NOFOLLOW: f64;
     #[doc = "Constant for fs.open(). Flag indicating that the file is opened for synchronous I/O."]
-    pub static O_SYNC: String;
+    pub static O_SYNC: f64;
     #[doc = "Constant for fs.open(). Flag indicating that the file is opened for synchronous I/O with write operations waiting for data integrity."]
-    pub static O_DSYNC: String;
+    pub static O_DSYNC: f64;
     #[doc = "Constant for fs.open(). Flag indicating to open the symbolic link itself rather than the resource it is pointing to."]
-    pub static O_SYMLINK: String;
+    pub static O_SYMLINK: f64;
     #[doc = "Constant for fs.open(). When set, an attempt will be made to minimize caching effects of file I/O."]
-    pub static O_DIRECT: String;
+    pub static O_DIRECT: f64;
     #[doc = "Constant for fs.open(). Flag indicating to open the file in nonblocking mode when possible."]
-    pub static O_NONBLOCK: String;
+    pub static O_NONBLOCK: f64;
     #[doc = "Constant for fs.Stats mode property for determining a file's type. Bit mask used to extract the file type code."]
-    pub static S_IFMT: String;
+    pub static S_IFMT: f64;
     #[doc = "Constant for fs.Stats mode property for determining a file's type. File type constant for a regular file."]
-    pub static S_IFREG: String;
+    pub static S_IFREG: f64;
     #[doc = "Constant for fs.Stats mode property for determining a file's type. File type constant for a directory."]
-    pub static S_IFDIR: String;
+    pub static S_IFDIR: f64;
     #[doc = "Constant for fs.Stats mode property for determining a file's type. File type constant for a character-oriented device file."]
-    pub static S_IFCHR: String;
+    pub static S_IFCHR: f64;
     #[doc = "Constant for fs.Stats mode property for determining a file's type. File type constant for a block-oriented device file."]
-    pub static S_IFBLK: String;
+    pub static S_IFBLK: f64;
     #[doc = "Constant for fs.Stats mode property for determining a file's type. File type constant for a FIFO/pipe."]
-    pub static S_IFIFO: String;
+    pub static S_IFIFO: f64;
     #[doc = "Constant for fs.Stats mode property for determining a file's type. File type constant for a symbolic link."]
-    pub static S_IFLNK: String;
+    pub static S_IFLNK: f64;
     #[doc = "Constant for fs.Stats mode property for determining a file's type. File type constant for a socket."]
-    pub static S_IFSOCK: String;
+    pub static S_IFSOCK: f64;
     #[doc = "Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating readable, writable and executable by owner."]
-    pub static S_IRWXU: String;
+    pub static S_IRWXU: f64;
     #[doc = "Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating readable by owner."]
-    pub static S_IRUSR: String;
+    pub static S_IRUSR: f64;
     #[doc = "Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating writable by owner."]
-    pub static S_IWUSR: String;
+    pub static S_IWUSR: f64;
     #[doc = "Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating executable by owner."]
-    pub static S_IXUSR: String;
+    pub static S_IXUSR: f64;
     #[doc = "Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating readable, writable and executable by group."]
-    pub static S_IRWXG: String;
+    pub static S_IRWXG: f64;
     #[doc = "Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating readable by group."]
-    pub static S_IRGRP: String;
+    pub static S_IRGRP: f64;
     #[doc = "Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating writable by group."]
-    pub static S_IWGRP: String;
+    pub static S_IWGRP: f64;
     #[doc = "Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating executable by group."]
-    pub static S_IXGRP: String;
+    pub static S_IXGRP: f64;
     #[doc = "Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating readable, writable and executable by others."]
-    pub static S_IRWXO: String;
+    pub static S_IRWXO: f64;
     #[doc = "Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating readable by others."]
-    pub static S_IROTH: String;
+    pub static S_IROTH: f64;
     #[doc = "Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating writable by others."]
-    pub static S_IWOTH: String;
+    pub static S_IWOTH: f64;
     #[doc = "Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating executable by others."]
-    pub static S_IXOTH: String;
+    pub static S_IXOTH: f64;
     #[doc = "When set, a memory file mapping is used to access the file. This flag"]
     #[doc = "is available on Windows operating systems only. On other operating systems,"]
     #[doc = "this flag is ignored."]
-    pub static UV_FS_O_FILEMAP: String;
+    pub static UV_FS_O_FILEMAP: f64;
 }

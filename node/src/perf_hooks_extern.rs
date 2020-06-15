@@ -171,7 +171,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_observe(this: &PerformanceObserver, value: &Function);
     #[wasm_bindgen(js_name = "performance")]
-    pub static PERFORMANCE: String;
+    pub static PERFORMANCE: Performance;
     pub type EventLoopMonitorOptions;
     #[doc = "The sampling rate in milliseconds."]
     #[doc = "Must be greater than zero."]

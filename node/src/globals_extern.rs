@@ -195,9 +195,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_url(this: &ImportMeta, value: &str);
     #[wasm_bindgen(js_name = "process")]
-    pub static PROCESS: String;
+    pub static PROCESS: node_js::Process;
     #[wasm_bindgen(js_name = "console")]
-    pub static CONSOLE: String;
+    pub static CONSOLE: Console;
     #[wasm_bindgen(js_name = "__filename")]
     pub static FILENAME: String;
     #[wasm_bindgen(js_name = "__dirname")]
@@ -254,7 +254,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
     pub fn set_stringliteral3(this: &NodeExtensions, value: &Function);
     #[wasm_bindgen(js_name = "require")]
-    pub static REQUIRE: String;
+    pub static REQUIRE: NodeRequire;
     pub type NodeModule;
     #[wasm_bindgen(method, getter)]
     pub fn exports(this: &NodeModule) -> JsValue;
@@ -289,9 +289,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_paths(this: &NodeModule, value: &Array);
     #[wasm_bindgen(js_name = "module")]
-    pub static MODULE: String;
+    pub static MODULE: NodeModule;
     #[wasm_bindgen(js_name = "exports")]
-    pub static EXPORTS: String;
+    pub static EXPORTS: JsValue;
     pub type BufferEncoding;
     #[doc = "Raw data is stored in instances of the Buffer class."]
     #[doc = "A Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized."]
@@ -812,5 +812,5 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = writeBigUInt64LE ) ]
     pub fn set_write_big_u_int64_le(this: &Buffer, value: &Function);
     #[wasm_bindgen(js_name = "global")]
-    pub static GLOBAL: String;
+    pub static GLOBAL: JsValue;
 }

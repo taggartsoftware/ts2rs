@@ -100,7 +100,7 @@ extern "C" {
     # [ wasm_bindgen ( js_name = userInfo ) ]
     pub fn user_info2(options: &JsValue) -> UserInfo;
     #[wasm_bindgen(js_name = "constants")]
-    pub static CONSTANTS: String;
+    pub static CONSTANTS: JsValue;
     #[wasm_bindgen()]
     pub fn arch() -> String;
     #[wasm_bindgen()]

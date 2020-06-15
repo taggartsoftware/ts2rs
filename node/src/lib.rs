@@ -16,6 +16,14 @@ extern "C" {
     pub type SetConstructor;
     pub type WeakMapConstructor;
     pub type WeakSetConstructor;
+
+    // TODO generate 0 to 7 like https://rustwasm.github.io/wasm-bindgen/api/web_sys/console/fn.log_7.html
+    #[wasm_bindgen(method, js_name=log)]
+    pub fn log_0(this: &Console, message: &JsValue);
+    #[wasm_bindgen(method, js_name=log)]
+    pub fn log_1(this: &Console, message: &JsValue, optional_params_1: &JsValue);
+    #[wasm_bindgen(method, js_name=log)]
+    pub fn log_2(this: &Console, message: &JsValue, optional_params_1: &JsValue, optional_params_2: &JsValue);
 }
 
 // globals
@@ -24,7 +32,7 @@ include!("globals_extern.rs");
 include!("globals_help.rs");
 pub mod node_js {
     use crate::*;
-    use wasm_bindgen::{prelude::*, JsCast};
+    use wasm_bindgen::JsCast;
     include!("globals_NodeJS_extern.rs");
     include!("globals_NodeJS_help.rs");
 }

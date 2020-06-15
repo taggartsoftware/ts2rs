@@ -83,5 +83,5 @@ extern "C" {
     # [ wasm_bindgen ( js_name = doesNotReject ) ]
     pub fn does_not_reject2(block: &JsValue, error: &JsValue, message: &JsValue) -> Promise;
     #[wasm_bindgen(js_name = "strict")]
-    pub static STRICT: String;
+    pub static STRICT: JsValue;
 }

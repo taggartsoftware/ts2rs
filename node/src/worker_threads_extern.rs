@@ -4,14 +4,14 @@
 #[wasm_bindgen(module = "worker_threads")]
 extern "C" {
     #[wasm_bindgen(js_name = "isMainThread")]
-    pub static IS_MAIN_THREAD: String;
+    pub static IS_MAIN_THREAD: bool;
     #[wasm_bindgen(js_name = "parentPort")]
-    pub static PARENT_PORT: String;
-    pub static SHARE_ENV: String;
+    pub static PARENT_PORT: JsValue;
+    pub static SHARE_ENV: JsValue;
     #[wasm_bindgen(js_name = "threadId")]
-    pub static THREAD_ID: String;
+    pub static THREAD_ID: f64;
     #[wasm_bindgen(js_name = "workerData")]
-    pub static WORKER_DATA: String;
+    pub static WORKER_DATA: JsValue;
     pub type MessageChannel;
     #[wasm_bindgen(method, getter)]
     pub fn port1(this: &MessageChannel) -> MessagePort;

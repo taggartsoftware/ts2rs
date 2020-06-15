@@ -94,10 +94,10 @@ extern "C" {
     pub fn extname(p: &str) -> String;
     #[wasm_bindgen(js_name = "sep")]
     #[doc = "The platform-specific file separator. '\\\\' or '/'."]
-    pub static SEP: String;
+    pub static SEP: JsValue;
     #[wasm_bindgen(js_name = "delimiter")]
     #[doc = "The platform-specific file delimiter. ';' or ':'."]
-    pub static DELIMITER: String;
+    pub static DELIMITER: JsValue;
     #[doc = "Returns an object from a path string - the opposite of format()."]
     #[wasm_bindgen()]
     pub fn parse(path_string: &str) -> ParsedPath;

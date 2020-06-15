@@ -12,7 +12,7 @@ extern "C" {
     # [ wasm_bindgen ( js_name = toASCII ) ]
     pub fn to_ascii(domain: &str) -> String;
     #[wasm_bindgen(js_name = "ucs2")]
-    pub static UCS2: String;
+    pub static UCS2: ucs2;
     pub type ucs2;
     #[wasm_bindgen(method)]
     pub fn decode(this: &ucs2, string: &str) -> Array;

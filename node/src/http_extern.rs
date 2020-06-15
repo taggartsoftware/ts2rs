@@ -3345,8 +3345,8 @@ extern "C" {
     pub fn destroy(this: &Agent);
     #[wasm_bindgen(method, setter)]
     pub fn set_destroy(this: &Agent, value: &Function);
-    pub static METHODS: String;
-    pub static STATUS_CODES: String;
+    pub static METHODS: Array;
+    pub static STATUS_CODES: JsValue;
     # [ wasm_bindgen ( js_name = createServer ) ]
     pub fn create_server(request_listener: Option<&RequestListener>) -> Server;
     # [ wasm_bindgen ( js_name = createServer ) ]
@@ -3364,9 +3364,9 @@ extern "C" {
     # [ wasm_bindgen ( js_name = get ) ]
     pub fn get2(url: &JsValue, options: &RequestOptions, callback: &JsValue) -> ClientRequest;
     #[wasm_bindgen(js_name = "globalAgent")]
-    pub static GLOBAL_AGENT: String;
+    pub static GLOBAL_AGENT: Agent;
     #[wasm_bindgen(js_name = "maxHeaderSize")]
     #[doc = "Read-only property specifying the maximum allowed size of HTTP headers in bytes."]
     #[doc = "Defaults to 8KB. Configurable using the [`--max-http-header-size`][] CLI option."]
-    pub static MAX_HEADER_SIZE: String;
+    pub static MAX_HEADER_SIZE: f64;
 }

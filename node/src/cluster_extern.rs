@@ -613,17 +613,17 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn fork(env: &JsValue) -> Worker;
     #[wasm_bindgen(js_name = "isMaster")]
-    pub static IS_MASTER: String;
+    pub static IS_MASTER: bool;
     #[wasm_bindgen(js_name = "isWorker")]
-    pub static IS_WORKER: String;
+    pub static IS_WORKER: bool;
     #[wasm_bindgen(js_name = "settings")]
-    pub static SETTINGS: String;
+    pub static SETTINGS: ClusterSettings;
     # [ wasm_bindgen ( js_name = setupMaster ) ]
     pub fn setup_master(settings: Option<&ClusterSettings>);
     #[wasm_bindgen(js_name = "worker")]
-    pub static WORKER: String;
+    pub static WORKER: Worker;
     #[wasm_bindgen(js_name = "workers")]
-    pub static WORKERS: String;
+    pub static WORKERS: JsValue;
     #[doc = "events.EventEmitter"]
     #[doc = "   1. disconnect"]
     #[doc = "   2. exit"]

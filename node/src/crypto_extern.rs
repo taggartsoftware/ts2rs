@@ -17,7 +17,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = verifySpkac ) ]
     pub fn set_verify_spkac(this: &Certificate, value: &Function);
     #[wasm_bindgen(js_name = "Certificate")]
-    pub static CERTIFICATE: String;
+    pub static CERTIFICATE: JsValue;
     pub type HashOptions;
     #[doc = "For XOF hash functions such as `shake256`, the"]
     #[doc = "outputLength option can be used to specify the desired output length in bytes."]
@@ -26,7 +26,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = outputLength ) ]
     pub fn set_output_length(this: &HashOptions, value: Option<f64>);
     #[wasm_bindgen(js_name = "fips")]
-    pub static FIPS: String;
+    pub static FIPS: bool;
     # [ wasm_bindgen ( js_name = createHash ) ]
     pub fn create_hash(algorithm: &str, options: Option<&HashOptions>) -> Hash;
     # [ wasm_bindgen ( js_name = createHmac ) ]

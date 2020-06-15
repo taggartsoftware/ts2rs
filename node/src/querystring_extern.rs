@@ -35,10 +35,10 @@ extern "C" {
     ) -> ParsedUrlQuery;
     #[wasm_bindgen(js_name = "encode")]
     #[doc = "The querystring.encode() function is an alias for querystring.stringify()."]
-    pub static ENCODE: String;
+    pub static ENCODE: JsValue;
     #[wasm_bindgen(js_name = "decode")]
     #[doc = "The querystring.decode() function is an alias for querystring.parse()."]
-    pub static DECODE: String;
+    pub static DECODE: JsValue;
     #[wasm_bindgen()]
     pub fn escape(str: &str) -> String;
     #[wasm_bindgen()]

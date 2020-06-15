@@ -3,8 +3,8 @@
 
 #[wasm_bindgen(module = "tls")]
 extern "C" {
-    pub static CLIENT_RENEG_LIMIT: String;
-    pub static CLIENT_RENEG_WINDOW: String;
+    pub static CLIENT_RENEG_LIMIT: f64;
+    pub static CLIENT_RENEG_WINDOW: f64;
     pub type Certificate;
     #[doc = "Country code."]
     # [ wasm_bindgen ( method , getter , js_name = C ) ]
@@ -1336,7 +1336,7 @@ extern "C" {
     #[doc = "the default to 'TLSv1.2'. Using --tls-max-v1.3 sets the default to"]
     #[doc = "'TLSv1.3'. If multiple of the options are provided, the highest maximum"]
     #[doc = "is used."]
-    pub static DEFAULT_MAX_VERSION: String;
+    pub static DEFAULT_MAX_VERSION: SecureVersion;
     #[doc = "The default value of the minVersion option of tls.createSecureContext()."]
     #[doc = "It can be assigned any of the supported TLS protocol versions,"]
     #[doc = "'TLSv1.3', 'TLSv1.2', 'TLSv1.1', or 'TLSv1'. Default: 'TLSv1.2', unless"]
@@ -1344,10 +1344,10 @@ extern "C" {
     #[doc = "'TLSv1'. Using --tls-min-v1.1 sets the default to 'TLSv1.1'. Using"]
     #[doc = "--tls-min-v1.3 sets the default to 'TLSv1.3'. If multiple of the options"]
     #[doc = "are provided, the lowest minimum is used."]
-    pub static DEFAULT_MIN_VERSION: String;
+    pub static DEFAULT_MIN_VERSION: SecureVersion;
     #[wasm_bindgen(js_name = "rootCertificates")]
     #[doc = "An immutable array of strings representing the root certificates (in PEM"]
     #[doc = "format) used for verifying peer certificates. This is the default value"]
     #[doc = "of the ca option to tls.createSecureContext()."]
-    pub static ROOT_CERTIFICATES: String;
+    pub static ROOT_CERTIFICATES: ReadonlyArray;
 }

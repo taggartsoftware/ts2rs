@@ -3,8 +3,8 @@
 
 #[wasm_bindgen(module = "dns")]
 extern "C" {
-    pub static ADDRCONFIG: String;
-    pub static V4MAPPED: String;
+    pub static ADDRCONFIG: f64;
+    pub static V4MAPPED: f64;
     pub type LookupOptions;
     #[wasm_bindgen(method, getter)]
     pub fn family(this: &LookupOptions) -> Option<f64>;

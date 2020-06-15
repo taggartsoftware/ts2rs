@@ -82,5 +82,5 @@ extern "C" {
         callback: &JsValue,
     ) -> crate::http::ClientRequest;
     #[wasm_bindgen(js_name = "globalAgent")]
-    pub static GLOBAL_AGENT: String;
+    pub static GLOBAL_AGENT: Agent;
 }
