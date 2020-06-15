@@ -209,8 +209,6 @@ extern "C" {
     pub fn unref(this: &Worker);
     #[wasm_bindgen(method, setter)]
     pub fn set_unref(this: &Worker, value: &Function);
-    #[doc = "Stop all JavaScript execution in the worker thread as soon as possible."]
-    #[doc = "Returns a Promise for the exit code that is fulfilled when the `exit` event is emitted."]
     #[wasm_bindgen(method)]
     pub fn terminate(this: &Worker) -> Promise;
     #[wasm_bindgen(method, setter)]

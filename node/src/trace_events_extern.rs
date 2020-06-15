@@ -16,17 +16,10 @@ extern "C" {
     #[doc = "`Tracing` object."]
     #[wasm_bindgen(method, getter)]
     pub fn categories(this: &Tracing) -> String;
-    #[doc = "Disables this `Tracing` object."]
-    #[doc = ""]
-    #[doc = "Only trace event categories _not_ covered by other enabled `Tracing`"]
-    #[doc = "objects and _not_ specified by the `--trace-event-categories` flag"]
-    #[doc = "will be disabled."]
     #[wasm_bindgen(method)]
     pub fn disable(this: &Tracing);
     #[wasm_bindgen(method, setter)]
     pub fn set_disable(this: &Tracing, value: &Function);
-    #[doc = "Enables this `Tracing` object for the set of categories covered by"]
-    #[doc = "the `Tracing` object."]
     #[wasm_bindgen(method)]
     pub fn enable(this: &Tracing);
     #[wasm_bindgen(method, setter)]

@@ -264,7 +264,6 @@ extern "C" {
     pub fn sort(this: &URLSearchParams);
     #[wasm_bindgen(method, setter)]
     pub fn set_sort(this: &URLSearchParams, value: &Function);
-    #[doc = "Returns a string representation of an object."]
     # [ wasm_bindgen ( method , js_name = toString ) ]
     pub fn to_string(this: &URLSearchParams) -> String;
     # [ wasm_bindgen ( method , setter , js_name = toString ) ]

@@ -213,62 +213,26 @@ extern "C" {
     pub fn unref(this: &Socket) -> Socket;
     #[wasm_bindgen(method, setter)]
     pub fn set_unref(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "1. close"]
-    #[doc = "2. connect"]
-    #[doc = "3. error"]
-    #[doc = "4. listening"]
-    #[doc = "5. message"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &Socket, event: &str, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "1. close"]
-    #[doc = "2. connect"]
-    #[doc = "3. error"]
-    #[doc = "4. listening"]
-    #[doc = "5. message"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener2(this: &Socket, event: &JsValue, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener2(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "1. close"]
-    #[doc = "2. connect"]
-    #[doc = "3. error"]
-    #[doc = "4. listening"]
-    #[doc = "5. message"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener3(this: &Socket, event: &JsValue, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener3(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "1. close"]
-    #[doc = "2. connect"]
-    #[doc = "3. error"]
-    #[doc = "4. listening"]
-    #[doc = "5. message"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener4(this: &Socket, event: &JsValue, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener4(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "1. close"]
-    #[doc = "2. connect"]
-    #[doc = "3. error"]
-    #[doc = "4. listening"]
-    #[doc = "5. message"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener5(this: &Socket, event: &JsValue, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener5(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "1. close"]
-    #[doc = "2. connect"]
-    #[doc = "3. error"]
-    #[doc = "4. listening"]
-    #[doc = "5. message"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener6(this: &Socket, event: &JsValue, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]

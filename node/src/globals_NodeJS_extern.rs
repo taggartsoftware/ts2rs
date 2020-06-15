@@ -83,74 +83,54 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_prototype(this: &ConsoleConstructor, value: &Console);
     pub type CallSite;
-    #[doc = "Value of \"this\""]
     # [ wasm_bindgen ( method , js_name = getThis ) ]
     pub fn get_this(this: &CallSite) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = getThis ) ]
     pub fn set_get_this(this: &CallSite, value: &Function);
-    #[doc = "Type of \"this\" as a string."]
-    #[doc = "This is the name of the function stored in the constructor field of"]
-    #[doc = "\"this\", if available.  Otherwise the object's [[Class]] internal"]
-    #[doc = "property."]
     # [ wasm_bindgen ( method , js_name = getTypeName ) ]
     pub fn get_type_name(this: &CallSite) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = getTypeName ) ]
     pub fn set_get_type_name(this: &CallSite, value: &Function);
-    #[doc = "Current function"]
     # [ wasm_bindgen ( method , js_name = getFunction ) ]
     pub fn get_function(this: &CallSite) -> Option<Function>;
     # [ wasm_bindgen ( method , setter , js_name = getFunction ) ]
     pub fn set_get_function(this: &CallSite, value: &Function);
-    #[doc = "Name of the current function, typically its name property."]
-    #[doc = "If a name property is not available an attempt will be made to try"]
-    #[doc = "to infer a name from the function's context."]
     # [ wasm_bindgen ( method , js_name = getFunctionName ) ]
     pub fn get_function_name(this: &CallSite) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = getFunctionName ) ]
     pub fn set_get_function_name(this: &CallSite, value: &Function);
-    #[doc = "Name of the property [of \"this\" or one of its prototypes] that holds"]
-    #[doc = "the current function"]
     # [ wasm_bindgen ( method , js_name = getMethodName ) ]
     pub fn get_method_name(this: &CallSite) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = getMethodName ) ]
     pub fn set_get_method_name(this: &CallSite, value: &Function);
-    #[doc = "Name of the script [if this function was defined in a script]"]
     # [ wasm_bindgen ( method , js_name = getFileName ) ]
     pub fn get_file_name(this: &CallSite) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = getFileName ) ]
     pub fn set_get_file_name(this: &CallSite, value: &Function);
-    #[doc = "Current line number [if this function was defined in a script]"]
     # [ wasm_bindgen ( method , js_name = getLineNumber ) ]
     pub fn get_line_number(this: &CallSite) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = getLineNumber ) ]
     pub fn set_get_line_number(this: &CallSite, value: &Function);
-    #[doc = "Current column number [if this function was defined in a script]"]
     # [ wasm_bindgen ( method , js_name = getColumnNumber ) ]
     pub fn get_column_number(this: &CallSite) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = getColumnNumber ) ]
     pub fn set_get_column_number(this: &CallSite, value: &Function);
-    #[doc = "A call site object representing the location where eval was called"]
-    #[doc = "[if this function was created using a call to eval]"]
     # [ wasm_bindgen ( method , js_name = getEvalOrigin ) ]
     pub fn get_eval_origin(this: &CallSite) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = getEvalOrigin ) ]
     pub fn set_get_eval_origin(this: &CallSite, value: &Function);
-    #[doc = "Is this a toplevel invocation, that is, is \"this\" the global object?"]
     # [ wasm_bindgen ( method , js_name = isToplevel ) ]
     pub fn is_toplevel(this: &CallSite) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = isToplevel ) ]
     pub fn set_is_toplevel(this: &CallSite, value: &Function);
-    #[doc = "Does this call take place in code defined by a call to eval?"]
     # [ wasm_bindgen ( method , js_name = isEval ) ]
     pub fn is_eval(this: &CallSite) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = isEval ) ]
     pub fn set_is_eval(this: &CallSite, value: &Function);
-    #[doc = "Is this call in native V8 code?"]
     # [ wasm_bindgen ( method , js_name = isNative ) ]
     pub fn is_native(this: &CallSite) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = isNative ) ]
     pub fn set_is_native(this: &CallSite, value: &Function);
-    #[doc = "Is this a constructor call?"]
     # [ wasm_bindgen ( method , js_name = isConstructor ) ]
     pub fn is_constructor(this: &CallSite) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = isConstructor ) ]
@@ -476,8 +456,6 @@ extern "C" {
     pub fn filename(this: &ProcessReport) -> String;
     #[wasm_bindgen(method, setter)]
     pub fn set_filename(this: &ProcessReport, value: &str);
-    #[doc = "Returns a JSON-formatted diagnostic report for the running process."]
-    #[doc = "The report's JavaScript stack trace is taken from err, if present."]
     # [ wasm_bindgen ( method , js_name = getReport ) ]
     pub fn get_report(this: &ProcessReport, err: Option<&Error>) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getReport ) ]
@@ -504,23 +482,14 @@ extern "C" {
     pub fn signal(this: &ProcessReport) -> Signals;
     #[wasm_bindgen(method, setter)]
     pub fn set_signal(this: &ProcessReport, value: &Signals);
-    #[doc = "Writes a diagnostic report to a file. If filename is not provided, the default filename"]
-    #[doc = "includes the date, time, PID, and a sequence number."]
-    #[doc = "The report's JavaScript stack trace is taken from err, if present."]
     # [ wasm_bindgen ( method , js_name = writeReport ) ]
     pub fn write_report(this: &ProcessReport, file_name: Option<&str>) -> String;
     # [ wasm_bindgen ( method , setter , js_name = writeReport ) ]
     pub fn set_write_report(this: &ProcessReport, value: &Function);
-    #[doc = "Writes a diagnostic report to a file. If filename is not provided, the default filename"]
-    #[doc = "includes the date, time, PID, and a sequence number."]
-    #[doc = "The report's JavaScript stack trace is taken from err, if present."]
     # [ wasm_bindgen ( method , js_name = writeReport ) ]
     pub fn write_report2(this: &ProcessReport, error: Option<&Error>) -> String;
     # [ wasm_bindgen ( method , setter , js_name = writeReport ) ]
     pub fn set_write_report2(this: &ProcessReport, value: &Function);
-    #[doc = "Writes a diagnostic report to a file. If filename is not provided, the default filename"]
-    #[doc = "includes the date, time, PID, and a sequence number."]
-    #[doc = "The report's JavaScript stack trace is taken from err, if present."]
     # [ wasm_bindgen ( method , js_name = writeReport ) ]
     pub fn write_report3(
         this: &ProcessReport,
@@ -774,7 +743,6 @@ extern "C" {
     pub fn features(this: &Process) -> JsValue;
     #[wasm_bindgen(method, setter)]
     pub fn set_features(this: &Process, value: &JsValue);
-    #[doc = "Can only be set if not in worker thread."]
     #[wasm_bindgen(method)]
     pub fn umask(this: &Process, mask: Option<f64>) -> f64;
     #[wasm_bindgen(method, setter)]
@@ -825,67 +793,19 @@ extern "C" {
     pub fn resource_usage(this: &Process) -> ResourceUsage;
     # [ wasm_bindgen ( method , setter , js_name = resourceUsage ) ]
     pub fn set_resource_usage(this: &Process, value: &Function);
-    #[doc = "EventEmitter"]
-    #[doc = "   1. beforeExit"]
-    #[doc = "   2. disconnect"]
-    #[doc = "   3. exit"]
-    #[doc = "   4. message"]
-    #[doc = "   5. rejectionHandled"]
-    #[doc = "   6. uncaughtException"]
-    #[doc = "   7. unhandledRejection"]
-    #[doc = "   8. warning"]
-    #[doc = "   9. message"]
-    #[doc = "  10. <All OS Signals>"]
-    #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &Process, event: &JsValue, listener: &BeforeExitListener) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Process, value: &Function);
-    #[doc = "EventEmitter"]
-    #[doc = "   1. beforeExit"]
-    #[doc = "   2. disconnect"]
-    #[doc = "   3. exit"]
-    #[doc = "   4. message"]
-    #[doc = "   5. rejectionHandled"]
-    #[doc = "   6. uncaughtException"]
-    #[doc = "   7. unhandledRejection"]
-    #[doc = "   8. warning"]
-    #[doc = "   9. message"]
-    #[doc = "  10. <All OS Signals>"]
-    #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener2(this: &Process, event: &JsValue, listener: &DisconnectListener)
     -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener2(this: &Process, value: &Function);
-    #[doc = "EventEmitter"]
-    #[doc = "   1. beforeExit"]
-    #[doc = "   2. disconnect"]
-    #[doc = "   3. exit"]
-    #[doc = "   4. message"]
-    #[doc = "   5. rejectionHandled"]
-    #[doc = "   6. uncaughtException"]
-    #[doc = "   7. unhandledRejection"]
-    #[doc = "   8. warning"]
-    #[doc = "   9. message"]
-    #[doc = "  10. <All OS Signals>"]
-    #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener3(this: &Process, event: &JsValue, listener: &ExitListener) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener3(this: &Process, value: &Function);
-    #[doc = "EventEmitter"]
-    #[doc = "   1. beforeExit"]
-    #[doc = "   2. disconnect"]
-    #[doc = "   3. exit"]
-    #[doc = "   4. message"]
-    #[doc = "   5. rejectionHandled"]
-    #[doc = "   6. uncaughtException"]
-    #[doc = "   7. unhandledRejection"]
-    #[doc = "   8. warning"]
-    #[doc = "   9. message"]
-    #[doc = "  10. <All OS Signals>"]
-    #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener4(
         this: &Process,
@@ -894,18 +814,6 @@ extern "C" {
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener4(this: &Process, value: &Function);
-    #[doc = "EventEmitter"]
-    #[doc = "   1. beforeExit"]
-    #[doc = "   2. disconnect"]
-    #[doc = "   3. exit"]
-    #[doc = "   4. message"]
-    #[doc = "   5. rejectionHandled"]
-    #[doc = "   6. uncaughtException"]
-    #[doc = "   7. unhandledRejection"]
-    #[doc = "   8. warning"]
-    #[doc = "   9. message"]
-    #[doc = "  10. <All OS Signals>"]
-    #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener5(
         this: &Process,
@@ -914,18 +822,6 @@ extern "C" {
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener5(this: &Process, value: &Function);
-    #[doc = "EventEmitter"]
-    #[doc = "   1. beforeExit"]
-    #[doc = "   2. disconnect"]
-    #[doc = "   3. exit"]
-    #[doc = "   4. message"]
-    #[doc = "   5. rejectionHandled"]
-    #[doc = "   6. uncaughtException"]
-    #[doc = "   7. unhandledRejection"]
-    #[doc = "   8. warning"]
-    #[doc = "   9. message"]
-    #[doc = "  10. <All OS Signals>"]
-    #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener6(
         this: &Process,
@@ -934,66 +830,18 @@ extern "C" {
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener6(this: &Process, value: &Function);
-    #[doc = "EventEmitter"]
-    #[doc = "   1. beforeExit"]
-    #[doc = "   2. disconnect"]
-    #[doc = "   3. exit"]
-    #[doc = "   4. message"]
-    #[doc = "   5. rejectionHandled"]
-    #[doc = "   6. uncaughtException"]
-    #[doc = "   7. unhandledRejection"]
-    #[doc = "   8. warning"]
-    #[doc = "   9. message"]
-    #[doc = "  10. <All OS Signals>"]
-    #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener7(this: &Process, event: &JsValue, listener: &WarningListener) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener7(this: &Process, value: &Function);
-    #[doc = "EventEmitter"]
-    #[doc = "   1. beforeExit"]
-    #[doc = "   2. disconnect"]
-    #[doc = "   3. exit"]
-    #[doc = "   4. message"]
-    #[doc = "   5. rejectionHandled"]
-    #[doc = "   6. uncaughtException"]
-    #[doc = "   7. unhandledRejection"]
-    #[doc = "   8. warning"]
-    #[doc = "   9. message"]
-    #[doc = "  10. <All OS Signals>"]
-    #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener8(this: &Process, event: &JsValue, listener: &MessageListener) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener8(this: &Process, value: &Function);
-    #[doc = "EventEmitter"]
-    #[doc = "   1. beforeExit"]
-    #[doc = "   2. disconnect"]
-    #[doc = "   3. exit"]
-    #[doc = "   4. message"]
-    #[doc = "   5. rejectionHandled"]
-    #[doc = "   6. uncaughtException"]
-    #[doc = "   7. unhandledRejection"]
-    #[doc = "   8. warning"]
-    #[doc = "   9. message"]
-    #[doc = "  10. <All OS Signals>"]
-    #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener9(this: &Process, event: &Signals, listener: &SignalsListener) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener9(this: &Process, value: &Function);
-    #[doc = "EventEmitter"]
-    #[doc = "   1. beforeExit"]
-    #[doc = "   2. disconnect"]
-    #[doc = "   3. exit"]
-    #[doc = "   4. message"]
-    #[doc = "   5. rejectionHandled"]
-    #[doc = "   6. uncaughtException"]
-    #[doc = "   7. unhandledRejection"]
-    #[doc = "   8. warning"]
-    #[doc = "   9. message"]
-    #[doc = "  10. <All OS Signals>"]
-    #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener10(
         this: &Process,
@@ -1002,18 +850,6 @@ extern "C" {
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener10(this: &Process, value: &Function);
-    #[doc = "EventEmitter"]
-    #[doc = "   1. beforeExit"]
-    #[doc = "   2. disconnect"]
-    #[doc = "   3. exit"]
-    #[doc = "   4. message"]
-    #[doc = "   5. rejectionHandled"]
-    #[doc = "   6. uncaughtException"]
-    #[doc = "   7. unhandledRejection"]
-    #[doc = "   8. warning"]
-    #[doc = "   9. message"]
-    #[doc = "  10. <All OS Signals>"]
-    #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener11(
         this: &Process,
@@ -1022,18 +858,6 @@ extern "C" {
     ) -> Process;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener11(this: &Process, value: &Function);
-    #[doc = "EventEmitter"]
-    #[doc = "   1. beforeExit"]
-    #[doc = "   2. disconnect"]
-    #[doc = "   3. exit"]
-    #[doc = "   4. message"]
-    #[doc = "   5. rejectionHandled"]
-    #[doc = "   6. uncaughtException"]
-    #[doc = "   7. unhandledRejection"]
-    #[doc = "   8. warning"]
-    #[doc = "   9. message"]
-    #[doc = "  10. <All OS Signals>"]
-    #[doc = "  11. newListener/removeListener inherited from EventEmitter"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener12(
         this: &Process,

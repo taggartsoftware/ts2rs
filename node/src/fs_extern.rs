@@ -145,46 +145,30 @@ extern "C" {
     pub type Dir;
     #[wasm_bindgen(method, getter)]
     pub fn path(this: &Dir) -> String;
-    #[doc = "Asynchronously iterates over the directory via `readdir(3)` until all entries have been read."]
     #[wasm_bindgen(method)]
     pub fn computed_property_name(this: &Dir) -> AsyncIterableIterator;
     #[wasm_bindgen(method, setter)]
     pub fn set_computed_property_name(this: &Dir, value: &Function);
-    #[doc = "Asynchronously close the directory's underlying resource handle."]
-    #[doc = "Subsequent reads will result in errors."]
     #[wasm_bindgen(method)]
     pub fn close(this: &Dir) -> Promise;
     #[wasm_bindgen(method, setter)]
     pub fn set_close(this: &Dir, value: &Function);
-    #[doc = "Asynchronously close the directory's underlying resource handle."]
-    #[doc = "Subsequent reads will result in errors."]
     # [ wasm_bindgen ( method , js_name = close ) ]
     pub fn close2(this: &Dir, cb: &NoParamCallback);
     # [ wasm_bindgen ( method , setter , js_name = close ) ]
     pub fn set_close2(this: &Dir, value: &Function);
-    #[doc = "Synchronously close the directory's underlying resource handle."]
-    #[doc = "Subsequent reads will result in errors."]
     # [ wasm_bindgen ( method , js_name = closeSync ) ]
     pub fn close_sync(this: &Dir);
     # [ wasm_bindgen ( method , setter , js_name = closeSync ) ]
     pub fn set_close_sync(this: &Dir, value: &Function);
-    #[doc = "Asynchronously read the next directory entry via `readdir(3)` as an `Dirent`."]
-    #[doc = "After the read is completed, a value is returned that will be resolved with an `Dirent`, or `null` if there are no more directory entries to read."]
-    #[doc = "Directory entries returned by this function are in no particular order as provided by the operating system's underlying directory mechanisms."]
     #[wasm_bindgen(method)]
     pub fn read(this: &Dir) -> Promise;
     #[wasm_bindgen(method, setter)]
     pub fn set_read(this: &Dir, value: &Function);
-    #[doc = "Asynchronously read the next directory entry via `readdir(3)` as an `Dirent`."]
-    #[doc = "After the read is completed, a value is returned that will be resolved with an `Dirent`, or `null` if there are no more directory entries to read."]
-    #[doc = "Directory entries returned by this function are in no particular order as provided by the operating system's underlying directory mechanisms."]
     # [ wasm_bindgen ( method , js_name = read ) ]
     pub fn read2(this: &Dir, cb: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = read ) ]
     pub fn set_read2(this: &Dir, value: &Function);
-    #[doc = "Synchronously read the next directory entry via `readdir(3)` as a `Dirent`."]
-    #[doc = "If there are no more directory entries to read, null will be returned."]
-    #[doc = "Directory entries returned by this function are in no particular order as provided by the operating system's underlying directory mechanisms."]
     # [ wasm_bindgen ( method , js_name = readSync ) ]
     pub fn read_sync(this: &Dir) -> Dirent;
     # [ wasm_bindgen ( method , setter , js_name = readSync ) ]
@@ -194,30 +178,18 @@ extern "C" {
     pub fn close(this: &FSWatcher);
     #[wasm_bindgen(method, setter)]
     pub fn set_close(this: &FSWatcher, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. change"]
-    #[doc = "   2. error"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &FSWatcher, event: &str, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &FSWatcher, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. change"]
-    #[doc = "   2. error"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener2(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener2(this: &FSWatcher, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. change"]
-    #[doc = "   2. error"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener3(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener3(this: &FSWatcher, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. change"]
-    #[doc = "   2. error"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener4(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
@@ -311,23 +283,14 @@ extern "C" {
     pub fn path(this: &ReadStream) -> JsValue;
     #[wasm_bindgen(method, setter)]
     pub fn set_path(this: &ReadStream, value: &JsValue);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. open"]
-    #[doc = "   2. close"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &ReadStream, event: &str, listener: &JsValue) -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &ReadStream, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. open"]
-    #[doc = "   2. close"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener2(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener2(this: &ReadStream, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. open"]
-    #[doc = "   2. close"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener3(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
@@ -401,23 +364,14 @@ extern "C" {
     pub fn path(this: &WriteStream) -> JsValue;
     #[wasm_bindgen(method, setter)]
     pub fn set_path(this: &WriteStream, value: &JsValue);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. open"]
-    #[doc = "   2. close"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &WriteStream, event: &str, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &WriteStream, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. open"]
-    #[doc = "   2. close"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener2(this: &WriteStream, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. open"]
-    #[doc = "   2. close"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener3(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]

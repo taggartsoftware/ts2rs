@@ -9,139 +9,102 @@ extern "C" {
     pub fn console(this: &Console) -> node_js::ConsoleConstructor;
     # [ wasm_bindgen ( method , setter , js_name = Console ) ]
     pub fn set_console(this: &Console, value: &node_js::ConsoleConstructor);
-    #[doc = "A simple assertion test that verifies whether `value` is truthy."]
-    #[doc = "If it is not, an `AssertionError` is thrown."]
-    #[doc = "If provided, the error `message` is formatted using `util.format()` and used as the error message."]
     #[wasm_bindgen(method)]
     pub fn assert(this: &Console, value: &JsValue, message: Option<&str>, optional_params: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_assert(this: &Console, value: &Function);
-    #[doc = "When `stdout` is a TTY, calling `console.clear()` will attempt to clear the TTY."]
-    #[doc = "When `stdout` is not a TTY, this method does nothing."]
     #[wasm_bindgen(method)]
     pub fn clear(this: &Console);
     #[wasm_bindgen(method, setter)]
     pub fn set_clear(this: &Console, value: &Function);
-    #[doc = "Maintains an internal counter specific to `label` and outputs to `stdout` the number of times `console.count()` has been called with the given `label`."]
     #[wasm_bindgen(method)]
     pub fn count(this: &Console, label: Option<&str>);
     #[wasm_bindgen(method, setter)]
     pub fn set_count(this: &Console, value: &Function);
-    #[doc = "Resets the internal counter specific to `label`."]
     # [ wasm_bindgen ( method , js_name = countReset ) ]
     pub fn count_reset(this: &Console, label: Option<&str>);
     # [ wasm_bindgen ( method , setter , js_name = countReset ) ]
     pub fn set_count_reset(this: &Console, value: &Function);
-    #[doc = "The `console.debug()` function is an alias for {@link console.log()}."]
     #[wasm_bindgen(method)]
     pub fn debug(this: &Console, message: &JsValue, optional_params: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_debug(this: &Console, value: &Function);
-    #[doc = "Uses {@link util.inspect()} on `obj` and prints the resulting string to `stdout`."]
-    #[doc = "This function bypasses any custom `inspect()` function defined on `obj`."]
     #[wasm_bindgen(method)]
     pub fn dir(this: &Console, obj: &JsValue, options: Option<&node_js::InspectOptions>);
     #[wasm_bindgen(method, setter)]
     pub fn set_dir(this: &Console, value: &Function);
-    #[doc = "This method calls {@link console.log()} passing it the arguments received. Please note that this method does not produce any XML formatting"]
     #[wasm_bindgen(method)]
     pub fn dirxml(this: &Console, data: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_dirxml(this: &Console, value: &Function);
-    #[doc = "Prints to `stderr` with newline."]
     #[wasm_bindgen(method)]
     pub fn error(this: &Console, message: &JsValue, optional_params: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_error(this: &Console, value: &Function);
-    #[doc = "Increases indentation of subsequent lines by two spaces."]
-    #[doc = "If one or more `label`s are provided, those are printed first without the additional indentation."]
     #[wasm_bindgen(method)]
     pub fn group(this: &Console, label: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_group(this: &Console, value: &Function);
-    #[doc = "The `console.groupCollapsed()` function is an alias for {@link console.group()}."]
     # [ wasm_bindgen ( method , js_name = groupCollapsed ) ]
     pub fn group_collapsed(this: &Console, label: &Array);
     # [ wasm_bindgen ( method , setter , js_name = groupCollapsed ) ]
     pub fn set_group_collapsed(this: &Console, value: &Function);
-    #[doc = "Decreases indentation of subsequent lines by two spaces."]
     # [ wasm_bindgen ( method , js_name = groupEnd ) ]
     pub fn group_end(this: &Console);
     # [ wasm_bindgen ( method , setter , js_name = groupEnd ) ]
     pub fn set_group_end(this: &Console, value: &Function);
-    #[doc = "The {@link console.info()} function is an alias for {@link console.log()}."]
     #[wasm_bindgen(method)]
     pub fn info(this: &Console, message: &JsValue, optional_params: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_info(this: &Console, value: &Function);
-    #[doc = "Prints to `stdout` with newline."]
     #[wasm_bindgen(method)]
     pub fn log(this: &Console, message: &JsValue, optional_params: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_log(this: &Console, value: &Function);
-    #[doc = "This method does not display anything unless used in the inspector."]
-    #[doc = "  Prints to `stdout` the array `array` formatted as a table."]
     #[wasm_bindgen(method)]
     pub fn table(this: &Console, tabular_data: &JsValue, properties: Option<&Array>);
     #[wasm_bindgen(method, setter)]
     pub fn set_table(this: &Console, value: &Function);
-    #[doc = "Starts a timer that can be used to compute the duration of an operation. Timers are identified by a unique `label`."]
     #[wasm_bindgen(method)]
     pub fn time(this: &Console, label: Option<&str>);
     #[wasm_bindgen(method, setter)]
     pub fn set_time(this: &Console, value: &Function);
-    #[doc = "Stops a timer that was previously started by calling {@link console.time()} and prints the result to `stdout`."]
     # [ wasm_bindgen ( method , js_name = timeEnd ) ]
     pub fn time_end(this: &Console, label: Option<&str>);
     # [ wasm_bindgen ( method , setter , js_name = timeEnd ) ]
     pub fn set_time_end(this: &Console, value: &Function);
-    #[doc = "For a timer that was previously started by calling {@link console.time()}, prints the elapsed time and other `data` arguments to `stdout`."]
     # [ wasm_bindgen ( method , js_name = timeLog ) ]
     pub fn time_log(this: &Console, label: Option<&str>, data: &Array);
     # [ wasm_bindgen ( method , setter , js_name = timeLog ) ]
     pub fn set_time_log(this: &Console, value: &Function);
-    #[doc = "Prints to `stderr` the string 'Trace :', followed by the {@link util.format()} formatted message and stack trace to the current position in the code."]
     #[wasm_bindgen(method)]
     pub fn trace(this: &Console, message: &JsValue, optional_params: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_trace(this: &Console, value: &Function);
-    #[doc = "The {@link console.warn()} function is an alias for {@link console.error()}."]
     #[wasm_bindgen(method)]
     pub fn warn(this: &Console, message: &JsValue, optional_params: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_warn(this: &Console, value: &Function);
-    #[doc = "This method does not display anything unless used in the inspector."]
-    #[doc = "  The console.markTimeline() method is the deprecated form of console.timeStamp()."]
     # [ wasm_bindgen ( method , js_name = markTimeline ) ]
     pub fn mark_timeline(this: &Console, label: Option<&str>);
     # [ wasm_bindgen ( method , setter , js_name = markTimeline ) ]
     pub fn set_mark_timeline(this: &Console, value: &Function);
-    #[doc = "This method does not display anything unless used in the inspector."]
-    #[doc = "  Starts a JavaScript CPU profile with an optional label."]
     #[wasm_bindgen(method)]
     pub fn profile(this: &Console, label: Option<&str>);
     #[wasm_bindgen(method, setter)]
     pub fn set_profile(this: &Console, value: &Function);
-    #[doc = "This method does not display anything unless used in the inspector."]
-    #[doc = "  Stops the current JavaScript CPU profiling session if one has been started and prints the report to the Profiles panel of the inspector."]
     # [ wasm_bindgen ( method , js_name = profileEnd ) ]
     pub fn profile_end(this: &Console, label: Option<&str>);
     # [ wasm_bindgen ( method , setter , js_name = profileEnd ) ]
     pub fn set_profile_end(this: &Console, value: &Function);
-    #[doc = "This method does not display anything unless used in the inspector."]
-    #[doc = "  Adds an event with the label `label` to the Timeline panel of the inspector."]
     # [ wasm_bindgen ( method , js_name = timeStamp ) ]
     pub fn time_stamp(this: &Console, label: Option<&str>);
     # [ wasm_bindgen ( method , setter , js_name = timeStamp ) ]
     pub fn set_time_stamp(this: &Console, value: &Function);
-    #[doc = "This method does not display anything unless used in the inspector."]
-    #[doc = "  The console.timeline() method is the deprecated form of console.time()."]
     #[wasm_bindgen(method)]
     pub fn timeline(this: &Console, label: Option<&str>);
     #[wasm_bindgen(method, setter)]
     pub fn set_timeline(this: &Console, value: &Function);
-    #[doc = "This method does not display anything unless used in the inspector."]
-    #[doc = "  The console.timelineEnd() method is the deprecated form of console.timeEnd()."]
     # [ wasm_bindgen ( method , js_name = timelineEnd ) ]
     pub fn timeline_end(this: &Console, label: Option<&str>);
     # [ wasm_bindgen ( method , setter , js_name = timelineEnd ) ]
@@ -152,7 +115,6 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_stack(this: &Error, value: Option<&str>);
     pub type ErrorConstructor;
-    #[doc = "Create .stack property on a target object"]
     # [ wasm_bindgen ( method , js_name = captureStackTrace ) ]
     pub fn capture_stack_trace(
         this: &ErrorConstructor,
@@ -175,12 +137,10 @@ extern "C" {
     pub fn observable(this: &SymbolConstructor) -> JsValue;
     #[doc = "Allows manipulation and formatting of text strings and determination and location of substrings within strings."]
     pub type String;
-    #[doc = "Removes whitespace from the left end of a string."]
     # [ wasm_bindgen ( method , js_name = trimLeft ) ]
     pub fn trim_left(this: &String) -> String;
     # [ wasm_bindgen ( method , setter , js_name = trimLeft ) ]
     pub fn set_trim_left(this: &String, value: &Function);
-    #[doc = "Removes whitespace from the right end of a string."]
     # [ wasm_bindgen ( method , js_name = trimRight ) ]
     pub fn trim_right(this: &String) -> String;
     # [ wasm_bindgen ( method , setter , js_name = trimRight ) ]
@@ -313,22 +273,6 @@ extern "C" {
     pub fn new_buffer5(array: &Array) -> Buffer;
     #[wasm_bindgen(constructor)]
     pub fn new_buffer6(buffer: &Buffer) -> Buffer;
-    #[doc = "When passed a reference to the .buffer property of a TypedArray instance,"]
-    #[doc = "the newly created Buffer will share the same allocated memory as the TypedArray."]
-    #[doc = "The optional {byteOffset} and {length} arguments specify a memory range"]
-    #[doc = "within the {arrayBuffer} that will be shared by the Buffer."]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new Buffer using the passed {data}"]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new buffer containing the coerced value of an object"]
-    #[doc = "A `TypeError` will be thrown if {obj} has not mentioned methods or is not of other type appropriate for `Buffer.from()` variants."]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new Buffer containing the given JavaScript string {str}."]
-    #[doc = "If provided, the {encoding} parameter identifies the character encoding."]
-    #[doc = "If not provided, {encoding} defaults to 'utf8'."]
     #[wasm_bindgen(method)]
     pub fn from(
         this: &Buffer,
@@ -338,62 +282,14 @@ extern "C" {
     ) -> Buffer;
     #[wasm_bindgen(method, setter)]
     pub fn set_from(this: &Buffer, value: &Function);
-    #[doc = "When passed a reference to the .buffer property of a TypedArray instance,"]
-    #[doc = "the newly created Buffer will share the same allocated memory as the TypedArray."]
-    #[doc = "The optional {byteOffset} and {length} arguments specify a memory range"]
-    #[doc = "within the {arrayBuffer} that will be shared by the Buffer."]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new Buffer using the passed {data}"]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new buffer containing the coerced value of an object"]
-    #[doc = "A `TypeError` will be thrown if {obj} has not mentioned methods or is not of other type appropriate for `Buffer.from()` variants."]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new Buffer containing the given JavaScript string {str}."]
-    #[doc = "If provided, the {encoding} parameter identifies the character encoding."]
-    #[doc = "If not provided, {encoding} defaults to 'utf8'."]
     # [ wasm_bindgen ( method , js_name = from ) ]
     pub fn from2(this: &Buffer, data: &Array) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = from ) ]
     pub fn set_from2(this: &Buffer, value: &Function);
-    #[doc = "When passed a reference to the .buffer property of a TypedArray instance,"]
-    #[doc = "the newly created Buffer will share the same allocated memory as the TypedArray."]
-    #[doc = "The optional {byteOffset} and {length} arguments specify a memory range"]
-    #[doc = "within the {arrayBuffer} that will be shared by the Buffer."]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new Buffer using the passed {data}"]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new buffer containing the coerced value of an object"]
-    #[doc = "A `TypeError` will be thrown if {obj} has not mentioned methods or is not of other type appropriate for `Buffer.from()` variants."]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new Buffer containing the given JavaScript string {str}."]
-    #[doc = "If provided, the {encoding} parameter identifies the character encoding."]
-    #[doc = "If not provided, {encoding} defaults to 'utf8'."]
     # [ wasm_bindgen ( method , js_name = from ) ]
     pub fn from3(this: &Buffer, data: &Uint8Array) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = from ) ]
     pub fn set_from3(this: &Buffer, value: &Function);
-    #[doc = "When passed a reference to the .buffer property of a TypedArray instance,"]
-    #[doc = "the newly created Buffer will share the same allocated memory as the TypedArray."]
-    #[doc = "The optional {byteOffset} and {length} arguments specify a memory range"]
-    #[doc = "within the {arrayBuffer} that will be shared by the Buffer."]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new Buffer using the passed {data}"]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new buffer containing the coerced value of an object"]
-    #[doc = "A `TypeError` will be thrown if {obj} has not mentioned methods or is not of other type appropriate for `Buffer.from()` variants."]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new Buffer containing the given JavaScript string {str}."]
-    #[doc = "If provided, the {encoding} parameter identifies the character encoding."]
-    #[doc = "If not provided, {encoding} defaults to 'utf8'."]
     # [ wasm_bindgen ( method , js_name = from ) ]
     pub fn from4(
         this: &Buffer,
@@ -403,63 +299,34 @@ extern "C" {
     ) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = from ) ]
     pub fn set_from4(this: &Buffer, value: &Function);
-    #[doc = "When passed a reference to the .buffer property of a TypedArray instance,"]
-    #[doc = "the newly created Buffer will share the same allocated memory as the TypedArray."]
-    #[doc = "The optional {byteOffset} and {length} arguments specify a memory range"]
-    #[doc = "within the {arrayBuffer} that will be shared by the Buffer."]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new Buffer using the passed {data}"]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new buffer containing the coerced value of an object"]
-    #[doc = "A `TypeError` will be thrown if {obj} has not mentioned methods or is not of other type appropriate for `Buffer.from()` variants."]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "Creates a new Buffer containing the given JavaScript string {str}."]
-    #[doc = "If provided, the {encoding} parameter identifies the character encoding."]
-    #[doc = "If not provided, {encoding} defaults to 'utf8'."]
     # [ wasm_bindgen ( method , js_name = from ) ]
     pub fn from5(this: &Buffer, str: &str, encoding: Option<&BufferEncoding>) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = from ) ]
     pub fn set_from5(this: &Buffer, value: &Function);
-    #[doc = "Creates a new Buffer using the passed {data}"]
     #[wasm_bindgen(method)]
     pub fn of(this: &Buffer, items: &Array) -> Buffer;
     #[wasm_bindgen(method, setter)]
     pub fn set_of(this: &Buffer, value: &Function);
-    #[doc = "Returns true if {obj} is a Buffer"]
     # [ wasm_bindgen ( method , js_name = isBuffer ) ]
     pub fn is_buffer(this: &Buffer, obj: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = isBuffer ) ]
     pub fn set_is_buffer(this: &Buffer, value: &Function);
-    #[doc = "Returns true if {encoding} is a valid encoding argument."]
-    #[doc = "Valid string encodings in Node 0.12: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'"]
     # [ wasm_bindgen ( method , js_name = isEncoding ) ]
     pub fn is_encoding(this: &Buffer, encoding: &str) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = isEncoding ) ]
     pub fn set_is_encoding(this: &Buffer, value: &Function);
-    #[doc = "Gives the actual byte length of a string. encoding defaults to 'utf8'."]
-    #[doc = "This is not the same as String.prototype.length since that returns the number of characters in a string."]
     # [ wasm_bindgen ( method , js_name = byteLength ) ]
     pub fn byte_length(this: &Buffer, string: &JsValue, encoding: Option<&BufferEncoding>) -> f64;
     # [ wasm_bindgen ( method , setter , js_name = byteLength ) ]
     pub fn set_byte_length(this: &Buffer, value: &Function);
-    #[doc = "Returns a buffer which is the result of concatenating all the buffers in the list together."]
-    #[doc = ""]
-    #[doc = "If the list has no items, or if the totalLength is 0, then it returns a zero-length buffer."]
-    #[doc = "If the list has exactly one item, then the first item of the list is returned."]
-    #[doc = "If the list has more than one item, then a new Buffer is created."]
     #[wasm_bindgen(method)]
     pub fn concat(this: &Buffer, list: &Array, total_length: Option<f64>) -> Buffer;
     #[wasm_bindgen(method, setter)]
     pub fn set_concat(this: &Buffer, value: &Function);
-    #[doc = "The same as buf1.compare(buf2)."]
     #[wasm_bindgen(method)]
     pub fn compare(this: &Buffer, buf1: &Uint8Array, buf2: &Uint8Array) -> f64;
     #[wasm_bindgen(method, setter)]
     pub fn set_compare(this: &Buffer, value: &Function);
-    #[doc = "Allocates a new buffer of {size} octets."]
     #[wasm_bindgen(method)]
     pub fn alloc(
         this: &Buffer,
@@ -469,14 +336,10 @@ extern "C" {
     ) -> Buffer;
     #[wasm_bindgen(method, setter)]
     pub fn set_alloc(this: &Buffer, value: &Function);
-    #[doc = "Allocates a new buffer of {size} octets, leaving memory not initialized, so the contents"]
-    #[doc = "of the newly created Buffer are unknown and may contain sensitive data."]
     # [ wasm_bindgen ( method , js_name = allocUnsafe ) ]
     pub fn alloc_unsafe(this: &Buffer, size: f64) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = allocUnsafe ) ]
     pub fn set_alloc_unsafe(this: &Buffer, value: &Function);
-    #[doc = "Allocates a new non-pooled buffer of {size} octets, leaving memory not initialized, so the contents"]
-    #[doc = "of the newly created Buffer are unknown and may contain sensitive data."]
     # [ wasm_bindgen ( method , js_name = allocUnsafeSlow ) ]
     pub fn alloc_unsafe_slow(this: &Buffer, size: f64) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = allocUnsafeSlow ) ]
@@ -509,7 +372,6 @@ extern "C" {
     ) -> f64;
     # [ wasm_bindgen ( method , setter , js_name = write ) ]
     pub fn set_write3(this: &Buffer, value: &Function);
-    #[doc = "Returns a string representation of an array."]
     # [ wasm_bindgen ( method , js_name = toString ) ]
     pub fn to_string(
         this: &Buffer,
@@ -548,16 +410,10 @@ extern "C" {
     ) -> f64;
     #[wasm_bindgen(method, setter)]
     pub fn set_copy(this: &Buffer, value: &Function);
-    #[doc = "Returns a new `Buffer` that references **the same memory as the original**, but offset and cropped by the start and end indices."]
-    #[doc = ""]
-    #[doc = "This method is incompatible with `Uint8Array#slice()`, which returns a copy of the original memory."]
     #[wasm_bindgen(method)]
     pub fn slice(this: &Buffer, begin: Option<f64>, end: Option<f64>) -> Buffer;
     #[wasm_bindgen(method, setter)]
     pub fn set_slice(this: &Buffer, value: &Function);
-    #[doc = "Returns a new `Buffer` that references **the same memory as the original**, but offset and cropped by the start and end indices."]
-    #[doc = ""]
-    #[doc = "This method is compatible with `Uint8Array#subarray()`."]
     #[wasm_bindgen(method)]
     pub fn subarray(this: &Buffer, begin: Option<f64>, end: Option<f64>) -> Buffer;
     #[wasm_bindgen(method, setter)]
@@ -650,7 +506,6 @@ extern "C" {
     pub fn read_double_be(this: &Buffer, offset: f64) -> f64;
     # [ wasm_bindgen ( method , setter , js_name = readDoubleBE ) ]
     pub fn set_read_double_be(this: &Buffer, value: &Function);
-    #[doc = "Reverses the elements in an Array."]
     #[wasm_bindgen(method)]
     pub fn reverse(this: &Buffer) -> Buffer;
     #[wasm_bindgen(method, setter)]
@@ -723,7 +578,6 @@ extern "C" {
     pub fn write_double_be(this: &Buffer, value: f64, offset: f64) -> f64;
     # [ wasm_bindgen ( method , setter , js_name = writeDoubleBE ) ]
     pub fn set_write_double_be(this: &Buffer, value: &Function);
-    #[doc = "Returns the this object after filling the section identified by start and end with value"]
     #[wasm_bindgen(method)]
     pub fn fill(
         this: &Buffer,
@@ -734,7 +588,6 @@ extern "C" {
     ) -> Buffer;
     #[wasm_bindgen(method, setter)]
     pub fn set_fill(this: &Buffer, value: &Function);
-    #[doc = "Returns the index of the first occurrence of a value in an array."]
     # [ wasm_bindgen ( method , js_name = indexOf ) ]
     pub fn index_of(
         this: &Buffer,
@@ -744,7 +597,6 @@ extern "C" {
     ) -> f64;
     # [ wasm_bindgen ( method , setter , js_name = indexOf ) ]
     pub fn set_index_of(this: &Buffer, value: &Function);
-    #[doc = "Returns the index of the last occurrence of a value in an array."]
     # [ wasm_bindgen ( method , js_name = lastIndexOf ) ]
     pub fn last_index_of(
         this: &Buffer,
@@ -754,12 +606,10 @@ extern "C" {
     ) -> f64;
     # [ wasm_bindgen ( method , setter , js_name = lastIndexOf ) ]
     pub fn set_last_index_of(this: &Buffer, value: &Function);
-    #[doc = "Returns an array of key, value pairs for every entry in the array"]
     #[wasm_bindgen(method)]
     pub fn entries(this: &Buffer) -> IterableIterator;
     #[wasm_bindgen(method, setter)]
     pub fn set_entries(this: &Buffer, value: &Function);
-    #[doc = "Determines whether an array includes a certain element, returning true or false as appropriate."]
     #[wasm_bindgen(method)]
     pub fn includes(
         this: &Buffer,
@@ -769,12 +619,10 @@ extern "C" {
     ) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_includes(this: &Buffer, value: &Function);
-    #[doc = "Returns an list of keys in the array"]
     #[wasm_bindgen(method)]
     pub fn keys(this: &Buffer) -> IterableIterator;
     #[wasm_bindgen(method, setter)]
     pub fn set_keys(this: &Buffer, value: &Function);
-    #[doc = "Returns an list of values in the array"]
     #[wasm_bindgen(method)]
     pub fn values(this: &Buffer) -> IterableIterator;
     #[wasm_bindgen(method, setter)]

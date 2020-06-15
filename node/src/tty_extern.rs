@@ -30,50 +30,10 @@ extern "C" {
     pub type WriteStream;
     #[wasm_bindgen(constructor)]
     pub fn new_write_stream(fd: f64) -> WriteStream;
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connect"]
-    #[doc = "   3. data"]
-    #[doc = "   4. drain"]
-    #[doc = "   5. end"]
-    #[doc = "   6. error"]
-    #[doc = "   7. lookup"]
-    #[doc = "   8. timeout"]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connect"]
-    #[doc = "   3. data"]
-    #[doc = "   4. drain"]
-    #[doc = "   5. end"]
-    #[doc = "   6. error"]
-    #[doc = "   7. lookup"]
-    #[doc = "   8. timeout"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &WriteStream, event: &str, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &WriteStream, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connect"]
-    #[doc = "   3. data"]
-    #[doc = "   4. drain"]
-    #[doc = "   5. end"]
-    #[doc = "   6. error"]
-    #[doc = "   7. lookup"]
-    #[doc = "   8. timeout"]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connect"]
-    #[doc = "   3. data"]
-    #[doc = "   4. drain"]
-    #[doc = "   5. end"]
-    #[doc = "   6. error"]
-    #[doc = "   7. lookup"]
-    #[doc = "   8. timeout"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
@@ -130,27 +90,22 @@ extern "C" {
     ) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener2(this: &WriteStream, value: &Function);
-    #[doc = "Clears the current line of this WriteStream in a direction identified by `dir`."]
     # [ wasm_bindgen ( method , js_name = clearLine ) ]
     pub fn clear_line(this: &WriteStream, dir: &Direction, callback: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = clearLine ) ]
     pub fn set_clear_line(this: &WriteStream, value: &Function);
-    #[doc = "Clears this `WriteStream` from the current cursor down."]
     # [ wasm_bindgen ( method , js_name = clearScreenDown ) ]
     pub fn clear_screen_down(this: &WriteStream, callback: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = clearScreenDown ) ]
     pub fn set_clear_screen_down(this: &WriteStream, value: &Function);
-    #[doc = "Moves this WriteStream's cursor to the specified position."]
     # [ wasm_bindgen ( method , js_name = cursorTo ) ]
     pub fn cursor_to(this: &WriteStream, x: f64, y: Option<f64>, callback: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = cursorTo ) ]
     pub fn set_cursor_to(this: &WriteStream, value: &Function);
-    #[doc = "Moves this WriteStream's cursor to the specified position."]
     # [ wasm_bindgen ( method , js_name = cursorTo ) ]
     pub fn cursor_to2(this: &WriteStream, x: f64, callback: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = cursorTo ) ]
     pub fn set_cursor_to2(this: &WriteStream, value: &Function);
-    #[doc = "Moves this WriteStream's cursor relative to its current position."]
     # [ wasm_bindgen ( method , js_name = moveCursor ) ]
     pub fn move_cursor(this: &WriteStream, dx: f64, dy: f64, callback: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = moveCursor ) ]

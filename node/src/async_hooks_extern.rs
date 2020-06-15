@@ -10,7 +10,6 @@ extern "C" {
     # [ wasm_bindgen ( js_name = triggerAsyncId ) ]
     pub fn trigger_async_id() -> f64;
     pub type HookCallbacks;
-    #[doc = "Called when a class is constructed that has the possibility to emit an asynchronous event."]
     #[wasm_bindgen(method)]
     pub fn init(
         this: &HookCallbacks,
@@ -21,35 +20,27 @@ extern "C" {
     );
     #[wasm_bindgen(method, setter)]
     pub fn set_init(this: &HookCallbacks, value: Option<&Function>);
-    #[doc = "When an asynchronous operation is initiated or completes a callback is called to notify the user."]
-    #[doc = "The before callback is called just before said callback is executed."]
     #[wasm_bindgen(method)]
     pub fn before(this: &HookCallbacks, async_id: f64);
     #[wasm_bindgen(method, setter)]
     pub fn set_before(this: &HookCallbacks, value: Option<&Function>);
-    #[doc = "Called immediately after the callback specified in before is completed."]
     #[wasm_bindgen(method)]
     pub fn after(this: &HookCallbacks, async_id: f64);
     #[wasm_bindgen(method, setter)]
     pub fn set_after(this: &HookCallbacks, value: Option<&Function>);
-    #[doc = "Called when a promise has resolve() called. This may not be in the same execution id"]
-    #[doc = "as the promise itself."]
     # [ wasm_bindgen ( method , js_name = promiseResolve ) ]
     pub fn promise_resolve(this: &HookCallbacks, async_id: f64);
     # [ wasm_bindgen ( method , setter , js_name = promiseResolve ) ]
     pub fn set_promise_resolve(this: &HookCallbacks, value: Option<&Function>);
-    #[doc = "Called after the resource corresponding to asyncId is destroyed"]
     #[wasm_bindgen(method)]
     pub fn destroy(this: &HookCallbacks, async_id: f64);
     #[wasm_bindgen(method, setter)]
     pub fn set_destroy(this: &HookCallbacks, value: Option<&Function>);
     pub type AsyncHook;
-    #[doc = "Enable the callbacks for a given AsyncHook instance. If no callbacks are provided enabling is a noop."]
     #[wasm_bindgen(method)]
     pub fn enable(this: &AsyncHook) -> AsyncHook;
     #[wasm_bindgen(method, setter)]
     pub fn set_enable(this: &AsyncHook, value: &Function);
-    #[doc = "Disable the callbacks for a given AsyncHook instance from the global pool of AsyncHook callbacks to be executed. Once a hook has been disabled it will not be called again until enabled."]
     #[wasm_bindgen(method)]
     pub fn disable(this: &AsyncHook) -> AsyncHook;
     #[wasm_bindgen(method, setter)]
@@ -78,11 +69,6 @@ extern "C" {
     pub type AsyncResource;
     #[wasm_bindgen(constructor)]
     pub fn new_async_resource(type_: &str, trigger_async_id: &JsValue) -> AsyncResource;
-    #[doc = "Call the provided function with the provided arguments in the"]
-    #[doc = "execution context of the async resource. This will establish the"]
-    #[doc = "context, trigger the AsyncHooks before callbacks, call the function,"]
-    #[doc = "trigger the AsyncHooks after callbacks, and then restore the original"]
-    #[doc = "execution context."]
     # [ wasm_bindgen ( method , js_name = runInAsyncScope ) ]
     pub fn run_in_async_scope(
         this: &AsyncResource,
@@ -92,7 +78,6 @@ extern "C" {
     ) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = runInAsyncScope ) ]
     pub fn set_run_in_async_scope(this: &AsyncResource, value: &Function);
-    #[doc = "Call AsyncHooks destroy callbacks."]
     # [ wasm_bindgen ( method , js_name = emitDestroy ) ]
     pub fn emit_destroy(this: &AsyncResource);
     # [ wasm_bindgen ( method , setter , js_name = emitDestroy ) ]

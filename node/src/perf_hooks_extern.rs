@@ -64,59 +64,34 @@ extern "C" {
     # [ wasm_bindgen ( method , getter , js_name = v8Start ) ]
     pub fn v8_start(this: &PerformanceNodeTiming) -> f64;
     pub type Performance;
-    #[doc = "If name is not provided, removes all PerformanceFunction objects from the Performance Timeline."]
-    #[doc = "If name is provided, removes entries with name."]
     # [ wasm_bindgen ( method , js_name = clearFunctions ) ]
     pub fn clear_functions(this: &Performance, name: Option<&str>);
     # [ wasm_bindgen ( method , setter , js_name = clearFunctions ) ]
     pub fn set_clear_functions(this: &Performance, value: &Function);
-    #[doc = "If name is not provided, removes all PerformanceMark objects from the Performance Timeline."]
-    #[doc = "If name is provided, removes only the named mark."]
     # [ wasm_bindgen ( method , js_name = clearMarks ) ]
     pub fn clear_marks(this: &Performance, name: Option<&str>);
     # [ wasm_bindgen ( method , setter , js_name = clearMarks ) ]
     pub fn set_clear_marks(this: &Performance, value: &Function);
-    #[doc = "If name is not provided, removes all PerformanceMeasure objects from the Performance Timeline."]
-    #[doc = "If name is provided, removes only objects whose performanceEntry.name matches name."]
     # [ wasm_bindgen ( method , js_name = clearMeasures ) ]
     pub fn clear_measures(this: &Performance, name: Option<&str>);
     # [ wasm_bindgen ( method , setter , js_name = clearMeasures ) ]
     pub fn set_clear_measures(this: &Performance, value: &Function);
-    #[doc = "Returns a list of all PerformanceEntry objects in chronological order with respect to performanceEntry.startTime."]
     # [ wasm_bindgen ( method , js_name = getEntries ) ]
     pub fn get_entries(this: &Performance) -> Array;
     # [ wasm_bindgen ( method , setter , js_name = getEntries ) ]
     pub fn set_get_entries(this: &Performance, value: &Function);
-    #[doc = "Returns a list of all PerformanceEntry objects in chronological order with respect to performanceEntry.startTime"]
-    #[doc = "whose performanceEntry.name is equal to name, and optionally, whose performanceEntry.entryType is equal to type."]
     # [ wasm_bindgen ( method , js_name = getEntriesByName ) ]
     pub fn get_entries_by_name(this: &Performance, name: &str, type_: Option<&str>) -> Array;
     # [ wasm_bindgen ( method , setter , js_name = getEntriesByName ) ]
     pub fn set_get_entries_by_name(this: &Performance, value: &Function);
-    #[doc = "Returns a list of all PerformanceEntry objects in chronological order with respect to performanceEntry.startTime"]
-    #[doc = "whose performanceEntry.entryType is equal to type."]
     # [ wasm_bindgen ( method , js_name = getEntriesByType ) ]
     pub fn get_entries_by_type(this: &Performance, type_: &str) -> Array;
     # [ wasm_bindgen ( method , setter , js_name = getEntriesByType ) ]
     pub fn set_get_entries_by_type(this: &Performance, value: &Function);
-    #[doc = "Creates a new PerformanceMark entry in the Performance Timeline."]
-    #[doc = "A PerformanceMark is a subclass of PerformanceEntry whose performanceEntry.entryType is always 'mark',"]
-    #[doc = "and whose performanceEntry.duration is always 0."]
-    #[doc = "Performance marks are used to mark specific significant moments in the Performance Timeline."]
     #[wasm_bindgen(method)]
     pub fn mark(this: &Performance, name: Option<&str>);
     #[wasm_bindgen(method, setter)]
     pub fn set_mark(this: &Performance, value: &Function);
-    #[doc = "Creates a new PerformanceMeasure entry in the Performance Timeline."]
-    #[doc = "A PerformanceMeasure is a subclass of PerformanceEntry whose performanceEntry.entryType is always 'measure',"]
-    #[doc = "and whose performanceEntry.duration measures the number of milliseconds elapsed since startMark and endMark."]
-    #[doc = ""]
-    #[doc = "The startMark argument may identify any existing PerformanceMark in the the Performance Timeline, or may identify"]
-    #[doc = "any of the timestamp properties provided by the PerformanceNodeTiming class. If the named startMark does not exist,"]
-    #[doc = "then startMark is set to timeOrigin by default."]
-    #[doc = ""]
-    #[doc = "The endMark argument must identify any existing PerformanceMark in the the Performance Timeline or any of the timestamp"]
-    #[doc = "properties provided by the PerformanceNodeTiming class. If the named endMark does not exist, an error will be thrown."]
     #[wasm_bindgen(method)]
     pub fn measure(this: &Performance, name: &str, start_mark: &str, end_mark: &str);
     #[wasm_bindgen(method, setter)]
@@ -131,8 +106,6 @@ extern "C" {
     #[doc = "The timeOrigin specifies the high resolution millisecond timestamp from which all performance metric durations are measured."]
     # [ wasm_bindgen ( method , getter , js_name = timeOrigin ) ]
     pub fn time_origin(this: &Performance) -> f64;
-    #[doc = "Wraps a function within a new function that measures the running time of the wrapped function."]
-    #[doc = "A PerformanceObserver must be subscribed to the 'function' event type in order for the timing details to be accessed."]
     #[wasm_bindgen(method)]
     pub fn timerify(this: &Performance, fn_: &JsValue) -> JsValue;
     #[wasm_bindgen(method, setter)]
@@ -158,14 +131,10 @@ extern "C" {
     pub type PerformanceObserver;
     #[wasm_bindgen(constructor)]
     pub fn new_performance_observer(callback: &PerformanceObserverCallback) -> PerformanceObserver;
-    #[doc = "Disconnects the PerformanceObserver instance from all notifications."]
     #[wasm_bindgen(method)]
     pub fn disconnect(this: &PerformanceObserver);
     #[wasm_bindgen(method, setter)]
     pub fn set_disconnect(this: &PerformanceObserver, value: &Function);
-    #[doc = "Subscribes the PerformanceObserver instance to notifications of new PerformanceEntry instances identified by options.entryTypes."]
-    #[doc = "When options.buffered is false, the callback will be invoked once for every PerformanceEntry instance."]
-    #[doc = "Property buffered defaults to false."]
     #[wasm_bindgen(method)]
     pub fn observe(this: &PerformanceObserver, options: &JsValue);
     #[wasm_bindgen(method, setter)]
@@ -180,22 +149,18 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_resolution(this: &EventLoopMonitorOptions, value: Option<f64>);
     pub type EventLoopDelayMonitor;
-    #[doc = "Enables the event loop delay sample timer. Returns `true` if the timer was started, `false` if it was already started."]
     #[wasm_bindgen(method)]
     pub fn enable(this: &EventLoopDelayMonitor) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_enable(this: &EventLoopDelayMonitor, value: &Function);
-    #[doc = "Disables the event loop delay sample timer. Returns `true` if the timer was stopped, `false` if it was already stopped."]
     #[wasm_bindgen(method)]
     pub fn disable(this: &EventLoopDelayMonitor) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_disable(this: &EventLoopDelayMonitor, value: &Function);
-    #[doc = "Resets the collected histogram data."]
     #[wasm_bindgen(method)]
     pub fn reset(this: &EventLoopDelayMonitor);
     #[wasm_bindgen(method, setter)]
     pub fn set_reset(this: &EventLoopDelayMonitor, value: &Function);
-    #[doc = "Returns the value at the given percentile."]
     #[wasm_bindgen(method)]
     pub fn percentile(this: &EventLoopDelayMonitor, percentile: f64) -> f64;
     #[wasm_bindgen(method, setter)]

@@ -35,7 +35,6 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = autoDestroy ) ]
     pub fn set_auto_destroy(this: &ReadableOptions, value: Option<bool>);
     pub type Readable;
-    #[doc = "A utility method for creating Readable Streams out of iterators."]
     #[wasm_bindgen(method)]
     pub fn from(this: &Readable, iterable: &JsValue, options: Option<&ReadableOptions>)
     -> Readable;
@@ -105,68 +104,26 @@ extern "C" {
     pub fn destroy2(this: &Readable, error: Option<&Error>);
     # [ wasm_bindgen ( method , setter , js_name = destroy ) ]
     pub fn set_destroy2(this: &Readable, value: &Function);
-    #[doc = "Event emitter"]
-    #[doc = "The defined events on documents including:"]
-    #[doc = "1. close"]
-    #[doc = "2. data"]
-    #[doc = "3. end"]
-    #[doc = "4. readable"]
-    #[doc = "5. error"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Readable, value: &Function);
-    #[doc = "Event emitter"]
-    #[doc = "The defined events on documents including:"]
-    #[doc = "1. close"]
-    #[doc = "2. data"]
-    #[doc = "3. end"]
-    #[doc = "4. readable"]
-    #[doc = "5. error"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener2(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener2(this: &Readable, value: &Function);
-    #[doc = "Event emitter"]
-    #[doc = "The defined events on documents including:"]
-    #[doc = "1. close"]
-    #[doc = "2. data"]
-    #[doc = "3. end"]
-    #[doc = "4. readable"]
-    #[doc = "5. error"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener3(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener3(this: &Readable, value: &Function);
-    #[doc = "Event emitter"]
-    #[doc = "The defined events on documents including:"]
-    #[doc = "1. close"]
-    #[doc = "2. data"]
-    #[doc = "3. end"]
-    #[doc = "4. readable"]
-    #[doc = "5. error"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener4(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener4(this: &Readable, value: &Function);
-    #[doc = "Event emitter"]
-    #[doc = "The defined events on documents including:"]
-    #[doc = "1. close"]
-    #[doc = "2. data"]
-    #[doc = "3. end"]
-    #[doc = "4. readable"]
-    #[doc = "5. error"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener5(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener5(this: &Readable, value: &Function);
-    #[doc = "Event emitter"]
-    #[doc = "The defined events on documents including:"]
-    #[doc = "1. close"]
-    #[doc = "2. data"]
-    #[doc = "3. end"]
-    #[doc = "4. readable"]
-    #[doc = "5. error"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener6(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
@@ -442,86 +399,30 @@ extern "C" {
     pub fn destroy2(this: &Writable, error: Option<&Error>);
     # [ wasm_bindgen ( method , setter , js_name = destroy ) ]
     pub fn set_destroy2(this: &Writable, value: &Function);
-    #[doc = "Event emitter"]
-    #[doc = "The defined events on documents including:"]
-    #[doc = "1. close"]
-    #[doc = "2. drain"]
-    #[doc = "3. error"]
-    #[doc = "4. finish"]
-    #[doc = "5. pipe"]
-    #[doc = "6. unpipe"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Writable, value: &Function);
-    #[doc = "Event emitter"]
-    #[doc = "The defined events on documents including:"]
-    #[doc = "1. close"]
-    #[doc = "2. drain"]
-    #[doc = "3. error"]
-    #[doc = "4. finish"]
-    #[doc = "5. pipe"]
-    #[doc = "6. unpipe"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener2(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener2(this: &Writable, value: &Function);
-    #[doc = "Event emitter"]
-    #[doc = "The defined events on documents including:"]
-    #[doc = "1. close"]
-    #[doc = "2. drain"]
-    #[doc = "3. error"]
-    #[doc = "4. finish"]
-    #[doc = "5. pipe"]
-    #[doc = "6. unpipe"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener3(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener3(this: &Writable, value: &Function);
-    #[doc = "Event emitter"]
-    #[doc = "The defined events on documents including:"]
-    #[doc = "1. close"]
-    #[doc = "2. drain"]
-    #[doc = "3. error"]
-    #[doc = "4. finish"]
-    #[doc = "5. pipe"]
-    #[doc = "6. unpipe"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener4(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener4(this: &Writable, value: &Function);
-    #[doc = "Event emitter"]
-    #[doc = "The defined events on documents including:"]
-    #[doc = "1. close"]
-    #[doc = "2. drain"]
-    #[doc = "3. error"]
-    #[doc = "4. finish"]
-    #[doc = "5. pipe"]
-    #[doc = "6. unpipe"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener5(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener5(this: &Writable, value: &Function);
-    #[doc = "Event emitter"]
-    #[doc = "The defined events on documents including:"]
-    #[doc = "1. close"]
-    #[doc = "2. drain"]
-    #[doc = "3. error"]
-    #[doc = "4. finish"]
-    #[doc = "5. pipe"]
-    #[doc = "6. unpipe"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener6(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener6(this: &Writable, value: &Function);
-    #[doc = "Event emitter"]
-    #[doc = "The defined events on documents including:"]
-    #[doc = "1. close"]
-    #[doc = "2. drain"]
-    #[doc = "3. error"]
-    #[doc = "4. finish"]
-    #[doc = "5. pipe"]
-    #[doc = "6. unpipe"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener7(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]

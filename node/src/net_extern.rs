@@ -39,9 +39,6 @@ extern "C" {
     pub fn buffer(this: &OnReadOpts) -> JsValue;
     #[wasm_bindgen(method, setter)]
     pub fn set_buffer(this: &OnReadOpts, value: &JsValue);
-    #[doc = "This function is called for every chunk of incoming data."]
-    #[doc = "Two arguments are passed to it: the number of bytes written to buffer and a reference to buffer."]
-    #[doc = "Return false from this function to implicitly pause() the socket."]
     #[wasm_bindgen(method)]
     pub fn callback(this: &OnReadOpts, bytes_written: f64, buf: &Uint8Array) -> bool;
     #[wasm_bindgen(method, setter)]
@@ -194,119 +191,38 @@ extern "C" {
     pub fn end3(this: &Socket, str: &JsValue, encoding: Option<&str>, cb: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = end ) ]
     pub fn set_end3(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connect"]
-    #[doc = "   3. data"]
-    #[doc = "   4. drain"]
-    #[doc = "   5. end"]
-    #[doc = "   6. error"]
-    #[doc = "   7. lookup"]
-    #[doc = "   8. timeout"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &Socket, event: &str, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connect"]
-    #[doc = "   3. data"]
-    #[doc = "   4. drain"]
-    #[doc = "   5. end"]
-    #[doc = "   6. error"]
-    #[doc = "   7. lookup"]
-    #[doc = "   8. timeout"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener2(this: &Socket, event: &JsValue, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener2(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connect"]
-    #[doc = "   3. data"]
-    #[doc = "   4. drain"]
-    #[doc = "   5. end"]
-    #[doc = "   6. error"]
-    #[doc = "   7. lookup"]
-    #[doc = "   8. timeout"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener3(this: &Socket, event: &JsValue, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener3(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connect"]
-    #[doc = "   3. data"]
-    #[doc = "   4. drain"]
-    #[doc = "   5. end"]
-    #[doc = "   6. error"]
-    #[doc = "   7. lookup"]
-    #[doc = "   8. timeout"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener4(this: &Socket, event: &JsValue, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener4(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connect"]
-    #[doc = "   3. data"]
-    #[doc = "   4. drain"]
-    #[doc = "   5. end"]
-    #[doc = "   6. error"]
-    #[doc = "   7. lookup"]
-    #[doc = "   8. timeout"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener5(this: &Socket, event: &JsValue, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener5(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connect"]
-    #[doc = "   3. data"]
-    #[doc = "   4. drain"]
-    #[doc = "   5. end"]
-    #[doc = "   6. error"]
-    #[doc = "   7. lookup"]
-    #[doc = "   8. timeout"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener6(this: &Socket, event: &JsValue, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener6(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connect"]
-    #[doc = "   3. data"]
-    #[doc = "   4. drain"]
-    #[doc = "   5. end"]
-    #[doc = "   6. error"]
-    #[doc = "   7. lookup"]
-    #[doc = "   8. timeout"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener7(this: &Socket, event: &JsValue, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener7(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connect"]
-    #[doc = "   3. data"]
-    #[doc = "   4. drain"]
-    #[doc = "   5. end"]
-    #[doc = "   6. error"]
-    #[doc = "   7. lookup"]
-    #[doc = "   8. timeout"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener8(this: &Socket, event: &JsValue, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener8(this: &Socket, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connect"]
-    #[doc = "   3. data"]
-    #[doc = "   4. drain"]
-    #[doc = "   5. end"]
-    #[doc = "   6. error"]
-    #[doc = "   7. lookup"]
-    #[doc = "   8. timeout"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener9(this: &Socket, event: &JsValue, listener: &JsValue) -> Socket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
@@ -630,47 +546,22 @@ extern "C" {
     pub fn listening(this: &Server) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_listening(this: &Server, value: bool);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connection"]
-    #[doc = "   3. error"]
-    #[doc = "   4. listening"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &Server, event: &str, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Server, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connection"]
-    #[doc = "   3. error"]
-    #[doc = "   4. listening"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener2(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener2(this: &Server, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connection"]
-    #[doc = "   3. error"]
-    #[doc = "   4. listening"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener3(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener3(this: &Server, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connection"]
-    #[doc = "   3. error"]
-    #[doc = "   4. listening"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener4(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener4(this: &Server, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "   1. close"]
-    #[doc = "   2. connection"]
-    #[doc = "   3. error"]
-    #[doc = "   4. listening"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener5(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]

@@ -73,62 +73,26 @@ extern "C" {
     pub fn ref_(this: &ChildProcess);
     # [ wasm_bindgen ( method , setter , js_name = ref ) ]
     pub fn set_ref_(this: &ChildProcess, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "1. close"]
-    #[doc = "2. disconnect"]
-    #[doc = "3. error"]
-    #[doc = "4. exit"]
-    #[doc = "5. message"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &ChildProcess, event: &str, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &ChildProcess, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "1. close"]
-    #[doc = "2. disconnect"]
-    #[doc = "3. error"]
-    #[doc = "4. exit"]
-    #[doc = "5. message"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener2(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener2(this: &ChildProcess, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "1. close"]
-    #[doc = "2. disconnect"]
-    #[doc = "3. error"]
-    #[doc = "4. exit"]
-    #[doc = "5. message"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener3(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener3(this: &ChildProcess, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "1. close"]
-    #[doc = "2. disconnect"]
-    #[doc = "3. error"]
-    #[doc = "4. exit"]
-    #[doc = "5. message"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener4(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener4(this: &ChildProcess, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "1. close"]
-    #[doc = "2. disconnect"]
-    #[doc = "3. error"]
-    #[doc = "4. exit"]
-    #[doc = "5. message"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener5(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener5(this: &ChildProcess, value: &Function);
-    #[doc = "events.EventEmitter"]
-    #[doc = "1. close"]
-    #[doc = "2. disconnect"]
-    #[doc = "3. error"]
-    #[doc = "4. exit"]
-    #[doc = "5. message"]
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener6(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
