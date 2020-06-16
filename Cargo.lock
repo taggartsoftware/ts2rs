@@ -82,6 +82,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "node-server-hello-world"
+version = "0.1.0"
+dependencies = [
+ "js-sys",
+ "node",
+ "wasm-bindgen",
+]
+
+[[package]]
 name = "proc-macro2"
 version = "1.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"

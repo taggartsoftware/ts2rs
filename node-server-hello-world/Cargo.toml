@@ -1,0 +1,13 @@
+[package]
+name = "node-server-hello-world"
+version = "0.1.0"
+authors = ["Taggart Software LLC <support@ctaggart.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+node = { path = "../node" }
+wasm-bindgen = { git = "https://github.com/rustwasm/wasm-bindgen" }
+js-sys = { git = "https://github.com/rustwasm/wasm-bindgen" }

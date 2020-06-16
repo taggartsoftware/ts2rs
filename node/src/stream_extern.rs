@@ -23,11 +23,11 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = objectMode ) ]
     pub fn set_object_mode(this: &ReadableOptions, value: Option<bool>);
     #[wasm_bindgen(method)]
-    pub fn read(this: &ReadableOptions, this: &Readable, size: f64);
+    pub fn read(this: &ReadableOptions, this_: &Readable, size: f64);
     #[wasm_bindgen(method, setter)]
     pub fn set_read(this: &ReadableOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn destroy(this: &ReadableOptions, this: &Readable, error: &JsValue, callback: &JsValue);
+    pub fn destroy(this: &ReadableOptions, this_: &Readable, error: &JsValue, callback: &JsValue);
     #[wasm_bindgen(method, setter)]
     pub fn set_destroy(this: &ReadableOptions, value: Option<&Function>);
     # [ wasm_bindgen ( method , getter , js_name = autoDestroy ) ]
@@ -305,7 +305,7 @@ extern "C" {
     #[wasm_bindgen(method)]
     pub fn write(
         this: &WritableOptions,
-        this: &Writable,
+        this_: &Writable,
         chunk: &JsValue,
         encoding: &str,
         callback: &JsValue,
@@ -313,15 +313,15 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_write(this: &WritableOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn writev(this: &WritableOptions, this: &Writable, chunks: &Array, callback: &JsValue);
+    pub fn writev(this: &WritableOptions, this_: &Writable, chunks: &Array, callback: &JsValue);
     #[wasm_bindgen(method, setter)]
     pub fn set_writev(this: &WritableOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn destroy(this: &WritableOptions, this: &Writable, error: &JsValue, callback: &JsValue);
+    pub fn destroy(this: &WritableOptions, this_: &Writable, error: &JsValue, callback: &JsValue);
     #[wasm_bindgen(method, setter)]
     pub fn set_destroy(this: &WritableOptions, value: Option<&Function>);
     # [ wasm_bindgen ( method , js_name = final ) ]
-    pub fn final_(this: &WritableOptions, this: &Writable, callback: &JsValue);
+    pub fn final_(this: &WritableOptions, this_: &Writable, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = final ) ]
     pub fn set_final_(this: &WritableOptions, value: Option<&Function>);
     # [ wasm_bindgen ( method , getter , js_name = autoDestroy ) ]
@@ -623,13 +623,13 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = writableHighWaterMark ) ]
     pub fn set_writable_high_water_mark(this: &DuplexOptions, value: Option<f64>);
     #[wasm_bindgen(method)]
-    pub fn read(this: &DuplexOptions, this: &Duplex, size: f64);
+    pub fn read(this: &DuplexOptions, this_: &Duplex, size: f64);
     #[wasm_bindgen(method, setter)]
     pub fn set_read(this: &DuplexOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
     pub fn write(
         this: &DuplexOptions,
-        this: &Duplex,
+        this_: &Duplex,
         chunk: &JsValue,
         encoding: &str,
         callback: &JsValue,
@@ -637,15 +637,15 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_write(this: &DuplexOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn writev(this: &DuplexOptions, this: &Duplex, chunks: &Array, callback: &JsValue);
+    pub fn writev(this: &DuplexOptions, this_: &Duplex, chunks: &Array, callback: &JsValue);
     #[wasm_bindgen(method, setter)]
     pub fn set_writev(this: &DuplexOptions, value: Option<&Function>);
     # [ wasm_bindgen ( method , js_name = final ) ]
-    pub fn final_(this: &DuplexOptions, this: &Duplex, callback: &JsValue);
+    pub fn final_(this: &DuplexOptions, this_: &Duplex, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = final ) ]
     pub fn set_final_(this: &DuplexOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn destroy(this: &DuplexOptions, this: &Duplex, error: &JsValue, callback: &JsValue);
+    pub fn destroy(this: &DuplexOptions, this_: &Duplex, error: &JsValue, callback: &JsValue);
     #[wasm_bindgen(method, setter)]
     pub fn set_destroy(this: &DuplexOptions, value: Option<&Function>);
     pub type Duplex;
@@ -714,13 +714,13 @@ extern "C" {
     pub type TransformCallback;
     pub type TransformOptions;
     #[wasm_bindgen(method)]
-    pub fn read(this: &TransformOptions, this: &Transform, size: f64);
+    pub fn read(this: &TransformOptions, this_: &Transform, size: f64);
     #[wasm_bindgen(method, setter)]
     pub fn set_read(this: &TransformOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
     pub fn write(
         this: &TransformOptions,
-        this: &Transform,
+        this_: &Transform,
         chunk: &JsValue,
         encoding: &str,
         callback: &JsValue,
@@ -728,21 +728,21 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_write(this: &TransformOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn writev(this: &TransformOptions, this: &Transform, chunks: &Array, callback: &JsValue);
+    pub fn writev(this: &TransformOptions, this_: &Transform, chunks: &Array, callback: &JsValue);
     #[wasm_bindgen(method, setter)]
     pub fn set_writev(this: &TransformOptions, value: Option<&Function>);
     # [ wasm_bindgen ( method , js_name = final ) ]
-    pub fn final_(this: &TransformOptions, this: &Transform, callback: &JsValue);
+    pub fn final_(this: &TransformOptions, this_: &Transform, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = final ) ]
     pub fn set_final_(this: &TransformOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn destroy(this: &TransformOptions, this: &Transform, error: &JsValue, callback: &JsValue);
+    pub fn destroy(this: &TransformOptions, this_: &Transform, error: &JsValue, callback: &JsValue);
     #[wasm_bindgen(method, setter)]
     pub fn set_destroy(this: &TransformOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
     pub fn transform(
         this: &TransformOptions,
-        this: &Transform,
+        this_: &Transform,
         chunk: &JsValue,
         encoding: &str,
         callback: &TransformCallback,
@@ -750,7 +750,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_transform(this: &TransformOptions, value: Option<&Function>);
     #[wasm_bindgen(method)]
-    pub fn flush(this: &TransformOptions, this: &Transform, callback: &TransformCallback);
+    pub fn flush(this: &TransformOptions, this_: &Transform, callback: &TransformCallback);
     #[wasm_bindgen(method, setter)]
     pub fn set_flush(this: &TransformOptions, value: Option<&Function>);
     pub type Transform;

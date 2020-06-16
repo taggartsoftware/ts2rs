@@ -1,13 +1,13 @@
 {
   "name": "node-console-hello-world",
   "version": "0.1.0",
-  "description": "node_console_hello_world Node.js hello world example",
+  "description": "Node.js console hello world example",
   "main": "main.js",
   "dependencies": {},
   "devDependencies": {},
   "author": "Taggart Software LLC",
   "license": "MIT",
-  "homepage": "https://node_console_hello_world.ctaggart.com",
+  "homepage": "https://ts2rs.ctaggart.com",
   "files": [
     "pgk/node_console_hello_world_bg.wasm",
     "pkg/node_console_hello_world.js",

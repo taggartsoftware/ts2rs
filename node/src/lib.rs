@@ -13,6 +13,7 @@ type Uint8Array = js_sys::Uint8Array;
 extern "C" {
     pub type AsyncIterableIterator; // TODO How about AsyncIterator?
     pub type MapConstructor;
+    pub type Readable;
     pub type SetConstructor;
     pub type WeakMapConstructor;
     pub type WeakSetConstructor;
@@ -39,45 +40,54 @@ pub mod node_js {
 include!("process_global_NodeJS_extern.rs");
 // include!("process_global_NodeJS_help.rs");
 
-// mod http {
-//     use js_sys::{Array, Date, Function, Object, Promise};
-//     use wasm_bindgen::{prelude::*, JsCast};
-//     type Socket = crate::net::Socket;
-//     include!("http_extern.rs");
-//     include!("http_help.rs");
-// }
+pub mod http {
+    use crate::*;
+    include!("http_extern.rs");
+    pub type RequestListener = Closure<dyn FnMut(IncomingMessage, ServerResponse)>;
+    // include!("http_help.rs");
+    impl AsRef<OutgoingMessage> for ServerResponse {
+        fn as_ref(&self) -> &OutgoingMessage {
+            self.unchecked_ref()
+        }
+    }
+    impl AsRef<crate::stream::Writable> for ServerResponse {
+        fn as_ref(&self) -> &crate::stream::Writable {
+            self.unchecked_ref()
+        }
+    }
+    impl ServerResponse {
+        pub fn as_outgoing_message(&self) -> &OutgoingMessage {
+            self.unchecked_ref()
+        }
+    }
+    impl ServerResponse {
+        pub fn as_stream_writable(&self) -> &crate::stream::Writable {
+            self.unchecked_ref()
+        }
+    }
+    impl Server {
+        pub fn as_net_server(&self) -> &crate::net::Server {
+            self.unchecked_ref()
+        }
+    }
+}
+
+pub mod net {
+    use crate::*;
+    include!("net_extern.rs");
+    // include!("net_help.rs");
+}
+
+pub mod stream {
+    use crate::*;
+    include!("stream_extern.rs");
+    // include!("stream_help.rs");
+}
 
 // pub mod events {
-//     use js_sys::{Array, Function, Object, Uint8Array};
-//     use wasm_bindgen::{prelude::*, JsCast};
 //     include!("events_extern.rs");
 //     // include!("events_help.rs");
 // }
 
-// pub mod net {
-//     use js_sys::{Array, Function, Object, Uint8Array};
-//     use wasm_bindgen::{prelude::*, JsCast};
-//     type Buffer = crate::globals::Buffer;
-//     type Error = crate::globals::Error;
-//     include!("net_extern.rs");
-//     // include!("net_help.rs");
-// }
-
 // pub mod process {
-//     pub mod global {
-//         pub mod nodejs {
-//             use js_sys::{Object};
-//             use wasm_bindgen::{prelude::*, JsCast};
-//             use crate::globals::nodejs::{EventEmitter, ReadableStream, WritableStream};
-//             #[wasm_bindgen(module = "NodeJS")]
-//             extern "C" {
-//                 pub type Duplex; // TODO crate::stream::Duplex
-//                 pub type Socket; // TODO
-//                 pub type Readable; // TODO stream
-//                 pub type Streamm; // TODO stream
-//             }
-//             include!("process_global_NodeJS_extern.rs");
-//             // include!("process_global_NodeJS_help.rs");
-//         }
-//     }
 // }

@@ -281,9 +281,9 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn timeout(this: &ClientRequestArgs) -> Option<f64>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_timeout(this: &ClientRequestArgs, value: Option<f64>);
+    pub fn set_timeout2(this: &ClientRequestArgs, value: Option<f64>);
     # [ wasm_bindgen ( method , getter , js_name = setHost ) ]
-    pub fn set_host(this: &ClientRequestArgs) -> Option<bool>;
+    pub fn set_host2(this: &ClientRequestArgs) -> Option<bool>;
     # [ wasm_bindgen ( method , setter , js_name = setHost ) ]
     pub fn set_set_host(this: &ClientRequestArgs, value: Option<bool>);
     # [ wasm_bindgen ( method , getter , js_name = createConnection ) ]
@@ -299,14 +299,14 @@ extern "C" {
     pub fn server_response(this: &ServerOptions) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = ServerResponse ) ]
     pub fn set_server_response(this: &ServerOptions, value: &JsValue);
-    pub type RequestListener;
+    // pub type RequestListener;
     pub type Server;
     #[wasm_bindgen(constructor)]
-    pub fn new_server(request_listener: Option<&RequestListener>) -> Server;
+    pub fn new_server(request_listener: &RequestListener) -> Server;
     #[wasm_bindgen(constructor)]
     pub fn new_server2(
         options: &ServerOptions,
-        request_listener: Option<&RequestListener>,
+        request_listener: &RequestListener,
     ) -> Server;
     # [ wasm_bindgen ( method , js_name = setTimeout ) ]
     pub fn set_timeout(this: &Server, msecs: Option<f64>, callback: &JsValue) -> Server;
@@ -324,7 +324,7 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn timeout(this: &Server) -> f64;
     #[wasm_bindgen(method, setter)]
-    pub fn set_timeout(this: &Server, value: f64);
+    pub fn set_timeout3(this: &Server, value: f64);
     #[doc = "Limit the amount of time the parser will wait to receive the complete HTTP headers."]
     # [ wasm_bindgen ( method , getter , js_name = headersTimeout ) ]
     pub fn headers_timeout(this: &Server) -> f64;
@@ -508,7 +508,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = onSocket ) ]
     pub fn set_on_socket(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = setTimeout ) ]
-    pub fn set_timeout(this: &ClientRequest, timeout: f64, callback: &JsValue) -> ClientRequest;
+    pub fn set_timeout2(this: &ClientRequest, timeout: f64, callback: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = setTimeout ) ]
     pub fn set_set_timeout(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = setNoDelay ) ]
@@ -1124,11 +1124,11 @@ extern "C" {
     pub static METHODS: Array;
     pub static STATUS_CODES: JsValue;
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server(request_listener: Option<&RequestListener>) -> Server;
+    pub fn create_server(request_listener: &RequestListener) -> Server;
     # [ wasm_bindgen ( js_name = createServer ) ]
     pub fn create_server2(
         options: &ServerOptions,
-        request_listener: Option<&RequestListener>,
+        request_listener: &RequestListener,
     ) -> Server;
     pub type RequestOptions;
     #[wasm_bindgen()]
