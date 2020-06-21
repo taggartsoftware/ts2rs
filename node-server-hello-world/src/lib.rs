@@ -4,7 +4,7 @@ use node::http::{create_server, IncomingMessage, RequestListener, ServerResponse
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-pub fn run(argv: &Array) {
+pub fn run(_argv: &Array) {
     // based on https://nodejs.org/en/docs/guides/getting-started-guide/
 
     let hostname = "127.0.0.1";

@@ -35,45 +35,45 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
+    pub fn add_listener_2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &WriteStream, value: &Function);
+    pub fn set_add_listener_2(this: &WriteStream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &WriteStream, event: &JsValue, args: &Array) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &WriteStream, event: &JsValue) -> bool;
+    pub fn emit_2(this: &WriteStream, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &WriteStream, value: &Function);
+    pub fn set_emit_2(this: &WriteStream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &WriteStream, event: &str, listener: &JsValue) -> WriteStream;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
+    pub fn on_2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &WriteStream, value: &Function);
+    pub fn set_on_2(this: &WriteStream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &WriteStream, event: &str, listener: &JsValue) -> WriteStream;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
+    pub fn once_2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &WriteStream, value: &Function);
+    pub fn set_once_2(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &WriteStream, event: &str, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &WriteStream,
         event: &JsValue,
         listener: &JsValue,
     ) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &WriteStream, value: &Function);
+    pub fn set_prepend_listener_2(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &WriteStream,
@@ -83,13 +83,13 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &WriteStream,
         event: &JsValue,
         listener: &JsValue,
     ) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &WriteStream, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = clearLine ) ]
     pub fn clear_line(this: &WriteStream, dir: &Direction, callback: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = clearLine ) ]
@@ -103,9 +103,9 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = cursorTo ) ]
     pub fn set_cursor_to(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = cursorTo ) ]
-    pub fn cursor_to2(this: &WriteStream, x: f64, callback: &JsValue) -> bool;
+    pub fn cursor_to_2(this: &WriteStream, x: f64, callback: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = cursorTo ) ]
-    pub fn set_cursor_to2(this: &WriteStream, value: &Function);
+    pub fn set_cursor_to_2(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = moveCursor ) ]
     pub fn move_cursor(this: &WriteStream, dx: f64, dy: f64, callback: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = moveCursor ) ]
@@ -119,13 +119,13 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = hasColors ) ]
     pub fn set_has_colors(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = hasColors ) ]
-    pub fn has_colors2(this: &WriteStream, env: &JsValue) -> bool;
+    pub fn has_colors_2(this: &WriteStream, env: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = hasColors ) ]
-    pub fn set_has_colors2(this: &WriteStream, value: &Function);
+    pub fn set_has_colors_2(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = hasColors ) ]
-    pub fn has_colors3(this: &WriteStream, depth: f64, env: &JsValue) -> bool;
+    pub fn has_colors_3(this: &WriteStream, depth: f64, env: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = hasColors ) ]
-    pub fn set_has_colors3(this: &WriteStream, value: &Function);
+    pub fn set_has_colors_3(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = getWindowSize ) ]
     pub fn get_window_size(this: &WriteStream) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = getWindowSize ) ]

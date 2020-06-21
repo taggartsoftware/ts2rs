@@ -114,19 +114,19 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn parse(url_str: &str) -> UrlWithStringQuery;
     # [ wasm_bindgen ( js_name = parse ) ]
-    pub fn parse2(
+    pub fn parse_2(
         url_str: &str,
         parse_query_string: &JsValue,
         slashes_denote_host: Option<bool>,
     ) -> UrlWithStringQuery;
     # [ wasm_bindgen ( js_name = parse ) ]
-    pub fn parse3(
+    pub fn parse_3(
         url_str: &str,
         parse_query_string: &JsValue,
         slashes_denote_host: Option<bool>,
     ) -> UrlWithParsedQuery;
     # [ wasm_bindgen ( js_name = parse ) ]
-    pub fn parse4(
+    pub fn parse_4(
         url_str: &str,
         parse_query_string: bool,
         slashes_denote_host: Option<bool>,
@@ -134,7 +134,7 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn format(url: &URL, options: Option<&URLFormatOptions>) -> String;
     # [ wasm_bindgen ( js_name = format ) ]
-    pub fn format2(url_object: &JsValue) -> String;
+    pub fn format_2(url_object: &JsValue) -> String;
     #[wasm_bindgen()]
     pub fn resolve(from: &str, to: &str) -> String;
     # [ wasm_bindgen ( js_name = domainToASCII ) ]

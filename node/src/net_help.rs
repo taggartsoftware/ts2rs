@@ -106,16 +106,6 @@ impl From<Server> for node_js::EventEmitter {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for Socket {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Socket> for EventEmitter {
-    fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for Socket {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -142,36 +132,6 @@ impl AsRef<node_js::WritableStream> for Socket {
     }
 }
 impl From<Socket> for node_js::WritableStream {
-    fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Readable> for Socket {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Socket> for Readable {
-    fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Socket {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Socket> for Stream {
-    fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Socket {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Socket> for Writable {
     fn from(child: Socket) -> Self {
         JsCast::unchecked_into(child)
     }

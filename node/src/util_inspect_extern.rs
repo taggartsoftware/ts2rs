@@ -8,10 +8,10 @@ extern "C" {
     #[wasm_bindgen(js_name = "styles")]
     pub static STYLES: JsValue;
     #[wasm_bindgen(js_name = "defaultOptions")]
-    pub static DEFAULT_OPTIONS: util::InspectOptions;
+    pub static DEFAULT_OPTIONS: InspectOptions;
     #[wasm_bindgen(js_name = "replDefaults")]
     #[doc = "Allows changing inspect settings from the repl."]
-    pub static REPL_DEFAULTS: util::InspectOptions;
+    pub static REPL_DEFAULTS: InspectOptions;
     #[wasm_bindgen(js_name = "custom")]
     pub static CUSTOM: JsValue;
 }

@@ -71,26 +71,6 @@ impl ZlibReset {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<Duplex> for BrotliCompress {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<BrotliCompress> for Duplex {
-    fn from(child: BrotliCompress) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for BrotliCompress {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<BrotliCompress> for EventEmitter {
-    fn from(child: BrotliCompress) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for BrotliCompress {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -121,36 +101,6 @@ impl From<BrotliCompress> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for BrotliCompress {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<BrotliCompress> for Readable {
-    fn from(child: BrotliCompress) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for BrotliCompress {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<BrotliCompress> for Stream {
-    fn from(child: BrotliCompress) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for BrotliCompress {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<BrotliCompress> for Writable {
-    fn from(child: BrotliCompress) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Zlib> for BrotliCompress {
     fn as_ref(&self) -> &Zlib {
         JsCast::unchecked_ref(self)
@@ -158,26 +108,6 @@ impl AsRef<Zlib> for BrotliCompress {
 }
 impl From<BrotliCompress> for Zlib {
     fn from(child: BrotliCompress) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for BrotliDecompress {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<BrotliDecompress> for Duplex {
-    fn from(child: BrotliDecompress) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for BrotliDecompress {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<BrotliDecompress> for EventEmitter {
-    fn from(child: BrotliDecompress) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -211,36 +141,6 @@ impl From<BrotliDecompress> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for BrotliDecompress {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<BrotliDecompress> for Readable {
-    fn from(child: BrotliDecompress) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for BrotliDecompress {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<BrotliDecompress> for Stream {
-    fn from(child: BrotliDecompress) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for BrotliDecompress {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<BrotliDecompress> for Writable {
-    fn from(child: BrotliDecompress) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Zlib> for BrotliDecompress {
     fn as_ref(&self) -> &Zlib {
         JsCast::unchecked_ref(self)
@@ -248,26 +148,6 @@ impl AsRef<Zlib> for BrotliDecompress {
 }
 impl From<BrotliDecompress> for Zlib {
     fn from(child: BrotliDecompress) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for Deflate {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Deflate> for Duplex {
-    fn from(child: Deflate) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Deflate {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Deflate> for EventEmitter {
-    fn from(child: Deflate) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -297,36 +177,6 @@ impl AsRef<node_js::WritableStream> for Deflate {
     }
 }
 impl From<Deflate> for node_js::WritableStream {
-    fn from(child: Deflate) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Readable> for Deflate {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Deflate> for Readable {
-    fn from(child: Deflate) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Deflate {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Deflate> for Stream {
-    fn from(child: Deflate) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Deflate {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Deflate> for Writable {
     fn from(child: Deflate) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -361,26 +211,6 @@ impl From<Deflate> for ZlibReset {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Duplex> for DeflateRaw {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DeflateRaw> for Duplex {
-    fn from(child: DeflateRaw) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for DeflateRaw {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DeflateRaw> for EventEmitter {
-    fn from(child: DeflateRaw) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for DeflateRaw {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -407,36 +237,6 @@ impl AsRef<node_js::WritableStream> for DeflateRaw {
     }
 }
 impl From<DeflateRaw> for node_js::WritableStream {
-    fn from(child: DeflateRaw) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Readable> for DeflateRaw {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DeflateRaw> for Readable {
-    fn from(child: DeflateRaw) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for DeflateRaw {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DeflateRaw> for Stream {
-    fn from(child: DeflateRaw) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for DeflateRaw {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DeflateRaw> for Writable {
     fn from(child: DeflateRaw) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -471,26 +271,6 @@ impl From<DeflateRaw> for ZlibReset {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Duplex> for Gunzip {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Gunzip> for Duplex {
-    fn from(child: Gunzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Gunzip {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Gunzip> for EventEmitter {
-    fn from(child: Gunzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for Gunzip {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -521,36 +301,6 @@ impl From<Gunzip> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for Gunzip {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Gunzip> for Readable {
-    fn from(child: Gunzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Gunzip {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Gunzip> for Stream {
-    fn from(child: Gunzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Gunzip {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Gunzip> for Writable {
-    fn from(child: Gunzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Zlib> for Gunzip {
     fn as_ref(&self) -> &Zlib {
         JsCast::unchecked_ref(self)
@@ -558,26 +308,6 @@ impl AsRef<Zlib> for Gunzip {
 }
 impl From<Gunzip> for Zlib {
     fn from(child: Gunzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for Gzip {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Gzip> for Duplex {
-    fn from(child: Gzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Gzip {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Gzip> for EventEmitter {
-    fn from(child: Gzip) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -611,36 +341,6 @@ impl From<Gzip> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for Gzip {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Gzip> for Readable {
-    fn from(child: Gzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Gzip {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Gzip> for Stream {
-    fn from(child: Gzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Gzip {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Gzip> for Writable {
-    fn from(child: Gzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Zlib> for Gzip {
     fn as_ref(&self) -> &Zlib {
         JsCast::unchecked_ref(self)
@@ -648,26 +348,6 @@ impl AsRef<Zlib> for Gzip {
 }
 impl From<Gzip> for Zlib {
     fn from(child: Gzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for Inflate {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Inflate> for Duplex {
-    fn from(child: Inflate) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Inflate {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Inflate> for EventEmitter {
-    fn from(child: Inflate) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -701,36 +381,6 @@ impl From<Inflate> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for Inflate {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Inflate> for Readable {
-    fn from(child: Inflate) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Inflate {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Inflate> for Stream {
-    fn from(child: Inflate) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Inflate {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Inflate> for Writable {
-    fn from(child: Inflate) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Zlib> for Inflate {
     fn as_ref(&self) -> &Zlib {
         JsCast::unchecked_ref(self)
@@ -748,26 +398,6 @@ impl AsRef<ZlibReset> for Inflate {
 }
 impl From<Inflate> for ZlibReset {
     fn from(child: Inflate) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for InflateRaw {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<InflateRaw> for Duplex {
-    fn from(child: InflateRaw) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for InflateRaw {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<InflateRaw> for EventEmitter {
-    fn from(child: InflateRaw) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -801,36 +431,6 @@ impl From<InflateRaw> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for InflateRaw {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<InflateRaw> for Readable {
-    fn from(child: InflateRaw) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for InflateRaw {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<InflateRaw> for Stream {
-    fn from(child: InflateRaw) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for InflateRaw {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<InflateRaw> for Writable {
-    fn from(child: InflateRaw) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<Zlib> for InflateRaw {
     fn as_ref(&self) -> &Zlib {
         JsCast::unchecked_ref(self)
@@ -848,26 +448,6 @@ impl AsRef<ZlibReset> for InflateRaw {
 }
 impl From<InflateRaw> for ZlibReset {
     fn from(child: InflateRaw) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for Unzip {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Unzip> for Duplex {
-    fn from(child: Unzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Unzip {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Unzip> for EventEmitter {
-    fn from(child: Unzip) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -897,36 +477,6 @@ impl AsRef<node_js::WritableStream> for Unzip {
     }
 }
 impl From<Unzip> for node_js::WritableStream {
-    fn from(child: Unzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Readable> for Unzip {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Unzip> for Readable {
-    fn from(child: Unzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Unzip {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Unzip> for Stream {
-    fn from(child: Unzip) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Unzip {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Unzip> for Writable {
     fn from(child: Unzip) -> Self {
         JsCast::unchecked_into(child)
     }

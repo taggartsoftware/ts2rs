@@ -22,7 +22,7 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn once(emitter: &NodeEventTarget, event: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = once ) ]
-    pub fn once2(emitter: &DOMEventTarget, event: &str) -> Promise;
+    pub fn once_2(emitter: &DOMEventTarget, event: &str) -> Promise;
     pub type EventEmitter;
     # [ wasm_bindgen ( method , js_name = listenerCount ) ]
     pub fn listener_count(this: &EventEmitter, emitter: &EventEmitter, event: &JsValue) -> f64;
@@ -101,7 +101,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = eventNames ) ]
     pub fn set_event_names(this: &EventEmitter, value: &Function);
     # [ wasm_bindgen ( method , js_name = listenerCount ) ]
-    pub fn listener_count2(this: &EventEmitter, type_: &JsValue) -> f64;
+    pub fn listener_count_2(this: &EventEmitter, type_: &JsValue) -> f64;
     # [ wasm_bindgen ( method , setter , js_name = listenerCount ) ]
-    pub fn set_listener_count2(this: &EventEmitter, value: &Function);
+    pub fn set_listener_count_2(this: &EventEmitter, value: &Function);
 }

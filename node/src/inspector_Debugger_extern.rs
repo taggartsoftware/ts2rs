@@ -11,9 +11,9 @@ extern "C" {
     pub type Location;
     #[doc = "Script identifier as reported in the <code>Debugger.scriptParsed</code>."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &Location) -> inspector::runtime::ScriptId;
+    pub fn script_id(this: &Location) -> runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(this: &Location, value: inspector::runtime::ScriptIdRef);
+    pub fn set_script_id(this: &Location, value: runtime::ScriptIdRef);
     #[doc = "Line number in the script (0-based)."]
     # [ wasm_bindgen ( method , getter , js_name = lineNumber ) ]
     pub fn line_number(this: &Location) -> f64;
@@ -38,9 +38,9 @@ extern "C" {
     pub type CallFrame;
     #[doc = "Call frame identifier. This identifier is only valid while the virtual machine is paused."]
     # [ wasm_bindgen ( method , getter , js_name = callFrameId ) ]
-    pub fn call_frame_id(this: &CallFrame) -> inspector::debugger::CallFrameId;
+    pub fn call_frame_id(this: &CallFrame) -> debugger::CallFrameId;
     # [ wasm_bindgen ( method , setter , js_name = callFrameId ) ]
-    pub fn set_call_frame_id(this: &CallFrame, value: inspector::debugger::CallFrameIdRef);
+    pub fn set_call_frame_id(this: &CallFrame, value: debugger::CallFrameIdRef);
     #[doc = "Name of the JavaScript function called on this call frame."]
     # [ wasm_bindgen ( method , getter , js_name = functionName ) ]
     pub fn function_name(this: &CallFrame) -> String;
@@ -48,14 +48,14 @@ extern "C" {
     pub fn set_function_name(this: &CallFrame, value: &str);
     #[doc = "Location in the source code."]
     # [ wasm_bindgen ( method , getter , js_name = functionLocation ) ]
-    pub fn function_location(this: &CallFrame) -> Option<inspector::debugger::Location>;
+    pub fn function_location(this: &CallFrame) -> Option<debugger::Location>;
     # [ wasm_bindgen ( method , setter , js_name = functionLocation ) ]
-    pub fn set_function_location(this: &CallFrame, value: Option<&inspector::debugger::Location>);
+    pub fn set_function_location(this: &CallFrame, value: Option<&debugger::Location>);
     #[doc = "Location in the source code."]
     #[wasm_bindgen(method, getter)]
-    pub fn location(this: &CallFrame) -> inspector::debugger::Location;
+    pub fn location(this: &CallFrame) -> debugger::Location;
     #[wasm_bindgen(method, setter)]
-    pub fn set_location(this: &CallFrame, value: &inspector::debugger::Location);
+    pub fn set_location(this: &CallFrame, value: &debugger::Location);
     #[doc = "JavaScript script name or url."]
     #[wasm_bindgen(method, getter)]
     pub fn url(this: &CallFrame) -> String;
@@ -67,15 +67,15 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = scopeChain ) ]
     pub fn set_scope_chain(this: &CallFrame, value: &Array);
     #[doc = "<code>this</code> object for this call frame."]
-    #[wasm_bindgen(method, getter)]
-    pub fn this(this: &CallFrame) -> inspector::runtime::RemoteObject;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_this(this: &CallFrame, value: &inspector::runtime::RemoteObject);
+    # [ wasm_bindgen ( method , getter , js_name = this ) ]
+    pub fn this_(this: &CallFrame) -> runtime::RemoteObject;
+    # [ wasm_bindgen ( method , setter , js_name = this ) ]
+    pub fn set_this_(this: &CallFrame, value: &runtime::RemoteObject);
     #[doc = "The value being returned, if the function is at return point."]
     # [ wasm_bindgen ( method , getter , js_name = returnValue ) ]
-    pub fn return_value(this: &CallFrame) -> Option<inspector::runtime::RemoteObject>;
+    pub fn return_value(this: &CallFrame) -> Option<runtime::RemoteObject>;
     # [ wasm_bindgen ( method , setter , js_name = returnValue ) ]
-    pub fn set_return_value(this: &CallFrame, value: Option<&inspector::runtime::RemoteObject>);
+    pub fn set_return_value(this: &CallFrame, value: Option<&runtime::RemoteObject>);
     #[doc = "Scope description."]
     pub type Scope;
     #[doc = "Scope type."]
@@ -85,23 +85,23 @@ extern "C" {
     pub fn set_type_(this: &Scope, value: &str);
     #[doc = "Object representing the scope. For <code>global</code> and <code>with</code> scopes it represents the actual object; for the rest of the scopes, it is artificial transient object enumerating scope variables as its properties."]
     #[wasm_bindgen(method, getter)]
-    pub fn object(this: &Scope) -> inspector::runtime::RemoteObject;
+    pub fn object(this: &Scope) -> runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_object(this: &Scope, value: &inspector::runtime::RemoteObject);
+    pub fn set_object(this: &Scope, value: &runtime::RemoteObject);
     #[wasm_bindgen(method, getter)]
     pub fn name(this: &Scope) -> Option<String>;
     #[wasm_bindgen(method, setter)]
     pub fn set_name(this: &Scope, value: Option<&str>);
     #[doc = "Location in the source code where scope starts"]
     # [ wasm_bindgen ( method , getter , js_name = startLocation ) ]
-    pub fn start_location(this: &Scope) -> Option<inspector::debugger::Location>;
+    pub fn start_location(this: &Scope) -> Option<debugger::Location>;
     # [ wasm_bindgen ( method , setter , js_name = startLocation ) ]
-    pub fn set_start_location(this: &Scope, value: Option<&inspector::debugger::Location>);
+    pub fn set_start_location(this: &Scope, value: Option<&debugger::Location>);
     #[doc = "Location in the source code where scope ends"]
     # [ wasm_bindgen ( method , getter , js_name = endLocation ) ]
-    pub fn end_location(this: &Scope) -> Option<inspector::debugger::Location>;
+    pub fn end_location(this: &Scope) -> Option<debugger::Location>;
     # [ wasm_bindgen ( method , setter , js_name = endLocation ) ]
-    pub fn set_end_location(this: &Scope, value: Option<&inspector::debugger::Location>);
+    pub fn set_end_location(this: &Scope, value: Option<&debugger::Location>);
     #[doc = "Search match for resource."]
     pub type SearchMatch;
     #[doc = "Line number in resource content."]
@@ -117,9 +117,9 @@ extern "C" {
     pub type BreakLocation;
     #[doc = "Script identifier as reported in the <code>Debugger.scriptParsed</code>."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &BreakLocation) -> inspector::runtime::ScriptId;
+    pub fn script_id(this: &BreakLocation) -> runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(this: &BreakLocation, value: inspector::runtime::ScriptIdRef);
+    pub fn set_script_id(this: &BreakLocation, value: runtime::ScriptIdRef);
     #[doc = "Line number in the script (0-based)."]
     # [ wasm_bindgen ( method , getter , js_name = lineNumber ) ]
     pub fn line_number(this: &BreakLocation) -> f64;
@@ -180,9 +180,9 @@ extern "C" {
     pub type SetBreakpointParameterType;
     #[doc = "Location to set breakpoint in."]
     #[wasm_bindgen(method, getter)]
-    pub fn location(this: &SetBreakpointParameterType) -> inspector::debugger::Location;
+    pub fn location(this: &SetBreakpointParameterType) -> debugger::Location;
     #[wasm_bindgen(method, setter)]
-    pub fn set_location(this: &SetBreakpointParameterType, value: &inspector::debugger::Location);
+    pub fn set_location(this: &SetBreakpointParameterType, value: &debugger::Location);
     #[doc = "Expression to use as a breakpoint condition. When specified, debugger will only stop on the breakpoint if this expression evaluates to true."]
     #[wasm_bindgen(method, getter)]
     pub fn condition(this: &SetBreakpointParameterType) -> Option<String>;
@@ -190,31 +190,23 @@ extern "C" {
     pub fn set_condition(this: &SetBreakpointParameterType, value: Option<&str>);
     pub type RemoveBreakpointParameterType;
     # [ wasm_bindgen ( method , getter , js_name = breakpointId ) ]
-    pub fn breakpoint_id(this: &RemoveBreakpointParameterType)
-    -> inspector::debugger::BreakpointId;
+    pub fn breakpoint_id(this: &RemoveBreakpointParameterType) -> debugger::BreakpointId;
     # [ wasm_bindgen ( method , setter , js_name = breakpointId ) ]
     pub fn set_breakpoint_id(
         this: &RemoveBreakpointParameterType,
-        value: inspector::debugger::BreakpointIdRef,
+        value: debugger::BreakpointIdRef,
     );
     pub type GetPossibleBreakpointsParameterType;
     #[doc = "Start of range to search possible breakpoint locations in."]
     #[wasm_bindgen(method, getter)]
-    pub fn start(this: &GetPossibleBreakpointsParameterType) -> inspector::debugger::Location;
+    pub fn start(this: &GetPossibleBreakpointsParameterType) -> debugger::Location;
     #[wasm_bindgen(method, setter)]
-    pub fn set_start(
-        this: &GetPossibleBreakpointsParameterType,
-        value: &inspector::debugger::Location,
-    );
+    pub fn set_start(this: &GetPossibleBreakpointsParameterType, value: &debugger::Location);
     #[doc = "End of range to search possible breakpoint locations in (excluding). When not specified, end of scripts is used as end of range."]
     #[wasm_bindgen(method, getter)]
-    pub fn end(this: &GetPossibleBreakpointsParameterType)
-    -> Option<inspector::debugger::Location>;
+    pub fn end(this: &GetPossibleBreakpointsParameterType) -> Option<debugger::Location>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_end(
-        this: &GetPossibleBreakpointsParameterType,
-        value: Option<&inspector::debugger::Location>,
-    );
+    pub fn set_end(this: &GetPossibleBreakpointsParameterType, value: Option<&debugger::Location>);
     #[doc = "Only consider locations which are in the same (non-nested) function as start."]
     # [ wasm_bindgen ( method , getter , js_name = restrictToFunction ) ]
     pub fn restrict_to_function(this: &GetPossibleBreakpointsParameterType) -> Option<bool>;
@@ -226,12 +218,9 @@ extern "C" {
     pub type ContinueToLocationParameterType;
     #[doc = "Location to continue to."]
     #[wasm_bindgen(method, getter)]
-    pub fn location(this: &ContinueToLocationParameterType) -> inspector::debugger::Location;
+    pub fn location(this: &ContinueToLocationParameterType) -> debugger::Location;
     #[wasm_bindgen(method, setter)]
-    pub fn set_location(
-        this: &ContinueToLocationParameterType,
-        value: &inspector::debugger::Location,
-    );
+    pub fn set_location(this: &ContinueToLocationParameterType, value: &debugger::Location);
     # [ wasm_bindgen ( method , getter , js_name = targetCallFrames ) ]
     pub fn target_call_frames(this: &ContinueToLocationParameterType) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = targetCallFrames ) ]
@@ -239,13 +228,11 @@ extern "C" {
     pub type PauseOnAsyncCallParameterType;
     #[doc = "Debugger will pause when async call with given stack trace is started."]
     # [ wasm_bindgen ( method , getter , js_name = parentStackTraceId ) ]
-    pub fn parent_stack_trace_id(
-        this: &PauseOnAsyncCallParameterType,
-    ) -> inspector::runtime::StackTraceId;
+    pub fn parent_stack_trace_id(this: &PauseOnAsyncCallParameterType) -> runtime::StackTraceId;
     # [ wasm_bindgen ( method , setter , js_name = parentStackTraceId ) ]
     pub fn set_parent_stack_trace_id(
         this: &PauseOnAsyncCallParameterType,
-        value: &inspector::runtime::StackTraceId,
+        value: &runtime::StackTraceId,
     );
     pub type StepIntoParameterType;
     #[doc = "Debugger will issue additional Debugger.paused notification if any async task is scheduled before next pause."]
@@ -255,21 +242,15 @@ extern "C" {
     pub fn set_break_on_async_call(this: &StepIntoParameterType, value: Option<bool>);
     pub type GetStackTraceParameterType;
     # [ wasm_bindgen ( method , getter , js_name = stackTraceId ) ]
-    pub fn stack_trace_id(this: &GetStackTraceParameterType) -> inspector::runtime::StackTraceId;
+    pub fn stack_trace_id(this: &GetStackTraceParameterType) -> runtime::StackTraceId;
     # [ wasm_bindgen ( method , setter , js_name = stackTraceId ) ]
-    pub fn set_stack_trace_id(
-        this: &GetStackTraceParameterType,
-        value: &inspector::runtime::StackTraceId,
-    );
+    pub fn set_stack_trace_id(this: &GetStackTraceParameterType, value: &runtime::StackTraceId);
     pub type SearchInContentParameterType;
     #[doc = "Id of the script to search in."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &SearchInContentParameterType) -> inspector::runtime::ScriptId;
+    pub fn script_id(this: &SearchInContentParameterType) -> runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(
-        this: &SearchInContentParameterType,
-        value: inspector::runtime::ScriptIdRef,
-    );
+    pub fn set_script_id(this: &SearchInContentParameterType, value: runtime::ScriptIdRef);
     #[doc = "String to search for."]
     #[wasm_bindgen(method, getter)]
     pub fn query(this: &SearchInContentParameterType) -> String;
@@ -288,12 +269,9 @@ extern "C" {
     pub type SetScriptSourceParameterType;
     #[doc = "Id of the script to edit."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &SetScriptSourceParameterType) -> inspector::runtime::ScriptId;
+    pub fn script_id(this: &SetScriptSourceParameterType) -> runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(
-        this: &SetScriptSourceParameterType,
-        value: inspector::runtime::ScriptIdRef,
-    );
+    pub fn set_script_id(this: &SetScriptSourceParameterType, value: runtime::ScriptIdRef);
     #[doc = "New content of the script."]
     # [ wasm_bindgen ( method , getter , js_name = scriptSource ) ]
     pub fn script_source(this: &SetScriptSourceParameterType) -> String;
@@ -307,21 +285,15 @@ extern "C" {
     pub type RestartFrameParameterType;
     #[doc = "Call frame identifier to evaluate on."]
     # [ wasm_bindgen ( method , getter , js_name = callFrameId ) ]
-    pub fn call_frame_id(this: &RestartFrameParameterType) -> inspector::debugger::CallFrameId;
+    pub fn call_frame_id(this: &RestartFrameParameterType) -> debugger::CallFrameId;
     # [ wasm_bindgen ( method , setter , js_name = callFrameId ) ]
-    pub fn set_call_frame_id(
-        this: &RestartFrameParameterType,
-        value: inspector::debugger::CallFrameIdRef,
-    );
+    pub fn set_call_frame_id(this: &RestartFrameParameterType, value: debugger::CallFrameIdRef);
     pub type GetScriptSourceParameterType;
     #[doc = "Id of the script to get source for."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &GetScriptSourceParameterType) -> inspector::runtime::ScriptId;
+    pub fn script_id(this: &GetScriptSourceParameterType) -> runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(
-        this: &GetScriptSourceParameterType,
-        value: inspector::runtime::ScriptIdRef,
-    );
+    pub fn set_script_id(this: &GetScriptSourceParameterType, value: runtime::ScriptIdRef);
     pub type SetPauseOnExceptionsParameterType;
     #[doc = "Pause on exceptions mode."]
     #[wasm_bindgen(method, getter)]
@@ -331,13 +303,11 @@ extern "C" {
     pub type EvaluateOnCallFrameParameterType;
     #[doc = "Call frame identifier to evaluate on."]
     # [ wasm_bindgen ( method , getter , js_name = callFrameId ) ]
-    pub fn call_frame_id(
-        this: &EvaluateOnCallFrameParameterType,
-    ) -> inspector::debugger::CallFrameId;
+    pub fn call_frame_id(this: &EvaluateOnCallFrameParameterType) -> debugger::CallFrameId;
     # [ wasm_bindgen ( method , setter , js_name = callFrameId ) ]
     pub fn set_call_frame_id(
         this: &EvaluateOnCallFrameParameterType,
-        value: inspector::debugger::CallFrameIdRef,
+        value: debugger::CallFrameIdRef,
     );
     #[doc = "Expression to evaluate."]
     #[wasm_bindgen(method, getter)]
@@ -390,29 +360,20 @@ extern "C" {
     pub fn set_variable_name(this: &SetVariableValueParameterType, value: &str);
     #[doc = "New variable value."]
     # [ wasm_bindgen ( method , getter , js_name = newValue ) ]
-    pub fn new_value(this: &SetVariableValueParameterType) -> inspector::runtime::CallArgument;
+    pub fn new_value(this: &SetVariableValueParameterType) -> runtime::CallArgument;
     # [ wasm_bindgen ( method , setter , js_name = newValue ) ]
-    pub fn set_new_value(
-        this: &SetVariableValueParameterType,
-        value: &inspector::runtime::CallArgument,
-    );
+    pub fn set_new_value(this: &SetVariableValueParameterType, value: &runtime::CallArgument);
     #[doc = "Id of callframe that holds variable."]
     # [ wasm_bindgen ( method , getter , js_name = callFrameId ) ]
-    pub fn call_frame_id(this: &SetVariableValueParameterType) -> inspector::debugger::CallFrameId;
+    pub fn call_frame_id(this: &SetVariableValueParameterType) -> debugger::CallFrameId;
     # [ wasm_bindgen ( method , setter , js_name = callFrameId ) ]
-    pub fn set_call_frame_id(
-        this: &SetVariableValueParameterType,
-        value: inspector::debugger::CallFrameIdRef,
-    );
+    pub fn set_call_frame_id(this: &SetVariableValueParameterType, value: debugger::CallFrameIdRef);
     pub type SetReturnValueParameterType;
     #[doc = "New return value."]
     # [ wasm_bindgen ( method , getter , js_name = newValue ) ]
-    pub fn new_value(this: &SetReturnValueParameterType) -> inspector::runtime::CallArgument;
+    pub fn new_value(this: &SetReturnValueParameterType) -> runtime::CallArgument;
     # [ wasm_bindgen ( method , setter , js_name = newValue ) ]
-    pub fn set_new_value(
-        this: &SetReturnValueParameterType,
-        value: &inspector::runtime::CallArgument,
-    );
+    pub fn set_new_value(this: &SetReturnValueParameterType, value: &runtime::CallArgument);
     pub type SetAsyncCallStackDepthParameterType;
     #[doc = "Maximum depth of async call stacks. Setting to <code>0</code> will effectively disable collecting async call stacks (default)."]
     # [ wasm_bindgen ( method , getter , js_name = maxDepth ) ]
@@ -428,12 +389,9 @@ extern "C" {
     pub type SetBlackboxedRangesParameterType;
     #[doc = "Id of the script."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &SetBlackboxedRangesParameterType) -> inspector::runtime::ScriptId;
+    pub fn script_id(this: &SetBlackboxedRangesParameterType) -> runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(
-        this: &SetBlackboxedRangesParameterType,
-        value: inspector::runtime::ScriptIdRef,
-    );
+    pub fn set_script_id(this: &SetBlackboxedRangesParameterType, value: runtime::ScriptIdRef);
     #[wasm_bindgen(method, getter)]
     pub fn positions(this: &SetBlackboxedRangesParameterType) -> Array;
     #[wasm_bindgen(method, setter)]
@@ -441,18 +399,15 @@ extern "C" {
     pub type EnableReturnType;
     #[doc = "Unique identifier of the debugger."]
     # [ wasm_bindgen ( method , getter , js_name = debuggerId ) ]
-    pub fn debugger_id(this: &EnableReturnType) -> inspector::runtime::UniqueDebuggerId;
+    pub fn debugger_id(this: &EnableReturnType) -> runtime::UniqueDebuggerId;
     # [ wasm_bindgen ( method , setter , js_name = debuggerId ) ]
-    pub fn set_debugger_id(this: &EnableReturnType, value: inspector::runtime::UniqueDebuggerIdRef);
+    pub fn set_debugger_id(this: &EnableReturnType, value: runtime::UniqueDebuggerIdRef);
     pub type SetBreakpointByUrlReturnType;
     #[doc = "Id of the created breakpoint for further reference."]
     # [ wasm_bindgen ( method , getter , js_name = breakpointId ) ]
-    pub fn breakpoint_id(this: &SetBreakpointByUrlReturnType) -> inspector::debugger::BreakpointId;
+    pub fn breakpoint_id(this: &SetBreakpointByUrlReturnType) -> debugger::BreakpointId;
     # [ wasm_bindgen ( method , setter , js_name = breakpointId ) ]
-    pub fn set_breakpoint_id(
-        this: &SetBreakpointByUrlReturnType,
-        value: inspector::debugger::BreakpointIdRef,
-    );
+    pub fn set_breakpoint_id(this: &SetBreakpointByUrlReturnType, value: debugger::BreakpointIdRef);
     #[doc = "List of the locations this breakpoint resolved into upon addition."]
     #[wasm_bindgen(method, getter)]
     pub fn locations(this: &SetBreakpointByUrlReturnType) -> Array;
@@ -461,20 +416,14 @@ extern "C" {
     pub type SetBreakpointReturnType;
     #[doc = "Id of the created breakpoint for further reference."]
     # [ wasm_bindgen ( method , getter , js_name = breakpointId ) ]
-    pub fn breakpoint_id(this: &SetBreakpointReturnType) -> inspector::debugger::BreakpointId;
+    pub fn breakpoint_id(this: &SetBreakpointReturnType) -> debugger::BreakpointId;
     # [ wasm_bindgen ( method , setter , js_name = breakpointId ) ]
-    pub fn set_breakpoint_id(
-        this: &SetBreakpointReturnType,
-        value: inspector::debugger::BreakpointIdRef,
-    );
+    pub fn set_breakpoint_id(this: &SetBreakpointReturnType, value: debugger::BreakpointIdRef);
     #[doc = "Location this breakpoint resolved into."]
     # [ wasm_bindgen ( method , getter , js_name = actualLocation ) ]
-    pub fn actual_location(this: &SetBreakpointReturnType) -> inspector::debugger::Location;
+    pub fn actual_location(this: &SetBreakpointReturnType) -> debugger::Location;
     # [ wasm_bindgen ( method , setter , js_name = actualLocation ) ]
-    pub fn set_actual_location(
-        this: &SetBreakpointReturnType,
-        value: &inspector::debugger::Location,
-    );
+    pub fn set_actual_location(this: &SetBreakpointReturnType, value: &debugger::Location);
     pub type GetPossibleBreakpointsReturnType;
     #[doc = "List of the possible breakpoint locations."]
     #[wasm_bindgen(method, getter)]
@@ -483,9 +432,9 @@ extern "C" {
     pub fn set_locations(this: &GetPossibleBreakpointsReturnType, value: &Array);
     pub type GetStackTraceReturnType;
     # [ wasm_bindgen ( method , getter , js_name = stackTrace ) ]
-    pub fn stack_trace(this: &GetStackTraceReturnType) -> inspector::runtime::StackTrace;
+    pub fn stack_trace(this: &GetStackTraceReturnType) -> runtime::StackTrace;
     # [ wasm_bindgen ( method , setter , js_name = stackTrace ) ]
-    pub fn set_stack_trace(this: &GetStackTraceReturnType, value: &inspector::runtime::StackTrace);
+    pub fn set_stack_trace(this: &GetStackTraceReturnType, value: &runtime::StackTrace);
     pub type SearchInContentReturnType;
     #[doc = "List of search matches."]
     #[wasm_bindgen(method, getter)]
@@ -505,33 +454,28 @@ extern "C" {
     pub fn set_stack_changed(this: &SetScriptSourceReturnType, value: Option<bool>);
     #[doc = "Async stack trace, if any."]
     # [ wasm_bindgen ( method , getter , js_name = asyncStackTrace ) ]
-    pub fn async_stack_trace(
-        this: &SetScriptSourceReturnType,
-    ) -> Option<inspector::runtime::StackTrace>;
+    pub fn async_stack_trace(this: &SetScriptSourceReturnType) -> Option<runtime::StackTrace>;
     # [ wasm_bindgen ( method , setter , js_name = asyncStackTrace ) ]
     pub fn set_async_stack_trace(
         this: &SetScriptSourceReturnType,
-        value: Option<&inspector::runtime::StackTrace>,
+        value: Option<&runtime::StackTrace>,
     );
     #[doc = "Async stack trace, if any."]
     # [ wasm_bindgen ( method , getter , js_name = asyncStackTraceId ) ]
-    pub fn async_stack_trace_id(
-        this: &SetScriptSourceReturnType,
-    ) -> Option<inspector::runtime::StackTraceId>;
+    pub fn async_stack_trace_id(this: &SetScriptSourceReturnType) -> Option<runtime::StackTraceId>;
     # [ wasm_bindgen ( method , setter , js_name = asyncStackTraceId ) ]
     pub fn set_async_stack_trace_id(
         this: &SetScriptSourceReturnType,
-        value: Option<&inspector::runtime::StackTraceId>,
+        value: Option<&runtime::StackTraceId>,
     );
     #[doc = "Exception details if any."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(
-        this: &SetScriptSourceReturnType,
-    ) -> Option<inspector::runtime::ExceptionDetails>;
+    pub fn exception_details(this: &SetScriptSourceReturnType)
+    -> Option<runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
     pub fn set_exception_details(
         this: &SetScriptSourceReturnType,
-        value: Option<&inspector::runtime::ExceptionDetails>,
+        value: Option<&runtime::ExceptionDetails>,
     );
     pub type RestartFrameReturnType;
     #[doc = "New stack trace."]
@@ -541,23 +485,19 @@ extern "C" {
     pub fn set_call_frames(this: &RestartFrameReturnType, value: &Array);
     #[doc = "Async stack trace, if any."]
     # [ wasm_bindgen ( method , getter , js_name = asyncStackTrace ) ]
-    pub fn async_stack_trace(
-        this: &RestartFrameReturnType,
-    ) -> Option<inspector::runtime::StackTrace>;
+    pub fn async_stack_trace(this: &RestartFrameReturnType) -> Option<runtime::StackTrace>;
     # [ wasm_bindgen ( method , setter , js_name = asyncStackTrace ) ]
     pub fn set_async_stack_trace(
         this: &RestartFrameReturnType,
-        value: Option<&inspector::runtime::StackTrace>,
+        value: Option<&runtime::StackTrace>,
     );
     #[doc = "Async stack trace, if any."]
     # [ wasm_bindgen ( method , getter , js_name = asyncStackTraceId ) ]
-    pub fn async_stack_trace_id(
-        this: &RestartFrameReturnType,
-    ) -> Option<inspector::runtime::StackTraceId>;
+    pub fn async_stack_trace_id(this: &RestartFrameReturnType) -> Option<runtime::StackTraceId>;
     # [ wasm_bindgen ( method , setter , js_name = asyncStackTraceId ) ]
     pub fn set_async_stack_trace_id(
         this: &RestartFrameReturnType,
-        value: Option<&inspector::runtime::StackTraceId>,
+        value: Option<&runtime::StackTraceId>,
     );
     pub type GetScriptSourceReturnType;
     #[doc = "Script source."]
@@ -568,28 +508,25 @@ extern "C" {
     pub type EvaluateOnCallFrameReturnType;
     #[doc = "Object wrapper for the evaluation result."]
     #[wasm_bindgen(method, getter)]
-    pub fn result(this: &EvaluateOnCallFrameReturnType) -> inspector::runtime::RemoteObject;
+    pub fn result(this: &EvaluateOnCallFrameReturnType) -> runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_result(
-        this: &EvaluateOnCallFrameReturnType,
-        value: &inspector::runtime::RemoteObject,
-    );
+    pub fn set_result(this: &EvaluateOnCallFrameReturnType, value: &runtime::RemoteObject);
     #[doc = "Exception details."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
     pub fn exception_details(
         this: &EvaluateOnCallFrameReturnType,
-    ) -> Option<inspector::runtime::ExceptionDetails>;
+    ) -> Option<runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
     pub fn set_exception_details(
         this: &EvaluateOnCallFrameReturnType,
-        value: Option<&inspector::runtime::ExceptionDetails>,
+        value: Option<&runtime::ExceptionDetails>,
     );
     pub type ScriptParsedEventDataType;
     #[doc = "Identifier of the script parsed."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &ScriptParsedEventDataType) -> inspector::runtime::ScriptId;
+    pub fn script_id(this: &ScriptParsedEventDataType) -> runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(this: &ScriptParsedEventDataType, value: inspector::runtime::ScriptIdRef);
+    pub fn set_script_id(this: &ScriptParsedEventDataType, value: runtime::ScriptIdRef);
     #[doc = "URL or name of the script parsed (if any)."]
     #[wasm_bindgen(method, getter)]
     pub fn url(this: &ScriptParsedEventDataType) -> String;
@@ -617,13 +554,11 @@ extern "C" {
     pub fn set_end_column(this: &ScriptParsedEventDataType, value: f64);
     #[doc = "Specifies script creation context."]
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
-    pub fn execution_context_id(
-        this: &ScriptParsedEventDataType,
-    ) -> inspector::runtime::ExecutionContextId;
+    pub fn execution_context_id(this: &ScriptParsedEventDataType) -> runtime::ExecutionContextId;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &ScriptParsedEventDataType,
-        value: inspector::runtime::ExecutionContextIdRef,
+        value: runtime::ExecutionContextIdRef,
     );
     #[doc = "Content hash of the script."]
     #[wasm_bindgen(method, getter)]
@@ -662,21 +597,15 @@ extern "C" {
     pub fn set_length(this: &ScriptParsedEventDataType, value: Option<f64>);
     #[doc = "JavaScript top stack frame of where the script parsed event was triggered if available."]
     # [ wasm_bindgen ( method , getter , js_name = stackTrace ) ]
-    pub fn stack_trace(this: &ScriptParsedEventDataType) -> Option<inspector::runtime::StackTrace>;
+    pub fn stack_trace(this: &ScriptParsedEventDataType) -> Option<runtime::StackTrace>;
     # [ wasm_bindgen ( method , setter , js_name = stackTrace ) ]
-    pub fn set_stack_trace(
-        this: &ScriptParsedEventDataType,
-        value: Option<&inspector::runtime::StackTrace>,
-    );
+    pub fn set_stack_trace(this: &ScriptParsedEventDataType, value: Option<&runtime::StackTrace>);
     pub type ScriptFailedToParseEventDataType;
     #[doc = "Identifier of the script parsed."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &ScriptFailedToParseEventDataType) -> inspector::runtime::ScriptId;
+    pub fn script_id(this: &ScriptFailedToParseEventDataType) -> runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(
-        this: &ScriptFailedToParseEventDataType,
-        value: inspector::runtime::ScriptIdRef,
-    );
+    pub fn set_script_id(this: &ScriptFailedToParseEventDataType, value: runtime::ScriptIdRef);
     #[doc = "URL or name of the script parsed (if any)."]
     #[wasm_bindgen(method, getter)]
     pub fn url(this: &ScriptFailedToParseEventDataType) -> String;
@@ -706,11 +635,11 @@ extern "C" {
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
     pub fn execution_context_id(
         this: &ScriptFailedToParseEventDataType,
-    ) -> inspector::runtime::ExecutionContextId;
+    ) -> runtime::ExecutionContextId;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &ScriptFailedToParseEventDataType,
-        value: inspector::runtime::ExecutionContextIdRef,
+        value: runtime::ExecutionContextIdRef,
     );
     #[doc = "Content hash of the script."]
     #[wasm_bindgen(method, getter)]
@@ -744,33 +673,26 @@ extern "C" {
     pub fn set_length(this: &ScriptFailedToParseEventDataType, value: Option<f64>);
     #[doc = "JavaScript top stack frame of where the script parsed event was triggered if available."]
     # [ wasm_bindgen ( method , getter , js_name = stackTrace ) ]
-    pub fn stack_trace(
-        this: &ScriptFailedToParseEventDataType,
-    ) -> Option<inspector::runtime::StackTrace>;
+    pub fn stack_trace(this: &ScriptFailedToParseEventDataType) -> Option<runtime::StackTrace>;
     # [ wasm_bindgen ( method , setter , js_name = stackTrace ) ]
     pub fn set_stack_trace(
         this: &ScriptFailedToParseEventDataType,
-        value: Option<&inspector::runtime::StackTrace>,
+        value: Option<&runtime::StackTrace>,
     );
     pub type BreakpointResolvedEventDataType;
     #[doc = "Breakpoint unique identifier."]
     # [ wasm_bindgen ( method , getter , js_name = breakpointId ) ]
-    pub fn breakpoint_id(
-        this: &BreakpointResolvedEventDataType,
-    ) -> inspector::debugger::BreakpointId;
+    pub fn breakpoint_id(this: &BreakpointResolvedEventDataType) -> debugger::BreakpointId;
     # [ wasm_bindgen ( method , setter , js_name = breakpointId ) ]
     pub fn set_breakpoint_id(
         this: &BreakpointResolvedEventDataType,
-        value: inspector::debugger::BreakpointIdRef,
+        value: debugger::BreakpointIdRef,
     );
     #[doc = "Actual breakpoint location."]
     #[wasm_bindgen(method, getter)]
-    pub fn location(this: &BreakpointResolvedEventDataType) -> inspector::debugger::Location;
+    pub fn location(this: &BreakpointResolvedEventDataType) -> debugger::Location;
     #[wasm_bindgen(method, setter)]
-    pub fn set_location(
-        this: &BreakpointResolvedEventDataType,
-        value: &inspector::debugger::Location,
-    );
+    pub fn set_location(this: &BreakpointResolvedEventDataType, value: &debugger::Location);
     pub type PausedEventDataType;
     #[doc = "Call stack the virtual machine stopped on."]
     # [ wasm_bindgen ( method , getter , js_name = callFrames ) ]
@@ -794,30 +716,23 @@ extern "C" {
     pub fn set_hit_breakpoints(this: &PausedEventDataType, value: Option<&Array>);
     #[doc = "Async stack trace, if any."]
     # [ wasm_bindgen ( method , getter , js_name = asyncStackTrace ) ]
-    pub fn async_stack_trace(this: &PausedEventDataType) -> Option<inspector::runtime::StackTrace>;
+    pub fn async_stack_trace(this: &PausedEventDataType) -> Option<runtime::StackTrace>;
     # [ wasm_bindgen ( method , setter , js_name = asyncStackTrace ) ]
-    pub fn set_async_stack_trace(
-        this: &PausedEventDataType,
-        value: Option<&inspector::runtime::StackTrace>,
-    );
+    pub fn set_async_stack_trace(this: &PausedEventDataType, value: Option<&runtime::StackTrace>);
     #[doc = "Async stack trace, if any."]
     # [ wasm_bindgen ( method , getter , js_name = asyncStackTraceId ) ]
-    pub fn async_stack_trace_id(
-        this: &PausedEventDataType,
-    ) -> Option<inspector::runtime::StackTraceId>;
+    pub fn async_stack_trace_id(this: &PausedEventDataType) -> Option<runtime::StackTraceId>;
     # [ wasm_bindgen ( method , setter , js_name = asyncStackTraceId ) ]
     pub fn set_async_stack_trace_id(
         this: &PausedEventDataType,
-        value: Option<&inspector::runtime::StackTraceId>,
+        value: Option<&runtime::StackTraceId>,
     );
     #[doc = "Just scheduled async call will have this stack trace as parent stack during async execution. This field is available only after <code>Debugger.stepInto</code> call with <code>breakOnAsynCall</code> flag."]
     # [ wasm_bindgen ( method , getter , js_name = asyncCallStackTraceId ) ]
-    pub fn async_call_stack_trace_id(
-        this: &PausedEventDataType,
-    ) -> Option<inspector::runtime::StackTraceId>;
+    pub fn async_call_stack_trace_id(this: &PausedEventDataType) -> Option<runtime::StackTraceId>;
     # [ wasm_bindgen ( method , setter , js_name = asyncCallStackTraceId ) ]
     pub fn set_async_call_stack_trace_id(
         this: &PausedEventDataType,
-        value: Option<&inspector::runtime::StackTraceId>,
+        value: Option<&runtime::StackTraceId>,
     );
 }

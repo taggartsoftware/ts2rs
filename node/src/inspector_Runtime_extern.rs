@@ -33,13 +33,11 @@ extern "C" {
     pub fn set_value(this: &RemoteObject, value: &JsValue);
     #[doc = "Primitive value which can not be JSON-stringified does not have <code>value</code>, but gets this property."]
     # [ wasm_bindgen ( method , getter , js_name = unserializableValue ) ]
-    pub fn unserializable_value(
-        this: &RemoteObject,
-    ) -> Option<inspector::runtime::UnserializableValue>;
+    pub fn unserializable_value(this: &RemoteObject) -> Option<runtime::UnserializableValue>;
     # [ wasm_bindgen ( method , setter , js_name = unserializableValue ) ]
     pub fn set_unserializable_value(
         this: &RemoteObject,
-        value: Option<inspector::runtime::UnserializableValueRef>,
+        value: Option<runtime::UnserializableValueRef>,
     );
     #[doc = "String representation of the object."]
     #[wasm_bindgen(method, getter)]
@@ -48,21 +46,18 @@ extern "C" {
     pub fn set_description(this: &RemoteObject, value: Option<&str>);
     #[doc = "Unique object identifier (for non-primitive values)."]
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
-    pub fn object_id(this: &RemoteObject) -> Option<inspector::runtime::RemoteObjectId>;
+    pub fn object_id(this: &RemoteObject) -> Option<runtime::RemoteObjectId>;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
-    pub fn set_object_id(this: &RemoteObject, value: Option<inspector::runtime::RemoteObjectIdRef>);
+    pub fn set_object_id(this: &RemoteObject, value: Option<runtime::RemoteObjectIdRef>);
     #[doc = "Preview containing abbreviated property values. Specified for <code>object</code> type values only."]
     #[wasm_bindgen(method, getter)]
-    pub fn preview(this: &RemoteObject) -> Option<inspector::runtime::ObjectPreview>;
+    pub fn preview(this: &RemoteObject) -> Option<runtime::ObjectPreview>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_preview(this: &RemoteObject, value: Option<&inspector::runtime::ObjectPreview>);
+    pub fn set_preview(this: &RemoteObject, value: Option<&runtime::ObjectPreview>);
     # [ wasm_bindgen ( method , getter , js_name = customPreview ) ]
-    pub fn custom_preview(this: &RemoteObject) -> Option<inspector::runtime::CustomPreview>;
+    pub fn custom_preview(this: &RemoteObject) -> Option<runtime::CustomPreview>;
     # [ wasm_bindgen ( method , setter , js_name = customPreview ) ]
-    pub fn set_custom_preview(
-        this: &RemoteObject,
-        value: Option<&inspector::runtime::CustomPreview>,
-    );
+    pub fn set_custom_preview(this: &RemoteObject, value: Option<&runtime::CustomPreview>);
     pub type CustomPreview;
     #[wasm_bindgen(method, getter)]
     pub fn header(this: &CustomPreview) -> String;
@@ -73,28 +68,20 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = hasBody ) ]
     pub fn set_has_body(this: &CustomPreview, value: bool);
     # [ wasm_bindgen ( method , getter , js_name = formatterObjectId ) ]
-    pub fn formatter_object_id(this: &CustomPreview) -> inspector::runtime::RemoteObjectId;
+    pub fn formatter_object_id(this: &CustomPreview) -> runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = formatterObjectId ) ]
-    pub fn set_formatter_object_id(
-        this: &CustomPreview,
-        value: inspector::runtime::RemoteObjectIdRef,
-    );
+    pub fn set_formatter_object_id(this: &CustomPreview, value: runtime::RemoteObjectIdRef);
     # [ wasm_bindgen ( method , getter , js_name = bindRemoteObjectFunctionId ) ]
-    pub fn bind_remote_object_function_id(
-        this: &CustomPreview,
-    ) -> inspector::runtime::RemoteObjectId;
+    pub fn bind_remote_object_function_id(this: &CustomPreview) -> runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = bindRemoteObjectFunctionId ) ]
     pub fn set_bind_remote_object_function_id(
         this: &CustomPreview,
-        value: inspector::runtime::RemoteObjectIdRef,
+        value: runtime::RemoteObjectIdRef,
     );
     # [ wasm_bindgen ( method , getter , js_name = configObjectId ) ]
-    pub fn config_object_id(this: &CustomPreview) -> Option<inspector::runtime::RemoteObjectId>;
+    pub fn config_object_id(this: &CustomPreview) -> Option<runtime::RemoteObjectId>;
     # [ wasm_bindgen ( method , setter , js_name = configObjectId ) ]
-    pub fn set_config_object_id(
-        this: &CustomPreview,
-        value: Option<inspector::runtime::RemoteObjectIdRef>,
-    );
+    pub fn set_config_object_id(this: &CustomPreview, value: Option<runtime::RemoteObjectIdRef>);
     #[doc = "Object containing abbreviated remote object value."]
     pub type ObjectPreview;
     #[doc = "Object type."]
@@ -145,12 +132,9 @@ extern "C" {
     pub fn set_value(this: &PropertyPreview, value: Option<&str>);
     #[doc = "Nested value preview."]
     # [ wasm_bindgen ( method , getter , js_name = valuePreview ) ]
-    pub fn value_preview(this: &PropertyPreview) -> Option<inspector::runtime::ObjectPreview>;
+    pub fn value_preview(this: &PropertyPreview) -> Option<runtime::ObjectPreview>;
     # [ wasm_bindgen ( method , setter , js_name = valuePreview ) ]
-    pub fn set_value_preview(
-        this: &PropertyPreview,
-        value: Option<&inspector::runtime::ObjectPreview>,
-    );
+    pub fn set_value_preview(this: &PropertyPreview, value: Option<&runtime::ObjectPreview>);
     #[doc = "Object subtype hint. Specified for <code>object</code> type values only."]
     #[wasm_bindgen(method, getter)]
     pub fn subtype(this: &PropertyPreview) -> Option<String>;
@@ -159,14 +143,14 @@ extern "C" {
     pub type EntryPreview;
     #[doc = "Preview of the key. Specified for map-like collection entries."]
     #[wasm_bindgen(method, getter)]
-    pub fn key(this: &EntryPreview) -> Option<inspector::runtime::ObjectPreview>;
+    pub fn key(this: &EntryPreview) -> Option<runtime::ObjectPreview>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_key(this: &EntryPreview, value: Option<&inspector::runtime::ObjectPreview>);
+    pub fn set_key(this: &EntryPreview, value: Option<&runtime::ObjectPreview>);
     #[doc = "Preview of the value."]
     #[wasm_bindgen(method, getter)]
-    pub fn value(this: &EntryPreview) -> inspector::runtime::ObjectPreview;
+    pub fn value(this: &EntryPreview) -> runtime::ObjectPreview;
     #[wasm_bindgen(method, setter)]
-    pub fn set_value(this: &EntryPreview, value: &inspector::runtime::ObjectPreview);
+    pub fn set_value(this: &EntryPreview, value: &runtime::ObjectPreview);
     #[doc = "Object property descriptor."]
     pub type PropertyDescriptor;
     #[doc = "Property name or symbol description."]
@@ -176,9 +160,9 @@ extern "C" {
     pub fn set_name(this: &PropertyDescriptor, value: &str);
     #[doc = "The value associated with the property."]
     #[wasm_bindgen(method, getter)]
-    pub fn value(this: &PropertyDescriptor) -> Option<inspector::runtime::RemoteObject>;
+    pub fn value(this: &PropertyDescriptor) -> Option<runtime::RemoteObject>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_value(this: &PropertyDescriptor, value: Option<&inspector::runtime::RemoteObject>);
+    pub fn set_value(this: &PropertyDescriptor, value: Option<&runtime::RemoteObject>);
     #[doc = "True if the value associated with the property may be changed (data descriptors only)."]
     #[wasm_bindgen(method, getter)]
     pub fn writable(this: &PropertyDescriptor) -> Option<bool>;
@@ -186,14 +170,14 @@ extern "C" {
     pub fn set_writable(this: &PropertyDescriptor, value: Option<bool>);
     #[doc = "A function which serves as a getter for the property, or <code>undefined</code> if there is no getter (accessor descriptors only)."]
     #[wasm_bindgen(method, getter)]
-    pub fn get(this: &PropertyDescriptor) -> Option<inspector::runtime::RemoteObject>;
+    pub fn get(this: &PropertyDescriptor) -> Option<runtime::RemoteObject>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_get(this: &PropertyDescriptor, value: Option<&inspector::runtime::RemoteObject>);
+    pub fn set_get(this: &PropertyDescriptor, value: Option<&runtime::RemoteObject>);
     #[doc = "A function which serves as a setter for the property, or <code>undefined</code> if there is no setter (accessor descriptors only)."]
     #[wasm_bindgen(method, getter)]
-    pub fn set(this: &PropertyDescriptor) -> Option<inspector::runtime::RemoteObject>;
+    pub fn set(this: &PropertyDescriptor) -> Option<runtime::RemoteObject>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_set(this: &PropertyDescriptor, value: Option<&inspector::runtime::RemoteObject>);
+    pub fn set_set(this: &PropertyDescriptor, value: Option<&runtime::RemoteObject>);
     #[doc = "True if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object."]
     #[wasm_bindgen(method, getter)]
     pub fn configurable(this: &PropertyDescriptor) -> bool;
@@ -216,9 +200,9 @@ extern "C" {
     pub fn set_is_own(this: &PropertyDescriptor, value: Option<bool>);
     #[doc = "Property symbol object, if the property is of the <code>symbol</code> type."]
     #[wasm_bindgen(method, getter)]
-    pub fn symbol(this: &PropertyDescriptor) -> Option<inspector::runtime::RemoteObject>;
+    pub fn symbol(this: &PropertyDescriptor) -> Option<runtime::RemoteObject>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_symbol(this: &PropertyDescriptor, value: Option<&inspector::runtime::RemoteObject>);
+    pub fn set_symbol(this: &PropertyDescriptor, value: Option<&runtime::RemoteObject>);
     #[doc = "Object internal property descriptor. This property isn't normally visible in JavaScript code."]
     pub type InternalPropertyDescriptor;
     #[doc = "Conventional property name."]
@@ -228,12 +212,9 @@ extern "C" {
     pub fn set_name(this: &InternalPropertyDescriptor, value: &str);
     #[doc = "The value associated with the property."]
     #[wasm_bindgen(method, getter)]
-    pub fn value(this: &InternalPropertyDescriptor) -> Option<inspector::runtime::RemoteObject>;
+    pub fn value(this: &InternalPropertyDescriptor) -> Option<runtime::RemoteObject>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_value(
-        this: &InternalPropertyDescriptor,
-        value: Option<&inspector::runtime::RemoteObject>,
-    );
+    pub fn set_value(this: &InternalPropertyDescriptor, value: Option<&runtime::RemoteObject>);
     #[doc = "Represents function call argument. Either remote object id <code>objectId</code>, primitive <code>value</code>, unserializable primitive value or neither of (for undefined) them should be specified."]
     pub type CallArgument;
     #[doc = "Primitive value or serializable javascript object."]
@@ -243,31 +224,26 @@ extern "C" {
     pub fn set_value(this: &CallArgument, value: &JsValue);
     #[doc = "Primitive value which can not be JSON-stringified."]
     # [ wasm_bindgen ( method , getter , js_name = unserializableValue ) ]
-    pub fn unserializable_value(
-        this: &CallArgument,
-    ) -> Option<inspector::runtime::UnserializableValue>;
+    pub fn unserializable_value(this: &CallArgument) -> Option<runtime::UnserializableValue>;
     # [ wasm_bindgen ( method , setter , js_name = unserializableValue ) ]
     pub fn set_unserializable_value(
         this: &CallArgument,
-        value: Option<inspector::runtime::UnserializableValueRef>,
+        value: Option<runtime::UnserializableValueRef>,
     );
     #[doc = "Remote object handle."]
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
-    pub fn object_id(this: &CallArgument) -> Option<inspector::runtime::RemoteObjectId>;
+    pub fn object_id(this: &CallArgument) -> Option<runtime::RemoteObjectId>;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
-    pub fn set_object_id(this: &CallArgument, value: Option<inspector::runtime::RemoteObjectIdRef>);
+    pub fn set_object_id(this: &CallArgument, value: Option<runtime::RemoteObjectIdRef>);
     #[doc = "Id of an execution context."]
     pub type ExecutionContextId;
     #[doc = "Description of an isolated world."]
     pub type ExecutionContextDescription;
     #[doc = "Unique id of the execution context. It can be used to specify in which execution context script evaluation should be performed."]
     #[wasm_bindgen(method, getter)]
-    pub fn id(this: &ExecutionContextDescription) -> inspector::runtime::ExecutionContextId;
+    pub fn id(this: &ExecutionContextDescription) -> runtime::ExecutionContextId;
     #[wasm_bindgen(method, setter)]
-    pub fn set_id(
-        this: &ExecutionContextDescription,
-        value: inspector::runtime::ExecutionContextIdRef,
-    );
+    pub fn set_id(this: &ExecutionContextDescription, value: runtime::ExecutionContextIdRef);
     #[doc = "Execution context origin."]
     #[wasm_bindgen(method, getter)]
     pub fn origin(this: &ExecutionContextDescription) -> String;
@@ -307,9 +283,9 @@ extern "C" {
     pub fn set_column_number(this: &ExceptionDetails, value: f64);
     #[doc = "Script ID of the exception location."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &ExceptionDetails) -> Option<inspector::runtime::ScriptId>;
+    pub fn script_id(this: &ExceptionDetails) -> Option<runtime::ScriptId>;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(this: &ExceptionDetails, value: Option<inspector::runtime::ScriptIdRef>);
+    pub fn set_script_id(this: &ExceptionDetails, value: Option<runtime::ScriptIdRef>);
     #[doc = "URL of the exception location, to be used when the script was not reported."]
     #[wasm_bindgen(method, getter)]
     pub fn url(this: &ExceptionDetails) -> Option<String>;
@@ -317,23 +293,21 @@ extern "C" {
     pub fn set_url(this: &ExceptionDetails, value: Option<&str>);
     #[doc = "JavaScript stack trace if available."]
     # [ wasm_bindgen ( method , getter , js_name = stackTrace ) ]
-    pub fn stack_trace(this: &ExceptionDetails) -> Option<inspector::runtime::StackTrace>;
+    pub fn stack_trace(this: &ExceptionDetails) -> Option<runtime::StackTrace>;
     # [ wasm_bindgen ( method , setter , js_name = stackTrace ) ]
-    pub fn set_stack_trace(this: &ExceptionDetails, value: Option<&inspector::runtime::StackTrace>);
+    pub fn set_stack_trace(this: &ExceptionDetails, value: Option<&runtime::StackTrace>);
     #[doc = "Exception object if available."]
     #[wasm_bindgen(method, getter)]
-    pub fn exception(this: &ExceptionDetails) -> Option<inspector::runtime::RemoteObject>;
+    pub fn exception(this: &ExceptionDetails) -> Option<runtime::RemoteObject>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_exception(this: &ExceptionDetails, value: Option<&inspector::runtime::RemoteObject>);
+    pub fn set_exception(this: &ExceptionDetails, value: Option<&runtime::RemoteObject>);
     #[doc = "Identifier of the context where exception happened."]
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
-    pub fn execution_context_id(
-        this: &ExceptionDetails,
-    ) -> Option<inspector::runtime::ExecutionContextId>;
+    pub fn execution_context_id(this: &ExceptionDetails) -> Option<runtime::ExecutionContextId>;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &ExceptionDetails,
-        value: Option<inspector::runtime::ExecutionContextIdRef>,
+        value: Option<runtime::ExecutionContextIdRef>,
     );
     #[doc = "Number of milliseconds since epoch."]
     pub type Timestamp;
@@ -346,9 +320,9 @@ extern "C" {
     pub fn set_function_name(this: &CallFrame, value: &str);
     #[doc = "JavaScript script id."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &CallFrame) -> inspector::runtime::ScriptId;
+    pub fn script_id(this: &CallFrame) -> runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(this: &CallFrame, value: inspector::runtime::ScriptIdRef);
+    pub fn set_script_id(this: &CallFrame, value: runtime::ScriptIdRef);
     #[doc = "JavaScript script name or url."]
     #[wasm_bindgen(method, getter)]
     pub fn url(this: &CallFrame) -> String;
@@ -378,14 +352,14 @@ extern "C" {
     pub fn set_call_frames(this: &StackTrace, value: &Array);
     #[doc = "Asynchronous JavaScript stack trace that preceded this stack, if available."]
     #[wasm_bindgen(method, getter)]
-    pub fn parent(this: &StackTrace) -> Option<inspector::runtime::StackTrace>;
+    pub fn parent(this: &StackTrace) -> Option<runtime::StackTrace>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_parent(this: &StackTrace, value: Option<&inspector::runtime::StackTrace>);
+    pub fn set_parent(this: &StackTrace, value: Option<&runtime::StackTrace>);
     #[doc = "Asynchronous JavaScript stack trace that preceded this stack, if available."]
     # [ wasm_bindgen ( method , getter , js_name = parentId ) ]
-    pub fn parent_id(this: &StackTrace) -> Option<inspector::runtime::StackTraceId>;
+    pub fn parent_id(this: &StackTrace) -> Option<runtime::StackTraceId>;
     # [ wasm_bindgen ( method , setter , js_name = parentId ) ]
-    pub fn set_parent_id(this: &StackTrace, value: Option<&inspector::runtime::StackTraceId>);
+    pub fn set_parent_id(this: &StackTrace, value: Option<&runtime::StackTraceId>);
     #[doc = "Unique identifier of current debugger."]
     pub type UniqueDebuggerId;
     #[doc = "If <code>debuggerId</code> is set stack trace comes from another debugger and can be resolved there. This allows to track cross-debugger calls. See <code>Runtime.StackTrace</code> and <code>Debugger.paused</code> for usages."]
@@ -395,12 +369,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_id(this: &StackTraceId, value: &str);
     # [ wasm_bindgen ( method , getter , js_name = debuggerId ) ]
-    pub fn debugger_id(this: &StackTraceId) -> Option<inspector::runtime::UniqueDebuggerId>;
+    pub fn debugger_id(this: &StackTraceId) -> Option<runtime::UniqueDebuggerId>;
     # [ wasm_bindgen ( method , setter , js_name = debuggerId ) ]
-    pub fn set_debugger_id(
-        this: &StackTraceId,
-        value: Option<inspector::runtime::UniqueDebuggerIdRef>,
-    );
+    pub fn set_debugger_id(this: &StackTraceId, value: Option<runtime::UniqueDebuggerIdRef>);
     pub type EvaluateParameterType;
     #[doc = "Expression to evaluate."]
     #[wasm_bindgen(method, getter)]
@@ -424,13 +395,11 @@ extern "C" {
     pub fn set_silent(this: &EvaluateParameterType, value: Option<bool>);
     #[doc = "Specifies in which execution context to perform evaluation. If the parameter is omitted the evaluation will be performed in the context of the inspected page."]
     # [ wasm_bindgen ( method , getter , js_name = contextId ) ]
-    pub fn context_id(
-        this: &EvaluateParameterType,
-    ) -> Option<inspector::runtime::ExecutionContextId>;
+    pub fn context_id(this: &EvaluateParameterType) -> Option<runtime::ExecutionContextId>;
     # [ wasm_bindgen ( method , setter , js_name = contextId ) ]
     pub fn set_context_id(
         this: &EvaluateParameterType,
-        value: Option<inspector::runtime::ExecutionContextIdRef>,
+        value: Option<runtime::ExecutionContextIdRef>,
     );
     #[doc = "Whether the result is expected to be a JSON object that should be sent by value."]
     # [ wasm_bindgen ( method , getter , js_name = returnByValue ) ]
@@ -455,13 +424,11 @@ extern "C" {
     pub type AwaitPromiseParameterType;
     #[doc = "Identifier of the promise."]
     # [ wasm_bindgen ( method , getter , js_name = promiseObjectId ) ]
-    pub fn promise_object_id(
-        this: &AwaitPromiseParameterType,
-    ) -> inspector::runtime::RemoteObjectId;
+    pub fn promise_object_id(this: &AwaitPromiseParameterType) -> runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = promiseObjectId ) ]
     pub fn set_promise_object_id(
         this: &AwaitPromiseParameterType,
-        value: inspector::runtime::RemoteObjectIdRef,
+        value: runtime::RemoteObjectIdRef,
     );
     #[doc = "Whether the result is expected to be a JSON object that should be sent by value."]
     # [ wasm_bindgen ( method , getter , js_name = returnByValue ) ]
@@ -481,13 +448,11 @@ extern "C" {
     pub fn set_function_declaration(this: &CallFunctionOnParameterType, value: &str);
     #[doc = "Identifier of the object to call function on. Either objectId or executionContextId should be specified."]
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
-    pub fn object_id(
-        this: &CallFunctionOnParameterType,
-    ) -> Option<inspector::runtime::RemoteObjectId>;
+    pub fn object_id(this: &CallFunctionOnParameterType) -> Option<runtime::RemoteObjectId>;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
     pub fn set_object_id(
         this: &CallFunctionOnParameterType,
-        value: Option<inspector::runtime::RemoteObjectIdRef>,
+        value: Option<runtime::RemoteObjectIdRef>,
     );
     #[doc = "Call arguments. All call arguments must belong to the same JavaScript world as the target object."]
     #[wasm_bindgen(method, getter)]
@@ -523,11 +488,11 @@ extern "C" {
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
     pub fn execution_context_id(
         this: &CallFunctionOnParameterType,
-    ) -> Option<inspector::runtime::ExecutionContextId>;
+    ) -> Option<runtime::ExecutionContextId>;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &CallFunctionOnParameterType,
-        value: Option<inspector::runtime::ExecutionContextIdRef>,
+        value: Option<runtime::ExecutionContextIdRef>,
     );
     #[doc = "Symbolic group name that can be used to release multiple objects. If objectGroup is not specified and objectId is, objectGroup will be inherited from object."]
     # [ wasm_bindgen ( method , getter , js_name = objectGroup ) ]
@@ -537,12 +502,9 @@ extern "C" {
     pub type GetPropertiesParameterType;
     #[doc = "Identifier of the object to return properties for."]
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
-    pub fn object_id(this: &GetPropertiesParameterType) -> inspector::runtime::RemoteObjectId;
+    pub fn object_id(this: &GetPropertiesParameterType) -> runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
-    pub fn set_object_id(
-        this: &GetPropertiesParameterType,
-        value: inspector::runtime::RemoteObjectIdRef,
-    );
+    pub fn set_object_id(this: &GetPropertiesParameterType, value: runtime::RemoteObjectIdRef);
     #[doc = "If true, returns properties belonging only to the element itself, not to its prototype chain."]
     # [ wasm_bindgen ( method , getter , js_name = ownProperties ) ]
     pub fn own_properties(this: &GetPropertiesParameterType) -> Option<bool>;
@@ -561,12 +523,9 @@ extern "C" {
     pub type ReleaseObjectParameterType;
     #[doc = "Identifier of the object to release."]
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
-    pub fn object_id(this: &ReleaseObjectParameterType) -> inspector::runtime::RemoteObjectId;
+    pub fn object_id(this: &ReleaseObjectParameterType) -> runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
-    pub fn set_object_id(
-        this: &ReleaseObjectParameterType,
-        value: inspector::runtime::RemoteObjectIdRef,
-    );
+    pub fn set_object_id(this: &ReleaseObjectParameterType, value: runtime::RemoteObjectIdRef);
     pub type ReleaseObjectGroupParameterType;
     #[doc = "Symbolic object group name."]
     # [ wasm_bindgen ( method , getter , js_name = objectGroup ) ]
@@ -598,27 +557,27 @@ extern "C" {
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
     pub fn execution_context_id(
         this: &CompileScriptParameterType,
-    ) -> Option<inspector::runtime::ExecutionContextId>;
+    ) -> Option<runtime::ExecutionContextId>;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &CompileScriptParameterType,
-        value: Option<inspector::runtime::ExecutionContextIdRef>,
+        value: Option<runtime::ExecutionContextIdRef>,
     );
     pub type RunScriptParameterType;
     #[doc = "Id of the script to run."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &RunScriptParameterType) -> inspector::runtime::ScriptId;
+    pub fn script_id(this: &RunScriptParameterType) -> runtime::ScriptId;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(this: &RunScriptParameterType, value: inspector::runtime::ScriptIdRef);
+    pub fn set_script_id(this: &RunScriptParameterType, value: runtime::ScriptIdRef);
     #[doc = "Specifies in which execution context to perform script run. If the parameter is omitted the evaluation will be performed in the context of the inspected page."]
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
     pub fn execution_context_id(
         this: &RunScriptParameterType,
-    ) -> Option<inspector::runtime::ExecutionContextId>;
+    ) -> Option<runtime::ExecutionContextId>;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &RunScriptParameterType,
-        value: Option<inspector::runtime::ExecutionContextIdRef>,
+        value: Option<runtime::ExecutionContextIdRef>,
     );
     #[doc = "Symbolic group name that can be used to release multiple objects."]
     # [ wasm_bindgen ( method , getter , js_name = objectGroup ) ]
@@ -653,72 +612,64 @@ extern "C" {
     pub type QueryObjectsParameterType;
     #[doc = "Identifier of the prototype to return objects for."]
     # [ wasm_bindgen ( method , getter , js_name = prototypeObjectId ) ]
-    pub fn prototype_object_id(
-        this: &QueryObjectsParameterType,
-    ) -> inspector::runtime::RemoteObjectId;
+    pub fn prototype_object_id(this: &QueryObjectsParameterType) -> runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = prototypeObjectId ) ]
     pub fn set_prototype_object_id(
         this: &QueryObjectsParameterType,
-        value: inspector::runtime::RemoteObjectIdRef,
+        value: runtime::RemoteObjectIdRef,
     );
     pub type GlobalLexicalScopeNamesParameterType;
     #[doc = "Specifies in which execution context to lookup global scope variables."]
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
     pub fn execution_context_id(
         this: &GlobalLexicalScopeNamesParameterType,
-    ) -> Option<inspector::runtime::ExecutionContextId>;
+    ) -> Option<runtime::ExecutionContextId>;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &GlobalLexicalScopeNamesParameterType,
-        value: Option<inspector::runtime::ExecutionContextIdRef>,
+        value: Option<runtime::ExecutionContextIdRef>,
     );
     pub type EvaluateReturnType;
     #[doc = "Evaluation result."]
     #[wasm_bindgen(method, getter)]
-    pub fn result(this: &EvaluateReturnType) -> inspector::runtime::RemoteObject;
+    pub fn result(this: &EvaluateReturnType) -> runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_result(this: &EvaluateReturnType, value: &inspector::runtime::RemoteObject);
+    pub fn set_result(this: &EvaluateReturnType, value: &runtime::RemoteObject);
     #[doc = "Exception details."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(
-        this: &EvaluateReturnType,
-    ) -> Option<inspector::runtime::ExceptionDetails>;
+    pub fn exception_details(this: &EvaluateReturnType) -> Option<runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
     pub fn set_exception_details(
         this: &EvaluateReturnType,
-        value: Option<&inspector::runtime::ExceptionDetails>,
+        value: Option<&runtime::ExceptionDetails>,
     );
     pub type AwaitPromiseReturnType;
     #[doc = "Promise result. Will contain rejected value if promise was rejected."]
     #[wasm_bindgen(method, getter)]
-    pub fn result(this: &AwaitPromiseReturnType) -> inspector::runtime::RemoteObject;
+    pub fn result(this: &AwaitPromiseReturnType) -> runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_result(this: &AwaitPromiseReturnType, value: &inspector::runtime::RemoteObject);
+    pub fn set_result(this: &AwaitPromiseReturnType, value: &runtime::RemoteObject);
     #[doc = "Exception details if stack strace is available."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(
-        this: &AwaitPromiseReturnType,
-    ) -> Option<inspector::runtime::ExceptionDetails>;
+    pub fn exception_details(this: &AwaitPromiseReturnType) -> Option<runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
     pub fn set_exception_details(
         this: &AwaitPromiseReturnType,
-        value: Option<&inspector::runtime::ExceptionDetails>,
+        value: Option<&runtime::ExceptionDetails>,
     );
     pub type CallFunctionOnReturnType;
     #[doc = "Call result."]
     #[wasm_bindgen(method, getter)]
-    pub fn result(this: &CallFunctionOnReturnType) -> inspector::runtime::RemoteObject;
+    pub fn result(this: &CallFunctionOnReturnType) -> runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_result(this: &CallFunctionOnReturnType, value: &inspector::runtime::RemoteObject);
+    pub fn set_result(this: &CallFunctionOnReturnType, value: &runtime::RemoteObject);
     #[doc = "Exception details."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(
-        this: &CallFunctionOnReturnType,
-    ) -> Option<inspector::runtime::ExceptionDetails>;
+    pub fn exception_details(this: &CallFunctionOnReturnType) -> Option<runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
     pub fn set_exception_details(
         this: &CallFunctionOnReturnType,
-        value: Option<&inspector::runtime::ExceptionDetails>,
+        value: Option<&runtime::ExceptionDetails>,
     );
     pub type GetPropertiesReturnType;
     #[doc = "Object properties."]
@@ -733,55 +684,46 @@ extern "C" {
     pub fn set_internal_properties(this: &GetPropertiesReturnType, value: Option<&Array>);
     #[doc = "Exception details."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(
-        this: &GetPropertiesReturnType,
-    ) -> Option<inspector::runtime::ExceptionDetails>;
+    pub fn exception_details(this: &GetPropertiesReturnType) -> Option<runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
     pub fn set_exception_details(
         this: &GetPropertiesReturnType,
-        value: Option<&inspector::runtime::ExceptionDetails>,
+        value: Option<&runtime::ExceptionDetails>,
     );
     pub type CompileScriptReturnType;
     #[doc = "Id of the script."]
     # [ wasm_bindgen ( method , getter , js_name = scriptId ) ]
-    pub fn script_id(this: &CompileScriptReturnType) -> Option<inspector::runtime::ScriptId>;
+    pub fn script_id(this: &CompileScriptReturnType) -> Option<runtime::ScriptId>;
     # [ wasm_bindgen ( method , setter , js_name = scriptId ) ]
-    pub fn set_script_id(
-        this: &CompileScriptReturnType,
-        value: Option<inspector::runtime::ScriptIdRef>,
-    );
+    pub fn set_script_id(this: &CompileScriptReturnType, value: Option<runtime::ScriptIdRef>);
     #[doc = "Exception details."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(
-        this: &CompileScriptReturnType,
-    ) -> Option<inspector::runtime::ExceptionDetails>;
+    pub fn exception_details(this: &CompileScriptReturnType) -> Option<runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
     pub fn set_exception_details(
         this: &CompileScriptReturnType,
-        value: Option<&inspector::runtime::ExceptionDetails>,
+        value: Option<&runtime::ExceptionDetails>,
     );
     pub type RunScriptReturnType;
     #[doc = "Run result."]
     #[wasm_bindgen(method, getter)]
-    pub fn result(this: &RunScriptReturnType) -> inspector::runtime::RemoteObject;
+    pub fn result(this: &RunScriptReturnType) -> runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_result(this: &RunScriptReturnType, value: &inspector::runtime::RemoteObject);
+    pub fn set_result(this: &RunScriptReturnType, value: &runtime::RemoteObject);
     #[doc = "Exception details."]
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(
-        this: &RunScriptReturnType,
-    ) -> Option<inspector::runtime::ExceptionDetails>;
+    pub fn exception_details(this: &RunScriptReturnType) -> Option<runtime::ExceptionDetails>;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
     pub fn set_exception_details(
         this: &RunScriptReturnType,
-        value: Option<&inspector::runtime::ExceptionDetails>,
+        value: Option<&runtime::ExceptionDetails>,
     );
     pub type QueryObjectsReturnType;
     #[doc = "Array with objects."]
     #[wasm_bindgen(method, getter)]
-    pub fn objects(this: &QueryObjectsReturnType) -> inspector::runtime::RemoteObject;
+    pub fn objects(this: &QueryObjectsReturnType) -> runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_objects(this: &QueryObjectsReturnType, value: &inspector::runtime::RemoteObject);
+    pub fn set_objects(this: &QueryObjectsReturnType, value: &runtime::RemoteObject);
     pub type GlobalLexicalScopeNamesReturnType;
     #[wasm_bindgen(method, getter)]
     pub fn names(this: &GlobalLexicalScopeNamesReturnType) -> Array;
@@ -792,40 +734,35 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn context(
         this: &ExecutionContextCreatedEventDataType,
-    ) -> inspector::runtime::ExecutionContextDescription;
+    ) -> runtime::ExecutionContextDescription;
     #[wasm_bindgen(method, setter)]
     pub fn set_context(
         this: &ExecutionContextCreatedEventDataType,
-        value: &inspector::runtime::ExecutionContextDescription,
+        value: &runtime::ExecutionContextDescription,
     );
     pub type ExecutionContextDestroyedEventDataType;
     #[doc = "Id of the destroyed context"]
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
     pub fn execution_context_id(
         this: &ExecutionContextDestroyedEventDataType,
-    ) -> inspector::runtime::ExecutionContextId;
+    ) -> runtime::ExecutionContextId;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &ExecutionContextDestroyedEventDataType,
-        value: inspector::runtime::ExecutionContextIdRef,
+        value: runtime::ExecutionContextIdRef,
     );
     pub type ExceptionThrownEventDataType;
     #[doc = "Timestamp of the exception."]
     #[wasm_bindgen(method, getter)]
-    pub fn timestamp(this: &ExceptionThrownEventDataType) -> inspector::runtime::Timestamp;
+    pub fn timestamp(this: &ExceptionThrownEventDataType) -> runtime::Timestamp;
     #[wasm_bindgen(method, setter)]
-    pub fn set_timestamp(
-        this: &ExceptionThrownEventDataType,
-        value: inspector::runtime::TimestampRef,
-    );
+    pub fn set_timestamp(this: &ExceptionThrownEventDataType, value: runtime::TimestampRef);
     # [ wasm_bindgen ( method , getter , js_name = exceptionDetails ) ]
-    pub fn exception_details(
-        this: &ExceptionThrownEventDataType,
-    ) -> inspector::runtime::ExceptionDetails;
+    pub fn exception_details(this: &ExceptionThrownEventDataType) -> runtime::ExceptionDetails;
     # [ wasm_bindgen ( method , setter , js_name = exceptionDetails ) ]
     pub fn set_exception_details(
         this: &ExceptionThrownEventDataType,
-        value: &inspector::runtime::ExceptionDetails,
+        value: &runtime::ExceptionDetails,
     );
     pub type ExceptionRevokedEventDataType;
     #[doc = "Reason describing why exception was revoked."]
@@ -853,29 +790,24 @@ extern "C" {
     # [ wasm_bindgen ( method , getter , js_name = executionContextId ) ]
     pub fn execution_context_id(
         this: &ConsoleAPICalledEventDataType,
-    ) -> inspector::runtime::ExecutionContextId;
+    ) -> runtime::ExecutionContextId;
     # [ wasm_bindgen ( method , setter , js_name = executionContextId ) ]
     pub fn set_execution_context_id(
         this: &ConsoleAPICalledEventDataType,
-        value: inspector::runtime::ExecutionContextIdRef,
+        value: runtime::ExecutionContextIdRef,
     );
     #[doc = "Call timestamp."]
     #[wasm_bindgen(method, getter)]
-    pub fn timestamp(this: &ConsoleAPICalledEventDataType) -> inspector::runtime::Timestamp;
+    pub fn timestamp(this: &ConsoleAPICalledEventDataType) -> runtime::Timestamp;
     #[wasm_bindgen(method, setter)]
-    pub fn set_timestamp(
-        this: &ConsoleAPICalledEventDataType,
-        value: inspector::runtime::TimestampRef,
-    );
+    pub fn set_timestamp(this: &ConsoleAPICalledEventDataType, value: runtime::TimestampRef);
     #[doc = "Stack trace captured when the call was made."]
     # [ wasm_bindgen ( method , getter , js_name = stackTrace ) ]
-    pub fn stack_trace(
-        this: &ConsoleAPICalledEventDataType,
-    ) -> Option<inspector::runtime::StackTrace>;
+    pub fn stack_trace(this: &ConsoleAPICalledEventDataType) -> Option<runtime::StackTrace>;
     # [ wasm_bindgen ( method , setter , js_name = stackTrace ) ]
     pub fn set_stack_trace(
         this: &ConsoleAPICalledEventDataType,
-        value: Option<&inspector::runtime::StackTrace>,
+        value: Option<&runtime::StackTrace>,
     );
     #[doc = "Console context descriptor for calls on non-default console context (not console.*): 'anonymous#unique-logger-id' for call on unnamed context, 'name#unique-logger-id' for call on named context."]
     #[wasm_bindgen(method, getter)]
@@ -884,12 +816,9 @@ extern "C" {
     pub fn set_context(this: &ConsoleAPICalledEventDataType, value: Option<&str>);
     pub type InspectRequestedEventDataType;
     #[wasm_bindgen(method, getter)]
-    pub fn object(this: &InspectRequestedEventDataType) -> inspector::runtime::RemoteObject;
+    pub fn object(this: &InspectRequestedEventDataType) -> runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_object(
-        this: &InspectRequestedEventDataType,
-        value: &inspector::runtime::RemoteObject,
-    );
+    pub fn set_object(this: &InspectRequestedEventDataType, value: &runtime::RemoteObject);
     #[wasm_bindgen(method, getter)]
     pub fn hints(this: &InspectRequestedEventDataType) -> JsValue;
     #[wasm_bindgen(method, setter)]

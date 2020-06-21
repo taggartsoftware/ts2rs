@@ -41,7 +41,7 @@ extern "C" {
         terminal: Option<bool>,
     ) -> Interface;
     #[wasm_bindgen(constructor)]
-    pub fn new_interface2(options: &ReadLineOptions) -> Interface;
+    pub fn new_interface_2(options: &ReadLineOptions) -> Interface;
     # [ wasm_bindgen ( method , js_name = setPrompt ) ]
     pub fn set_prompt(this: &Interface, prompt: &str);
     # [ wasm_bindgen ( method , setter , js_name = setPrompt ) ]
@@ -75,228 +75,226 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn add_listener_2(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &Interface, value: &Function);
+    pub fn set_add_listener_2(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn add_listener_3(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &Interface, value: &Function);
+    pub fn set_add_listener_3(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn add_listener_4(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &Interface, value: &Function);
+    pub fn set_add_listener_4(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn add_listener_5(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &Interface, value: &Function);
+    pub fn set_add_listener_5(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn add_listener_6(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &Interface, value: &Function);
+    pub fn set_add_listener_6(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener7(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn add_listener_7(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener7(this: &Interface, value: &Function);
+    pub fn set_add_listener_7(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener8(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn add_listener_8(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener8(this: &Interface, value: &Function);
+    pub fn set_add_listener_8(this: &Interface, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &Interface, event: &JsValue, args: &Array) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &Interface, event: &JsValue) -> bool;
+    pub fn emit_2(this: &Interface, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &Interface, value: &Function);
+    pub fn set_emit_2(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &Interface, event: &JsValue, input: &str) -> bool;
+    pub fn emit_3(this: &Interface, event: &JsValue, input: &str) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &Interface, value: &Function);
+    pub fn set_emit_3(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &Interface, event: &JsValue) -> bool;
+    pub fn emit_4(this: &Interface, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &Interface, value: &Function);
+    pub fn set_emit_4(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Interface, event: &JsValue) -> bool;
+    pub fn emit_5(this: &Interface, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &Interface, value: &Function);
+    pub fn set_emit_5(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Interface, event: &JsValue) -> bool;
+    pub fn emit_6(this: &Interface, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit6(this: &Interface, value: &Function);
+    pub fn set_emit_6(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &Interface, event: &JsValue) -> bool;
+    pub fn emit_7(this: &Interface, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit7(this: &Interface, value: &Function);
+    pub fn set_emit_7(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit8(this: &Interface, event: &JsValue) -> bool;
+    pub fn emit_8(this: &Interface, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit8(this: &Interface, value: &Function);
+    pub fn set_emit_8(this: &Interface, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &Interface, event: &str, listener: &JsValue) -> Interface;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn on_2(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &Interface, value: &Function);
+    pub fn set_on_2(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn on_3(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &Interface, value: &Function);
+    pub fn set_on_3(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn on_4(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &Interface, value: &Function);
+    pub fn set_on_4(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn on_5(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &Interface, value: &Function);
+    pub fn set_on_5(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn on_6(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &Interface, value: &Function);
+    pub fn set_on_6(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on7(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn on_7(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on7(this: &Interface, value: &Function);
+    pub fn set_on_7(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on8(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn on_8(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on8(this: &Interface, value: &Function);
+    pub fn set_on_8(this: &Interface, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &Interface, event: &str, listener: &JsValue) -> Interface;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn once_2(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &Interface, value: &Function);
+    pub fn set_once_2(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn once_3(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &Interface, value: &Function);
+    pub fn set_once_3(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn once_4(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &Interface, value: &Function);
+    pub fn set_once_4(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn once_5(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &Interface, value: &Function);
+    pub fn set_once_5(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn once_6(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &Interface, value: &Function);
+    pub fn set_once_6(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once7(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn once_7(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once7(this: &Interface, value: &Function);
+    pub fn set_once_7(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once8(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn once_8(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once8(this: &Interface, value: &Function);
+    pub fn set_once_8(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &Interface, event: &str, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn prepend_listener_2(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &Interface, value: &Function);
+    pub fn set_prepend_listener_2(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn prepend_listener_3(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &Interface, value: &Function);
+    pub fn set_prepend_listener_3(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn prepend_listener_4(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &Interface, value: &Function);
+    pub fn set_prepend_listener_4(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn prepend_listener_5(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &Interface, value: &Function);
+    pub fn set_prepend_listener_5(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn prepend_listener_6(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &Interface, value: &Function);
+    pub fn set_prepend_listener_6(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener7(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn prepend_listener_7(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener7(this: &Interface, value: &Function);
+    pub fn set_prepend_listener_7(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener8(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
+    pub fn prepend_listener_8(this: &Interface, event: &JsValue, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener8(this: &Interface, value: &Function);
+    pub fn set_prepend_listener_8(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(this: &Interface, event: &str, listener: &JsValue) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &Interface,
         event: &JsValue,
         listener: &JsValue,
     ) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &Interface, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &Interface,
         event: &JsValue,
         listener: &JsValue,
     ) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &Interface, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &Interface,
         event: &JsValue,
         listener: &JsValue,
     ) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &Interface, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(
+    pub fn prepend_once_listener_5(
         this: &Interface,
         event: &JsValue,
         listener: &JsValue,
     ) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &Interface, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(
+    pub fn prepend_once_listener_6(
         this: &Interface,
         event: &JsValue,
         listener: &JsValue,
     ) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &Interface, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener7(
+    pub fn prepend_once_listener_7(
         this: &Interface,
         event: &JsValue,
         listener: &JsValue,
     ) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener7(this: &Interface, value: &Function);
+    pub fn set_prepend_once_listener_7(this: &Interface, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener8(
+    pub fn prepend_once_listener_8(
         this: &Interface,
         event: &JsValue,
         listener: &JsValue,
     ) -> Interface;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener8(this: &Interface, value: &Function);
+    pub fn set_prepend_once_listener_8(this: &Interface, value: &Function);
     #[wasm_bindgen(method)]
     pub fn computed_property_name(this: &Interface) -> AsyncIterableIterator;
     #[wasm_bindgen(method, setter)]
     pub fn set_computed_property_name(this: &Interface, value: &Function);
     pub type ReadLine;
-    pub type Completer;
-    pub type AsyncCompleter;
     pub type CompleterResult;
     pub type ReadLineOptions;
     #[wasm_bindgen(method, getter)]
@@ -343,7 +341,7 @@ extern "C" {
         terminal: Option<bool>,
     ) -> Interface;
     # [ wasm_bindgen ( js_name = createInterface ) ]
-    pub fn create_interface2(options: &ReadLineOptions) -> Interface;
+    pub fn create_interface_2(options: &ReadLineOptions) -> Interface;
     # [ wasm_bindgen ( js_name = emitKeypressEvents ) ]
     pub fn emit_keypress_events(
         stream: &node_js::ReadableStream,

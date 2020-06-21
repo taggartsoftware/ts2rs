@@ -43,5 +43,5 @@ extern "C" {
     #[doc = "determined by the union of all currently-enabled `Tracing` objects and"]
     #[doc = "any categories enabled using the `--trace-event-categories` flag."]
     # [ wasm_bindgen ( js_name = getEnabledCategories ) ]
-    pub fn get_enabled_categories() -> Option<String>;
+    pub fn get_enabled_categories() -> String;
 }

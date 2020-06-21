@@ -176,26 +176,6 @@ impl VerifyKeyWithOptions {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<Duplex> for Cipher {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Cipher> for Duplex {
-    fn from(child: Cipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Cipher {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Cipher> for EventEmitter {
-    fn from(child: Cipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for Cipher {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -223,66 +203,6 @@ impl AsRef<node_js::WritableStream> for Cipher {
 }
 impl From<Cipher> for node_js::WritableStream {
     fn from(child: Cipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Readable> for Cipher {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Cipher> for Readable {
-    fn from(child: Cipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Cipher {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Cipher> for Stream {
-    fn from(child: Cipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Cipher {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Cipher> for Writable {
-    fn from(child: Cipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Cipher> for CipherCCM {
-    fn as_ref(&self) -> &Cipher {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherCCM> for Cipher {
-    fn from(child: CipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for CipherCCM {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherCCM> for Duplex {
-    fn from(child: CipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for CipherCCM {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherCCM> for EventEmitter {
-    fn from(child: CipherCCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -316,93 +236,13 @@ impl From<CipherCCM> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for CipherCCM {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherCCM> for Readable {
-    fn from(child: CipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for CipherCCM {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherCCM> for Stream {
-    fn from(child: CipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for CipherCCM {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherCCM> for Writable {
-    fn from(child: CipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<DuplexOptions> for CipherCCMOptions {
-    fn as_ref(&self) -> &DuplexOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherCCMOptions> for DuplexOptions {
-    fn from(child: CipherCCMOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ReadableOptions> for CipherCCMOptions {
-    fn as_ref(&self) -> &ReadableOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherCCMOptions> for ReadableOptions {
-    fn from(child: CipherCCMOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableOptions> for CipherCCMOptions {
-    fn as_ref(&self) -> &WritableOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherCCMOptions> for WritableOptions {
-    fn from(child: CipherCCMOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Cipher> for CipherGCM {
+impl AsRef<Cipher> for CipherCCM {
     fn as_ref(&self) -> &Cipher {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCM> for Cipher {
-    fn from(child: CipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for CipherGCM {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherGCM> for Duplex {
-    fn from(child: CipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for CipherGCM {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherGCM> for EventEmitter {
-    fn from(child: CipherGCM) -> Self {
+impl From<CipherCCM> for Cipher {
+    fn from(child: CipherCCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -436,83 +276,13 @@ impl From<CipherGCM> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for CipherGCM {
-    fn as_ref(&self) -> &Readable {
+impl AsRef<Cipher> for CipherGCM {
+    fn as_ref(&self) -> &Cipher {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<CipherGCM> for Readable {
+impl From<CipherGCM> for Cipher {
     fn from(child: CipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for CipherGCM {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherGCM> for Stream {
-    fn from(child: CipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for CipherGCM {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherGCM> for Writable {
-    fn from(child: CipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<DuplexOptions> for CipherGCMOptions {
-    fn as_ref(&self) -> &DuplexOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherGCMOptions> for DuplexOptions {
-    fn from(child: CipherGCMOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ReadableOptions> for CipherGCMOptions {
-    fn as_ref(&self) -> &ReadableOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherGCMOptions> for ReadableOptions {
-    fn from(child: CipherGCMOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableOptions> for CipherGCMOptions {
-    fn as_ref(&self) -> &WritableOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<CipherGCMOptions> for WritableOptions {
-    fn from(child: CipherGCMOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for Decipher {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Decipher> for Duplex {
-    fn from(child: Decipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Decipher {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Decipher> for EventEmitter {
-    fn from(child: Decipher) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -546,66 +316,6 @@ impl From<Decipher> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for Decipher {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Decipher> for Readable {
-    fn from(child: Decipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Decipher {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Decipher> for Stream {
-    fn from(child: Decipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Decipher {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Decipher> for Writable {
-    fn from(child: Decipher) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Decipher> for DecipherCCM {
-    fn as_ref(&self) -> &Decipher {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for Decipher {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for DecipherCCM {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for Duplex {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for DecipherCCM {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for EventEmitter {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for DecipherCCM {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -636,63 +346,13 @@ impl From<DecipherCCM> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for DecipherCCM {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for Readable {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for DecipherCCM {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for Stream {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for DecipherCCM {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherCCM> for Writable {
-    fn from(child: DecipherCCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Decipher> for DecipherGCM {
+impl AsRef<Decipher> for DecipherCCM {
     fn as_ref(&self) -> &Decipher {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<DecipherGCM> for Decipher {
-    fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for DecipherGCM {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherGCM> for Duplex {
-    fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for DecipherGCM {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherGCM> for EventEmitter {
-    fn from(child: DecipherGCM) -> Self {
+impl From<DecipherCCM> for Decipher {
+    fn from(child: DecipherCCM) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -726,53 +386,13 @@ impl From<DecipherGCM> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for DecipherGCM {
-    fn as_ref(&self) -> &Readable {
+impl AsRef<Decipher> for DecipherGCM {
+    fn as_ref(&self) -> &Decipher {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<DecipherGCM> for Readable {
+impl From<DecipherGCM> for Decipher {
     fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for DecipherGCM {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherGCM> for Stream {
-    fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for DecipherGCM {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<DecipherGCM> for Writable {
-    fn from(child: DecipherGCM) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for Hash {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hash> for Duplex {
-    fn from(child: Hash) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Hash {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hash> for EventEmitter {
-    fn from(child: Hash) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -806,86 +426,6 @@ impl From<Hash> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for Hash {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hash> for Readable {
-    fn from(child: Hash) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Hash {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hash> for Stream {
-    fn from(child: Hash) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Hash {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hash> for Writable {
-    fn from(child: Hash) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<DuplexOptions> for HashOptions {
-    fn as_ref(&self) -> &DuplexOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<HashOptions> for DuplexOptions {
-    fn from(child: HashOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<ReadableOptions> for HashOptions {
-    fn as_ref(&self) -> &ReadableOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<HashOptions> for ReadableOptions {
-    fn from(child: HashOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<WritableOptions> for HashOptions {
-    fn as_ref(&self) -> &WritableOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<HashOptions> for WritableOptions {
-    fn from(child: HashOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Duplex> for Hmac {
-    fn as_ref(&self) -> &Duplex {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hmac> for Duplex {
-    fn from(child: Hmac) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Hmac {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hmac> for EventEmitter {
-    fn from(child: Hmac) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for Hmac {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -916,36 +456,6 @@ impl From<Hmac> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for Hmac {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hmac> for Readable {
-    fn from(child: Hmac) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Hmac {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hmac> for Stream {
-    fn from(child: Hmac) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Hmac {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Hmac> for Writable {
-    fn from(child: Hmac) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<PrivateKeyInput> for SignPrivateKeyInput {
     fn as_ref(&self) -> &PrivateKeyInput {
         JsCast::unchecked_ref(self)
@@ -963,16 +473,6 @@ impl AsRef<SigningOptions> for SignPrivateKeyInput {
 }
 impl From<SignPrivateKeyInput> for SigningOptions {
     fn from(child: SignPrivateKeyInput) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Signer {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Signer> for EventEmitter {
-    fn from(child: Signer) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -996,26 +496,6 @@ impl From<Signer> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for Signer {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Signer> for Stream {
-    fn from(child: Signer) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Verify {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Verify> for EventEmitter {
-    fn from(child: Verify) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for Verify {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -1032,16 +512,6 @@ impl AsRef<node_js::WritableStream> for Verify {
     }
 }
 impl From<Verify> for node_js::WritableStream {
-    fn from(child: Verify) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Verify {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Verify> for Stream {
     fn from(child: Verify) -> Self {
         JsCast::unchecked_into(child)
     }

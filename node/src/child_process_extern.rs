@@ -43,16 +43,16 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_send(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = send ) ]
-    pub fn send2(
+    pub fn send_2(
         this: &ChildProcess,
         message: &JsValue,
         send_handle: &JsValue,
         callback: &JsValue,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = send ) ]
-    pub fn set_send2(this: &ChildProcess, value: &Function);
+    pub fn set_send_2(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = send ) ]
-    pub fn send3(
+    pub fn send_3(
         this: &ChildProcess,
         message: &JsValue,
         send_handle: &JsValue,
@@ -60,7 +60,7 @@ extern "C" {
         callback: &JsValue,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = send ) ]
-    pub fn set_send3(this: &ChildProcess, value: &Function);
+    pub fn set_send_3(this: &ChildProcess, value: &Function);
     #[wasm_bindgen(method)]
     pub fn disconnect(this: &ChildProcess);
     #[wasm_bindgen(method, setter)]
@@ -78,151 +78,156 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn add_listener_2(this: &ChildProcess, event: &JsValue, listener: &JsValue)
+    -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &ChildProcess, value: &Function);
+    pub fn set_add_listener_2(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn add_listener_3(this: &ChildProcess, event: &JsValue, listener: &JsValue)
+    -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &ChildProcess, value: &Function);
+    pub fn set_add_listener_3(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn add_listener_4(this: &ChildProcess, event: &JsValue, listener: &JsValue)
+    -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &ChildProcess, value: &Function);
+    pub fn set_add_listener_4(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn add_listener_5(this: &ChildProcess, event: &JsValue, listener: &JsValue)
+    -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &ChildProcess, value: &Function);
+    pub fn set_add_listener_5(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn add_listener_6(this: &ChildProcess, event: &JsValue, listener: &JsValue)
+    -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &ChildProcess, value: &Function);
+    pub fn set_add_listener_6(this: &ChildProcess, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &ChildProcess, event: &JsValue, args: &Array) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(
+    pub fn emit_2(
         this: &ChildProcess,
         event: &JsValue,
         code: f64,
         signal: &node_js::Signals,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &ChildProcess, value: &Function);
+    pub fn set_emit_2(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &ChildProcess, event: &JsValue) -> bool;
+    pub fn emit_3(this: &ChildProcess, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &ChildProcess, value: &Function);
+    pub fn set_emit_3(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &ChildProcess, event: &JsValue, err: &Error) -> bool;
+    pub fn emit_4(this: &ChildProcess, event: &JsValue, err: &Error) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &ChildProcess, value: &Function);
+    pub fn set_emit_4(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &ChildProcess, event: &JsValue, code: &JsValue, signal: &JsValue) -> bool;
+    pub fn emit_5(this: &ChildProcess, event: &JsValue, code: &JsValue, signal: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &ChildProcess, value: &Function);
+    pub fn set_emit_5(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(
+    pub fn emit_6(
         this: &ChildProcess,
         event: &JsValue,
         message: &JsValue,
         send_handle: &JsValue,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit6(this: &ChildProcess, value: &Function);
+    pub fn set_emit_6(this: &ChildProcess, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &ChildProcess, event: &str, listener: &JsValue) -> ChildProcess;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn on_2(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &ChildProcess, value: &Function);
+    pub fn set_on_2(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn on_3(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &ChildProcess, value: &Function);
+    pub fn set_on_3(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn on_4(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &ChildProcess, value: &Function);
+    pub fn set_on_4(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn on_5(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &ChildProcess, value: &Function);
+    pub fn set_on_5(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn on_6(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &ChildProcess, value: &Function);
+    pub fn set_on_6(this: &ChildProcess, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &ChildProcess, event: &str, listener: &JsValue) -> ChildProcess;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn once_2(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &ChildProcess, value: &Function);
+    pub fn set_once_2(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn once_3(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &ChildProcess, value: &Function);
+    pub fn set_once_3(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn once_4(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &ChildProcess, value: &Function);
+    pub fn set_once_4(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn once_5(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &ChildProcess, value: &Function);
+    pub fn set_once_5(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
+    pub fn once_6(this: &ChildProcess, event: &JsValue, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &ChildProcess, value: &Function);
+    pub fn set_once_6(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &ChildProcess, event: &str, listener: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &ChildProcess,
         event: &JsValue,
         listener: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &ChildProcess, value: &Function);
+    pub fn set_prepend_listener_2(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(
+    pub fn prepend_listener_3(
         this: &ChildProcess,
         event: &JsValue,
         listener: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &ChildProcess, value: &Function);
+    pub fn set_prepend_listener_3(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(
+    pub fn prepend_listener_4(
         this: &ChildProcess,
         event: &JsValue,
         listener: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &ChildProcess, value: &Function);
+    pub fn set_prepend_listener_4(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(
+    pub fn prepend_listener_5(
         this: &ChildProcess,
         event: &JsValue,
         listener: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &ChildProcess, value: &Function);
+    pub fn set_prepend_listener_5(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(
+    pub fn prepend_listener_6(
         this: &ChildProcess,
         event: &JsValue,
         listener: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &ChildProcess, value: &Function);
+    pub fn set_prepend_listener_6(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &ChildProcess,
@@ -232,45 +237,45 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &ChildProcess,
         event: &JsValue,
         listener: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &ChildProcess, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &ChildProcess,
         event: &JsValue,
         listener: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &ChildProcess, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &ChildProcess,
         event: &JsValue,
         listener: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &ChildProcess, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(
+    pub fn prepend_once_listener_5(
         this: &ChildProcess,
         event: &JsValue,
         listener: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &ChildProcess, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &ChildProcess, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(
+    pub fn prepend_once_listener_6(
         this: &ChildProcess,
         event: &JsValue,
         listener: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &ChildProcess, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &ChildProcess, value: &Function);
     pub type ChildProcessWithoutNullStreams;
     #[wasm_bindgen(method, getter)]
     pub fn stdin(this: &ChildProcessWithoutNullStreams) -> crate::stream::Writable;
@@ -372,79 +377,79 @@ extern "C" {
         options: Option<&SpawnOptionsWithoutStdio>,
     ) -> ChildProcessWithoutNullStreams;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn2(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn_2(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn3(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn_3(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn4(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn_4(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn5(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn_5(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn6(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn_6(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn7(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn_7(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn8(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn_8(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn9(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
+    pub fn spawn_9(command: &str, options: &SpawnOptionsWithStdioTuple) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn10(command: &str, options: &SpawnOptions) -> ChildProcess;
+    pub fn spawn_10(command: &str, options: &SpawnOptions) -> ChildProcess;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn11(
+    pub fn spawn_11(
         command: &str,
         args: Option<&ReadonlyArray>,
         options: Option<&SpawnOptionsWithoutStdio>,
     ) -> ChildProcessWithoutNullStreams;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn12(
+    pub fn spawn_12(
         command: &str,
         args: &ReadonlyArray,
         options: &SpawnOptionsWithStdioTuple,
     ) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn13(
+    pub fn spawn_13(
         command: &str,
         args: &ReadonlyArray,
         options: &SpawnOptionsWithStdioTuple,
     ) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn14(
+    pub fn spawn_14(
         command: &str,
         args: &ReadonlyArray,
         options: &SpawnOptionsWithStdioTuple,
     ) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn15(
+    pub fn spawn_15(
         command: &str,
         args: &ReadonlyArray,
         options: &SpawnOptionsWithStdioTuple,
     ) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn16(
+    pub fn spawn_16(
         command: &str,
         args: &ReadonlyArray,
         options: &SpawnOptionsWithStdioTuple,
     ) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn17(
+    pub fn spawn_17(
         command: &str,
         args: &ReadonlyArray,
         options: &SpawnOptionsWithStdioTuple,
     ) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn18(
+    pub fn spawn_18(
         command: &str,
         args: &ReadonlyArray,
         options: &SpawnOptionsWithStdioTuple,
     ) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn19(
+    pub fn spawn_19(
         command: &str,
         args: &ReadonlyArray,
         options: &SpawnOptionsWithStdioTuple,
     ) -> ChildProcessByStdio;
     # [ wasm_bindgen ( js_name = spawn ) ]
-    pub fn spawn20(command: &str, args: &ReadonlyArray, options: &SpawnOptions) -> ChildProcess;
+    pub fn spawn_20(command: &str, args: &ReadonlyArray, options: &SpawnOptions) -> ChildProcess;
     pub type ExecOptions;
     #[wasm_bindgen(method, getter)]
     pub fn shell(this: &ExecOptions) -> Option<String>;
@@ -488,15 +493,15 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn exec(command: &str, callback: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( js_name = exec ) ]
-    pub fn exec2(command: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
+    pub fn exec_2(command: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( js_name = exec ) ]
-    pub fn exec3(command: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
+    pub fn exec_3(command: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( js_name = exec ) ]
-    pub fn exec4(command: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
+    pub fn exec_4(command: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( js_name = exec ) ]
-    pub fn exec5(command: &str, options: &ExecOptions, callback: &JsValue) -> ChildProcess;
+    pub fn exec_5(command: &str, options: &ExecOptions, callback: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( js_name = exec ) ]
-    pub fn exec6(command: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
+    pub fn exec_6(command: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
     pub type PromiseWithChild;
     #[wasm_bindgen(method, getter)]
     pub fn child(this: &PromiseWithChild) -> ChildProcess;
@@ -537,67 +542,67 @@ extern "C" {
     # [ wasm_bindgen ( js_name = execFile ) ]
     pub fn exec_file(file: &str) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file2(file: &str, options: &JsValue) -> ChildProcess;
+    pub fn exec_file_2(file: &str, options: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file3(file: &str, args: &JsValue) -> ChildProcess;
+    pub fn exec_file_3(file: &str, args: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file4(file: &str, args: &JsValue, options: &JsValue) -> ChildProcess;
+    pub fn exec_file_4(file: &str, args: &JsValue, options: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file5(file: &str, callback: &JsValue) -> ChildProcess;
+    pub fn exec_file_5(file: &str, callback: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file6(file: &str, args: &JsValue, callback: &JsValue) -> ChildProcess;
+    pub fn exec_file_6(file: &str, args: &JsValue, callback: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file7(
+    pub fn exec_file_7(
         file: &str,
         options: &ExecFileOptionsWithBufferEncoding,
         callback: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file8(
+    pub fn exec_file_8(
         file: &str,
         args: &JsValue,
         options: &ExecFileOptionsWithBufferEncoding,
         callback: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file9(
+    pub fn exec_file_9(
         file: &str,
         options: &ExecFileOptionsWithStringEncoding,
         callback: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file10(
+    pub fn exec_file_10(
         file: &str,
         args: &JsValue,
         options: &ExecFileOptionsWithStringEncoding,
         callback: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file11(
+    pub fn exec_file_11(
         file: &str,
         options: &ExecFileOptionsWithOtherEncoding,
         callback: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file12(
+    pub fn exec_file_12(
         file: &str,
         args: &JsValue,
         options: &ExecFileOptionsWithOtherEncoding,
         callback: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file13(file: &str, options: &ExecFileOptions, callback: &JsValue) -> ChildProcess;
+    pub fn exec_file_13(file: &str, options: &ExecFileOptions, callback: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file14(
+    pub fn exec_file_14(
         file: &str,
         args: &JsValue,
         options: &ExecFileOptions,
         callback: &JsValue,
     ) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file15(file: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
+    pub fn exec_file_15(file: &str, options: &JsValue, callback: &JsValue) -> ChildProcess;
     # [ wasm_bindgen ( js_name = execFile ) ]
-    pub fn exec_file16(
+    pub fn exec_file_16(
         file: &str,
         args: &JsValue,
         options: &JsValue,
@@ -709,31 +714,31 @@ extern "C" {
     # [ wasm_bindgen ( js_name = spawnSync ) ]
     pub fn spawn_sync(command: &str) -> SpawnSyncReturns;
     # [ wasm_bindgen ( js_name = spawnSync ) ]
-    pub fn spawn_sync2(
+    pub fn spawn_sync_2(
         command: &str,
         options: Option<&SpawnSyncOptionsWithStringEncoding>,
     ) -> SpawnSyncReturns;
     # [ wasm_bindgen ( js_name = spawnSync ) ]
-    pub fn spawn_sync3(
+    pub fn spawn_sync_3(
         command: &str,
         options: Option<&SpawnSyncOptionsWithBufferEncoding>,
     ) -> SpawnSyncReturns;
     # [ wasm_bindgen ( js_name = spawnSync ) ]
-    pub fn spawn_sync4(command: &str, options: Option<&SpawnSyncOptions>) -> SpawnSyncReturns;
+    pub fn spawn_sync_4(command: &str, options: Option<&SpawnSyncOptions>) -> SpawnSyncReturns;
     # [ wasm_bindgen ( js_name = spawnSync ) ]
-    pub fn spawn_sync5(
+    pub fn spawn_sync_5(
         command: &str,
         args: Option<&ReadonlyArray>,
         options: Option<&SpawnSyncOptionsWithStringEncoding>,
     ) -> SpawnSyncReturns;
     # [ wasm_bindgen ( js_name = spawnSync ) ]
-    pub fn spawn_sync6(
+    pub fn spawn_sync_6(
         command: &str,
         args: Option<&ReadonlyArray>,
         options: Option<&SpawnSyncOptionsWithBufferEncoding>,
     ) -> SpawnSyncReturns;
     # [ wasm_bindgen ( js_name = spawnSync ) ]
-    pub fn spawn_sync7(
+    pub fn spawn_sync_7(
         command: &str,
         args: Option<&ReadonlyArray>,
         options: Option<&SpawnSyncOptions>,
@@ -776,13 +781,17 @@ extern "C" {
     # [ wasm_bindgen ( js_name = execSync ) ]
     pub fn exec_sync(command: &str) -> Buffer;
     # [ wasm_bindgen ( js_name = execSync ) ]
-    pub fn exec_sync2(command: &str, options: Option<&ExecSyncOptionsWithStringEncoding>)
-    -> String;
+    pub fn exec_sync_2(
+        command: &str,
+        options: Option<&ExecSyncOptionsWithStringEncoding>,
+    ) -> String;
     # [ wasm_bindgen ( js_name = execSync ) ]
-    pub fn exec_sync3(command: &str, options: Option<&ExecSyncOptionsWithBufferEncoding>)
-    -> Buffer;
+    pub fn exec_sync_3(
+        command: &str,
+        options: Option<&ExecSyncOptionsWithBufferEncoding>,
+    ) -> Buffer;
     # [ wasm_bindgen ( js_name = execSync ) ]
-    pub fn exec_sync4(command: &str, options: Option<&ExecSyncOptions>) -> Buffer;
+    pub fn exec_sync_4(command: &str, options: Option<&ExecSyncOptions>) -> Buffer;
     pub type ExecFileSyncOptions;
     #[wasm_bindgen(method, getter)]
     pub fn input(this: &ExecFileSyncOptions) -> JsValue;
@@ -821,31 +830,31 @@ extern "C" {
     # [ wasm_bindgen ( js_name = execFileSync ) ]
     pub fn exec_file_sync(command: &str) -> Buffer;
     # [ wasm_bindgen ( js_name = execFileSync ) ]
-    pub fn exec_file_sync2(
+    pub fn exec_file_sync_2(
         command: &str,
         options: Option<&ExecFileSyncOptionsWithStringEncoding>,
     ) -> String;
     # [ wasm_bindgen ( js_name = execFileSync ) ]
-    pub fn exec_file_sync3(
+    pub fn exec_file_sync_3(
         command: &str,
         options: Option<&ExecFileSyncOptionsWithBufferEncoding>,
     ) -> Buffer;
     # [ wasm_bindgen ( js_name = execFileSync ) ]
-    pub fn exec_file_sync4(command: &str, options: Option<&ExecFileSyncOptions>) -> Buffer;
+    pub fn exec_file_sync_4(command: &str, options: Option<&ExecFileSyncOptions>) -> Buffer;
     # [ wasm_bindgen ( js_name = execFileSync ) ]
-    pub fn exec_file_sync5(
+    pub fn exec_file_sync_5(
         command: &str,
         args: Option<&ReadonlyArray>,
         options: Option<&ExecFileSyncOptionsWithStringEncoding>,
     ) -> String;
     # [ wasm_bindgen ( js_name = execFileSync ) ]
-    pub fn exec_file_sync6(
+    pub fn exec_file_sync_6(
         command: &str,
         args: Option<&ReadonlyArray>,
         options: Option<&ExecFileSyncOptionsWithBufferEncoding>,
     ) -> Buffer;
     # [ wasm_bindgen ( js_name = execFileSync ) ]
-    pub fn exec_file_sync7(
+    pub fn exec_file_sync_7(
         command: &str,
         args: Option<&ReadonlyArray>,
         options: Option<&ExecFileSyncOptions>,

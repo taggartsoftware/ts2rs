@@ -5,12 +5,12 @@
 extern "C" {
     #[doc = "Provides access to the browser's debugging console (e.g.\u{a0}the Web Console in Firefox). The specifics of how it works varies\u{a0}from browser to browser, but there is a de facto set of features that are typically provided."]
     pub type Console;
-    # [ wasm_bindgen ( method , getter , js_name = Console ) ]
-    pub fn console(this: &Console) -> node_js::ConsoleConstructor;
-    # [ wasm_bindgen ( method , setter , js_name = Console ) ]
-    pub fn set_console(this: &Console, value: &node_js::ConsoleConstructor);
+    #[wasm_bindgen(method, getter)]
+    pub fn memory(this: &Console) -> JsValue;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_memory(this: &Console, value: &JsValue);
     #[wasm_bindgen(method)]
-    pub fn assert(this: &Console, value: &JsValue, message: Option<&str>, optional_params: &Array);
+    pub fn assert(this: &Console, condition: Option<bool>, message: Option<&str>, data: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_assert(this: &Console, value: &Function);
     #[wasm_bindgen(method)]
@@ -21,20 +21,16 @@ extern "C" {
     pub fn count(this: &Console, label: Option<&str>);
     #[wasm_bindgen(method, setter)]
     pub fn set_count(this: &Console, value: &Function);
-    # [ wasm_bindgen ( method , js_name = countReset ) ]
-    pub fn count_reset(this: &Console, label: Option<&str>);
-    # [ wasm_bindgen ( method , setter , js_name = countReset ) ]
-    pub fn set_count_reset(this: &Console, value: &Function);
     #[wasm_bindgen(method)]
     pub fn debug(this: &Console, message: &JsValue, optional_params: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_debug(this: &Console, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn dir(this: &Console, obj: &JsValue, options: Option<&node_js::InspectOptions>);
+    pub fn dir(this: &Console, value: &JsValue, optional_params: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_dir(this: &Console, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn dirxml(this: &Console, data: &Array);
+    pub fn dirxml(this: &Console, value: &JsValue);
     #[wasm_bindgen(method, setter)]
     pub fn set_dirxml(this: &Console, value: &Function);
     #[wasm_bindgen(method)]
@@ -42,11 +38,15 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_error(this: &Console, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn group(this: &Console, label: &Array);
+    pub fn exception(this: &Console, message: Option<&str>, optional_params: &Array);
+    #[wasm_bindgen(method, setter)]
+    pub fn set_exception(this: &Console, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn group(this: &Console, group_title: Option<&str>, optional_params: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_group(this: &Console, value: &Function);
     # [ wasm_bindgen ( method , js_name = groupCollapsed ) ]
-    pub fn group_collapsed(this: &Console, label: &Array);
+    pub fn group_collapsed(this: &Console, group_title: Option<&str>, optional_params: &Array);
     # [ wasm_bindgen ( method , setter , js_name = groupCollapsed ) ]
     pub fn set_group_collapsed(this: &Console, value: &Function);
     # [ wasm_bindgen ( method , js_name = groupEnd ) ]
@@ -61,8 +61,20 @@ extern "C" {
     pub fn log(this: &Console, message: &JsValue, optional_params: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_log(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = markTimeline ) ]
+    pub fn mark_timeline(this: &Console, label: Option<&str>);
+    # [ wasm_bindgen ( method , setter , js_name = markTimeline ) ]
+    pub fn set_mark_timeline(this: &Console, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn table(this: &Console, tabular_data: &JsValue, properties: Option<&Array>);
+    pub fn profile(this: &Console, report_name: Option<&str>);
+    #[wasm_bindgen(method, setter)]
+    pub fn set_profile(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = profileEnd ) ]
+    pub fn profile_end(this: &Console, report_name: Option<&str>);
+    # [ wasm_bindgen ( method , setter , js_name = profileEnd ) ]
+    pub fn set_profile_end(this: &Console, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn table(this: &Console, tabular_data: &Array);
     #[wasm_bindgen(method, setter)]
     pub fn set_table(this: &Console, value: &Function);
     #[wasm_bindgen(method)]
@@ -73,30 +85,6 @@ extern "C" {
     pub fn time_end(this: &Console, label: Option<&str>);
     # [ wasm_bindgen ( method , setter , js_name = timeEnd ) ]
     pub fn set_time_end(this: &Console, value: &Function);
-    # [ wasm_bindgen ( method , js_name = timeLog ) ]
-    pub fn time_log(this: &Console, label: Option<&str>, data: &Array);
-    # [ wasm_bindgen ( method , setter , js_name = timeLog ) ]
-    pub fn set_time_log(this: &Console, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn trace(this: &Console, message: &JsValue, optional_params: &Array);
-    #[wasm_bindgen(method, setter)]
-    pub fn set_trace(this: &Console, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn warn(this: &Console, message: &JsValue, optional_params: &Array);
-    #[wasm_bindgen(method, setter)]
-    pub fn set_warn(this: &Console, value: &Function);
-    # [ wasm_bindgen ( method , js_name = markTimeline ) ]
-    pub fn mark_timeline(this: &Console, label: Option<&str>);
-    # [ wasm_bindgen ( method , setter , js_name = markTimeline ) ]
-    pub fn set_mark_timeline(this: &Console, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn profile(this: &Console, label: Option<&str>);
-    #[wasm_bindgen(method, setter)]
-    pub fn set_profile(this: &Console, value: &Function);
-    # [ wasm_bindgen ( method , js_name = profileEnd ) ]
-    pub fn profile_end(this: &Console, label: Option<&str>);
-    # [ wasm_bindgen ( method , setter , js_name = profileEnd ) ]
-    pub fn set_profile_end(this: &Console, value: &Function);
     # [ wasm_bindgen ( method , js_name = timeStamp ) ]
     pub fn time_stamp(this: &Console, label: Option<&str>);
     # [ wasm_bindgen ( method , setter , js_name = timeStamp ) ]
@@ -109,12 +97,143 @@ extern "C" {
     pub fn timeline_end(this: &Console, label: Option<&str>);
     # [ wasm_bindgen ( method , setter , js_name = timelineEnd ) ]
     pub fn set_timeline_end(this: &Console, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn trace(this: &Console, message: &JsValue, optional_params: &Array);
+    #[wasm_bindgen(method, setter)]
+    pub fn set_trace(this: &Console, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn warn(this: &Console, message: &JsValue, optional_params: &Array);
+    #[wasm_bindgen(method, setter)]
+    pub fn set_warn(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , getter , js_name = Console ) ]
+    pub fn console(this: &Console) -> node_js::ConsoleConstructor;
+    # [ wasm_bindgen ( method , setter , js_name = Console ) ]
+    pub fn set_console(this: &Console, value: &node_js::ConsoleConstructor);
+    # [ wasm_bindgen ( method , js_name = assert ) ]
+    pub fn assert_2(
+        this: &Console,
+        value: &JsValue,
+        message: Option<&str>,
+        optional_params: &Array,
+    );
+    # [ wasm_bindgen ( method , setter , js_name = assert ) ]
+    pub fn set_assert_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = clear ) ]
+    pub fn clear_2(this: &Console);
+    # [ wasm_bindgen ( method , setter , js_name = clear ) ]
+    pub fn set_clear_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = count ) ]
+    pub fn count_2(this: &Console, label: Option<&str>);
+    # [ wasm_bindgen ( method , setter , js_name = count ) ]
+    pub fn set_count_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = countReset ) ]
+    pub fn count_reset(this: &Console, label: Option<&str>);
+    # [ wasm_bindgen ( method , setter , js_name = countReset ) ]
+    pub fn set_count_reset(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = debug ) ]
+    pub fn debug_2(this: &Console, message: &JsValue, optional_params: &Array);
+    # [ wasm_bindgen ( method , setter , js_name = debug ) ]
+    pub fn set_debug_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = dir ) ]
+    pub fn dir_2(this: &Console, obj: &JsValue, options: Option<&node_js::InspectOptions>);
+    # [ wasm_bindgen ( method , setter , js_name = dir ) ]
+    pub fn set_dir_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = dirxml ) ]
+    pub fn dirxml_2(this: &Console, data: &Array);
+    # [ wasm_bindgen ( method , setter , js_name = dirxml ) ]
+    pub fn set_dirxml_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = error ) ]
+    pub fn error_2(this: &Console, message: &JsValue, optional_params: &Array);
+    # [ wasm_bindgen ( method , setter , js_name = error ) ]
+    pub fn set_error_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = group ) ]
+    pub fn group_2(this: &Console, label: &Array);
+    # [ wasm_bindgen ( method , setter , js_name = group ) ]
+    pub fn set_group_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = groupCollapsed ) ]
+    pub fn group_collapsed_2(this: &Console, label: &Array);
+    # [ wasm_bindgen ( method , setter , js_name = groupCollapsed ) ]
+    pub fn set_group_collapsed_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = groupEnd ) ]
+    pub fn group_end_2(this: &Console);
+    # [ wasm_bindgen ( method , setter , js_name = groupEnd ) ]
+    pub fn set_group_end_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = info ) ]
+    pub fn info_2(this: &Console, message: &JsValue, optional_params: &Array);
+    # [ wasm_bindgen ( method , setter , js_name = info ) ]
+    pub fn set_info_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = log ) ]
+    pub fn log_2(this: &Console, message: &JsValue, optional_params: &Array);
+    # [ wasm_bindgen ( method , setter , js_name = log ) ]
+    pub fn set_log_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = table ) ]
+    pub fn table_2(this: &Console, tabular_data: &JsValue, properties: Option<&Array>);
+    # [ wasm_bindgen ( method , setter , js_name = table ) ]
+    pub fn set_table_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = time ) ]
+    pub fn time_2(this: &Console, label: Option<&str>);
+    # [ wasm_bindgen ( method , setter , js_name = time ) ]
+    pub fn set_time_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = timeEnd ) ]
+    pub fn time_end_2(this: &Console, label: Option<&str>);
+    # [ wasm_bindgen ( method , setter , js_name = timeEnd ) ]
+    pub fn set_time_end_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = timeLog ) ]
+    pub fn time_log(this: &Console, label: Option<&str>, data: &Array);
+    # [ wasm_bindgen ( method , setter , js_name = timeLog ) ]
+    pub fn set_time_log(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = trace ) ]
+    pub fn trace_2(this: &Console, message: &JsValue, optional_params: &Array);
+    # [ wasm_bindgen ( method , setter , js_name = trace ) ]
+    pub fn set_trace_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = warn ) ]
+    pub fn warn_2(this: &Console, message: &JsValue, optional_params: &Array);
+    # [ wasm_bindgen ( method , setter , js_name = warn ) ]
+    pub fn set_warn_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = markTimeline ) ]
+    pub fn mark_timeline_2(this: &Console, label: Option<&str>);
+    # [ wasm_bindgen ( method , setter , js_name = markTimeline ) ]
+    pub fn set_mark_timeline_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = profile ) ]
+    pub fn profile_2(this: &Console, label: Option<&str>);
+    # [ wasm_bindgen ( method , setter , js_name = profile ) ]
+    pub fn set_profile_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = profileEnd ) ]
+    pub fn profile_end_2(this: &Console, label: Option<&str>);
+    # [ wasm_bindgen ( method , setter , js_name = profileEnd ) ]
+    pub fn set_profile_end_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = timeStamp ) ]
+    pub fn time_stamp_2(this: &Console, label: Option<&str>);
+    # [ wasm_bindgen ( method , setter , js_name = timeStamp ) ]
+    pub fn set_time_stamp_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = timeline ) ]
+    pub fn timeline_2(this: &Console, label: Option<&str>);
+    # [ wasm_bindgen ( method , setter , js_name = timeline ) ]
+    pub fn set_timeline_2(this: &Console, value: &Function);
+    # [ wasm_bindgen ( method , js_name = timelineEnd ) ]
+    pub fn timeline_end_2(this: &Console, label: Option<&str>);
+    # [ wasm_bindgen ( method , setter , js_name = timelineEnd ) ]
+    pub fn set_timeline_end_2(this: &Console, value: &Function);
     pub type Error;
+    #[wasm_bindgen(method, getter)]
+    pub fn name(this: &Error) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_name(this: &Error, value: &str);
+    #[wasm_bindgen(method, getter)]
+    pub fn message(this: &Error) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_message(this: &Error, value: &str);
     #[wasm_bindgen(method, getter)]
     pub fn stack(this: &Error) -> Option<String>;
     #[wasm_bindgen(method, setter)]
     pub fn set_stack(this: &Error, value: Option<&str>);
+    # [ wasm_bindgen ( method , getter , js_name = stack ) ]
+    pub fn stack_2(this: &Error) -> Option<String>;
+    # [ wasm_bindgen ( method , setter , js_name = stack ) ]
+    pub fn set_stack_2(this: &Error, value: Option<&str>);
     pub type ErrorConstructor;
+    #[wasm_bindgen(method, getter)]
+    pub fn prototype(this: &ErrorConstructor) -> Error;
     # [ wasm_bindgen ( method , js_name = captureStackTrace ) ]
     pub fn capture_stack_trace(
         this: &ErrorConstructor,
@@ -133,10 +252,281 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = stackTraceLimit ) ]
     pub fn set_stack_trace_limit(this: &ErrorConstructor, value: f64);
     pub type SymbolConstructor;
+    #[doc = "A method that returns the default iterator for an object. Called by the semantics of the\r"]
+    #[doc = "for-of statement."]
+    #[wasm_bindgen(method, getter)]
+    pub fn iterator(this: &SymbolConstructor) -> JsValue;
+    #[doc = "A reference to the prototype."]
+    #[wasm_bindgen(method, getter)]
+    pub fn prototype(this: &SymbolConstructor) -> Symbol;
+    # [ wasm_bindgen ( method , js_name = for ) ]
+    pub fn for_(this: &SymbolConstructor, key: &str) -> JsValue;
+    # [ wasm_bindgen ( method , setter , js_name = for ) ]
+    pub fn set_for_(this: &SymbolConstructor, value: &Function);
+    # [ wasm_bindgen ( method , js_name = keyFor ) ]
+    pub fn key_for(this: &SymbolConstructor, sym: &Symbol) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = keyFor ) ]
+    pub fn set_key_for(this: &SymbolConstructor, value: &Function);
+    #[doc = "A method that determines if a constructor object recognizes an object as one of the\r"]
+    #[doc = "constructor’s instances. Called by the semantics of the instanceof operator."]
+    # [ wasm_bindgen ( method , getter , js_name = hasInstance ) ]
+    pub fn has_instance(this: &SymbolConstructor) -> JsValue;
+    #[doc = "A Boolean value that if true indicates that an object should flatten to its array elements\r"]
+    #[doc = "by Array.prototype.concat."]
+    # [ wasm_bindgen ( method , getter , js_name = isConcatSpreadable ) ]
+    pub fn is_concat_spreadable(this: &SymbolConstructor) -> JsValue;
+    #[doc = "A regular expression method that matches the regular expression against a string. Called\r"]
+    #[doc = "by the String.prototype.match method."]
+    # [ wasm_bindgen ( method , getter , js_name = match ) ]
+    pub fn match_(this: &SymbolConstructor) -> JsValue;
+    #[doc = "A regular expression method that replaces matched substrings of a string. Called by the\r"]
+    #[doc = "String.prototype.replace method."]
+    #[wasm_bindgen(method, getter)]
+    pub fn replace(this: &SymbolConstructor) -> JsValue;
+    #[doc = "A regular expression method that returns the index within a string that matches the\r"]
+    #[doc = "regular expression. Called by the String.prototype.search method."]
+    #[wasm_bindgen(method, getter)]
+    pub fn search(this: &SymbolConstructor) -> JsValue;
+    #[doc = "A function valued property that is the constructor function that is used to create\r"]
+    #[doc = "derived objects."]
+    #[wasm_bindgen(method, getter)]
+    pub fn species(this: &SymbolConstructor) -> JsValue;
+    #[doc = "A regular expression method that splits a string at the indices that match the regular\r"]
+    #[doc = "expression. Called by the String.prototype.split method."]
+    #[wasm_bindgen(method, getter)]
+    pub fn split(this: &SymbolConstructor) -> JsValue;
+    #[doc = "A method that converts an object to a corresponding primitive value.\r"]
+    #[doc = "Called by the ToPrimitive abstract operation."]
+    # [ wasm_bindgen ( method , getter , js_name = toPrimitive ) ]
+    pub fn to_primitive(this: &SymbolConstructor) -> JsValue;
+    #[doc = "A String value that is used in the creation of the default string description of an object.\r"]
+    #[doc = "Called by the built-in method Object.prototype.toString."]
+    # [ wasm_bindgen ( method , getter , js_name = toStringTag ) ]
+    pub fn to_string_tag(this: &SymbolConstructor) -> JsValue;
+    #[doc = "An Object whose own property names are property names that are excluded from the 'with'\r"]
+    #[doc = "environment bindings of the associated objects."]
+    #[wasm_bindgen(method, getter)]
+    pub fn unscopables(this: &SymbolConstructor) -> JsValue;
+    #[doc = "A method that returns the default async iterator for an object. Called by the semantics of\r"]
+    #[doc = "the for-await-of statement."]
+    # [ wasm_bindgen ( method , getter , js_name = asyncIterator ) ]
+    pub fn async_iterator(this: &SymbolConstructor) -> JsValue;
     #[wasm_bindgen(method, getter)]
     pub fn observable(this: &SymbolConstructor) -> JsValue;
     #[doc = "Allows manipulation and formatting of text strings and determination and location of substrings within strings."]
     pub type String;
+    # [ wasm_bindgen ( method , js_name = toString ) ]
+    pub fn to_string(this: &String) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = toString ) ]
+    pub fn set_to_string(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = charAt ) ]
+    pub fn char_at(this: &String, pos: f64) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = charAt ) ]
+    pub fn set_char_at(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = charCodeAt ) ]
+    pub fn char_code_at(this: &String, index: f64) -> f64;
+    # [ wasm_bindgen ( method , setter , js_name = charCodeAt ) ]
+    pub fn set_char_code_at(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn concat(this: &String, strings: &Array) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_concat(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = indexOf ) ]
+    pub fn index_of(this: &String, search_string: &str, position: Option<f64>) -> f64;
+    # [ wasm_bindgen ( method , setter , js_name = indexOf ) ]
+    pub fn set_index_of(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = lastIndexOf ) ]
+    pub fn last_index_of(this: &String, search_string: &str, position: Option<f64>) -> f64;
+    # [ wasm_bindgen ( method , setter , js_name = lastIndexOf ) ]
+    pub fn set_last_index_of(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = localeCompare ) ]
+    pub fn locale_compare(this: &String, that: &str) -> f64;
+    # [ wasm_bindgen ( method , setter , js_name = localeCompare ) ]
+    pub fn set_locale_compare(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = match ) ]
+    pub fn match_(this: &String, regexp: &JsValue) -> JsValue;
+    # [ wasm_bindgen ( method , setter , js_name = match ) ]
+    pub fn set_match_(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn replace(this: &String, search_value: &JsValue, replace_value: &str) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_replace(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = replace ) ]
+    pub fn replace_2(this: &String, search_value: &JsValue, replacer: &JsValue) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = replace ) ]
+    pub fn set_replace_2(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn search(this: &String, regexp: &JsValue) -> f64;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_search(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn slice(this: &String, start: Option<f64>, end: Option<f64>) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_slice(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn split(this: &String, separator: &JsValue, limit: Option<f64>) -> Array;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_split(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn substring(this: &String, start: f64, end: Option<f64>) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_substring(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = toLowerCase ) ]
+    pub fn to_lower_case(this: &String) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = toLowerCase ) ]
+    pub fn set_to_lower_case(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = toLocaleLowerCase ) ]
+    pub fn to_locale_lower_case(this: &String, locales: &JsValue) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = toLocaleLowerCase ) ]
+    pub fn set_to_locale_lower_case(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = toUpperCase ) ]
+    pub fn to_upper_case(this: &String) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = toUpperCase ) ]
+    pub fn set_to_upper_case(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = toLocaleUpperCase ) ]
+    pub fn to_locale_upper_case(this: &String, locales: &JsValue) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = toLocaleUpperCase ) ]
+    pub fn set_to_locale_upper_case(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn trim(this: &String) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_trim(this: &String, value: &Function);
+    #[doc = "Returns the length of a String object."]
+    #[wasm_bindgen(method, getter)]
+    pub fn length(this: &String) -> f64;
+    #[wasm_bindgen(method)]
+    pub fn substr(this: &String, from: f64, length: Option<f64>) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_substr(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = valueOf ) ]
+    pub fn value_of(this: &String) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = valueOf ) ]
+    pub fn set_value_of(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = localeCompare ) ]
+    pub fn locale_compare_2(
+        this: &String,
+        that: &str,
+        locales: &JsValue,
+        options: Option<&intl::CollatorOptions>,
+    ) -> f64;
+    # [ wasm_bindgen ( method , setter , js_name = localeCompare ) ]
+    pub fn set_locale_compare_2(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = codePointAt ) ]
+    pub fn code_point_at(this: &String, pos: f64) -> f64;
+    # [ wasm_bindgen ( method , setter , js_name = codePointAt ) ]
+    pub fn set_code_point_at(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn includes(this: &String, search_string: &str, position: Option<f64>) -> bool;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_includes(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = endsWith ) ]
+    pub fn ends_with(this: &String, search_string: &str, end_position: Option<f64>) -> bool;
+    # [ wasm_bindgen ( method , setter , js_name = endsWith ) ]
+    pub fn set_ends_with(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn normalize(this: &String, form: &JsValue) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_normalize(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = normalize ) ]
+    pub fn normalize_2(this: &String, form: Option<&str>) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = normalize ) ]
+    pub fn set_normalize_2(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn repeat(this: &String, count: f64) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_repeat(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = startsWith ) ]
+    pub fn starts_with(this: &String, search_string: &str, position: Option<f64>) -> bool;
+    # [ wasm_bindgen ( method , setter , js_name = startsWith ) ]
+    pub fn set_starts_with(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn anchor(this: &String, name: &str) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_anchor(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn big(this: &String) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_big(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn blink(this: &String) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_blink(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn bold(this: &String) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_bold(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn fixed(this: &String) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_fixed(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn fontcolor(this: &String, color: &str) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_fontcolor(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn fontsize(this: &String, size: f64) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_fontsize(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = fontsize ) ]
+    pub fn fontsize_2(this: &String, size: &str) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = fontsize ) ]
+    pub fn set_fontsize_2(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn italics(this: &String) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_italics(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn link(this: &String, url: &str) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_link(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn small(this: &String) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_small(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn strike(this: &String) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_strike(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn sub(this: &String) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_sub(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn sup(this: &String) -> String;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_sup(this: &String, value: &Function);
+    #[wasm_bindgen(method)]
+    pub fn computed_property_name(this: &String) -> IterableIterator;
+    #[wasm_bindgen(method, setter)]
+    pub fn set_computed_property_name(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = match ) ]
+    pub fn match_2(this: &String, matcher: &JsValue) -> JsValue;
+    # [ wasm_bindgen ( method , setter , js_name = match ) ]
+    pub fn set_match_2(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = replace ) ]
+    pub fn replace_3(this: &String, search_value: &JsValue, replace_value: &str) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = replace ) ]
+    pub fn set_replace_3(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = replace ) ]
+    pub fn replace_4(this: &String, search_value: &JsValue, replacer: &JsValue) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = replace ) ]
+    pub fn set_replace_4(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = search ) ]
+    pub fn search_2(this: &String, searcher: &JsValue) -> f64;
+    # [ wasm_bindgen ( method , setter , js_name = search ) ]
+    pub fn set_search_2(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = split ) ]
+    pub fn split_2(this: &String, splitter: &JsValue, limit: Option<f64>) -> Array;
+    # [ wasm_bindgen ( method , setter , js_name = split ) ]
+    pub fn set_split_2(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = padStart ) ]
+    pub fn pad_start(this: &String, max_length: f64, fill_string: Option<&str>) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = padStart ) ]
+    pub fn set_pad_start(this: &String, value: &Function);
+    # [ wasm_bindgen ( method , js_name = padEnd ) ]
+    pub fn pad_end(this: &String, max_length: f64, fill_string: Option<&str>) -> String;
+    # [ wasm_bindgen ( method , setter , js_name = padEnd ) ]
+    pub fn set_pad_end(this: &String, value: &Function);
     # [ wasm_bindgen ( method , js_name = trimLeft ) ]
     pub fn trim_left(this: &String) -> String;
     # [ wasm_bindgen ( method , setter , js_name = trimLeft ) ]
@@ -192,7 +582,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_extensions(this: &NodeRequire, value: &NodeExtensions);
     #[wasm_bindgen(method, getter)]
-    pub fn main(this: &NodeRequire) -> Option<NodeModule>;
+    pub fn main(this: &NodeRequire) -> NodeModule;
     #[wasm_bindgen(method, setter)]
     pub fn set_main(this: &NodeRequire, value: Option<&NodeModule>);
     pub type RequireResolve;
@@ -206,13 +596,13 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_stringliteral(this: &NodeExtensions, value: &Function);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral2(this: &NodeExtensions) -> Function;
+    pub fn stringliteral_2(this: &NodeExtensions) -> Function;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral2(this: &NodeExtensions, value: &Function);
+    pub fn set_stringliteral_2(this: &NodeExtensions, value: &Function);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral3(this: &NodeExtensions) -> Function;
+    pub fn stringliteral_3(this: &NodeExtensions) -> Function;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral3(this: &NodeExtensions, value: &Function);
+    pub fn set_stringliteral_3(this: &NodeExtensions, value: &Function);
     #[wasm_bindgen(js_name = "require")]
     pub static REQUIRE: NodeRequire;
     pub type NodeModule;
@@ -261,372 +651,6 @@ extern "C" {
     pub fn constructor(this: &Buffer) -> JsValue;
     #[wasm_bindgen(method, setter)]
     pub fn set_constructor(this: &Buffer, value: &JsValue);
-    #[wasm_bindgen(constructor)]
-    pub fn new_buffer(str: &str, encoding: Option<&BufferEncoding>) -> Buffer;
-    #[wasm_bindgen(constructor)]
-    pub fn new_buffer2(size: f64) -> Buffer;
-    #[wasm_bindgen(constructor)]
-    pub fn new_buffer3(array: &Uint8Array) -> Buffer;
-    #[wasm_bindgen(constructor)]
-    pub fn new_buffer4(array_buffer: &JsValue) -> Buffer;
-    #[wasm_bindgen(constructor)]
-    pub fn new_buffer5(array: &Array) -> Buffer;
-    #[wasm_bindgen(constructor)]
-    pub fn new_buffer6(buffer: &Buffer) -> Buffer;
-    #[wasm_bindgen(method)]
-    pub fn from(
-        this: &Buffer,
-        array_buffer: &JsValue,
-        byte_offset: Option<f64>,
-        length: Option<f64>,
-    ) -> Buffer;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_from(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = from ) ]
-    pub fn from2(this: &Buffer, data: &Array) -> Buffer;
-    # [ wasm_bindgen ( method , setter , js_name = from ) ]
-    pub fn set_from2(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = from ) ]
-    pub fn from3(this: &Buffer, data: &Uint8Array) -> Buffer;
-    # [ wasm_bindgen ( method , setter , js_name = from ) ]
-    pub fn set_from3(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = from ) ]
-    pub fn from4(
-        this: &Buffer,
-        obj: &JsValue,
-        byte_offset: Option<f64>,
-        length: Option<f64>,
-    ) -> Buffer;
-    # [ wasm_bindgen ( method , setter , js_name = from ) ]
-    pub fn set_from4(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = from ) ]
-    pub fn from5(this: &Buffer, str: &str, encoding: Option<&BufferEncoding>) -> Buffer;
-    # [ wasm_bindgen ( method , setter , js_name = from ) ]
-    pub fn set_from5(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn of(this: &Buffer, items: &Array) -> Buffer;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_of(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = isBuffer ) ]
-    pub fn is_buffer(this: &Buffer, obj: &JsValue) -> bool;
-    # [ wasm_bindgen ( method , setter , js_name = isBuffer ) ]
-    pub fn set_is_buffer(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = isEncoding ) ]
-    pub fn is_encoding(this: &Buffer, encoding: &str) -> bool;
-    # [ wasm_bindgen ( method , setter , js_name = isEncoding ) ]
-    pub fn set_is_encoding(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = byteLength ) ]
-    pub fn byte_length(this: &Buffer, string: &JsValue, encoding: Option<&BufferEncoding>) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = byteLength ) ]
-    pub fn set_byte_length(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn concat(this: &Buffer, list: &Array, total_length: Option<f64>) -> Buffer;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_concat(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn compare(this: &Buffer, buf1: &Uint8Array, buf2: &Uint8Array) -> f64;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_compare(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn alloc(
-        this: &Buffer,
-        size: f64,
-        fill: &JsValue,
-        encoding: Option<&BufferEncoding>,
-    ) -> Buffer;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_alloc(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = allocUnsafe ) ]
-    pub fn alloc_unsafe(this: &Buffer, size: f64) -> Buffer;
-    # [ wasm_bindgen ( method , setter , js_name = allocUnsafe ) ]
-    pub fn set_alloc_unsafe(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = allocUnsafeSlow ) ]
-    pub fn alloc_unsafe_slow(this: &Buffer, size: f64) -> Buffer;
-    # [ wasm_bindgen ( method , setter , js_name = allocUnsafeSlow ) ]
-    pub fn set_alloc_unsafe_slow(this: &Buffer, value: &Function);
-    #[doc = "This is the number of bytes used to determine the size of pre-allocated, internal Buffer instances used for pooling. This value may be modified."]
-    # [ wasm_bindgen ( method , getter , js_name = poolSize ) ]
-    pub fn pool_size(this: &Buffer) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = poolSize ) ]
-    pub fn set_pool_size(this: &Buffer, value: f64);
-    #[wasm_bindgen(method)]
-    pub fn write(this: &Buffer, string: &str, encoding: Option<&BufferEncoding>) -> f64;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_write(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = write ) ]
-    pub fn write2(
-        this: &Buffer,
-        string: &str,
-        offset: f64,
-        encoding: Option<&BufferEncoding>,
-    ) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = write ) ]
-    pub fn set_write2(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = write ) ]
-    pub fn write3(
-        this: &Buffer,
-        string: &str,
-        offset: f64,
-        length: f64,
-        encoding: Option<&BufferEncoding>,
-    ) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = write ) ]
-    pub fn set_write3(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = toString ) ]
-    pub fn to_string(
-        this: &Buffer,
-        encoding: Option<&str>,
-        start: Option<f64>,
-        end: Option<f64>,
-    ) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = toString ) ]
-    pub fn set_to_string(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = toJSON ) ]
-    pub fn to_json(this: &Buffer) -> JsValue;
-    # [ wasm_bindgen ( method , setter , js_name = toJSON ) ]
-    pub fn set_to_json(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn equals(this: &Buffer, other_buffer: &Uint8Array) -> bool;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_equals(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = compare ) ]
-    pub fn compare2(
-        this: &Buffer,
-        other_buffer: &Uint8Array,
-        target_start: Option<f64>,
-        target_end: Option<f64>,
-        source_start: Option<f64>,
-        source_end: Option<f64>,
-    ) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = compare ) ]
-    pub fn set_compare2(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn copy(
-        this: &Buffer,
-        target_buffer: &Uint8Array,
-        target_start: Option<f64>,
-        source_start: Option<f64>,
-        source_end: Option<f64>,
-    ) -> f64;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_copy(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn slice(this: &Buffer, begin: Option<f64>, end: Option<f64>) -> Buffer;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_slice(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn subarray(this: &Buffer, begin: Option<f64>, end: Option<f64>) -> Buffer;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_subarray(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeUIntLE ) ]
-    pub fn write_u_int_le(this: &Buffer, value: f64, offset: f64, byte_length: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeUIntLE ) ]
-    pub fn set_write_u_int_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeUIntBE ) ]
-    pub fn write_u_int_be(this: &Buffer, value: f64, offset: f64, byte_length: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeUIntBE ) ]
-    pub fn set_write_u_int_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeIntLE ) ]
-    pub fn write_int_le(this: &Buffer, value: f64, offset: f64, byte_length: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeIntLE ) ]
-    pub fn set_write_int_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeIntBE ) ]
-    pub fn write_int_be(this: &Buffer, value: f64, offset: f64, byte_length: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeIntBE ) ]
-    pub fn set_write_int_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readUIntLE ) ]
-    pub fn read_u_int_le(this: &Buffer, offset: f64, byte_length: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readUIntLE ) ]
-    pub fn set_read_u_int_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readUIntBE ) ]
-    pub fn read_u_int_be(this: &Buffer, offset: f64, byte_length: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readUIntBE ) ]
-    pub fn set_read_u_int_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readIntLE ) ]
-    pub fn read_int_le(this: &Buffer, offset: f64, byte_length: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readIntLE ) ]
-    pub fn set_read_int_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readIntBE ) ]
-    pub fn read_int_be(this: &Buffer, offset: f64, byte_length: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readIntBE ) ]
-    pub fn set_read_int_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readUInt8 ) ]
-    pub fn read_u_int8(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readUInt8 ) ]
-    pub fn set_read_u_int8(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readUInt16LE ) ]
-    pub fn read_u_int16_le(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readUInt16LE ) ]
-    pub fn set_read_u_int16_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readUInt16BE ) ]
-    pub fn read_u_int16_be(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readUInt16BE ) ]
-    pub fn set_read_u_int16_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readUInt32LE ) ]
-    pub fn read_u_int32_le(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readUInt32LE ) ]
-    pub fn set_read_u_int32_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readUInt32BE ) ]
-    pub fn read_u_int32_be(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readUInt32BE ) ]
-    pub fn set_read_u_int32_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readInt8 ) ]
-    pub fn read_int8(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readInt8 ) ]
-    pub fn set_read_int8(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readInt16LE ) ]
-    pub fn read_int16_le(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readInt16LE ) ]
-    pub fn set_read_int16_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readInt16BE ) ]
-    pub fn read_int16_be(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readInt16BE ) ]
-    pub fn set_read_int16_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readInt32LE ) ]
-    pub fn read_int32_le(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readInt32LE ) ]
-    pub fn set_read_int32_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readInt32BE ) ]
-    pub fn read_int32_be(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readInt32BE ) ]
-    pub fn set_read_int32_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readFloatLE ) ]
-    pub fn read_float_le(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readFloatLE ) ]
-    pub fn set_read_float_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readFloatBE ) ]
-    pub fn read_float_be(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readFloatBE ) ]
-    pub fn set_read_float_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readDoubleLE ) ]
-    pub fn read_double_le(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readDoubleLE ) ]
-    pub fn set_read_double_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = readDoubleBE ) ]
-    pub fn read_double_be(this: &Buffer, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = readDoubleBE ) ]
-    pub fn set_read_double_be(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn reverse(this: &Buffer) -> Buffer;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_reverse(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn swap16(this: &Buffer) -> Buffer;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_swap16(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn swap32(this: &Buffer) -> Buffer;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_swap32(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn swap64(this: &Buffer) -> Buffer;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_swap64(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeUInt8 ) ]
-    pub fn write_u_int8(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeUInt8 ) ]
-    pub fn set_write_u_int8(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeUInt16LE ) ]
-    pub fn write_u_int16_le(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeUInt16LE ) ]
-    pub fn set_write_u_int16_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeUInt16BE ) ]
-    pub fn write_u_int16_be(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeUInt16BE ) ]
-    pub fn set_write_u_int16_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeUInt32LE ) ]
-    pub fn write_u_int32_le(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeUInt32LE ) ]
-    pub fn set_write_u_int32_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeUInt32BE ) ]
-    pub fn write_u_int32_be(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeUInt32BE ) ]
-    pub fn set_write_u_int32_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeInt8 ) ]
-    pub fn write_int8(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeInt8 ) ]
-    pub fn set_write_int8(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeInt16LE ) ]
-    pub fn write_int16_le(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeInt16LE ) ]
-    pub fn set_write_int16_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeInt16BE ) ]
-    pub fn write_int16_be(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeInt16BE ) ]
-    pub fn set_write_int16_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeInt32LE ) ]
-    pub fn write_int32_le(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeInt32LE ) ]
-    pub fn set_write_int32_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeInt32BE ) ]
-    pub fn write_int32_be(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeInt32BE ) ]
-    pub fn set_write_int32_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeFloatLE ) ]
-    pub fn write_float_le(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeFloatLE ) ]
-    pub fn set_write_float_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeFloatBE ) ]
-    pub fn write_float_be(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeFloatBE ) ]
-    pub fn set_write_float_be(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeDoubleLE ) ]
-    pub fn write_double_le(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeDoubleLE ) ]
-    pub fn set_write_double_le(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = writeDoubleBE ) ]
-    pub fn write_double_be(this: &Buffer, value: f64, offset: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = writeDoubleBE ) ]
-    pub fn set_write_double_be(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn fill(
-        this: &Buffer,
-        value: &JsValue,
-        offset: Option<f64>,
-        end: Option<f64>,
-        encoding: Option<&BufferEncoding>,
-    ) -> Buffer;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_fill(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = indexOf ) ]
-    pub fn index_of(
-        this: &Buffer,
-        value: &JsValue,
-        byte_offset: Option<f64>,
-        encoding: Option<&BufferEncoding>,
-    ) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = indexOf ) ]
-    pub fn set_index_of(this: &Buffer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = lastIndexOf ) ]
-    pub fn last_index_of(
-        this: &Buffer,
-        value: &JsValue,
-        byte_offset: Option<f64>,
-        encoding: Option<&BufferEncoding>,
-    ) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = lastIndexOf ) ]
-    pub fn set_last_index_of(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn entries(this: &Buffer) -> IterableIterator;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_entries(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn includes(
-        this: &Buffer,
-        value: &JsValue,
-        byte_offset: Option<f64>,
-        encoding: Option<&BufferEncoding>,
-    ) -> bool;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_includes(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn keys(this: &Buffer) -> IterableIterator;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_keys(this: &Buffer, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn values(this: &Buffer) -> IterableIterator;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_values(this: &Buffer, value: &Function);
     # [ wasm_bindgen ( method , js_name = readBigUInt64BE ) ]
     pub fn read_big_u_int64_be(this: &Buffer, offset: Option<f64>) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = readBigUInt64BE ) ]

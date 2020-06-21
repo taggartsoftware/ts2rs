@@ -14,17 +14,17 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_stringliteral(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral2(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_2(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral2(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_2(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral3(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_3(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral3(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_3(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral4(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_4(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral4(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_4(this: &IncomingHttpHeaders, value: Option<&str>);
     pub type StreamPriorityOptions;
     #[wasm_bindgen(method, getter)]
     pub fn exclusive(this: &StreamPriorityOptions) -> Option<bool>;
@@ -162,363 +162,363 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_2(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_2(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_3(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_3(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_4(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_4(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_5(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_5(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_6(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_6(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener7(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_7(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener7(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_7(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener8(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_8(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener8(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_8(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener9(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_9(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener9(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_9(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener10(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_10(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener10(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_10(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener11(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_11(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener11(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_11(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener12(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_12(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener12(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_12(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener13(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_13(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener13(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_13(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener14(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_14(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener14(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_14(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener15(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn add_listener_15(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener15(this: &Http2Stream, value: &Function);
+    pub fn set_add_listener_15(this: &Http2Stream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &Http2Stream, event: &JsValue) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &Http2Stream, event: &JsValue) -> bool;
+    pub fn emit_2(this: &Http2Stream, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &Http2Stream, value: &Function);
+    pub fn set_emit_2(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &Http2Stream, event: &JsValue, chunk: &JsValue) -> bool;
+    pub fn emit_3(this: &Http2Stream, event: &JsValue, chunk: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &Http2Stream, value: &Function);
+    pub fn set_emit_3(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &Http2Stream, event: &JsValue) -> bool;
+    pub fn emit_4(this: &Http2Stream, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &Http2Stream, value: &Function);
+    pub fn set_emit_4(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Http2Stream, event: &JsValue) -> bool;
+    pub fn emit_5(this: &Http2Stream, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &Http2Stream, value: &Function);
+    pub fn set_emit_5(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Http2Stream, event: &JsValue, err: &Error) -> bool;
+    pub fn emit_6(this: &Http2Stream, event: &JsValue, err: &Error) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit6(this: &Http2Stream, value: &Function);
+    pub fn set_emit_6(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &Http2Stream, event: &JsValue) -> bool;
+    pub fn emit_7(this: &Http2Stream, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit7(this: &Http2Stream, value: &Function);
+    pub fn set_emit_7(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit8(this: &Http2Stream, event: &JsValue, frame_type: f64, error_code: f64) -> bool;
+    pub fn emit_8(this: &Http2Stream, event: &JsValue, frame_type: f64, error_code: f64) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit8(this: &Http2Stream, value: &Function);
+    pub fn set_emit_8(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit9(this: &Http2Stream, event: &JsValue, src: &internal::Readable) -> bool;
+    pub fn emit_9(this: &Http2Stream, event: &JsValue, src: &internal::Readable) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit9(this: &Http2Stream, value: &Function);
+    pub fn set_emit_9(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit10(this: &Http2Stream, event: &JsValue, src: &internal::Readable) -> bool;
+    pub fn emit_10(this: &Http2Stream, event: &JsValue, src: &internal::Readable) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit10(this: &Http2Stream, value: &Function);
+    pub fn set_emit_10(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit11(this: &Http2Stream, event: &JsValue, code: f64) -> bool;
+    pub fn emit_11(this: &Http2Stream, event: &JsValue, code: f64) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit11(this: &Http2Stream, value: &Function);
+    pub fn set_emit_11(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit12(this: &Http2Stream, event: &JsValue) -> bool;
+    pub fn emit_12(this: &Http2Stream, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit12(this: &Http2Stream, value: &Function);
+    pub fn set_emit_12(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit13(
+    pub fn emit_13(
         this: &Http2Stream,
         event: &JsValue,
         trailers: &IncomingHttpHeaders,
         flags: f64,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit13(this: &Http2Stream, value: &Function);
+    pub fn set_emit_13(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit14(this: &Http2Stream, event: &JsValue) -> bool;
+    pub fn emit_14(this: &Http2Stream, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit14(this: &Http2Stream, value: &Function);
+    pub fn set_emit_14(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit15(this: &Http2Stream, event: &JsValue, args: &Array) -> bool;
+    pub fn emit_15(this: &Http2Stream, event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit15(this: &Http2Stream, value: &Function);
+    pub fn set_emit_15(this: &Http2Stream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_2(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &Http2Stream, value: &Function);
+    pub fn set_on_2(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_3(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &Http2Stream, value: &Function);
+    pub fn set_on_3(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_4(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &Http2Stream, value: &Function);
+    pub fn set_on_4(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_5(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &Http2Stream, value: &Function);
+    pub fn set_on_5(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_6(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &Http2Stream, value: &Function);
+    pub fn set_on_6(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on7(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_7(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on7(this: &Http2Stream, value: &Function);
+    pub fn set_on_7(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on8(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_8(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on8(this: &Http2Stream, value: &Function);
+    pub fn set_on_8(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on9(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_9(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on9(this: &Http2Stream, value: &Function);
+    pub fn set_on_9(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on10(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_10(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on10(this: &Http2Stream, value: &Function);
+    pub fn set_on_10(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on11(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_11(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on11(this: &Http2Stream, value: &Function);
+    pub fn set_on_11(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on12(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_12(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on12(this: &Http2Stream, value: &Function);
+    pub fn set_on_12(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on13(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_13(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on13(this: &Http2Stream, value: &Function);
+    pub fn set_on_13(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on14(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_14(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on14(this: &Http2Stream, value: &Function);
+    pub fn set_on_14(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on15(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn on_15(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on15(this: &Http2Stream, value: &Function);
+    pub fn set_on_15(this: &Http2Stream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_2(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &Http2Stream, value: &Function);
+    pub fn set_once_2(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_3(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &Http2Stream, value: &Function);
+    pub fn set_once_3(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_4(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &Http2Stream, value: &Function);
+    pub fn set_once_4(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_5(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &Http2Stream, value: &Function);
+    pub fn set_once_5(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_6(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &Http2Stream, value: &Function);
+    pub fn set_once_6(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once7(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_7(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once7(this: &Http2Stream, value: &Function);
+    pub fn set_once_7(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once8(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_8(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once8(this: &Http2Stream, value: &Function);
+    pub fn set_once_8(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once9(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_9(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once9(this: &Http2Stream, value: &Function);
+    pub fn set_once_9(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once10(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_10(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once10(this: &Http2Stream, value: &Function);
+    pub fn set_once_10(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once11(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_11(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once11(this: &Http2Stream, value: &Function);
+    pub fn set_once_11(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once12(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_12(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once12(this: &Http2Stream, value: &Function);
+    pub fn set_once_12(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once13(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_13(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once13(this: &Http2Stream, value: &Function);
+    pub fn set_once_13(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once14(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_14(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once14(this: &Http2Stream, value: &Function);
+    pub fn set_once_14(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once15(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
+    pub fn once_15(this: &Http2Stream, event: &JsValue, listener: &JsValue) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once15(this: &Http2Stream, value: &Function);
+    pub fn set_once_15(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &Http2Stream, event: &JsValue, listener: &JsValue)
     -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_2(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(
+    pub fn prepend_listener_3(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_3(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(
+    pub fn prepend_listener_4(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_4(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(
+    pub fn prepend_listener_5(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_5(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(
+    pub fn prepend_listener_6(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_6(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener7(
+    pub fn prepend_listener_7(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener7(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_7(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener8(
+    pub fn prepend_listener_8(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener8(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_8(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener9(
+    pub fn prepend_listener_9(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener9(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_9(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener10(
+    pub fn prepend_listener_10(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener10(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_10(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener11(
+    pub fn prepend_listener_11(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener11(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_11(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener12(
+    pub fn prepend_listener_12(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener12(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_12(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener13(
+    pub fn prepend_listener_13(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener13(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_13(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener14(
+    pub fn prepend_listener_14(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener14(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_14(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener15(
+    pub fn prepend_listener_15(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener15(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_listener_15(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &Http2Stream,
@@ -528,117 +528,117 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(
+    pub fn prepend_once_listener_5(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(
+    pub fn prepend_once_listener_6(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener7(
+    pub fn prepend_once_listener_7(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener7(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_7(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener8(
+    pub fn prepend_once_listener_8(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener8(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_8(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener9(
+    pub fn prepend_once_listener_9(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener9(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_9(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener10(
+    pub fn prepend_once_listener_10(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener10(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_10(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener11(
+    pub fn prepend_once_listener_11(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener11(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_11(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener12(
+    pub fn prepend_once_listener_12(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener12(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_12(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener13(
+    pub fn prepend_once_listener_13(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener13(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_13(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener14(
+    pub fn prepend_once_listener_14(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener14(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_14(this: &Http2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener15(
+    pub fn prepend_once_listener_15(
         this: &Http2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener15(this: &Http2Stream, value: &Function);
+    pub fn set_prepend_once_listener_15(this: &Http2Stream, value: &Function);
     pub type ClientHttp2Stream;
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(
@@ -649,119 +649,125 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(
+    pub fn add_listener_2(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_add_listener_2(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(
+    pub fn add_listener_3(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_add_listener_3(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(
+    pub fn add_listener_4(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_add_listener_4(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(
+    pub fn add_listener_5(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_add_listener_5(this: &ClientHttp2Stream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &ClientHttp2Stream, event: &JsValue) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &ClientHttp2Stream, event: &JsValue, headers: &JsValue, flags: f64) -> bool;
+    pub fn emit_2(this: &ClientHttp2Stream, event: &JsValue, headers: &JsValue, flags: f64)
+    -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_emit_2(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(
+    pub fn emit_3(
         this: &ClientHttp2Stream,
         event: &JsValue,
         headers: &IncomingHttpHeaders,
         flags: f64,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_emit_3(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &ClientHttp2Stream, event: &JsValue, headers: &JsValue, flags: f64) -> bool;
+    pub fn emit_4(this: &ClientHttp2Stream, event: &JsValue, headers: &JsValue, flags: f64)
+    -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_emit_4(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &ClientHttp2Stream, event: &JsValue, args: &Array) -> bool;
+    pub fn emit_5(this: &ClientHttp2Stream, event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_emit_5(this: &ClientHttp2Stream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &ClientHttp2Stream, event: &JsValue, listener: &JsValue) -> ClientHttp2Stream;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &ClientHttp2Stream, event: &JsValue, listener: &JsValue) -> ClientHttp2Stream;
+    pub fn on_2(this: &ClientHttp2Stream, event: &JsValue, listener: &JsValue)
+    -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_on_2(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &ClientHttp2Stream, event: &JsValue, listener: &JsValue) -> ClientHttp2Stream;
+    pub fn on_3(this: &ClientHttp2Stream, event: &JsValue, listener: &JsValue)
+    -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_on_3(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &ClientHttp2Stream, event: &JsValue, listener: &JsValue) -> ClientHttp2Stream;
+    pub fn on_4(this: &ClientHttp2Stream, event: &JsValue, listener: &JsValue)
+    -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_on_4(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &ClientHttp2Stream, event: &JsValue, listener: &JsValue) -> ClientHttp2Stream;
+    pub fn on_5(this: &ClientHttp2Stream, event: &JsValue, listener: &JsValue)
+    -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_on_5(this: &ClientHttp2Stream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &ClientHttp2Stream, event: &JsValue, listener: &JsValue)
     -> ClientHttp2Stream;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(
+    pub fn once_2(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_once_2(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(
+    pub fn once_3(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_once_3(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(
+    pub fn once_4(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_once_4(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(
+    pub fn once_5(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_once_5(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(
         this: &ClientHttp2Stream,
@@ -771,37 +777,37 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_prepend_listener_2(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(
+    pub fn prepend_listener_3(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_prepend_listener_3(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(
+    pub fn prepend_listener_4(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_prepend_listener_4(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(
+    pub fn prepend_listener_5(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_prepend_listener_5(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &ClientHttp2Stream,
@@ -811,37 +817,37 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &ClientHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(
+    pub fn prepend_once_listener_5(
         this: &ClientHttp2Stream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Stream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &ClientHttp2Stream, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &ClientHttp2Stream, value: &Function);
     pub type ServerHttp2Stream;
     # [ wasm_bindgen ( method , getter , js_name = headersSent ) ]
     pub fn headers_sent(this: &ServerHttp2Stream) -> bool;
@@ -860,14 +866,14 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = pushStream ) ]
     pub fn set_push_stream(this: &ServerHttp2Stream, value: &Function);
     # [ wasm_bindgen ( method , js_name = pushStream ) ]
-    pub fn push_stream2(
+    pub fn push_stream_2(
         this: &ServerHttp2Stream,
         headers: &crate::http::OutgoingHttpHeaders,
         options: Option<&StreamPriorityOptions>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = pushStream ) ]
-    pub fn set_push_stream2(this: &ServerHttp2Stream, value: &Function);
+    pub fn set_push_stream_2(this: &ServerHttp2Stream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn respond(
         this: &ServerHttp2Stream,
@@ -1028,13 +1034,13 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_ping(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = ping ) ]
-    pub fn ping2(
+    pub fn ping_2(
         this: &Http2Session,
         payload: &node_js::ArrayBufferView,
         callback: &JsValue,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = ping ) ]
-    pub fn set_ping2(this: &Http2Session, value: &Function);
+    pub fn set_ping_2(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = ref ) ]
     pub fn ref_(this: &Http2Session);
     # [ wasm_bindgen ( method , setter , js_name = ref ) ]
@@ -1056,47 +1062,55 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn add_listener_2(this: &Http2Session, event: &JsValue, listener: &JsValue)
+    -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &Http2Session, value: &Function);
+    pub fn set_add_listener_2(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn add_listener_3(this: &Http2Session, event: &JsValue, listener: &JsValue)
+    -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &Http2Session, value: &Function);
+    pub fn set_add_listener_3(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn add_listener_4(this: &Http2Session, event: &JsValue, listener: &JsValue)
+    -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &Http2Session, value: &Function);
+    pub fn set_add_listener_4(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn add_listener_5(this: &Http2Session, event: &JsValue, listener: &JsValue)
+    -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &Http2Session, value: &Function);
+    pub fn set_add_listener_5(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn add_listener_6(this: &Http2Session, event: &JsValue, listener: &JsValue)
+    -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &Http2Session, value: &Function);
+    pub fn set_add_listener_6(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener7(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn add_listener_7(this: &Http2Session, event: &JsValue, listener: &JsValue)
+    -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener7(this: &Http2Session, value: &Function);
+    pub fn set_add_listener_7(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener8(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn add_listener_8(this: &Http2Session, event: &JsValue, listener: &JsValue)
+    -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener8(this: &Http2Session, value: &Function);
+    pub fn set_add_listener_8(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener9(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn add_listener_9(this: &Http2Session, event: &JsValue, listener: &JsValue)
+    -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener9(this: &Http2Session, value: &Function);
+    pub fn set_add_listener_9(this: &Http2Session, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &Http2Session, event: &JsValue) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &Http2Session, event: &JsValue, err: &Error) -> bool;
+    pub fn emit_2(this: &Http2Session, event: &JsValue, err: &Error) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &Http2Session, value: &Function);
+    pub fn set_emit_2(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(
+    pub fn emit_3(
         this: &Http2Session,
         event: &JsValue,
         frame_type: f64,
@@ -1104,9 +1118,9 @@ extern "C" {
         stream_id: f64,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &Http2Session, value: &Function);
+    pub fn set_emit_3(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(
+    pub fn emit_4(
         this: &Http2Session,
         event: &JsValue,
         error_code: f64,
@@ -1114,99 +1128,99 @@ extern "C" {
         opaque_data: &Buffer,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &Http2Session, value: &Function);
+    pub fn set_emit_4(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Http2Session, event: &JsValue, settings: &Settings) -> bool;
+    pub fn emit_5(this: &Http2Session, event: &JsValue, settings: &Settings) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &Http2Session, value: &Function);
+    pub fn set_emit_5(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Http2Session, event: &JsValue) -> bool;
+    pub fn emit_6(this: &Http2Session, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit6(this: &Http2Session, value: &Function);
+    pub fn set_emit_6(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &Http2Session, event: &JsValue, settings: &Settings) -> bool;
+    pub fn emit_7(this: &Http2Session, event: &JsValue, settings: &Settings) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit7(this: &Http2Session, value: &Function);
+    pub fn set_emit_7(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit8(this: &Http2Session, event: &JsValue) -> bool;
+    pub fn emit_8(this: &Http2Session, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit8(this: &Http2Session, value: &Function);
+    pub fn set_emit_8(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit9(this: &Http2Session, event: &JsValue, args: &Array) -> bool;
+    pub fn emit_9(this: &Http2Session, event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit9(this: &Http2Session, value: &Function);
+    pub fn set_emit_9(this: &Http2Session, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn on_2(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &Http2Session, value: &Function);
+    pub fn set_on_2(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn on_3(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &Http2Session, value: &Function);
+    pub fn set_on_3(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn on_4(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &Http2Session, value: &Function);
+    pub fn set_on_4(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn on_5(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &Http2Session, value: &Function);
+    pub fn set_on_5(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn on_6(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &Http2Session, value: &Function);
+    pub fn set_on_6(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on7(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn on_7(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on7(this: &Http2Session, value: &Function);
+    pub fn set_on_7(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on8(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn on_8(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on8(this: &Http2Session, value: &Function);
+    pub fn set_on_8(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on9(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn on_9(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on9(this: &Http2Session, value: &Function);
+    pub fn set_on_9(this: &Http2Session, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn once_2(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &Http2Session, value: &Function);
+    pub fn set_once_2(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn once_3(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &Http2Session, value: &Function);
+    pub fn set_once_3(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn once_4(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &Http2Session, value: &Function);
+    pub fn set_once_4(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn once_5(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &Http2Session, value: &Function);
+    pub fn set_once_5(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn once_6(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &Http2Session, value: &Function);
+    pub fn set_once_6(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once7(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn once_7(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once7(this: &Http2Session, value: &Function);
+    pub fn set_once_7(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once8(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn once_8(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once8(this: &Http2Session, value: &Function);
+    pub fn set_once_8(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once9(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
+    pub fn once_9(this: &Http2Session, event: &JsValue, listener: &JsValue) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once9(this: &Http2Session, value: &Function);
+    pub fn set_once_9(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(
         this: &Http2Session,
@@ -1216,69 +1230,69 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &Http2Session, value: &Function);
+    pub fn set_prepend_listener_2(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(
+    pub fn prepend_listener_3(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &Http2Session, value: &Function);
+    pub fn set_prepend_listener_3(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(
+    pub fn prepend_listener_4(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &Http2Session, value: &Function);
+    pub fn set_prepend_listener_4(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(
+    pub fn prepend_listener_5(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &Http2Session, value: &Function);
+    pub fn set_prepend_listener_5(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(
+    pub fn prepend_listener_6(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &Http2Session, value: &Function);
+    pub fn set_prepend_listener_6(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener7(
+    pub fn prepend_listener_7(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener7(this: &Http2Session, value: &Function);
+    pub fn set_prepend_listener_7(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener8(
+    pub fn prepend_listener_8(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener8(this: &Http2Session, value: &Function);
+    pub fn set_prepend_listener_8(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener9(
+    pub fn prepend_listener_9(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener9(this: &Http2Session, value: &Function);
+    pub fn set_prepend_listener_9(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &Http2Session,
@@ -1288,69 +1302,69 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &Http2Session, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &Http2Session, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &Http2Session, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(
+    pub fn prepend_once_listener_5(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &Http2Session, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(
+    pub fn prepend_once_listener_6(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &Http2Session, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener7(
+    pub fn prepend_once_listener_7(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener7(this: &Http2Session, value: &Function);
+    pub fn set_prepend_once_listener_7(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener8(
+    pub fn prepend_once_listener_8(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener8(this: &Http2Session, value: &Function);
+    pub fn set_prepend_once_listener_8(this: &Http2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener9(
+    pub fn prepend_once_listener_9(
         this: &Http2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener9(this: &Http2Session, value: &Function);
+    pub fn set_prepend_once_listener_9(this: &Http2Session, value: &Function);
     pub type ClientHttp2Session;
     #[wasm_bindgen(method)]
     pub fn request(
@@ -1369,37 +1383,37 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(
+    pub fn add_listener_2(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &ClientHttp2Session, value: &Function);
+    pub fn set_add_listener_2(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(
+    pub fn add_listener_3(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &ClientHttp2Session, value: &Function);
+    pub fn set_add_listener_3(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(
+    pub fn add_listener_4(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &ClientHttp2Session, value: &Function);
+    pub fn set_add_listener_4(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(
+    pub fn add_listener_5(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &ClientHttp2Session, value: &Function);
+    pub fn set_add_listener_5(this: &ClientHttp2Session, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(
         this: &ClientHttp2Session,
@@ -1411,20 +1425,20 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &ClientHttp2Session, event: &JsValue, origins: &Array) -> bool;
+    pub fn emit_2(this: &ClientHttp2Session, event: &JsValue, origins: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &ClientHttp2Session, value: &Function);
+    pub fn set_emit_2(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(
+    pub fn emit_3(
         this: &ClientHttp2Session,
         event: &JsValue,
         session: &ClientHttp2Session,
         socket: &JsValue,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &ClientHttp2Session, value: &Function);
+    pub fn set_emit_3(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(
+    pub fn emit_4(
         this: &ClientHttp2Session,
         event: &JsValue,
         stream: &ClientHttp2Stream,
@@ -1432,48 +1446,48 @@ extern "C" {
         flags: f64,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &ClientHttp2Session, value: &Function);
+    pub fn set_emit_4(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &ClientHttp2Session, event: &JsValue, args: &Array) -> bool;
+    pub fn emit_5(this: &ClientHttp2Session, event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &ClientHttp2Session, value: &Function);
+    pub fn set_emit_5(this: &ClientHttp2Session, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &ClientHttp2Session, event: &JsValue, listener: &JsValue)
     -> ClientHttp2Session;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(
+    pub fn on_2(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &ClientHttp2Session, value: &Function);
+    pub fn set_on_2(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(
+    pub fn on_3(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &ClientHttp2Session, value: &Function);
+    pub fn set_on_3(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(
+    pub fn on_4(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &ClientHttp2Session, value: &Function);
+    pub fn set_on_4(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(
+    pub fn on_5(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &ClientHttp2Session, value: &Function);
+    pub fn set_on_5(this: &ClientHttp2Session, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(
         this: &ClientHttp2Session,
@@ -1483,37 +1497,37 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(
+    pub fn once_2(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &ClientHttp2Session, value: &Function);
+    pub fn set_once_2(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(
+    pub fn once_3(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &ClientHttp2Session, value: &Function);
+    pub fn set_once_3(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(
+    pub fn once_4(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &ClientHttp2Session, value: &Function);
+    pub fn set_once_4(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(
+    pub fn once_5(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &ClientHttp2Session, value: &Function);
+    pub fn set_once_5(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(
         this: &ClientHttp2Session,
@@ -1523,37 +1537,37 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &ClientHttp2Session, value: &Function);
+    pub fn set_prepend_listener_2(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(
+    pub fn prepend_listener_3(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &ClientHttp2Session, value: &Function);
+    pub fn set_prepend_listener_3(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(
+    pub fn prepend_listener_4(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &ClientHttp2Session, value: &Function);
+    pub fn set_prepend_listener_4(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(
+    pub fn prepend_listener_5(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &ClientHttp2Session, value: &Function);
+    pub fn set_prepend_listener_5(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &ClientHttp2Session,
@@ -1563,37 +1577,37 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &ClientHttp2Session, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &ClientHttp2Session, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &ClientHttp2Session, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &ClientHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(
+    pub fn prepend_once_listener_5(
         this: &ClientHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &ClientHttp2Session, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &ClientHttp2Session, value: &Function);
     pub type AlternativeServiceOptions;
     #[wasm_bindgen(method, getter)]
     pub fn origin(this: &AlternativeServiceOptions) -> JsValue;
@@ -1619,21 +1633,21 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(
+    pub fn add_listener_2(
         this: &ServerHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ServerHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &ServerHttp2Session, value: &Function);
+    pub fn set_add_listener_2(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(
+    pub fn add_listener_3(
         this: &ServerHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ServerHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &ServerHttp2Session, value: &Function);
+    pub fn set_add_listener_3(this: &ServerHttp2Session, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(
         this: &ServerHttp2Session,
@@ -1644,7 +1658,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(
+    pub fn emit_2(
         this: &ServerHttp2Session,
         event: &JsValue,
         stream: &ServerHttp2Stream,
@@ -1652,32 +1666,32 @@ extern "C" {
         flags: f64,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &ServerHttp2Session, value: &Function);
+    pub fn set_emit_2(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &ServerHttp2Session, event: &JsValue, args: &Array) -> bool;
+    pub fn emit_3(this: &ServerHttp2Session, event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &ServerHttp2Session, value: &Function);
+    pub fn set_emit_3(this: &ServerHttp2Session, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &ServerHttp2Session, event: &JsValue, listener: &JsValue)
     -> ServerHttp2Session;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(
+    pub fn on_2(
         this: &ServerHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ServerHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &ServerHttp2Session, value: &Function);
+    pub fn set_on_2(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(
+    pub fn on_3(
         this: &ServerHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ServerHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &ServerHttp2Session, value: &Function);
+    pub fn set_on_3(this: &ServerHttp2Session, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(
         this: &ServerHttp2Session,
@@ -1687,21 +1701,21 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(
+    pub fn once_2(
         this: &ServerHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ServerHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &ServerHttp2Session, value: &Function);
+    pub fn set_once_2(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(
+    pub fn once_3(
         this: &ServerHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ServerHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &ServerHttp2Session, value: &Function);
+    pub fn set_once_3(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(
         this: &ServerHttp2Session,
@@ -1711,21 +1725,21 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &ServerHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ServerHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &ServerHttp2Session, value: &Function);
+    pub fn set_prepend_listener_2(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(
+    pub fn prepend_listener_3(
         this: &ServerHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ServerHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &ServerHttp2Session, value: &Function);
+    pub fn set_prepend_listener_3(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &ServerHttp2Session,
@@ -1735,21 +1749,21 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &ServerHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ServerHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &ServerHttp2Session, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &ServerHttp2Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &ServerHttp2Session,
         event: &JsValue,
         listener: &JsValue,
     ) -> ServerHttp2Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &ServerHttp2Session, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &ServerHttp2Session, value: &Function);
     pub type SessionOptions;
     # [ wasm_bindgen ( method , getter , js_name = maxDeflateDynamicTableSize ) ]
     pub fn max_deflate_dynamic_table_size(this: &SessionOptions) -> Option<f64>;
@@ -1839,29 +1853,29 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn add_listener_2(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &Http2Server, value: &Function);
+    pub fn set_add_listener_2(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn add_listener_3(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &Http2Server, value: &Function);
+    pub fn set_add_listener_3(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn add_listener_4(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &Http2Server, value: &Function);
+    pub fn set_add_listener_4(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn add_listener_5(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &Http2Server, value: &Function);
+    pub fn set_add_listener_5(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn add_listener_6(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &Http2Server, value: &Function);
+    pub fn set_add_listener_6(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener7(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn add_listener_7(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener7(this: &Http2Server, value: &Function);
+    pub fn set_add_listener_7(this: &Http2Server, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(
         this: &Http2Server,
@@ -1872,24 +1886,24 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(
+    pub fn emit_2(
         this: &Http2Server,
         event: &JsValue,
         request: &Http2ServerRequest,
         response: &Http2ServerResponse,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &Http2Server, value: &Function);
+    pub fn set_emit_2(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &Http2Server, event: &JsValue, session: &ServerHttp2Session) -> bool;
+    pub fn emit_3(this: &Http2Server, event: &JsValue, session: &ServerHttp2Session) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &Http2Server, value: &Function);
+    pub fn set_emit_3(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &Http2Server, event: &JsValue, err: &Error) -> bool;
+    pub fn emit_4(this: &Http2Server, event: &JsValue, err: &Error) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &Http2Server, value: &Function);
+    pub fn set_emit_4(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(
+    pub fn emit_5(
         this: &Http2Server,
         event: &JsValue,
         stream: &ServerHttp2Stream,
@@ -1897,124 +1911,124 @@ extern "C" {
         flags: f64,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &Http2Server, value: &Function);
+    pub fn set_emit_5(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Http2Server, event: &JsValue) -> bool;
+    pub fn emit_6(this: &Http2Server, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit6(this: &Http2Server, value: &Function);
+    pub fn set_emit_6(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &Http2Server, event: &JsValue, args: &Array) -> bool;
+    pub fn emit_7(this: &Http2Server, event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit7(this: &Http2Server, value: &Function);
+    pub fn set_emit_7(this: &Http2Server, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn on_2(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &Http2Server, value: &Function);
+    pub fn set_on_2(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn on_3(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &Http2Server, value: &Function);
+    pub fn set_on_3(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn on_4(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &Http2Server, value: &Function);
+    pub fn set_on_4(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn on_5(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &Http2Server, value: &Function);
+    pub fn set_on_5(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn on_6(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &Http2Server, value: &Function);
+    pub fn set_on_6(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on7(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn on_7(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on7(this: &Http2Server, value: &Function);
+    pub fn set_on_7(this: &Http2Server, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn once_2(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &Http2Server, value: &Function);
+    pub fn set_once_2(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn once_3(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &Http2Server, value: &Function);
+    pub fn set_once_3(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn once_4(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &Http2Server, value: &Function);
+    pub fn set_once_4(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn once_5(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &Http2Server, value: &Function);
+    pub fn set_once_5(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn once_6(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &Http2Server, value: &Function);
+    pub fn set_once_6(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once7(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
+    pub fn once_7(this: &Http2Server, event: &JsValue, listener: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once7(this: &Http2Server, value: &Function);
+    pub fn set_once_7(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &Http2Server, event: &JsValue, listener: &JsValue)
     -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &Http2Server,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &Http2Server, value: &Function);
+    pub fn set_prepend_listener_2(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(
+    pub fn prepend_listener_3(
         this: &Http2Server,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &Http2Server, value: &Function);
+    pub fn set_prepend_listener_3(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(
+    pub fn prepend_listener_4(
         this: &Http2Server,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &Http2Server, value: &Function);
+    pub fn set_prepend_listener_4(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(
+    pub fn prepend_listener_5(
         this: &Http2Server,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &Http2Server, value: &Function);
+    pub fn set_prepend_listener_5(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(
+    pub fn prepend_listener_6(
         this: &Http2Server,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &Http2Server, value: &Function);
+    pub fn set_prepend_listener_6(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener7(
+    pub fn prepend_listener_7(
         this: &Http2Server,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener7(this: &Http2Server, value: &Function);
+    pub fn set_prepend_listener_7(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &Http2Server,
@@ -2024,53 +2038,53 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &Http2Server,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &Http2Server, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &Http2Server,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &Http2Server, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &Http2Server,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &Http2Server, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(
+    pub fn prepend_once_listener_5(
         this: &Http2Server,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &Http2Server, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(
+    pub fn prepend_once_listener_6(
         this: &Http2Server,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &Http2Server, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener7(
+    pub fn prepend_once_listener_7(
         this: &Http2Server,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener7(this: &Http2Server, value: &Function);
+    pub fn set_prepend_once_listener_7(this: &Http2Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = setTimeout ) ]
     pub fn set_timeout(this: &Http2Server, msec: Option<f64>, callback: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( method , setter , js_name = setTimeout ) ]
@@ -2085,61 +2099,61 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(
+    pub fn add_listener_2(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &Http2SecureServer, value: &Function);
+    pub fn set_add_listener_2(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(
+    pub fn add_listener_3(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &Http2SecureServer, value: &Function);
+    pub fn set_add_listener_3(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(
+    pub fn add_listener_4(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &Http2SecureServer, value: &Function);
+    pub fn set_add_listener_4(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(
+    pub fn add_listener_5(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &Http2SecureServer, value: &Function);
+    pub fn set_add_listener_5(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(
+    pub fn add_listener_6(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &Http2SecureServer, value: &Function);
+    pub fn set_add_listener_6(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener7(
+    pub fn add_listener_7(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener7(this: &Http2SecureServer, value: &Function);
+    pub fn set_add_listener_7(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener8(
+    pub fn add_listener_8(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener8(this: &Http2SecureServer, value: &Function);
+    pub fn set_add_listener_8(this: &Http2SecureServer, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(
         this: &Http2SecureServer,
@@ -2150,24 +2164,24 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(
+    pub fn emit_2(
         this: &Http2SecureServer,
         event: &JsValue,
         request: &Http2ServerRequest,
         response: &Http2ServerResponse,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &Http2SecureServer, value: &Function);
+    pub fn set_emit_2(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &Http2SecureServer, event: &JsValue, session: &ServerHttp2Session) -> bool;
+    pub fn emit_3(this: &Http2SecureServer, event: &JsValue, session: &ServerHttp2Session) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &Http2SecureServer, value: &Function);
+    pub fn set_emit_3(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &Http2SecureServer, event: &JsValue, err: &Error) -> bool;
+    pub fn emit_4(this: &Http2SecureServer, event: &JsValue, err: &Error) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &Http2SecureServer, value: &Function);
+    pub fn set_emit_4(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(
+    pub fn emit_5(
         this: &Http2SecureServer,
         event: &JsValue,
         stream: &ServerHttp2Stream,
@@ -2175,113 +2189,123 @@ extern "C" {
         flags: f64,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &Http2SecureServer, value: &Function);
+    pub fn set_emit_5(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Http2SecureServer, event: &JsValue) -> bool;
+    pub fn emit_6(this: &Http2SecureServer, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit6(this: &Http2SecureServer, value: &Function);
+    pub fn set_emit_6(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &Http2SecureServer, event: &JsValue, socket: &crate::tls::TLSSocket)
-    -> bool;
+    pub fn emit_7(
+        this: &Http2SecureServer,
+        event: &JsValue,
+        socket: &crate::tls::TLSSocket,
+    ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit7(this: &Http2SecureServer, value: &Function);
+    pub fn set_emit_7(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit8(this: &Http2SecureServer, event: &JsValue, args: &Array) -> bool;
+    pub fn emit_8(this: &Http2SecureServer, event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit8(this: &Http2SecureServer, value: &Function);
+    pub fn set_emit_8(this: &Http2SecureServer, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &Http2SecureServer, event: &JsValue, listener: &JsValue) -> Http2SecureServer;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &Http2SecureServer, event: &JsValue, listener: &JsValue) -> Http2SecureServer;
+    pub fn on_2(this: &Http2SecureServer, event: &JsValue, listener: &JsValue)
+    -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &Http2SecureServer, value: &Function);
+    pub fn set_on_2(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &Http2SecureServer, event: &JsValue, listener: &JsValue) -> Http2SecureServer;
+    pub fn on_3(this: &Http2SecureServer, event: &JsValue, listener: &JsValue)
+    -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &Http2SecureServer, value: &Function);
+    pub fn set_on_3(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &Http2SecureServer, event: &JsValue, listener: &JsValue) -> Http2SecureServer;
+    pub fn on_4(this: &Http2SecureServer, event: &JsValue, listener: &JsValue)
+    -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &Http2SecureServer, value: &Function);
+    pub fn set_on_4(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &Http2SecureServer, event: &JsValue, listener: &JsValue) -> Http2SecureServer;
+    pub fn on_5(this: &Http2SecureServer, event: &JsValue, listener: &JsValue)
+    -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &Http2SecureServer, value: &Function);
+    pub fn set_on_5(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(this: &Http2SecureServer, event: &JsValue, listener: &JsValue) -> Http2SecureServer;
+    pub fn on_6(this: &Http2SecureServer, event: &JsValue, listener: &JsValue)
+    -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &Http2SecureServer, value: &Function);
+    pub fn set_on_6(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on7(this: &Http2SecureServer, event: &JsValue, listener: &JsValue) -> Http2SecureServer;
+    pub fn on_7(this: &Http2SecureServer, event: &JsValue, listener: &JsValue)
+    -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on7(this: &Http2SecureServer, value: &Function);
+    pub fn set_on_7(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on8(this: &Http2SecureServer, event: &JsValue, listener: &JsValue) -> Http2SecureServer;
+    pub fn on_8(this: &Http2SecureServer, event: &JsValue, listener: &JsValue)
+    -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on8(this: &Http2SecureServer, value: &Function);
+    pub fn set_on_8(this: &Http2SecureServer, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &Http2SecureServer, event: &JsValue, listener: &JsValue)
     -> Http2SecureServer;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(
+    pub fn once_2(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &Http2SecureServer, value: &Function);
+    pub fn set_once_2(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(
+    pub fn once_3(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &Http2SecureServer, value: &Function);
+    pub fn set_once_3(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(
+    pub fn once_4(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &Http2SecureServer, value: &Function);
+    pub fn set_once_4(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(
+    pub fn once_5(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &Http2SecureServer, value: &Function);
+    pub fn set_once_5(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(
+    pub fn once_6(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &Http2SecureServer, value: &Function);
+    pub fn set_once_6(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once7(
+    pub fn once_7(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once7(this: &Http2SecureServer, value: &Function);
+    pub fn set_once_7(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once8(
+    pub fn once_8(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once8(this: &Http2SecureServer, value: &Function);
+    pub fn set_once_8(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(
         this: &Http2SecureServer,
@@ -2291,61 +2315,61 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_listener_2(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(
+    pub fn prepend_listener_3(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_listener_3(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(
+    pub fn prepend_listener_4(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_listener_4(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(
+    pub fn prepend_listener_5(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_listener_5(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(
+    pub fn prepend_listener_6(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_listener_6(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener7(
+    pub fn prepend_listener_7(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener7(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_listener_7(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener8(
+    pub fn prepend_listener_8(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener8(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_listener_8(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &Http2SecureServer,
@@ -2355,61 +2379,61 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(
+    pub fn prepend_once_listener_5(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(
+    pub fn prepend_once_listener_6(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener7(
+    pub fn prepend_once_listener_7(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener7(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_once_listener_7(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener8(
+    pub fn prepend_once_listener_8(
         this: &Http2SecureServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2SecureServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener8(this: &Http2SecureServer, value: &Function);
+    pub fn set_prepend_once_listener_8(this: &Http2SecureServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = setTimeout ) ]
     pub fn set_timeout(
         this: &Http2SecureServer,
@@ -2467,134 +2491,134 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(
+    pub fn add_listener_2(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &Http2ServerRequest, value: &Function);
+    pub fn set_add_listener_2(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(
+    pub fn add_listener_3(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &Http2ServerRequest, value: &Function);
+    pub fn set_add_listener_3(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(
+    pub fn add_listener_4(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &Http2ServerRequest, value: &Function);
+    pub fn set_add_listener_4(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(
+    pub fn add_listener_5(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &Http2ServerRequest, value: &Function);
+    pub fn set_add_listener_5(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(
+    pub fn add_listener_6(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &Http2ServerRequest, value: &Function);
+    pub fn set_add_listener_6(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener7(
+    pub fn add_listener_7(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener7(this: &Http2ServerRequest, value: &Function);
+    pub fn set_add_listener_7(this: &Http2ServerRequest, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &Http2ServerRequest, event: &JsValue, had_error: bool, code: f64) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &Http2ServerRequest, event: &JsValue) -> bool;
+    pub fn emit_2(this: &Http2ServerRequest, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &Http2ServerRequest, value: &Function);
+    pub fn set_emit_2(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &Http2ServerRequest, event: &JsValue, chunk: &JsValue) -> bool;
+    pub fn emit_3(this: &Http2ServerRequest, event: &JsValue, chunk: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &Http2ServerRequest, value: &Function);
+    pub fn set_emit_3(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &Http2ServerRequest, event: &JsValue) -> bool;
+    pub fn emit_4(this: &Http2ServerRequest, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &Http2ServerRequest, value: &Function);
+    pub fn set_emit_4(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Http2ServerRequest, event: &JsValue) -> bool;
+    pub fn emit_5(this: &Http2ServerRequest, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &Http2ServerRequest, value: &Function);
+    pub fn set_emit_5(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Http2ServerRequest, event: &JsValue, err: &Error) -> bool;
+    pub fn emit_6(this: &Http2ServerRequest, event: &JsValue, err: &Error) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit6(this: &Http2ServerRequest, value: &Function);
+    pub fn set_emit_6(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &Http2ServerRequest, event: &JsValue, args: &Array) -> bool;
+    pub fn emit_7(this: &Http2ServerRequest, event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit7(this: &Http2ServerRequest, value: &Function);
+    pub fn set_emit_7(this: &Http2ServerRequest, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &Http2ServerRequest, event: &JsValue, listener: &JsValue)
     -> Http2ServerRequest;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(
+    pub fn on_2(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &Http2ServerRequest, value: &Function);
+    pub fn set_on_2(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(
+    pub fn on_3(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &Http2ServerRequest, value: &Function);
+    pub fn set_on_3(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(
+    pub fn on_4(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &Http2ServerRequest, value: &Function);
+    pub fn set_on_4(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(
+    pub fn on_5(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &Http2ServerRequest, value: &Function);
+    pub fn set_on_5(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(
+    pub fn on_6(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &Http2ServerRequest, value: &Function);
+    pub fn set_on_6(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on7(
+    pub fn on_7(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on7(this: &Http2ServerRequest, value: &Function);
+    pub fn set_on_7(this: &Http2ServerRequest, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(
         this: &Http2ServerRequest,
@@ -2604,53 +2628,53 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(
+    pub fn once_2(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &Http2ServerRequest, value: &Function);
+    pub fn set_once_2(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(
+    pub fn once_3(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &Http2ServerRequest, value: &Function);
+    pub fn set_once_3(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(
+    pub fn once_4(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &Http2ServerRequest, value: &Function);
+    pub fn set_once_4(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(
+    pub fn once_5(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &Http2ServerRequest, value: &Function);
+    pub fn set_once_5(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(
+    pub fn once_6(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &Http2ServerRequest, value: &Function);
+    pub fn set_once_6(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once7(
+    pub fn once_7(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once7(this: &Http2ServerRequest, value: &Function);
+    pub fn set_once_7(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(
         this: &Http2ServerRequest,
@@ -2660,53 +2684,53 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &Http2ServerRequest, value: &Function);
+    pub fn set_prepend_listener_2(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(
+    pub fn prepend_listener_3(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &Http2ServerRequest, value: &Function);
+    pub fn set_prepend_listener_3(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(
+    pub fn prepend_listener_4(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &Http2ServerRequest, value: &Function);
+    pub fn set_prepend_listener_4(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(
+    pub fn prepend_listener_5(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &Http2ServerRequest, value: &Function);
+    pub fn set_prepend_listener_5(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(
+    pub fn prepend_listener_6(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &Http2ServerRequest, value: &Function);
+    pub fn set_prepend_listener_6(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener7(
+    pub fn prepend_listener_7(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener7(this: &Http2ServerRequest, value: &Function);
+    pub fn set_prepend_listener_7(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &Http2ServerRequest,
@@ -2716,53 +2740,53 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &Http2ServerRequest, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &Http2ServerRequest, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &Http2ServerRequest, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(
+    pub fn prepend_once_listener_5(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &Http2ServerRequest, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(
+    pub fn prepend_once_listener_6(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &Http2ServerRequest, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &Http2ServerRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener7(
+    pub fn prepend_once_listener_7(
         this: &Http2ServerRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener7(this: &Http2ServerRequest, value: &Function);
+    pub fn set_prepend_once_listener_7(this: &Http2ServerRequest, value: &Function);
     pub type Http2ServerResponse;
     #[wasm_bindgen(constructor)]
     pub fn new_http2_server_response(stream: &ServerHttp2Stream) -> Http2ServerResponse;
@@ -2797,13 +2821,13 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_end(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = end ) ]
-    pub fn end2(this: &Http2ServerResponse, data: &JsValue, callback: &JsValue);
+    pub fn end_2(this: &Http2ServerResponse, data: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = end ) ]
-    pub fn set_end2(this: &Http2ServerResponse, value: &Function);
+    pub fn set_end_2(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = end ) ]
-    pub fn end3(this: &Http2ServerResponse, data: &JsValue, encoding: &str, callback: &JsValue);
+    pub fn end_3(this: &Http2ServerResponse, data: &JsValue, encoding: &str, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = end ) ]
-    pub fn set_end3(this: &Http2ServerResponse, value: &Function);
+    pub fn set_end_3(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = getHeader ) ]
     pub fn get_header(this: &Http2ServerResponse, name: &str) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getHeader ) ]
@@ -2837,14 +2861,14 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_write(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = write ) ]
-    pub fn write2(
+    pub fn write_2(
         this: &Http2ServerResponse,
         chunk: &JsValue,
         encoding: &str,
         callback: &JsValue,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = write ) ]
-    pub fn set_write2(this: &Http2ServerResponse, value: &Function);
+    pub fn set_write_2(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = writeContinue ) ]
     pub fn write_continue(this: &Http2ServerResponse);
     # [ wasm_bindgen ( method , setter , js_name = writeContinue ) ]
@@ -2858,14 +2882,14 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = writeHead ) ]
     pub fn set_write_head(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = writeHead ) ]
-    pub fn write_head2(
+    pub fn write_head_2(
         this: &Http2ServerResponse,
         status_code: f64,
         status_message: &str,
         headers: Option<&crate::http::OutgoingHttpHeaders>,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = writeHead ) ]
-    pub fn set_write_head2(this: &Http2ServerResponse, value: &Function);
+    pub fn set_write_head_2(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = createPushResponse ) ]
     pub fn create_push_response(
         this: &Http2ServerResponse,
@@ -2883,81 +2907,81 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(
+    pub fn add_listener_2(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &Http2ServerResponse, value: &Function);
+    pub fn set_add_listener_2(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(
+    pub fn add_listener_3(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &Http2ServerResponse, value: &Function);
+    pub fn set_add_listener_3(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(
+    pub fn add_listener_4(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &Http2ServerResponse, value: &Function);
+    pub fn set_add_listener_4(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(
+    pub fn add_listener_5(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &Http2ServerResponse, value: &Function);
+    pub fn set_add_listener_5(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(
+    pub fn add_listener_6(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &Http2ServerResponse, value: &Function);
+    pub fn set_add_listener_6(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener7(
+    pub fn add_listener_7(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener7(this: &Http2ServerResponse, value: &Function);
+    pub fn set_add_listener_7(this: &Http2ServerResponse, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &Http2ServerResponse, event: &JsValue) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &Http2ServerResponse, event: &JsValue) -> bool;
+    pub fn emit_2(this: &Http2ServerResponse, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &Http2ServerResponse, value: &Function);
+    pub fn set_emit_2(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &Http2ServerResponse, event: &JsValue, error: &Error) -> bool;
+    pub fn emit_3(this: &Http2ServerResponse, event: &JsValue, error: &Error) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &Http2ServerResponse, value: &Function);
+    pub fn set_emit_3(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &Http2ServerResponse, event: &JsValue) -> bool;
+    pub fn emit_4(this: &Http2ServerResponse, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &Http2ServerResponse, value: &Function);
+    pub fn set_emit_4(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Http2ServerResponse, event: &JsValue, src: &internal::Readable) -> bool;
+    pub fn emit_5(this: &Http2ServerResponse, event: &JsValue, src: &internal::Readable) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &Http2ServerResponse, value: &Function);
+    pub fn set_emit_5(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Http2ServerResponse, event: &JsValue, src: &internal::Readable) -> bool;
+    pub fn emit_6(this: &Http2ServerResponse, event: &JsValue, src: &internal::Readable) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit6(this: &Http2ServerResponse, value: &Function);
+    pub fn set_emit_6(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &Http2ServerResponse, event: &JsValue, args: &Array) -> bool;
+    pub fn emit_7(this: &Http2ServerResponse, event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit7(this: &Http2ServerResponse, value: &Function);
+    pub fn set_emit_7(this: &Http2ServerResponse, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(
         this: &Http2ServerResponse,
@@ -2967,53 +2991,53 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(
+    pub fn on_2(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &Http2ServerResponse, value: &Function);
+    pub fn set_on_2(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(
+    pub fn on_3(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &Http2ServerResponse, value: &Function);
+    pub fn set_on_3(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(
+    pub fn on_4(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &Http2ServerResponse, value: &Function);
+    pub fn set_on_4(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(
+    pub fn on_5(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &Http2ServerResponse, value: &Function);
+    pub fn set_on_5(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(
+    pub fn on_6(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &Http2ServerResponse, value: &Function);
+    pub fn set_on_6(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on7(
+    pub fn on_7(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on7(this: &Http2ServerResponse, value: &Function);
+    pub fn set_on_7(this: &Http2ServerResponse, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(
         this: &Http2ServerResponse,
@@ -3023,53 +3047,53 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(
+    pub fn once_2(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &Http2ServerResponse, value: &Function);
+    pub fn set_once_2(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(
+    pub fn once_3(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &Http2ServerResponse, value: &Function);
+    pub fn set_once_3(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(
+    pub fn once_4(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &Http2ServerResponse, value: &Function);
+    pub fn set_once_4(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(
+    pub fn once_5(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &Http2ServerResponse, value: &Function);
+    pub fn set_once_5(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(
+    pub fn once_6(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &Http2ServerResponse, value: &Function);
+    pub fn set_once_6(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once7(
+    pub fn once_7(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once7(this: &Http2ServerResponse, value: &Function);
+    pub fn set_once_7(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(
         this: &Http2ServerResponse,
@@ -3079,53 +3103,53 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &Http2ServerResponse, value: &Function);
+    pub fn set_prepend_listener_2(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(
+    pub fn prepend_listener_3(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &Http2ServerResponse, value: &Function);
+    pub fn set_prepend_listener_3(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(
+    pub fn prepend_listener_4(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &Http2ServerResponse, value: &Function);
+    pub fn set_prepend_listener_4(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(
+    pub fn prepend_listener_5(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &Http2ServerResponse, value: &Function);
+    pub fn set_prepend_listener_5(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(
+    pub fn prepend_listener_6(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &Http2ServerResponse, value: &Function);
+    pub fn set_prepend_listener_6(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener7(
+    pub fn prepend_listener_7(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener7(this: &Http2ServerResponse, value: &Function);
+    pub fn set_prepend_listener_7(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &Http2ServerResponse,
@@ -3135,53 +3159,53 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &Http2ServerResponse, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &Http2ServerResponse, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &Http2ServerResponse, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(
+    pub fn prepend_once_listener_5(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &Http2ServerResponse, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(
+    pub fn prepend_once_listener_6(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &Http2ServerResponse, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener7(
+    pub fn prepend_once_listener_7(
         this: &Http2ServerResponse,
         event: &JsValue,
         listener: &JsValue,
     ) -> Http2ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener7(this: &Http2ServerResponse, value: &Function);
+    pub fn set_prepend_once_listener_7(this: &Http2ServerResponse, value: &Function);
     # [ wasm_bindgen ( js_name = getDefaultSettings ) ]
     pub fn get_default_settings() -> Settings;
     # [ wasm_bindgen ( js_name = getPackedSettings ) ]
@@ -3191,18 +3215,18 @@ extern "C" {
     # [ wasm_bindgen ( js_name = createServer ) ]
     pub fn create_server(on_request_handler: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server2(options: &ServerOptions, on_request_handler: &JsValue) -> Http2Server;
+    pub fn create_server_2(options: &ServerOptions, on_request_handler: &JsValue) -> Http2Server;
     # [ wasm_bindgen ( js_name = createSecureServer ) ]
     pub fn create_secure_server(on_request_handler: &JsValue) -> Http2SecureServer;
     # [ wasm_bindgen ( js_name = createSecureServer ) ]
-    pub fn create_secure_server2(
+    pub fn create_secure_server_2(
         options: &SecureServerOptions,
         on_request_handler: &JsValue,
     ) -> Http2SecureServer;
     #[wasm_bindgen()]
     pub fn connect(authority: &JsValue, listener: &JsValue) -> ClientHttp2Session;
     # [ wasm_bindgen ( js_name = connect ) ]
-    pub fn connect2(
+    pub fn connect_2(
         authority: &JsValue,
         options: &JsValue,
         listener: &JsValue,

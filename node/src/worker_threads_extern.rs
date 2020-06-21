@@ -43,70 +43,70 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
+    pub fn add_listener_2(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &MessagePort, value: &Function);
+    pub fn set_add_listener_2(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
+    pub fn add_listener_3(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &MessagePort, value: &Function);
+    pub fn set_add_listener_3(this: &MessagePort, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &MessagePort, event: &JsValue) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &MessagePort, event: &JsValue, value: &JsValue) -> bool;
+    pub fn emit_2(this: &MessagePort, event: &JsValue, value: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &MessagePort, value: &Function);
+    pub fn set_emit_2(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &MessagePort, event: &JsValue, args: &Array) -> bool;
+    pub fn emit_3(this: &MessagePort, event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &MessagePort, value: &Function);
+    pub fn set_emit_3(this: &MessagePort, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
+    pub fn on_2(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &MessagePort, value: &Function);
+    pub fn set_on_2(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
+    pub fn on_3(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &MessagePort, value: &Function);
+    pub fn set_on_3(this: &MessagePort, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
+    pub fn once_2(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &MessagePort, value: &Function);
+    pub fn set_once_2(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
+    pub fn once_3(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &MessagePort, value: &Function);
+    pub fn set_once_3(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &MessagePort, event: &JsValue, listener: &JsValue)
     -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &MessagePort,
         event: &JsValue,
         listener: &JsValue,
     ) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &MessagePort, value: &Function);
+    pub fn set_prepend_listener_2(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(
+    pub fn prepend_listener_3(
         this: &MessagePort,
         event: &JsValue,
         listener: &JsValue,
     ) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &MessagePort, value: &Function);
+    pub fn set_prepend_listener_3(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &MessagePort,
@@ -116,47 +116,53 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &MessagePort,
         event: &JsValue,
         listener: &JsValue,
     ) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &MessagePort, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &MessagePort,
         event: &JsValue,
         listener: &JsValue,
     ) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &MessagePort, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
     pub fn remove_listener(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
     pub fn set_remove_listener(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener2(this: &MessagePort, event: &JsValue, listener: &JsValue)
-    -> MessagePort;
+    pub fn remove_listener_2(
+        this: &MessagePort,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener2(this: &MessagePort, value: &Function);
+    pub fn set_remove_listener_2(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener3(this: &MessagePort, event: &JsValue, listener: &JsValue)
-    -> MessagePort;
+    pub fn remove_listener_3(
+        this: &MessagePort,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener3(this: &MessagePort, value: &Function);
+    pub fn set_remove_listener_3(this: &MessagePort, value: &Function);
     #[wasm_bindgen(method)]
     pub fn off(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
     #[wasm_bindgen(method, setter)]
     pub fn set_off(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = off ) ]
-    pub fn off2(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
+    pub fn off_2(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = off ) ]
-    pub fn set_off2(this: &MessagePort, value: &Function);
+    pub fn set_off_2(this: &MessagePort, value: &Function);
     # [ wasm_bindgen ( method , js_name = off ) ]
-    pub fn off3(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
+    pub fn off_3(this: &MessagePort, event: &JsValue, listener: &JsValue) -> MessagePort;
     # [ wasm_bindgen ( method , setter , js_name = off ) ]
-    pub fn set_off3(this: &MessagePort, value: &Function);
+    pub fn set_off_3(this: &MessagePort, value: &Function);
     pub type WorkerOptions;
     #[wasm_bindgen(method, getter)]
     pub fn eval(this: &WorkerOptions) -> Option<bool>;
@@ -218,161 +224,161 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn add_listener_2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &Worker, value: &Function);
+    pub fn set_add_listener_2(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn add_listener_3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &Worker, value: &Function);
+    pub fn set_add_listener_3(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn add_listener_4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &Worker, value: &Function);
+    pub fn set_add_listener_4(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn add_listener_5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &Worker, value: &Function);
+    pub fn set_add_listener_5(this: &Worker, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &Worker, event: &JsValue, err: &Error) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &Worker, event: &JsValue, exit_code: f64) -> bool;
+    pub fn emit_2(this: &Worker, event: &JsValue, exit_code: f64) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &Worker, value: &Function);
+    pub fn set_emit_2(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &Worker, event: &JsValue, value: &JsValue) -> bool;
+    pub fn emit_3(this: &Worker, event: &JsValue, value: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &Worker, value: &Function);
+    pub fn set_emit_3(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &Worker, event: &JsValue) -> bool;
+    pub fn emit_4(this: &Worker, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &Worker, value: &Function);
+    pub fn set_emit_4(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Worker, event: &JsValue, args: &Array) -> bool;
+    pub fn emit_5(this: &Worker, event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &Worker, value: &Function);
+    pub fn set_emit_5(this: &Worker, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn on_2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &Worker, value: &Function);
+    pub fn set_on_2(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn on_3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &Worker, value: &Function);
+    pub fn set_on_3(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn on_4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &Worker, value: &Function);
+    pub fn set_on_4(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn on_5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &Worker, value: &Function);
+    pub fn set_on_5(this: &Worker, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn once_2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &Worker, value: &Function);
+    pub fn set_once_2(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn once_3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &Worker, value: &Function);
+    pub fn set_once_3(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn once_4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &Worker, value: &Function);
+    pub fn set_once_4(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn once_5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &Worker, value: &Function);
+    pub fn set_once_5(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn prepend_listener_2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &Worker, value: &Function);
+    pub fn set_prepend_listener_2(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn prepend_listener_3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &Worker, value: &Function);
+    pub fn set_prepend_listener_3(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn prepend_listener_4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &Worker, value: &Function);
+    pub fn set_prepend_listener_4(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn prepend_listener_5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &Worker, value: &Function);
+    pub fn set_prepend_listener_5(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn prepend_once_listener_2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &Worker, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn prepend_once_listener_3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &Worker, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn prepend_once_listener_4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &Worker, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn prepend_once_listener_5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &Worker, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
     pub fn remove_listener(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
     pub fn set_remove_listener(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn remove_listener_2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener2(this: &Worker, value: &Function);
+    pub fn set_remove_listener_2(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn remove_listener_3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener3(this: &Worker, value: &Function);
+    pub fn set_remove_listener_3(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn remove_listener_4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener4(this: &Worker, value: &Function);
+    pub fn set_remove_listener_4(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn remove_listener_5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener5(this: &Worker, value: &Function);
+    pub fn set_remove_listener_5(this: &Worker, value: &Function);
     #[wasm_bindgen(method)]
     pub fn off(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     #[wasm_bindgen(method, setter)]
     pub fn set_off(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = off ) ]
-    pub fn off2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn off_2(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = off ) ]
-    pub fn set_off2(this: &Worker, value: &Function);
+    pub fn set_off_2(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = off ) ]
-    pub fn off3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn off_3(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = off ) ]
-    pub fn set_off3(this: &Worker, value: &Function);
+    pub fn set_off_3(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = off ) ]
-    pub fn off4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn off_4(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = off ) ]
-    pub fn set_off4(this: &Worker, value: &Function);
+    pub fn set_off_4(this: &Worker, value: &Function);
     # [ wasm_bindgen ( method , js_name = off ) ]
-    pub fn off5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
+    pub fn off_5(this: &Worker, event: &JsValue, listener: &JsValue) -> Worker;
     # [ wasm_bindgen ( method , setter , js_name = off ) ]
-    pub fn set_off5(this: &Worker, value: &Function);
+    pub fn set_off_5(this: &Worker, value: &Function);
     #[doc = "Transfer a `MessagePort` to a different `vm` Context. The original `port`"]
     #[doc = "object will be rendered unusable, and the returned `MessagePort` instance will"]
     #[doc = "take its place."]

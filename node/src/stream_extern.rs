@@ -61,9 +61,9 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = _read ) ]
     pub fn set_read(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = read ) ]
-    pub fn read2(this: &Readable, size: Option<f64>) -> JsValue;
+    pub fn read_2(this: &Readable, size: Option<f64>) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = read ) ]
-    pub fn set_read2(this: &Readable, value: &Function);
+    pub fn set_read_2(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = setEncoding ) ]
     pub fn set_encoding(this: &Readable, encoding: &str) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = setEncoding ) ]
@@ -101,182 +101,197 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = _destroy ) ]
     pub fn set_destroy(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = destroy ) ]
-    pub fn destroy2(this: &Readable, error: Option<&Error>);
+    pub fn destroy_2(this: &Readable, error: Option<&Error>);
     # [ wasm_bindgen ( method , setter , js_name = destroy ) ]
-    pub fn set_destroy2(this: &Readable, value: &Function);
+    pub fn set_destroy_2(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn add_listener_2(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &Readable, value: &Function);
+    pub fn set_add_listener_2(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn add_listener_3(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &Readable, value: &Function);
+    pub fn set_add_listener_3(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn add_listener_4(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &Readable, value: &Function);
+    pub fn set_add_listener_4(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn add_listener_5(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &Readable, value: &Function);
+    pub fn set_add_listener_5(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn add_listener_6(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &Readable, value: &Function);
+    pub fn set_add_listener_6(this: &Readable, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &Readable, event: &JsValue) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &Readable, event: &JsValue, chunk: &JsValue) -> bool;
+    pub fn emit_2(this: &Readable, event: &JsValue, chunk: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &Readable, value: &Function);
+    pub fn set_emit_2(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &Readable, event: &JsValue) -> bool;
+    pub fn emit_3(this: &Readable, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &Readable, value: &Function);
+    pub fn set_emit_3(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &Readable, event: &JsValue) -> bool;
+    pub fn emit_4(this: &Readable, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &Readable, value: &Function);
+    pub fn set_emit_4(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Readable, event: &JsValue, err: &Error) -> bool;
+    pub fn emit_5(this: &Readable, event: &JsValue, err: &Error) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &Readable, value: &Function);
+    pub fn set_emit_5(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Readable, event: &JsValue, args: &Array) -> bool;
+    pub fn emit_6(this: &Readable, event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit6(this: &Readable, value: &Function);
+    pub fn set_emit_6(this: &Readable, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn on_2(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &Readable, value: &Function);
+    pub fn set_on_2(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn on_3(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &Readable, value: &Function);
+    pub fn set_on_3(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn on_4(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &Readable, value: &Function);
+    pub fn set_on_4(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn on_5(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &Readable, value: &Function);
+    pub fn set_on_5(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn on_6(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &Readable, value: &Function);
+    pub fn set_on_6(this: &Readable, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn once_2(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &Readable, value: &Function);
+    pub fn set_once_2(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn once_3(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &Readable, value: &Function);
+    pub fn set_once_3(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn once_4(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &Readable, value: &Function);
+    pub fn set_once_4(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn once_5(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &Readable, value: &Function);
+    pub fn set_once_5(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn once_6(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &Readable, value: &Function);
+    pub fn set_once_6(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn prepend_listener_2(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &Readable, value: &Function);
+    pub fn set_prepend_listener_2(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn prepend_listener_3(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &Readable, value: &Function);
+    pub fn set_prepend_listener_3(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn prepend_listener_4(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &Readable, value: &Function);
+    pub fn set_prepend_listener_4(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn prepend_listener_5(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &Readable, value: &Function);
+    pub fn set_prepend_listener_5(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn prepend_listener_6(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &Readable, value: &Function);
+    pub fn set_prepend_listener_6(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(this: &Readable, event: &JsValue, listener: &JsValue)
-    -> Readable;
+    pub fn prepend_once_listener_2(
+        this: &Readable,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &Readable, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(this: &Readable, event: &JsValue, listener: &JsValue)
-    -> Readable;
+    pub fn prepend_once_listener_3(
+        this: &Readable,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &Readable, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(this: &Readable, event: &JsValue, listener: &JsValue)
-    -> Readable;
+    pub fn prepend_once_listener_4(
+        this: &Readable,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &Readable, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(this: &Readable, event: &JsValue, listener: &JsValue)
-    -> Readable;
+    pub fn prepend_once_listener_5(
+        this: &Readable,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &Readable, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(this: &Readable, event: &JsValue, listener: &JsValue)
-    -> Readable;
+    pub fn prepend_once_listener_6(
+        this: &Readable,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &Readable, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
     pub fn remove_listener(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
     pub fn set_remove_listener(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener2(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn remove_listener_2(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener2(this: &Readable, value: &Function);
+    pub fn set_remove_listener_2(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener3(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn remove_listener_3(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener3(this: &Readable, value: &Function);
+    pub fn set_remove_listener_3(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener4(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn remove_listener_4(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener4(this: &Readable, value: &Function);
+    pub fn set_remove_listener_4(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener5(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn remove_listener_5(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener5(this: &Readable, value: &Function);
+    pub fn set_remove_listener_5(this: &Readable, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener6(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
+    pub fn remove_listener_6(this: &Readable, event: &JsValue, listener: &JsValue) -> Readable;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener6(this: &Readable, value: &Function);
+    pub fn set_remove_listener_6(this: &Readable, value: &Function);
     #[wasm_bindgen(method)]
     pub fn computed_property_name(this: &Readable) -> AsyncIterableIterator;
     #[wasm_bindgen(method, setter)]
@@ -364,13 +379,13 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = _final ) ]
     pub fn set_final_(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = write ) ]
-    pub fn write2(this: &Writable, chunk: &JsValue, cb: &JsValue) -> bool;
+    pub fn write_2(this: &Writable, chunk: &JsValue, cb: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = write ) ]
-    pub fn set_write2(this: &Writable, value: &Function);
+    pub fn set_write_2(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = write ) ]
-    pub fn write3(this: &Writable, chunk: &JsValue, encoding: &str, cb: &JsValue) -> bool;
+    pub fn write_3(this: &Writable, chunk: &JsValue, encoding: &str, cb: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = write ) ]
-    pub fn set_write3(this: &Writable, value: &Function);
+    pub fn set_write_3(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = setDefaultEncoding ) ]
     pub fn set_default_encoding(this: &Writable, encoding: &str) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = setDefaultEncoding ) ]
@@ -380,13 +395,13 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_end(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = end ) ]
-    pub fn end2(this: &Writable, chunk: &JsValue, cb: &JsValue);
+    pub fn end_2(this: &Writable, chunk: &JsValue, cb: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = end ) ]
-    pub fn set_end2(this: &Writable, value: &Function);
+    pub fn set_end_2(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = end ) ]
-    pub fn end3(this: &Writable, chunk: &JsValue, encoding: &str, cb: &JsValue);
+    pub fn end_3(this: &Writable, chunk: &JsValue, encoding: &str, cb: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = end ) ]
-    pub fn set_end3(this: &Writable, value: &Function);
+    pub fn set_end_3(this: &Writable, value: &Function);
     #[wasm_bindgen(method)]
     pub fn cork(this: &Writable);
     #[wasm_bindgen(method, setter)]
@@ -396,211 +411,229 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_uncork(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = destroy ) ]
-    pub fn destroy2(this: &Writable, error: Option<&Error>);
+    pub fn destroy_2(this: &Writable, error: Option<&Error>);
     # [ wasm_bindgen ( method , setter , js_name = destroy ) ]
-    pub fn set_destroy2(this: &Writable, value: &Function);
+    pub fn set_destroy_2(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn add_listener_2(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &Writable, value: &Function);
+    pub fn set_add_listener_2(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn add_listener_3(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &Writable, value: &Function);
+    pub fn set_add_listener_3(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn add_listener_4(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &Writable, value: &Function);
+    pub fn set_add_listener_4(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn add_listener_5(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &Writable, value: &Function);
+    pub fn set_add_listener_5(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn add_listener_6(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &Writable, value: &Function);
+    pub fn set_add_listener_6(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener7(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn add_listener_7(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener7(this: &Writable, value: &Function);
+    pub fn set_add_listener_7(this: &Writable, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &Writable, event: &JsValue) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &Writable, event: &JsValue) -> bool;
+    pub fn emit_2(this: &Writable, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &Writable, value: &Function);
+    pub fn set_emit_2(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &Writable, event: &JsValue, err: &Error) -> bool;
+    pub fn emit_3(this: &Writable, event: &JsValue, err: &Error) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &Writable, value: &Function);
+    pub fn set_emit_3(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &Writable, event: &JsValue) -> bool;
+    pub fn emit_4(this: &Writable, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &Writable, value: &Function);
+    pub fn set_emit_4(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Writable, event: &JsValue, src: &Readable) -> bool;
+    pub fn emit_5(this: &Writable, event: &JsValue, src: &Readable) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &Writable, value: &Function);
+    pub fn set_emit_5(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Writable, event: &JsValue, src: &Readable) -> bool;
+    pub fn emit_6(this: &Writable, event: &JsValue, src: &Readable) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit6(this: &Writable, value: &Function);
+    pub fn set_emit_6(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &Writable, event: &JsValue, args: &Array) -> bool;
+    pub fn emit_7(this: &Writable, event: &JsValue, args: &Array) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit7(this: &Writable, value: &Function);
+    pub fn set_emit_7(this: &Writable, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn on_2(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &Writable, value: &Function);
+    pub fn set_on_2(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn on_3(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &Writable, value: &Function);
+    pub fn set_on_3(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn on_4(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &Writable, value: &Function);
+    pub fn set_on_4(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn on_5(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &Writable, value: &Function);
+    pub fn set_on_5(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn on_6(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &Writable, value: &Function);
+    pub fn set_on_6(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on7(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn on_7(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on7(this: &Writable, value: &Function);
+    pub fn set_on_7(this: &Writable, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn once_2(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &Writable, value: &Function);
+    pub fn set_once_2(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn once_3(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &Writable, value: &Function);
+    pub fn set_once_3(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn once_4(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &Writable, value: &Function);
+    pub fn set_once_4(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn once_5(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &Writable, value: &Function);
+    pub fn set_once_5(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn once_6(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &Writable, value: &Function);
+    pub fn set_once_6(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once7(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn once_7(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once7(this: &Writable, value: &Function);
+    pub fn set_once_7(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn prepend_listener_2(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &Writable, value: &Function);
+    pub fn set_prepend_listener_2(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn prepend_listener_3(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &Writable, value: &Function);
+    pub fn set_prepend_listener_3(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn prepend_listener_4(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &Writable, value: &Function);
+    pub fn set_prepend_listener_4(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn prepend_listener_5(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &Writable, value: &Function);
+    pub fn set_prepend_listener_5(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn prepend_listener_6(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &Writable, value: &Function);
+    pub fn set_prepend_listener_6(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener7(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn prepend_listener_7(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener7(this: &Writable, value: &Function);
+    pub fn set_prepend_listener_7(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(this: &Writable, event: &JsValue, listener: &JsValue)
-    -> Writable;
+    pub fn prepend_once_listener_2(
+        this: &Writable,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &Writable, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(this: &Writable, event: &JsValue, listener: &JsValue)
-    -> Writable;
+    pub fn prepend_once_listener_3(
+        this: &Writable,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &Writable, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(this: &Writable, event: &JsValue, listener: &JsValue)
-    -> Writable;
+    pub fn prepend_once_listener_4(
+        this: &Writable,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &Writable, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(this: &Writable, event: &JsValue, listener: &JsValue)
-    -> Writable;
+    pub fn prepend_once_listener_5(
+        this: &Writable,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &Writable, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(this: &Writable, event: &JsValue, listener: &JsValue)
-    -> Writable;
+    pub fn prepend_once_listener_6(
+        this: &Writable,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &Writable, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener7(this: &Writable, event: &JsValue, listener: &JsValue)
-    -> Writable;
+    pub fn prepend_once_listener_7(
+        this: &Writable,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener7(this: &Writable, value: &Function);
+    pub fn set_prepend_once_listener_7(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
     pub fn remove_listener(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
     pub fn set_remove_listener(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener2(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn remove_listener_2(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener2(this: &Writable, value: &Function);
+    pub fn set_remove_listener_2(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener3(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn remove_listener_3(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener3(this: &Writable, value: &Function);
+    pub fn set_remove_listener_3(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener4(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn remove_listener_4(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener4(this: &Writable, value: &Function);
+    pub fn set_remove_listener_4(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener5(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn remove_listener_5(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener5(this: &Writable, value: &Function);
+    pub fn set_remove_listener_5(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener6(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn remove_listener_6(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener6(this: &Writable, value: &Function);
+    pub fn set_remove_listener_6(this: &Writable, value: &Function);
     # [ wasm_bindgen ( method , js_name = removeListener ) ]
-    pub fn remove_listener7(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
+    pub fn remove_listener_7(this: &Writable, event: &JsValue, listener: &JsValue) -> Writable;
     # [ wasm_bindgen ( method , setter , js_name = removeListener ) ]
-    pub fn set_remove_listener7(this: &Writable, value: &Function);
+    pub fn set_remove_listener_7(this: &Writable, value: &Function);
     pub type DuplexOptions;
     # [ wasm_bindgen ( method , getter , js_name = allowHalfOpen ) ]
     pub fn allow_half_open(this: &DuplexOptions) -> Option<bool>;
@@ -680,13 +713,13 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = _final ) ]
     pub fn set_final_(this: &Duplex, value: &Function);
     # [ wasm_bindgen ( method , js_name = write ) ]
-    pub fn write2(this: &Duplex, chunk: &JsValue, encoding: Option<&str>, cb: &JsValue) -> bool;
+    pub fn write_2(this: &Duplex, chunk: &JsValue, encoding: Option<&str>, cb: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = write ) ]
-    pub fn set_write2(this: &Duplex, value: &Function);
+    pub fn set_write_2(this: &Duplex, value: &Function);
     # [ wasm_bindgen ( method , js_name = write ) ]
-    pub fn write3(this: &Duplex, chunk: &JsValue, cb: &JsValue) -> bool;
+    pub fn write_3(this: &Duplex, chunk: &JsValue, cb: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = write ) ]
-    pub fn set_write3(this: &Duplex, value: &Function);
+    pub fn set_write_3(this: &Duplex, value: &Function);
     # [ wasm_bindgen ( method , js_name = setDefaultEncoding ) ]
     pub fn set_default_encoding(this: &Duplex, encoding: &str) -> Duplex;
     # [ wasm_bindgen ( method , setter , js_name = setDefaultEncoding ) ]
@@ -696,13 +729,13 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_end(this: &Duplex, value: &Function);
     # [ wasm_bindgen ( method , js_name = end ) ]
-    pub fn end2(this: &Duplex, chunk: &JsValue, cb: &JsValue);
+    pub fn end_2(this: &Duplex, chunk: &JsValue, cb: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = end ) ]
-    pub fn set_end2(this: &Duplex, value: &Function);
+    pub fn set_end_2(this: &Duplex, value: &Function);
     # [ wasm_bindgen ( method , js_name = end ) ]
-    pub fn end3(this: &Duplex, chunk: &JsValue, encoding: Option<&str>, cb: &JsValue);
+    pub fn end_3(this: &Duplex, chunk: &JsValue, encoding: Option<&str>, cb: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = end ) ]
-    pub fn set_end3(this: &Duplex, value: &Function);
+    pub fn set_end_3(this: &Duplex, value: &Function);
     #[wasm_bindgen(method)]
     pub fn cork(this: &Duplex);
     #[wasm_bindgen(method, setter)]
@@ -711,7 +744,6 @@ extern "C" {
     pub fn uncork(this: &Duplex);
     #[wasm_bindgen(method, setter)]
     pub fn set_uncork(this: &Duplex, value: &Function);
-    pub type TransformCallback;
     pub type TransformOptions;
     #[wasm_bindgen(method)]
     pub fn read(this: &TransformOptions, this_: &Transform, size: f64);
@@ -786,7 +818,7 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn finished(stream: &JsValue, options: &FinishedOptions, callback: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = finished ) ]
-    pub fn finished2(stream: &JsValue, callback: &JsValue) -> Function;
+    pub fn finished_2(stream: &JsValue, callback: &JsValue) -> Function;
     #[wasm_bindgen()]
     pub fn pipeline(
         stream1: &node_js::ReadableStream,
@@ -794,14 +826,14 @@ extern "C" {
         callback: &JsValue,
     ) -> JsValue;
     # [ wasm_bindgen ( js_name = pipeline ) ]
-    pub fn pipeline2(
+    pub fn pipeline_2(
         stream1: &node_js::ReadableStream,
         stream2: &node_js::ReadWriteStream,
         stream3: &JsValue,
         callback: &JsValue,
     ) -> JsValue;
     # [ wasm_bindgen ( js_name = pipeline ) ]
-    pub fn pipeline3(
+    pub fn pipeline_3(
         stream1: &node_js::ReadableStream,
         stream2: &node_js::ReadWriteStream,
         stream3: &node_js::ReadWriteStream,
@@ -809,7 +841,7 @@ extern "C" {
         callback: &JsValue,
     ) -> JsValue;
     # [ wasm_bindgen ( js_name = pipeline ) ]
-    pub fn pipeline4(
+    pub fn pipeline_4(
         stream1: &node_js::ReadableStream,
         stream2: &node_js::ReadWriteStream,
         stream3: &node_js::ReadWriteStream,
@@ -818,9 +850,9 @@ extern "C" {
         callback: &JsValue,
     ) -> JsValue;
     # [ wasm_bindgen ( js_name = pipeline ) ]
-    pub fn pipeline5(streams: &Array, callback: &JsValue) -> node_js::WritableStream;
+    pub fn pipeline_5(streams: &Array, callback: &JsValue) -> node_js::WritableStream;
     # [ wasm_bindgen ( js_name = pipeline ) ]
-    pub fn pipeline6(
+    pub fn pipeline_6(
         stream1: &node_js::ReadableStream,
         stream2: &JsValue,
         streams: &Array,

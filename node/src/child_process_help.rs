@@ -156,16 +156,6 @@ impl From<ChildProcess> for node_js::EventEmitter {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ChildProcess> for ChildProcessByStdio {
-    fn as_ref(&self) -> &ChildProcess {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ChildProcessByStdio> for ChildProcess {
-    fn from(child: ChildProcessByStdio) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for ChildProcessByStdio {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -176,13 +166,13 @@ impl From<ChildProcessByStdio> for node_js::EventEmitter {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<ChildProcess> for ChildProcessWithoutNullStreams {
+impl AsRef<ChildProcess> for ChildProcessByStdio {
     fn as_ref(&self) -> &ChildProcess {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ChildProcessWithoutNullStreams> for ChildProcess {
-    fn from(child: ChildProcessWithoutNullStreams) -> Self {
+impl From<ChildProcessByStdio> for ChildProcess {
+    fn from(child: ChildProcessByStdio) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -192,6 +182,16 @@ impl AsRef<node_js::EventEmitter> for ChildProcessWithoutNullStreams {
     }
 }
 impl From<ChildProcessWithoutNullStreams> for node_js::EventEmitter {
+    fn from(child: ChildProcessWithoutNullStreams) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<ChildProcess> for ChildProcessWithoutNullStreams {
+    fn as_ref(&self) -> &ChildProcess {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<ChildProcessWithoutNullStreams> for ChildProcess {
     fn from(child: ChildProcessWithoutNullStreams) -> Self {
         JsCast::unchecked_into(child)
     }

@@ -39,7 +39,7 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn fail(message: &JsValue);
     # [ wasm_bindgen ( js_name = fail ) ]
-    pub fn fail2(
+    pub fn fail_2(
         actual: &JsValue,
         expected: &JsValue,
         message: &JsValue,
@@ -67,21 +67,21 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn throws(block: &JsValue, message: &JsValue);
     # [ wasm_bindgen ( js_name = throws ) ]
-    pub fn throws2(block: &JsValue, error: &JsValue, message: &JsValue);
+    pub fn throws_2(block: &JsValue, error: &JsValue, message: &JsValue);
     # [ wasm_bindgen ( js_name = doesNotThrow ) ]
     pub fn does_not_throw(block: &JsValue, message: &JsValue);
     # [ wasm_bindgen ( js_name = doesNotThrow ) ]
-    pub fn does_not_throw2(block: &JsValue, error: &JsValue, message: &JsValue);
+    pub fn does_not_throw_2(block: &JsValue, error: &JsValue, message: &JsValue);
     # [ wasm_bindgen ( js_name = ifError ) ]
     pub fn if_error(value: &JsValue) -> bool;
     #[wasm_bindgen()]
     pub fn rejects(block: &JsValue, message: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = rejects ) ]
-    pub fn rejects2(block: &JsValue, error: &JsValue, message: &JsValue) -> Promise;
+    pub fn rejects_2(block: &JsValue, error: &JsValue, message: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = doesNotReject ) ]
     pub fn does_not_reject(block: &JsValue, message: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = doesNotReject ) ]
-    pub fn does_not_reject2(block: &JsValue, error: &JsValue, message: &JsValue) -> Promise;
+    pub fn does_not_reject_2(block: &JsValue, error: &JsValue, message: &JsValue) -> Promise;
     #[wasm_bindgen(js_name = "strict")]
     pub static STRICT: JsValue;
 }

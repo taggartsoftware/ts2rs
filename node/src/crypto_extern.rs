@@ -48,17 +48,17 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_update(this: &Hash, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update2(this: &Hash, data: &str, input_encoding: &Utf8AsciiLatin1Encoding) -> Hash;
+    pub fn update_2(this: &Hash, data: &str, input_encoding: &Utf8AsciiLatin1Encoding) -> Hash;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
-    pub fn set_update2(this: &Hash, value: &Function);
+    pub fn set_update_2(this: &Hash, value: &Function);
     #[wasm_bindgen(method)]
     pub fn digest(this: &Hash) -> Buffer;
     #[wasm_bindgen(method, setter)]
     pub fn set_digest(this: &Hash, value: &Function);
     # [ wasm_bindgen ( method , js_name = digest ) ]
-    pub fn digest2(this: &Hash, encoding: &HexBase64Latin1Encoding) -> String;
+    pub fn digest_2(this: &Hash, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = digest ) ]
-    pub fn set_digest2(this: &Hash, value: &Function);
+    pub fn set_digest_2(this: &Hash, value: &Function);
     pub type Hmac;
     #[wasm_bindgen(constructor)]
     pub fn new_hmac() -> Hmac;
@@ -67,17 +67,17 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_update(this: &Hmac, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update2(this: &Hmac, data: &str, input_encoding: &Utf8AsciiLatin1Encoding) -> Hmac;
+    pub fn update_2(this: &Hmac, data: &str, input_encoding: &Utf8AsciiLatin1Encoding) -> Hmac;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
-    pub fn set_update2(this: &Hmac, value: &Function);
+    pub fn set_update_2(this: &Hmac, value: &Function);
     #[wasm_bindgen(method)]
     pub fn digest(this: &Hmac) -> Buffer;
     #[wasm_bindgen(method, setter)]
     pub fn set_digest(this: &Hmac, value: &Function);
     # [ wasm_bindgen ( method , js_name = digest ) ]
-    pub fn digest2(this: &Hmac, encoding: &HexBase64Latin1Encoding) -> String;
+    pub fn digest_2(this: &Hmac, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = digest ) ]
-    pub fn set_digest2(this: &Hmac, value: &Function);
+    pub fn set_digest_2(this: &Hmac, value: &Function);
     pub type KeyObjectType;
     pub type KeyExportOptions;
     # [ wasm_bindgen ( method , getter , js_name = type ) ]
@@ -114,9 +114,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_export(this: &KeyObject, value: &Function);
     # [ wasm_bindgen ( method , js_name = export ) ]
-    pub fn export2(this: &KeyObject, options: Option<&KeyExportOptions>) -> Buffer;
+    pub fn export_2(this: &KeyObject, options: Option<&KeyExportOptions>) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = export ) ]
-    pub fn set_export2(this: &KeyObject, value: &Function);
+    pub fn set_export_2(this: &KeyObject, value: &Function);
     # [ wasm_bindgen ( method , getter , js_name = symmetricKeySize ) ]
     pub fn symmetric_key_size(this: &KeyObject) -> Option<f64>;
     # [ wasm_bindgen ( method , setter , js_name = symmetricKeySize ) ]
@@ -146,13 +146,13 @@ extern "C" {
         options: &CipherCCMOptions,
     ) -> CipherCCM;
     # [ wasm_bindgen ( js_name = createCipher ) ]
-    pub fn create_cipher2(
+    pub fn create_cipher_2(
         algorithm: &CipherGCMTypes,
         password: &BinaryLike,
         options: Option<&CipherGCMOptions>,
     ) -> CipherGCM;
     # [ wasm_bindgen ( js_name = createCipher ) ]
-    pub fn create_cipher3(
+    pub fn create_cipher_3(
         algorithm: &str,
         password: &BinaryLike,
         options: Option<&internal::TransformOptions>,
@@ -165,14 +165,14 @@ extern "C" {
         options: &CipherCCMOptions,
     ) -> CipherCCM;
     # [ wasm_bindgen ( js_name = createCipheriv ) ]
-    pub fn create_cipheriv2(
+    pub fn create_cipheriv_2(
         algorithm: &CipherGCMTypes,
         key: &CipherKey,
         iv: &JsValue,
         options: Option<&CipherGCMOptions>,
     ) -> CipherGCM;
     # [ wasm_bindgen ( js_name = createCipheriv ) ]
-    pub fn create_cipheriv3(
+    pub fn create_cipheriv_3(
         algorithm: &str,
         key: &CipherKey,
         iv: &JsValue,
@@ -186,35 +186,35 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_update(this: &Cipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update2(this: &Cipher, data: &str, input_encoding: &Utf8AsciiBinaryEncoding) -> Buffer;
+    pub fn update_2(this: &Cipher, data: &str, input_encoding: &Utf8AsciiBinaryEncoding) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
-    pub fn set_update2(this: &Cipher, value: &Function);
+    pub fn set_update_2(this: &Cipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update3(
+    pub fn update_3(
         this: &Cipher,
         data: &node_js::ArrayBufferView,
         input_encoding: &JsValue,
         output_encoding: &HexBase64BinaryEncoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
-    pub fn set_update3(this: &Cipher, value: &Function);
+    pub fn set_update_3(this: &Cipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update4(
+    pub fn update_4(
         this: &Cipher,
         data: &str,
         input_encoding: Option<&Utf8AsciiBinaryEncoding>,
         output_encoding: &HexBase64BinaryEncoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
-    pub fn set_update4(this: &Cipher, value: &Function);
+    pub fn set_update_4(this: &Cipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = final ) ]
     pub fn final_(this: &Cipher) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = final ) ]
     pub fn set_final_(this: &Cipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = final ) ]
-    pub fn final2(this: &Cipher, output_encoding: &str) -> String;
+    pub fn final_2(this: &Cipher, output_encoding: &str) -> String;
     # [ wasm_bindgen ( method , setter , js_name = final ) ]
-    pub fn set_final2(this: &Cipher, value: &Function);
+    pub fn set_final_2(this: &Cipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = setAutoPadding ) ]
     pub fn set_auto_padding(this: &Cipher, auto_padding: Option<bool>) -> Cipher;
     # [ wasm_bindgen ( method , setter , js_name = setAutoPadding ) ]
@@ -244,13 +244,13 @@ extern "C" {
         options: &CipherCCMOptions,
     ) -> DecipherCCM;
     # [ wasm_bindgen ( js_name = createDecipher ) ]
-    pub fn create_decipher2(
+    pub fn create_decipher_2(
         algorithm: &CipherGCMTypes,
         password: &BinaryLike,
         options: Option<&CipherGCMOptions>,
     ) -> DecipherGCM;
     # [ wasm_bindgen ( js_name = createDecipher ) ]
-    pub fn create_decipher3(
+    pub fn create_decipher_3(
         algorithm: &str,
         password: &BinaryLike,
         options: Option<&internal::TransformOptions>,
@@ -263,14 +263,14 @@ extern "C" {
         options: &CipherCCMOptions,
     ) -> DecipherCCM;
     # [ wasm_bindgen ( js_name = createDecipheriv ) ]
-    pub fn create_decipheriv2(
+    pub fn create_decipheriv_2(
         algorithm: &CipherGCMTypes,
         key: &BinaryLike,
         iv: &JsValue,
         options: Option<&CipherGCMOptions>,
     ) -> DecipherGCM;
     # [ wasm_bindgen ( js_name = createDecipheriv ) ]
-    pub fn create_decipheriv3(
+    pub fn create_decipheriv_3(
         algorithm: &str,
         key: &BinaryLike,
         iv: &JsValue,
@@ -284,36 +284,39 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_update(this: &Decipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update2(this: &Decipher, data: &str, input_encoding: &HexBase64BinaryEncoding)
-    -> Buffer;
+    pub fn update_2(
+        this: &Decipher,
+        data: &str,
+        input_encoding: &HexBase64BinaryEncoding,
+    ) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
-    pub fn set_update2(this: &Decipher, value: &Function);
+    pub fn set_update_2(this: &Decipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update3(
+    pub fn update_3(
         this: &Decipher,
         data: &node_js::ArrayBufferView,
         input_encoding: Option<&HexBase64BinaryEncoding>,
         output_encoding: &Utf8AsciiBinaryEncoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
-    pub fn set_update3(this: &Decipher, value: &Function);
+    pub fn set_update_3(this: &Decipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update4(
+    pub fn update_4(
         this: &Decipher,
         data: &str,
         input_encoding: Option<&HexBase64BinaryEncoding>,
         output_encoding: &Utf8AsciiBinaryEncoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
-    pub fn set_update4(this: &Decipher, value: &Function);
+    pub fn set_update_4(this: &Decipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = final ) ]
     pub fn final_(this: &Decipher) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = final ) ]
     pub fn set_final_(this: &Decipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = final ) ]
-    pub fn final2(this: &Decipher, output_encoding: &str) -> String;
+    pub fn final_2(this: &Decipher, output_encoding: &str) -> String;
     # [ wasm_bindgen ( method , setter , js_name = final ) ]
-    pub fn set_final2(this: &Decipher, value: &Function);
+    pub fn set_final_2(this: &Decipher, value: &Function);
     # [ wasm_bindgen ( method , js_name = setAutoPadding ) ]
     pub fn set_auto_padding(this: &Decipher, auto_padding: Option<bool>) -> Decipher;
     # [ wasm_bindgen ( method , setter , js_name = setAutoPadding ) ]
@@ -401,21 +404,21 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_update(this: &Signer, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update2(this: &Signer, data: &str, input_encoding: &Utf8AsciiLatin1Encoding) -> Signer;
+    pub fn update_2(this: &Signer, data: &str, input_encoding: &Utf8AsciiLatin1Encoding) -> Signer;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
-    pub fn set_update2(this: &Signer, value: &Function);
+    pub fn set_update_2(this: &Signer, value: &Function);
     #[wasm_bindgen(method)]
     pub fn sign(this: &Signer, private_key: &JsValue) -> Buffer;
     #[wasm_bindgen(method, setter)]
     pub fn set_sign(this: &Signer, value: &Function);
     # [ wasm_bindgen ( method , js_name = sign ) ]
-    pub fn sign2(
+    pub fn sign_2(
         this: &Signer,
         private_key: &JsValue,
         output_format: &HexBase64Latin1Encoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = sign ) ]
-    pub fn set_sign2(this: &Signer, value: &Function);
+    pub fn set_sign_2(this: &Signer, value: &Function);
     # [ wasm_bindgen ( js_name = createVerify ) ]
     pub fn create_verify(algorithm: &str, options: Option<&internal::WritableOptions>) -> Verify;
     pub type Verify;
@@ -426,39 +429,39 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_update(this: &Verify, value: &Function);
     # [ wasm_bindgen ( method , js_name = update ) ]
-    pub fn update2(this: &Verify, data: &str, input_encoding: &Utf8AsciiLatin1Encoding) -> Verify;
+    pub fn update_2(this: &Verify, data: &str, input_encoding: &Utf8AsciiLatin1Encoding) -> Verify;
     # [ wasm_bindgen ( method , setter , js_name = update ) ]
-    pub fn set_update2(this: &Verify, value: &Function);
+    pub fn set_update_2(this: &Verify, value: &Function);
     #[wasm_bindgen(method)]
     pub fn verify(this: &Verify, object: &JsValue, signature: &node_js::ArrayBufferView) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_verify(this: &Verify, value: &Function);
     # [ wasm_bindgen ( method , js_name = verify ) ]
-    pub fn verify2(
+    pub fn verify_2(
         this: &Verify,
         object: &JsValue,
         signature: &str,
         signature_format: Option<&HexBase64Latin1Encoding>,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = verify ) ]
-    pub fn set_verify2(this: &Verify, value: &Function);
+    pub fn set_verify_2(this: &Verify, value: &Function);
     # [ wasm_bindgen ( js_name = createDiffieHellman ) ]
     pub fn create_diffie_hellman(prime_length: f64, generator: &JsValue) -> DiffieHellman;
     # [ wasm_bindgen ( js_name = createDiffieHellman ) ]
-    pub fn create_diffie_hellman2(prime: &node_js::ArrayBufferView) -> DiffieHellman;
+    pub fn create_diffie_hellman_2(prime: &node_js::ArrayBufferView) -> DiffieHellman;
     # [ wasm_bindgen ( js_name = createDiffieHellman ) ]
-    pub fn create_diffie_hellman3(
+    pub fn create_diffie_hellman_3(
         prime: &str,
         prime_encoding: &HexBase64Latin1Encoding,
     ) -> DiffieHellman;
     # [ wasm_bindgen ( js_name = createDiffieHellman ) ]
-    pub fn create_diffie_hellman4(
+    pub fn create_diffie_hellman_4(
         prime: &str,
         prime_encoding: &HexBase64Latin1Encoding,
         generator: &JsValue,
     ) -> DiffieHellman;
     # [ wasm_bindgen ( js_name = createDiffieHellman ) ]
-    pub fn create_diffie_hellman5(
+    pub fn create_diffie_hellman_5(
         prime: &str,
         prime_encoding: &HexBase64Latin1Encoding,
         generator: &str,
@@ -472,9 +475,9 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = generateKeys ) ]
     pub fn set_generate_keys(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = generateKeys ) ]
-    pub fn generate_keys2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
+    pub fn generate_keys_2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = generateKeys ) ]
-    pub fn set_generate_keys2(this: &DiffieHellman, value: &Function);
+    pub fn set_generate_keys_2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = computeSecret ) ]
     pub fn compute_secret(
         this: &DiffieHellman,
@@ -483,78 +486,78 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
     pub fn set_compute_secret(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = computeSecret ) ]
-    pub fn compute_secret2(
+    pub fn compute_secret_2(
         this: &DiffieHellman,
         other_public_key: &str,
         input_encoding: &HexBase64Latin1Encoding,
     ) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
-    pub fn set_compute_secret2(this: &DiffieHellman, value: &Function);
+    pub fn set_compute_secret_2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = computeSecret ) ]
-    pub fn compute_secret3(
+    pub fn compute_secret_3(
         this: &DiffieHellman,
         other_public_key: &node_js::ArrayBufferView,
         output_encoding: &HexBase64Latin1Encoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
-    pub fn set_compute_secret3(this: &DiffieHellman, value: &Function);
+    pub fn set_compute_secret_3(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = computeSecret ) ]
-    pub fn compute_secret4(
+    pub fn compute_secret_4(
         this: &DiffieHellman,
         other_public_key: &str,
         input_encoding: &HexBase64Latin1Encoding,
         output_encoding: &HexBase64Latin1Encoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
-    pub fn set_compute_secret4(this: &DiffieHellman, value: &Function);
+    pub fn set_compute_secret_4(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPrime ) ]
     pub fn get_prime(this: &DiffieHellman) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = getPrime ) ]
     pub fn set_get_prime(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPrime ) ]
-    pub fn get_prime2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
+    pub fn get_prime_2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getPrime ) ]
-    pub fn set_get_prime2(this: &DiffieHellman, value: &Function);
+    pub fn set_get_prime_2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getGenerator ) ]
     pub fn get_generator(this: &DiffieHellman) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = getGenerator ) ]
     pub fn set_get_generator(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getGenerator ) ]
-    pub fn get_generator2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
+    pub fn get_generator_2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getGenerator ) ]
-    pub fn set_get_generator2(this: &DiffieHellman, value: &Function);
+    pub fn set_get_generator_2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPublicKey ) ]
     pub fn get_public_key(this: &DiffieHellman) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = getPublicKey ) ]
     pub fn set_get_public_key(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPublicKey ) ]
-    pub fn get_public_key2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
+    pub fn get_public_key_2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getPublicKey ) ]
-    pub fn set_get_public_key2(this: &DiffieHellman, value: &Function);
+    pub fn set_get_public_key_2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPrivateKey ) ]
     pub fn get_private_key(this: &DiffieHellman) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = getPrivateKey ) ]
     pub fn set_get_private_key(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPrivateKey ) ]
-    pub fn get_private_key2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
+    pub fn get_private_key_2(this: &DiffieHellman, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getPrivateKey ) ]
-    pub fn set_get_private_key2(this: &DiffieHellman, value: &Function);
+    pub fn set_get_private_key_2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = setPublicKey ) ]
     pub fn set_public_key(this: &DiffieHellman, public_key: &node_js::ArrayBufferView);
     # [ wasm_bindgen ( method , setter , js_name = setPublicKey ) ]
     pub fn set_set_public_key(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = setPublicKey ) ]
-    pub fn set_public_key2(this: &DiffieHellman, public_key: &str, encoding: &str);
+    pub fn set_public_key_2(this: &DiffieHellman, public_key: &str, encoding: &str);
     # [ wasm_bindgen ( method , setter , js_name = setPublicKey ) ]
-    pub fn set_set_public_key2(this: &DiffieHellman, value: &Function);
+    pub fn set_set_public_key_2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = setPrivateKey ) ]
     pub fn set_private_key(this: &DiffieHellman, private_key: &node_js::ArrayBufferView);
     # [ wasm_bindgen ( method , setter , js_name = setPrivateKey ) ]
     pub fn set_set_private_key(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , js_name = setPrivateKey ) ]
-    pub fn set_private_key2(this: &DiffieHellman, private_key: &str, encoding: &str);
+    pub fn set_private_key_2(this: &DiffieHellman, private_key: &str, encoding: &str);
     # [ wasm_bindgen ( method , setter , js_name = setPrivateKey ) ]
-    pub fn set_set_private_key2(this: &DiffieHellman, value: &Function);
+    pub fn set_set_private_key_2(this: &DiffieHellman, value: &Function);
     # [ wasm_bindgen ( method , getter , js_name = verifyError ) ]
     pub fn verify_error(this: &DiffieHellman) -> f64;
     # [ wasm_bindgen ( method , setter , js_name = verifyError ) ]
@@ -581,19 +584,19 @@ extern "C" {
     # [ wasm_bindgen ( js_name = randomBytes ) ]
     pub fn random_bytes(size: f64) -> Buffer;
     # [ wasm_bindgen ( js_name = randomBytes ) ]
-    pub fn random_bytes2(size: f64, callback: &JsValue);
+    pub fn random_bytes_2(size: f64, callback: &JsValue);
     # [ wasm_bindgen ( js_name = pseudoRandomBytes ) ]
     pub fn pseudo_random_bytes(size: f64) -> Buffer;
     # [ wasm_bindgen ( js_name = pseudoRandomBytes ) ]
-    pub fn pseudo_random_bytes2(size: f64, callback: &JsValue);
+    pub fn pseudo_random_bytes_2(size: f64, callback: &JsValue);
     # [ wasm_bindgen ( js_name = randomFillSync ) ]
     pub fn random_fill_sync(buffer: &JsValue, offset: Option<f64>, size: Option<f64>) -> JsValue;
     # [ wasm_bindgen ( js_name = randomFill ) ]
     pub fn random_fill(buffer: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( js_name = randomFill ) ]
-    pub fn random_fill2(buffer: &JsValue, offset: f64, callback: &JsValue);
+    pub fn random_fill_2(buffer: &JsValue, offset: f64, callback: &JsValue);
     # [ wasm_bindgen ( js_name = randomFill ) ]
-    pub fn random_fill3(buffer: &JsValue, offset: f64, size: f64, callback: &JsValue);
+    pub fn random_fill_3(buffer: &JsValue, offset: f64, size: f64, callback: &JsValue);
     pub type ScryptOptions;
     # [ wasm_bindgen ( method , getter , js_name = N ) ]
     pub fn n(this: &ScryptOptions) -> Option<f64>;
@@ -614,7 +617,7 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn scrypt(password: &BinaryLike, salt: &BinaryLike, keylen: f64, callback: &JsValue);
     # [ wasm_bindgen ( js_name = scrypt ) ]
-    pub fn scrypt2(
+    pub fn scrypt_2(
         password: &BinaryLike,
         salt: &BinaryLike,
         keylen: f64,
@@ -691,70 +694,70 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = generateKeys ) ]
     pub fn set_generate_keys(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = generateKeys ) ]
-    pub fn generate_keys2(
+    pub fn generate_keys_2(
         this: &ECDH,
         encoding: &HexBase64Latin1Encoding,
         format: Option<&ECDHKeyFormat>,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = generateKeys ) ]
-    pub fn set_generate_keys2(this: &ECDH, value: &Function);
+    pub fn set_generate_keys_2(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = computeSecret ) ]
     pub fn compute_secret(this: &ECDH, other_public_key: &node_js::ArrayBufferView) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
     pub fn set_compute_secret(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = computeSecret ) ]
-    pub fn compute_secret2(
+    pub fn compute_secret_2(
         this: &ECDH,
         other_public_key: &str,
         input_encoding: &HexBase64Latin1Encoding,
     ) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
-    pub fn set_compute_secret2(this: &ECDH, value: &Function);
+    pub fn set_compute_secret_2(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = computeSecret ) ]
-    pub fn compute_secret3(
+    pub fn compute_secret_3(
         this: &ECDH,
         other_public_key: &node_js::ArrayBufferView,
         output_encoding: &HexBase64Latin1Encoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
-    pub fn set_compute_secret3(this: &ECDH, value: &Function);
+    pub fn set_compute_secret_3(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = computeSecret ) ]
-    pub fn compute_secret4(
+    pub fn compute_secret_4(
         this: &ECDH,
         other_public_key: &str,
         input_encoding: &HexBase64Latin1Encoding,
         output_encoding: &HexBase64Latin1Encoding,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = computeSecret ) ]
-    pub fn set_compute_secret4(this: &ECDH, value: &Function);
+    pub fn set_compute_secret_4(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPrivateKey ) ]
     pub fn get_private_key(this: &ECDH) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = getPrivateKey ) ]
     pub fn set_get_private_key(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPrivateKey ) ]
-    pub fn get_private_key2(this: &ECDH, encoding: &HexBase64Latin1Encoding) -> String;
+    pub fn get_private_key_2(this: &ECDH, encoding: &HexBase64Latin1Encoding) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getPrivateKey ) ]
-    pub fn set_get_private_key2(this: &ECDH, value: &Function);
+    pub fn set_get_private_key_2(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPublicKey ) ]
     pub fn get_public_key(this: &ECDH) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = getPublicKey ) ]
     pub fn set_get_public_key(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPublicKey ) ]
-    pub fn get_public_key2(
+    pub fn get_public_key_2(
         this: &ECDH,
         encoding: &HexBase64Latin1Encoding,
         format: Option<&ECDHKeyFormat>,
     ) -> String;
     # [ wasm_bindgen ( method , setter , js_name = getPublicKey ) ]
-    pub fn set_get_public_key2(this: &ECDH, value: &Function);
+    pub fn set_get_public_key_2(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = setPrivateKey ) ]
     pub fn set_private_key(this: &ECDH, private_key: &node_js::ArrayBufferView);
     # [ wasm_bindgen ( method , setter , js_name = setPrivateKey ) ]
     pub fn set_set_private_key(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( method , js_name = setPrivateKey ) ]
-    pub fn set_private_key2(this: &ECDH, private_key: &str, encoding: &HexBase64Latin1Encoding);
+    pub fn set_private_key_2(this: &ECDH, private_key: &str, encoding: &HexBase64Latin1Encoding);
     # [ wasm_bindgen ( method , setter , js_name = setPrivateKey ) ]
-    pub fn set_set_private_key2(this: &ECDH, value: &Function);
+    pub fn set_set_private_key_2(this: &ECDH, value: &Function);
     # [ wasm_bindgen ( js_name = createECDH ) ]
     pub fn create_ecdh(curve_name: &str) -> ECDH;
     # [ wasm_bindgen ( js_name = timingSafeEqual ) ]
@@ -877,113 +880,113 @@ extern "C" {
         options: &RSAKeyPairOptions,
     ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync2(
+    pub fn generate_key_pair_sync_2(
         type_: &JsValue,
         options: &RSAKeyPairOptions,
     ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync3(
+    pub fn generate_key_pair_sync_3(
         type_: &JsValue,
         options: &RSAKeyPairOptions,
     ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync4(
+    pub fn generate_key_pair_sync_4(
         type_: &JsValue,
         options: &RSAKeyPairOptions,
     ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync5(
+    pub fn generate_key_pair_sync_5(
         type_: &JsValue,
         options: &RSAKeyPairKeyObjectOptions,
     ) -> KeyPairKeyObjectResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync6(
+    pub fn generate_key_pair_sync_6(
         type_: &JsValue,
         options: &DSAKeyPairOptions,
     ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync7(
+    pub fn generate_key_pair_sync_7(
         type_: &JsValue,
         options: &DSAKeyPairOptions,
     ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync8(
+    pub fn generate_key_pair_sync_8(
         type_: &JsValue,
         options: &DSAKeyPairOptions,
     ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync9(
+    pub fn generate_key_pair_sync_9(
         type_: &JsValue,
         options: &DSAKeyPairOptions,
     ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync10(
+    pub fn generate_key_pair_sync_10(
         type_: &JsValue,
         options: &DSAKeyPairKeyObjectOptions,
     ) -> KeyPairKeyObjectResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync11(
+    pub fn generate_key_pair_sync_11(
         type_: &JsValue,
         options: &ECKeyPairOptions,
     ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync12(
+    pub fn generate_key_pair_sync_12(
         type_: &JsValue,
         options: &ECKeyPairOptions,
     ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync13(
+    pub fn generate_key_pair_sync_13(
         type_: &JsValue,
         options: &ECKeyPairOptions,
     ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync14(
+    pub fn generate_key_pair_sync_14(
         type_: &JsValue,
         options: &ECKeyPairOptions,
     ) -> KeyPairSyncResult;
     # [ wasm_bindgen ( js_name = generateKeyPairSync ) ]
-    pub fn generate_key_pair_sync15(
+    pub fn generate_key_pair_sync_15(
         type_: &JsValue,
         options: &ECKeyPairKeyObjectOptions,
     ) -> KeyPairKeyObjectResult;
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
     pub fn generate_key_pair(type_: &JsValue, options: &RSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair2(type_: &JsValue, options: &RSAKeyPairOptions, callback: &JsValue);
+    pub fn generate_key_pair_2(type_: &JsValue, options: &RSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair3(type_: &JsValue, options: &RSAKeyPairOptions, callback: &JsValue);
+    pub fn generate_key_pair_3(type_: &JsValue, options: &RSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair4(type_: &JsValue, options: &RSAKeyPairOptions, callback: &JsValue);
+    pub fn generate_key_pair_4(type_: &JsValue, options: &RSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair5(
+    pub fn generate_key_pair_5(
         type_: &JsValue,
         options: &RSAKeyPairKeyObjectOptions,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair6(type_: &JsValue, options: &DSAKeyPairOptions, callback: &JsValue);
+    pub fn generate_key_pair_6(type_: &JsValue, options: &DSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair7(type_: &JsValue, options: &DSAKeyPairOptions, callback: &JsValue);
+    pub fn generate_key_pair_7(type_: &JsValue, options: &DSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair8(type_: &JsValue, options: &DSAKeyPairOptions, callback: &JsValue);
+    pub fn generate_key_pair_8(type_: &JsValue, options: &DSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair9(type_: &JsValue, options: &DSAKeyPairOptions, callback: &JsValue);
+    pub fn generate_key_pair_9(type_: &JsValue, options: &DSAKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair10(
+    pub fn generate_key_pair_10(
         type_: &JsValue,
         options: &DSAKeyPairKeyObjectOptions,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair11(type_: &JsValue, options: &ECKeyPairOptions, callback: &JsValue);
+    pub fn generate_key_pair_11(type_: &JsValue, options: &ECKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair12(type_: &JsValue, options: &ECKeyPairOptions, callback: &JsValue);
+    pub fn generate_key_pair_12(type_: &JsValue, options: &ECKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair13(type_: &JsValue, options: &ECKeyPairOptions, callback: &JsValue);
+    pub fn generate_key_pair_13(type_: &JsValue, options: &ECKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair14(type_: &JsValue, options: &ECKeyPairOptions, callback: &JsValue);
+    pub fn generate_key_pair_14(type_: &JsValue, options: &ECKeyPairOptions, callback: &JsValue);
     # [ wasm_bindgen ( js_name = generateKeyPair ) ]
-    pub fn generate_key_pair15(
+    pub fn generate_key_pair_15(
         type_: &JsValue,
         options: &ECKeyPairKeyObjectOptions,
         callback: &JsValue,

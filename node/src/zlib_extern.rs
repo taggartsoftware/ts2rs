@@ -108,59 +108,58 @@ extern "C" {
     # [ wasm_bindgen ( js_name = createUnzip ) ]
     pub fn create_unzip(options: Option<&ZlibOptions>) -> Unzip;
     pub type InputType;
-    pub type CompressCallback;
     # [ wasm_bindgen ( js_name = brotliCompress ) ]
     pub fn brotli_compress(buf: &InputType, options: &BrotliOptions, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = brotliCompress ) ]
-    pub fn brotli_compress2(buf: &InputType, callback: &CompressCallback);
+    pub fn brotli_compress_2(buf: &InputType, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = brotliCompressSync ) ]
     pub fn brotli_compress_sync(buf: &InputType, options: Option<&BrotliOptions>) -> Buffer;
     # [ wasm_bindgen ( js_name = brotliDecompress ) ]
     pub fn brotli_decompress(buf: &InputType, options: &BrotliOptions, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = brotliDecompress ) ]
-    pub fn brotli_decompress2(buf: &InputType, callback: &CompressCallback);
+    pub fn brotli_decompress_2(buf: &InputType, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = brotliDecompressSync ) ]
     pub fn brotli_decompress_sync(buf: &InputType, options: Option<&BrotliOptions>) -> Buffer;
     #[wasm_bindgen()]
     pub fn deflate(buf: &InputType, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = deflate ) ]
-    pub fn deflate2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn deflate_2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = deflateSync ) ]
     pub fn deflate_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
     # [ wasm_bindgen ( js_name = deflateRaw ) ]
     pub fn deflate_raw(buf: &InputType, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = deflateRaw ) ]
-    pub fn deflate_raw2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn deflate_raw_2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = deflateRawSync ) ]
     pub fn deflate_raw_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
     #[wasm_bindgen()]
     pub fn gzip(buf: &InputType, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = gzip ) ]
-    pub fn gzip2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn gzip_2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = gzipSync ) ]
     pub fn gzip_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
     #[wasm_bindgen()]
     pub fn gunzip(buf: &InputType, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = gunzip ) ]
-    pub fn gunzip2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn gunzip_2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = gunzipSync ) ]
     pub fn gunzip_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
     #[wasm_bindgen()]
     pub fn inflate(buf: &InputType, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = inflate ) ]
-    pub fn inflate2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn inflate_2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = inflateSync ) ]
     pub fn inflate_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
     # [ wasm_bindgen ( js_name = inflateRaw ) ]
     pub fn inflate_raw(buf: &InputType, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = inflateRaw ) ]
-    pub fn inflate_raw2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn inflate_raw_2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = inflateRawSync ) ]
     pub fn inflate_raw_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
     #[wasm_bindgen()]
     pub fn unzip(buf: &InputType, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = unzip ) ]
-    pub fn unzip2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
+    pub fn unzip_2(buf: &InputType, options: &ZlibOptions, callback: &CompressCallback);
     # [ wasm_bindgen ( js_name = unzipSync ) ]
     pub fn unzip_sync(buf: &InputType, options: Option<&ZlibOptions>) -> Buffer;
     pub static Z_NO_FLUSH: f64;

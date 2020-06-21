@@ -98,7 +98,7 @@ extern "C" {
     # [ wasm_bindgen ( js_name = userInfo ) ]
     pub fn user_info(options: &JsValue) -> UserInfo;
     # [ wasm_bindgen ( js_name = userInfo ) ]
-    pub fn user_info2(options: &JsValue) -> UserInfo;
+    pub fn user_info_2(options: &JsValue) -> UserInfo;
     #[wasm_bindgen(js_name = "constants")]
     pub static CONSTANTS: JsValue;
     #[wasm_bindgen()]
@@ -125,5 +125,5 @@ extern "C" {
     #[doc = ""]
     #[doc = "Sets the priority of the process specified process."]
     # [ wasm_bindgen ( js_name = setPriority ) ]
-    pub fn set_priority2(pid: f64, priority: f64);
+    pub fn set_priority_2(pid: f64, priority: f64);
 }

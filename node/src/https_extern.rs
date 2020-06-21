@@ -26,20 +26,20 @@ extern "C" {
     pub fn set_options(this: &Agent, value: &AgentOptions);
     pub type Server;
     #[wasm_bindgen(constructor)]
-    pub fn new_server(request_listener: Option<&crate::http::RequestListener>) -> Server;
+    pub fn new_server(request_listener: &crate::http::RequestListener) -> Server;
     #[wasm_bindgen(constructor)]
-    pub fn new_server2(
+    pub fn new_server_2(
         options: &ServerOptions,
-        request_listener: Option<&crate::http::RequestListener>,
+        request_listener: &crate::http::RequestListener,
     ) -> Server;
     # [ wasm_bindgen ( method , js_name = setTimeout ) ]
     pub fn set_timeout(this: &Server, callback: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = setTimeout ) ]
     pub fn set_set_timeout(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = setTimeout ) ]
-    pub fn set_timeout2(this: &Server, msecs: Option<f64>, callback: &JsValue) -> Server;
+    pub fn set_timeout_2(this: &Server, msecs: Option<f64>, callback: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = setTimeout ) ]
-    pub fn set_set_timeout2(this: &Server, value: &Function);
+    pub fn set_set_timeout_2(this: &Server, value: &Function);
     #[doc = "Limits maximum incoming headers count. If set to 0, no limit will be applied."]
     # [ wasm_bindgen ( method , getter , js_name = maxHeadersCount ) ]
     pub fn max_headers_count(this: &Server) -> JsValue;
@@ -48,7 +48,7 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn timeout(this: &Server) -> f64;
     #[wasm_bindgen(method, setter)]
-    pub fn set_timeout(this: &Server, value: f64);
+    pub fn set_timeout_3(this: &Server, value: f64);
     #[doc = "Limit the amount of time the parser will wait to receive the complete HTTP headers."]
     # [ wasm_bindgen ( method , getter , js_name = headersTimeout ) ]
     pub fn headers_timeout(this: &Server) -> f64;
@@ -59,16 +59,16 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = keepAliveTimeout ) ]
     pub fn set_keep_alive_timeout(this: &Server, value: f64);
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server(request_listener: Option<&crate::http::RequestListener>) -> Server;
+    pub fn create_server(request_listener: &crate::http::RequestListener) -> Server;
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server2(
+    pub fn create_server_2(
         options: &ServerOptions,
-        request_listener: Option<&crate::http::RequestListener>,
+        request_listener: &crate::http::RequestListener,
     ) -> Server;
     #[wasm_bindgen()]
     pub fn request(options: &JsValue, callback: &JsValue) -> crate::http::ClientRequest;
     # [ wasm_bindgen ( js_name = request ) ]
-    pub fn request2(
+    pub fn request_2(
         url: &JsValue,
         options: &RequestOptions,
         callback: &JsValue,
@@ -76,7 +76,7 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn get(options: &JsValue, callback: &JsValue) -> crate::http::ClientRequest;
     # [ wasm_bindgen ( js_name = get ) ]
-    pub fn get2(
+    pub fn get_2(
         url: &JsValue,
         options: &RequestOptions,
         callback: &JsValue,

@@ -9,9 +9,9 @@ extern "C" {
     pub type SamplingHeapProfileNode;
     #[doc = "Function location."]
     # [ wasm_bindgen ( method , getter , js_name = callFrame ) ]
-    pub fn call_frame(this: &SamplingHeapProfileNode) -> inspector::runtime::CallFrame;
+    pub fn call_frame(this: &SamplingHeapProfileNode) -> runtime::CallFrame;
     # [ wasm_bindgen ( method , setter , js_name = callFrame ) ]
-    pub fn set_call_frame(this: &SamplingHeapProfileNode, value: &inspector::runtime::CallFrame);
+    pub fn set_call_frame(this: &SamplingHeapProfileNode, value: &runtime::CallFrame);
     #[doc = "Allocations size in bytes for the node excluding children."]
     # [ wasm_bindgen ( method , getter , js_name = selfSize ) ]
     pub fn self_size(this: &SamplingHeapProfileNode) -> f64;
@@ -25,12 +25,9 @@ extern "C" {
     #[doc = "Profile."]
     pub type SamplingHeapProfile;
     #[wasm_bindgen(method, getter)]
-    pub fn head(this: &SamplingHeapProfile) -> inspector::heap_profiler::SamplingHeapProfileNode;
+    pub fn head(this: &SamplingHeapProfile) -> heap_profiler::SamplingHeapProfileNode;
     #[wasm_bindgen(method, setter)]
-    pub fn set_head(
-        this: &SamplingHeapProfile,
-        value: &inspector::heap_profiler::SamplingHeapProfileNode,
-    );
+    pub fn set_head(this: &SamplingHeapProfile, value: &heap_profiler::SamplingHeapProfileNode);
     pub type StartTrackingHeapObjectsParameterType;
     # [ wasm_bindgen ( method , getter , js_name = trackAllocations ) ]
     pub fn track_allocations(this: &StartTrackingHeapObjectsParameterType) -> Option<bool>;
@@ -52,11 +49,11 @@ extern "C" {
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
     pub fn object_id(
         this: &GetObjectByHeapObjectIdParameterType,
-    ) -> inspector::heap_profiler::HeapSnapshotObjectId;
+    ) -> heap_profiler::HeapSnapshotObjectId;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
     pub fn set_object_id(
         this: &GetObjectByHeapObjectIdParameterType,
-        value: inspector::heap_profiler::HeapSnapshotObjectIdRef,
+        value: heap_profiler::HeapSnapshotObjectIdRef,
     );
     #[doc = "Symbolic group name that can be used to release multiple objects."]
     # [ wasm_bindgen ( method , getter , js_name = objectGroup ) ]
@@ -68,21 +65,18 @@ extern "C" {
     # [ wasm_bindgen ( method , getter , js_name = heapObjectId ) ]
     pub fn heap_object_id(
         this: &AddInspectedHeapObjectParameterType,
-    ) -> inspector::heap_profiler::HeapSnapshotObjectId;
+    ) -> heap_profiler::HeapSnapshotObjectId;
     # [ wasm_bindgen ( method , setter , js_name = heapObjectId ) ]
     pub fn set_heap_object_id(
         this: &AddInspectedHeapObjectParameterType,
-        value: inspector::heap_profiler::HeapSnapshotObjectIdRef,
+        value: heap_profiler::HeapSnapshotObjectIdRef,
     );
     pub type GetHeapObjectIdParameterType;
     #[doc = "Identifier of the object to get heap object id for."]
     # [ wasm_bindgen ( method , getter , js_name = objectId ) ]
-    pub fn object_id(this: &GetHeapObjectIdParameterType) -> inspector::runtime::RemoteObjectId;
+    pub fn object_id(this: &GetHeapObjectIdParameterType) -> runtime::RemoteObjectId;
     # [ wasm_bindgen ( method , setter , js_name = objectId ) ]
-    pub fn set_object_id(
-        this: &GetHeapObjectIdParameterType,
-        value: inspector::runtime::RemoteObjectIdRef,
-    );
+    pub fn set_object_id(this: &GetHeapObjectIdParameterType, value: runtime::RemoteObjectIdRef);
     pub type StartSamplingParameterType;
     #[doc = "Average sample interval in bytes. Poisson distribution is used for the intervals. The default value is 32768 bytes."]
     # [ wasm_bindgen ( method , getter , js_name = samplingInterval ) ]
@@ -92,42 +86,34 @@ extern "C" {
     pub type GetObjectByHeapObjectIdReturnType;
     #[doc = "Evaluation result."]
     #[wasm_bindgen(method, getter)]
-    pub fn result(this: &GetObjectByHeapObjectIdReturnType) -> inspector::runtime::RemoteObject;
+    pub fn result(this: &GetObjectByHeapObjectIdReturnType) -> runtime::RemoteObject;
     #[wasm_bindgen(method, setter)]
-    pub fn set_result(
-        this: &GetObjectByHeapObjectIdReturnType,
-        value: &inspector::runtime::RemoteObject,
-    );
+    pub fn set_result(this: &GetObjectByHeapObjectIdReturnType, value: &runtime::RemoteObject);
     pub type GetHeapObjectIdReturnType;
     #[doc = "Id of the heap snapshot object corresponding to the passed remote object id."]
     # [ wasm_bindgen ( method , getter , js_name = heapSnapshotObjectId ) ]
     pub fn heap_snapshot_object_id(
         this: &GetHeapObjectIdReturnType,
-    ) -> inspector::heap_profiler::HeapSnapshotObjectId;
+    ) -> heap_profiler::HeapSnapshotObjectId;
     # [ wasm_bindgen ( method , setter , js_name = heapSnapshotObjectId ) ]
     pub fn set_heap_snapshot_object_id(
         this: &GetHeapObjectIdReturnType,
-        value: inspector::heap_profiler::HeapSnapshotObjectIdRef,
+        value: heap_profiler::HeapSnapshotObjectIdRef,
     );
     pub type StopSamplingReturnType;
     #[doc = "Recorded sampling heap profile."]
     #[wasm_bindgen(method, getter)]
-    pub fn profile(this: &StopSamplingReturnType) -> inspector::heap_profiler::SamplingHeapProfile;
+    pub fn profile(this: &StopSamplingReturnType) -> heap_profiler::SamplingHeapProfile;
     #[wasm_bindgen(method, setter)]
-    pub fn set_profile(
-        this: &StopSamplingReturnType,
-        value: &inspector::heap_profiler::SamplingHeapProfile,
-    );
+    pub fn set_profile(this: &StopSamplingReturnType, value: &heap_profiler::SamplingHeapProfile);
     pub type GetSamplingProfileReturnType;
     #[doc = "Return the sampling profile being collected."]
     #[wasm_bindgen(method, getter)]
-    pub fn profile(
-        this: &GetSamplingProfileReturnType,
-    ) -> inspector::heap_profiler::SamplingHeapProfile;
+    pub fn profile(this: &GetSamplingProfileReturnType) -> heap_profiler::SamplingHeapProfile;
     #[wasm_bindgen(method, setter)]
     pub fn set_profile(
         this: &GetSamplingProfileReturnType,
-        value: &inspector::heap_profiler::SamplingHeapProfile,
+        value: &heap_profiler::SamplingHeapProfile,
     );
     pub type AddHeapSnapshotChunkEventDataType;
     #[wasm_bindgen(method, getter)]

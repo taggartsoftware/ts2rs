@@ -6,16 +6,6 @@ impl Domain {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<EventEmitter> for Domain {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Domain> for EventEmitter {
-    fn from(child: Domain) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::Domain> for Domain {
     fn as_ref(&self) -> &node_js::Domain {
         JsCast::unchecked_ref(self)

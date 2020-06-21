@@ -66,16 +66,6 @@ impl SymbolConstructor {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<Uint8Array> for Buffer {
-    fn as_ref(&self) -> &Uint8Array {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Buffer> for Uint8Array {
-    fn from(child: Buffer) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<NodeRequireFunction> for NodeRequire {
     fn as_ref(&self) -> &NodeRequireFunction {
         JsCast::unchecked_ref(self)

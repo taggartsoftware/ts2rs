@@ -35,9 +35,9 @@ extern "C" {
     #[doc = "error with `repl.Recoverable` to indicate the input was incomplete and prompt for"]
     #[doc = "additional lines."]
     #[wasm_bindgen(method, getter)]
-    pub fn eval(this: &ReplOptions) -> Option<REPLEval>;
+    pub fn eval(this: &ReplOptions) -> REPLEval;
     #[wasm_bindgen(method, setter)]
-    pub fn set_eval(this: &ReplOptions, value: Option<&REPLEval>);
+    pub fn set_eval(this: &ReplOptions, value: &REPLEval);
     #[doc = "If `true`, specifies that the default `writer` function should include ANSI color"]
     #[doc = "styling to REPL output. If a custom `writer` function is provided then this has no"]
     #[doc = "effect."]
@@ -64,9 +64,9 @@ extern "C" {
     #[doc = "The function to invoke to format the output of each command before writing to `output`."]
     #[doc = "Default: a wrapper for `util.inspect`."]
     #[wasm_bindgen(method, getter)]
-    pub fn writer(this: &ReplOptions) -> Option<REPLWriter>;
+    pub fn writer(this: &ReplOptions) -> REPLWriter;
     #[wasm_bindgen(method, setter)]
-    pub fn set_writer(this: &ReplOptions, value: Option<&REPLWriter>);
+    pub fn set_writer(this: &ReplOptions, value: &REPLWriter);
     #[doc = "An optional function used for custom Tab auto completion."]
     #[wasm_bindgen(method, getter)]
     pub fn completer(this: &ReplOptions) -> JsValue;
@@ -89,13 +89,10 @@ extern "C" {
     pub fn break_eval_on_sigint(this: &ReplOptions) -> Option<bool>;
     # [ wasm_bindgen ( method , setter , js_name = breakEvalOnSigint ) ]
     pub fn set_break_eval_on_sigint(this: &ReplOptions, value: Option<bool>);
-    pub type REPLEval;
-    pub type REPLWriter;
     #[wasm_bindgen(js_name = "writer")]
     #[doc = "This is the default \"writer\" value, if none is passed in the REPL options,"]
     #[doc = "and it can be overridden by custom print functions."]
     pub static WRITER: JsValue;
-    pub type REPLCommandAction;
     pub type REPLCommand;
     #[doc = "Help text to be displayed when `.help` is entered."]
     #[wasm_bindgen(method, getter)]
@@ -205,278 +202,289 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn add_listener_2(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &REPLServer, value: &Function);
+    pub fn set_add_listener_2(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn add_listener_3(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &REPLServer, value: &Function);
+    pub fn set_add_listener_3(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn add_listener_4(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &REPLServer, value: &Function);
+    pub fn set_add_listener_4(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn add_listener_5(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &REPLServer, value: &Function);
+    pub fn set_add_listener_5(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn add_listener_6(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &REPLServer, value: &Function);
+    pub fn set_add_listener_6(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener7(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn add_listener_7(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener7(this: &REPLServer, value: &Function);
+    pub fn set_add_listener_7(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener8(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn add_listener_8(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener8(this: &REPLServer, value: &Function);
+    pub fn set_add_listener_8(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener9(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn add_listener_9(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener9(this: &REPLServer, value: &Function);
+    pub fn set_add_listener_9(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener10(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn add_listener_10(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener10(this: &REPLServer, value: &Function);
+    pub fn set_add_listener_10(this: &REPLServer, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &REPLServer, event: &JsValue, args: &Array) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &REPLServer, event: &JsValue) -> bool;
+    pub fn emit_2(this: &REPLServer, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &REPLServer, value: &Function);
+    pub fn set_emit_2(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &REPLServer, event: &JsValue, input: &str) -> bool;
+    pub fn emit_3(this: &REPLServer, event: &JsValue, input: &str) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &REPLServer, value: &Function);
+    pub fn set_emit_3(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &REPLServer, event: &JsValue) -> bool;
+    pub fn emit_4(this: &REPLServer, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &REPLServer, value: &Function);
+    pub fn set_emit_4(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &REPLServer, event: &JsValue) -> bool;
+    pub fn emit_5(this: &REPLServer, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &REPLServer, value: &Function);
+    pub fn set_emit_5(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &REPLServer, event: &JsValue) -> bool;
+    pub fn emit_6(this: &REPLServer, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit6(this: &REPLServer, value: &Function);
+    pub fn set_emit_6(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &REPLServer, event: &JsValue) -> bool;
+    pub fn emit_7(this: &REPLServer, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit7(this: &REPLServer, value: &Function);
+    pub fn set_emit_7(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit8(this: &REPLServer, event: &JsValue) -> bool;
+    pub fn emit_8(this: &REPLServer, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit8(this: &REPLServer, value: &Function);
+    pub fn set_emit_8(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit9(this: &REPLServer, event: &JsValue) -> bool;
+    pub fn emit_9(this: &REPLServer, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit9(this: &REPLServer, value: &Function);
+    pub fn set_emit_9(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit10(this: &REPLServer, event: &JsValue, context: &crate::vm::Context) -> bool;
+    pub fn emit_10(this: &REPLServer, event: &JsValue, context: &crate::vm::Context) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit10(this: &REPLServer, value: &Function);
+    pub fn set_emit_10(this: &REPLServer, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &REPLServer, event: &str, listener: &JsValue) -> REPLServer;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn on_2(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &REPLServer, value: &Function);
+    pub fn set_on_2(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn on_3(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &REPLServer, value: &Function);
+    pub fn set_on_3(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn on_4(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &REPLServer, value: &Function);
+    pub fn set_on_4(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn on_5(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &REPLServer, value: &Function);
+    pub fn set_on_5(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn on_6(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &REPLServer, value: &Function);
+    pub fn set_on_6(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on7(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn on_7(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on7(this: &REPLServer, value: &Function);
+    pub fn set_on_7(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on8(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn on_8(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on8(this: &REPLServer, value: &Function);
+    pub fn set_on_8(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on9(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn on_9(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on9(this: &REPLServer, value: &Function);
+    pub fn set_on_9(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on10(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn on_10(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on10(this: &REPLServer, value: &Function);
+    pub fn set_on_10(this: &REPLServer, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &REPLServer, event: &str, listener: &JsValue) -> REPLServer;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn once_2(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &REPLServer, value: &Function);
+    pub fn set_once_2(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn once_3(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &REPLServer, value: &Function);
+    pub fn set_once_3(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn once_4(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &REPLServer, value: &Function);
+    pub fn set_once_4(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn once_5(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &REPLServer, value: &Function);
+    pub fn set_once_5(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn once_6(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &REPLServer, value: &Function);
+    pub fn set_once_6(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once7(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn once_7(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once7(this: &REPLServer, value: &Function);
+    pub fn set_once_7(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once8(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn once_8(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once8(this: &REPLServer, value: &Function);
+    pub fn set_once_8(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once9(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn once_9(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once9(this: &REPLServer, value: &Function);
+    pub fn set_once_9(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once10(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
+    pub fn once_10(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once10(this: &REPLServer, value: &Function);
+    pub fn set_once_10(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &REPLServer, event: &str, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
-    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &REPLServer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
-    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &REPLServer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
-    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &REPLServer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
-    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &REPLServer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
-    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &REPLServer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener7(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
-    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener7(this: &REPLServer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener8(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
-    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener8(this: &REPLServer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener9(this: &REPLServer, event: &JsValue, listener: &JsValue) -> REPLServer;
-    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener9(this: &REPLServer, value: &Function);
-    # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener10(this: &REPLServer, event: &JsValue, listener: &JsValue)
+    pub fn prepend_listener_2(this: &REPLServer, event: &JsValue, listener: &JsValue)
     -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener10(this: &REPLServer, value: &Function);
+    pub fn set_prepend_listener_2(this: &REPLServer, value: &Function);
+    # [ wasm_bindgen ( method , js_name = prependListener ) ]
+    pub fn prepend_listener_3(this: &REPLServer, event: &JsValue, listener: &JsValue)
+    -> REPLServer;
+    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
+    pub fn set_prepend_listener_3(this: &REPLServer, value: &Function);
+    # [ wasm_bindgen ( method , js_name = prependListener ) ]
+    pub fn prepend_listener_4(this: &REPLServer, event: &JsValue, listener: &JsValue)
+    -> REPLServer;
+    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
+    pub fn set_prepend_listener_4(this: &REPLServer, value: &Function);
+    # [ wasm_bindgen ( method , js_name = prependListener ) ]
+    pub fn prepend_listener_5(this: &REPLServer, event: &JsValue, listener: &JsValue)
+    -> REPLServer;
+    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
+    pub fn set_prepend_listener_5(this: &REPLServer, value: &Function);
+    # [ wasm_bindgen ( method , js_name = prependListener ) ]
+    pub fn prepend_listener_6(this: &REPLServer, event: &JsValue, listener: &JsValue)
+    -> REPLServer;
+    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
+    pub fn set_prepend_listener_6(this: &REPLServer, value: &Function);
+    # [ wasm_bindgen ( method , js_name = prependListener ) ]
+    pub fn prepend_listener_7(this: &REPLServer, event: &JsValue, listener: &JsValue)
+    -> REPLServer;
+    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
+    pub fn set_prepend_listener_7(this: &REPLServer, value: &Function);
+    # [ wasm_bindgen ( method , js_name = prependListener ) ]
+    pub fn prepend_listener_8(this: &REPLServer, event: &JsValue, listener: &JsValue)
+    -> REPLServer;
+    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
+    pub fn set_prepend_listener_8(this: &REPLServer, value: &Function);
+    # [ wasm_bindgen ( method , js_name = prependListener ) ]
+    pub fn prepend_listener_9(this: &REPLServer, event: &JsValue, listener: &JsValue)
+    -> REPLServer;
+    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
+    pub fn set_prepend_listener_9(this: &REPLServer, value: &Function);
+    # [ wasm_bindgen ( method , js_name = prependListener ) ]
+    pub fn prepend_listener_10(
+        this: &REPLServer,
+        event: &JsValue,
+        listener: &JsValue,
+    ) -> REPLServer;
+    # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
+    pub fn set_prepend_listener_10(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(this: &REPLServer, event: &str, listener: &JsValue) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &REPLServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &REPLServer, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &REPLServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &REPLServer, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &REPLServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &REPLServer, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(
+    pub fn prepend_once_listener_5(
         this: &REPLServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &REPLServer, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(
+    pub fn prepend_once_listener_6(
         this: &REPLServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &REPLServer, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener7(
+    pub fn prepend_once_listener_7(
         this: &REPLServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener7(this: &REPLServer, value: &Function);
+    pub fn set_prepend_once_listener_7(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener8(
+    pub fn prepend_once_listener_8(
         this: &REPLServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener8(this: &REPLServer, value: &Function);
+    pub fn set_prepend_once_listener_8(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener9(
+    pub fn prepend_once_listener_9(
         this: &REPLServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener9(this: &REPLServer, value: &Function);
+    pub fn set_prepend_once_listener_9(this: &REPLServer, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener10(
+    pub fn prepend_once_listener_10(
         this: &REPLServer,
         event: &JsValue,
         listener: &JsValue,
     ) -> REPLServer;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener10(this: &REPLServer, value: &Function);
+    pub fn set_prepend_once_listener_10(this: &REPLServer, value: &Function);
     #[doc = "A flag passed in the REPL options. Evaluates expressions in sloppy mode."]
     pub static REPL_MODE_SLOPPY: JsValue;
     #[doc = "A flag passed in the REPL options. Evaluates expressions in strict mode."]

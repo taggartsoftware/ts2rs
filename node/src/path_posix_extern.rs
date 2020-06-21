@@ -24,7 +24,7 @@ extern "C" {
     #[wasm_bindgen(js_name = "delimiter")]
     pub static DELIMITER: String;
     #[wasm_bindgen()]
-    pub fn parse(p: &str) -> path::ParsedPath;
+    pub fn parse(p: &str) -> ParsedPath;
     #[wasm_bindgen()]
-    pub fn format(p_p: &path::FormatInputPathObject) -> String;
+    pub fn format(p_p: &FormatInputPathObject) -> String;
 }

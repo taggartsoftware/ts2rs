@@ -146,16 +146,6 @@ impl StreamState {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<Http2Session> for ClientHttp2Session {
-    fn as_ref(&self) -> &Http2Session {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ClientHttp2Session> for Http2Session {
-    fn from(child: ClientHttp2Session) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for ClientHttp2Session {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -166,23 +156,13 @@ impl From<ClientHttp2Session> for node_js::EventEmitter {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for ClientHttp2Stream {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<Http2Session> for ClientHttp2Session {
+    fn as_ref(&self) -> &Http2Session {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ClientHttp2Stream> for EventEmitter {
-    fn from(child: ClientHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Http2Stream> for ClientHttp2Stream {
-    fn as_ref(&self) -> &Http2Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ClientHttp2Stream> for Http2Stream {
-    fn from(child: ClientHttp2Stream) -> Self {
+impl From<ClientHttp2Session> for Http2Session {
+    fn from(child: ClientHttp2Session) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -216,32 +196,12 @@ impl From<ClientHttp2Stream> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for ClientHttp2Stream {
-    fn as_ref(&self) -> &Readable {
+impl AsRef<Http2Stream> for ClientHttp2Stream {
+    fn as_ref(&self) -> &Http2Stream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ClientHttp2Stream> for Readable {
-    fn from(child: ClientHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for ClientHttp2Stream {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ClientHttp2Stream> for Stream {
-    fn from(child: ClientHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for ClientHttp2Stream {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ClientHttp2Stream> for Writable {
+impl From<ClientHttp2Stream> for Http2Stream {
     fn from(child: ClientHttp2Stream) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -306,16 +266,6 @@ impl From<Http2Server> for crate::net::Server {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for Http2ServerRequest {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Http2ServerRequest> for EventEmitter {
-    fn from(child: Http2ServerRequest) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for Http2ServerRequest {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -332,16 +282,6 @@ impl AsRef<node_js::ReadableStream> for Http2ServerRequest {
     }
 }
 impl From<Http2ServerRequest> for node_js::ReadableStream {
-    fn from(child: Http2ServerRequest) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Http2ServerRequest {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Http2ServerRequest> for Stream {
     fn from(child: Http2ServerRequest) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -363,16 +303,6 @@ impl AsRef<node_js::EventEmitter> for Http2Session {
 }
 impl From<Http2Session> for node_js::EventEmitter {
     fn from(child: Http2Session) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for Http2Stream {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Http2Stream> for EventEmitter {
-    fn from(child: Http2Stream) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -406,36 +336,6 @@ impl From<Http2Stream> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for Http2Stream {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Http2Stream> for Readable {
-    fn from(child: Http2Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for Http2Stream {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Http2Stream> for Stream {
-    fn from(child: Http2Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for Http2Stream {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<Http2Stream> for Writable {
-    fn from(child: Http2Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<crate::http::Http1IncomingHttpHeaders> for IncomingHttpHeaders {
     fn as_ref(&self) -> &crate::http::Http1IncomingHttpHeaders {
         JsCast::unchecked_ref(self)
@@ -456,32 +356,22 @@ impl From<SecureClientSessionOptions> for ClientSessionOptions {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<CommonConnectionOptions> for SecureClientSessionOptions {
-    fn as_ref(&self) -> &CommonConnectionOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<SecureClientSessionOptions> for CommonConnectionOptions {
-    fn from(child: SecureClientSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<SecureContextOptions> for SecureClientSessionOptions {
-    fn as_ref(&self) -> &SecureContextOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<SecureClientSessionOptions> for SecureContextOptions {
-    fn from(child: SecureClientSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<SessionOptions> for SecureClientSessionOptions {
     fn as_ref(&self) -> &SessionOptions {
         JsCast::unchecked_ref(self)
     }
 }
 impl From<SecureClientSessionOptions> for SessionOptions {
+    fn from(child: SecureClientSessionOptions) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<crate::tls::CommonConnectionOptions> for SecureClientSessionOptions {
+    fn as_ref(&self) -> &crate::tls::CommonConnectionOptions {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<SecureClientSessionOptions> for crate::tls::CommonConnectionOptions {
     fn from(child: SecureClientSessionOptions) -> Self {
         JsCast::unchecked_into(child)
     }
@@ -496,23 +386,13 @@ impl From<SecureClientSessionOptions> for crate::tls::ConnectionOptions {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<CommonConnectionOptions> for SecureServerOptions {
-    fn as_ref(&self) -> &CommonConnectionOptions {
+impl AsRef<crate::tls::SecureContextOptions> for SecureClientSessionOptions {
+    fn as_ref(&self) -> &crate::tls::SecureContextOptions {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<SecureServerOptions> for CommonConnectionOptions {
-    fn from(child: SecureServerOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<SecureContextOptions> for SecureServerOptions {
-    fn as_ref(&self) -> &SecureContextOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<SecureServerOptions> for SecureContextOptions {
-    fn from(child: SecureServerOptions) -> Self {
+impl From<SecureClientSessionOptions> for crate::tls::SecureContextOptions {
+    fn from(child: SecureClientSessionOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -546,6 +426,26 @@ impl From<SecureServerOptions> for SessionOptions {
         JsCast::unchecked_into(child)
     }
 }
+impl AsRef<crate::tls::CommonConnectionOptions> for SecureServerOptions {
+    fn as_ref(&self) -> &crate::tls::CommonConnectionOptions {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<SecureServerOptions> for crate::tls::CommonConnectionOptions {
+    fn from(child: SecureServerOptions) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<crate::tls::SecureContextOptions> for SecureServerOptions {
+    fn as_ref(&self) -> &crate::tls::SecureContextOptions {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<SecureServerOptions> for crate::tls::SecureContextOptions {
+    fn from(child: SecureServerOptions) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
 impl AsRef<crate::tls::TlsOptions> for SecureServerOptions {
     fn as_ref(&self) -> &crate::tls::TlsOptions {
         JsCast::unchecked_ref(self)
@@ -553,26 +453,6 @@ impl AsRef<crate::tls::TlsOptions> for SecureServerOptions {
 }
 impl From<SecureServerOptions> for crate::tls::TlsOptions {
     fn from(child: SecureServerOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<CommonConnectionOptions> for SecureServerSessionOptions {
-    fn as_ref(&self) -> &CommonConnectionOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<SecureServerSessionOptions> for CommonConnectionOptions {
-    fn from(child: SecureServerSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<SecureContextOptions> for SecureServerSessionOptions {
-    fn as_ref(&self) -> &SecureContextOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<SecureServerSessionOptions> for SecureContextOptions {
-    fn from(child: SecureServerSessionOptions) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -596,6 +476,26 @@ impl From<SecureServerSessionOptions> for SessionOptions {
         JsCast::unchecked_into(child)
     }
 }
+impl AsRef<crate::tls::CommonConnectionOptions> for SecureServerSessionOptions {
+    fn as_ref(&self) -> &crate::tls::CommonConnectionOptions {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<SecureServerSessionOptions> for crate::tls::CommonConnectionOptions {
+    fn from(child: SecureServerSessionOptions) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<crate::tls::SecureContextOptions> for SecureServerSessionOptions {
+    fn as_ref(&self) -> &crate::tls::SecureContextOptions {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<SecureServerSessionOptions> for crate::tls::SecureContextOptions {
+    fn from(child: SecureServerSessionOptions) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
 impl AsRef<crate::tls::TlsOptions> for SecureServerSessionOptions {
     fn as_ref(&self) -> &crate::tls::TlsOptions {
         JsCast::unchecked_ref(self)
@@ -603,16 +503,6 @@ impl AsRef<crate::tls::TlsOptions> for SecureServerSessionOptions {
 }
 impl From<SecureServerSessionOptions> for crate::tls::TlsOptions {
     fn from(child: SecureServerSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Http2Session> for ServerHttp2Session {
-    fn as_ref(&self) -> &Http2Session {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ServerHttp2Session> for Http2Session {
-    fn from(child: ServerHttp2Session) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -626,23 +516,13 @@ impl From<ServerHttp2Session> for node_js::EventEmitter {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for ServerHttp2Stream {
-    fn as_ref(&self) -> &EventEmitter {
+impl AsRef<Http2Session> for ServerHttp2Session {
+    fn as_ref(&self) -> &Http2Session {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ServerHttp2Stream> for EventEmitter {
-    fn from(child: ServerHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Http2Stream> for ServerHttp2Stream {
-    fn as_ref(&self) -> &Http2Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ServerHttp2Stream> for Http2Stream {
-    fn from(child: ServerHttp2Stream) -> Self {
+impl From<ServerHttp2Session> for Http2Session {
+    fn from(child: ServerHttp2Session) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -676,32 +556,12 @@ impl From<ServerHttp2Stream> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Readable> for ServerHttp2Stream {
-    fn as_ref(&self) -> &Readable {
+impl AsRef<Http2Stream> for ServerHttp2Stream {
+    fn as_ref(&self) -> &Http2Stream {
         JsCast::unchecked_ref(self)
     }
 }
-impl From<ServerHttp2Stream> for Readable {
-    fn from(child: ServerHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for ServerHttp2Stream {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ServerHttp2Stream> for Stream {
-    fn from(child: ServerHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for ServerHttp2Stream {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ServerHttp2Stream> for Writable {
+impl From<ServerHttp2Stream> for Http2Stream {
     fn from(child: ServerHttp2Stream) -> Self {
         JsCast::unchecked_into(child)
     }

@@ -131,16 +131,6 @@ impl From<Server> for crate::net::Server {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<EventEmitter> for TLSSocket {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TLSSocket> for EventEmitter {
-    fn from(child: TLSSocket) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for TLSSocket {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -167,36 +157,6 @@ impl AsRef<node_js::WritableStream> for TLSSocket {
     }
 }
 impl From<TLSSocket> for node_js::WritableStream {
-    fn from(child: TLSSocket) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Readable> for TLSSocket {
-    fn as_ref(&self) -> &Readable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TLSSocket> for Readable {
-    fn from(child: TLSSocket) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for TLSSocket {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TLSSocket> for Stream {
-    fn from(child: TLSSocket) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Writable> for TLSSocket {
-    fn as_ref(&self) -> &Writable {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<TLSSocket> for Writable {
     fn from(child: TLSSocket) -> Self {
         JsCast::unchecked_into(child)
     }

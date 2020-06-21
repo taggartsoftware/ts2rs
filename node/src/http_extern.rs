@@ -9,217 +9,217 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_stringliteral(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral2(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_2(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral2(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_2(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral3(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_3(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral3(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_3(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral4(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_4(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral4(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_4(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral5(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_5(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral5(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_5(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral6(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_6(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral6(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_6(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral7(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_7(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral7(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_7(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral8(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_8(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral8(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_8(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral9(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_9(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral9(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_9(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral10(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_10(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral10(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_10(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral11(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_11(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral11(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_11(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral12(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_12(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral12(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_12(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral13(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_13(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral13(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_13(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral14(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_14(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral14(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_14(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral15(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_15(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral15(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_15(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral16(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_16(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral16(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_16(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral17(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_17(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral17(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_17(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral18(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_18(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral18(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_18(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral19(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_19(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral19(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_19(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral20(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_20(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral20(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_20(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral21(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_21(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral21(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_21(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral22(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_22(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral22(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_22(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral23(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_23(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral23(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_23(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral24(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_24(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral24(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_24(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral25(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_25(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral25(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_25(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral26(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_26(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral26(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_26(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral27(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_27(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral27(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_27(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral28(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_28(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral28(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_28(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral29(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_29(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral29(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_29(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral30(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_30(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral30(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_30(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral31(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_31(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral31(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_31(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral32(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_32(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral32(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_32(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral33(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_33(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral33(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_33(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral34(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_34(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral34(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_34(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral35(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_35(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral35(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_35(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral36(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_36(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral36(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_36(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral37(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_37(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral37(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_37(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral38(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_38(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral38(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_38(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral39(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_39(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral39(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_39(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral40(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_40(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral40(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_40(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral41(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_41(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral41(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_41(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral42(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_42(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral42(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_42(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral43(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_43(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral43(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_43(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral44(this: &IncomingHttpHeaders) -> Option<Array>;
+    pub fn stringliteral_44(this: &IncomingHttpHeaders) -> Option<Array>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral44(this: &IncomingHttpHeaders, value: Option<&Array>);
+    pub fn set_stringliteral_44(this: &IncomingHttpHeaders, value: Option<&Array>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral45(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_45(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral45(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_45(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral46(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_46(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral46(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_46(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral47(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_47(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral47(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_47(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral48(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_48(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral48(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_48(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral49(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_49(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral49(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_49(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral50(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_50(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral50(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_50(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral51(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_51(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral51(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_51(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral52(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_52(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral52(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_52(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral53(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_53(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral53(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_53(this: &IncomingHttpHeaders, value: Option<&str>);
     # [ wasm_bindgen ( method , getter , js_name = stringliteral ) ]
-    pub fn stringliteral54(this: &IncomingHttpHeaders) -> Option<String>;
+    pub fn stringliteral_54(this: &IncomingHttpHeaders) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = stringliteral ) ]
-    pub fn set_stringliteral54(this: &IncomingHttpHeaders, value: Option<&str>);
+    pub fn set_stringliteral_54(this: &IncomingHttpHeaders, value: Option<&str>);
     pub type OutgoingHttpHeaders;
     pub type ClientRequestArgs;
     #[wasm_bindgen(method, getter)]
@@ -281,11 +281,11 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn timeout(this: &ClientRequestArgs) -> Option<f64>;
     #[wasm_bindgen(method, setter)]
-    pub fn set_timeout2(this: &ClientRequestArgs, value: Option<f64>);
+    pub fn set_timeout(this: &ClientRequestArgs, value: Option<f64>);
     # [ wasm_bindgen ( method , getter , js_name = setHost ) ]
-    pub fn set_host2(this: &ClientRequestArgs) -> Option<bool>;
+    pub fn set_host_2(this: &ClientRequestArgs) -> Option<bool>;
     # [ wasm_bindgen ( method , setter , js_name = setHost ) ]
-    pub fn set_set_host(this: &ClientRequestArgs, value: Option<bool>);
+    pub fn set_set_host_2(this: &ClientRequestArgs, value: Option<bool>);
     # [ wasm_bindgen ( method , getter , js_name = createConnection ) ]
     pub fn create_connection(this: &ClientRequestArgs) -> Option<Function>;
     # [ wasm_bindgen ( method , setter , js_name = createConnection ) ]
@@ -299,23 +299,19 @@ extern "C" {
     pub fn server_response(this: &ServerOptions) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = ServerResponse ) ]
     pub fn set_server_response(this: &ServerOptions, value: &JsValue);
-    // pub type RequestListener;
     pub type Server;
     #[wasm_bindgen(constructor)]
     pub fn new_server(request_listener: &RequestListener) -> Server;
     #[wasm_bindgen(constructor)]
-    pub fn new_server2(
-        options: &ServerOptions,
-        request_listener: &RequestListener,
-    ) -> Server;
+    pub fn new_server_2(options: &ServerOptions, request_listener: &RequestListener) -> Server;
     # [ wasm_bindgen ( method , js_name = setTimeout ) ]
     pub fn set_timeout(this: &Server, msecs: Option<f64>, callback: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = setTimeout ) ]
     pub fn set_set_timeout(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = setTimeout ) ]
-    pub fn set_timeout2(this: &Server, callback: &JsValue) -> Server;
+    pub fn set_timeout_2(this: &Server, callback: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = setTimeout ) ]
-    pub fn set_set_timeout2(this: &Server, value: &Function);
+    pub fn set_set_timeout_2(this: &Server, value: &Function);
     #[doc = "Limits maximum incoming headers count. If set to 0, no limit will be applied."]
     # [ wasm_bindgen ( method , getter , js_name = maxHeadersCount ) ]
     pub fn max_headers_count(this: &Server) -> JsValue;
@@ -324,7 +320,7 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn timeout(this: &Server) -> f64;
     #[wasm_bindgen(method, setter)]
-    pub fn set_timeout3(this: &Server, value: f64);
+    pub fn set_timeout_3(this: &Server, value: f64);
     #[doc = "Limit the amount of time the parser will wait to receive the complete HTTP headers."]
     # [ wasm_bindgen ( method , getter , js_name = headersTimeout ) ]
     pub fn headers_timeout(this: &Server) -> f64;
@@ -442,13 +438,13 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = writeHead ) ]
     pub fn set_write_head(this: &ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = writeHead ) ]
-    pub fn write_head2(
+    pub fn write_head_2(
         this: &ServerResponse,
         status_code: f64,
         headers: Option<&OutgoingHttpHeaders>,
     ) -> ServerResponse;
     # [ wasm_bindgen ( method , setter , js_name = writeHead ) ]
-    pub fn set_write_head2(this: &ServerResponse, value: &Function);
+    pub fn set_write_head_2(this: &ServerResponse, value: &Function);
     # [ wasm_bindgen ( method , js_name = writeProcessing ) ]
     pub fn write_processing(this: &ServerResponse);
     # [ wasm_bindgen ( method , setter , js_name = writeProcessing ) ]
@@ -508,7 +504,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = onSocket ) ]
     pub fn set_on_socket(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = setTimeout ) ]
-    pub fn set_timeout2(this: &ClientRequest, timeout: f64, callback: &JsValue) -> ClientRequest;
+    pub fn set_timeout(this: &ClientRequest, timeout: f64, callback: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = setTimeout ) ]
     pub fn set_set_timeout(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = setNoDelay ) ]
@@ -529,237 +525,237 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(
+    pub fn add_listener_2(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_2(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(
+    pub fn add_listener_3(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_3(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(
+    pub fn add_listener_4(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_4(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(
+    pub fn add_listener_5(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_5(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(
+    pub fn add_listener_6(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_6(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener7(
+    pub fn add_listener_7(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener7(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_7(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener8(
+    pub fn add_listener_8(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener8(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_8(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener9(
+    pub fn add_listener_9(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener9(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_9(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener10(
+    pub fn add_listener_10(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener10(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_10(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener11(
+    pub fn add_listener_11(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener11(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_11(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener12(
+    pub fn add_listener_12(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener12(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_12(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener13(
+    pub fn add_listener_13(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener13(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_13(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener14(
+    pub fn add_listener_14(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener14(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_14(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener15(
+    pub fn add_listener_15(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener15(this: &ClientRequest, value: &Function);
+    pub fn set_add_listener_15(this: &ClientRequest, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_2(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &ClientRequest, value: &Function);
+    pub fn set_on_2(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_3(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &ClientRequest, value: &Function);
+    pub fn set_on_3(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_4(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &ClientRequest, value: &Function);
+    pub fn set_on_4(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_5(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &ClientRequest, value: &Function);
+    pub fn set_on_5(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_6(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &ClientRequest, value: &Function);
+    pub fn set_on_6(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on7(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_7(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on7(this: &ClientRequest, value: &Function);
+    pub fn set_on_7(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on8(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_8(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on8(this: &ClientRequest, value: &Function);
+    pub fn set_on_8(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on9(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_9(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on9(this: &ClientRequest, value: &Function);
+    pub fn set_on_9(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on10(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_10(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on10(this: &ClientRequest, value: &Function);
+    pub fn set_on_10(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on11(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_11(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on11(this: &ClientRequest, value: &Function);
+    pub fn set_on_11(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on12(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_12(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on12(this: &ClientRequest, value: &Function);
+    pub fn set_on_12(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on13(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_13(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on13(this: &ClientRequest, value: &Function);
+    pub fn set_on_13(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on14(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_14(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on14(this: &ClientRequest, value: &Function);
+    pub fn set_on_14(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on15(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn on_15(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on15(this: &ClientRequest, value: &Function);
+    pub fn set_on_15(this: &ClientRequest, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_2(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &ClientRequest, value: &Function);
+    pub fn set_once_2(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_3(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &ClientRequest, value: &Function);
+    pub fn set_once_3(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_4(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &ClientRequest, value: &Function);
+    pub fn set_once_4(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_5(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &ClientRequest, value: &Function);
+    pub fn set_once_5(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_6(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &ClientRequest, value: &Function);
+    pub fn set_once_6(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once7(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_7(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once7(this: &ClientRequest, value: &Function);
+    pub fn set_once_7(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once8(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_8(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once8(this: &ClientRequest, value: &Function);
+    pub fn set_once_8(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once9(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_9(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once9(this: &ClientRequest, value: &Function);
+    pub fn set_once_9(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once10(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_10(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once10(this: &ClientRequest, value: &Function);
+    pub fn set_once_10(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once11(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_11(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once11(this: &ClientRequest, value: &Function);
+    pub fn set_once_11(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once12(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_12(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once12(this: &ClientRequest, value: &Function);
+    pub fn set_once_12(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once13(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_13(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once13(this: &ClientRequest, value: &Function);
+    pub fn set_once_13(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once14(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_14(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once14(this: &ClientRequest, value: &Function);
+    pub fn set_once_14(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once15(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
+    pub fn once_15(this: &ClientRequest, event: &JsValue, listener: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once15(this: &ClientRequest, value: &Function);
+    pub fn set_once_15(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(
         this: &ClientRequest,
@@ -769,117 +765,117 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_2(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(
+    pub fn prepend_listener_3(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_3(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(
+    pub fn prepend_listener_4(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_4(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(
+    pub fn prepend_listener_5(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_5(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(
+    pub fn prepend_listener_6(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_6(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener7(
+    pub fn prepend_listener_7(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener7(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_7(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener8(
+    pub fn prepend_listener_8(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener8(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_8(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener9(
+    pub fn prepend_listener_9(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener9(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_9(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener10(
+    pub fn prepend_listener_10(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener10(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_10(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener11(
+    pub fn prepend_listener_11(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener11(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_11(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener12(
+    pub fn prepend_listener_12(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener12(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_12(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener13(
+    pub fn prepend_listener_13(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener13(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_13(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener14(
+    pub fn prepend_listener_14(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener14(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_14(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener15(
+    pub fn prepend_listener_15(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener15(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_listener_15(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &ClientRequest,
@@ -889,117 +885,117 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(
+    pub fn prepend_once_listener_5(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(
+    pub fn prepend_once_listener_6(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener7(
+    pub fn prepend_once_listener_7(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener7(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_7(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener8(
+    pub fn prepend_once_listener_8(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener8(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_8(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener9(
+    pub fn prepend_once_listener_9(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener9(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_9(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener10(
+    pub fn prepend_once_listener_10(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener10(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_10(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener11(
+    pub fn prepend_once_listener_11(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener11(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_11(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener12(
+    pub fn prepend_once_listener_12(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener12(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_12(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener13(
+    pub fn prepend_once_listener_13(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener13(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_13(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener14(
+    pub fn prepend_once_listener_14(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener14(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_14(this: &ClientRequest, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener15(
+    pub fn prepend_once_listener_15(
         this: &ClientRequest,
         event: &JsValue,
         listener: &JsValue,
     ) -> ClientRequest;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener15(this: &ClientRequest, value: &Function);
+    pub fn set_prepend_once_listener_15(this: &ClientRequest, value: &Function);
     pub type IncomingMessage;
     #[wasm_bindgen(constructor)]
     pub fn new_incoming_message(socket: &crate::net::Socket) -> IncomingMessage;
@@ -1126,19 +1122,16 @@ extern "C" {
     # [ wasm_bindgen ( js_name = createServer ) ]
     pub fn create_server(request_listener: &RequestListener) -> Server;
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server2(
-        options: &ServerOptions,
-        request_listener: &RequestListener,
-    ) -> Server;
+    pub fn create_server_2(options: &ServerOptions, request_listener: &RequestListener) -> Server;
     pub type RequestOptions;
     #[wasm_bindgen()]
     pub fn request(options: &JsValue, callback: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( js_name = request ) ]
-    pub fn request2(url: &JsValue, options: &RequestOptions, callback: &JsValue) -> ClientRequest;
+    pub fn request_2(url: &JsValue, options: &RequestOptions, callback: &JsValue) -> ClientRequest;
     #[wasm_bindgen()]
     pub fn get(options: &JsValue, callback: &JsValue) -> ClientRequest;
     # [ wasm_bindgen ( js_name = get ) ]
-    pub fn get2(url: &JsValue, options: &RequestOptions, callback: &JsValue) -> ClientRequest;
+    pub fn get_2(url: &JsValue, options: &RequestOptions, callback: &JsValue) -> ClientRequest;
     #[wasm_bindgen(js_name = "globalAgent")]
     pub static GLOBAL_AGENT: Agent;
     #[wasm_bindgen(js_name = "maxHeaderSize")]

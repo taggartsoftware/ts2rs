@@ -26,26 +26,6 @@ impl From<Agent> for crate::http::Agent {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<CommonConnectionOptions> for AgentOptions {
-    fn as_ref(&self) -> &CommonConnectionOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<AgentOptions> for CommonConnectionOptions {
-    fn from(child: AgentOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<SecureContextOptions> for AgentOptions {
-    fn as_ref(&self) -> &SecureContextOptions {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<AgentOptions> for SecureContextOptions {
-    fn from(child: AgentOptions) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<crate::http::AgentOptions> for AgentOptions {
     fn as_ref(&self) -> &crate::http::AgentOptions {
         JsCast::unchecked_ref(self)
@@ -56,12 +36,32 @@ impl From<AgentOptions> for crate::http::AgentOptions {
         JsCast::unchecked_into(child)
     }
 }
+impl AsRef<crate::tls::CommonConnectionOptions> for AgentOptions {
+    fn as_ref(&self) -> &crate::tls::CommonConnectionOptions {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<AgentOptions> for crate::tls::CommonConnectionOptions {
+    fn from(child: AgentOptions) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
 impl AsRef<crate::tls::ConnectionOptions> for AgentOptions {
     fn as_ref(&self) -> &crate::tls::ConnectionOptions {
         JsCast::unchecked_ref(self)
     }
 }
 impl From<AgentOptions> for crate::tls::ConnectionOptions {
+    fn from(child: AgentOptions) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<crate::tls::SecureContextOptions> for AgentOptions {
+    fn as_ref(&self) -> &crate::tls::SecureContextOptions {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<AgentOptions> for crate::tls::SecureContextOptions {
     fn from(child: AgentOptions) -> Self {
         JsCast::unchecked_into(child)
     }

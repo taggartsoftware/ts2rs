@@ -66,16 +66,6 @@ impl ServerResponse {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<EventEmitter> for ClientRequest {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ClientRequest> for EventEmitter {
-    fn from(child: ClientRequest) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for ClientRequest {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -106,26 +96,6 @@ impl From<ClientRequest> for OutgoingMessage {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for ClientRequest {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ClientRequest> for Stream {
-    fn from(child: ClientRequest) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for IncomingMessage {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<IncomingMessage> for EventEmitter {
-    fn from(child: IncomingMessage) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<node_js::EventEmitter> for IncomingMessage {
     fn as_ref(&self) -> &node_js::EventEmitter {
         JsCast::unchecked_ref(self)
@@ -143,26 +113,6 @@ impl AsRef<node_js::ReadableStream> for IncomingMessage {
 }
 impl From<IncomingMessage> for node_js::ReadableStream {
     fn from(child: IncomingMessage) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for IncomingMessage {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<IncomingMessage> for Stream {
-    fn from(child: IncomingMessage) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for OutgoingMessage {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<OutgoingMessage> for EventEmitter {
-    fn from(child: OutgoingMessage) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -186,16 +136,6 @@ impl From<OutgoingMessage> for node_js::WritableStream {
         JsCast::unchecked_into(child)
     }
 }
-impl AsRef<Stream> for OutgoingMessage {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<OutgoingMessage> for Stream {
-    fn from(child: OutgoingMessage) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
 impl AsRef<ClientRequestArgs> for RequestOptions {
     fn as_ref(&self) -> &ClientRequestArgs {
         JsCast::unchecked_ref(self)
@@ -213,16 +153,6 @@ impl AsRef<crate::net::NetServer> for Server {
 }
 impl From<Server> for crate::net::NetServer {
     fn from(child: Server) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<EventEmitter> for ServerResponse {
-    fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ServerResponse> for EventEmitter {
-    fn from(child: ServerResponse) -> Self {
         JsCast::unchecked_into(child)
     }
 }
@@ -252,16 +182,6 @@ impl AsRef<OutgoingMessage> for ServerResponse {
     }
 }
 impl From<ServerResponse> for OutgoingMessage {
-    fn from(child: ServerResponse) -> Self {
-        JsCast::unchecked_into(child)
-    }
-}
-impl AsRef<Stream> for ServerResponse {
-    fn as_ref(&self) -> &Stream {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<ServerResponse> for Stream {
     fn from(child: ServerResponse) -> Self {
         JsCast::unchecked_into(child)
     }

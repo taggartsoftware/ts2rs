@@ -6,11 +6,6 @@ impl DOMEventTarget {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl EventEmitter {
-    pub fn new() -> EventEmitter {
-        JsCast::unchecked_into(Object::new())
-    }
-}
 impl NodeEventTarget {
     pub fn new() -> NodeEventTarget {
         JsCast::unchecked_into(Object::new())
@@ -21,14 +16,9 @@ impl internal {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl AsRef<node_js::EventEmitter> for EventEmitter {
-    fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
-    }
-}
-impl From<EventEmitter> for node_js::EventEmitter {
-    fn from(child: EventEmitter) -> Self {
-        JsCast::unchecked_into(child)
+impl EventEmitter {
+    pub fn new() -> EventEmitter {
+        JsCast::unchecked_into(Object::new())
     }
 }
 impl AsRef<node_js::EventEmitter> for internal {
@@ -38,6 +28,16 @@ impl AsRef<node_js::EventEmitter> for internal {
 }
 impl From<internal> for node_js::EventEmitter {
     fn from(child: internal) -> Self {
+        JsCast::unchecked_into(child)
+    }
+}
+impl AsRef<node_js::EventEmitter> for EventEmitter {
+    fn as_ref(&self) -> &node_js::EventEmitter {
+        JsCast::unchecked_ref(self)
+    }
+}
+impl From<EventEmitter> for node_js::EventEmitter {
+    fn from(child: EventEmitter) -> Self {
         JsCast::unchecked_into(child)
     }
 }

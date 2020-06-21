@@ -22,7 +22,7 @@ extern "C" {
         color: Option<bool>,
     ) -> String;
     # [ wasm_bindgen ( js_name = inspect ) ]
-    pub fn inspect2(object: &JsValue, options: &InspectOptions) -> String;
+    pub fn inspect_2(object: &JsValue, options: &InspectOptions) -> String;
     # [ wasm_bindgen ( js_name = isArray ) ]
     pub fn is_array(object: &JsValue) -> bool;
     # [ wasm_bindgen ( js_name = isRegExp ) ]
@@ -69,59 +69,59 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn callbackify(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = callbackify ) ]
-    pub fn callbackify2(fn_: &JsValue) -> Function;
+    pub fn callbackify_2(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = callbackify ) ]
-    pub fn callbackify3(fn_: &JsValue) -> Function;
+    pub fn callbackify_3(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = callbackify ) ]
-    pub fn callbackify4(fn_: &JsValue) -> Function;
+    pub fn callbackify_4(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = callbackify ) ]
-    pub fn callbackify5(fn_: &JsValue) -> Function;
+    pub fn callbackify_5(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = callbackify ) ]
-    pub fn callbackify6(fn_: &JsValue) -> Function;
+    pub fn callbackify_6(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = callbackify ) ]
-    pub fn callbackify7(fn_: &JsValue) -> Function;
+    pub fn callbackify_7(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = callbackify ) ]
-    pub fn callbackify8(fn_: &JsValue) -> Function;
+    pub fn callbackify_8(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = callbackify ) ]
-    pub fn callbackify9(fn_: &JsValue) -> Function;
+    pub fn callbackify_9(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = callbackify ) ]
-    pub fn callbackify10(fn_: &JsValue) -> Function;
+    pub fn callbackify_10(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = callbackify ) ]
-    pub fn callbackify11(fn_: &JsValue) -> Function;
+    pub fn callbackify_11(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = callbackify ) ]
-    pub fn callbackify12(fn_: &JsValue) -> Function;
+    pub fn callbackify_12(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = callbackify ) ]
-    pub fn callbackify13(fn_: &JsValue) -> Function;
+    pub fn callbackify_13(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = callbackify ) ]
-    pub fn callbackify14(fn_: &JsValue) -> Function;
+    pub fn callbackify_14(fn_: &JsValue) -> Function;
     #[wasm_bindgen()]
     pub fn promisify(fn_: &CustomPromisify) -> JsValue;
     # [ wasm_bindgen ( js_name = promisify ) ]
-    pub fn promisify2(fn_: &JsValue) -> Function;
+    pub fn promisify_2(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = promisify ) ]
-    pub fn promisify3(fn_: &JsValue) -> Function;
+    pub fn promisify_3(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = promisify ) ]
-    pub fn promisify4(fn_: &JsValue) -> Function;
+    pub fn promisify_4(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = promisify ) ]
-    pub fn promisify5(fn_: &JsValue) -> Function;
+    pub fn promisify_5(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = promisify ) ]
-    pub fn promisify6(fn_: &JsValue) -> Function;
+    pub fn promisify_6(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = promisify ) ]
-    pub fn promisify7(fn_: &JsValue) -> Function;
+    pub fn promisify_7(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = promisify ) ]
-    pub fn promisify8(fn_: &JsValue) -> Function;
+    pub fn promisify_8(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = promisify ) ]
-    pub fn promisify9(fn_: &JsValue) -> Function;
+    pub fn promisify_9(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = promisify ) ]
-    pub fn promisify10(fn_: &JsValue) -> Function;
+    pub fn promisify_10(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = promisify ) ]
-    pub fn promisify11(fn_: &JsValue) -> Function;
+    pub fn promisify_11(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = promisify ) ]
-    pub fn promisify12(fn_: &JsValue) -> Function;
+    pub fn promisify_12(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = promisify ) ]
-    pub fn promisify13(fn_: &JsValue) -> Function;
+    pub fn promisify_13(fn_: &JsValue) -> Function;
     # [ wasm_bindgen ( js_name = promisify ) ]
-    pub fn promisify14(fn_: &Function) -> Function;
+    pub fn promisify_14(fn_: &Function) -> Function;
     pub type TextDecoder;
     #[wasm_bindgen(method, getter)]
     pub fn encoding(this: &TextDecoder) -> String;

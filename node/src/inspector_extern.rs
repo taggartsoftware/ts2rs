@@ -29,1411 +29,1430 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_post(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post2(this: &Session, method: &str, callback: &JsValue);
+    pub fn post_2(this: &Session, method: &str, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post2(this: &Session, value: &Function);
+    pub fn set_post_2(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post3(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_3(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post3(this: &Session, value: &Function);
+    pub fn set_post_3(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post4(
+    pub fn post_4(
         this: &Session,
         method: &JsValue,
         params: Option<&runtime::EvaluateParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post4(this: &Session, value: &Function);
+    pub fn set_post_4(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post5(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_5(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post5(this: &Session, value: &Function);
+    pub fn set_post_5(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post6(
+    pub fn post_6(
         this: &Session,
         method: &JsValue,
         params: Option<&runtime::AwaitPromiseParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post6(this: &Session, value: &Function);
+    pub fn set_post_6(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post7(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_7(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post7(this: &Session, value: &Function);
+    pub fn set_post_7(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post8(
+    pub fn post_8(
         this: &Session,
         method: &JsValue,
         params: Option<&runtime::CallFunctionOnParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post8(this: &Session, value: &Function);
+    pub fn set_post_8(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post9(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_9(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post9(this: &Session, value: &Function);
+    pub fn set_post_9(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post10(
+    pub fn post_10(
         this: &Session,
         method: &JsValue,
         params: Option<&runtime::GetPropertiesParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post10(this: &Session, value: &Function);
+    pub fn set_post_10(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post11(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_11(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post11(this: &Session, value: &Function);
+    pub fn set_post_11(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post12(
+    pub fn post_12(
         this: &Session,
         method: &JsValue,
         params: Option<&runtime::ReleaseObjectParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post12(this: &Session, value: &Function);
+    pub fn set_post_12(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post13(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_13(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post13(this: &Session, value: &Function);
+    pub fn set_post_13(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post14(
+    pub fn post_14(
         this: &Session,
         method: &JsValue,
         params: Option<&runtime::ReleaseObjectGroupParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post14(this: &Session, value: &Function);
+    pub fn set_post_14(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post15(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_15(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post15(this: &Session, value: &Function);
+    pub fn set_post_15(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post16(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_16(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post16(this: &Session, value: &Function);
+    pub fn set_post_16(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post17(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_17(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post17(this: &Session, value: &Function);
+    pub fn set_post_17(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post18(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_18(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post18(this: &Session, value: &Function);
+    pub fn set_post_18(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post19(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_19(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post19(this: &Session, value: &Function);
+    pub fn set_post_19(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post20(
+    pub fn post_20(
         this: &Session,
         method: &JsValue,
         params: Option<&runtime::SetCustomObjectFormatterEnabledParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post20(this: &Session, value: &Function);
+    pub fn set_post_20(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post21(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_21(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post21(this: &Session, value: &Function);
+    pub fn set_post_21(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post22(
+    pub fn post_22(
         this: &Session,
         method: &JsValue,
         params: Option<&runtime::CompileScriptParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post22(this: &Session, value: &Function);
+    pub fn set_post_22(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post23(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_23(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post23(this: &Session, value: &Function);
+    pub fn set_post_23(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post24(
+    pub fn post_24(
         this: &Session,
         method: &JsValue,
         params: Option<&runtime::RunScriptParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post24(this: &Session, value: &Function);
+    pub fn set_post_24(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post25(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_25(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post25(this: &Session, value: &Function);
+    pub fn set_post_25(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post26(
+    pub fn post_26(
         this: &Session,
         method: &JsValue,
         params: Option<&runtime::QueryObjectsParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post26(this: &Session, value: &Function);
+    pub fn set_post_26(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post27(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_27(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post27(this: &Session, value: &Function);
+    pub fn set_post_27(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post28(
+    pub fn post_28(
         this: &Session,
         method: &JsValue,
         params: Option<&runtime::GlobalLexicalScopeNamesParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post28(this: &Session, value: &Function);
+    pub fn set_post_28(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post29(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_29(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post29(this: &Session, value: &Function);
+    pub fn set_post_29(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post30(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_30(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post30(this: &Session, value: &Function);
+    pub fn set_post_30(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post31(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_31(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post31(this: &Session, value: &Function);
+    pub fn set_post_31(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post32(
+    pub fn post_32(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::SetBreakpointsActiveParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post32(this: &Session, value: &Function);
+    pub fn set_post_32(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post33(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_33(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post33(this: &Session, value: &Function);
+    pub fn set_post_33(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post34(
+    pub fn post_34(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::SetSkipAllPausesParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post34(this: &Session, value: &Function);
+    pub fn set_post_34(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post35(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_35(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post35(this: &Session, value: &Function);
+    pub fn set_post_35(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post36(
+    pub fn post_36(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::SetBreakpointByUrlParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post36(this: &Session, value: &Function);
+    pub fn set_post_36(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post37(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_37(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post37(this: &Session, value: &Function);
+    pub fn set_post_37(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post38(
+    pub fn post_38(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::SetBreakpointParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post38(this: &Session, value: &Function);
+    pub fn set_post_38(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post39(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_39(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post39(this: &Session, value: &Function);
+    pub fn set_post_39(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post40(
+    pub fn post_40(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::RemoveBreakpointParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post40(this: &Session, value: &Function);
+    pub fn set_post_40(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post41(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_41(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post41(this: &Session, value: &Function);
+    pub fn set_post_41(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post42(
+    pub fn post_42(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::GetPossibleBreakpointsParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post42(this: &Session, value: &Function);
+    pub fn set_post_42(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post43(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_43(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post43(this: &Session, value: &Function);
+    pub fn set_post_43(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post44(
+    pub fn post_44(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::ContinueToLocationParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post44(this: &Session, value: &Function);
+    pub fn set_post_44(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post45(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_45(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post45(this: &Session, value: &Function);
+    pub fn set_post_45(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post46(
+    pub fn post_46(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::PauseOnAsyncCallParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post46(this: &Session, value: &Function);
+    pub fn set_post_46(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post47(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_47(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post47(this: &Session, value: &Function);
+    pub fn set_post_47(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post48(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_48(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post48(this: &Session, value: &Function);
+    pub fn set_post_48(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post49(
+    pub fn post_49(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::StepIntoParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post49(this: &Session, value: &Function);
+    pub fn set_post_49(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post50(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_50(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post50(this: &Session, value: &Function);
+    pub fn set_post_50(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post51(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_51(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post51(this: &Session, value: &Function);
+    pub fn set_post_51(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post52(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_52(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post52(this: &Session, value: &Function);
+    pub fn set_post_52(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post53(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_53(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post53(this: &Session, value: &Function);
+    pub fn set_post_53(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post54(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_54(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post54(this: &Session, value: &Function);
+    pub fn set_post_54(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post55(
+    pub fn post_55(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::GetStackTraceParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post55(this: &Session, value: &Function);
+    pub fn set_post_55(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post56(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_56(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post56(this: &Session, value: &Function);
+    pub fn set_post_56(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post57(
+    pub fn post_57(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::SearchInContentParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post57(this: &Session, value: &Function);
+    pub fn set_post_57(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post58(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_58(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post58(this: &Session, value: &Function);
+    pub fn set_post_58(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post59(
+    pub fn post_59(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::SetScriptSourceParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post59(this: &Session, value: &Function);
+    pub fn set_post_59(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post60(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_60(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post60(this: &Session, value: &Function);
+    pub fn set_post_60(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post61(
+    pub fn post_61(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::RestartFrameParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post61(this: &Session, value: &Function);
+    pub fn set_post_61(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post62(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_62(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post62(this: &Session, value: &Function);
+    pub fn set_post_62(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post63(
+    pub fn post_63(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::GetScriptSourceParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post63(this: &Session, value: &Function);
+    pub fn set_post_63(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post64(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_64(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post64(this: &Session, value: &Function);
+    pub fn set_post_64(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post65(
+    pub fn post_65(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::SetPauseOnExceptionsParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post65(this: &Session, value: &Function);
+    pub fn set_post_65(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post66(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_66(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post66(this: &Session, value: &Function);
+    pub fn set_post_66(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post67(
+    pub fn post_67(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::EvaluateOnCallFrameParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post67(this: &Session, value: &Function);
+    pub fn set_post_67(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post68(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_68(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post68(this: &Session, value: &Function);
+    pub fn set_post_68(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post69(
+    pub fn post_69(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::SetVariableValueParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post69(this: &Session, value: &Function);
+    pub fn set_post_69(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post70(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_70(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post70(this: &Session, value: &Function);
+    pub fn set_post_70(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post71(
+    pub fn post_71(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::SetReturnValueParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post71(this: &Session, value: &Function);
+    pub fn set_post_71(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post72(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_72(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post72(this: &Session, value: &Function);
+    pub fn set_post_72(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post73(
+    pub fn post_73(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::SetAsyncCallStackDepthParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post73(this: &Session, value: &Function);
+    pub fn set_post_73(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post74(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_74(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post74(this: &Session, value: &Function);
+    pub fn set_post_74(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post75(
+    pub fn post_75(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::SetBlackboxPatternsParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post75(this: &Session, value: &Function);
+    pub fn set_post_75(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post76(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_76(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post76(this: &Session, value: &Function);
+    pub fn set_post_76(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post77(
+    pub fn post_77(
         this: &Session,
         method: &JsValue,
         params: Option<&debugger::SetBlackboxedRangesParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post77(this: &Session, value: &Function);
+    pub fn set_post_77(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post78(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_78(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post78(this: &Session, value: &Function);
+    pub fn set_post_78(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post79(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_79(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post79(this: &Session, value: &Function);
+    pub fn set_post_79(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post80(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_80(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post80(this: &Session, value: &Function);
+    pub fn set_post_80(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post81(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_81(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post81(this: &Session, value: &Function);
+    pub fn set_post_81(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post82(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_82(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post82(this: &Session, value: &Function);
+    pub fn set_post_82(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post83(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_83(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post83(this: &Session, value: &Function);
+    pub fn set_post_83(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post84(
+    pub fn post_84(
         this: &Session,
         method: &JsValue,
         params: Option<&profiler::SetSamplingIntervalParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post84(this: &Session, value: &Function);
+    pub fn set_post_84(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post85(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_85(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post85(this: &Session, value: &Function);
+    pub fn set_post_85(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post86(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_86(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post86(this: &Session, value: &Function);
+    pub fn set_post_86(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post87(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_87(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post87(this: &Session, value: &Function);
+    pub fn set_post_87(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post88(
+    pub fn post_88(
         this: &Session,
         method: &JsValue,
         params: Option<&profiler::StartPreciseCoverageParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post88(this: &Session, value: &Function);
+    pub fn set_post_88(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post89(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_89(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post89(this: &Session, value: &Function);
+    pub fn set_post_89(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post90(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_90(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post90(this: &Session, value: &Function);
+    pub fn set_post_90(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post91(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_91(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post91(this: &Session, value: &Function);
+    pub fn set_post_91(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post92(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_92(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post92(this: &Session, value: &Function);
+    pub fn set_post_92(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post93(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_93(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post93(this: &Session, value: &Function);
+    pub fn set_post_93(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post94(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_94(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post94(this: &Session, value: &Function);
+    pub fn set_post_94(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post95(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_95(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post95(this: &Session, value: &Function);
+    pub fn set_post_95(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post96(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_96(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post96(this: &Session, value: &Function);
+    pub fn set_post_96(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post97(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_97(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post97(this: &Session, value: &Function);
+    pub fn set_post_97(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post98(
+    pub fn post_98(
         this: &Session,
         method: &JsValue,
         params: Option<&heap_profiler::StartTrackingHeapObjectsParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post98(this: &Session, value: &Function);
+    pub fn set_post_98(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post99(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_99(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post99(this: &Session, value: &Function);
+    pub fn set_post_99(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post100(
+    pub fn post_100(
         this: &Session,
         method: &JsValue,
         params: Option<&heap_profiler::StopTrackingHeapObjectsParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post100(this: &Session, value: &Function);
+    pub fn set_post_100(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post101(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_101(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post101(this: &Session, value: &Function);
+    pub fn set_post_101(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post102(
+    pub fn post_102(
         this: &Session,
         method: &JsValue,
         params: Option<&heap_profiler::TakeHeapSnapshotParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post102(this: &Session, value: &Function);
+    pub fn set_post_102(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post103(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_103(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post103(this: &Session, value: &Function);
+    pub fn set_post_103(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post104(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_104(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post104(this: &Session, value: &Function);
+    pub fn set_post_104(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post105(
+    pub fn post_105(
         this: &Session,
         method: &JsValue,
         params: Option<&heap_profiler::GetObjectByHeapObjectIdParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post105(this: &Session, value: &Function);
+    pub fn set_post_105(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post106(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_106(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post106(this: &Session, value: &Function);
+    pub fn set_post_106(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post107(
+    pub fn post_107(
         this: &Session,
         method: &JsValue,
         params: Option<&heap_profiler::AddInspectedHeapObjectParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post107(this: &Session, value: &Function);
+    pub fn set_post_107(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post108(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_108(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post108(this: &Session, value: &Function);
+    pub fn set_post_108(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post109(
+    pub fn post_109(
         this: &Session,
         method: &JsValue,
         params: Option<&heap_profiler::GetHeapObjectIdParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post109(this: &Session, value: &Function);
+    pub fn set_post_109(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post110(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_110(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post110(this: &Session, value: &Function);
+    pub fn set_post_110(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post111(
+    pub fn post_111(
         this: &Session,
         method: &JsValue,
         params: Option<&heap_profiler::StartSamplingParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post111(this: &Session, value: &Function);
+    pub fn set_post_111(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post112(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_112(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post112(this: &Session, value: &Function);
+    pub fn set_post_112(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post113(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_113(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post113(this: &Session, value: &Function);
+    pub fn set_post_113(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post114(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_114(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post114(this: &Session, value: &Function);
+    pub fn set_post_114(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post115(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_115(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post115(this: &Session, value: &Function);
+    pub fn set_post_115(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post116(
+    pub fn post_116(
         this: &Session,
         method: &JsValue,
         params: Option<&node_tracing::StartParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post116(this: &Session, value: &Function);
+    pub fn set_post_116(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post117(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_117(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post117(this: &Session, value: &Function);
+    pub fn set_post_117(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post118(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_118(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post118(this: &Session, value: &Function);
+    pub fn set_post_118(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post119(
+    pub fn post_119(
         this: &Session,
         method: &JsValue,
         params: Option<&node_worker::SendMessageToWorkerParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post119(this: &Session, value: &Function);
+    pub fn set_post_119(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post120(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_120(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post120(this: &Session, value: &Function);
+    pub fn set_post_120(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post121(
+    pub fn post_121(
         this: &Session,
         method: &JsValue,
         params: Option<&node_worker::EnableParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post121(this: &Session, value: &Function);
+    pub fn set_post_121(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post122(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_122(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post122(this: &Session, value: &Function);
+    pub fn set_post_122(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post123(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_123(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post123(this: &Session, value: &Function);
+    pub fn set_post_123(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post124(
+    pub fn post_124(
         this: &Session,
         method: &JsValue,
         params: Option<&node_worker::DetachParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post124(this: &Session, value: &Function);
+    pub fn set_post_124(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post125(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_125(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post125(this: &Session, value: &Function);
+    pub fn set_post_125(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post126(
+    pub fn post_126(
         this: &Session,
         method: &JsValue,
         params: Option<&node_runtime::NotifyWhenWaitingForDisconnectParameterType>,
         callback: &JsValue,
     );
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post126(this: &Session, value: &Function);
+    pub fn set_post_126(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = post ) ]
-    pub fn post127(this: &Session, method: &JsValue, callback: &JsValue);
+    pub fn post_127(this: &Session, method: &JsValue, callback: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = post ) ]
-    pub fn set_post127(this: &Session, value: &Function);
+    pub fn set_post_127(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
     pub fn add_listener(this: &Session, event: &str, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_2(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &Session, value: &Function);
+    pub fn set_add_listener_2(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_3(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &Session, value: &Function);
+    pub fn set_add_listener_3(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_4(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &Session, value: &Function);
+    pub fn set_add_listener_4(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_5(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &Session, value: &Function);
+    pub fn set_add_listener_5(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_6(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &Session, value: &Function);
+    pub fn set_add_listener_6(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener7(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_7(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener7(this: &Session, value: &Function);
+    pub fn set_add_listener_7(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener8(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_8(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener8(this: &Session, value: &Function);
+    pub fn set_add_listener_8(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener9(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_9(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener9(this: &Session, value: &Function);
+    pub fn set_add_listener_9(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener10(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_10(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener10(this: &Session, value: &Function);
+    pub fn set_add_listener_10(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener11(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_11(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener11(this: &Session, value: &Function);
+    pub fn set_add_listener_11(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener12(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_12(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener12(this: &Session, value: &Function);
+    pub fn set_add_listener_12(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener13(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_13(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener13(this: &Session, value: &Function);
+    pub fn set_add_listener_13(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener14(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_14(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener14(this: &Session, value: &Function);
+    pub fn set_add_listener_14(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener15(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_15(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener15(this: &Session, value: &Function);
+    pub fn set_add_listener_15(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener16(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_16(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener16(this: &Session, value: &Function);
+    pub fn set_add_listener_16(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener17(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_17(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener17(this: &Session, value: &Function);
+    pub fn set_add_listener_17(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener18(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_18(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener18(this: &Session, value: &Function);
+    pub fn set_add_listener_18(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener19(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_19(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener19(this: &Session, value: &Function);
+    pub fn set_add_listener_19(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener20(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_20(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener20(this: &Session, value: &Function);
+    pub fn set_add_listener_20(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener21(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_21(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener21(this: &Session, value: &Function);
+    pub fn set_add_listener_21(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener22(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_22(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener22(this: &Session, value: &Function);
+    pub fn set_add_listener_22(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener23(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_23(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener23(this: &Session, value: &Function);
+    pub fn set_add_listener_23(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener24(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_24(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener24(this: &Session, value: &Function);
+    pub fn set_add_listener_24(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener25(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_25(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener25(this: &Session, value: &Function);
+    pub fn set_add_listener_25(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener26(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_26(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener26(this: &Session, value: &Function);
+    pub fn set_add_listener_26(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener27(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_27(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener27(this: &Session, value: &Function);
+    pub fn set_add_listener_27(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener28(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn add_listener_28(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener28(this: &Session, value: &Function);
+    pub fn set_add_listener_28(this: &Session, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &Session, event: &JsValue, args: &Array) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_2(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &Session, value: &Function);
+    pub fn set_emit_2(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_3(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &Session, value: &Function);
+    pub fn set_emit_3(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_4(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &Session, value: &Function);
+    pub fn set_emit_4(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Session, event: &JsValue) -> bool;
+    pub fn emit_5(this: &Session, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &Session, value: &Function);
+    pub fn set_emit_5(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_6(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit6(this: &Session, value: &Function);
+    pub fn set_emit_6(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_7(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit7(this: &Session, value: &Function);
+    pub fn set_emit_7(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit8(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_8(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit8(this: &Session, value: &Function);
+    pub fn set_emit_8(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit9(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_9(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit9(this: &Session, value: &Function);
+    pub fn set_emit_9(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit10(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_10(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit10(this: &Session, value: &Function);
+    pub fn set_emit_10(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit11(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_11(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit11(this: &Session, value: &Function);
+    pub fn set_emit_11(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit12(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_12(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit12(this: &Session, value: &Function);
+    pub fn set_emit_12(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit13(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_13(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit13(this: &Session, value: &Function);
+    pub fn set_emit_13(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit14(this: &Session, event: &JsValue) -> bool;
+    pub fn emit_14(this: &Session, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit14(this: &Session, value: &Function);
+    pub fn set_emit_14(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit15(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_15(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit15(this: &Session, value: &Function);
+    pub fn set_emit_15(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit16(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_16(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit16(this: &Session, value: &Function);
+    pub fn set_emit_16(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit17(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_17(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit17(this: &Session, value: &Function);
+    pub fn set_emit_17(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit18(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_18(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit18(this: &Session, value: &Function);
+    pub fn set_emit_18(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit19(this: &Session, event: &JsValue) -> bool;
+    pub fn emit_19(this: &Session, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit19(this: &Session, value: &Function);
+    pub fn set_emit_19(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit20(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_20(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit20(this: &Session, value: &Function);
+    pub fn set_emit_20(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit21(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_21(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit21(this: &Session, value: &Function);
+    pub fn set_emit_21(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit22(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_22(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit22(this: &Session, value: &Function);
+    pub fn set_emit_22(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit23(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_23(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit23(this: &Session, value: &Function);
+    pub fn set_emit_23(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit24(this: &Session, event: &JsValue) -> bool;
+    pub fn emit_24(this: &Session, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit24(this: &Session, value: &Function);
+    pub fn set_emit_24(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit25(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_25(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit25(this: &Session, value: &Function);
+    pub fn set_emit_25(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit26(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_26(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit26(this: &Session, value: &Function);
+    pub fn set_emit_26(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit27(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
+    pub fn emit_27(this: &Session, event: &JsValue, message: &InspectorNotification) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit27(this: &Session, value: &Function);
+    pub fn set_emit_27(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit28(this: &Session, event: &JsValue) -> bool;
+    pub fn emit_28(this: &Session, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit28(this: &Session, value: &Function);
+    pub fn set_emit_28(this: &Session, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &Session, event: &str, listener: &JsValue) -> Session;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_2(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &Session, value: &Function);
+    pub fn set_on_2(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_3(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &Session, value: &Function);
+    pub fn set_on_3(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_4(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &Session, value: &Function);
+    pub fn set_on_4(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_5(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &Session, value: &Function);
+    pub fn set_on_5(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_6(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &Session, value: &Function);
+    pub fn set_on_6(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on7(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_7(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on7(this: &Session, value: &Function);
+    pub fn set_on_7(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on8(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_8(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on8(this: &Session, value: &Function);
+    pub fn set_on_8(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on9(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_9(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on9(this: &Session, value: &Function);
+    pub fn set_on_9(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on10(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_10(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on10(this: &Session, value: &Function);
+    pub fn set_on_10(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on11(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_11(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on11(this: &Session, value: &Function);
+    pub fn set_on_11(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on12(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_12(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on12(this: &Session, value: &Function);
+    pub fn set_on_12(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on13(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_13(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on13(this: &Session, value: &Function);
+    pub fn set_on_13(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on14(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_14(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on14(this: &Session, value: &Function);
+    pub fn set_on_14(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on15(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_15(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on15(this: &Session, value: &Function);
+    pub fn set_on_15(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on16(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_16(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on16(this: &Session, value: &Function);
+    pub fn set_on_16(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on17(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_17(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on17(this: &Session, value: &Function);
+    pub fn set_on_17(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on18(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_18(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on18(this: &Session, value: &Function);
+    pub fn set_on_18(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on19(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_19(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on19(this: &Session, value: &Function);
+    pub fn set_on_19(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on20(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_20(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on20(this: &Session, value: &Function);
+    pub fn set_on_20(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on21(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_21(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on21(this: &Session, value: &Function);
+    pub fn set_on_21(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on22(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_22(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on22(this: &Session, value: &Function);
+    pub fn set_on_22(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on23(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_23(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on23(this: &Session, value: &Function);
+    pub fn set_on_23(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on24(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_24(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on24(this: &Session, value: &Function);
+    pub fn set_on_24(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on25(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_25(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on25(this: &Session, value: &Function);
+    pub fn set_on_25(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on26(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_26(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on26(this: &Session, value: &Function);
+    pub fn set_on_26(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on27(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_27(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on27(this: &Session, value: &Function);
+    pub fn set_on_27(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on28(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn on_28(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on28(this: &Session, value: &Function);
+    pub fn set_on_28(this: &Session, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &Session, event: &str, listener: &JsValue) -> Session;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_2(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &Session, value: &Function);
+    pub fn set_once_2(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_3(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &Session, value: &Function);
+    pub fn set_once_3(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_4(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &Session, value: &Function);
+    pub fn set_once_4(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_5(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &Session, value: &Function);
+    pub fn set_once_5(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_6(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &Session, value: &Function);
+    pub fn set_once_6(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once7(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_7(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once7(this: &Session, value: &Function);
+    pub fn set_once_7(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once8(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_8(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once8(this: &Session, value: &Function);
+    pub fn set_once_8(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once9(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_9(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once9(this: &Session, value: &Function);
+    pub fn set_once_9(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once10(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_10(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once10(this: &Session, value: &Function);
+    pub fn set_once_10(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once11(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_11(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once11(this: &Session, value: &Function);
+    pub fn set_once_11(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once12(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_12(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once12(this: &Session, value: &Function);
+    pub fn set_once_12(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once13(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_13(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once13(this: &Session, value: &Function);
+    pub fn set_once_13(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once14(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_14(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once14(this: &Session, value: &Function);
+    pub fn set_once_14(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once15(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_15(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once15(this: &Session, value: &Function);
+    pub fn set_once_15(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once16(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_16(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once16(this: &Session, value: &Function);
+    pub fn set_once_16(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once17(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_17(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once17(this: &Session, value: &Function);
+    pub fn set_once_17(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once18(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_18(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once18(this: &Session, value: &Function);
+    pub fn set_once_18(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once19(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_19(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once19(this: &Session, value: &Function);
+    pub fn set_once_19(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once20(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_20(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once20(this: &Session, value: &Function);
+    pub fn set_once_20(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once21(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_21(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once21(this: &Session, value: &Function);
+    pub fn set_once_21(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once22(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_22(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once22(this: &Session, value: &Function);
+    pub fn set_once_22(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once23(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_23(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once23(this: &Session, value: &Function);
+    pub fn set_once_23(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once24(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_24(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once24(this: &Session, value: &Function);
+    pub fn set_once_24(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once25(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_25(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once25(this: &Session, value: &Function);
+    pub fn set_once_25(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once26(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_26(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once26(this: &Session, value: &Function);
+    pub fn set_once_26(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once27(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_27(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once27(this: &Session, value: &Function);
+    pub fn set_once_27(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once28(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn once_28(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once28(this: &Session, value: &Function);
+    pub fn set_once_28(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &Session, event: &str, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_2(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &Session, value: &Function);
+    pub fn set_prepend_listener_2(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_3(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &Session, value: &Function);
+    pub fn set_prepend_listener_3(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_4(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &Session, value: &Function);
+    pub fn set_prepend_listener_4(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_5(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &Session, value: &Function);
+    pub fn set_prepend_listener_5(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_6(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &Session, value: &Function);
+    pub fn set_prepend_listener_6(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener7(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_7(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener7(this: &Session, value: &Function);
+    pub fn set_prepend_listener_7(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener8(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_8(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener8(this: &Session, value: &Function);
+    pub fn set_prepend_listener_8(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener9(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_9(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener9(this: &Session, value: &Function);
+    pub fn set_prepend_listener_9(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener10(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_10(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener10(this: &Session, value: &Function);
+    pub fn set_prepend_listener_10(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener11(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_11(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener11(this: &Session, value: &Function);
+    pub fn set_prepend_listener_11(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener12(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_12(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener12(this: &Session, value: &Function);
+    pub fn set_prepend_listener_12(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener13(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_13(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener13(this: &Session, value: &Function);
+    pub fn set_prepend_listener_13(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener14(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_14(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener14(this: &Session, value: &Function);
+    pub fn set_prepend_listener_14(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener15(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_15(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener15(this: &Session, value: &Function);
+    pub fn set_prepend_listener_15(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener16(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_16(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener16(this: &Session, value: &Function);
+    pub fn set_prepend_listener_16(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener17(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_17(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener17(this: &Session, value: &Function);
+    pub fn set_prepend_listener_17(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener18(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_18(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener18(this: &Session, value: &Function);
+    pub fn set_prepend_listener_18(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener19(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_19(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener19(this: &Session, value: &Function);
+    pub fn set_prepend_listener_19(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener20(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_20(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener20(this: &Session, value: &Function);
+    pub fn set_prepend_listener_20(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener21(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_21(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener21(this: &Session, value: &Function);
+    pub fn set_prepend_listener_21(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener22(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_22(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener22(this: &Session, value: &Function);
+    pub fn set_prepend_listener_22(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener23(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_23(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener23(this: &Session, value: &Function);
+    pub fn set_prepend_listener_23(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener24(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_24(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener24(this: &Session, value: &Function);
+    pub fn set_prepend_listener_24(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener25(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_25(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener25(this: &Session, value: &Function);
+    pub fn set_prepend_listener_25(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener26(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_26(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener26(this: &Session, value: &Function);
+    pub fn set_prepend_listener_26(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener27(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_27(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener27(this: &Session, value: &Function);
+    pub fn set_prepend_listener_27(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener28(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_listener_28(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener28(this: &Session, value: &Function);
+    pub fn set_prepend_listener_28(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(this: &Session, event: &str, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_2(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_3(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_4(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_5(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_6(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener7(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_7(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener7(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_7(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener8(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_8(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener8(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_8(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener9(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_9(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener9(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_9(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener10(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_10(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener10(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_10(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener11(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_11(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener11(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_11(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener12(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_12(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener12(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_12(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener13(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_13(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener13(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_13(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener14(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_14(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener14(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_14(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener15(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_15(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener15(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_15(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener16(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_16(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener16(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_16(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener17(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_17(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener17(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_17(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener18(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_18(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener18(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_18(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener19(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_19(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener19(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_19(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener20(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_20(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener20(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_20(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener21(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_21(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener21(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_21(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener22(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_22(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener22(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_22(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener23(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_23(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener23(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_23(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener24(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_24(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener24(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_24(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener25(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_25(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener25(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_25(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener26(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_26(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener26(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_26(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener27(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_27(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener27(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_27(this: &Session, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener28(this: &Session, event: &JsValue, listener: &JsValue) -> Session;
+    pub fn prepend_once_listener_28(this: &Session, event: &JsValue, listener: &JsValue)
+    -> Session;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener28(this: &Session, value: &Function);
+    pub fn set_prepend_once_listener_28(this: &Session, value: &Function);
     #[doc = "Activate inspector on host and port. Equivalent to node --inspect=[[host:]port], but can be done programatically after node has started."]
     #[doc = "If wait is true, will block until a client has connected to the inspect port and flow control has been passed to the debugger client."]
     #[wasm_bindgen()]
@@ -1443,5 +1462,5 @@ extern "C" {
     pub fn close();
     #[doc = "Return the URL of the active inspector, or `undefined` if there is none."]
     #[wasm_bindgen()]
-    pub fn url() -> Option<String>;
+    pub fn url() -> String;
 }

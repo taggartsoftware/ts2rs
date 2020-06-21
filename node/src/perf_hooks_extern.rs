@@ -127,7 +127,6 @@ extern "C" {
     pub fn get_entries_by_type(this: &PerformanceObserverEntryList, type_: &str) -> Array;
     # [ wasm_bindgen ( method , setter , js_name = getEntriesByType ) ]
     pub fn set_get_entries_by_type(this: &PerformanceObserverEntryList, value: &Function);
-    pub type PerformanceObserverCallback;
     pub type PerformanceObserver;
     #[wasm_bindgen(constructor)]
     pub fn new_performance_observer(callback: &PerformanceObserverCallback) -> PerformanceObserver;

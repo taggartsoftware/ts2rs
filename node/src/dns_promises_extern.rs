@@ -8,53 +8,53 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn lookup(hostname: &str, family: f64) -> Promise;
     # [ wasm_bindgen ( js_name = lookup ) ]
-    pub fn lookup2(hostname: &str, options: &dns::LookupOneOptions) -> Promise;
+    pub fn lookup_2(hostname: &str, options: &LookupOneOptions) -> Promise;
     # [ wasm_bindgen ( js_name = lookup ) ]
-    pub fn lookup3(hostname: &str, options: &dns::LookupAllOptions) -> Promise;
+    pub fn lookup_3(hostname: &str, options: &LookupAllOptions) -> Promise;
     # [ wasm_bindgen ( js_name = lookup ) ]
-    pub fn lookup4(hostname: &str, options: &dns::LookupOptions) -> Promise;
+    pub fn lookup_4(hostname: &str, options: &LookupOptions) -> Promise;
     # [ wasm_bindgen ( js_name = lookup ) ]
-    pub fn lookup5(hostname: &str) -> Promise;
+    pub fn lookup_5(hostname: &str) -> Promise;
     # [ wasm_bindgen ( js_name = lookupService ) ]
     pub fn lookup_service(address: &str, port: f64) -> Promise;
     #[wasm_bindgen()]
     pub fn resolve(hostname: &str) -> Promise;
     # [ wasm_bindgen ( js_name = resolve ) ]
-    pub fn resolve2(hostname: &str, rrtype: &JsValue) -> Promise;
+    pub fn resolve_2(hostname: &str, rrtype: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = resolve ) ]
-    pub fn resolve3(hostname: &str, rrtype: &JsValue) -> Promise;
+    pub fn resolve_3(hostname: &str, rrtype: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = resolve ) ]
-    pub fn resolve4(hostname: &str, rrtype: &JsValue) -> Promise;
+    pub fn resolve_4(hostname: &str, rrtype: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = resolve ) ]
-    pub fn resolve5(hostname: &str, rrtype: &JsValue) -> Promise;
+    pub fn resolve_5(hostname: &str, rrtype: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = resolve ) ]
-    pub fn resolve6(hostname: &str, rrtype: &JsValue) -> Promise;
+    pub fn resolve_6(hostname: &str, rrtype: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = resolve ) ]
-    pub fn resolve7(hostname: &str, rrtype: &JsValue) -> Promise;
+    pub fn resolve_7(hostname: &str, rrtype: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = resolve ) ]
-    pub fn resolve8(hostname: &str, rrtype: &JsValue) -> Promise;
+    pub fn resolve_8(hostname: &str, rrtype: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = resolve ) ]
-    pub fn resolve9(hostname: &str, rrtype: &JsValue) -> Promise;
+    pub fn resolve_9(hostname: &str, rrtype: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = resolve ) ]
-    pub fn resolve10(hostname: &str, rrtype: &JsValue) -> Promise;
+    pub fn resolve_10(hostname: &str, rrtype: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = resolve ) ]
-    pub fn resolve11(hostname: &str, rrtype: &JsValue) -> Promise;
+    pub fn resolve_11(hostname: &str, rrtype: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = resolve ) ]
-    pub fn resolve12(hostname: &str, rrtype: &JsValue) -> Promise;
+    pub fn resolve_12(hostname: &str, rrtype: &JsValue) -> Promise;
     # [ wasm_bindgen ( js_name = resolve ) ]
-    pub fn resolve13(hostname: &str, rrtype: &str) -> Promise;
+    pub fn resolve_13(hostname: &str, rrtype: &str) -> Promise;
     #[wasm_bindgen()]
     pub fn resolve4(hostname: &str) -> Promise;
     # [ wasm_bindgen ( js_name = resolve4 ) ]
-    pub fn resolve42(hostname: &str, options: &dns::ResolveWithTtlOptions) -> Promise;
+    pub fn resolve4_2(hostname: &str, options: &ResolveWithTtlOptions) -> Promise;
     # [ wasm_bindgen ( js_name = resolve4 ) ]
-    pub fn resolve43(hostname: &str, options: &dns::ResolveOptions) -> Promise;
+    pub fn resolve4_3(hostname: &str, options: &ResolveOptions) -> Promise;
     #[wasm_bindgen()]
     pub fn resolve6(hostname: &str) -> Promise;
     # [ wasm_bindgen ( js_name = resolve6 ) ]
-    pub fn resolve62(hostname: &str, options: &dns::ResolveWithTtlOptions) -> Promise;
+    pub fn resolve6_2(hostname: &str, options: &ResolveWithTtlOptions) -> Promise;
     # [ wasm_bindgen ( js_name = resolve6 ) ]
-    pub fn resolve63(hostname: &str, options: &dns::ResolveOptions) -> Promise;
+    pub fn resolve6_3(hostname: &str, options: &ResolveOptions) -> Promise;
     # [ wasm_bindgen ( js_name = resolveAny ) ]
     pub fn resolve_any(hostname: &str) -> Promise;
     # [ wasm_bindgen ( js_name = resolveCname ) ]

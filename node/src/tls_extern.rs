@@ -209,7 +209,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getEphemeralKeyInfo ) ]
     pub fn set_get_ephemeral_key_info(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getFinished ) ]
-    pub fn get_finished(this: &TLSSocket) -> Option<Buffer>;
+    pub fn get_finished(this: &TLSSocket) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = getFinished ) ]
     pub fn set_get_finished(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPeerCertificate ) ]
@@ -217,15 +217,15 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getPeerCertificate ) ]
     pub fn set_get_peer_certificate(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPeerCertificate ) ]
-    pub fn get_peer_certificate2(this: &TLSSocket, detailed: &JsValue) -> PeerCertificate;
+    pub fn get_peer_certificate_2(this: &TLSSocket, detailed: &JsValue) -> PeerCertificate;
     # [ wasm_bindgen ( method , setter , js_name = getPeerCertificate ) ]
-    pub fn set_get_peer_certificate2(this: &TLSSocket, value: &Function);
+    pub fn set_get_peer_certificate_2(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPeerCertificate ) ]
-    pub fn get_peer_certificate3(this: &TLSSocket, detailed: Option<bool>) -> JsValue;
+    pub fn get_peer_certificate_3(this: &TLSSocket, detailed: Option<bool>) -> JsValue;
     # [ wasm_bindgen ( method , setter , js_name = getPeerCertificate ) ]
-    pub fn set_get_peer_certificate3(this: &TLSSocket, value: &Function);
+    pub fn set_get_peer_certificate_3(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPeerFinished ) ]
-    pub fn get_peer_finished(this: &TLSSocket) -> Option<Buffer>;
+    pub fn get_peer_finished(this: &TLSSocket) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = getPeerFinished ) ]
     pub fn set_get_peer_finished(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getProtocol ) ]
@@ -233,7 +233,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getProtocol ) ]
     pub fn set_get_protocol(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getSession ) ]
-    pub fn get_session(this: &TLSSocket) -> Option<Buffer>;
+    pub fn get_session(this: &TLSSocket) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = getSession ) ]
     pub fn set_get_session(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getSharedSigalgs ) ]
@@ -241,7 +241,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getSharedSigalgs ) ]
     pub fn set_get_shared_sigalgs(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getTLSTicket ) ]
-    pub fn get_tls_ticket(this: &TLSSocket) -> Option<Buffer>;
+    pub fn get_tls_ticket(this: &TLSSocket) -> Buffer;
     # [ wasm_bindgen ( method , setter , js_name = getTLSTicket ) ]
     pub fn set_get_tls_ticket(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = isSessionReused ) ]
@@ -249,7 +249,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = isSessionReused ) ]
     pub fn set_is_session_reused(this: &TLSSocket, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn renegotiate(this: &TLSSocket, options: &JsValue, callback: &JsValue) -> Option<bool>;
+    pub fn renegotiate(this: &TLSSocket, options: &JsValue, callback: &JsValue) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_renegotiate(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = setMaxSendFragment ) ]
@@ -269,137 +269,137 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn add_listener_2(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &TLSSocket, value: &Function);
+    pub fn set_add_listener_2(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn add_listener_3(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &TLSSocket, value: &Function);
+    pub fn set_add_listener_3(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn add_listener_4(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &TLSSocket, value: &Function);
+    pub fn set_add_listener_4(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn add_listener_5(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &TLSSocket, value: &Function);
+    pub fn set_add_listener_5(this: &TLSSocket, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &TLSSocket, event: &JsValue, args: &Array) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &TLSSocket, event: &JsValue, response: &Buffer) -> bool;
+    pub fn emit_2(this: &TLSSocket, event: &JsValue, response: &Buffer) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &TLSSocket, value: &Function);
+    pub fn set_emit_2(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(this: &TLSSocket, event: &JsValue) -> bool;
+    pub fn emit_3(this: &TLSSocket, event: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &TLSSocket, value: &Function);
+    pub fn set_emit_3(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(this: &TLSSocket, event: &JsValue, session: &Buffer) -> bool;
+    pub fn emit_4(this: &TLSSocket, event: &JsValue, session: &Buffer) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &TLSSocket, value: &Function);
+    pub fn set_emit_4(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &TLSSocket, event: &JsValue, line: &Buffer) -> bool;
+    pub fn emit_5(this: &TLSSocket, event: &JsValue, line: &Buffer) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &TLSSocket, value: &Function);
+    pub fn set_emit_5(this: &TLSSocket, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &TLSSocket, event: &str, listener: &JsValue) -> TLSSocket;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn on_2(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &TLSSocket, value: &Function);
+    pub fn set_on_2(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn on_3(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &TLSSocket, value: &Function);
+    pub fn set_on_3(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn on_4(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &TLSSocket, value: &Function);
+    pub fn set_on_4(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn on_5(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &TLSSocket, value: &Function);
+    pub fn set_on_5(this: &TLSSocket, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &TLSSocket, event: &str, listener: &JsValue) -> TLSSocket;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn once_2(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &TLSSocket, value: &Function);
+    pub fn set_once_2(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn once_3(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &TLSSocket, value: &Function);
+    pub fn set_once_3(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn once_4(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &TLSSocket, value: &Function);
+    pub fn set_once_4(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn once_5(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &TLSSocket, value: &Function);
+    pub fn set_once_5(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &TLSSocket, event: &str, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn prepend_listener_2(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &TLSSocket, value: &Function);
+    pub fn set_prepend_listener_2(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn prepend_listener_3(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &TLSSocket, value: &Function);
+    pub fn set_prepend_listener_3(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn prepend_listener_4(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &TLSSocket, value: &Function);
+    pub fn set_prepend_listener_4(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
+    pub fn prepend_listener_5(this: &TLSSocket, event: &JsValue, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &TLSSocket, value: &Function);
+    pub fn set_prepend_listener_5(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(this: &TLSSocket, event: &str, listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &TLSSocket,
         event: &JsValue,
         listener: &JsValue,
     ) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &TLSSocket, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &TLSSocket,
         event: &JsValue,
         listener: &JsValue,
     ) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &TLSSocket, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &TLSSocket,
         event: &JsValue,
         listener: &JsValue,
     ) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &TLSSocket, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(
+    pub fn prepend_once_listener_5(
         this: &TLSSocket,
         event: &JsValue,
         listener: &JsValue,
     ) -> TLSSocket;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &TLSSocket, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &TLSSocket, value: &Function);
     pub type CommonConnectionOptions;
     #[doc = "An optional TLS context object from tls.createSecureContext()"]
     # [ wasm_bindgen ( method , getter , js_name = secureContext ) ]
@@ -498,9 +498,9 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = minDHSize ) ]
     pub fn set_min_dh_size(this: &ConnectionOptions, value: Option<f64>);
     #[wasm_bindgen(method, getter)]
-    pub fn lookup(this: &ConnectionOptions) -> Option<crate::net::LookupFunction>;
+    pub fn lookup(this: &ConnectionOptions) -> crate::net::LookupFunction;
     #[wasm_bindgen(method, setter)]
-    pub fn set_lookup(this: &ConnectionOptions, value: Option<&crate::net::LookupFunction>);
+    pub fn set_lookup(this: &ConnectionOptions, value: &crate::net::LookupFunction);
     #[wasm_bindgen(method, getter)]
     pub fn timeout(this: &ConnectionOptions) -> Option<f64>;
     #[wasm_bindgen(method, setter)]
@@ -527,39 +527,39 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn add_listener_2(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &Server, value: &Function);
+    pub fn set_add_listener_2(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn add_listener_3(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &Server, value: &Function);
+    pub fn set_add_listener_3(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn add_listener_4(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &Server, value: &Function);
+    pub fn set_add_listener_4(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener5(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn add_listener_5(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener5(this: &Server, value: &Function);
+    pub fn set_add_listener_5(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener6(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn add_listener_6(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener6(this: &Server, value: &Function);
+    pub fn set_add_listener_6(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener7(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn add_listener_7(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener7(this: &Server, value: &Function);
+    pub fn set_add_listener_7(this: &Server, value: &Function);
     #[wasm_bindgen(method)]
     pub fn emit(this: &Server, event: &JsValue, args: &Array) -> bool;
     #[wasm_bindgen(method, setter)]
     pub fn set_emit(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit2(this: &Server, event: &JsValue, err: &Error, tls_socket: &TLSSocket) -> bool;
+    pub fn emit_2(this: &Server, event: &JsValue, err: &Error, tls_socket: &TLSSocket) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit2(this: &Server, value: &Function);
+    pub fn set_emit_2(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit3(
+    pub fn emit_3(
         this: &Server,
         event: &JsValue,
         session_id: &Buffer,
@@ -567,9 +567,9 @@ extern "C" {
         callback: &JsValue,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit3(this: &Server, value: &Function);
+    pub fn set_emit_3(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit4(
+    pub fn emit_4(
         this: &Server,
         event: &JsValue,
         certificate: &Buffer,
@@ -577,131 +577,131 @@ extern "C" {
         callback: &JsValue,
     ) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit4(this: &Server, value: &Function);
+    pub fn set_emit_4(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit5(this: &Server, event: &JsValue, session_id: &Buffer, callback: &JsValue) -> bool;
+    pub fn emit_5(this: &Server, event: &JsValue, session_id: &Buffer, callback: &JsValue) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit5(this: &Server, value: &Function);
+    pub fn set_emit_5(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit6(this: &Server, event: &JsValue, tls_socket: &TLSSocket) -> bool;
+    pub fn emit_6(this: &Server, event: &JsValue, tls_socket: &TLSSocket) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit6(this: &Server, value: &Function);
+    pub fn set_emit_6(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = emit ) ]
-    pub fn emit7(this: &Server, event: &JsValue, line: &Buffer, tls_socket: &TLSSocket) -> bool;
+    pub fn emit_7(this: &Server, event: &JsValue, line: &Buffer, tls_socket: &TLSSocket) -> bool;
     # [ wasm_bindgen ( method , setter , js_name = emit ) ]
-    pub fn set_emit7(this: &Server, value: &Function);
+    pub fn set_emit_7(this: &Server, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &Server, event: &str, listener: &JsValue) -> Server;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn on_2(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &Server, value: &Function);
+    pub fn set_on_2(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn on_3(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &Server, value: &Function);
+    pub fn set_on_3(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn on_4(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &Server, value: &Function);
+    pub fn set_on_4(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on5(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn on_5(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on5(this: &Server, value: &Function);
+    pub fn set_on_5(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on6(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn on_6(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on6(this: &Server, value: &Function);
+    pub fn set_on_6(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on7(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn on_7(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on7(this: &Server, value: &Function);
+    pub fn set_on_7(this: &Server, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &Server, event: &str, listener: &JsValue) -> Server;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn once_2(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &Server, value: &Function);
+    pub fn set_once_2(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn once_3(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &Server, value: &Function);
+    pub fn set_once_3(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn once_4(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &Server, value: &Function);
+    pub fn set_once_4(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once5(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn once_5(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once5(this: &Server, value: &Function);
+    pub fn set_once_5(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once6(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn once_6(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once6(this: &Server, value: &Function);
+    pub fn set_once_6(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once7(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn once_7(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once7(this: &Server, value: &Function);
+    pub fn set_once_7(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &Server, event: &str, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn prepend_listener_2(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &Server, value: &Function);
+    pub fn set_prepend_listener_2(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn prepend_listener_3(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &Server, value: &Function);
+    pub fn set_prepend_listener_3(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn prepend_listener_4(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &Server, value: &Function);
+    pub fn set_prepend_listener_4(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener5(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn prepend_listener_5(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener5(this: &Server, value: &Function);
+    pub fn set_prepend_listener_5(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener6(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn prepend_listener_6(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener6(this: &Server, value: &Function);
+    pub fn set_prepend_listener_6(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener7(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn prepend_listener_7(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener7(this: &Server, value: &Function);
+    pub fn set_prepend_listener_7(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(this: &Server, event: &str, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn prepend_once_listener_2(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &Server, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn prepend_once_listener_3(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &Server, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn prepend_once_listener_4(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &Server, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener5(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn prepend_once_listener_5(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener5(this: &Server, value: &Function);
+    pub fn set_prepend_once_listener_5(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener6(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn prepend_once_listener_6(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener6(this: &Server, value: &Function);
+    pub fn set_prepend_once_listener_6(this: &Server, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener7(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
+    pub fn prepend_once_listener_7(this: &Server, event: &JsValue, listener: &JsValue) -> Server;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener7(this: &Server, value: &Function);
+    pub fn set_prepend_once_listener_7(this: &Server, value: &Function);
     pub type SecurePair;
     #[wasm_bindgen(method, getter)]
     pub fn encrypted(this: &SecurePair) -> TLSSocket;
@@ -883,22 +883,22 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_context(this: &SecureContext, value: &JsValue);
     # [ wasm_bindgen ( js_name = checkServerIdentity ) ]
-    pub fn check_server_identity(host: &str, cert: &PeerCertificate) -> Option<Error>;
+    pub fn check_server_identity(host: &str, cert: &PeerCertificate) -> Error;
     # [ wasm_bindgen ( js_name = createServer ) ]
     pub fn create_server(secure_connection_listener: &JsValue) -> Server;
     # [ wasm_bindgen ( js_name = createServer ) ]
-    pub fn create_server2(options: &TlsOptions, secure_connection_listener: &JsValue) -> Server;
+    pub fn create_server_2(options: &TlsOptions, secure_connection_listener: &JsValue) -> Server;
     #[wasm_bindgen()]
     pub fn connect(options: &ConnectionOptions, secure_connect_listener: &JsValue) -> TLSSocket;
     # [ wasm_bindgen ( js_name = connect ) ]
-    pub fn connect2(
+    pub fn connect_2(
         port: f64,
         host: Option<&str>,
         options: Option<&ConnectionOptions>,
         secure_connect_listener: &JsValue,
     ) -> TLSSocket;
     # [ wasm_bindgen ( js_name = connect ) ]
-    pub fn connect3(
+    pub fn connect_3(
         port: f64,
         options: Option<&ConnectionOptions>,
         secure_connect_listener: &JsValue,

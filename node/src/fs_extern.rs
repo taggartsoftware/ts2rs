@@ -5,7 +5,6 @@
 extern "C" {
     #[doc = "Valid types for path values in \"fs\"."]
     pub type PathLike;
-    pub type NoParamCallback;
     pub type StatsBase;
     # [ wasm_bindgen ( method , js_name = isFile ) ]
     pub fn is_file(this: &StatsBase) -> bool;
@@ -154,9 +153,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_close(this: &Dir, value: &Function);
     # [ wasm_bindgen ( method , js_name = close ) ]
-    pub fn close2(this: &Dir, cb: &NoParamCallback);
+    pub fn close_2(this: &Dir, cb: &NoParamCallback);
     # [ wasm_bindgen ( method , setter , js_name = close ) ]
-    pub fn set_close2(this: &Dir, value: &Function);
+    pub fn set_close_2(this: &Dir, value: &Function);
     # [ wasm_bindgen ( method , js_name = closeSync ) ]
     pub fn close_sync(this: &Dir);
     # [ wasm_bindgen ( method , setter , js_name = closeSync ) ]
@@ -166,9 +165,9 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_read(this: &Dir, value: &Function);
     # [ wasm_bindgen ( method , js_name = read ) ]
-    pub fn read2(this: &Dir, cb: &JsValue);
+    pub fn read_2(this: &Dir, cb: &JsValue);
     # [ wasm_bindgen ( method , setter , js_name = read ) ]
-    pub fn set_read2(this: &Dir, value: &Function);
+    pub fn set_read_2(this: &Dir, value: &Function);
     # [ wasm_bindgen ( method , js_name = readSync ) ]
     pub fn read_sync(this: &Dir) -> Dirent;
     # [ wasm_bindgen ( method , setter , js_name = readSync ) ]
@@ -183,93 +182,93 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn add_listener_2(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &FSWatcher, value: &Function);
+    pub fn set_add_listener_2(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn add_listener_3(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &FSWatcher, value: &Function);
+    pub fn set_add_listener_3(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener4(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn add_listener_4(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener4(this: &FSWatcher, value: &Function);
+    pub fn set_add_listener_4(this: &FSWatcher, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &FSWatcher, event: &str, listener: &JsValue) -> FSWatcher;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn on_2(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &FSWatcher, value: &Function);
+    pub fn set_on_2(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn on_3(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &FSWatcher, value: &Function);
+    pub fn set_on_3(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on4(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn on_4(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on4(this: &FSWatcher, value: &Function);
+    pub fn set_on_4(this: &FSWatcher, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &FSWatcher, event: &str, listener: &JsValue) -> FSWatcher;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn once_2(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &FSWatcher, value: &Function);
+    pub fn set_once_2(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn once_3(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &FSWatcher, value: &Function);
+    pub fn set_once_3(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once4(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn once_4(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once4(this: &FSWatcher, value: &Function);
+    pub fn set_once_4(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &FSWatcher, event: &str, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn prepend_listener_2(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &FSWatcher, value: &Function);
+    pub fn set_prepend_listener_2(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn prepend_listener_3(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &FSWatcher, value: &Function);
+    pub fn set_prepend_listener_3(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener4(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn prepend_listener_4(this: &FSWatcher, event: &JsValue, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener4(this: &FSWatcher, value: &Function);
+    pub fn set_prepend_listener_4(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(this: &FSWatcher, event: &str, listener: &JsValue) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &FSWatcher,
         event: &JsValue,
         listener: &JsValue,
     ) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &FSWatcher, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &FSWatcher,
         event: &JsValue,
         listener: &JsValue,
     ) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &FSWatcher, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &FSWatcher, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener4(
+    pub fn prepend_once_listener_4(
         this: &FSWatcher,
         event: &JsValue,
         listener: &JsValue,
     ) -> FSWatcher;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener4(this: &FSWatcher, value: &Function);
+    pub fn set_prepend_once_listener_4(this: &FSWatcher, value: &Function);
     pub type ReadStream;
     #[wasm_bindgen(method)]
     pub fn close(this: &ReadStream);
@@ -288,69 +287,71 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &ReadStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
+    pub fn add_listener_2(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &ReadStream, value: &Function);
+    pub fn set_add_listener_2(this: &ReadStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
+    pub fn add_listener_3(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &ReadStream, value: &Function);
+    pub fn set_add_listener_3(this: &ReadStream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &ReadStream, event: &str, listener: &JsValue) -> ReadStream;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &ReadStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
+    pub fn on_2(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &ReadStream, value: &Function);
+    pub fn set_on_2(this: &ReadStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
+    pub fn on_3(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &ReadStream, value: &Function);
+    pub fn set_on_3(this: &ReadStream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &ReadStream, event: &str, listener: &JsValue) -> ReadStream;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &ReadStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
+    pub fn once_2(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &ReadStream, value: &Function);
+    pub fn set_once_2(this: &ReadStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
+    pub fn once_3(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &ReadStream, value: &Function);
+    pub fn set_once_3(this: &ReadStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &ReadStream, event: &str, listener: &JsValue) -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &ReadStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
+    pub fn prepend_listener_2(this: &ReadStream, event: &JsValue, listener: &JsValue)
+    -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &ReadStream, value: &Function);
+    pub fn set_prepend_listener_2(this: &ReadStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(this: &ReadStream, event: &JsValue, listener: &JsValue) -> ReadStream;
+    pub fn prepend_listener_3(this: &ReadStream, event: &JsValue, listener: &JsValue)
+    -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &ReadStream, value: &Function);
+    pub fn set_prepend_listener_3(this: &ReadStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(this: &ReadStream, event: &str, listener: &JsValue) -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &ReadStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &ReadStream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &ReadStream, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &ReadStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &ReadStream,
         event: &JsValue,
         listener: &JsValue,
     ) -> ReadStream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &ReadStream, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &ReadStream, value: &Function);
     pub type WriteStream;
     #[wasm_bindgen(method)]
     pub fn close(this: &WriteStream);
@@ -369,57 +370,57 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
     pub fn set_add_listener(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
+    pub fn add_listener_2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener2(this: &WriteStream, value: &Function);
+    pub fn set_add_listener_2(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = addListener ) ]
-    pub fn add_listener3(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
+    pub fn add_listener_3(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = addListener ) ]
-    pub fn set_add_listener3(this: &WriteStream, value: &Function);
+    pub fn set_add_listener_3(this: &WriteStream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn on(this: &WriteStream, event: &str, listener: &JsValue) -> WriteStream;
     #[wasm_bindgen(method, setter)]
     pub fn set_on(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
+    pub fn on_2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on2(this: &WriteStream, value: &Function);
+    pub fn set_on_2(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = on ) ]
-    pub fn on3(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
+    pub fn on_3(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = on ) ]
-    pub fn set_on3(this: &WriteStream, value: &Function);
+    pub fn set_on_3(this: &WriteStream, value: &Function);
     #[wasm_bindgen(method)]
     pub fn once(this: &WriteStream, event: &str, listener: &JsValue) -> WriteStream;
     #[wasm_bindgen(method, setter)]
     pub fn set_once(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
+    pub fn once_2(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once2(this: &WriteStream, value: &Function);
+    pub fn set_once_2(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = once ) ]
-    pub fn once3(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
+    pub fn once_3(this: &WriteStream, event: &JsValue, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = once ) ]
-    pub fn set_once3(this: &WriteStream, value: &Function);
+    pub fn set_once_3(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
     pub fn prepend_listener(this: &WriteStream, event: &str, listener: &JsValue) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
     pub fn set_prepend_listener(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener2(
+    pub fn prepend_listener_2(
         this: &WriteStream,
         event: &JsValue,
         listener: &JsValue,
     ) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener2(this: &WriteStream, value: &Function);
+    pub fn set_prepend_listener_2(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependListener ) ]
-    pub fn prepend_listener3(
+    pub fn prepend_listener_3(
         this: &WriteStream,
         event: &JsValue,
         listener: &JsValue,
     ) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = prependListener ) ]
-    pub fn set_prepend_listener3(this: &WriteStream, value: &Function);
+    pub fn set_prepend_listener_3(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
     pub fn prepend_once_listener(
         this: &WriteStream,
@@ -429,21 +430,21 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
     pub fn set_prepend_once_listener(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener2(
+    pub fn prepend_once_listener_2(
         this: &WriteStream,
         event: &JsValue,
         listener: &JsValue,
     ) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener2(this: &WriteStream, value: &Function);
+    pub fn set_prepend_once_listener_2(this: &WriteStream, value: &Function);
     # [ wasm_bindgen ( method , js_name = prependOnceListener ) ]
-    pub fn prepend_once_listener3(
+    pub fn prepend_once_listener_3(
         this: &WriteStream,
         event: &JsValue,
         listener: &JsValue,
     ) -> WriteStream;
     # [ wasm_bindgen ( method , setter , js_name = prependOnceListener ) ]
-    pub fn set_prepend_once_listener3(this: &WriteStream, value: &Function);
+    pub fn set_prepend_once_listener_3(this: &WriteStream, value: &Function);
     #[doc = "Asynchronous rename(2) - Change the name or location of a file or directory."]
     #[wasm_bindgen()]
     pub fn rename(old_path: &PathLike, new_path: &PathLike, callback: &NoParamCallback);
@@ -461,7 +462,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous truncate(2) - Truncate a file to a specified length."]
     # [ wasm_bindgen ( js_name = truncate ) ]
-    pub fn truncate2(path: &PathLike, callback: &NoParamCallback);
+    pub fn truncate_2(path: &PathLike, callback: &NoParamCallback);
     #[doc = "Synchronous truncate(2) - Truncate a file to a specified length."]
     # [ wasm_bindgen ( js_name = truncateSync ) ]
     pub fn truncate_sync(path: &PathLike, len: &JsValue);
@@ -476,7 +477,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous ftruncate(2) - Truncate a file to a specified length."]
     # [ wasm_bindgen ( js_name = ftruncate ) ]
-    pub fn ftruncate2(fd: f64, callback: &NoParamCallback);
+    pub fn ftruncate_2(fd: f64, callback: &NoParamCallback);
     #[doc = "Synchronous ftruncate(2) - Truncate a file to a specified length."]
     # [ wasm_bindgen ( js_name = ftruncateSync ) ]
     pub fn ftruncate_sync(fd: f64, len: &JsValue);
@@ -551,7 +552,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous symlink(2) - Create a new symbolic link to an existing file."]
     # [ wasm_bindgen ( js_name = symlink ) ]
-    pub fn symlink2(target: &PathLike, path: &PathLike, callback: &NoParamCallback);
+    pub fn symlink_2(target: &PathLike, path: &PathLike, callback: &NoParamCallback);
     #[doc = "Synchronous symlink(2) - Create a new symbolic link to an existing file."]
     # [ wasm_bindgen ( js_name = symlinkSync ) ]
     pub fn symlink_sync(target: &PathLike, path: &PathLike, type_: &JsValue);
@@ -578,7 +579,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     # [ wasm_bindgen ( js_name = readlink ) ]
-    pub fn readlink2(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn readlink_2(path: &PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -590,7 +591,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     # [ wasm_bindgen ( js_name = readlink ) ]
-    pub fn readlink3(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn readlink_3(path: &PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -602,7 +603,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readlink(2) - read value of a symbolic link."]
     # [ wasm_bindgen ( js_name = readlink ) ]
-    pub fn readlink4(path: &PathLike, callback: &JsValue);
+    pub fn readlink_4(path: &PathLike, callback: &JsValue);
     #[doc = "Synchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -620,7 +621,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous readlink(2) - read value of a symbolic link."]
     # [ wasm_bindgen ( js_name = readlinkSync ) ]
-    pub fn readlink_sync2(path: &PathLike, options: &JsValue) -> Buffer;
+    pub fn readlink_sync_2(path: &PathLike, options: &JsValue) -> Buffer;
     #[doc = "Synchronous readlink(2) - read value of a symbolic link."]
     #[doc = ""]
     #[doc = ""]
@@ -629,7 +630,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous readlink(2) - read value of a symbolic link."]
     # [ wasm_bindgen ( js_name = readlinkSync ) ]
-    pub fn readlink_sync3(path: &PathLike, options: &JsValue) -> JsValue;
+    pub fn readlink_sync_3(path: &PathLike, options: &JsValue) -> JsValue;
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -653,7 +654,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = realpath ) ]
-    pub fn realpath2(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn realpath_2(path: &PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -665,7 +666,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = realpath ) ]
-    pub fn realpath3(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn realpath_3(path: &PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -677,7 +678,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = realpath ) ]
-    pub fn realpath4(path: &PathLike, callback: &JsValue);
+    pub fn realpath_4(path: &PathLike, callback: &JsValue);
     #[doc = "Synchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -695,7 +696,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = realpathSync ) ]
-    pub fn realpath_sync2(path: &PathLike, options: &JsValue) -> Buffer;
+    pub fn realpath_sync_2(path: &PathLike, options: &JsValue) -> Buffer;
     #[doc = "Synchronous realpath(3) - return the canonicalized absolute pathname."]
     #[doc = ""]
     #[doc = ""]
@@ -704,7 +705,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous realpath(3) - return the canonicalized absolute pathname."]
     # [ wasm_bindgen ( js_name = realpathSync ) ]
-    pub fn realpath_sync3(path: &PathLike, options: &JsValue) -> JsValue;
+    pub fn realpath_sync_3(path: &PathLike, options: &JsValue) -> JsValue;
     #[doc = "Asynchronous unlink(2) - delete a name and possibly the file it refers to."]
     #[wasm_bindgen()]
     pub fn unlink(path: &PathLike, callback: &NoParamCallback);
@@ -741,7 +742,7 @@ extern "C" {
     pub fn rmdir(path: &PathLike, callback: &NoParamCallback);
     #[doc = "Asynchronous rmdir(2) - delete a directory."]
     # [ wasm_bindgen ( js_name = rmdir ) ]
-    pub fn rmdir2(path: &PathLike, options: &RmDirAsyncOptions, callback: &NoParamCallback);
+    pub fn rmdir_2(path: &PathLike, options: &RmDirAsyncOptions, callback: &NoParamCallback);
     #[doc = "Synchronous rmdir(2) - delete a directory."]
     # [ wasm_bindgen ( js_name = rmdirSync ) ]
     pub fn rmdir_sync(path: &PathLike, options: Option<&RmDirOptions>);
@@ -767,7 +768,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous mkdir(2) - create a directory with a mode of `0o777`."]
     # [ wasm_bindgen ( js_name = mkdir ) ]
-    pub fn mkdir2(path: &PathLike, callback: &NoParamCallback);
+    pub fn mkdir_2(path: &PathLike, callback: &NoParamCallback);
     #[doc = "Synchronous mkdir(2) - create a directory."]
     # [ wasm_bindgen ( js_name = mkdirSync ) ]
     pub fn mkdir_sync(path: &PathLike, options: &JsValue);
@@ -802,7 +803,7 @@ extern "C" {
     #[doc = "Asynchronously creates a unique temporary directory."]
     #[doc = "Generates six random characters to be appended behind a required prefix to create a unique temporary directory."]
     # [ wasm_bindgen ( js_name = mkdtemp ) ]
-    pub fn mkdtemp2(prefix: &str, options: &JsValue, callback: &JsValue);
+    pub fn mkdtemp_2(prefix: &str, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronously creates a unique temporary directory."]
     #[doc = "Generates six random characters to be appended behind a required prefix to create a unique temporary directory."]
     #[doc = ""]
@@ -818,7 +819,7 @@ extern "C" {
     #[doc = "Asynchronously creates a unique temporary directory."]
     #[doc = "Generates six random characters to be appended behind a required prefix to create a unique temporary directory."]
     # [ wasm_bindgen ( js_name = mkdtemp ) ]
-    pub fn mkdtemp3(prefix: &str, options: &JsValue, callback: &JsValue);
+    pub fn mkdtemp_3(prefix: &str, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronously creates a unique temporary directory."]
     #[doc = "Generates six random characters to be appended behind a required prefix to create a unique temporary directory."]
     #[doc = ""]
@@ -834,7 +835,7 @@ extern "C" {
     #[doc = "Asynchronously creates a unique temporary directory."]
     #[doc = "Generates six random characters to be appended behind a required prefix to create a unique temporary directory."]
     # [ wasm_bindgen ( js_name = mkdtemp ) ]
-    pub fn mkdtemp4(prefix: &str, callback: &JsValue);
+    pub fn mkdtemp_4(prefix: &str, callback: &JsValue);
     #[doc = "Synchronously creates a unique temporary directory."]
     #[doc = "Generates six random characters to be appended behind a required prefix to create a unique temporary directory."]
     #[doc = ""]
@@ -858,7 +859,7 @@ extern "C" {
     #[doc = "Synchronously creates a unique temporary directory."]
     #[doc = "Generates six random characters to be appended behind a required prefix to create a unique temporary directory."]
     # [ wasm_bindgen ( js_name = mkdtempSync ) ]
-    pub fn mkdtemp_sync2(prefix: &str, options: &JsValue) -> Buffer;
+    pub fn mkdtemp_sync_2(prefix: &str, options: &JsValue) -> Buffer;
     #[doc = "Synchronously creates a unique temporary directory."]
     #[doc = "Generates six random characters to be appended behind a required prefix to create a unique temporary directory."]
     #[doc = ""]
@@ -870,7 +871,7 @@ extern "C" {
     #[doc = "Synchronously creates a unique temporary directory."]
     #[doc = "Generates six random characters to be appended behind a required prefix to create a unique temporary directory."]
     # [ wasm_bindgen ( js_name = mkdtempSync ) ]
-    pub fn mkdtemp_sync3(prefix: &str, options: &JsValue) -> JsValue;
+    pub fn mkdtemp_sync_3(prefix: &str, options: &JsValue) -> JsValue;
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -900,7 +901,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdir ) ]
-    pub fn readdir2(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn readdir_2(path: &PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -915,7 +916,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdir ) ]
-    pub fn readdir3(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn readdir_3(path: &PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -930,7 +931,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdir ) ]
-    pub fn readdir4(path: &PathLike, callback: &JsValue);
+    pub fn readdir_4(path: &PathLike, callback: &JsValue);
     #[doc = "Asynchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -945,7 +946,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdir ) ]
-    pub fn readdir5(path: &PathLike, options: &JsValue, callback: &JsValue);
+    pub fn readdir_5(path: &PathLike, options: &JsValue, callback: &JsValue);
     #[doc = "Synchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -969,7 +970,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdirSync ) ]
-    pub fn readdir_sync2(path: &PathLike, options: &JsValue) -> Array;
+    pub fn readdir_sync_2(path: &PathLike, options: &JsValue) -> Array;
     #[doc = "Synchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -981,7 +982,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdirSync ) ]
-    pub fn readdir_sync3(path: &PathLike, options: &JsValue) -> JsValue;
+    pub fn readdir_sync_3(path: &PathLike, options: &JsValue) -> JsValue;
     #[doc = "Synchronous readdir(3) - read a directory."]
     #[doc = ""]
     #[doc = ""]
@@ -993,7 +994,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronous readdir(3) - read a directory."]
     # [ wasm_bindgen ( js_name = readdirSync ) ]
-    pub fn readdir_sync4(path: &PathLike, options: &JsValue) -> Array;
+    pub fn readdir_sync_4(path: &PathLike, options: &JsValue) -> Array;
     #[doc = "Asynchronous close(2) - close a file descriptor."]
     #[wasm_bindgen()]
     pub fn close(fd: f64, callback: &NoParamCallback);
@@ -1011,7 +1012,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronous open(2) - open and possibly create a file. If the file is created, its mode will be `0o666`."]
     # [ wasm_bindgen ( js_name = open ) ]
-    pub fn open2(path: &PathLike, flags: &JsValue, callback: &JsValue);
+    pub fn open_2(path: &PathLike, flags: &JsValue, callback: &JsValue);
     #[doc = "Synchronous open(2) - open and possibly create a file, returning a file descriptor.."]
     # [ wasm_bindgen ( js_name = openSync ) ]
     pub fn open_sync(path: &PathLike, flags: &JsValue, mode: &JsValue) -> f64;
@@ -1081,7 +1082,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronously writes `string` to the file referenced by the supplied file descriptor."]
     # [ wasm_bindgen ( js_name = write ) ]
-    pub fn write2(
+    pub fn write_2(
         fd: f64,
         buffer: &JsValue,
         offset: &JsValue,
@@ -1108,7 +1109,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronously writes `string` to the file referenced by the supplied file descriptor."]
     # [ wasm_bindgen ( js_name = write ) ]
-    pub fn write3(fd: f64, buffer: &JsValue, offset: &JsValue, callback: &JsValue);
+    pub fn write_3(fd: f64, buffer: &JsValue, offset: &JsValue, callback: &JsValue);
     #[doc = "Asynchronously writes `buffer` to the file referenced by the supplied file descriptor."]
     #[doc = ""]
     #[doc = ""]
@@ -1129,7 +1130,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronously writes `string` to the file referenced by the supplied file descriptor."]
     # [ wasm_bindgen ( js_name = write ) ]
-    pub fn write4(fd: f64, buffer: &JsValue, callback: &JsValue);
+    pub fn write_4(fd: f64, buffer: &JsValue, callback: &JsValue);
     #[doc = "Asynchronously writes `buffer` to the file referenced by the supplied file descriptor."]
     #[doc = ""]
     #[doc = ""]
@@ -1150,7 +1151,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronously writes `string` to the file referenced by the supplied file descriptor."]
     # [ wasm_bindgen ( js_name = write ) ]
-    pub fn write5(
+    pub fn write_5(
         fd: f64,
         string: &JsValue,
         position: &JsValue,
@@ -1177,7 +1178,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronously writes `string` to the file referenced by the supplied file descriptor."]
     # [ wasm_bindgen ( js_name = write ) ]
-    pub fn write6(fd: f64, string: &JsValue, position: &JsValue, callback: &JsValue);
+    pub fn write_6(fd: f64, string: &JsValue, position: &JsValue, callback: &JsValue);
     #[doc = "Asynchronously writes `buffer` to the file referenced by the supplied file descriptor."]
     #[doc = ""]
     #[doc = ""]
@@ -1198,7 +1199,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronously writes `string` to the file referenced by the supplied file descriptor."]
     # [ wasm_bindgen ( js_name = write ) ]
-    pub fn write7(fd: f64, string: &JsValue, callback: &JsValue);
+    pub fn write_7(fd: f64, string: &JsValue, callback: &JsValue);
     #[doc = "Synchronously writes `buffer` to the file referenced by the supplied file descriptor, returning the number of bytes written."]
     #[doc = ""]
     #[doc = ""]
@@ -1216,7 +1217,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronously writes `string` to the file referenced by the supplied file descriptor, returning the number of bytes written."]
     # [ wasm_bindgen ( js_name = writeSync ) ]
-    pub fn write_sync2(fd: f64, string: &JsValue, position: &JsValue, encoding: &JsValue) -> f64;
+    pub fn write_sync_2(fd: f64, string: &JsValue, position: &JsValue, encoding: &JsValue) -> f64;
     #[doc = "Asynchronously reads data from the file referenced by the supplied file descriptor."]
     #[wasm_bindgen()]
     pub fn read(
@@ -1259,7 +1260,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronously reads the entire contents of a file."]
     # [ wasm_bindgen ( js_name = readFile ) ]
-    pub fn read_file2(path: &JsValue, options: &JsValue, callback: &JsValue);
+    pub fn read_file_2(path: &JsValue, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronously reads the entire contents of a file."]
     #[doc = ""]
     #[doc = ""]
@@ -1271,7 +1272,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronously reads the entire contents of a file."]
     # [ wasm_bindgen ( js_name = readFile ) ]
-    pub fn read_file3(path: &JsValue, options: &JsValue, callback: &JsValue);
+    pub fn read_file_3(path: &JsValue, options: &JsValue, callback: &JsValue);
     #[doc = "Asynchronously reads the entire contents of a file."]
     #[doc = ""]
     #[doc = ""]
@@ -1283,7 +1284,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronously reads the entire contents of a file."]
     # [ wasm_bindgen ( js_name = readFile ) ]
-    pub fn read_file4(path: &JsValue, callback: &JsValue);
+    pub fn read_file_4(path: &JsValue, callback: &JsValue);
     #[doc = "Synchronously reads the entire contents of a file."]
     #[doc = ""]
     #[doc = ""]
@@ -1301,7 +1302,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronously reads the entire contents of a file."]
     # [ wasm_bindgen ( js_name = readFileSync ) ]
-    pub fn read_file_sync2(path: &JsValue, options: &JsValue) -> String;
+    pub fn read_file_sync_2(path: &JsValue, options: &JsValue) -> String;
     #[doc = "Synchronously reads the entire contents of a file."]
     #[doc = ""]
     #[doc = ""]
@@ -1310,7 +1311,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Synchronously reads the entire contents of a file."]
     # [ wasm_bindgen ( js_name = readFileSync ) ]
-    pub fn read_file_sync3(path: &JsValue, options: &JsValue) -> JsValue;
+    pub fn read_file_sync_3(path: &JsValue, options: &JsValue) -> JsValue;
     pub type WriteFileOptions;
     #[doc = "Asynchronously writes data to a file, replacing the file if it already exists."]
     #[doc = ""]
@@ -1328,7 +1329,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronously writes data to a file, replacing the file if it already exists."]
     # [ wasm_bindgen ( js_name = writeFile ) ]
-    pub fn write_file2(path: &JsValue, data: &JsValue, callback: &NoParamCallback);
+    pub fn write_file_2(path: &JsValue, data: &JsValue, callback: &NoParamCallback);
     #[doc = "Synchronously writes data to a file, replacing the file if it already exists."]
     # [ wasm_bindgen ( js_name = writeFileSync ) ]
     pub fn write_file_sync(path: &JsValue, data: &JsValue, options: Option<&WriteFileOptions>);
@@ -1348,7 +1349,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronously append data to a file, creating the file if it does not exist."]
     # [ wasm_bindgen ( js_name = appendFile ) ]
-    pub fn append_file2(file: &JsValue, data: &JsValue, callback: &NoParamCallback);
+    pub fn append_file_2(file: &JsValue, data: &JsValue, callback: &NoParamCallback);
     #[doc = "Synchronously append data to a file, creating the file if it does not exist."]
     # [ wasm_bindgen ( js_name = appendFileSync ) ]
     pub fn append_file_sync(file: &JsValue, data: &JsValue, options: Option<&WriteFileOptions>);
@@ -1363,7 +1364,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Watch for changes on `filename`. The callback `listener` will be called each time the file is accessed."]
     # [ wasm_bindgen ( js_name = watchFile ) ]
-    pub fn watch_file2(filename: &PathLike, listener: &JsValue);
+    pub fn watch_file_2(filename: &PathLike, listener: &JsValue);
     #[doc = "Stop watching for changes on `filename`."]
     # [ wasm_bindgen ( js_name = unwatchFile ) ]
     pub fn unwatch_file(filename: &PathLike, listener: &JsValue);
@@ -1390,7 +1391,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`."]
     # [ wasm_bindgen ( js_name = watch ) ]
-    pub fn watch2(filename: &PathLike, options: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn watch_2(filename: &PathLike, options: &JsValue, listener: &JsValue) -> FSWatcher;
     #[doc = "Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`."]
     #[doc = ""]
     #[doc = ""]
@@ -1402,7 +1403,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`."]
     # [ wasm_bindgen ( js_name = watch ) ]
-    pub fn watch3(filename: &PathLike, options: &JsValue, listener: &JsValue) -> FSWatcher;
+    pub fn watch_3(filename: &PathLike, options: &JsValue, listener: &JsValue) -> FSWatcher;
     #[doc = "Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`."]
     #[doc = ""]
     #[doc = ""]
@@ -1414,7 +1415,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`."]
     # [ wasm_bindgen ( js_name = watch ) ]
-    pub fn watch4(filename: &PathLike, listener: &JsValue) -> FSWatcher;
+    pub fn watch_4(filename: &PathLike, listener: &JsValue) -> FSWatcher;
     #[doc = "Asynchronously tests whether or not the given path exists by checking with the file system."]
     #[wasm_bindgen()]
     pub fn exists(path: &PathLike, callback: &JsValue);
@@ -1432,7 +1433,7 @@ extern "C" {
     #[doc = ""]
     #[doc = "Asynchronously tests a user's permissions for the file specified by path."]
     # [ wasm_bindgen ( js_name = access ) ]
-    pub fn access2(path: &PathLike, callback: &NoParamCallback);
+    pub fn access_2(path: &PathLike, callback: &NoParamCallback);
     #[doc = "Synchronously tests a user's permissions for the file specified by path."]
     # [ wasm_bindgen ( js_name = accessSync ) ]
     pub fn access_sync(path: &PathLike, mode: Option<f64>);
@@ -1475,7 +1476,7 @@ extern "C" {
     #[doc = "If an error occurs after the destination file has been opened for writing, Node.js will attempt"]
     #[doc = "to remove the destination."]
     # [ wasm_bindgen ( js_name = copyFile ) ]
-    pub fn copy_file2(src: &PathLike, dest: &PathLike, flags: f64, callback: &NoParamCallback);
+    pub fn copy_file_2(src: &PathLike, dest: &PathLike, flags: f64, callback: &NoParamCallback);
     #[doc = "Synchronously copies src to dest. By default, dest is overwritten if it already exists."]
     #[doc = "Node.js makes no guarantees about the atomicity of the copy operation."]
     #[doc = "If an error occurs after the destination file has been opened for writing, Node.js will attempt"]
@@ -1495,7 +1496,7 @@ extern "C" {
     #[doc = "On Linux, positional writes don't work when the file is opened in append mode."]
     #[doc = "The kernel ignores the position argument and always appends the data to the end of the file."]
     # [ wasm_bindgen ( js_name = writev ) ]
-    pub fn writev2(fd: f64, buffers: &Array, position: f64, cb: &JsValue);
+    pub fn writev_2(fd: f64, buffers: &Array, position: f64, cb: &JsValue);
     pub type WriteVResult;
     # [ wasm_bindgen ( method , getter , js_name = bytesWritten ) ]
     pub fn bytes_written(this: &WriteVResult) -> f64;
@@ -1518,24 +1519,8 @@ extern "C" {
     #[wasm_bindgen()]
     pub fn opendir(path: &str, cb: &JsValue);
     # [ wasm_bindgen ( js_name = opendir ) ]
-    pub fn opendir2(path: &str, options: &OpenDirOptions, cb: &JsValue);
+    pub fn opendir_2(path: &str, options: &OpenDirOptions, cb: &JsValue);
     pub type BigIntStats;
-    # [ wasm_bindgen ( method , getter , js_name = atimeNs ) ]
-    pub fn atime_ns(this: &BigIntStats) -> JsValue;
-    # [ wasm_bindgen ( method , setter , js_name = atimeNs ) ]
-    pub fn set_atime_ns(this: &BigIntStats, value: &JsValue);
-    # [ wasm_bindgen ( method , getter , js_name = mtimeNs ) ]
-    pub fn mtime_ns(this: &BigIntStats) -> JsValue;
-    # [ wasm_bindgen ( method , setter , js_name = mtimeNs ) ]
-    pub fn set_mtime_ns(this: &BigIntStats, value: &JsValue);
-    # [ wasm_bindgen ( method , getter , js_name = ctimeNs ) ]
-    pub fn ctime_ns(this: &BigIntStats) -> JsValue;
-    # [ wasm_bindgen ( method , setter , js_name = ctimeNs ) ]
-    pub fn set_ctime_ns(this: &BigIntStats, value: &JsValue);
-    # [ wasm_bindgen ( method , getter , js_name = birthtimeNs ) ]
-    pub fn birthtime_ns(this: &BigIntStats) -> JsValue;
-    # [ wasm_bindgen ( method , setter , js_name = birthtimeNs ) ]
-    pub fn set_birthtime_ns(this: &BigIntStats, value: &JsValue);
     pub type BigIntOptions;
     #[wasm_bindgen(method, getter)]
     pub fn bigint(this: &BigIntOptions) -> JsValue;
@@ -1548,14 +1533,14 @@ extern "C" {
     pub fn set_bigint(this: &StatOptions, value: bool);
     #[doc = "Asynchronous stat(2) - Get file status."]
     # [ wasm_bindgen ( js_name = stat ) ]
-    pub fn stat2(path: &PathLike, options: &BigIntOptions, callback: &JsValue);
+    pub fn stat_2(path: &PathLike, options: &BigIntOptions, callback: &JsValue);
     #[doc = "Asynchronous stat(2) - Get file status."]
     # [ wasm_bindgen ( js_name = stat ) ]
-    pub fn stat3(path: &PathLike, options: &StatOptions, callback: &JsValue);
+    pub fn stat_3(path: &PathLike, options: &StatOptions, callback: &JsValue);
     #[doc = "Synchronous stat(2) - Get file status."]
     # [ wasm_bindgen ( js_name = statSync ) ]
-    pub fn stat_sync2(path: &PathLike, options: &BigIntOptions) -> BigIntStats;
+    pub fn stat_sync_2(path: &PathLike, options: &BigIntOptions) -> BigIntStats;
     #[doc = "Synchronous stat(2) - Get file status."]
     # [ wasm_bindgen ( js_name = statSync ) ]
-    pub fn stat_sync3(path: &PathLike, options: &StatOptions) -> JsValue;
+    pub fn stat_sync_3(path: &PathLike, options: &StatOptions) -> JsValue;
 }
