@@ -35,7 +35,7 @@ extern "C" {
     #[doc = "error with `repl.Recoverable` to indicate the input was incomplete and prompt for"]
     #[doc = "additional lines."]
     #[wasm_bindgen(method, getter)]
-    pub fn eval(this: &ReplOptions) -> REPLEval;
+    pub fn eval(this: &ReplOptions) -> Function;
     #[wasm_bindgen(method, setter)]
     pub fn set_eval(this: &ReplOptions, value: &REPLEval);
     #[doc = "If `true`, specifies that the default `writer` function should include ANSI color"]
@@ -64,7 +64,7 @@ extern "C" {
     #[doc = "The function to invoke to format the output of each command before writing to `output`."]
     #[doc = "Default: a wrapper for `util.inspect`."]
     #[wasm_bindgen(method, getter)]
-    pub fn writer(this: &ReplOptions) -> REPLWriter;
+    pub fn writer(this: &ReplOptions) -> Function;
     #[wasm_bindgen(method, setter)]
     pub fn set_writer(this: &ReplOptions, value: &REPLWriter);
     #[doc = "An optional function used for custom Tab auto completion."]
@@ -101,7 +101,7 @@ extern "C" {
     pub fn set_help(this: &REPLCommand, value: Option<&str>);
     #[doc = "The function to execute, optionally accepting a single string argument."]
     #[wasm_bindgen(method, getter)]
-    pub fn action(this: &REPLCommand) -> REPLCommandAction;
+    pub fn action(this: &REPLCommand) -> Function;
     #[wasm_bindgen(method, setter)]
     pub fn set_action(this: &REPLCommand, value: &REPLCommandAction);
     #[doc = "Provides a customizable Read-Eval-Print-Loop (REPL)."]
@@ -149,7 +149,7 @@ extern "C" {
     #[doc = "given line of input. If not specified in the REPL options, this is an async wrapper"]
     #[doc = "for the JavaScript `eval()` function."]
     #[wasm_bindgen(method, getter)]
-    pub fn eval(this: &REPLServer) -> REPLEval;
+    pub fn eval(this: &REPLServer) -> Function;
     #[doc = "Specified in the REPL options, this is a value indicating whether the default"]
     #[doc = "`writer` function should include ANSI color styling to REPL output."]
     # [ wasm_bindgen ( method , getter , js_name = useColors ) ]
@@ -167,7 +167,7 @@ extern "C" {
     #[doc = "each command before writing to `outputStream`. If not specified in the REPL options,"]
     #[doc = "this will be a wrapper for `util.inspect`."]
     #[wasm_bindgen(method, getter)]
-    pub fn writer(this: &REPLServer) -> REPLWriter;
+    pub fn writer(this: &REPLServer) -> Function;
     #[doc = "Specified in the REPL options, this is the function to use for custom Tab auto-completion."]
     #[wasm_bindgen(method, getter)]
     pub fn completer(this: &REPLServer) -> JsValue;

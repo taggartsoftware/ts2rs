@@ -264,7 +264,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = for ) ]
     pub fn set_for_(this: &SymbolConstructor, value: &Function);
     # [ wasm_bindgen ( method , js_name = keyFor ) ]
-    pub fn key_for(this: &SymbolConstructor, sym: &Symbol) -> String;
+    pub fn key_for(this: &SymbolConstructor, sym: &Symbol) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = keyFor ) ]
     pub fn set_key_for(this: &SymbolConstructor, value: &Function);
     #[doc = "A method that determines if a constructor object recognizes an object as one of the\r"]
@@ -412,7 +412,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = localeCompare ) ]
     pub fn set_locale_compare_2(this: &String, value: &Function);
     # [ wasm_bindgen ( method , js_name = codePointAt ) ]
-    pub fn code_point_at(this: &String, pos: f64) -> f64;
+    pub fn code_point_at(this: &String, pos: f64) -> Option<f64>;
     # [ wasm_bindgen ( method , setter , js_name = codePointAt ) ]
     pub fn set_code_point_at(this: &String, value: &Function);
     #[wasm_bindgen(method)]
@@ -582,7 +582,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_extensions(this: &NodeRequire, value: &NodeExtensions);
     #[wasm_bindgen(method, getter)]
-    pub fn main(this: &NodeRequire) -> NodeModule;
+    pub fn main(this: &NodeRequire) -> Option<NodeModule>;
     #[wasm_bindgen(method, setter)]
     pub fn set_main(this: &NodeRequire, value: Option<&NodeModule>);
     pub type RequireResolve;

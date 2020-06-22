@@ -209,7 +209,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getEphemeralKeyInfo ) ]
     pub fn set_get_ephemeral_key_info(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getFinished ) ]
-    pub fn get_finished(this: &TLSSocket) -> Buffer;
+    pub fn get_finished(this: &TLSSocket) -> Option<Buffer>;
     # [ wasm_bindgen ( method , setter , js_name = getFinished ) ]
     pub fn set_get_finished(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPeerCertificate ) ]
@@ -225,7 +225,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getPeerCertificate ) ]
     pub fn set_get_peer_certificate_3(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getPeerFinished ) ]
-    pub fn get_peer_finished(this: &TLSSocket) -> Buffer;
+    pub fn get_peer_finished(this: &TLSSocket) -> Option<Buffer>;
     # [ wasm_bindgen ( method , setter , js_name = getPeerFinished ) ]
     pub fn set_get_peer_finished(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getProtocol ) ]
@@ -233,7 +233,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getProtocol ) ]
     pub fn set_get_protocol(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getSession ) ]
-    pub fn get_session(this: &TLSSocket) -> Buffer;
+    pub fn get_session(this: &TLSSocket) -> Option<Buffer>;
     # [ wasm_bindgen ( method , setter , js_name = getSession ) ]
     pub fn set_get_session(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getSharedSigalgs ) ]
@@ -241,7 +241,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getSharedSigalgs ) ]
     pub fn set_get_shared_sigalgs(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = getTLSTicket ) ]
-    pub fn get_tls_ticket(this: &TLSSocket) -> Buffer;
+    pub fn get_tls_ticket(this: &TLSSocket) -> Option<Buffer>;
     # [ wasm_bindgen ( method , setter , js_name = getTLSTicket ) ]
     pub fn set_get_tls_ticket(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = isSessionReused ) ]
@@ -249,7 +249,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = isSessionReused ) ]
     pub fn set_is_session_reused(this: &TLSSocket, value: &Function);
     #[wasm_bindgen(method)]
-    pub fn renegotiate(this: &TLSSocket, options: &JsValue, callback: &JsValue) -> bool;
+    pub fn renegotiate(this: &TLSSocket, options: &JsValue, callback: &JsValue) -> Option<bool>;
     #[wasm_bindgen(method, setter)]
     pub fn set_renegotiate(this: &TLSSocket, value: &Function);
     # [ wasm_bindgen ( method , js_name = setMaxSendFragment ) ]
@@ -498,7 +498,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = minDHSize ) ]
     pub fn set_min_dh_size(this: &ConnectionOptions, value: Option<f64>);
     #[wasm_bindgen(method, getter)]
-    pub fn lookup(this: &ConnectionOptions) -> crate::net::LookupFunction;
+    pub fn lookup(this: &ConnectionOptions) -> Function;
     #[wasm_bindgen(method, setter)]
     pub fn set_lookup(this: &ConnectionOptions, value: &crate::net::LookupFunction);
     #[wasm_bindgen(method, getter)]
@@ -883,7 +883,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_context(this: &SecureContext, value: &JsValue);
     # [ wasm_bindgen ( js_name = checkServerIdentity ) ]
-    pub fn check_server_identity(host: &str, cert: &PeerCertificate) -> Error;
+    pub fn check_server_identity(host: &str, cert: &PeerCertificate) -> Option<Error>;
     # [ wasm_bindgen ( js_name = createServer ) ]
     pub fn create_server(secure_connection_listener: &JsValue) -> Server;
     # [ wasm_bindgen ( js_name = createServer ) ]

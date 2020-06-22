@@ -76,7 +76,7 @@ extern "C" {
     #[wasm_bindgen(method, setter)]
     pub fn set_family(this: &TcpSocketConnectOpts, value: Option<f64>);
     #[wasm_bindgen(method, getter)]
-    pub fn lookup(this: &TcpSocketConnectOpts) -> LookupFunction;
+    pub fn lookup(this: &TcpSocketConnectOpts) -> Function;
     #[wasm_bindgen(method, setter)]
     pub fn set_lookup(this: &TcpSocketConnectOpts, value: &LookupFunction);
     pub type IpcSocketConnectOpts;

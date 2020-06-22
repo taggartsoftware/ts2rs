@@ -92,7 +92,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getTypeName ) ]
     pub fn set_get_type_name(this: &CallSite, value: &Function);
     # [ wasm_bindgen ( method , js_name = getFunction ) ]
-    pub fn get_function(this: &CallSite) -> Function;
+    pub fn get_function(this: &CallSite) -> Option<Function>;
     # [ wasm_bindgen ( method , setter , js_name = getFunction ) ]
     pub fn set_get_function(this: &CallSite, value: &Function);
     # [ wasm_bindgen ( method , js_name = getFunctionName ) ]
@@ -116,7 +116,7 @@ extern "C" {
     # [ wasm_bindgen ( method , setter , js_name = getColumnNumber ) ]
     pub fn set_get_column_number(this: &CallSite, value: &Function);
     # [ wasm_bindgen ( method , js_name = getEvalOrigin ) ]
-    pub fn get_eval_origin(this: &CallSite) -> String;
+    pub fn get_eval_origin(this: &CallSite) -> Option<String>;
     # [ wasm_bindgen ( method , setter , js_name = getEvalOrigin ) ]
     pub fn set_get_eval_origin(this: &CallSite, value: &Function);
     # [ wasm_bindgen ( method , js_name = isToplevel ) ]

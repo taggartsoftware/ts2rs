@@ -1462,5 +1462,5 @@ extern "C" {
     pub fn close();
     #[doc = "Return the URL of the active inspector, or `undefined` if there is none."]
     #[wasm_bindgen()]
-    pub fn url() -> String;
+    pub fn url() -> Option<String>;
 }
