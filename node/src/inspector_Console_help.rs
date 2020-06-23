@@ -2,12 +2,12 @@
 // https://ts2rs.ctaggart.com/
 
 impl ConsoleMessage {
-    pub fn new() -> ConsoleMessage {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl MessageAddedEventDataType {
-    pub fn new() -> MessageAddedEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }

@@ -2,27 +2,35 @@
 // https://ts2rs.ctaggart.com/
 
 impl Interface {
-    pub fn new() -> Interface {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Key {
-    pub fn new() -> Key {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ReadLineOptions {
-    pub fn new() -> ReadLineOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<node_js::EventEmitter> for Interface {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Interface> for node_js::EventEmitter {
     fn from(child: Interface) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Interface {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }

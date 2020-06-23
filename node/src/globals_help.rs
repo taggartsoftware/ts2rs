@@ -2,77 +2,80 @@
 // https://ts2rs.ctaggart.com/
 
 impl Buffer {
-    pub fn new() -> Buffer {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Console {
-    pub fn new() -> Console {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Error {
-    pub fn new() -> Error {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ErrorConstructor {
-    pub fn new() -> ErrorConstructor {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ImportMeta {
-    pub fn new() -> ImportMeta {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl NodeExtensions {
-    pub fn new() -> NodeExtensions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl NodeModule {
-    pub fn new() -> NodeModule {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl NodeRequire {
-    pub fn new() -> NodeRequire {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl NodeRequireCache {
-    pub fn new() -> NodeRequireCache {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl NodeRequireFunction {
-    pub fn new() -> NodeRequireFunction {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl RequireResolve {
-    pub fn new() -> RequireResolve {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
-// impl String {
-//     pub fn new() -> String {
-//         JsCast::unchecked_into(Object::new())
-//     }
-// }
 impl SymbolConstructor {
-    pub fn new() -> SymbolConstructor {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<NodeRequireFunction> for NodeRequire {
     fn as_ref(&self) -> &NodeRequireFunction {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<NodeRequire> for NodeRequireFunction {
     fn from(child: NodeRequire) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl NodeRequire {
+    pub fn to_node_require_function(self) -> NodeRequireFunction {
+        self.unchecked_into()
+    }
+    pub fn as_node_require_function(&self) -> &NodeRequireFunction {
+        self.unchecked_ref()
     }
 }

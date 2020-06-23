@@ -2,37 +2,37 @@
 // https://ts2rs.ctaggart.com/
 
 impl AttachedToWorkerEventDataType {
-    pub fn new() -> AttachedToWorkerEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl DetachParameterType {
-    pub fn new() -> DetachParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl DetachedFromWorkerEventDataType {
-    pub fn new() -> DetachedFromWorkerEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl EnableParameterType {
-    pub fn new() -> EnableParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ReceivedMessageFromWorkerEventDataType {
-    pub fn new() -> ReceivedMessageFromWorkerEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SendMessageToWorkerParameterType {
-    pub fn new() -> SendMessageToWorkerParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl WorkerInfo {
-    pub fn new() -> WorkerInfo {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }

@@ -2,27 +2,43 @@
 // https://ts2rs.ctaggart.com/
 
 impl Domain {
-    pub fn new() -> Domain {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<node_js::Domain> for Domain {
     fn as_ref(&self) -> &node_js::Domain {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Domain> for node_js::Domain {
     fn from(child: Domain) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Domain {
+    pub fn to_node_js_domain(self) -> node_js::Domain {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_domain(&self) -> &node_js::Domain {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for Domain {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Domain> for node_js::EventEmitter {
     fn from(child: Domain) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Domain {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }

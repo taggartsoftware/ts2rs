@@ -2,17 +2,25 @@
 // https://ts2rs.ctaggart.com/
 
 impl AssertionError {
-    pub fn new() -> AssertionError {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<Error> for AssertionError {
     fn as_ref(&self) -> &Error {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<AssertionError> for Error {
     fn from(child: AssertionError) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl AssertionError {
+    pub fn to_error(self) -> Error {
+        self.unchecked_into()
+    }
+    pub fn as_error(&self) -> &Error {
+        self.unchecked_ref()
     }
 }

@@ -2,57 +2,73 @@
 // https://ts2rs.ctaggart.com/
 
 impl EventLoopDelayMonitor {
-    pub fn new() -> EventLoopDelayMonitor {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl EventLoopMonitorOptions {
-    pub fn new() -> EventLoopMonitorOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Performance {
-    pub fn new() -> Performance {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl PerformanceEntry {
-    pub fn new() -> PerformanceEntry {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl PerformanceNodeTiming {
-    pub fn new() -> PerformanceNodeTiming {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl PerformanceObserver {
-    pub fn new() -> PerformanceObserver {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl PerformanceObserverEntryList {
-    pub fn new() -> PerformanceObserverEntryList {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<PerformanceEntry> for PerformanceNodeTiming {
     fn as_ref(&self) -> &PerformanceEntry {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<PerformanceNodeTiming> for PerformanceEntry {
     fn from(child: PerformanceNodeTiming) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl PerformanceNodeTiming {
+    pub fn to_performance_entry(self) -> PerformanceEntry {
+        self.unchecked_into()
+    }
+    pub fn as_performance_entry(&self) -> &PerformanceEntry {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::async_hooks::AsyncResource> for PerformanceObserver {
     fn as_ref(&self) -> &crate::async_hooks::AsyncResource {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<PerformanceObserver> for crate::async_hooks::AsyncResource {
     fn from(child: PerformanceObserver) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl PerformanceObserver {
+    pub fn to_async_hooks_async_resource(self) -> crate::async_hooks::AsyncResource {
+        self.unchecked_into()
+    }
+    pub fn as_async_hooks_async_resource(&self) -> &crate::async_hooks::AsyncResource {
+        self.unchecked_ref()
     }
 }

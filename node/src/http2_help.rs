@@ -2,607 +2,975 @@
 // https://ts2rs.ctaggart.com/
 
 impl AlternativeServiceOptions {
-    pub fn new() -> AlternativeServiceOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ClientHttp2Session {
-    pub fn new() -> ClientHttp2Session {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ClientHttp2Stream {
-    pub fn new() -> ClientHttp2Stream {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ClientSessionOptions {
-    pub fn new() -> ClientSessionOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ClientSessionRequestOptions {
-    pub fn new() -> ClientSessionRequestOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Http2SecureServer {
-    pub fn new() -> Http2SecureServer {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Http2Server {
-    pub fn new() -> Http2Server {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Http2ServerRequest {
-    pub fn new() -> Http2ServerRequest {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Http2ServerResponse {
-    pub fn new() -> Http2ServerResponse {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Http2Session {
-    pub fn new() -> Http2Session {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Http2Stream {
-    pub fn new() -> Http2Stream {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl IncomingHttpHeaders {
-    pub fn new() -> IncomingHttpHeaders {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl IncomingHttpStatusHeader {
-    pub fn new() -> IncomingHttpStatusHeader {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SecureClientSessionOptions {
-    pub fn new() -> SecureClientSessionOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SecureServerOptions {
-    pub fn new() -> SecureServerOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SecureServerSessionOptions {
-    pub fn new() -> SecureServerSessionOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ServerHttp2Session {
-    pub fn new() -> ServerHttp2Session {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ServerHttp2Stream {
-    pub fn new() -> ServerHttp2Stream {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ServerOptions {
-    pub fn new() -> ServerOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ServerSessionOptions {
-    pub fn new() -> ServerSessionOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ServerStreamFileResponseOptions {
-    pub fn new() -> ServerStreamFileResponseOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ServerStreamFileResponseOptionsWithError {
-    pub fn new() -> ServerStreamFileResponseOptionsWithError {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ServerStreamResponseOptions {
-    pub fn new() -> ServerStreamResponseOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SessionOptions {
-    pub fn new() -> SessionOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SessionState {
-    pub fn new() -> SessionState {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Settings {
-    pub fn new() -> Settings {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StatOptions {
-    pub fn new() -> StatOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StreamPriorityOptions {
-    pub fn new() -> StreamPriorityOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StreamState {
-    pub fn new() -> StreamState {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<node_js::EventEmitter> for ClientHttp2Session {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ClientHttp2Session> for node_js::EventEmitter {
     fn from(child: ClientHttp2Session) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ClientHttp2Session {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<Http2Session> for ClientHttp2Session {
     fn as_ref(&self) -> &Http2Session {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ClientHttp2Session> for Http2Session {
     fn from(child: ClientHttp2Session) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ClientHttp2Session {
+    pub fn to_http2_session(self) -> Http2Session {
+        self.unchecked_into()
+    }
+    pub fn as_http2_session(&self) -> &Http2Session {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for ClientHttp2Stream {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ClientHttp2Stream> for node_js::EventEmitter {
     fn from(child: ClientHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ClientHttp2Stream {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::ReadableStream> for ClientHttp2Stream {
     fn as_ref(&self) -> &node_js::ReadableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ClientHttp2Stream> for node_js::ReadableStream {
     fn from(child: ClientHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ClientHttp2Stream {
+    pub fn to_node_js_readable_stream(self) -> node_js::ReadableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_readable_stream(&self) -> &node_js::ReadableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::WritableStream> for ClientHttp2Stream {
     fn as_ref(&self) -> &node_js::WritableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ClientHttp2Stream> for node_js::WritableStream {
     fn from(child: ClientHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ClientHttp2Stream {
+    pub fn to_node_js_writable_stream(self) -> node_js::WritableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_writable_stream(&self) -> &node_js::WritableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<Http2Stream> for ClientHttp2Stream {
     fn as_ref(&self) -> &Http2Stream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ClientHttp2Stream> for Http2Stream {
     fn from(child: ClientHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ClientHttp2Stream {
+    pub fn to_http2_stream(self) -> Http2Stream {
+        self.unchecked_into()
+    }
+    pub fn as_http2_stream(&self) -> &Http2Stream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<SessionOptions> for ClientSessionOptions {
     fn as_ref(&self) -> &SessionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ClientSessionOptions> for SessionOptions {
     fn from(child: ClientSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ClientSessionOptions {
+    pub fn to_session_options(self) -> SessionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_session_options(&self) -> &SessionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for Http2SecureServer {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Http2SecureServer> for node_js::EventEmitter {
     fn from(child: Http2SecureServer) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Http2SecureServer {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::net::Server> for Http2SecureServer {
     fn as_ref(&self) -> &crate::net::Server {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Http2SecureServer> for crate::net::Server {
     fn from(child: Http2SecureServer) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Http2SecureServer {
+    pub fn to_net_server(self) -> crate::net::Server {
+        self.unchecked_into()
+    }
+    pub fn as_net_server(&self) -> &crate::net::Server {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::tls::Server> for Http2SecureServer {
     fn as_ref(&self) -> &crate::tls::Server {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Http2SecureServer> for crate::tls::Server {
     fn from(child: Http2SecureServer) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Http2SecureServer {
+    pub fn to_tls_server(self) -> crate::tls::Server {
+        self.unchecked_into()
+    }
+    pub fn as_tls_server(&self) -> &crate::tls::Server {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for Http2Server {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Http2Server> for node_js::EventEmitter {
     fn from(child: Http2Server) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Http2Server {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::net::Server> for Http2Server {
     fn as_ref(&self) -> &crate::net::Server {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Http2Server> for crate::net::Server {
     fn from(child: Http2Server) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Http2Server {
+    pub fn to_net_server(self) -> crate::net::Server {
+        self.unchecked_into()
+    }
+    pub fn as_net_server(&self) -> &crate::net::Server {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for Http2ServerRequest {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Http2ServerRequest> for node_js::EventEmitter {
     fn from(child: Http2ServerRequest) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Http2ServerRequest {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::ReadableStream> for Http2ServerRequest {
     fn as_ref(&self) -> &node_js::ReadableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Http2ServerRequest> for node_js::ReadableStream {
     fn from(child: Http2ServerRequest) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Http2ServerRequest {
+    pub fn to_node_js_readable_stream(self) -> node_js::ReadableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_readable_stream(&self) -> &node_js::ReadableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for Http2ServerResponse {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Http2ServerResponse> for node_js::EventEmitter {
     fn from(child: Http2ServerResponse) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Http2ServerResponse {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for Http2Session {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Http2Session> for node_js::EventEmitter {
     fn from(child: Http2Session) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Http2Session {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for Http2Stream {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Http2Stream> for node_js::EventEmitter {
     fn from(child: Http2Stream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Http2Stream {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::ReadableStream> for Http2Stream {
     fn as_ref(&self) -> &node_js::ReadableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Http2Stream> for node_js::ReadableStream {
     fn from(child: Http2Stream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Http2Stream {
+    pub fn to_node_js_readable_stream(self) -> node_js::ReadableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_readable_stream(&self) -> &node_js::ReadableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::WritableStream> for Http2Stream {
     fn as_ref(&self) -> &node_js::WritableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Http2Stream> for node_js::WritableStream {
     fn from(child: Http2Stream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Http2Stream {
+    pub fn to_node_js_writable_stream(self) -> node_js::WritableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_writable_stream(&self) -> &node_js::WritableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::http::Http1IncomingHttpHeaders> for IncomingHttpHeaders {
     fn as_ref(&self) -> &crate::http::Http1IncomingHttpHeaders {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<IncomingHttpHeaders> for crate::http::Http1IncomingHttpHeaders {
     fn from(child: IncomingHttpHeaders) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl IncomingHttpHeaders {
+    pub fn to_http_http1_incoming_http_headers(self) -> crate::http::Http1IncomingHttpHeaders {
+        self.unchecked_into()
+    }
+    pub fn as_http_http1_incoming_http_headers(&self) -> &crate::http::Http1IncomingHttpHeaders {
+        self.unchecked_ref()
     }
 }
 impl AsRef<ClientSessionOptions> for SecureClientSessionOptions {
     fn as_ref(&self) -> &ClientSessionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureClientSessionOptions> for ClientSessionOptions {
     fn from(child: SecureClientSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureClientSessionOptions {
+    pub fn to_client_session_options(self) -> ClientSessionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_client_session_options(&self) -> &ClientSessionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<SessionOptions> for SecureClientSessionOptions {
     fn as_ref(&self) -> &SessionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureClientSessionOptions> for SessionOptions {
     fn from(child: SecureClientSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureClientSessionOptions {
+    pub fn to_session_options(self) -> SessionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_session_options(&self) -> &SessionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::tls::CommonConnectionOptions> for SecureClientSessionOptions {
     fn as_ref(&self) -> &crate::tls::CommonConnectionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureClientSessionOptions> for crate::tls::CommonConnectionOptions {
     fn from(child: SecureClientSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureClientSessionOptions {
+    pub fn to_tls_common_connection_options(self) -> crate::tls::CommonConnectionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_tls_common_connection_options(&self) -> &crate::tls::CommonConnectionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::tls::ConnectionOptions> for SecureClientSessionOptions {
     fn as_ref(&self) -> &crate::tls::ConnectionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureClientSessionOptions> for crate::tls::ConnectionOptions {
     fn from(child: SecureClientSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureClientSessionOptions {
+    pub fn to_tls_connection_options(self) -> crate::tls::ConnectionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_tls_connection_options(&self) -> &crate::tls::ConnectionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::tls::SecureContextOptions> for SecureClientSessionOptions {
     fn as_ref(&self) -> &crate::tls::SecureContextOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureClientSessionOptions> for crate::tls::SecureContextOptions {
     fn from(child: SecureClientSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureClientSessionOptions {
+    pub fn to_tls_secure_context_options(self) -> crate::tls::SecureContextOptions {
+        self.unchecked_into()
+    }
+    pub fn as_tls_secure_context_options(&self) -> &crate::tls::SecureContextOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<SecureServerSessionOptions> for SecureServerOptions {
     fn as_ref(&self) -> &SecureServerSessionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureServerOptions> for SecureServerSessionOptions {
     fn from(child: SecureServerOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureServerOptions {
+    pub fn to_secure_server_session_options(self) -> SecureServerSessionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_secure_server_session_options(&self) -> &SecureServerSessionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<ServerSessionOptions> for SecureServerOptions {
     fn as_ref(&self) -> &ServerSessionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureServerOptions> for ServerSessionOptions {
     fn from(child: SecureServerOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureServerOptions {
+    pub fn to_server_session_options(self) -> ServerSessionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_server_session_options(&self) -> &ServerSessionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<SessionOptions> for SecureServerOptions {
     fn as_ref(&self) -> &SessionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureServerOptions> for SessionOptions {
     fn from(child: SecureServerOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureServerOptions {
+    pub fn to_session_options(self) -> SessionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_session_options(&self) -> &SessionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::tls::CommonConnectionOptions> for SecureServerOptions {
     fn as_ref(&self) -> &crate::tls::CommonConnectionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureServerOptions> for crate::tls::CommonConnectionOptions {
     fn from(child: SecureServerOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureServerOptions {
+    pub fn to_tls_common_connection_options(self) -> crate::tls::CommonConnectionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_tls_common_connection_options(&self) -> &crate::tls::CommonConnectionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::tls::SecureContextOptions> for SecureServerOptions {
     fn as_ref(&self) -> &crate::tls::SecureContextOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureServerOptions> for crate::tls::SecureContextOptions {
     fn from(child: SecureServerOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureServerOptions {
+    pub fn to_tls_secure_context_options(self) -> crate::tls::SecureContextOptions {
+        self.unchecked_into()
+    }
+    pub fn as_tls_secure_context_options(&self) -> &crate::tls::SecureContextOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::tls::TlsOptions> for SecureServerOptions {
     fn as_ref(&self) -> &crate::tls::TlsOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureServerOptions> for crate::tls::TlsOptions {
     fn from(child: SecureServerOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureServerOptions {
+    pub fn to_tls_tls_options(self) -> crate::tls::TlsOptions {
+        self.unchecked_into()
+    }
+    pub fn as_tls_tls_options(&self) -> &crate::tls::TlsOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<ServerSessionOptions> for SecureServerSessionOptions {
     fn as_ref(&self) -> &ServerSessionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureServerSessionOptions> for ServerSessionOptions {
     fn from(child: SecureServerSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureServerSessionOptions {
+    pub fn to_server_session_options(self) -> ServerSessionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_server_session_options(&self) -> &ServerSessionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<SessionOptions> for SecureServerSessionOptions {
     fn as_ref(&self) -> &SessionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureServerSessionOptions> for SessionOptions {
     fn from(child: SecureServerSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureServerSessionOptions {
+    pub fn to_session_options(self) -> SessionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_session_options(&self) -> &SessionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::tls::CommonConnectionOptions> for SecureServerSessionOptions {
     fn as_ref(&self) -> &crate::tls::CommonConnectionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureServerSessionOptions> for crate::tls::CommonConnectionOptions {
     fn from(child: SecureServerSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureServerSessionOptions {
+    pub fn to_tls_common_connection_options(self) -> crate::tls::CommonConnectionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_tls_common_connection_options(&self) -> &crate::tls::CommonConnectionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::tls::SecureContextOptions> for SecureServerSessionOptions {
     fn as_ref(&self) -> &crate::tls::SecureContextOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureServerSessionOptions> for crate::tls::SecureContextOptions {
     fn from(child: SecureServerSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureServerSessionOptions {
+    pub fn to_tls_secure_context_options(self) -> crate::tls::SecureContextOptions {
+        self.unchecked_into()
+    }
+    pub fn as_tls_secure_context_options(&self) -> &crate::tls::SecureContextOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::tls::TlsOptions> for SecureServerSessionOptions {
     fn as_ref(&self) -> &crate::tls::TlsOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<SecureServerSessionOptions> for crate::tls::TlsOptions {
     fn from(child: SecureServerSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl SecureServerSessionOptions {
+    pub fn to_tls_tls_options(self) -> crate::tls::TlsOptions {
+        self.unchecked_into()
+    }
+    pub fn as_tls_tls_options(&self) -> &crate::tls::TlsOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for ServerHttp2Session {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ServerHttp2Session> for node_js::EventEmitter {
     fn from(child: ServerHttp2Session) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ServerHttp2Session {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<Http2Session> for ServerHttp2Session {
     fn as_ref(&self) -> &Http2Session {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ServerHttp2Session> for Http2Session {
     fn from(child: ServerHttp2Session) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ServerHttp2Session {
+    pub fn to_http2_session(self) -> Http2Session {
+        self.unchecked_into()
+    }
+    pub fn as_http2_session(&self) -> &Http2Session {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for ServerHttp2Stream {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ServerHttp2Stream> for node_js::EventEmitter {
     fn from(child: ServerHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ServerHttp2Stream {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::ReadableStream> for ServerHttp2Stream {
     fn as_ref(&self) -> &node_js::ReadableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ServerHttp2Stream> for node_js::ReadableStream {
     fn from(child: ServerHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ServerHttp2Stream {
+    pub fn to_node_js_readable_stream(self) -> node_js::ReadableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_readable_stream(&self) -> &node_js::ReadableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::WritableStream> for ServerHttp2Stream {
     fn as_ref(&self) -> &node_js::WritableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ServerHttp2Stream> for node_js::WritableStream {
     fn from(child: ServerHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ServerHttp2Stream {
+    pub fn to_node_js_writable_stream(self) -> node_js::WritableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_writable_stream(&self) -> &node_js::WritableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<Http2Stream> for ServerHttp2Stream {
     fn as_ref(&self) -> &Http2Stream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ServerHttp2Stream> for Http2Stream {
     fn from(child: ServerHttp2Stream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ServerHttp2Stream {
+    pub fn to_http2_stream(self) -> Http2Stream {
+        self.unchecked_into()
+    }
+    pub fn as_http2_stream(&self) -> &Http2Stream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<ServerSessionOptions> for ServerOptions {
     fn as_ref(&self) -> &ServerSessionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ServerOptions> for ServerSessionOptions {
     fn from(child: ServerOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ServerOptions {
+    pub fn to_server_session_options(self) -> ServerSessionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_server_session_options(&self) -> &ServerSessionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<SessionOptions> for ServerOptions {
     fn as_ref(&self) -> &SessionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ServerOptions> for SessionOptions {
     fn from(child: ServerOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ServerOptions {
+    pub fn to_session_options(self) -> SessionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_session_options(&self) -> &SessionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<SessionOptions> for ServerSessionOptions {
     fn as_ref(&self) -> &SessionOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ServerSessionOptions> for SessionOptions {
     fn from(child: ServerSessionOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ServerSessionOptions {
+    pub fn to_session_options(self) -> SessionOptions {
+        self.unchecked_into()
+    }
+    pub fn as_session_options(&self) -> &SessionOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<ServerStreamFileResponseOptions> for ServerStreamFileResponseOptionsWithError {
     fn as_ref(&self) -> &ServerStreamFileResponseOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ServerStreamFileResponseOptionsWithError> for ServerStreamFileResponseOptions {
     fn from(child: ServerStreamFileResponseOptionsWithError) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ServerStreamFileResponseOptionsWithError {
+    pub fn to_server_stream_file_response_options(self) -> ServerStreamFileResponseOptions {
+        self.unchecked_into()
+    }
+    pub fn as_server_stream_file_response_options(&self) -> &ServerStreamFileResponseOptions {
+        self.unchecked_ref()
     }
 }

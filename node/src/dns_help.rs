@@ -2,202 +2,274 @@
 // https://ts2rs.ctaggart.com/
 
 impl AnyARecord {
-    pub fn new() -> AnyARecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AnyAaaaRecord {
-    pub fn new() -> AnyAaaaRecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AnyCnameRecord {
-    pub fn new() -> AnyCnameRecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AnyMxRecord {
-    pub fn new() -> AnyMxRecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AnyNaptrRecord {
-    pub fn new() -> AnyNaptrRecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AnyNsRecord {
-    pub fn new() -> AnyNsRecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AnyPtrRecord {
-    pub fn new() -> AnyPtrRecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AnySoaRecord {
-    pub fn new() -> AnySoaRecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AnySrvRecord {
-    pub fn new() -> AnySrvRecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AnyTxtRecord {
-    pub fn new() -> AnyTxtRecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl LookupAddress {
-    pub fn new() -> LookupAddress {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl LookupAllOptions {
-    pub fn new() -> LookupAllOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl LookupOneOptions {
-    pub fn new() -> LookupOneOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl LookupOptions {
-    pub fn new() -> LookupOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl MxRecord {
-    pub fn new() -> MxRecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl NaptrRecord {
-    pub fn new() -> NaptrRecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl RecordWithTtl {
-    pub fn new() -> RecordWithTtl {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ResolveOptions {
-    pub fn new() -> ResolveOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ResolveWithTtlOptions {
-    pub fn new() -> ResolveWithTtlOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Resolver {
-    pub fn new() -> Resolver {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SoaRecord {
-    pub fn new() -> SoaRecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SrvRecord {
-    pub fn new() -> SrvRecord {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<RecordWithTtl> for AnyARecord {
     fn as_ref(&self) -> &RecordWithTtl {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<AnyARecord> for RecordWithTtl {
     fn from(child: AnyARecord) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl AnyARecord {
+    pub fn to_record_with_ttl(self) -> RecordWithTtl {
+        self.unchecked_into()
+    }
+    pub fn as_record_with_ttl(&self) -> &RecordWithTtl {
+        self.unchecked_ref()
     }
 }
 impl AsRef<RecordWithTtl> for AnyAaaaRecord {
     fn as_ref(&self) -> &RecordWithTtl {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<AnyAaaaRecord> for RecordWithTtl {
     fn from(child: AnyAaaaRecord) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl AnyAaaaRecord {
+    pub fn to_record_with_ttl(self) -> RecordWithTtl {
+        self.unchecked_into()
+    }
+    pub fn as_record_with_ttl(&self) -> &RecordWithTtl {
+        self.unchecked_ref()
     }
 }
 impl AsRef<MxRecord> for AnyMxRecord {
     fn as_ref(&self) -> &MxRecord {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<AnyMxRecord> for MxRecord {
     fn from(child: AnyMxRecord) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl AnyMxRecord {
+    pub fn to_mx_record(self) -> MxRecord {
+        self.unchecked_into()
+    }
+    pub fn as_mx_record(&self) -> &MxRecord {
+        self.unchecked_ref()
     }
 }
 impl AsRef<NaptrRecord> for AnyNaptrRecord {
     fn as_ref(&self) -> &NaptrRecord {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<AnyNaptrRecord> for NaptrRecord {
     fn from(child: AnyNaptrRecord) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl AnyNaptrRecord {
+    pub fn to_naptr_record(self) -> NaptrRecord {
+        self.unchecked_into()
+    }
+    pub fn as_naptr_record(&self) -> &NaptrRecord {
+        self.unchecked_ref()
     }
 }
 impl AsRef<SoaRecord> for AnySoaRecord {
     fn as_ref(&self) -> &SoaRecord {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<AnySoaRecord> for SoaRecord {
     fn from(child: AnySoaRecord) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl AnySoaRecord {
+    pub fn to_soa_record(self) -> SoaRecord {
+        self.unchecked_into()
+    }
+    pub fn as_soa_record(&self) -> &SoaRecord {
+        self.unchecked_ref()
     }
 }
 impl AsRef<SrvRecord> for AnySrvRecord {
     fn as_ref(&self) -> &SrvRecord {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<AnySrvRecord> for SrvRecord {
     fn from(child: AnySrvRecord) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl AnySrvRecord {
+    pub fn to_srv_record(self) -> SrvRecord {
+        self.unchecked_into()
+    }
+    pub fn as_srv_record(&self) -> &SrvRecord {
+        self.unchecked_ref()
     }
 }
 impl AsRef<LookupOptions> for LookupAllOptions {
     fn as_ref(&self) -> &LookupOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<LookupAllOptions> for LookupOptions {
     fn from(child: LookupAllOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl LookupAllOptions {
+    pub fn to_lookup_options(self) -> LookupOptions {
+        self.unchecked_into()
+    }
+    pub fn as_lookup_options(&self) -> &LookupOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<LookupOptions> for LookupOneOptions {
     fn as_ref(&self) -> &LookupOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<LookupOneOptions> for LookupOptions {
     fn from(child: LookupOneOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl LookupOneOptions {
+    pub fn to_lookup_options(self) -> LookupOptions {
+        self.unchecked_into()
+    }
+    pub fn as_lookup_options(&self) -> &LookupOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<ResolveOptions> for ResolveWithTtlOptions {
     fn as_ref(&self) -> &ResolveOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ResolveWithTtlOptions> for ResolveOptions {
     fn from(child: ResolveWithTtlOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ResolveWithTtlOptions {
+    pub fn to_resolve_options(self) -> ResolveOptions {
+        self.unchecked_into()
+    }
+    pub fn as_resolve_options(&self) -> &ResolveOptions {
+        self.unchecked_ref()
     }
 }

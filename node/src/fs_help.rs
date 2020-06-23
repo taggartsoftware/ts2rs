@@ -2,157 +2,221 @@
 // https://ts2rs.ctaggart.com/
 
 impl BigIntOptions {
-    pub fn new() -> BigIntOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl BigIntStats {
-    pub fn new() -> BigIntStats {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Dir {
-    pub fn new() -> Dir {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Dirent {
-    pub fn new() -> Dirent {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl FSWatcher {
-    pub fn new() -> FSWatcher {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl MakeDirectoryOptions {
-    pub fn new() -> MakeDirectoryOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl OpenDirOptions {
-    pub fn new() -> OpenDirOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ReadStream {
-    pub fn new() -> ReadStream {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl RmDirAsyncOptions {
-    pub fn new() -> RmDirAsyncOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl RmDirOptions {
-    pub fn new() -> RmDirOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StatOptions {
-    pub fn new() -> StatOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Stats {
-    pub fn new() -> Stats {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StatsBase {
-    pub fn new() -> StatsBase {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl WriteStream {
-    pub fn new() -> WriteStream {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl WriteVResult {
-    pub fn new() -> WriteVResult {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<StatsBase> for BigIntStats {
     fn as_ref(&self) -> &StatsBase {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<BigIntStats> for StatsBase {
     fn from(child: BigIntStats) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl BigIntStats {
+    pub fn to_stats_base(self) -> StatsBase {
+        self.unchecked_into()
+    }
+    pub fn as_stats_base(&self) -> &StatsBase {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for FSWatcher {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<FSWatcher> for node_js::EventEmitter {
     fn from(child: FSWatcher) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl FSWatcher {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for ReadStream {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ReadStream> for node_js::EventEmitter {
     fn from(child: ReadStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ReadStream {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::ReadableStream> for ReadStream {
     fn as_ref(&self) -> &node_js::ReadableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ReadStream> for node_js::ReadableStream {
     fn from(child: ReadStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ReadStream {
+    pub fn to_node_js_readable_stream(self) -> node_js::ReadableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_readable_stream(&self) -> &node_js::ReadableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<RmDirOptions> for RmDirAsyncOptions {
     fn as_ref(&self) -> &RmDirOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<RmDirAsyncOptions> for RmDirOptions {
     fn from(child: RmDirAsyncOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl RmDirAsyncOptions {
+    pub fn to_rm_dir_options(self) -> RmDirOptions {
+        self.unchecked_into()
+    }
+    pub fn as_rm_dir_options(&self) -> &RmDirOptions {
+        self.unchecked_ref()
     }
 }
 impl AsRef<StatsBase> for Stats {
     fn as_ref(&self) -> &StatsBase {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Stats> for StatsBase {
     fn from(child: Stats) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Stats {
+    pub fn to_stats_base(self) -> StatsBase {
+        self.unchecked_into()
+    }
+    pub fn as_stats_base(&self) -> &StatsBase {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for WriteStream {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<WriteStream> for node_js::EventEmitter {
     fn from(child: WriteStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl WriteStream {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::WritableStream> for WriteStream {
     fn as_ref(&self) -> &node_js::WritableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<WriteStream> for node_js::WritableStream {
     fn from(child: WriteStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl WriteStream {
+    pub fn to_node_js_writable_stream(self) -> node_js::WritableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_writable_stream(&self) -> &node_js::WritableStream {
+        self.unchecked_ref()
     }
 }

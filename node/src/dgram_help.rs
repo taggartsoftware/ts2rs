@@ -2,32 +2,40 @@
 // https://ts2rs.ctaggart.com/
 
 impl BindOptions {
-    pub fn new() -> BindOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl RemoteInfo {
-    pub fn new() -> RemoteInfo {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Socket {
-    pub fn new() -> Socket {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SocketOptions {
-    pub fn new() -> SocketOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<node_js::EventEmitter> for Socket {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Socket> for node_js::EventEmitter {
     fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Socket {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }

@@ -23,5 +23,5 @@ pub fn run() {
     listener.forget();
 
     log!("server starting on port {}", port);
-    server.as_net_server().listen(Some(port), None, None, &JsValue::UNDEFINED);
+    server.as_net_net_server().listen(Some(port), None, None, &JsValue::UNDEFINED);
 }

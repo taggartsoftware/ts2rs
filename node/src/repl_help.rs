@@ -2,52 +2,76 @@
 // https://ts2rs.ctaggart.com/
 
 impl REPLCommand {
-    pub fn new() -> REPLCommand {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl REPLServer {
-    pub fn new() -> REPLServer {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Recoverable {
-    pub fn new() -> Recoverable {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ReplOptions {
-    pub fn new() -> ReplOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<crate::readline::Interface> for REPLServer {
     fn as_ref(&self) -> &crate::readline::Interface {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<REPLServer> for crate::readline::Interface {
     fn from(child: REPLServer) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl REPLServer {
+    pub fn to_readline_interface(self) -> crate::readline::Interface {
+        self.unchecked_into()
+    }
+    pub fn as_readline_interface(&self) -> &crate::readline::Interface {
+        self.unchecked_ref()
     }
 }
 impl AsRef<Error> for Recoverable {
     fn as_ref(&self) -> &Error {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Recoverable> for Error {
     fn from(child: Recoverable) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Recoverable {
+    pub fn to_error(self) -> Error {
+        self.unchecked_into()
+    }
+    pub fn as_error(&self) -> &Error {
+        self.unchecked_ref()
     }
 }
 impl AsRef<SyntaxError> for Recoverable {
     fn as_ref(&self) -> &SyntaxError {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Recoverable> for SyntaxError {
     fn from(child: Recoverable) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Recoverable {
+    pub fn to_syntax_error(self) -> SyntaxError {
+        self.unchecked_into()
+    }
+    pub fn as_syntax_error(&self) -> &SyntaxError {
+        self.unchecked_ref()
     }
 }

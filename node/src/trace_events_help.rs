@@ -2,12 +2,12 @@
 // https://ts2rs.ctaggart.com/
 
 impl CreateTracingOptions {
-    pub fn new() -> CreateTracingOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Tracing {
-    pub fn new() -> Tracing {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }

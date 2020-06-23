@@ -2,177 +2,273 @@
 // https://ts2rs.ctaggart.com/
 
 impl AddressInfo {
-    pub fn new() -> AddressInfo {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ConnectOpts {
-    pub fn new() -> ConnectOpts {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl IpcNetConnectOpts {
-    pub fn new() -> IpcNetConnectOpts {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl IpcSocketConnectOpts {
-    pub fn new() -> IpcSocketConnectOpts {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ListenOptions {
-    pub fn new() -> ListenOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl OnReadOpts {
-    pub fn new() -> OnReadOpts {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Server {
-    pub fn new() -> Server {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Socket {
-    pub fn new() -> Socket {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SocketConstructorOpts {
-    pub fn new() -> SocketConstructorOpts {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl TcpNetConnectOpts {
-    pub fn new() -> TcpNetConnectOpts {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl TcpSocketConnectOpts {
-    pub fn new() -> TcpSocketConnectOpts {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<ConnectOpts> for IpcNetConnectOpts {
     fn as_ref(&self) -> &ConnectOpts {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<IpcNetConnectOpts> for ConnectOpts {
     fn from(child: IpcNetConnectOpts) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl IpcNetConnectOpts {
+    pub fn to_connect_opts(self) -> ConnectOpts {
+        self.unchecked_into()
+    }
+    pub fn as_connect_opts(&self) -> &ConnectOpts {
+        self.unchecked_ref()
     }
 }
 impl AsRef<IpcSocketConnectOpts> for IpcNetConnectOpts {
     fn as_ref(&self) -> &IpcSocketConnectOpts {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<IpcNetConnectOpts> for IpcSocketConnectOpts {
     fn from(child: IpcNetConnectOpts) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl IpcNetConnectOpts {
+    pub fn to_ipc_socket_connect_opts(self) -> IpcSocketConnectOpts {
+        self.unchecked_into()
+    }
+    pub fn as_ipc_socket_connect_opts(&self) -> &IpcSocketConnectOpts {
+        self.unchecked_ref()
     }
 }
 impl AsRef<SocketConstructorOpts> for IpcNetConnectOpts {
     fn as_ref(&self) -> &SocketConstructorOpts {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<IpcNetConnectOpts> for SocketConstructorOpts {
     fn from(child: IpcNetConnectOpts) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl IpcNetConnectOpts {
+    pub fn to_socket_constructor_opts(self) -> SocketConstructorOpts {
+        self.unchecked_into()
+    }
+    pub fn as_socket_constructor_opts(&self) -> &SocketConstructorOpts {
+        self.unchecked_ref()
     }
 }
 impl AsRef<ConnectOpts> for IpcSocketConnectOpts {
     fn as_ref(&self) -> &ConnectOpts {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<IpcSocketConnectOpts> for ConnectOpts {
     fn from(child: IpcSocketConnectOpts) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl IpcSocketConnectOpts {
+    pub fn to_connect_opts(self) -> ConnectOpts {
+        self.unchecked_into()
+    }
+    pub fn as_connect_opts(&self) -> &ConnectOpts {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for Server {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Server> for node_js::EventEmitter {
     fn from(child: Server) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Server {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for Socket {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Socket> for node_js::EventEmitter {
     fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Socket {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::ReadableStream> for Socket {
     fn as_ref(&self) -> &node_js::ReadableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Socket> for node_js::ReadableStream {
     fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Socket {
+    pub fn to_node_js_readable_stream(self) -> node_js::ReadableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_readable_stream(&self) -> &node_js::ReadableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::WritableStream> for Socket {
     fn as_ref(&self) -> &node_js::WritableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Socket> for node_js::WritableStream {
     fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Socket {
+    pub fn to_node_js_writable_stream(self) -> node_js::WritableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_writable_stream(&self) -> &node_js::WritableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<ConnectOpts> for TcpNetConnectOpts {
     fn as_ref(&self) -> &ConnectOpts {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<TcpNetConnectOpts> for ConnectOpts {
     fn from(child: TcpNetConnectOpts) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl TcpNetConnectOpts {
+    pub fn to_connect_opts(self) -> ConnectOpts {
+        self.unchecked_into()
+    }
+    pub fn as_connect_opts(&self) -> &ConnectOpts {
+        self.unchecked_ref()
     }
 }
 impl AsRef<SocketConstructorOpts> for TcpNetConnectOpts {
     fn as_ref(&self) -> &SocketConstructorOpts {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<TcpNetConnectOpts> for SocketConstructorOpts {
     fn from(child: TcpNetConnectOpts) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl TcpNetConnectOpts {
+    pub fn to_socket_constructor_opts(self) -> SocketConstructorOpts {
+        self.unchecked_into()
+    }
+    pub fn as_socket_constructor_opts(&self) -> &SocketConstructorOpts {
+        self.unchecked_ref()
     }
 }
 impl AsRef<TcpSocketConnectOpts> for TcpNetConnectOpts {
     fn as_ref(&self) -> &TcpSocketConnectOpts {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<TcpNetConnectOpts> for TcpSocketConnectOpts {
     fn from(child: TcpNetConnectOpts) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl TcpNetConnectOpts {
+    pub fn to_tcp_socket_connect_opts(self) -> TcpSocketConnectOpts {
+        self.unchecked_into()
+    }
+    pub fn as_tcp_socket_connect_opts(&self) -> &TcpSocketConnectOpts {
+        self.unchecked_ref()
     }
 }
 impl AsRef<ConnectOpts> for TcpSocketConnectOpts {
     fn as_ref(&self) -> &ConnectOpts {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<TcpSocketConnectOpts> for ConnectOpts {
     fn from(child: TcpSocketConnectOpts) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl TcpSocketConnectOpts {
+    pub fn to_connect_opts(self) -> ConnectOpts {
+        self.unchecked_into()
+    }
+    pub fn as_connect_opts(&self) -> &ConnectOpts {
+        self.unchecked_ref()
     }
 }

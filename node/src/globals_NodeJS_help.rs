@@ -2,257 +2,361 @@
 // https://ts2rs.ctaggart.com/
 
 impl CallSite {
-    pub fn new() -> CallSite {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ConsoleConstructor {
-    pub fn new() -> ConsoleConstructor {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ConsoleConstructorOptions {
-    pub fn new() -> ConsoleConstructorOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl CpuUsage {
-    pub fn new() -> CpuUsage {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Domain {
-    pub fn new() -> Domain {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ErrnoException {
-    pub fn new() -> ErrnoException {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl EventEmitter {
-    pub fn new() -> EventEmitter {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Global {
-    pub fn new() -> Global {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl HRTime {
-    pub fn new() -> HRTime {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Immediate {
-    pub fn new() -> Immediate {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl InspectOptions {
-    pub fn new() -> InspectOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl MemoryUsage {
-    pub fn new() -> MemoryUsage {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Module {
-    pub fn new() -> Module {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Process {
-    pub fn new() -> Process {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ProcessEnv {
-    pub fn new() -> ProcessEnv {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ProcessRelease {
-    pub fn new() -> ProcessRelease {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ProcessReport {
-    pub fn new() -> ProcessReport {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ProcessVersions {
-    pub fn new() -> ProcessVersions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ReadWriteStream {
-    pub fn new() -> ReadWriteStream {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ReadableStream {
-    pub fn new() -> ReadableStream {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ResourceUsage {
-    pub fn new() -> ResourceUsage {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Socket {
-    pub fn new() -> Socket {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Timeout {
-    pub fn new() -> Timeout {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Timer {
-    pub fn new() -> Timer {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl WritableStream {
-    pub fn new() -> WritableStream {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<EventEmitter> for Domain {
     fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Domain> for EventEmitter {
     fn from(child: Domain) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Domain {
+    pub fn to_event_emitter(self) -> EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_event_emitter(&self) -> &EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<Error> for ErrnoException {
     fn as_ref(&self) -> &Error {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ErrnoException> for Error {
     fn from(child: ErrnoException) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ErrnoException {
+    pub fn to_error(self) -> Error {
+        self.unchecked_into()
+    }
+    pub fn as_error(&self) -> &Error {
+        self.unchecked_ref()
     }
 }
 impl AsRef<EventEmitter> for Process {
     fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Process> for EventEmitter {
     fn from(child: Process) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Process {
+    pub fn to_event_emitter(self) -> EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_event_emitter(&self) -> &EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<EventEmitter> for ReadWriteStream {
     fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ReadWriteStream> for EventEmitter {
     fn from(child: ReadWriteStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ReadWriteStream {
+    pub fn to_event_emitter(self) -> EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_event_emitter(&self) -> &EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<ReadableStream> for ReadWriteStream {
     fn as_ref(&self) -> &ReadableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ReadWriteStream> for ReadableStream {
     fn from(child: ReadWriteStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ReadWriteStream {
+    pub fn to_readable_stream(self) -> ReadableStream {
+        self.unchecked_into()
+    }
+    pub fn as_readable_stream(&self) -> &ReadableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<WritableStream> for ReadWriteStream {
     fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ReadWriteStream> for WritableStream {
     fn from(child: ReadWriteStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ReadWriteStream {
+    pub fn to_writable_stream(self) -> WritableStream {
+        self.unchecked_into()
+    }
+    pub fn as_writable_stream(&self) -> &WritableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<EventEmitter> for ReadableStream {
     fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ReadableStream> for EventEmitter {
     fn from(child: ReadableStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ReadableStream {
+    pub fn to_event_emitter(self) -> EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_event_emitter(&self) -> &EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<EventEmitter> for Socket {
     fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Socket> for EventEmitter {
     fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Socket {
+    pub fn to_event_emitter(self) -> EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_event_emitter(&self) -> &EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<ReadWriteStream> for Socket {
     fn as_ref(&self) -> &ReadWriteStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Socket> for ReadWriteStream {
     fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Socket {
+    pub fn to_read_write_stream(self) -> ReadWriteStream {
+        self.unchecked_into()
+    }
+    pub fn as_read_write_stream(&self) -> &ReadWriteStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<ReadableStream> for Socket {
     fn as_ref(&self) -> &ReadableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Socket> for ReadableStream {
     fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Socket {
+    pub fn to_readable_stream(self) -> ReadableStream {
+        self.unchecked_into()
+    }
+    pub fn as_readable_stream(&self) -> &ReadableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<WritableStream> for Socket {
     fn as_ref(&self) -> &WritableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Socket> for WritableStream {
     fn from(child: Socket) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Socket {
+    pub fn to_writable_stream(self) -> WritableStream {
+        self.unchecked_into()
+    }
+    pub fn as_writable_stream(&self) -> &WritableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<Timer> for Timeout {
     fn as_ref(&self) -> &Timer {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Timeout> for Timer {
     fn from(child: Timeout) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Timeout {
+    pub fn to_timer(self) -> Timer {
+        self.unchecked_into()
+    }
+    pub fn as_timer(&self) -> &Timer {
+        self.unchecked_ref()
     }
 }
 impl AsRef<EventEmitter> for WritableStream {
     fn as_ref(&self) -> &EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<WritableStream> for EventEmitter {
     fn from(child: WritableStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl WritableStream {
+    pub fn to_event_emitter(self) -> EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_event_emitter(&self) -> &EventEmitter {
+        self.unchecked_ref()
     }
 }

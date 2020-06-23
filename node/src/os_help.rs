@@ -2,47 +2,63 @@
 // https://ts2rs.ctaggart.com/
 
 impl CpuInfo {
-    pub fn new() -> CpuInfo {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl NetworkInterfaceBase {
-    pub fn new() -> NetworkInterfaceBase {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl NetworkInterfaceInfoIPv4 {
-    pub fn new() -> NetworkInterfaceInfoIPv4 {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl NetworkInterfaceInfoIPv6 {
-    pub fn new() -> NetworkInterfaceInfoIPv6 {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl UserInfo {
-    pub fn new() -> UserInfo {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<NetworkInterfaceBase> for NetworkInterfaceInfoIPv4 {
     fn as_ref(&self) -> &NetworkInterfaceBase {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<NetworkInterfaceInfoIPv4> for NetworkInterfaceBase {
     fn from(child: NetworkInterfaceInfoIPv4) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl NetworkInterfaceInfoIPv4 {
+    pub fn to_network_interface_base(self) -> NetworkInterfaceBase {
+        self.unchecked_into()
+    }
+    pub fn as_network_interface_base(&self) -> &NetworkInterfaceBase {
+        self.unchecked_ref()
     }
 }
 impl AsRef<NetworkInterfaceBase> for NetworkInterfaceInfoIPv6 {
     fn as_ref(&self) -> &NetworkInterfaceBase {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<NetworkInterfaceInfoIPv6> for NetworkInterfaceBase {
     fn from(child: NetworkInterfaceInfoIPv6) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl NetworkInterfaceInfoIPv6 {
+    pub fn to_network_interface_base(self) -> NetworkInterfaceBase {
+        self.unchecked_into()
+    }
+    pub fn as_network_interface_base(&self) -> &NetworkInterfaceBase {
+        self.unchecked_ref()
     }
 }

@@ -2,87 +2,87 @@
 // https://ts2rs.ctaggart.com/
 
 impl ConsoleProfileFinishedEventDataType {
-    pub fn new() -> ConsoleProfileFinishedEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ConsoleProfileStartedEventDataType {
-    pub fn new() -> ConsoleProfileStartedEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl CoverageRange {
-    pub fn new() -> CoverageRange {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl FunctionCoverage {
-    pub fn new() -> FunctionCoverage {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl GetBestEffortCoverageReturnType {
-    pub fn new() -> GetBestEffortCoverageReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl PositionTickInfo {
-    pub fn new() -> PositionTickInfo {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Profile {
-    pub fn new() -> Profile {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ProfileNode {
-    pub fn new() -> ProfileNode {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ScriptCoverage {
-    pub fn new() -> ScriptCoverage {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ScriptTypeProfile {
-    pub fn new() -> ScriptTypeProfile {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SetSamplingIntervalParameterType {
-    pub fn new() -> SetSamplingIntervalParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StartPreciseCoverageParameterType {
-    pub fn new() -> StartPreciseCoverageParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StopReturnType {
-    pub fn new() -> StopReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl TakePreciseCoverageReturnType {
-    pub fn new() -> TakePreciseCoverageReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl TakeTypeProfileReturnType {
-    pub fn new() -> TakeTypeProfileReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl TypeObject {
-    pub fn new() -> TypeObject {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl TypeProfileEntry {
-    pub fn new() -> TypeProfileEntry {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }

@@ -2,192 +2,192 @@
 // https://ts2rs.ctaggart.com/
 
 impl AwaitPromiseParameterType {
-    pub fn new() -> AwaitPromiseParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AwaitPromiseReturnType {
-    pub fn new() -> AwaitPromiseReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl CallArgument {
-    pub fn new() -> CallArgument {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl CallFrame {
-    pub fn new() -> CallFrame {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl CallFunctionOnParameterType {
-    pub fn new() -> CallFunctionOnParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl CallFunctionOnReturnType {
-    pub fn new() -> CallFunctionOnReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl CompileScriptParameterType {
-    pub fn new() -> CompileScriptParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl CompileScriptReturnType {
-    pub fn new() -> CompileScriptReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ConsoleAPICalledEventDataType {
-    pub fn new() -> ConsoleAPICalledEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl CustomPreview {
-    pub fn new() -> CustomPreview {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl EntryPreview {
-    pub fn new() -> EntryPreview {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl EvaluateParameterType {
-    pub fn new() -> EvaluateParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl EvaluateReturnType {
-    pub fn new() -> EvaluateReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ExceptionDetails {
-    pub fn new() -> ExceptionDetails {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ExceptionRevokedEventDataType {
-    pub fn new() -> ExceptionRevokedEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ExceptionThrownEventDataType {
-    pub fn new() -> ExceptionThrownEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ExecutionContextCreatedEventDataType {
-    pub fn new() -> ExecutionContextCreatedEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ExecutionContextDescription {
-    pub fn new() -> ExecutionContextDescription {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ExecutionContextDestroyedEventDataType {
-    pub fn new() -> ExecutionContextDestroyedEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl GetPropertiesParameterType {
-    pub fn new() -> GetPropertiesParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl GetPropertiesReturnType {
-    pub fn new() -> GetPropertiesReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl GlobalLexicalScopeNamesParameterType {
-    pub fn new() -> GlobalLexicalScopeNamesParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl GlobalLexicalScopeNamesReturnType {
-    pub fn new() -> GlobalLexicalScopeNamesReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl InspectRequestedEventDataType {
-    pub fn new() -> InspectRequestedEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl InternalPropertyDescriptor {
-    pub fn new() -> InternalPropertyDescriptor {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ObjectPreview {
-    pub fn new() -> ObjectPreview {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl PropertyDescriptor {
-    pub fn new() -> PropertyDescriptor {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl PropertyPreview {
-    pub fn new() -> PropertyPreview {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl QueryObjectsParameterType {
-    pub fn new() -> QueryObjectsParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl QueryObjectsReturnType {
-    pub fn new() -> QueryObjectsReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ReleaseObjectGroupParameterType {
-    pub fn new() -> ReleaseObjectGroupParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ReleaseObjectParameterType {
-    pub fn new() -> ReleaseObjectParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl RemoteObject {
-    pub fn new() -> RemoteObject {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl RunScriptParameterType {
-    pub fn new() -> RunScriptParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl RunScriptReturnType {
-    pub fn new() -> RunScriptReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SetCustomObjectFormatterEnabledParameterType {
-    pub fn new() -> SetCustomObjectFormatterEnabledParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StackTrace {
-    pub fn new() -> StackTrace {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StackTraceId {
-    pub fn new() -> StackTraceId {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }

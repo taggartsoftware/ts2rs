@@ -2,47 +2,63 @@
 // https://ts2rs.ctaggart.com/
 
 impl CustomPromisify {
-    pub fn new() -> CustomPromisify {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl EncodeIntoResult {
-    pub fn new() -> EncodeIntoResult {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl InspectOptions {
-    pub fn new() -> InspectOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl TextDecoder {
-    pub fn new() -> TextDecoder {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl TextEncoder {
-    pub fn new() -> TextEncoder {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<Function> for CustomPromisify {
     fn as_ref(&self) -> &Function {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<CustomPromisify> for Function {
     fn from(child: CustomPromisify) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl CustomPromisify {
+    pub fn to_function(self) -> Function {
+        self.unchecked_into()
+    }
+    pub fn as_function(&self) -> &Function {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::InspectOptions> for InspectOptions {
     fn as_ref(&self) -> &node_js::InspectOptions {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<InspectOptions> for node_js::InspectOptions {
     fn from(child: InspectOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl InspectOptions {
+    pub fn to_node_js_inspect_options(self) -> node_js::InspectOptions {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_inspect_options(&self) -> &node_js::InspectOptions {
+        self.unchecked_ref()
     }
 }

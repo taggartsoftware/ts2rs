@@ -2,112 +2,192 @@
 // https://ts2rs.ctaggart.com/
 
 impl ReadStream {
-    pub fn new() -> ReadStream {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl WriteStream {
-    pub fn new() -> WriteStream {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<node_js::EventEmitter> for node_js::ReadStream {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<node_js::ReadStream> for node_js::EventEmitter {
     fn from(child: node_js::ReadStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl node_js::ReadStream {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::ReadableStream> for node_js::ReadStream {
     fn as_ref(&self) -> &node_js::ReadableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<node_js::ReadStream> for node_js::ReadableStream {
     fn from(child: node_js::ReadStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl node_js::ReadStream {
+    pub fn to_node_js_readable_stream(self) -> node_js::ReadableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_readable_stream(&self) -> &node_js::ReadableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::WritableStream> for node_js::ReadStream {
     fn as_ref(&self) -> &node_js::WritableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<node_js::ReadStream> for node_js::WritableStream {
     fn from(child: node_js::ReadStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl node_js::ReadStream {
+    pub fn to_node_js_writable_stream(self) -> node_js::WritableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_writable_stream(&self) -> &node_js::WritableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<net::Socket> for node_js::ReadStream {
     fn as_ref(&self) -> &net::Socket {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<node_js::ReadStream> for net::Socket {
     fn from(child: node_js::ReadStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl node_js::ReadStream {
+    pub fn to_net_socket(self) -> net::Socket {
+        self.unchecked_into()
+    }
+    pub fn as_net_socket(&self) -> &net::Socket {
+        self.unchecked_ref()
     }
 }
 impl AsRef<tty::ReadStream> for node_js::ReadStream {
     fn as_ref(&self) -> &tty::ReadStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<node_js::ReadStream> for tty::ReadStream {
     fn from(child: node_js::ReadStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl node_js::ReadStream {
+    pub fn to_tty_read_stream(self) -> tty::ReadStream {
+        self.unchecked_into()
+    }
+    pub fn as_tty_read_stream(&self) -> &tty::ReadStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for node_js::WriteStream {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<node_js::WriteStream> for node_js::EventEmitter {
     fn from(child: node_js::WriteStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl node_js::WriteStream {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::ReadableStream> for node_js::WriteStream {
     fn as_ref(&self) -> &node_js::ReadableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<node_js::WriteStream> for node_js::ReadableStream {
     fn from(child: node_js::WriteStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl node_js::WriteStream {
+    pub fn to_node_js_readable_stream(self) -> node_js::ReadableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_readable_stream(&self) -> &node_js::ReadableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::WritableStream> for node_js::WriteStream {
     fn as_ref(&self) -> &node_js::WritableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<node_js::WriteStream> for node_js::WritableStream {
     fn from(child: node_js::WriteStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl node_js::WriteStream {
+    pub fn to_node_js_writable_stream(self) -> node_js::WritableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_writable_stream(&self) -> &node_js::WritableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<net::Socket> for node_js::WriteStream {
     fn as_ref(&self) -> &net::Socket {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<node_js::WriteStream> for net::Socket {
     fn from(child: node_js::WriteStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl node_js::WriteStream {
+    pub fn to_net_socket(self) -> net::Socket {
+        self.unchecked_into()
+    }
+    pub fn as_net_socket(&self) -> &net::Socket {
+        self.unchecked_ref()
     }
 }
 impl AsRef<tty::WriteStream> for node_js::WriteStream {
     fn as_ref(&self) -> &tty::WriteStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<node_js::WriteStream> for tty::WriteStream {
     fn from(child: node_js::WriteStream) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl node_js::WriteStream {
+    pub fn to_tty_write_stream(self) -> tty::WriteStream {
+        self.unchecked_into()
+    }
+    pub fn as_tty_write_stream(&self) -> &tty::WriteStream {
+        self.unchecked_ref()
     }
 }

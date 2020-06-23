@@ -2,22 +2,30 @@
 // https://ts2rs.ctaggart.com/
 
 impl InspectorNotification {
-    pub fn new() -> InspectorNotification {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Session {
-    pub fn new() -> Session {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<crate::events::EventEmitter> for Session {
     fn as_ref(&self) -> &crate::events::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Session> for crate::events::EventEmitter {
     fn from(child: Session) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Session {
+    pub fn to_events_event_emitter(self) -> crate::events::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_events_event_emitter(&self) -> &crate::events::EventEmitter {
+        self.unchecked_ref()
     }
 }

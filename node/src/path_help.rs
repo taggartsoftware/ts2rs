@@ -2,12 +2,12 @@
 // https://ts2rs.ctaggart.com/
 
 impl FormatInputPathObject {
-    pub fn new() -> FormatInputPathObject {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ParsedPath {
-    pub fn new() -> ParsedPath {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }

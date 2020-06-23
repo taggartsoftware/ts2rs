@@ -2,22 +2,22 @@
 // https://ts2rs.ctaggart.com/
 
 impl AsyncHook {
-    pub fn new() -> AsyncHook {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsyncResource {
-    pub fn new() -> AsyncResource {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsyncResourceOptions {
-    pub fn new() -> AsyncResourceOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl HookCallbacks {
-    pub fn new() -> HookCallbacks {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }

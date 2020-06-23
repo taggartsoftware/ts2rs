@@ -2,57 +2,73 @@
 // https://ts2rs.ctaggart.com/
 
 impl DefaultDeserializer {
-    pub fn new() -> DefaultDeserializer {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl DefaultSerializer {
-    pub fn new() -> DefaultSerializer {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Deserializer {
-    pub fn new() -> Deserializer {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl HeapCodeStatistics {
-    pub fn new() -> HeapCodeStatistics {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl HeapInfo {
-    pub fn new() -> HeapInfo {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl HeapSpaceInfo {
-    pub fn new() -> HeapSpaceInfo {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Serializer {
-    pub fn new() -> Serializer {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<Deserializer> for DefaultDeserializer {
     fn as_ref(&self) -> &Deserializer {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<DefaultDeserializer> for Deserializer {
     fn from(child: DefaultDeserializer) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl DefaultDeserializer {
+    pub fn to_deserializer(self) -> Deserializer {
+        self.unchecked_into()
+    }
+    pub fn as_deserializer(&self) -> &Deserializer {
+        self.unchecked_ref()
     }
 }
 impl AsRef<Serializer> for DefaultSerializer {
     fn as_ref(&self) -> &Serializer {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<DefaultSerializer> for Serializer {
     fn from(child: DefaultSerializer) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl DefaultSerializer {
+    pub fn to_serializer(self) -> Serializer {
+        self.unchecked_into()
+    }
+    pub fn as_serializer(&self) -> &Serializer {
+        self.unchecked_ref()
     }
 }

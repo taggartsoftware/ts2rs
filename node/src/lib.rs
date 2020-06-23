@@ -58,23 +58,8 @@ pub mod http {
     include!("http_alias.rs");
     include!("http_extern.rs");
     include!("http_help.rs");
-    impl AsRef<crate::stream::Writable> for ServerResponse {
-        fn as_ref(&self) -> &crate::stream::Writable {
-            self.unchecked_ref()
-        }
-    }
-    impl ServerResponse {
-        pub fn as_outgoing_message(&self) -> &OutgoingMessage {
-            self.unchecked_ref()
-        }
-    }
     impl ServerResponse {
         pub fn as_stream_writable(&self) -> &crate::stream::Writable {
-            self.unchecked_ref()
-        }
-    }
-    impl Server {
-        pub fn as_net_server(&self) -> &crate::net::Server {
             self.unchecked_ref()
         }
     }

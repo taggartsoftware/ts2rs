@@ -2,42 +2,58 @@
 // https://ts2rs.ctaggart.com/
 
 impl MessageChannel {
-    pub fn new() -> MessageChannel {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl MessagePort {
-    pub fn new() -> MessagePort {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Worker {
-    pub fn new() -> Worker {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl WorkerOptions {
-    pub fn new() -> WorkerOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<crate::events::EventEmitter> for MessagePort {
     fn as_ref(&self) -> &crate::events::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<MessagePort> for crate::events::EventEmitter {
     fn from(child: MessagePort) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl MessagePort {
+    pub fn to_events_event_emitter(self) -> crate::events::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_events_event_emitter(&self) -> &crate::events::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::events::EventEmitter> for Worker {
     fn as_ref(&self) -> &crate::events::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Worker> for crate::events::EventEmitter {
     fn from(child: Worker) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Worker {
+    pub fn to_events_event_emitter(self) -> crate::events::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_events_event_emitter(&self) -> &crate::events::EventEmitter {
+        self.unchecked_ref()
     }
 }

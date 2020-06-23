@@ -2,7 +2,7 @@
 // https://ts2rs.ctaggart.com/
 
 impl NotifyWhenWaitingForDisconnectParameterType {
-    pub fn new() -> NotifyWhenWaitingForDisconnectParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }

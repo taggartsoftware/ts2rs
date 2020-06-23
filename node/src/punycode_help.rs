@@ -2,7 +2,7 @@
 // https://ts2rs.ctaggart.com/
 
 impl ucs2 {
-    pub fn new() -> ucs2 {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }

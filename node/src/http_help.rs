@@ -2,187 +2,283 @@
 // https://ts2rs.ctaggart.com/
 
 impl Agent {
-    pub fn new() -> Agent {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AgentOptions {
-    pub fn new() -> AgentOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ClientRequest {
-    pub fn new() -> ClientRequest {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ClientRequestArgs {
-    pub fn new() -> ClientRequestArgs {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl IncomingHttpHeaders {
-    pub fn new() -> IncomingHttpHeaders {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl IncomingMessage {
-    pub fn new() -> IncomingMessage {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl InformationEvent {
-    pub fn new() -> InformationEvent {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl OutgoingHttpHeaders {
-    pub fn new() -> OutgoingHttpHeaders {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl OutgoingMessage {
-    pub fn new() -> OutgoingMessage {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl RequestOptions {
-    pub fn new() -> RequestOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Server {
-    pub fn new() -> Server {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ServerOptions {
-    pub fn new() -> ServerOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ServerResponse {
-    pub fn new() -> ServerResponse {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<node_js::EventEmitter> for ClientRequest {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ClientRequest> for node_js::EventEmitter {
     fn from(child: ClientRequest) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ClientRequest {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::WritableStream> for ClientRequest {
     fn as_ref(&self) -> &node_js::WritableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ClientRequest> for node_js::WritableStream {
     fn from(child: ClientRequest) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ClientRequest {
+    pub fn to_node_js_writable_stream(self) -> node_js::WritableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_writable_stream(&self) -> &node_js::WritableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<OutgoingMessage> for ClientRequest {
     fn as_ref(&self) -> &OutgoingMessage {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ClientRequest> for OutgoingMessage {
     fn from(child: ClientRequest) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ClientRequest {
+    pub fn to_outgoing_message(self) -> OutgoingMessage {
+        self.unchecked_into()
+    }
+    pub fn as_outgoing_message(&self) -> &OutgoingMessage {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for IncomingMessage {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<IncomingMessage> for node_js::EventEmitter {
     fn from(child: IncomingMessage) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl IncomingMessage {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::ReadableStream> for IncomingMessage {
     fn as_ref(&self) -> &node_js::ReadableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<IncomingMessage> for node_js::ReadableStream {
     fn from(child: IncomingMessage) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl IncomingMessage {
+    pub fn to_node_js_readable_stream(self) -> node_js::ReadableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_readable_stream(&self) -> &node_js::ReadableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for OutgoingMessage {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<OutgoingMessage> for node_js::EventEmitter {
     fn from(child: OutgoingMessage) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl OutgoingMessage {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::WritableStream> for OutgoingMessage {
     fn as_ref(&self) -> &node_js::WritableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<OutgoingMessage> for node_js::WritableStream {
     fn from(child: OutgoingMessage) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl OutgoingMessage {
+    pub fn to_node_js_writable_stream(self) -> node_js::WritableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_writable_stream(&self) -> &node_js::WritableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<ClientRequestArgs> for RequestOptions {
     fn as_ref(&self) -> &ClientRequestArgs {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<RequestOptions> for ClientRequestArgs {
     fn from(child: RequestOptions) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl RequestOptions {
+    pub fn to_client_request_args(self) -> ClientRequestArgs {
+        self.unchecked_into()
+    }
+    pub fn as_client_request_args(&self) -> &ClientRequestArgs {
+        self.unchecked_ref()
     }
 }
 impl AsRef<crate::net::NetServer> for Server {
     fn as_ref(&self) -> &crate::net::NetServer {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<Server> for crate::net::NetServer {
     fn from(child: Server) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl Server {
+    pub fn to_net_net_server(self) -> crate::net::NetServer {
+        self.unchecked_into()
+    }
+    pub fn as_net_net_server(&self) -> &crate::net::NetServer {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::EventEmitter> for ServerResponse {
     fn as_ref(&self) -> &node_js::EventEmitter {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ServerResponse> for node_js::EventEmitter {
     fn from(child: ServerResponse) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ServerResponse {
+    pub fn to_node_js_event_emitter(self) -> node_js::EventEmitter {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_event_emitter(&self) -> &node_js::EventEmitter {
+        self.unchecked_ref()
     }
 }
 impl AsRef<node_js::WritableStream> for ServerResponse {
     fn as_ref(&self) -> &node_js::WritableStream {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ServerResponse> for node_js::WritableStream {
     fn from(child: ServerResponse) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ServerResponse {
+    pub fn to_node_js_writable_stream(self) -> node_js::WritableStream {
+        self.unchecked_into()
+    }
+    pub fn as_node_js_writable_stream(&self) -> &node_js::WritableStream {
+        self.unchecked_ref()
     }
 }
 impl AsRef<OutgoingMessage> for ServerResponse {
     fn as_ref(&self) -> &OutgoingMessage {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<ServerResponse> for OutgoingMessage {
     fn from(child: ServerResponse) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl ServerResponse {
+    pub fn to_outgoing_message(self) -> OutgoingMessage {
+        self.unchecked_into()
+    }
+    pub fn as_outgoing_message(&self) -> &OutgoingMessage {
+        self.unchecked_ref()
     }
 }

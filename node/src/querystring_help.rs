@@ -2,22 +2,22 @@
 // https://ts2rs.ctaggart.com/
 
 impl ParseOptions {
-    pub fn new() -> ParseOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ParsedUrlQuery {
-    pub fn new() -> ParsedUrlQuery {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ParsedUrlQueryInput {
-    pub fn new() -> ParsedUrlQueryInput {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StringifyOptions {
-    pub fn new() -> StringifyOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }

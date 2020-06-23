@@ -2,12 +2,12 @@
 // https://ts2rs.ctaggart.com/
 
 impl Domain {
-    pub fn new() -> Domain {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl GetDomainsReturnType {
-    pub fn new() -> GetDomainsReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }

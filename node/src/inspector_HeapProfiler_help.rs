@@ -2,87 +2,87 @@
 // https://ts2rs.ctaggart.com/
 
 impl AddHeapSnapshotChunkEventDataType {
-    pub fn new() -> AddHeapSnapshotChunkEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AddInspectedHeapObjectParameterType {
-    pub fn new() -> AddInspectedHeapObjectParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl GetHeapObjectIdParameterType {
-    pub fn new() -> GetHeapObjectIdParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl GetHeapObjectIdReturnType {
-    pub fn new() -> GetHeapObjectIdReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl GetObjectByHeapObjectIdParameterType {
-    pub fn new() -> GetObjectByHeapObjectIdParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl GetObjectByHeapObjectIdReturnType {
-    pub fn new() -> GetObjectByHeapObjectIdReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl GetSamplingProfileReturnType {
-    pub fn new() -> GetSamplingProfileReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl HeapStatsUpdateEventDataType {
-    pub fn new() -> HeapStatsUpdateEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl LastSeenObjectIdEventDataType {
-    pub fn new() -> LastSeenObjectIdEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl ReportHeapSnapshotProgressEventDataType {
-    pub fn new() -> ReportHeapSnapshotProgressEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SamplingHeapProfile {
-    pub fn new() -> SamplingHeapProfile {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl SamplingHeapProfileNode {
-    pub fn new() -> SamplingHeapProfileNode {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StartSamplingParameterType {
-    pub fn new() -> StartSamplingParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StartTrackingHeapObjectsParameterType {
-    pub fn new() -> StartTrackingHeapObjectsParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StopSamplingReturnType {
-    pub fn new() -> StopSamplingReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StopTrackingHeapObjectsParameterType {
-    pub fn new() -> StopTrackingHeapObjectsParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl TakeHeapSnapshotParameterType {
-    pub fn new() -> TakeHeapSnapshotParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }

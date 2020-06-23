@@ -2,22 +2,22 @@
 // https://ts2rs.ctaggart.com/
 
 impl DataCollectedEventDataType {
-    pub fn new() -> DataCollectedEventDataType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl GetCategoriesReturnType {
-    pub fn new() -> GetCategoriesReturnType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl StartParameterType {
-    pub fn new() -> StartParameterType {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl TraceConfig {
-    pub fn new() -> TraceConfig {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }

@@ -2,67 +2,91 @@
 // https://ts2rs.ctaggart.com/
 
 impl URL {
-    pub fn new() -> URL {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl URLFormatOptions {
-    pub fn new() -> URLFormatOptions {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl URLSearchParams {
-    pub fn new() -> URLSearchParams {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl Url {
-    pub fn new() -> Url {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl UrlObject {
-    pub fn new() -> UrlObject {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl UrlWithParsedQuery {
-    pub fn new() -> UrlWithParsedQuery {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl UrlWithStringQuery {
-    pub fn new() -> UrlWithStringQuery {
-        JsCast::unchecked_into(Object::new())
+    pub fn new() -> Self {
+        Object::new().unchecked_into()
     }
 }
 impl AsRef<Iterable> for URLSearchParams {
     fn as_ref(&self) -> &Iterable {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<URLSearchParams> for Iterable {
     fn from(child: URLSearchParams) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl URLSearchParams {
+    pub fn to_iterable(self) -> Iterable {
+        self.unchecked_into()
+    }
+    pub fn as_iterable(&self) -> &Iterable {
+        self.unchecked_ref()
     }
 }
 impl AsRef<Url> for UrlWithParsedQuery {
     fn as_ref(&self) -> &Url {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<UrlWithParsedQuery> for Url {
     fn from(child: UrlWithParsedQuery) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl UrlWithParsedQuery {
+    pub fn to_url(self) -> Url {
+        self.unchecked_into()
+    }
+    pub fn as_url(&self) -> &Url {
+        self.unchecked_ref()
     }
 }
 impl AsRef<Url> for UrlWithStringQuery {
     fn as_ref(&self) -> &Url {
-        JsCast::unchecked_ref(self)
+        self.unchecked_ref()
     }
 }
 impl From<UrlWithStringQuery> for Url {
     fn from(child: UrlWithStringQuery) -> Self {
-        JsCast::unchecked_into(child)
+        child.unchecked_into()
+    }
+}
+impl UrlWithStringQuery {
+    pub fn to_url(self) -> Url {
+        self.unchecked_into()
+    }
+    pub fn as_url(&self) -> &Url {
+        self.unchecked_ref()
     }
 }
