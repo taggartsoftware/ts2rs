@@ -8,3 +8,7 @@ pkg/
 
 # not yet ready
 electron/
+
+# Azure App Service
+.deployment
+**/.vscode/settings.json

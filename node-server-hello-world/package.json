@@ -9,7 +9,8 @@
   "license": "MIT",
   "homepage": "https://ts2rs.ctaggart.com",
   "scripts": {
-    "build": "wasm-pack build --target nodejs --dev",
+    "dev": "wasm-pack build --target nodejs --dev",
+    "release": "wasm-pack build --target nodejs --release",
     "start": "node main.js"
   }
 }
