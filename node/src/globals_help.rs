@@ -56,11 +56,11 @@ impl RequireResolve {
         JsCast::unchecked_into(Object::new())
     }
 }
-impl String {
-    pub fn new() -> String {
-        JsCast::unchecked_into(Object::new())
-    }
-}
+// impl String {
+//     pub fn new() -> String {
+//         JsCast::unchecked_into(Object::new())
+//     }
+// }
 impl SymbolConstructor {
     pub fn new() -> SymbolConstructor {
         JsCast::unchecked_into(Object::new())

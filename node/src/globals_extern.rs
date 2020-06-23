@@ -314,227 +314,227 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn observable(this: &SymbolConstructor) -> JsValue;
     #[doc = "Allows manipulation and formatting of text strings and determination and location of substrings within strings."]
-    pub type String;
-    # [ wasm_bindgen ( method , js_name = toString ) ]
-    pub fn to_string(this: &String) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = toString ) ]
-    pub fn set_to_string(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = charAt ) ]
-    pub fn char_at(this: &String, pos: f64) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = charAt ) ]
-    pub fn set_char_at(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = charCodeAt ) ]
-    pub fn char_code_at(this: &String, index: f64) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = charCodeAt ) ]
-    pub fn set_char_code_at(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn concat(this: &String, strings: &Array) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_concat(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = indexOf ) ]
-    pub fn index_of(this: &String, search_string: &str, position: Option<f64>) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = indexOf ) ]
-    pub fn set_index_of(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = lastIndexOf ) ]
-    pub fn last_index_of(this: &String, search_string: &str, position: Option<f64>) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = lastIndexOf ) ]
-    pub fn set_last_index_of(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = localeCompare ) ]
-    pub fn locale_compare(this: &String, that: &str) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = localeCompare ) ]
-    pub fn set_locale_compare(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = match ) ]
-    pub fn match_(this: &String, regexp: &JsValue) -> JsValue;
-    # [ wasm_bindgen ( method , setter , js_name = match ) ]
-    pub fn set_match_(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn replace(this: &String, search_value: &JsValue, replace_value: &str) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_replace(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = replace ) ]
-    pub fn replace_2(this: &String, search_value: &JsValue, replacer: &JsValue) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = replace ) ]
-    pub fn set_replace_2(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn search(this: &String, regexp: &JsValue) -> f64;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_search(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn slice(this: &String, start: Option<f64>, end: Option<f64>) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_slice(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn split(this: &String, separator: &JsValue, limit: Option<f64>) -> Array;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_split(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn substring(this: &String, start: f64, end: Option<f64>) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_substring(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = toLowerCase ) ]
-    pub fn to_lower_case(this: &String) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = toLowerCase ) ]
-    pub fn set_to_lower_case(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = toLocaleLowerCase ) ]
-    pub fn to_locale_lower_case(this: &String, locales: &JsValue) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = toLocaleLowerCase ) ]
-    pub fn set_to_locale_lower_case(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = toUpperCase ) ]
-    pub fn to_upper_case(this: &String) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = toUpperCase ) ]
-    pub fn set_to_upper_case(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = toLocaleUpperCase ) ]
-    pub fn to_locale_upper_case(this: &String, locales: &JsValue) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = toLocaleUpperCase ) ]
-    pub fn set_to_locale_upper_case(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn trim(this: &String) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_trim(this: &String, value: &Function);
-    #[doc = "Returns the length of a String object."]
-    #[wasm_bindgen(method, getter)]
-    pub fn length(this: &String) -> f64;
-    #[wasm_bindgen(method)]
-    pub fn substr(this: &String, from: f64, length: Option<f64>) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_substr(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = valueOf ) ]
-    pub fn value_of(this: &String) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = valueOf ) ]
-    pub fn set_value_of(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = localeCompare ) ]
-    pub fn locale_compare_2(
-        this: &String,
-        that: &str,
-        locales: &JsValue,
-        options: Option<&intl::CollatorOptions>,
-    ) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = localeCompare ) ]
-    pub fn set_locale_compare_2(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = codePointAt ) ]
-    pub fn code_point_at(this: &String, pos: f64) -> Option<f64>;
-    # [ wasm_bindgen ( method , setter , js_name = codePointAt ) ]
-    pub fn set_code_point_at(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn includes(this: &String, search_string: &str, position: Option<f64>) -> bool;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_includes(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = endsWith ) ]
-    pub fn ends_with(this: &String, search_string: &str, end_position: Option<f64>) -> bool;
-    # [ wasm_bindgen ( method , setter , js_name = endsWith ) ]
-    pub fn set_ends_with(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn normalize(this: &String, form: &JsValue) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_normalize(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = normalize ) ]
-    pub fn normalize_2(this: &String, form: Option<&str>) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = normalize ) ]
-    pub fn set_normalize_2(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn repeat(this: &String, count: f64) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_repeat(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = startsWith ) ]
-    pub fn starts_with(this: &String, search_string: &str, position: Option<f64>) -> bool;
-    # [ wasm_bindgen ( method , setter , js_name = startsWith ) ]
-    pub fn set_starts_with(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn anchor(this: &String, name: &str) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_anchor(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn big(this: &String) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_big(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn blink(this: &String) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_blink(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn bold(this: &String) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_bold(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn fixed(this: &String) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_fixed(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn fontcolor(this: &String, color: &str) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_fontcolor(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn fontsize(this: &String, size: f64) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_fontsize(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = fontsize ) ]
-    pub fn fontsize_2(this: &String, size: &str) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = fontsize ) ]
-    pub fn set_fontsize_2(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn italics(this: &String) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_italics(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn link(this: &String, url: &str) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_link(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn small(this: &String) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_small(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn strike(this: &String) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_strike(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn sub(this: &String) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_sub(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn sup(this: &String) -> String;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_sup(this: &String, value: &Function);
-    #[wasm_bindgen(method)]
-    pub fn computed_property_name(this: &String) -> IterableIterator;
-    #[wasm_bindgen(method, setter)]
-    pub fn set_computed_property_name(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = match ) ]
-    pub fn match_2(this: &String, matcher: &JsValue) -> JsValue;
-    # [ wasm_bindgen ( method , setter , js_name = match ) ]
-    pub fn set_match_2(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = replace ) ]
-    pub fn replace_3(this: &String, search_value: &JsValue, replace_value: &str) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = replace ) ]
-    pub fn set_replace_3(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = replace ) ]
-    pub fn replace_4(this: &String, search_value: &JsValue, replacer: &JsValue) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = replace ) ]
-    pub fn set_replace_4(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = search ) ]
-    pub fn search_2(this: &String, searcher: &JsValue) -> f64;
-    # [ wasm_bindgen ( method , setter , js_name = search ) ]
-    pub fn set_search_2(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = split ) ]
-    pub fn split_2(this: &String, splitter: &JsValue, limit: Option<f64>) -> Array;
-    # [ wasm_bindgen ( method , setter , js_name = split ) ]
-    pub fn set_split_2(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = padStart ) ]
-    pub fn pad_start(this: &String, max_length: f64, fill_string: Option<&str>) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = padStart ) ]
-    pub fn set_pad_start(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = padEnd ) ]
-    pub fn pad_end(this: &String, max_length: f64, fill_string: Option<&str>) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = padEnd ) ]
-    pub fn set_pad_end(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = trimLeft ) ]
-    pub fn trim_left(this: &String) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = trimLeft ) ]
-    pub fn set_trim_left(this: &String, value: &Function);
-    # [ wasm_bindgen ( method , js_name = trimRight ) ]
-    pub fn trim_right(this: &String) -> String;
-    # [ wasm_bindgen ( method , setter , js_name = trimRight ) ]
-    pub fn set_trim_right(this: &String, value: &Function);
+    // pub type String;
+    // # [ wasm_bindgen ( method , js_name = toString ) ]
+    // pub fn to_string(this: &String) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = toString ) ]
+    // pub fn set_to_string(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = charAt ) ]
+    // pub fn char_at(this: &String, pos: f64) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = charAt ) ]
+    // pub fn set_char_at(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = charCodeAt ) ]
+    // pub fn char_code_at(this: &String, index: f64) -> f64;
+    // # [ wasm_bindgen ( method , setter , js_name = charCodeAt ) ]
+    // pub fn set_char_code_at(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn concat(this: &String, strings: &Array) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_concat(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = indexOf ) ]
+    // pub fn index_of(this: &String, search_string: &str, position: Option<f64>) -> f64;
+    // # [ wasm_bindgen ( method , setter , js_name = indexOf ) ]
+    // pub fn set_index_of(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = lastIndexOf ) ]
+    // pub fn last_index_of(this: &String, search_string: &str, position: Option<f64>) -> f64;
+    // # [ wasm_bindgen ( method , setter , js_name = lastIndexOf ) ]
+    // pub fn set_last_index_of(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = localeCompare ) ]
+    // pub fn locale_compare(this: &String, that: &str) -> f64;
+    // # [ wasm_bindgen ( method , setter , js_name = localeCompare ) ]
+    // pub fn set_locale_compare(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = match ) ]
+    // pub fn match_(this: &String, regexp: &JsValue) -> JsValue;
+    // # [ wasm_bindgen ( method , setter , js_name = match ) ]
+    // pub fn set_match_(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn replace(this: &String, search_value: &JsValue, replace_value: &str) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_replace(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = replace ) ]
+    // pub fn replace_2(this: &String, search_value: &JsValue, replacer: &JsValue) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = replace ) ]
+    // pub fn set_replace_2(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn search(this: &String, regexp: &JsValue) -> f64;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_search(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn slice(this: &String, start: Option<f64>, end: Option<f64>) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_slice(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn split(this: &String, separator: &JsValue, limit: Option<f64>) -> Array;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_split(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn substring(this: &String, start: f64, end: Option<f64>) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_substring(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = toLowerCase ) ]
+    // pub fn to_lower_case(this: &String) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = toLowerCase ) ]
+    // pub fn set_to_lower_case(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = toLocaleLowerCase ) ]
+    // pub fn to_locale_lower_case(this: &String, locales: &JsValue) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = toLocaleLowerCase ) ]
+    // pub fn set_to_locale_lower_case(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = toUpperCase ) ]
+    // pub fn to_upper_case(this: &String) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = toUpperCase ) ]
+    // pub fn set_to_upper_case(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = toLocaleUpperCase ) ]
+    // pub fn to_locale_upper_case(this: &String, locales: &JsValue) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = toLocaleUpperCase ) ]
+    // pub fn set_to_locale_upper_case(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn trim(this: &String) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_trim(this: &String, value: &Function);
+    // #[doc = "Returns the length of a String object."]
+    // #[wasm_bindgen(method, getter)]
+    // pub fn length(this: &String) -> f64;
+    // #[wasm_bindgen(method)]
+    // pub fn substr(this: &String, from: f64, length: Option<f64>) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_substr(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = valueOf ) ]
+    // pub fn value_of(this: &String) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = valueOf ) ]
+    // pub fn set_value_of(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = localeCompare ) ]
+    // pub fn locale_compare_2(
+    //     this: &String,
+    //     that: &str,
+    //     locales: &JsValue,
+    //     options: Option<&intl::CollatorOptions>,
+    // ) -> f64;
+    // # [ wasm_bindgen ( method , setter , js_name = localeCompare ) ]
+    // pub fn set_locale_compare_2(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = codePointAt ) ]
+    // pub fn code_point_at(this: &String, pos: f64) -> Option<f64>;
+    // # [ wasm_bindgen ( method , setter , js_name = codePointAt ) ]
+    // pub fn set_code_point_at(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn includes(this: &String, search_string: &str, position: Option<f64>) -> bool;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_includes(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = endsWith ) ]
+    // pub fn ends_with(this: &String, search_string: &str, end_position: Option<f64>) -> bool;
+    // # [ wasm_bindgen ( method , setter , js_name = endsWith ) ]
+    // pub fn set_ends_with(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn normalize(this: &String, form: &JsValue) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_normalize(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = normalize ) ]
+    // pub fn normalize_2(this: &String, form: Option<&str>) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = normalize ) ]
+    // pub fn set_normalize_2(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn repeat(this: &String, count: f64) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_repeat(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = startsWith ) ]
+    // pub fn starts_with(this: &String, search_string: &str, position: Option<f64>) -> bool;
+    // # [ wasm_bindgen ( method , setter , js_name = startsWith ) ]
+    // pub fn set_starts_with(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn anchor(this: &String, name: &str) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_anchor(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn big(this: &String) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_big(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn blink(this: &String) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_blink(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn bold(this: &String) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_bold(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn fixed(this: &String) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_fixed(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn fontcolor(this: &String, color: &str) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_fontcolor(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn fontsize(this: &String, size: f64) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_fontsize(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = fontsize ) ]
+    // pub fn fontsize_2(this: &String, size: &str) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = fontsize ) ]
+    // pub fn set_fontsize_2(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn italics(this: &String) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_italics(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn link(this: &String, url: &str) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_link(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn small(this: &String) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_small(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn strike(this: &String) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_strike(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn sub(this: &String) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_sub(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn sup(this: &String) -> String;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_sup(this: &String, value: &Function);
+    // #[wasm_bindgen(method)]
+    // pub fn computed_property_name(this: &String) -> IterableIterator;
+    // #[wasm_bindgen(method, setter)]
+    // pub fn set_computed_property_name(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = match ) ]
+    // pub fn match_2(this: &String, matcher: &JsValue) -> JsValue;
+    // # [ wasm_bindgen ( method , setter , js_name = match ) ]
+    // pub fn set_match_2(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = replace ) ]
+    // pub fn replace_3(this: &String, search_value: &JsValue, replace_value: &str) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = replace ) ]
+    // pub fn set_replace_3(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = replace ) ]
+    // pub fn replace_4(this: &String, search_value: &JsValue, replacer: &JsValue) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = replace ) ]
+    // pub fn set_replace_4(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = search ) ]
+    // pub fn search_2(this: &String, searcher: &JsValue) -> f64;
+    // # [ wasm_bindgen ( method , setter , js_name = search ) ]
+    // pub fn set_search_2(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = split ) ]
+    // pub fn split_2(this: &String, splitter: &JsValue, limit: Option<f64>) -> Array;
+    // # [ wasm_bindgen ( method , setter , js_name = split ) ]
+    // pub fn set_split_2(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = padStart ) ]
+    // pub fn pad_start(this: &String, max_length: f64, fill_string: Option<&str>) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = padStart ) ]
+    // pub fn set_pad_start(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = padEnd ) ]
+    // pub fn pad_end(this: &String, max_length: f64, fill_string: Option<&str>) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = padEnd ) ]
+    // pub fn set_pad_end(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = trimLeft ) ]
+    // pub fn trim_left(this: &String) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = trimLeft ) ]
+    // pub fn set_trim_left(this: &String, value: &Function);
+    // # [ wasm_bindgen ( method , js_name = trimRight ) ]
+    // pub fn trim_right(this: &String) -> String;
+    // # [ wasm_bindgen ( method , setter , js_name = trimRight ) ]
+    // pub fn set_trim_right(this: &String, value: &Function);
     #[doc = "The type of `import.meta`.\r"]
     #[doc = "\r"]
     #[doc = "If you need to declare that a given property exists on `import.meta`,\r"]

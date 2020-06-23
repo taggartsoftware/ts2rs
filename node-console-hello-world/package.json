@@ -1,23 +1,15 @@
 {
   "name": "node-console-hello-world",
-  "version": "0.1.0",
   "description": "Node.js console hello world example",
-  "main": "main.js",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {},
   "devDependencies": {},
   "author": "Taggart Software LLC",
   "license": "MIT",
   "homepage": "https://ts2rs.ctaggart.com",
-  "files": [
-    "pgk/node_console_hello_world_bg.wasm",
-    "pkg/node_console_hello_world.js",
-    "pgk/node_console_hello_world_bg.js",
-    "main.js"
-  ],
-  "bin": {
-    "node-console-hello-world": "main.js"
-  },
   "scripts": {
-    "build": "wasm-pack build --target nodejs --dev"
+    "build": "wasm-pack build --target nodejs --dev",
+    "start": "node main.js"
   }
 }

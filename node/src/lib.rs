@@ -1,11 +1,5 @@
 use wasm_bindgen::{prelude::*, JsCast};
 
-mod intl {
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
-    // https://rustwasm.github.io/wasm-bindgen/api/js_sys/Intl/struct.Collator.html
-    pub type CollatorOptions = js_sys::Object;
-}
-
 // making js_sys type aliases here make it easier to use in the submodules with:
 // use crate::*;
 pub type Array = js_sys::Array;
@@ -47,6 +41,14 @@ pub mod node_js {
     include!("globals_NodeJS_alias.rs");
     include!("globals_NodeJS_extern.rs");
     include!("globals_NodeJS_help.rs");
+
+    #[wasm_bindgen]
+    extern "C" {
+        // TODO support indexing
+        // https://rustwasm.github.io/docs/wasm-bindgen/reference/attributes/on-js-imports/indexing-getter-setter-deleter.html
+        #[wasm_bindgen(method, structural, indexing_getter)]
+        pub fn get(this: &ProcessEnv, prop: &str) -> Option<String>;
+    }
 }
 include!("process_global_NodeJS_extern.rs");
 // include!("process_global_NodeJS_help.rs");
