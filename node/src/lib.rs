@@ -2,6 +2,7 @@ use wasm_bindgen::{prelude::*, JsCast};
 
 // making js_sys type aliases here make it easier to use in the submodules with:
 // use crate::*;
+
 pub type Array = js_sys::Array;
 pub type Function = js_sys::Function;
 pub type IterableIterator = js_sys::Iterator; // TODO Is this correct?
@@ -22,7 +23,7 @@ extern "C" {
     pub type WeakMapConstructor;
     pub type WeakSetConstructor;
 
-    // TODO varargs, generate 0 to 7 like https://rustwasm.github.io/wasm-bindgen/api/web_sys/console/fn.log_7.html
+    // TODO varargs, https://github.com/taggartsoftware/ts2rs/issues/11
     #[wasm_bindgen(method, js_name=log)]
     pub fn log_va0(this: &Console, message: &JsValue);
     #[wasm_bindgen(method, js_name=log)]
@@ -44,8 +45,7 @@ pub mod node_js {
 
     #[wasm_bindgen]
     extern "C" {
-        // TODO support indexing
-        // https://rustwasm.github.io/docs/wasm-bindgen/reference/attributes/on-js-imports/indexing-getter-setter-deleter.html
+        // TODO support indexing https://github.com/taggartsoftware/ts2rs/issues/10
         #[wasm_bindgen(method, structural, indexing_getter)]
         pub fn get(this: &ProcessEnv, prop: &str) -> Option<String>;
     }
@@ -59,6 +59,7 @@ pub mod http {
     include!("http_extern.rs");
     include!("http_help.rs");
     impl ServerResponse {
+        // TODO this should be generated, bug https://github.com/taggartsoftware/ts2rs/issues/8
         pub fn as_stream_writable(&self) -> &crate::stream::Writable {
             self.unchecked_ref()
         }
@@ -67,18 +68,11 @@ pub mod http {
 
 pub mod net {
     use crate::*;
-    // TODO figure out how to may Function in:
-    // pub type LookupFunction = Closure<dyn FnMut(String, crate::dns::LookupOneOptions, Function)>;
-    // include!("net_alias.rs");
-    #[wasm_bindgen]
-    extern "C" {
-        pub type LookupFunction;
-    }
+    include!("net_alias.rs");
     include!("net_extern.rs");
     include!("net_help.rs");
 
-    // TODO resolve aliases to their actual types
-    // import { Socket, Server as NetServer } from "net";
+    // TODO resolve aliases to their actual types, but https://github.com/taggartsoftware/ts2rs/issues/9
     pub type NetServer = Server;
 }
 

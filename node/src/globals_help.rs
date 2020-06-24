@@ -61,6 +61,24 @@ impl SymbolConstructor {
         Object::new().unchecked_into()
     }
 }
+impl AsRef<Uint8Array> for Buffer {
+    fn as_ref(&self) -> &Uint8Array {
+        self.unchecked_ref()
+    }
+}
+impl From<Buffer> for Uint8Array {
+    fn from(child: Buffer) -> Self {
+        child.unchecked_into()
+    }
+}
+impl Buffer {
+    pub fn to_uint8_array(self) -> Uint8Array {
+        self.unchecked_into()
+    }
+    pub fn as_uint8_array(&self) -> &Uint8Array {
+        self.unchecked_ref()
+    }
+}
 impl AsRef<NodeRequireFunction> for NodeRequire {
     fn as_ref(&self) -> &NodeRequireFunction {
         self.unchecked_ref()
