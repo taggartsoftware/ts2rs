@@ -1,0 +1,16 @@
+{
+  "name": "node-server-hello-world",
+  "description": "Node.js server hello world example",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {},
+  "author": "Taggart Software LLC",
+  "license": "MIT",
+  "homepage": "https://ts2rs.ctaggart.com",
+  "scripts": {
+    "dev": "wasm-pack build --target nodejs --dev",
+    "release": "wasm-pack build --target nodejs --release",
+    "start": "node main.js"
+  }
+}

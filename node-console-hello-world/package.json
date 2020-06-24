@@ -1,0 +1,15 @@
+{
+  "name": "node-console-hello-world",
+  "description": "Node.js console hello world example",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {},
+  "author": "Taggart Software LLC",
+  "license": "MIT",
+  "homepage": "https://ts2rs.ctaggart.com",
+  "scripts": {
+    "build": "wasm-pack build --target nodejs --dev",
+    "start": "node main.js"
+  }
+}

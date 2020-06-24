@@ -2,9 +2,9 @@
 # It is not intended for manual editing.
 [[package]]
 name = "bumpalo"
-version = "3.3.0"
+version = "3.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5356f1d23ee24a1f785a56d1d1a5f0fd5b0f6a0c0fb2412ce11da71649ab78f6"
+checksum = "2e8c087f005730276d1096a652e92a8bacee2e2472bcc9715a74d2bec38b5820"
 
 [[package]]
 name = "cfg-if"
@@ -13,9 +13,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4785bdd1c96b2a846b2bd7cc02e86b6b3dbf14e7e53446c4f54c92a361040822"
 
 [[package]]
+name = "console_error_panic_hook"
+version = "0.1.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b8d976903543e0c48546a91908f21588a680a8c8f984df9a5d69feccb2b2a211"
+dependencies = [
+ "cfg-if",
+ "wasm-bindgen",
+]
+
+[[package]]
 name = "js-sys"
 version = "0.3.40"
-source = "git+https://github.com/rustwasm/wasm-bindgen#cc36bdc00d3a41c67ee0a2c0af04a7c4323637a5"
+source = "git+https://github.com/rustwasm/wasm-bindgen#64e53a5502d92143ff312d461c286cc22522c8ae"
 dependencies = [
  "wasm-bindgen",
 ]
@@ -36,6 +46,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "monaco-editor"
+version = "0.1.0"
+dependencies = [
+ "js-sys",
+ "wasm-bindgen",
+ "wasm-bindgen-test",
+ "web-sys",
+]
+
+[[package]]
 name = "monaco-editor-hello-world"
 version = "0.1.0"
 dependencies = [
@@ -45,28 +65,60 @@ dependencies = [
 ]
 
 [[package]]
+name = "node"
+version = "0.1.0"
+dependencies = [
+ "js-sys",
+ "wasm-bindgen",
+]
+
+[[package]]
+name = "node-console-hello-world"
+version = "0.1.0"
+dependencies = [
+ "js-sys",
+ "node",
+ "wasm-bindgen",
+]
+
+[[package]]
+name = "node-server-hello-world"
+version = "0.1.0"
+dependencies = [
+ "js-sys",
+ "node",
+ "wasm-bindgen",
+]
+
+[[package]]
 name = "proc-macro2"
-version = "1.0.17"
+version = "1.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1502d12e458c49a4c9cbff560d0fe0060c252bc29799ed94ca2ed4bb665a0101"
+checksum = "beae6331a816b1f65d04c45b078fd8e6c93e8071771f41b8163255bbd8d7c8fa"
 dependencies = [
  "unicode-xid",
 ]
 
 [[package]]
 name = "quote"
-version = "1.0.6"
+version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "54a21852a652ad6f610c9510194f398ff6f8692e334fd1145fed931f7fbe44ea"
+checksum = "aa563d17ecb180e500da1cfd2b028310ac758de548efdd203e18f283af693f37"
 dependencies = [
  "proc-macro2",
 ]
 
 [[package]]
-name = "syn"
-version = "1.0.29"
+name = "scoped-tls"
+version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bb37da98a55b1d08529362d9cbb863be17556873df2585904ab9d2bc951291d0"
+checksum = "ea6a9290e3c9cf0f18145ef7ffa62d68ee0bf5fcd651017e586dc7fd5da448c2"
+
+[[package]]
+name = "syn"
+version = "1.0.31"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b5304cfdf27365b7585c25d4af91b35016ed21ef88f17ced89c7093b43dba8b6"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -82,7 +134,7 @@ checksum = "826e7639553986605ec5979c7dd957c7895e93eabed50ab2ffa7f6128a75097c"
 [[package]]
 name = "wasm-bindgen"
 version = "0.2.63"
-source = "git+https://github.com/rustwasm/wasm-bindgen#cc36bdc00d3a41c67ee0a2c0af04a7c4323637a5"
+source = "git+https://github.com/rustwasm/wasm-bindgen#64e53a5502d92143ff312d461c286cc22522c8ae"
 dependencies = [
  "cfg-if",
  "wasm-bindgen-macro",
@@ -91,7 +143,7 @@ dependencies = [
 [[package]]
 name = "wasm-bindgen-backend"
 version = "0.2.63"
-source = "git+https://github.com/rustwasm/wasm-bindgen#cc36bdc00d3a41c67ee0a2c0af04a7c4323637a5"
+source = "git+https://github.com/rustwasm/wasm-bindgen#64e53a5502d92143ff312d461c286cc22522c8ae"
 dependencies = [
  "bumpalo",
  "lazy_static",
@@ -103,9 +155,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "wasm-bindgen-futures"
+version = "0.4.13"
+source = "git+https://github.com/rustwasm/wasm-bindgen#64e53a5502d92143ff312d461c286cc22522c8ae"
+dependencies = [
+ "cfg-if",
+ "js-sys",
+ "wasm-bindgen",
+ "web-sys",
+]
+
+[[package]]
 name = "wasm-bindgen-macro"
 version = "0.2.63"
-source = "git+https://github.com/rustwasm/wasm-bindgen#cc36bdc00d3a41c67ee0a2c0af04a7c4323637a5"
+source = "git+https://github.com/rustwasm/wasm-bindgen#64e53a5502d92143ff312d461c286cc22522c8ae"
 dependencies = [
  "quote",
  "wasm-bindgen-macro-support",
@@ -114,7 +177,7 @@ dependencies = [
 [[package]]
 name = "wasm-bindgen-macro-support"
 version = "0.2.63"
-source = "git+https://github.com/rustwasm/wasm-bindgen#cc36bdc00d3a41c67ee0a2c0af04a7c4323637a5"
+source = "git+https://github.com/rustwasm/wasm-bindgen#64e53a5502d92143ff312d461c286cc22522c8ae"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -126,12 +189,34 @@ dependencies = [
 [[package]]
 name = "wasm-bindgen-shared"
 version = "0.2.63"
-source = "git+https://github.com/rustwasm/wasm-bindgen#cc36bdc00d3a41c67ee0a2c0af04a7c4323637a5"
+source = "git+https://github.com/rustwasm/wasm-bindgen#64e53a5502d92143ff312d461c286cc22522c8ae"
+
+[[package]]
+name = "wasm-bindgen-test"
+version = "0.3.13"
+source = "git+https://github.com/rustwasm/wasm-bindgen#64e53a5502d92143ff312d461c286cc22522c8ae"
+dependencies = [
+ "console_error_panic_hook",
+ "js-sys",
+ "scoped-tls",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+ "wasm-bindgen-test-macro",
+]
+
+[[package]]
+name = "wasm-bindgen-test-macro"
+version = "0.3.13"
+source = "git+https://github.com/rustwasm/wasm-bindgen#64e53a5502d92143ff312d461c286cc22522c8ae"
+dependencies = [
+ "proc-macro2",
+ "quote",
+]
 
 [[package]]
 name = "web-sys"
 version = "0.3.40"
-source = "git+https://github.com/rustwasm/wasm-bindgen#cc36bdc00d3a41c67ee0a2c0af04a7c4323637a5"
+source = "git+https://github.com/rustwasm/wasm-bindgen#64e53a5502d92143ff312d461c286cc22522c8ae"
 dependencies = [
  "js-sys",
  "wasm-bindgen",

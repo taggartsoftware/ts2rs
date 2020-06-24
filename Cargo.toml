@@ -1,8 +1,13 @@
 [workspace]
 members = [
     # "electron",
-    # "monaco-editor",
-    # "node",
+    "monaco-editor",
+    "node",
 
     "monaco-editor-hello-world",
+    "node-console-hello-world",
+    "node-server-hello-world",
 ]
+
+[patch.crates-io]
+wasm-bindgen = { git = "https://github.com/rustwasm/wasm-bindgen" }
