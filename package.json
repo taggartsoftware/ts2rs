@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Example generated bindings from ts2rs",
   "dependencies": {
-    "electron": "^9.0.0",
+    "electron": "^11.5.0",
     "monaco-editor": "^0.20.0",
     "typescript": "^3.8.3"
   },
